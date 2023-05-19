@@ -1,0 +1,1379 @@
+<!DOCTYPE html>
+<html lang="id" prefix="og: https://ogp.me/ns#">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="profile" href="https://gmpg.org/xfn/11">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lot Data Computation - QnA</title>
+    <meta name="description" content="Lot Data Computation, , , , , , , 0, Lot Data Computation | Geography | Mathematical Notation, www.scribd.com, 768 x 1024, jpeg, , 20, lot-data-computation, QnA" />
+    <meta name="robots" content="index,follow" />
+    <meta property="og:locale" content="id_ID" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Lot Data Computation - QnA" />
+    <meta property="og:description" content="Lot Data Computation, , , , , , , 0, Lot Data Computation | Geography | Mathematical Notation, www.scribd.com, 768 x 1024, jpeg, , 20, lot-data-computation, QnA" />
+    <meta property="og:site_name" content="QnA" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Lot Data Computation - QnA" />
+    <meta name="twitter:description" content="Lot Data Computation, , , , , , , 0, Lot Data Computation | Geography | Mathematical Notation, www.scribd.com, 768 x 1024, jpeg, , 20, lot-data-computation, QnA" />
+    <link rel='stylesheet' id='generate-style-css' href='https://jneweducation.github.io/css/main.min.css'?ver=3.2.4'
+        media='all' />
+    <link rel='stylesheet' id='ez-toc-css' href='https://jneweducation.github.io/css/screen.min.css'?ver=2.0.40' media='all' />
+    <style id='generate-style-inline-css'>
+        body {
+            background-color: #f7f7f7;
+            color: #222222;
+        }
+
+        a {
+            color: #1e73be;
+        }
+
+        a:hover,
+        a:focus,
+        a:active {
+            color: #000000;
+        }
+
+        .wp-block-group__inner-container {
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .generate-back-to-top {
+            font-size: 20px;
+            border-radius: 3px;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            line-height: 40px;
+            width: 40px;
+            text-align: center;
+            z-index: 10;
+            transition: opacity 300ms ease-in-out;
+            opacity: 0.1;
+            transform: translateY(1000px);
+        }
+
+        .generate-back-to-top__show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .navigation-search {
+            position: absolute;
+            left: -99999px;
+            pointer-events: none;
+            visibility: hidden;
+            z-index: 20;
+            width: 100%;
+            top: 0;
+            transition: opacity 100ms ease-in-out;
+            opacity: 0;
+        }
+
+        .navigation-search.nav-search-active {
+            left: 0;
+            right: 0;
+            pointer-events: auto;
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .navigation-search input[type="search"] {
+            outline: 0;
+            border: 0;
+            vertical-align: bottom;
+            line-height: 1;
+            opacity: 0.9;
+            width: 100%;
+            z-index: 20;
+            border-radius: 0;
+            -webkit-appearance: none;
+            height: 60px;
+        }
+
+        .navigation-search input::-ms-clear {
+            display: none;
+            width: 0;
+            height: 0;
+        }
+
+        .navigation-search input::-ms-reveal {
+            display: none;
+            width: 0;
+            height: 0;
+        }
+
+        .navigation-search input::-webkit-search-decoration,
+        .navigation-search input::-webkit-search-cancel-button,
+        .navigation-search input::-webkit-search-results-button,
+        .navigation-search input::-webkit-search-results-decoration {
+            display: none;
+        }
+
+        .gen-sidebar-nav .navigation-search {
+            top: auto;
+            bottom: 0;
+        }
+
+        :root {
+            --contrast: #222222;
+            --contrast-2: #575760;
+            --contrast-3: #b2b2be;
+            --base: #f0f0f0;
+            --base-2: #f7f8f9;
+            --base-3: #ffffff;
+            --accent: #1e73be;
+        }
+
+        .has-contrast-color {
+            color: var(--contrast);
+        }
+
+        .has-contrast-background-color {
+            background-color: var(--contrast);
+        }
+
+        .has-contrast-2-color {
+            color: var(--contrast-2);
+        }
+
+        .has-contrast-2-background-color {
+            background-color: var(--contrast-2);
+        }
+
+        .has-contrast-3-color {
+            color: var(--contrast-3);
+        }
+
+        .has-contrast-3-background-color {
+            background-color: var(--contrast-3);
+        }
+
+        .has-base-color {
+            color: var(--base);
+        }
+
+        .has-base-background-color {
+            background-color: var(--base);
+        }
+
+        .has-base-2-color {
+            color: var(--base-2);
+        }
+
+        .has-base-2-background-color {
+            background-color: var(--base-2);
+        }
+
+        .has-base-3-color {
+            color: var(--base-3);
+        }
+
+        .has-base-3-background-color {
+            background-color: var(--base-3);
+        }
+
+        .has-accent-color {
+            color: var(--accent);
+        }
+
+        .has-accent-background-color {
+            background-color: var(--accent);
+        }
+
+        body,
+        button,
+        input,
+        select,
+        textarea {
+            font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        }
+
+        body {
+            line-height: 1.5;
+        }
+
+        .entry-content>[class*="wp-block-"]:not(:last-child) {
+            margin-bottom: 1.5em;
+        }
+
+        .main-navigation .main-nav ul ul li a {
+            font-size: 14px;
+        }
+
+        .sidebar .widget,
+        .footer-widgets .widget {
+            font-size: 17px;
+        }
+
+        @media (max-width:768px) {
+            h1 {
+                font-size: 31px;
+            }
+
+            h2 {
+                font-size: 27px;
+            }
+
+            h3 {
+                font-size: 24px;
+            }
+
+            h4 {
+                font-size: 22px;
+            }
+
+            h5 {
+                font-size: 19px;
+            }
+        }
+
+        .top-bar {
+            background-color: #636363;
+            color: #ffffff;
+        }
+
+        .top-bar a {
+            color: #ffffff;
+        }
+
+        .top-bar a:hover {
+            color: #303030;
+        }
+
+        .site-header {
+            background-color: #ffffff;
+        }
+
+        .main-title a,
+        .main-title a:hover {
+            color: #222222;
+        }
+
+        .site-description {
+            color: #757575;
+        }
+
+        .main-navigation,
+        .main-navigation ul ul {
+            background-color: #ed4250;
+        }
+
+        .main-navigation .main-nav ul li a,
+        .main-navigation .menu-toggle,
+        .main-navigation .menu-bar-items {
+            color: #ffffff;
+        }
+
+        .main-navigation .main-nav ul li:not([class*="current-menu-"]):hover>a,
+        .main-navigation .main-nav ul li:not([class*="current-menu-"]):focus>a,
+        .main-navigation .main-nav ul li.sfHover:not([class*="current-menu-"])>a,
+        .main-navigation .menu-bar-item:hover>a,
+        .main-navigation .menu-bar-item.sfHover>a {
+            color: #ffffff;
+            background-color: #c42f2f;
+        }
+
+        button.menu-toggle:hover,
+        button.menu-toggle:focus {
+            color: #ffffff;
+        }
+
+        .main-navigation .main-nav ul li[class*="current-menu-"]>a {
+            color: #ffffff;
+            background-color: #c42f2f;
+        }
+
+        .navigation-search input[type="search"],
+        .navigation-search input[type="search"]:active,
+        .navigation-search input[type="search"]:focus,
+        .main-navigation .main-nav ul li.search-item.active>a,
+        .main-navigation .menu-bar-items .search-item.active>a {
+            color: #ffffff;
+            background-color: #c42f2f;
+        }
+
+        .main-navigation ul ul {
+            background-color: #c42f2f;
+        }
+
+        .main-navigation .main-nav ul ul li a {
+            color: #ffffff;
+        }
+
+        .main-navigation .main-nav ul ul li:not([class*="current-menu-"]):hover>a,
+        .main-navigation .main-nav ul ul li:not([class*="current-menu-"]):focus>a,
+        .main-navigation .main-nav ul ul li.sfHover:not([class*="current-menu-"])>a {
+            color: #fcd9d6;
+            background-color: #c42f2f;
+        }
+
+        .main-navigation .main-nav ul ul li[class*="current-menu-"]>a {
+            color: #fcd9d6;
+            background-color: #c42f2f;
+        }
+
+        .separate-containers .inside-article,
+        .separate-containers .comments-area,
+        .separate-containers .page-header,
+        .one-container .container,
+        .separate-containers .paging-navigation,
+        .inside-page-header {
+            background-color: #ffffff;
+        }
+
+        .entry-title a {
+            color: #222222;
+        }
+
+        .entry-title a:hover {
+            color: #55555e;
+        }
+
+        .entry-meta {
+            color: #595959;
+        }
+
+        .sidebar .widget {
+            background-color: #ffffff;
+        }
+
+        .footer-widgets {
+            background-color: #ffffff;
+        }
+
+        .footer-widgets .widget-title {
+            color: #000000;
+        }
+
+        .site-info {
+            color: #ffffff;
+            background-color: #55555e;
+        }
+
+        .site-info a {
+            color: #ffffff;
+        }
+
+        .site-info a:hover {
+            color: #d3d3d3;
+        }
+
+        .footer-bar .widget_nav_menu .current-menu-item a {
+            color: #d3d3d3;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="url"],
+        input[type="password"],
+        input[type="search"],
+        input[type="tel"],
+        input[type="number"],
+        textarea,
+        select {
+            color: #666666;
+            background-color: #fafafa;
+            border-color: #cccccc;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="url"]:focus,
+        input[type="password"]:focus,
+        input[type="search"]:focus,
+        input[type="tel"]:focus,
+        input[type="number"]:focus,
+        textarea:focus,
+        select:focus {
+            color: #666666;
+            background-color: #ffffff;
+            border-color: #bfbfbf;
+        }
+
+        button,
+        html input[type="button"],
+        input[type="reset"],
+        input[type="submit"],
+        a.button,
+        a.wp-block-button__link:not(.has-background) {
+            color: #ffffff;
+            background-color: #55555e;
+        }
+
+        button:hover,
+        html input[type="button"]:hover,
+        input[type="reset"]:hover,
+        input[type="submit"]:hover,
+        a.button:hover,
+        button:focus,
+        html input[type="button"]:focus,
+        input[type="reset"]:focus,
+        input[type="submit"]:focus,
+        a.button:focus,
+        a.wp-block-button__link:not(.has-background):active,
+        a.wp-block-button__link:not(.has-background):focus,
+        a.wp-block-button__link:not(.has-background):hover {
+            color: #ffffff;
+            background-color: #3f4047;
+        }
+
+        a.generate-back-to-top {
+            background-color: rgba(0, 0, 0, 0.4);
+            color: #ffffff;
+        }
+
+        a.generate-back-to-top:hover,
+        a.generate-back-to-top:focus {
+            background-color: rgba(0, 0, 0, 0.6);
+            color: #ffffff;
+        }
+
+        @media (max-width:768px) {
+
+            .main-navigation .menu-bar-item:hover>a,
+            .main-navigation .menu-bar-item.sfHover>a {
+                background: none;
+                color: #ffffff;
+            }
+        }
+
+        .nav-below-header .main-navigation .inside-navigation.grid-container,
+        .nav-above-header .main-navigation .inside-navigation.grid-container {
+            padding: 0px 20px 0px 20px;
+        }
+
+        .site-main .wp-block-group__inner-container {
+            padding: 40px;
+        }
+
+        .separate-containers .paging-navigation {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .entry-content .alignwide,
+        body:not(.no-sidebar) .entry-content .alignfull {
+            margin-left: -40px;
+            width: calc(100% + 80px);
+            max-width: calc(100% + 80px);
+        }
+
+        .rtl .menu-item-has-children .dropdown-menu-toggle {
+            padding-left: 20px;
+        }
+
+        .rtl .main-navigation .main-nav ul li.menu-item-has-children>a {
+            padding-right: 20px;
+        }
+
+        @media (max-width:768px) {
+
+            .separate-containers .inside-article,
+            .separate-containers .comments-area,
+            .separate-containers .page-header,
+            .separate-containers .paging-navigation,
+            .one-container .site-content,
+            .inside-page-header {
+                padding: 30px;
+            }
+
+            .site-main .wp-block-group__inner-container {
+                padding: 30px;
+            }
+
+            .inside-top-bar {
+                padding-right: 30px;
+                padding-left: 30px;
+            }
+
+            .inside-header {
+                padding-right: 30px;
+                padding-left: 30px;
+            }
+
+            .widget-area .widget {
+                padding-top: 30px;
+                padding-right: 30px;
+                padding-bottom: 30px;
+                padding-left: 30px;
+            }
+
+            .footer-widgets-container {
+                padding-top: 30px;
+                padding-right: 30px;
+                padding-bottom: 30px;
+                padding-left: 30px;
+            }
+
+            .inside-site-info {
+                padding-right: 30px;
+                padding-left: 30px;
+            }
+
+            .entry-content .alignwide,
+            body:not(.no-sidebar) .entry-content .alignfull {
+                margin-left: -30px;
+                width: calc(100% + 60px);
+                max-width: calc(100% + 60px);
+            }
+
+            .one-container .site-main .paging-navigation {
+                margin-bottom: 20px;
+            }
+        }
+
+        /* End cached CSS */
+        .is-right-sidebar {
+            width: 30%;
+        }
+
+        .is-left-sidebar {
+            width: 30%;
+        }
+
+        .site-content .content-area {
+            width: 70%;
+        }
+
+        @media (max-width:768px) {
+
+            .main-navigation .menu-toggle,
+            .sidebar-nav-mobile:not(#sticky-placeholder) {
+                display: block;
+            }
+
+            .main-navigation ul,
+            .gen-sidebar-nav,
+            .main-navigation:not(.slideout-navigation):not(.toggled) .main-nav>ul,
+            .has-inline-mobile-toggle #site-navigation .inside-navigation>*:not(.navigation-search):not(.main-nav) {
+                display: none;
+            }
+
+            .nav-align-right .inside-navigation,
+            .nav-align-center .inside-navigation {
+                justify-content: space-between;
+            }
+        }
+    </style>
+    <link rel="icon" href="https://jneweducation.github.io/img/cropped-soalbelajar-32x32.png" sizes="32x32" />
+    <link rel="icon" href="https://jneweducation.github.io/img/cropped-soalbelajar-192x192.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="https://jneweducation.github.io/img/cropped-soalbelajar-180x180.png" />
+    <meta name="msapplication-TileImage" content="https://jneweducation.github.io/img/cropped-soalbelajar-270x270.png" />
+</head>
+
+<body
+    class="home blog wp-custom-logo wp-embed-responsive right-sidebar nav-above-header separate-containers nav-search-enabled nav-aligned-center header-aligned-center dropdown-hover"
+    itemtype="https://schema.org/Blog" itemscope>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-dark-grayscale">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 0.49803921568627" />
+                    <feFuncG type="table" tableValues="0 0.49803921568627" />
+                    <feFuncB type="table" tableValues="0 0.49803921568627" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-grayscale">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 1" />
+                    <feFuncG type="table" tableValues="0 1" />
+                    <feFuncB type="table" tableValues="0 1" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-purple-yellow">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.54901960784314 0.98823529411765" />
+                    <feFuncG type="table" tableValues="0 1" />
+                    <feFuncB type="table" tableValues="0.71764705882353 0.25490196078431" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-blue-red">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 1" />
+                    <feFuncG type="table" tableValues="0 0.27843137254902" />
+                    <feFuncB type="table" tableValues="0.5921568627451 0.27843137254902" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-midnight">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 0" />
+                    <feFuncG type="table" tableValues="0 0.64705882352941" />
+                    <feFuncB type="table" tableValues="0 1" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-magenta-yellow">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.78039215686275 1" />
+                    <feFuncG type="table" tableValues="0 0.94901960784314" />
+                    <feFuncB type="table" tableValues="0.35294117647059 0.47058823529412" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-purple-green">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.65098039215686 0.40392156862745" />
+                    <feFuncG type="table" tableValues="0 1" />
+                    <feFuncB type="table" tableValues="0.44705882352941 0.4" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-blue-orange">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.098039215686275 1" />
+                    <feFuncG type="table" tableValues="0 0.66274509803922" />
+                    <feFuncB type="table" tableValues="0.84705882352941 0.41960784313725" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><a class="screen-reader-text skip-link" href="#content" title="Langsung ke isi">Langsung ke isi</a>
+    <nav class="main-navigation nav-align-center has-menu-bar-items sub-menu-right" id="site-navigation"
+        aria-label="Utama" itemtype="https://schema.org/SiteNavigationElement" itemscope>
+        <div class="inside-navigation grid-container">
+            <form method="get" class="search-form navigation-search" action="/">
+                <input type="search" class="search-field" value="" name="q" title="Cari" />
+            </form> <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+                <span class="gp-icon icon-menu-bars"><svg viewBox="0 0 512 512" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" width="1em" height="1em">
+                        <path
+                            d="M0 96c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24zm0 160c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24zm0 160c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24z" />
+                    </svg><svg viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                        width="1em" height="1em">
+                        <path
+                            d="M71.029 71.029c9.373-9.372 24.569-9.372 33.942 0L256 222.059l151.029-151.03c9.373-9.372 24.569-9.372 33.942 0 9.372 9.373 9.372 24.569 0 33.942L289.941 256l151.03 151.029c9.372 9.373 9.372 24.569 0 33.942-9.373 9.372-24.569 9.372-33.942 0L256 289.941l-151.029 151.03c-9.373 9.372-24.569 9.372-33.942 0-9.372-9.373-9.372-24.569 0-33.942L222.059 256 71.029 104.971c-9.372-9.373-9.372-24.569 0-33.942z" />
+                    </svg></span><span class="mobile-menu">Menu</span> </button>
+            <div id="primary-menu" class="main-nav">
+                <ul id="menu-soal-belajar" class=" menu sf-menu">
+                    <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1"><a
+                            href="https://jneweducation.github.io">Home</a></li>
+                </ul>
+                </ul>
+            </div>
+            <div class="menu-bar-items"><span class="menu-bar-item search-item"><a aria-label="Buka Kolom Pencarian"
+                        href="#"><span class="gp-icon icon-search"><svg viewBox="0 0 512 512"
+                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M208 48c-88.366 0-160 71.634-160 160s71.634 160 160 160 160-71.634 160-160S296.366 48 208 48zM0 208C0 93.125 93.125 0 208 0s208 93.125 208 208c0 48.741-16.765 93.566-44.843 129.024l133.826 134.018c9.366 9.379 9.355 24.575-.025 33.941-9.379 9.366-24.575 9.355-33.941-.025L337.238 370.987C301.747 399.167 256.839 416 208 416 93.125 416 0 322.875 0 208z" />
+                            </svg><svg viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                width="1em" height="1em">
+                                <path
+                                    d="M71.029 71.029c9.373-9.372 24.569-9.372 33.942 0L256 222.059l151.029-151.03c9.373-9.372 24.569-9.372 33.942 0 9.372 9.373 9.372 24.569 0 33.942L289.941 256l151.03 151.029c9.372 9.373 9.372 24.569 0 33.942-9.373 9.372-24.569 9.372-33.942 0L256 289.941l-151.029 151.03c-9.373 9.372-24.569 9.372-33.942 0-9.372-9.373-9.372-24.569 0-33.942L222.059 256 71.029 104.971c-9.372-9.373-9.372-24.569 0-33.942z" />
+                            </svg></span></a></span></div>
+        </div>
+    </nav>
+    <header class="site-header grid-container" id="masthead" aria-label="Situs"
+        itemtype="https://schema.org/WPHeader" itemscope>
+        <div class="inside-header grid-container">
+            <h1 class="site-logo">
+                <a href="https://jneweducation.github.io" rel="home"> QnA</a>
+            </h1>
+        </div>
+    </header>
+
+    <div class="site grid-container container hfeed" id="page">
+        <div class="site-content" id="content">
+            <div class="content-area" id="primary">
+                    <main class="site-main" id="main">
+        <article id="post-1327" class="post-1327 post type-post status-publish format-standard hentry category-info"
+            itemtype="https://schema.org/CreativeWork" itemscope="">
+            <div class="inside-article">
+                <header class="entry-header" aria-label="Konten">
+                    <h1 class="entry-title" itemprop="headline">Lot Data Computation</h1>
+                    <div class="entry-meta">
+                       <span
+                            class="byline">oleh <span class="author vcard" itemprop="author"
+                                itemtype="https://schema.org/Person" itemscope=""><span class="author-name"
+                                    itemprop="name">maghanoyserio332</span></span></span>
+                    </div>
+                </header>
+                <div class="entry-content" itemprop="text">
+                    <div style="text-align: center">
+                        <img src="https://tse1.mm.bing.net/th?q=Lot+Data+Computation" alt="Lot Data Computation">
+                    </div>
+                    <p></p>
+                    <p>electronic device that can manipulate information or data number to a cell phone that can do a lot of things computers can do the mercury the most portable handheld computer that used to touch sensitive screen for typing and navigation number for a computer that serves up information to other computers on a network number five any part of use computer that has bicycle structure such as keyboard or mouse​</p>
+                    <div id="ez-toc-container"
+                        class="ez-toc-v2_0_40 counter-hierarchy ez-toc-counter ez-toc-light-blue ez-toc-container-direction">
+                        <div class="ez-toc-title-container">
+                            <p class="ez-toc-title">Daftar Isi</p>
+                            <span class="ez-toc-title-toggle"><a href="#"
+                                    class="ez-toc-pull-right ez-toc-btn ez-toc-btn-xs ez-toc-btn-default ez-toc-toggle"
+                                    area-label="ez-toc-toggle-icon-1"><label for="item-63b392361c4a0"
+                                        aria-label="Table of Content"><span
+                                            style="display: flex;align-items: center;width: 35px;height: 30px;justify-content: center;direction:ltr;"><svg
+                                                style="fill: #999;color:#999" xmlns="http://www.w3.org/2000/svg"
+                                                class="list-377408" width="20px" height="20px" viewBox="0 0 24 24"
+                                                fill="none">
+                                                <path
+                                                    d="M6 6H4v2h2V6zm14 0H8v2h12V6zM4 11h2v2H4v-2zm16 0H8v2h12v-2zM4 16h2v2H4v-2zm16 0H8v2h12v-2z"
+                                                    fill="currentColor"></path>
+                                            </svg><svg style="fill: #999;color:#999" class="arrow-unsorted-368013"
+                                                xmlns="http://www.w3.org/2000/svg" width="10px" height="10px"
+                                                viewBox="0 0 24 24" version="1.2" baseProfile="tiny">
+                                                <path
+                                                    d="M18.2 9.3l-6.2-6.3-6.2 6.3c-.2.2-.3.4-.3.7s.1.5.3.7c.2.2.4.3.7.3h11c.3 0 .5-.1.7-.3.2-.2.3-.5.3-.7s-.1-.5-.3-.7zM5.8 14.7l6.2 6.3 6.2-6.3c.2-.2.3-.5.3-.7s-.1-.5-.3-.7c-.2-.2-.4-.3-.7-.3h-11c-.3 0-.5.1-.7.3-.2.2-.3.5-.3.7s.1.5.3.7z">
+                                                </path>
+                                            </svg></span></label><input type="checkbox" id="item-63b392361c4a0"></a></span>
+                        </div>
+                        <nav>
+                            <ul class="ez-toc-list ez-toc-list-level-1 ">
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#electronic-device-that-can-manipulate-information-or-data-number-to-a-cell-phone-that-can-do-a-lot-of-things-computers-can-do-the-mercury-the-most-portable-handheld-computer-that-used-to-touch-sensiti">1.
+                                            electronic device that can manipulate information or data number to a cell phone that can do a lot of things computers can do the mercury the most portable handheld computer that used to touch sensitive screen for typing and navigation number for a computer that serves up information to other computers on a network number five any part of use computer that has bicycle structure such as keyboard or mouse​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#1-an-electronic-device-that-manipulates-information-or-data-a-smartphone-b-hardwarec-game-consoled-computerd-computer2-a-phone-that-can-do-a-lot-of-things-that-computers-can-do-a-smartphone-b">2.
+                                            1. An electronic device that manipulates information, or data.A. smartphone B. hardwareC. game consoleD. computerD. computer2. A phone that can do a lot of things that computers can do.A. smartphone B. game console C. hardware3. The most portable, handheld computer that use a touch sensitive screen for typing and navigation.A. tabletB. computerC. serverD. software4. A computer that serves up information to other computers on a network.A. serverB. tabletC. softwareD. hardware5. Any part of your computer that has a physical structure, such as the keyboard or mouse.A. softwareB. serverC. hardwareD. tablet​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#identify-the-type-of-computer-being-asked-in-each-situation-below-1-my-brother-needs-a-computer-that-is-capable-of-limitedtasks-like-browsing-the-internet-playing-movies-and-creating-documents-2-i">3.
+                                            identify the type of computer being asked in each situation below.1. My brother needs a computer that is capable of limitedtasks like browsing the internet, playing movies and creating documents.2. I need a computer that will handle a simple task. I justneed my computer to play music no more and no less.3. I am a scientist that needs a powerful computer that can handle largeamount of data for my experiments.4. My brother needs a specialized computer for his photography job.The computer he wants should be able to handle software for photo editing.5. A business woman is starting to build a business that will provide services toher customers. The computer she wants should be able to provide storage services to a lot of her clients.​​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#3-devices-are-added-to-the-computer-system-by-plugging-them-into-one-of-the-ports-on-the-back-of-the-computer-a-internal-devicesb-external-devicesc-cellphoned-television4-it-allows-the-selectio">4.
+                                            3. devices are added to the computer system by plugging them into one of the ports on the back of the computer. a. Internal devicesb. External Devicesc. Cellphoned. Television4. It allows the selection of icons and links much more quickly and smoothly than the keyboard. a. Monitorb. Mousec. Speakerd. Microphone5. The memory that computers use to store data and instructions needed by the CPU for computer operation.a. RAMb. CPUc. ROMd. Disk drive6.The brain of the computer system. a. RAMb. Processorc. Monitord. Disk drive7. device that helps your computer cool down a lot easier by blowing around the air in your laptop. a. CPUb. Processorc. Monitord. Fan8. A system connecting a number of computer systems to form a local area network.a. Ethernet portb. RAMc. ROMd. Serial port9. A connector by which a device that sends data one bit at a time may be connected to a computer. a. Ethernet portb. RAMc. ROMd. Serial port10. It allows a computer to play CD’s or DVD’s. a. RAMb. ROMc. Disk Drived. Speaker11. It allows you to plug in another device that has a USB out and connect it to your computer. a. CPUb. Serial portc. Heat sinkd. USB port12. It listens and captures or amplifies sound. a. speakerb. Webcamc. Microphoned. Serial port13. It has buttons for all the letters of the alphabet as well as numbers, symbols and special function keys.  a. Keyboardb. Speakerc. CPUd. Microphone14. It contains all of the connections that allow the carious other subsystems to interact. a. Motherboard]b. CPUc. RAMd. ROM15. It allows user to capture video or screenshots of themselves. a. Motherboard]b. CPUc. Webcamd. ROM​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#most-of-the-large-companies-would-just-buy-a-payroll-program-that-they-will-use-for-their-companies-however-this-complicated-payroll-program-is-not-really-necessary-for-small-businesses-aside-from">5.
+                                            Most of the large companies would just buy a payroll program that they will use for their companies. However, this complicated payroll program is not really necessary for small businesses. Aside from its exorbitant price, some of the other functions are not really important for personal or small business use. Preparing (1) _______ is not that really hard. All you need is a computer with a (2) _______ Program and you can create your own spreadsheet. You just need to do it once and you can use it again for every payroll period. In starting a spreadsheet, you’ll see that it has letters across the top to identify each (3) _______ and numbers down the left side to identify each (4) _______. You just need to open a tab and know your data to input. There are hundreds of functions to use in this program. For beginners you can use (5) “_______” to add, “_______” to subtract, “_______” to divide, “_______” to sum it up and a lot more. ​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#arts-6-10il-direction-match-column-a-with-column-b-and-write-the-letter-of-the-correct-answer-on-the-space-providedwrite-neatly-and-clearlya-software6includes-the-physical-tangible-parts-or-c">6.
+                                            ARTS (6-10)
+IL Direction Match Column A with Column B and write the letter of the correct answer on the space provided
+Write neatly and clearly
+a. Software
+6
+includes the physical, tangible parts or components
+of a computer
+7. Eraser Tool cleans up imperfections in your work and
+making your job a lot easier
+b.
+c. Hardware
+8. Hand Tool moves around an image within an object.
+9
+is a collection of data or computer instructions, that
+tells the computer how to work
+d
+B
+10. Paint Bucket Tool fills or makes an area one color.
+e.</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#ict-in-the-context-of-global-communication-can-use-different-_____-platforms-for-different-set-of-_____-to-interact-through-the-service-via-_____-it-provides-access-to-information-through-telecommuni">7.
+                                            ICT in the context of global communication can use different _____ platforms for different set of _____ to interact through the service via _____. It provides access to information through telecommunications withthe use of computer, network ____ and software. The tangible device used in order to connect to the internet is called ______.while the application that is used to gather and manage this data is called _____.With the different online platforms, it helps a lot of people to do their tasksand produce a good result but still depends on their specific needs. People withdisabilities like blindness can use _______.Those who want to growtheir own network of friends with the same interests with them can use ______.And in order to have a video call with group of friends or co-workers, ____ app should be used. But media content like videos, images,music or audio can be shared through _________ sites.​..​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#hen-the1-is-an-electronic-hardware-device-that-operates-and-functions-under-the-control-ofinstructions-called-programs-2-this-invention-led-to-the-creation-of-the-microprocessor-3-this-computer-int">8.
+                                            hen the1. Is an electronic hardware device that operates and functions under the control ofinstructions called programs.2. This invention led to the creation of the microprocessor.3. This computer introduced the PC-DOS (Disk Operating System) from Microsoft.4. Also known as the defense calculator.5. Is able to do all the functions of the vacuum tube with less cost, size, and power andis a lot of durable.6. Computer designed around the Motorola 68000 microprocessor.-7. German cipher machine during the Second World War.8. Was invented by William Oughtred an English Mathematician from CambridgeUniversity in England.9. Was used in Babylonia as early as 2400 B.C.10. Are fastest computers in the world.II.TRUE OR FALSE: Write the word TRUE if the statement is correct and write your name if the statement isfalse.11. Netbook is a small laptop built for both portability and low price.12. Nettop is a new breed of desktop computers introduced by intel with small size and low cost.13. Smart phone is a mobile phone with additional capabilities such as email and internet.14. CPU is often called the brain of the computer.15. Keyboard is one way of telling the computer what to do.16. Allows you to see what your computer is doing is called monitor.17. Mouse is a pointing device.18. Speaker allows you to listen to music from the computer while working.19. Printer is a machine that takes what you have created on your computer and puts them on paper.20. Modem is a communication device that allows the computer to receive and send data and information toand from othercomputers.​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#problemtrisha-has-a-lot-of-pictures-of-varied-sizes-that-she-would-like-to-frame-she-decidedto-go-to-%e2%80%9chappy-frames%e2%80%9d-that-offers-framing-services-to-restore-and-to-frame-her-picture">9.
+                                            PROBLEM:
+Trisha has a lot of pictures of varied sizes that she would like to frame. She decided
+to go to “Happy Frames” that offers framing services to restore and to frame her pictures.
+The store deals two types of frames – standard and expensive. The frames are offered in 
+white and can be ordered in any color the customer requests. Assume that each frame is 
+(1) one inch wide. The cost amount to color the frame is $0.15 per inch. The cost amount
+of a standard frame is $0.10 per inch and amount of an expensive frame is $0.35 per 
+inch. The cost amount of placing a paperboard after the picture is $0.04 for every square 
+inch and the cost amount of placing glass on upper of the picture is $0.09 for every inch. 
+The client can choose to place crowns on the edges, which amount costs $0.45 per 
+crown. Create a java program that computes the user to input the following data and 
+display the overall costs of edging the picture.
+a. Pictures L, W and computes inches
+b. Input frame types
+c. If the pictures did clients wanted to make it colored
+d. If the number of crowns did the user wanted to put</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#b-directions-identify-the-following-choose-the-letter-of-the-correct-answer-write-your-answer-on-thespace-provided-21-it-is-the-physical-parts-or-components-of-a-computer-a-hardware-b-software">10.
+                                            B. Directions: Identify the following. Choose the letter of the correct answer. Write your answer on thespace provided.21. It is the physical parts or components of a computer.A. Hardware b. Software C. Space22. It is also a collection of data, programs, procedures, and documentation that perform varioustasks on a computer system..A. Hardware b. Software c. Space23. It is an application from Microsoft that creates, reads, edits, and shares files quickly andeasily.A. Laptop b. Mouse c. Microsoft Word24. It is an application software or "apps" that makes video editing fun and easy to edit with lotsof powerful tools and downloadable assets.A. KineMaster b. KindMaster c. KeenMaster25. This application software or "apps" mentioned above usually do the followingA. Cut, splice, and crop your videos.B. Read and singc. His a kind of printr device​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#ict-in-the-context-of-global-communication-can-use-different-_____-platforms-for-different-set-of-_____-to-interact-through-the-service-via-_____-it-provides-access-to-information-through-telecommuni">11.
+                                            ICT in the context of global communication can use different _____ platforms for different set of _____ to interact through the service via _____. It provides access to information through telecommunications withthe use of computer, network ____ and software. The tangible device used in order to connect to the internet is called ______.while the application that is used to gather and manage this data is called _____.With the different online platforms, it helps a lot of people to do their tasksand produce a good result but still depends on their specific needs. People withdisabilities like blindness can use _______.Those who want to growtheir own network of friends with the same interests with them can use ______.And in order to have a video call with group of friends or co-workers, ____ app should be used. But media content like videos, images,music or audio can be shared through _________ sites.​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#direction-read-the-statement-carefully-write-true-if-the-statement-iscorrect-write-false-is-the-statement-is-incorrect-write-your-answers-in-theblank-providedlill1-random-access-memory-ram-are">12.
+                                            Direction: Read the statement carefully. Write true if the statement iscorrect. Write false is the statement is incorrect. Write your answers in theblank providedLILL1. Random Access Memory (RAM) are devices that are attachedinside the computer2 Fixed Storage device is considered as the primary storage devicein the computer3. Hard disk has a higher capacity compared to other storagedevices.4 Portable, which means it is complicated for the user to copy andtransfer files from one computer to another computer.5. A computer does not need storage devices before and afterprocessing the data to store information and access later.6. Volatile Storage Device means that all the data are gone in theabsence of electricity7. Cloud Storage is where some websites offer free storage tousers. They just need to sign up before they can avail this freestorage8. Shared Network Drive is a location in another computer whereother users from other computers are allowed to save andaccess information.9. External hard disk is where you can store a lot of information, butthe only difference is that it is not detachable and can betransferred to another computer to access information.10. Removable Storage Devices are devices that can be cannot bedetached after use.pa answer follow kokayusalamat​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#electronic-spreadsheets-like-excel-or-numbers-can-bring-a-lot-of-advantages-especially-those-in-the-corporate-world-as-far-as-i-know-and-from-my-experience-it-is-also-accurate-unless-you-know-th">13.
+                                            Electronic spreadsheets, like Excel or Numbers, can bring a lot of advantages especially those in the corporate world. As far as I know, and from my experience, it is also accurate, unless you know the formula to get the output. There are different functions that can be used: accounting purposes, simple arithmetic, even logical expressions. It's actually more convenient to use. However, if you feel like checking the output twice, you can manually check the computation and see if you get the same answer.Open-source refers to the software whose source code is available for anybody to access and modify, while proprietary software refers to the software which is solely owned by the individual or publisher who developed it.Spreadsheets are an essential business and accounting tool. They can vary in complexity and can be used for various reasons, but their primary purpose is to organize and categorize data into a logical format. Once this data is entered into the spreadsheet, you can use it to help organize and grow your businessElectronic spreadsheets, like Excel or Numbers, can bring a lot of advantages especially those in the corporate world. As far as I know, and from my experience, it is also accurate, unless you know the formula to get the output. There are different functions that can be used: accounting purposes, simple arithmetic, even logical expressions. It's actually more convenient to use. However, if you feel like checking the output twice, you can manually check the computation and see if you get the same answer.Open-source refers to the software whose source code is available for anybody to access and modify, while proprietary software refers to the software which is solely owned by the individual or publisher who developed it.Spreadsheets are an essential business and accounting tool. They can vary in complexity and can be used for various reasons, but their primary purpose is to organize and categorize data into a logical format. Once this data is entered into the spreadsheet, you can use it to help organize and grow your businessElectronic spreadsheets, like Excel or Numbers, can bring a lot of advantages especially those in the corporate world. As far as I know, and from my experience, it is also accurate, unless you know the formula to get the output. There are different functions that can be used: accounting purposes, simple arithmetic, even logical expressions. It's actually more convenient to use. However, if you feel like checking the output twice, you can manually check the computation and see if you get the same answer.Open-source refers to the software whose source code is available for anybody to access and modify, while proprietary software refers to the software which is solely owned by the individual or publisher who developed it.Spreadsheets are an essential business and accounting tool. They can vary in complexity and can be used for various reasons, but their primary purpose is to organize and categorize data into a logical format. Once this data is entered into the spreadsheet, you can use it to help organize and grow your business​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#b-after-learning-how-to-create-a-powerpoint-presentation-decide-if-the-following-techniques-will-help-you-or-not-in-your-multimedia-presentation-write-e-if-the-statement-is-an-effective-technique">14.
+                                            B. After learning how to create a PowerPoint presentation, decide if the following techniques will help you or not in your multimedia presentation. Write E if the statement is an effective technique, and NE if it's not effective.
+1. Presentation should not be used as a slide-show outline of what the speaker is telling the audience. It should enhance what the speaker is saying.
+2. Use bouncing and flying text for animation so that people will roll their eyes because of these.
+3. Use high-contrast color arrangements so that your slides will be readable
+4. Place no more than eight lines of text on a slide with no more than eight to ten words per line.
+5. Display charts or graphs with many data. It is useful for the audience to see such things.
+6. Rehearse your PowerPoint presentation several times. Make sure that can deliver it even without the presentation.
+7. Use slides sparingly so that the audience will focus on you, not on the screen
+8. Slides should be used synchronously with your speech to emphasize or to illustrate the product.
+9. More interaction and motion on the screen will make the audience learn a lot.
+10. Use a remote clicker to enable you to move farther away from the computer.</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#identification-write-a-if-the-statement-is-an-advantage-and-d-if-its-a-disadvantage-1-you-place-your-complete-name-and-address-in-the-internet-2-work-on-your-computer-maintaining-your-prope">15.
+                                            IDENTIFICATION - Write "A" if the statement is an Advantage and "D" if it's a Disadvantage. 1. You place your complete name and address in the internet, 2. Work on your computer maintaining your proper posture. 3. You sent a birthday card to your father who is in abroad. 4. You can make your school projects by researching using the computer 5. You were able to see your relative's pictures that are staying in the province. 6. You do not turn off the computer because you will use it when you return home from school. 7. You kept your old unusable computer because you should not throw the things you bought. 8. You can read news on the computer using the Internet. 9. Computers can do many things and can store lots of data. 10. Your hands and eyes are painful because you have played computer games for a long time.​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#1-a-cell-phone-that-can-do-a-lot-of-things-computers-can-do-2-a-computer-that-serves-up-information-to-other-computers-on-a-network-3-a-general-term-for-group-of-devices-including-fitness-tracke">16.
+                                            1. A cell phone that can do a lot of things computers can do. 2. A computer that serves up information to other computers on a network. 3. A general term for group of devices- including fitness trackers and smartwatches- that are designed to be worn throughout the day. 7. A specialized type of computer that is used for playing video games on your TV. electronic device that manipulates information, or data. 6. Any part of your computer that has a physical structure, such as the keyboard or mouse. 7. Any set of instructions that tells the hardware what to do and how to do it. S. The first widely sold personal computer with a graphical user interface. 9. The original version of the most common type of personal computer that was introduced in 1981 10. The most portable, handheld computer that use a touch-sensitive screen for typing and navigation​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#direction-identify-the-terms-referred-by-each-item-write-the-answer-in-your-notebook-1-an-electronic-device-that-manipulates-information-or-data-2-a-cell-phone-that-can-do-a-lot-of-things-comput">17.
+                                            Direction. Identify the terms referred by each item. Write the answer in your notebook. 1. An electronic device that manipulates information, or data.2. A cell phone that can do a lot of things computers can do.3. The most portable, handheld computer that use a touch- sensitive screen for typing and navigation. 4. A computer that serves up information to other computers on a network 5. Any part of your computer that has a physical structure, such as the keyboard or mouse. 6. The original version of the most common type of personal computer that was introduced in 1981.7. A specialized type of computer that is used for playing video games on your TV. 8. A general term for a group of devices—including fitness trackers and smartwatches-that are designed to be worn throughout the day. 9. Any set of instructions that tells the hardware what to do and how to do it. 10. The first widely sold personal computer with a graphical user interface.​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#in-the-world-of-computer-system-knowing-the-night-storage-devices-suitedfor-our-need-is-very-important-a-lot-of-vanety-of-storage-devices-is-availableand-saving-our-work-means-a-chance-of-retrieving">18.
+                                            In the world of computer system knowing the night storage devices suitedfor our need is very important. A lot of vanety of storage devices is availableand saving our work means a chance of retrieving it for future needActivity 1: Cut, Draw and PastePaste in the blank (cut picture) with the correct answer of each onedescribed.DEVICEDESCRIPTIONAn electronic flash memory device used to store digitalinformation and commonly used in mobile electronicdevicesAn oplical storage device that is read-only or cannot bemodified nor deleted2Considered as the main and usually largest data storagedevice in a computerAn on-line storage media where data is managedremotely and made availablc over a network5.A small, portable storage device connected through theUSB port​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#________-image-contains-the-detailed-image-data-it-is-the-uncompressed-material-of-your-image-data-a-tiffb-gifc-pngd-jpeg__________-is-the-art-of-using-computer-technology-to-create-digital">19.
+                                            ________ image contains the detailed image data. It is the uncompressed material of your image data.
+a. TIFF
+b. GIF
+c. PNG
+d. JPEG
+__________ is the art of using computer technology to create digital work. 
+a. Multimedia
+b. Digital Art
+c. Digital Graphics
+d. Photoshop
+__________ files are the images that have been compressed to store a lot of information in a small sized file. 
+a. JPEG
+b. PNG
+c. GIF
+d. TIFF
+__________ format compresses images different from JPEG; the compression is lossless.
+a. GIF
+b. PNG
+c. RAW image format
+d. TIFF
+__________ machine functions as a telegraphic typewriter that converts the picture values as a combination of holes.</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#1-what-is-a-system-of-interconnected-computers-that-share-a-central-storage-system-and-various-peripherals-devices-such-as-printers-scanners-or-routersa-computer-c-computer-systemb-computer-p">20.
+                                            1. What is a system of interconnected computers that share a central storage system and various peripherals devices such as printers, scanners, or routers?
+A. Computer C. Computer System
+B. Computer Peripherals D. Software 
+2. What is an electronic device that accepts, processes, stores, and outputs data at high speeds according to programmed instructions?
+A. Computer C. Computer System
+B. Computer Peripherals D. Software 
+3. Which type of computers is small in size and affordable in price and is use in schools and homes?
+ A. Mainframe Computer C. Minicomputer
+B. Microcomputer D. Supercomputer
+4. Which type of computers is also expensive and very powerful that has many processors working at the same time and is use by large organizations like banks, healthcare company, and a lot more? 
+ A. Mainframe Computer C. Minicomputer
+B. Microcomputer D. Supercomputer
+5. Which type of computers is the biggest in size and the most expensive in price for it can process trillions of instructions in seconds and is use in weather forecasting, physical simulation, and more?
+ A. Mainframe Computer C. Minicomputer
+B. Microcomputer D. Supercomputer</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#1-a-cell-phone-that-can-do-a-lot-of-things-computers-can-do-2-a-computer-that-serves-up-information-to-other-computers-on-a-network-3-a-general-term-for-a-group-of-devices%e2%80%94-including-fitn">21.
+                                            1. A cell phone that can do a lot of things computers can do. 2. A computer that serves up information to other computers on a network. 3. A general term for a group of devices— including fitness trackers and smartwatches— that are designed to be worn throughout the day. 4. A specialized type of computer that is used for playing video games on your TV. 5. An electronic device that manipulates information, or data. 6. Any part of your computer that has a physical structure, such as the keyboard or mouse. 7. Any set of instructions that tells the hardware what to do and how to do it. 8. The first widely sold personal computer with a graphical user interface. 9. The original version of the most common type of personal computer that was introduced in 1981. 10. The most portable, handheld computer that use a touch-sensitive screen for typing and A computer B. IBM PC C.game console D.hardware E.macintosh F.smart phone G.server H.software I.tablet J.wearable​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#activity-2-directions-based-on-the-discussions-about-generation-of-computers-fill-up-the-spaces-on-the-table-by-choosing-the-given-data-below-microprocessor-artificial-intelligence-much-smaller-fa">22.
+                                            ACTIVITY 2 Directions: Based on the discussions about Generation of Computers, fill up the spaces on the table by choosing the given data below. Microprocessor Artificial Intelligence Much smaller, faster, Huge and occupied the and more powerful, entire rooms, expensive to multi-functional Altair 8800, Integrated circuits Transistors and diodes Voice recognition emerge, Started to use OS, compact, can learn logic and reliable, less expensive operate, lasted only for 12 reasoning hours CRAY I CRAY X-MP, Desktop computers, laptops, Z3, Colossus, Mark I, IBM 604, STRETCH, LARC, CYBER 205, MITS palm computers, Pentium EDVAC, EDSAC IBM 1401 (Model T), computers UNIVAC, ENIAC HONEYWELL400, PDP-8 microcomputers Digital ASIMO (Advanced Step Use to design Developed for atomic energy Equipment Innovative Mobility), a airplanes and laboratory to handle a lot of Corporation robot, was created by missiles data, calculate pay checks, developed the Honda Motor Co. Ltd. On used in businesses, minicomputers December 13, 2005 in All high-level languages universities, and government Tokyo, Japan like C and C++, Java, organizations .Net etc., are used in this generation.​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#vitieseasy-actinityidentify-what-is-being-describe-in-the-following-statements1-it-is-the-brain-of-the-computer-2-it-is-a-temporary-memory-3-parts-inside-the-computer-4-prevent-the-system-unit-fro">23.
+                                            VITIESEASY ACTINITYidentify what is being describe in the following statements1. It is the brain of the computer.2. It is a temporary memory.3. Parts inside the computer.4. Prevent the system unit from overheating-5. Small circuit boards that fit into special slots.6. Parts that you see outside the system unit.7. Mother of all boards.8. Like a giant diskette that can keep a lot of data.9. Refers to the computer memory chips containing permanentdata.10. Keeps memory contents even is the power is lostAVERAGE ACTIVITYExplain the question.What do you think is the most important part of the system unit? Way?​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#write-true-if-the-statement-is-correct-and-false-if-not-write-your-answer-on-the-space-provided-before-cach-number-a-1-desktop-publishing-allows-an-individual-to-combine-text-numerical-data-photog">24.
+                                            Write TRUE if the statement is correct and FALSE if not. Write your answer on the space provided before cach number a 1. Desktop publishing allows an individual to combine text, numerical data, photographs, charts, and other visual clements in a document.2. Desktop publishing allows an individual to combine text, numerical data, photographs, charts, and other visual elements in a document 3. The Desktop Publishing is not applicable in the laptop computer because it is only intended to desktop publishing 4. The primary advantages of desktop publishing over conventional publishing apparatus are low cost and case of use5. The design and production of publications using personal computers with graphics capability. 6. A system or process for designing, editing, and producing camera-ready documents, as newsletters, brochures, or magazines, using a microcomputer, special software, and a printer 7. Desktop publishing dramatically increase the cost of page layout, causing many projects to be taken in house. 8. WordArt object is created, you can change the position and size of the object. 9. Clipart can be premade images stored in a gallery in a computer that can be used in desktop publishing 10. The text allow the eyes to take in a lot of text and scan the newspaper quickly for interesting informations​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#a-botb-robc-virusd-worm7-it-is-a-type-of-malicious-software-that-threatens-to-publish-the-victims-data-or-perpetually-blockaccess-to-ita-graphical-user-interfaceb-application-softwarec-randomware">25.
+                                            a botb. robc. virusd worm7. It is a type of malicious software that threatens to publish the victim's data or perpetually blockaccess to ita Graphical User Interfaceb. Application softwarec Randomwared Malware8. It is code or software that is specifically designed to damage, disrupt, steal, or in general inflictsome other "bad" or illegitimate action on data, hosts, or networks.a. Wormsb. Malcodec. Trojansd. Defragmentation29. This should be done before installing new software and software updates. It should bedone periodically. The frequency would depend on how often you add to your system but at leasttwice a yearb. Restorec. Increment Backupd. Full Backupa. Backup Mediafiles in10. This should be done daily especially if you work on the computer a lot changingday.d Full Backupb. Restorec. Increment Backupa Backup MediaDebedAddress: Namuccayan, Sto. Niño, CagayanTelephone Nos.: 09771250892Email Address: 500625@deped.gov.ph​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#all-institutions-both-public-and-private-deal-with-a-lot-of-confidential-information-with-the-advent-of-modem-technology-most-of-this-information-is-now-gathered-processed-and-saved-digitally-an">26.
+                                            All institutions, both public and private, deal with a lot of confidential information. With the advent of modem technology, most of this information is now gathered, processed, and saved digitally and transmitted over computer networks. Write ways on how this information shall be secured properly to prevent loss of sensitive or confidential information, prevent hostile use of data or avoid damage to the organization's reputations.​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#1-a-tool-used-to-strip-and-cut-wires-2-wire-cutterc-hex-driverb-cable-tiesd-screws2-it-is-used-to-prevent-esd-damage-to-computer-equipment-a-clothc-paint-brushb-anti-static-wrist-strapd-compr">27.
+                                            1. A tool used to strip and cut wires.2. Wire cutterc. hex driverb. Cable tiesd. screws2. It is used to prevent ESD damage to computer equipment.a clothc. paint brushb. Anti-static wrist strapd. compress air3. It is use to loosen or tighten slotted screws.a. hex driverc. Philips head screw driverb. anti-static matd. hand tools4. Sometimes called a nut driver, is used to tightens screws.a. hex diverc. cable tiesb. wire cutterd. compress air5. A cellphone that can do a lot of things computers can do.a. tabletc. IBM PCb. smartphoned. server6. A specialized type of computer that is used for playing video games on your TV.a. game consolesc. PSPb. PCd. tablet7. An electronic device that manipulates information or dataa. hardwarec. softwareb. computerd. server8. Any part of computer that has a physical structure, such as the keyboard or mouse.a. hardwarec. serverd. smartphone9. Any set of instructions that tells the hardware what to do and how to do itc. softwareb. IBM PCd. computer10. The first widely sold personal computer with a graphical user interface.a. macc. Macintoshb. server.11. It is a wireless technology that allows the exchange of data between different dshort distancesc. Bluetoothb. shareItd. USB12. Which of the following does not belong to the group?a. flash drivec. Dropboxb. iCloudd. OneDriveb. appsa. appsa. wi-fihelp me please1000×​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#directions-write-a-if-the-sentence-is-an-advantage-and-d-if-the-sentence-is-a-disadvantage-of-using-the-computer-1-you-placed-your-complete-name-and-address-and-it-was-used-by-a-stranger-for-illega">28.
+                                            Directions: Write A if the sentence is an advantage and D if the sentence is a disadvantage of using the computer. 1. You placed your complete name and address and it was used by a stranger for illegal purpose 2. You work on your computer maintaining your proper posture 3. You sent a birthday card to your father who is in Saudi Arabia 4. You were able to see your relative's pictures that are staying in the province. 5. You make your school projects by researching using the computer 6. You do not turn off the computer because you will use it when you return from school 7. You kept your old unusable computer because you should not throw the things you bought 8. You can read news on the computer 9. Computers can perform many things and can store lots of data 10. Your hands and eyes are painful because you have played computer games for a long time​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#directions-write-true-if-the-statement-is-correct-and-false-if-not-write-your-answer-on-the-space-provided-before-each-number-1-desktop-publishing-allows-an-individual-to-combine-text-numerical-d">29.
+                                            Directions: Write TRUE if the statement is correct and FALSE if not. Write your answer on the space provided before each number. 1. Desktop publishing allows an individual to combine text, numerical data, photographs, charts, and other visual elements in a document. 2. Desktop publishing allows an individual to combine text, numerical data, photographs, charts, and other visual elements in a document. 3. The Desktop Publishing is not applicable in the laptop computer because it is only intended to desktop publishing. 4. The primary advantages of desktop publishing over conventional publishing apparatus are low cost and ease of use. 5. The design and production of publications using personal computers with graphics capability. 6. A system or process for designing, editing, and producing oamera-ready documents, as newsletters, brochures, or magazines, using a microcomputer, special software, and a printer. 7. Desktop publishing dramatically increase the cost of page layout, causing many projects to be taken in house. 8. WordArt object is created, you can change the position and size of the object. 9. Clipart can be premade images stored in a gallery in a computer that can be used in desktop publishing. 10. The text allow the eyes to take in a lot of text and soun the newspaper quickly for interesting information.​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#ict-in-the-context-of-global-communication-can-use-different_______platforms-for-different-set-of______to-interact-through-the-service-via_____it-provides-access-to-information-through-telecommunic">30.
+                                            ICT in the context of global communication can use different_______
+platforms for different set of______
+to interact through the service via_____
+It provides access to information through telecommunications
+with the use of computer, network______
+and software. The tangible
+device used in order to connect to the internet is called______
+while the application that is used to gather and manage this data is called
+With the different online platforms, it helps a lot of people to do their tasks
+and produce a good result but still depends on their specific needs. People with
+disabilities like blindness can use________
+L. Those who want
+to grow their own network of friends with the same interests with them can use_______
+And in order to have a video call with group of friends or co-
+workers,______
+app should be used. But media content like
+videos, images, music or audio can be shared through______
+sites.</a>
+                                    </li>
+                                                            </ul>
+                        </nav>
+                    </div>
+                                            <h2 class="ez-toc-section" id="electronic-device-that-can-manipulate-information-or-data-number-to-a-cell-phone-that-can-do-a-lot-of-things-computers-can-do-the-mercury-the-most-portable-handheld-computer-that-used-to-touch-sensiti">
+                            1. electronic device that can manipulate information or data number to a cell phone that can do a lot of things computers can do the mercury the most portable handheld computer that used to touch sensitive screen for typing and navigation number for a computer that serves up information to other computers on a network number five any part of use computer that has bicycle structure such as keyboard or mouse​</h2><br />
+                        <p><strong>Answer:</strong></p><p>electronic device that can manipulate information or data number to a cell phone that can do a lot of things computers can do the mercury the most portable handheld computer that used to touch sensitive screen for typing and navigation number for a computer that serves up information to other computers on a network number five any part of use computer that has bicycle structure such as keyboard or mouse<strong>Explanation:</strong></p><p>branliest po ty</p><br />
+                                            <h2 class="ez-toc-section" id="1-an-electronic-device-that-manipulates-information-or-data-a-smartphone-b-hardwarec-game-consoled-computerd-computer2-a-phone-that-can-do-a-lot-of-things-that-computers-can-do-a-smartphone-b">
+                            2. 1. An electronic device that manipulates information, or data.A. smartphone B. hardwareC. game consoleD. computerD. computer2. A phone that can do a lot of things that computers can do.A. smartphone B. game console C. hardware3. The most portable, handheld computer that use a touch sensitive screen for typing and navigation.A. tabletB. computerC. serverD. software4. A computer that serves up information to other computers on a network.A. serverB. tabletC. softwareD. hardware5. Any part of your computer that has a physical structure, such as the keyboard or mouse.A. softwareB. serverC. hardwareD. tablet​</h2><br />
+                        <p><strong>Answer:</strong></p><p>D, A, C, B, D</p><p><strong>Explanation:</strong></p><p>hope it helps</p><p><strong>Answer:</strong></p><p>C, D, A, B, A</p><p><strong>Explanation:</strong></p><p>Sana maka2long</p><br />
+                                            <h2 class="ez-toc-section" id="identify-the-type-of-computer-being-asked-in-each-situation-below-1-my-brother-needs-a-computer-that-is-capable-of-limitedtasks-like-browsing-the-internet-playing-movies-and-creating-documents-2-i">
+                            3. identify the type of computer being asked in each situation below.1. My brother needs a computer that is capable of limitedtasks like browsing the internet, playing movies and creating documents.2. I need a computer that will handle a simple task. I justneed my computer to play music no more and no less.3. I am a scientist that needs a powerful computer that can handle largeamount of data for my experiments.4. My brother needs a specialized computer for his photography job.The computer he wants should be able to handle software for photo editing.5. A business woman is starting to build a business that will provide services toher customers. The computer she wants should be able to provide storage services to a lot of her clients.​​</h2><br />
+                        <p><strong>Answer:</strong></p><p>1. micro computer</p><p>2. mini computer</p><p>3. super computer</p><p>4. micro computer</p><p>5. mainframe computer</p><p><strong>Explanation:</strong></p><p>yan yung alam ko</p><br />
+                                            <h2 class="ez-toc-section" id="3-devices-are-added-to-the-computer-system-by-plugging-them-into-one-of-the-ports-on-the-back-of-the-computer-a-internal-devicesb-external-devicesc-cellphoned-television4-it-allows-the-selectio">
+                            4. 3. devices are added to the computer system by plugging them into one of the ports on the back of the computer. a. Internal devicesb. External Devicesc. Cellphoned. Television4. It allows the selection of icons and links much more quickly and smoothly than the keyboard. a. Monitorb. Mousec. Speakerd. Microphone5. The memory that computers use to store data and instructions needed by the CPU for computer operation.a. RAMb. CPUc. ROMd. Disk drive6.The brain of the computer system. a. RAMb. Processorc. Monitord. Disk drive7. device that helps your computer cool down a lot easier by blowing around the air in your laptop. a. CPUb. Processorc. Monitord. Fan8. A system connecting a number of computer systems to form a local area network.a. Ethernet portb. RAMc. ROMd. Serial port9. A connector by which a device that sends data one bit at a time may be connected to a computer. a. Ethernet portb. RAMc. ROMd. Serial port10. It allows a computer to play CD’s or DVD’s. a. RAMb. ROMc. Disk Drived. Speaker11. It allows you to plug in another device that has a USB out and connect it to your computer. a. CPUb. Serial portc. Heat sinkd. USB port12. It listens and captures or amplifies sound. a. speakerb. Webcamc. Microphoned. Serial port13. It has buttons for all the letters of the alphabet as well as numbers, symbols and special function keys.  a. Keyboardb. Speakerc. CPUd. Microphone14. It contains all of the connections that allow the carious other subsystems to interact. a. Motherboard]b. CPUc. RAMd. ROM15. It allows user to capture video or screenshots of themselves. a. Motherboard]b. CPUc. Webcamd. ROM​</h2><br />
+                        <p><strong>Answer:</strong></p><p>3. A</p><p>4.B</p><p>5.C</p><p>6.A</p><p>7.D</p><p>8.B</p><p>9.D</p><p>10.A</p><p>11.B</p><p>12.B</p><p>11.D</p><p>14.A</p><p>15.C</p><br />
+                                            <h2 class="ez-toc-section" id="most-of-the-large-companies-would-just-buy-a-payroll-program-that-they-will-use-for-their-companies-however-this-complicated-payroll-program-is-not-really-necessary-for-small-businesses-aside-from">
+                            5. Most of the large companies would just buy a payroll program that they will use for their companies. However, this complicated payroll program is not really necessary for small businesses. Aside from its exorbitant price, some of the other functions are not really important for personal or small business use. Preparing (1) _______ is not that really hard. All you need is a computer with a (2) _______ Program and you can create your own spreadsheet. You just need to do it once and you can use it again for every payroll period. In starting a spreadsheet, you’ll see that it has letters across the top to identify each (3) _______ and numbers down the left side to identify each (4) _______. You just need to open a tab and know your data to input. There are hundreds of functions to use in this program. For beginners you can use (5) “_______” to add, “_______” to subtract, “_______” to divide, “_______” to sum it up and a lot more. ​</h2><br />
+                        <p><strong>Explanation:</strong></p><p>what is the answer of this question  I need it answer</p><p></p><br />
+                                            <h2 class="ez-toc-section" id="arts-6-10il-direction-match-column-a-with-column-b-and-write-the-letter-of-the-correct-answer-on-the-space-providedwrite-neatly-and-clearlya-software6includes-the-physical-tangible-parts-or-c">
+                            6. ARTS (6-10)
+IL Direction Match Column A with Column B and write the letter of the correct answer on the space provided
+Write neatly and clearly
+a. Software
+6
+includes the physical, tangible parts or components
+of a computer
+7. Eraser Tool cleans up imperfections in your work and
+making your job a lot easier
+b.
+c. Hardware
+8. Hand Tool moves around an image within an object.
+9
+is a collection of data or computer instructions, that
+tells the computer how to work
+d
+B
+10. Paint Bucket Tool fills or makes an area one color.
+e.</h2><br />
+                        <p><strong>Answer:</strong></p><p>6. C. HARDWARE</p><p>9. A. SOFTWARE</p><p></p><p><strong>Explanation:</strong></p><p></p><p>I can't answer the others cause the question and Choices are not arranged properly so, yeah. sorry </p><br />
+                                            <h2 class="ez-toc-section" id="ict-in-the-context-of-global-communication-can-use-different-_____-platforms-for-different-set-of-_____-to-interact-through-the-service-via-_____-it-provides-access-to-information-through-telecommuni">
+                            7. ICT in the context of global communication can use different _____ platforms for different set of _____ to interact through the service via _____. It provides access to information through telecommunications withthe use of computer, network ____ and software. The tangible device used in order to connect to the internet is called ______.while the application that is used to gather and manage this data is called _____.With the different online platforms, it helps a lot of people to do their tasksand produce a good result but still depends on their specific needs. People withdisabilities like blindness can use _______.Those who want to growtheir own network of friends with the same interests with them can use ______.And in order to have a video call with group of friends or co-workers, ____ app should be used. But media content like videos, images,music or audio can be shared through _________ sites.​..​</h2><br />
+                        <p> </p>1.Ans: ONLINE<p></p>2.Ans: DEVICES<p></p>3.Ans: INTERNET<p></p>4.Ans: HARDWARE<p></p> MAKE A BRAINLEST ANSWER PO ☺️☺️<br />
+                                            <h2 class="ez-toc-section" id="hen-the1-is-an-electronic-hardware-device-that-operates-and-functions-under-the-control-ofinstructions-called-programs-2-this-invention-led-to-the-creation-of-the-microprocessor-3-this-computer-int">
+                            8. hen the1. Is an electronic hardware device that operates and functions under the control ofinstructions called programs.2. This invention led to the creation of the microprocessor.3. This computer introduced the PC-DOS (Disk Operating System) from Microsoft.4. Also known as the defense calculator.5. Is able to do all the functions of the vacuum tube with less cost, size, and power andis a lot of durable.6. Computer designed around the Motorola 68000 microprocessor.-7. German cipher machine during the Second World War.8. Was invented by William Oughtred an English Mathematician from CambridgeUniversity in England.9. Was used in Babylonia as early as 2400 B.C.10. Are fastest computers in the world.II.TRUE OR FALSE: Write the word TRUE if the statement is correct and write your name if the statement isfalse.11. Netbook is a small laptop built for both portability and low price.12. Nettop is a new breed of desktop computers introduced by intel with small size and low cost.13. Smart phone is a mobile phone with additional capabilities such as email and internet.14. CPU is often called the brain of the computer.15. Keyboard is one way of telling the computer what to do.16. Allows you to see what your computer is doing is called monitor.17. Mouse is a pointing device.18. Speaker allows you to listen to music from the computer while working.19. Printer is a machine that takes what you have created on your computer and puts them on paper.20. Modem is a communication device that allows the computer to receive and send data and information toand from othercomputers.​</h2><br />
+                        <p><strong>Answer:</strong></p><p>mouse is a pointing device</p><p>an printer is a machine</p><br />
+                                            <h2 class="ez-toc-section" id="problemtrisha-has-a-lot-of-pictures-of-varied-sizes-that-she-would-like-to-frame-she-decidedto-go-to-%e2%80%9chappy-frames%e2%80%9d-that-offers-framing-services-to-restore-and-to-frame-her-picture">
+                            9. PROBLEM:
+Trisha has a lot of pictures of varied sizes that she would like to frame. She decided
+to go to “Happy Frames” that offers framing services to restore and to frame her pictures.
+The store deals two types of frames – standard and expensive. The frames are offered in 
+white and can be ordered in any color the customer requests. Assume that each frame is 
+(1) one inch wide. The cost amount to color the frame is $0.15 per inch. The cost amount
+of a standard frame is $0.10 per inch and amount of an expensive frame is $0.35 per 
+inch. The cost amount of placing a paperboard after the picture is $0.04 for every square 
+inch and the cost amount of placing glass on upper of the picture is $0.09 for every inch. 
+The client can choose to place crowns on the edges, which amount costs $0.45 per 
+crown. Create a java program that computes the user to input the following data and 
+display the overall costs of edging the picture.
+a. Pictures L, W and computes inches
+b. Input frame types
+c. If the pictures did clients wanted to make it colored
+d. If the number of crowns did the user wanted to put</h2><br />
+                        <p><strong>Answer:</strong></p><p></p><p><strong>Explanation:</strong></p><p> one inch wide. The cost amount to color the frame is $0.15 per inch. The cost amount</p><p>of a standard frame is $0.10 per inch and amount of an expensive frame is $0.35 per</p><p>inch. The cost amount of placing a paperboard after the picture is $0.04 for every square</p><p>inch and the cost amount of placing glass on upper of the picture is $0.09 for every inch.</p><p>The client can choose to place crowns on the edges, which amount costs $0.45 per</p><p>crown. Create a java program that computes the user to input the following data and</p><p>display the overall costs of edging the picture.</p><p>a. Pictures L, W and computes inches</p><p>b. Input frame types</p><p>c. If the pictures did clients wanted to make it colored</p><p>d. If the number of crowns did the user wanted to put<br />Answer:A</p><br />
+                                            <h2 class="ez-toc-section" id="b-directions-identify-the-following-choose-the-letter-of-the-correct-answer-write-your-answer-on-thespace-provided-21-it-is-the-physical-parts-or-components-of-a-computer-a-hardware-b-software">
+                            10. B. Directions: Identify the following. Choose the letter of the correct answer. Write your answer on thespace provided.21. It is the physical parts or components of a computer.A. Hardware b. Software C. Space22. It is also a collection of data, programs, procedures, and documentation that perform varioustasks on a computer system..A. Hardware b. Software c. Space23. It is an application from Microsoft that creates, reads, edits, and shares files quickly andeasily.A. Laptop b. Mouse c. Microsoft Word24. It is an application software or "apps" that makes video editing fun and easy to edit with lotsof powerful tools and downloadable assets.A. KineMaster b. KindMaster c. KeenMaster25. This application software or "apps" mentioned above usually do the followingA. Cut, splice, and crop your videos.B. Read and singc. His a kind of printr device​</h2><br />
+                        <p><strong>Answer:</strong></p><p>21. A</p><p>22. B</p><p>23. C</p><p>24. A</p><p>25. A</p><p><strong>Explanation:</strong></p><p>You're welcome..</p><p><strong>Answer:</strong></p><p>21.A</p><p>22.B</p><p>23.A</p><p>24.A</p><p>25.A</p><p><strong>Explanation:</strong></p><p>HOPE IT'S HELP </p><br />
+                                            <h2 class="ez-toc-section" id="ict-in-the-context-of-global-communication-can-use-different-_____-platforms-for-different-set-of-_____-to-interact-through-the-service-via-_____-it-provides-access-to-information-through-telecommuni">
+                            11. ICT in the context of global communication can use different _____ platforms for different set of _____ to interact through the service via _____. It provides access to information through telecommunications withthe use of computer, network ____ and software. The tangible device used in order to connect to the internet is called ______.while the application that is used to gather and manage this data is called _____.With the different online platforms, it helps a lot of people to do their tasksand produce a good result but still depends on their specific needs. People withdisabilities like blindness can use _______.Those who want to growtheir own network of friends with the same interests with them can use ______.And in order to have a video call with group of friends or co-workers, ____ app should be used. But media content like videos, images,music or audio can be shared through _________ sites.​</h2><br />
+                        <p><strong>Information and Communications Technology</strong></p><p>ICT in the context of global communication can use different <strong>online</strong> platforms for different set of <strong>devices</strong> to interact through the service via <strong>the internet</strong>. It provides access to information through telecommunications with the use of computers, network <strong>hardware</strong> and software. The tangible device used in order to connect to the internet is called <strong>a computer</strong>. While the application that is used to gather and manage this data is called <strong>software</strong>. With the different online platforms, it helps a lot of people to do their tasks and produce a good result but still depends on their specific needs. People with disabilities like blindness can use<strong> </strong><strong>assistive media</strong>. Those who want to grow their own network of friends with the same interests with them can use <strong>social networks</strong>. And in order to have a video call with a group of friends or co-workers, <strong>a video conference</strong> app should be used. But media content like videos, images, music or audio can be shared through <strong>media sharing</strong> sites.​</p><p>Learn more <strong>about Information and Communications Technology on</strong> https://brainly.ph/question/2388652</p><p>#SPJ1</p><br />
+                                            <h2 class="ez-toc-section" id="direction-read-the-statement-carefully-write-true-if-the-statement-iscorrect-write-false-is-the-statement-is-incorrect-write-your-answers-in-theblank-providedlill1-random-access-memory-ram-are">
+                            12. Direction: Read the statement carefully. Write true if the statement iscorrect. Write false is the statement is incorrect. Write your answers in theblank providedLILL1. Random Access Memory (RAM) are devices that are attachedinside the computer2 Fixed Storage device is considered as the primary storage devicein the computer3. Hard disk has a higher capacity compared to other storagedevices.4 Portable, which means it is complicated for the user to copy andtransfer files from one computer to another computer.5. A computer does not need storage devices before and afterprocessing the data to store information and access later.6. Volatile Storage Device means that all the data are gone in theabsence of electricity7. Cloud Storage is where some websites offer free storage tousers. They just need to sign up before they can avail this freestorage8. Shared Network Drive is a location in another computer whereother users from other computers are allowed to save andaccess information.9. External hard disk is where you can store a lot of information, butthe only difference is that it is not detachable and can betransferred to another computer to access information.10. Removable Storage Devices are devices that can be cannot bedetached after use.pa answer follow kokayusalamat​</h2><br />
+                        <p><strong>Answer:</strong></p><p>1. True</p><p>2. False</p><p>3.True</p><p>4. True</p><p>5. False</p><p>5.</p><p></p><br />
+                                            <h2 class="ez-toc-section" id="electronic-spreadsheets-like-excel-or-numbers-can-bring-a-lot-of-advantages-especially-those-in-the-corporate-world-as-far-as-i-know-and-from-my-experience-it-is-also-accurate-unless-you-know-th">
+                            13. Electronic spreadsheets, like Excel or Numbers, can bring a lot of advantages especially those in the corporate world. As far as I know, and from my experience, it is also accurate, unless you know the formula to get the output. There are different functions that can be used: accounting purposes, simple arithmetic, even logical expressions. It's actually more convenient to use. However, if you feel like checking the output twice, you can manually check the computation and see if you get the same answer.Open-source refers to the software whose source code is available for anybody to access and modify, while proprietary software refers to the software which is solely owned by the individual or publisher who developed it.Spreadsheets are an essential business and accounting tool. They can vary in complexity and can be used for various reasons, but their primary purpose is to organize and categorize data into a logical format. Once this data is entered into the spreadsheet, you can use it to help organize and grow your businessElectronic spreadsheets, like Excel or Numbers, can bring a lot of advantages especially those in the corporate world. As far as I know, and from my experience, it is also accurate, unless you know the formula to get the output. There are different functions that can be used: accounting purposes, simple arithmetic, even logical expressions. It's actually more convenient to use. However, if you feel like checking the output twice, you can manually check the computation and see if you get the same answer.Open-source refers to the software whose source code is available for anybody to access and modify, while proprietary software refers to the software which is solely owned by the individual or publisher who developed it.Spreadsheets are an essential business and accounting tool. They can vary in complexity and can be used for various reasons, but their primary purpose is to organize and categorize data into a logical format. Once this data is entered into the spreadsheet, you can use it to help organize and grow your businessElectronic spreadsheets, like Excel or Numbers, can bring a lot of advantages especially those in the corporate world. As far as I know, and from my experience, it is also accurate, unless you know the formula to get the output. There are different functions that can be used: accounting purposes, simple arithmetic, even logical expressions. It's actually more convenient to use. However, if you feel like checking the output twice, you can manually check the computation and see if you get the same answer.Open-source refers to the software whose source code is available for anybody to access and modify, while proprietary software refers to the software which is solely owned by the individual or publisher who developed it.Spreadsheets are an essential business and accounting tool. They can vary in complexity and can be used for various reasons, but their primary purpose is to organize and categorize data into a logical format. Once this data is entered into the spreadsheet, you can use it to help organize and grow your business​</h2><br />
+                        <p>Ito na po sana po naka tulong ahah</p><br />
+                                            <h2 class="ez-toc-section" id="b-after-learning-how-to-create-a-powerpoint-presentation-decide-if-the-following-techniques-will-help-you-or-not-in-your-multimedia-presentation-write-e-if-the-statement-is-an-effective-technique">
+                            14. B. After learning how to create a PowerPoint presentation, decide if the following techniques will help you or not in your multimedia presentation. Write E if the statement is an effective technique, and NE if it's not effective.
+1. Presentation should not be used as a slide-show outline of what the speaker is telling the audience. It should enhance what the speaker is saying.
+2. Use bouncing and flying text for animation so that people will roll their eyes because of these.
+3. Use high-contrast color arrangements so that your slides will be readable
+4. Place no more than eight lines of text on a slide with no more than eight to ten words per line.
+5. Display charts or graphs with many data. It is useful for the audience to see such things.
+6. Rehearse your PowerPoint presentation several times. Make sure that can deliver it even without the presentation.
+7. Use slides sparingly so that the audience will focus on you, not on the screen
+8. Slides should be used synchronously with your speech to emphasize or to illustrate the product.
+9. More interaction and motion on the screen will make the audience learn a lot.
+10. Use a remote clicker to enable you to move farther away from the computer.</h2><br />
+                        <p><strong>Answer:</strong></p><p>1.E</p><p>2.E</p><p>3.NE</p><p>4.E</p><p>5.E</p><p>6.NE</p><p>7.E</p><p>8.NE</p><p>9.E</p><p>10E</p><br />
+                                            <h2 class="ez-toc-section" id="identification-write-a-if-the-statement-is-an-advantage-and-d-if-its-a-disadvantage-1-you-place-your-complete-name-and-address-in-the-internet-2-work-on-your-computer-maintaining-your-prope">
+                            15. IDENTIFICATION - Write "A" if the statement is an Advantage and "D" if it's a Disadvantage. 1. You place your complete name and address in the internet, 2. Work on your computer maintaining your proper posture. 3. You sent a birthday card to your father who is in abroad. 4. You can make your school projects by researching using the computer 5. You were able to see your relative's pictures that are staying in the province. 6. You do not turn off the computer because you will use it when you return home from school. 7. You kept your old unusable computer because you should not throw the things you bought. 8. You can read news on the computer using the Internet. 9. Computers can do many things and can store lots of data. 10. Your hands and eyes are painful because you have played computer games for a long time.​</h2><br />
+                        <p><strong>Answer:</strong></p><p>D</p><p>D</p><p>A</p><p>A</p><p>A</p><p>D</p><p>A</p><p>A</p><p>A</p><p>D</p><p><strong>Explanation:</strong></p><p> Trust me, I know.</p><p></p><br />
+                                            <h2 class="ez-toc-section" id="1-a-cell-phone-that-can-do-a-lot-of-things-computers-can-do-2-a-computer-that-serves-up-information-to-other-computers-on-a-network-3-a-general-term-for-group-of-devices-including-fitness-tracke">
+                            16. 1. A cell phone that can do a lot of things computers can do. 2. A computer that serves up information to other computers on a network. 3. A general term for group of devices- including fitness trackers and smartwatches- that are designed to be worn throughout the day. 7. A specialized type of computer that is used for playing video games on your TV. electronic device that manipulates information, or data. 6. Any part of your computer that has a physical structure, such as the keyboard or mouse. 7. Any set of instructions that tells the hardware what to do and how to do it. S. The first widely sold personal computer with a graphical user interface. 9. The original version of the most common type of personal computer that was introduced in 1981 10. The most portable, handheld computer that use a touch-sensitive screen for typing and navigation​</h2><br />
+                        <p><strong>Answer:</strong></p><p>1.computer</p><p>2.most computer</p><p>3.tablet computer</p><p>4.server</p><p>5.hardware</p><p>6.IBM model 5150</p><p>7.game console</p><p>8.wearable technology</p><p>9.</p><p>10.</p><p><strong>Explanation:</strong></p><p>yan lang po ang na sagot ko Sana maka </p><p>tulong Yung dalawa kayo na bahala </p><br />
+                                            <h2 class="ez-toc-section" id="direction-identify-the-terms-referred-by-each-item-write-the-answer-in-your-notebook-1-an-electronic-device-that-manipulates-information-or-data-2-a-cell-phone-that-can-do-a-lot-of-things-comput">
+                            17. Direction. Identify the terms referred by each item. Write the answer in your notebook. 1. An electronic device that manipulates information, or data.2. A cell phone that can do a lot of things computers can do.3. The most portable, handheld computer that use a touch- sensitive screen for typing and navigation. 4. A computer that serves up information to other computers on a network 5. Any part of your computer that has a physical structure, such as the keyboard or mouse. 6. The original version of the most common type of personal computer that was introduced in 1981.7. A specialized type of computer that is used for playing video games on your TV. 8. A general term for a group of devices—including fitness trackers and smartwatches-that are designed to be worn throughout the day. 9. Any set of instructions that tells the hardware what to do and how to do it. 10. The first widely sold personal computer with a graphical user interface.​</h2><br />
+                        <p><strong>Answer:</strong></p><p>1. computer</p><p>2. Mobile device</p><p>3. Tablet computers</p><p>4. Server</p><p>5. Hardware</p><p>6.IBM Personal computer</p><p>7. Game console</p><p>8. Wearable Technology</p><p>9. Software</p><p>10. Macintosh</p><p><strong>Explanation:</strong></p><p>Correct me If I have wrong answers</p><p></p><br />
+                                            <h2 class="ez-toc-section" id="in-the-world-of-computer-system-knowing-the-night-storage-devices-suitedfor-our-need-is-very-important-a-lot-of-vanety-of-storage-devices-is-availableand-saving-our-work-means-a-chance-of-retrieving">
+                            18. In the world of computer system knowing the night storage devices suitedfor our need is very important. A lot of vanety of storage devices is availableand saving our work means a chance of retrieving it for future needActivity 1: Cut, Draw and PastePaste in the blank (cut picture) with the correct answer of each onedescribed.DEVICEDESCRIPTIONAn electronic flash memory device used to store digitalinformation and commonly used in mobile electronicdevicesAn oplical storage device that is read-only or cannot bemodified nor deleted2Considered as the main and usually largest data storagedevice in a computerAn on-line storage media where data is managedremotely and made availablc over a network5.A small, portable storage device connected through theUSB port​</h2><br />
+                        <p><strong>Answer:</strong></p><p>Memory card -  An electronic flash memory device used to store digital information and commonly used in mobile electronic devices.</p><p></p><p>CD-ROM disc – An optical storage device that is read-only or cannot be modified nor deleted. </p><p></p><p>hard drive-</p><p>For most computers, the largest storage device is the hard drive or SSD.</p><p></p><p> Cloud storage – Data is managed remotely and made available over a network.</p><p></p><p>USB flash drives - are small, portable storage devices that use a USB interface to connect to a computer.</p><br />
+                                            <h2 class="ez-toc-section" id="________-image-contains-the-detailed-image-data-it-is-the-uncompressed-material-of-your-image-data-a-tiffb-gifc-pngd-jpeg__________-is-the-art-of-using-computer-technology-to-create-digital">
+                            19. ________ image contains the detailed image data. It is the uncompressed material of your image data.
+a. TIFF
+b. GIF
+c. PNG
+d. JPEG
+__________ is the art of using computer technology to create digital work. 
+a. Multimedia
+b. Digital Art
+c. Digital Graphics
+d. Photoshop
+__________ files are the images that have been compressed to store a lot of information in a small sized file. 
+a. JPEG
+b. PNG
+c. GIF
+d. TIFF
+__________ format compresses images different from JPEG; the compression is lossless.
+a. GIF
+b. PNG
+c. RAW image format
+d. TIFF
+__________ machine functions as a telegraphic typewriter that converts the picture values as a combination of holes.</h2><br />
+                        <p><strong>________ image contains the detailed image data. It is the uncompressed material of your image data.</strong></p>a. TIFF<p>[tex] \: [/tex]</p><p><strong>__________ is the art of using computer technology to create digital work. </strong></p>c. Digital Graphics<p>[tex] \: [/tex]</p><p><strong>__________ files are the images that have been compressed to store a lot of information in a small sized file. </strong></p>a. JPEG<p>[tex] \: [/tex]</p><p><strong>__________ format compresses images different from JPEG; the compression is lossless.</strong></p>a. GIF<p>[tex] \: [/tex]</p><p><strong>__________ machine functions as a telegraphic typewriter that converts the picture values as a combination of holes. </strong></p>Bartlane Cable Picture Transmission<p>[tex] \: [/tex]</p><p><strong>#CarryOnLearning❤</strong></p><p>[tex]\large\boxed{\text{Together we go Far!}}[/tex]</p><p></p><p><strong>Answer:</strong></p><p> image contains the detailed image data. It is the uncompressed material of your image data.</p>a. TIFF<p>b. GIF</p><p>c. PNG</p><p>d. JPEG</p><p></p><p>__________ is the art of using computer technology to create digital work. </p><p>a. Multimedia</p><p>b. Digital Art</p>c. Digital Graphics<p>d. Photoshop</p><p></p><p>__________ files are the images that have been compressed to store a lot of information in a small sized file. </p>a. JPEG<p>b. PNG</p><p>c. GIF</p><p>d. TIFF</p><p></p><p>__________ format compresses images different from JPEG; the compression is lossless.</p>a. GIF<p>b. PNG</p><p>c. RAW image format</p><p>d. TIFF</p><p></p><p>__________ machine functions as a telegraphic typewriter that converts the picture values as a combination of holes.</p><br />
+                                            <h2 class="ez-toc-section" id="1-what-is-a-system-of-interconnected-computers-that-share-a-central-storage-system-and-various-peripherals-devices-such-as-printers-scanners-or-routersa-computer-c-computer-systemb-computer-p">
+                            20. 1. What is a system of interconnected computers that share a central storage system and various peripherals devices such as printers, scanners, or routers?
+A. Computer C. Computer System
+B. Computer Peripherals D. Software 
+2. What is an electronic device that accepts, processes, stores, and outputs data at high speeds according to programmed instructions?
+A. Computer C. Computer System
+B. Computer Peripherals D. Software 
+3. Which type of computers is small in size and affordable in price and is use in schools and homes?
+ A. Mainframe Computer C. Minicomputer
+B. Microcomputer D. Supercomputer
+4. Which type of computers is also expensive and very powerful that has many processors working at the same time and is use by large organizations like banks, healthcare company, and a lot more? 
+ A. Mainframe Computer C. Minicomputer
+B. Microcomputer D. Supercomputer
+5. Which type of computers is the biggest in size and the most expensive in price for it can process trillions of instructions in seconds and is use in weather forecasting, physical simulation, and more?
+ A. Mainframe Computer C. Minicomputer
+B. Microcomputer D. Supercomputer</h2><br />
+                        <p><strong>Answer:</strong></p><p>1. C. Computer System</p><p>2. A. Computer</p><p>3. B. Microcomputer</p><p>4. A. Mainframe Computer</p><p>5. D. Supercomputer</p><br />
+                                            <h2 class="ez-toc-section" id="1-a-cell-phone-that-can-do-a-lot-of-things-computers-can-do-2-a-computer-that-serves-up-information-to-other-computers-on-a-network-3-a-general-term-for-a-group-of-devices%e2%80%94-including-fitn">
+                            21. 1. A cell phone that can do a lot of things computers can do. 2. A computer that serves up information to other computers on a network. 3. A general term for a group of devices— including fitness trackers and smartwatches— that are designed to be worn throughout the day. 4. A specialized type of computer that is used for playing video games on your TV. 5. An electronic device that manipulates information, or data. 6. Any part of your computer that has a physical structure, such as the keyboard or mouse. 7. Any set of instructions that tells the hardware what to do and how to do it. 8. The first widely sold personal computer with a graphical user interface. 9. The original version of the most common type of personal computer that was introduced in 1981. 10. The most portable, handheld computer that use a touch-sensitive screen for typing and A computer B. IBM PC C.game console D.hardware E.macintosh F.smart phone G.server H.software I.tablet J.wearable​</h2><br />
+                        <p><strong>Answer:</strong></p><p>A cell phone that can do a lot of things computers can do. </p><p>https://brainly.ph/question/9176638?utm_source=android&amp;utm_medium=share&amp;utm_campaign=question</p><p></p><br />
+                                            <h2 class="ez-toc-section" id="activity-2-directions-based-on-the-discussions-about-generation-of-computers-fill-up-the-spaces-on-the-table-by-choosing-the-given-data-below-microprocessor-artificial-intelligence-much-smaller-fa">
+                            22. ACTIVITY 2 Directions: Based on the discussions about Generation of Computers, fill up the spaces on the table by choosing the given data below. Microprocessor Artificial Intelligence Much smaller, faster, Huge and occupied the and more powerful, entire rooms, expensive to multi-functional Altair 8800, Integrated circuits Transistors and diodes Voice recognition emerge, Started to use OS, compact, can learn logic and reliable, less expensive operate, lasted only for 12 reasoning hours CRAY I CRAY X-MP, Desktop computers, laptops, Z3, Colossus, Mark I, IBM 604, STRETCH, LARC, CYBER 205, MITS palm computers, Pentium EDVAC, EDSAC IBM 1401 (Model T), computers UNIVAC, ENIAC HONEYWELL400, PDP-8 microcomputers Digital ASIMO (Advanced Step Use to design Developed for atomic energy Equipment Innovative Mobility), a airplanes and laboratory to handle a lot of Corporation robot, was created by missiles data, calculate pay checks, developed the Honda Motor Co. Ltd. On used in businesses, minicomputers December 13, 2005 in All high-level languages universities, and government Tokyo, Japan like C and C++, Java, organizations .Net etc., are used in this generation.​</h2><br />
+                        <p><strong>Answer:</strong></p><p>sorry di ko po masasagot</p><p><strong>Explanation:</strong></p><p>Sorry sorry</p><br />
+                                            <h2 class="ez-toc-section" id="vitieseasy-actinityidentify-what-is-being-describe-in-the-following-statements1-it-is-the-brain-of-the-computer-2-it-is-a-temporary-memory-3-parts-inside-the-computer-4-prevent-the-system-unit-fro">
+                            23. VITIESEASY ACTINITYidentify what is being describe in the following statements1. It is the brain of the computer.2. It is a temporary memory.3. Parts inside the computer.4. Prevent the system unit from overheating-5. Small circuit boards that fit into special slots.6. Parts that you see outside the system unit.7. Mother of all boards.8. Like a giant diskette that can keep a lot of data.9. Refers to the computer memory chips containing permanentdata.10. Keeps memory contents even is the power is lostAVERAGE ACTIVITYExplain the question.What do you think is the most important part of the system unit? Way?​</h2><br />
+                        <p><strong>Answer:</strong></p><p>1a 2b3d4a5c</p><p><strong>Explanation:</strong></p><p>that good sana ican help</p><br />
+                                            <h2 class="ez-toc-section" id="write-true-if-the-statement-is-correct-and-false-if-not-write-your-answer-on-the-space-provided-before-cach-number-a-1-desktop-publishing-allows-an-individual-to-combine-text-numerical-data-photog">
+                            24. Write TRUE if the statement is correct and FALSE if not. Write your answer on the space provided before cach number a 1. Desktop publishing allows an individual to combine text, numerical data, photographs, charts, and other visual clements in a document.2. Desktop publishing allows an individual to combine text, numerical data, photographs, charts, and other visual elements in a document 3. The Desktop Publishing is not applicable in the laptop computer because it is only intended to desktop publishing 4. The primary advantages of desktop publishing over conventional publishing apparatus are low cost and case of use5. The design and production of publications using personal computers with graphics capability. 6. A system or process for designing, editing, and producing camera-ready documents, as newsletters, brochures, or magazines, using a microcomputer, special software, and a printer 7. Desktop publishing dramatically increase the cost of page layout, causing many projects to be taken in house. 8. WordArt object is created, you can change the position and size of the object. 9. Clipart can be premade images stored in a gallery in a computer that can be used in desktop publishing 10. The text allow the eyes to take in a lot of text and scan the newspaper quickly for interesting informations​</h2><br />
+                        <p><strong>Answer:</strong></p><p>1.true 2.false 3.false 4.true 5.false Yan Lang ang a</p><p>aking na sagot </p><p><strong>Answer:</strong></p><p>1,true</p><p>2,true</p><p>3,false</p><p>4,false</p><p>5,true</p><p>6,true</p><p>7,false</p><p>8,true</p><p>9,true</p><p>10,true   </p><p><strong>Explanation: No need explanasyon .Basahin lang ng mabuti at tignan ang modyule para malaman ang sagot sa iyung mga tanong</strong></p><p></p><br />
+                                            <h2 class="ez-toc-section" id="a-botb-robc-virusd-worm7-it-is-a-type-of-malicious-software-that-threatens-to-publish-the-victims-data-or-perpetually-blockaccess-to-ita-graphical-user-interfaceb-application-softwarec-randomware">
+                            25. a botb. robc. virusd worm7. It is a type of malicious software that threatens to publish the victim's data or perpetually blockaccess to ita Graphical User Interfaceb. Application softwarec Randomwared Malware8. It is code or software that is specifically designed to damage, disrupt, steal, or in general inflictsome other "bad" or illegitimate action on data, hosts, or networks.a. Wormsb. Malcodec. Trojansd. Defragmentation29. This should be done before installing new software and software updates. It should bedone periodically. The frequency would depend on how often you add to your system but at leasttwice a yearb. Restorec. Increment Backupd. Full Backupa. Backup Mediafiles in10. This should be done daily especially if you work on the computer a lot changingday.d Full Backupb. Restorec. Increment Backupa Backup MediaDebedAddress: Namuccayan, Sto. Niño, CagayanTelephone Nos.: 09771250892Email Address: 500625@deped.gov.ph​</h2><br />
+                        <p><strong>Answer:</strong></p><p>7 C</p><p>8 B</p><p>9 C</p><p>10 A</p><p><strong>Explanation:</strong></p><p>sana po makatulong </p><p><strong>Answer:</strong></p><p>7)D</p><p>29) A</p><p>20)D</p><p>Explanation:</p><p>correct me if I'm wrong</p><p>Explanation:</p><p>I'm not sure</p><br />
+                                            <h2 class="ez-toc-section" id="all-institutions-both-public-and-private-deal-with-a-lot-of-confidential-information-with-the-advent-of-modem-technology-most-of-this-information-is-now-gathered-processed-and-saved-digitally-an">
+                            26. All institutions, both public and private, deal with a lot of confidential information. With the advent of modem technology, most of this information is now gathered, processed, and saved digitally and transmitted over computer networks. Write ways on how this information shall be secured properly to prevent loss of sensitive or confidential information, prevent hostile use of data or avoid damage to the organization's reputations.​</h2><br />
+                        <p><strong>Answer:</strong></p><p>iagertudjstkclxgncnawhsjek</p><p></p><br />
+                                            <h2 class="ez-toc-section" id="1-a-tool-used-to-strip-and-cut-wires-2-wire-cutterc-hex-driverb-cable-tiesd-screws2-it-is-used-to-prevent-esd-damage-to-computer-equipment-a-clothc-paint-brushb-anti-static-wrist-strapd-compr">
+                            27. 1. A tool used to strip and cut wires.2. Wire cutterc. hex driverb. Cable tiesd. screws2. It is used to prevent ESD damage to computer equipment.a clothc. paint brushb. Anti-static wrist strapd. compress air3. It is use to loosen or tighten slotted screws.a. hex driverc. Philips head screw driverb. anti-static matd. hand tools4. Sometimes called a nut driver, is used to tightens screws.a. hex diverc. cable tiesb. wire cutterd. compress air5. A cellphone that can do a lot of things computers can do.a. tabletc. IBM PCb. smartphoned. server6. A specialized type of computer that is used for playing video games on your TV.a. game consolesc. PSPb. PCd. tablet7. An electronic device that manipulates information or dataa. hardwarec. softwareb. computerd. server8. Any part of computer that has a physical structure, such as the keyboard or mouse.a. hardwarec. serverd. smartphone9. Any set of instructions that tells the hardware what to do and how to do itc. softwareb. IBM PCd. computer10. The first widely sold personal computer with a graphical user interface.a. macc. Macintoshb. server.11. It is a wireless technology that allows the exchange of data between different dshort distancesc. Bluetoothb. shareItd. USB12. Which of the following does not belong to the group?a. flash drivec. Dropboxb. iCloudd. OneDriveb. appsa. appsa. wi-fihelp me please1000×​</h2><br />
+                        <p><strong>Answer:</strong></p><p>1) a. wire cutter</p><p>2)b. anti static wrist strap</p><p>3)c. philips head screw driver</p><p>4)a. hex driver</p><p>5)b. smartphone</p><p>6)b. pc</p><p>7)b. computer</p><p>8)a. hardware</p><p>9)c. software</p><p>10)c. macintosh</p><p>11)c. bluetooth</p><p>12)a. flash drive</p><p><strong>Explanation:</strong></p><p>pa brainliest po</p><p></p><p>#carryonlearning</p><p></p><p></p><br />
+                                            <h2 class="ez-toc-section" id="directions-write-a-if-the-sentence-is-an-advantage-and-d-if-the-sentence-is-a-disadvantage-of-using-the-computer-1-you-placed-your-complete-name-and-address-and-it-was-used-by-a-stranger-for-illega">
+                            28. Directions: Write A if the sentence is an advantage and D if the sentence is a disadvantage of using the computer. 1. You placed your complete name and address and it was used by a stranger for illegal purpose 2. You work on your computer maintaining your proper posture 3. You sent a birthday card to your father who is in Saudi Arabia 4. You were able to see your relative's pictures that are staying in the province. 5. You make your school projects by researching using the computer 6. You do not turn off the computer because you will use it when you return from school 7. You kept your old unusable computer because you should not throw the things you bought 8. You can read news on the computer 9. Computers can perform many things and can store lots of data 10. Your hands and eyes are painful because you have played computer games for a long time​</h2><br />
+                        <p><strong>Answer:</strong></p><p>1.D</p><p>2.A</p><p>3.A</p><p>4.D</p><p>5.A</p><p>6.D</p><p>7.A</p><p>8.D</p><p>9.A</p><p>10.D</p><p><strong>Explanation:</strong></p><p>pa brainliest po</p><br />
+                                            <h2 class="ez-toc-section" id="directions-write-true-if-the-statement-is-correct-and-false-if-not-write-your-answer-on-the-space-provided-before-each-number-1-desktop-publishing-allows-an-individual-to-combine-text-numerical-d">
+                            29. Directions: Write TRUE if the statement is correct and FALSE if not. Write your answer on the space provided before each number. 1. Desktop publishing allows an individual to combine text, numerical data, photographs, charts, and other visual elements in a document. 2. Desktop publishing allows an individual to combine text, numerical data, photographs, charts, and other visual elements in a document. 3. The Desktop Publishing is not applicable in the laptop computer because it is only intended to desktop publishing. 4. The primary advantages of desktop publishing over conventional publishing apparatus are low cost and ease of use. 5. The design and production of publications using personal computers with graphics capability. 6. A system or process for designing, editing, and producing oamera-ready documents, as newsletters, brochures, or magazines, using a microcomputer, special software, and a printer. 7. Desktop publishing dramatically increase the cost of page layout, causing many projects to be taken in house. 8. WordArt object is created, you can change the position and size of the object. 9. Clipart can be premade images stored in a gallery in a computer that can be used in desktop publishing. 10. The text allow the eyes to take in a lot of text and soun the newspaper quickly for interesting information.​</h2><br />
+                        <p><strong>Answer:</strong></p><p>1.True<br />2.True<br />3.False<br />4.True<br />5.True<br />6.True<br />7.False<br />8.True<br />9.True<br />10.True</p><p><strong>Explanation:</strong></p><p>bruh</p><br />
+                                            <h2 class="ez-toc-section" id="ict-in-the-context-of-global-communication-can-use-different_______platforms-for-different-set-of______to-interact-through-the-service-via_____it-provides-access-to-information-through-telecommunic">
+                            30. ICT in the context of global communication can use different_______
+platforms for different set of______
+to interact through the service via_____
+It provides access to information through telecommunications
+with the use of computer, network______
+and software. The tangible
+device used in order to connect to the internet is called______
+while the application that is used to gather and manage this data is called
+With the different online platforms, it helps a lot of people to do their tasks
+and produce a good result but still depends on their specific needs. People with
+disabilities like blindness can use________
+L. Those who want
+to grow their own network of friends with the same interests with them can use_______
+And in order to have a video call with group of friends or co-
+workers,______
+app should be used. But media content like
+videos, images, music or audio can be shared through______
+sites.</h2><br />
+                        <p><strong>Answer:</strong></p><p>1.Online </p><p>2.Devices</p><p>3.Internet</p><p>4.Hardware</p><p><strong>Explanation:</strong></p><p>Maybe it helps (:</p><br />
+                    
+                </div>
+                <div class="youtubeVideo" style="text-align: center">
+                    <h3>Video Terkait</h3>
+                    <iframe width="560" height="315"
+                        src="https://www.youtube.com/embed/4SEM6mgOzrk?controls=0" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"allowfullscreen></iframe>
+                </div>
+                <footer class="entry-meta" aria-label="Meta postingan">
+                    <span class="cat-links"><span class="gp-icon icon-categories"><svg viewBox="0 0 512 512"
+                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em">
+                                <path
+                                    d="M0 112c0-26.51 21.49-48 48-48h110.014a48 48 0 0143.592 27.907l12.349 26.791A16 16 0 00228.486 128H464c26.51 0 48 21.49 48 48v224c0 26.51-21.49 48-48 48H48c-26.51 0-48-21.49-48-48V112z">
+                                </path>
+                            </svg></span><span class="screen-reader-text">Kategori </span>filipino</span>
+            </div>
+        </article>
+    </main>
+            </div>
+            <div class="widget-area sidebar is-right-sidebar" id="right-sidebar">
+                <div class="inside-right-sidebar">
+                    <aside id="categories-2" class="widget inner-padding widget_categories">
+                        <h2 class="widget-title">Topik</h2>
+                        <ul>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/140-degrees.html">140 Degrees</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/0-02-in-percentage.html">0 02 In Percentage</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/unity-sentence-examples.html">Unity Sentence Examples</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/dave-blankenship.html">Dave Blankenship</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/egg-easy-drawing.html">Egg Easy Drawing</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/the-minister-s-black-veil-symbolism.html">The Minister s Black Veil Symbolism</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/hereditary-influence-of-rizal.html">Hereditary Influence Of Rizal</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/nba-magazine.html">Nba Magazine</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/monthly-production-plan.html">Monthly Production Plan</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/boyle-s-law-data-table.html">Boyle s Law Data Table</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/the-taximan-s-story-questions-and-answers.html">The Taximan s Story Questions And Answers</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/locsin-s-technological-nursing-as-caring-model.html">Locsin s Technological Nursing As Caring Model</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/earth-s-internal-heat-engine.html">Earth s Internal Heat Engine</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/volleyball-infographics.html">Volleyball Infographics</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/coupling-drawing.html">Coupling Drawing</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/pic-of-distillation.html">Pic Of Distillation</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/pescar-course.html">Pescar Course</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/abc-s-of-technical-writing-by-paul-zall-1980.html">Abc s Of Technical Writing By Paul Zall 1980</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/map-healx-s-business-model-using-the-business-model-canvas.html">Map Healx s Business Model Using The Business Model Canvas</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/the-sun-s-photosphere-is-by-mass-about-75.html">The Sun s Photosphere Is By Mass About 75</a>
+                                </li>
+                                                    </ul>
+
+                    </aside>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="site-footer">
+        <footer class="site-info" aria-label="Situs" itemtype="https://schema.org/WPFooter" itemscope>
+            <div class="inside-site-info grid-container">
+                <div class="copyright-bar">
+                    <span class="copyright">&copy; 2023 <a href="https://jneweducation.github.io"
+                            itemprop="url">QnA</a></span>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <a title="Gulirkan kembali ke puncak laman" aria-label="Gulirkan kembali ke puncak laman" rel="nofollow"
+        href="#" class="generate-back-to-top" data-scroll-speed="400" data-start-scroll="300">
+        <span class="gp-icon icon-arrow-up"><svg viewBox="0 0 330 512" aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill-rule="evenodd"
+                clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414">
+                <path
+                    d="M305.863 314.916c0 2.266-1.133 4.815-2.832 6.514l-14.157 14.163c-1.699 1.7-3.964 2.832-6.513 2.832-2.265 0-4.813-1.133-6.512-2.832L164.572 224.276 53.295 335.593c-1.699 1.7-4.247 2.832-6.512 2.832-2.265 0-4.814-1.133-6.513-2.832L26.113 321.43c-1.699-1.7-2.831-4.248-2.831-6.514s1.132-4.816 2.831-6.515L158.06 176.408c1.699-1.7 4.247-2.833 6.512-2.833 2.265 0 4.814 1.133 6.513 2.833L303.03 308.4c1.7 1.7 2.832 4.249 2.832 6.515z"
+                    fill-rule="nonzero" />
+            </svg></span>
+    </a>
+    <script id="generate-a11y">
+        ! function() {
+            "use strict";
+            if ("querySelector" in document && "addEventListener" in window) {
+                var e = document.body;
+                e.addEventListener("mousedown", function() {
+                    e.classList.add("using-mouse")
+                }), e.addEventListener("keydown", function() {
+                    e.classList.remove("using-mouse")
+                })
+            }
+        }();
+    </script>
+    <!--[if lte IE 11]>
+<script src='https://jneweducation.github.io/js/classList.min.js' ?ver=3.2.4' id='generate-classlist-js'></script>
+<![endif]-->
+    <script id='generate-menu-js-extra'>
+        var generatepressMenu = {
+            "toggleOpenedSubMenus": "1",
+            "openSubMenuLabel": "Buka Submenu",
+            "closeSubMenuLabel": "Tutup submenu"
+        };
+    </script>
+    <script src='https://jneweducation.github.io/js/menu.min.js' ?ver=3.2.4' id='generate-menu-js'></script>
+    <script id='generate-navigation-search-js-extra'>
+        var generatepressNavSearch = {
+            "open": "Buka Kolom Pencarian",
+            "close": "Tutup Kolom Pencarian"
+        };
+    </script>
+    <script src='https://jneweducation.github.io/js/navigation-search.min.js' ?ver=3.2.4' id='generate-navigation-search-js'></script>
+    <script id='generate-back-to-top-js-extra'>
+        var generatepressBackToTop = {
+            "smooth": "1"
+        };
+    </script>
+    <script src='https://jneweducation.github.io/js/back-to-top.min.js' ?ver=3.2.4' id='generate-back-to-top-js'></script>
+    <script type='text/javascript' src='//jd3j7g5z1fqs.com/96/78/7a/96787a1945876b1a9c10f79941441964.js'></script>
+<script type='text/javascript' src='//jd3j7g5z1fqs.com/b4/f1/ef/b4f1ef8dfe59b7fa68754094cf6c8e0e.js'></script>
+  <!-- Histats.com  START  (aync)-->
+<script type="text/javascript">var _Hasync= _Hasync|| [];
+_Hasync.push(['Histats.start', '1,4739059,4,0,0,0,00010000']);
+_Hasync.push(['Histats.fasi', '1']);
+_Hasync.push(['Histats.track_hits', '']);
+(function() {
+var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
+hs.src = ('//s10.histats.com/js15_as.js');
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+})();</script>
+<noscript><a href="/" target="_blank"><img  src="//sstatic1.histats.com/0.gif?4739059&101" alt="" border="0"></a></noscript>
+<!-- Histats.com  END  -->
+</body>
+
+</html>

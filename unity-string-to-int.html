@@ -1,0 +1,1414 @@
+<!DOCTYPE html>
+<html lang="id" prefix="og: https://ogp.me/ns#">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="profile" href="https://gmpg.org/xfn/11">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Unity String To Int - QnA</title>
+    <meta name="description" content="Unity String To Int, How to go from string to int and int to string in Unity! - ZDev-9 Unity Tutorials!, , , , APex Developments, 2021-10-28T02:11:02.000000Z, 20, Unity C# Fundamentals - String manipulation by concatenation, string, www.youtube.com, 1280 x 720, jpeg, , 20, unity-string-to-int, QnA" />
+    <meta name="robots" content="index,follow" />
+    <meta property="og:locale" content="id_ID" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Unity String To Int - QnA" />
+    <meta property="og:description" content="Unity String To Int, How to go from string to int and int to string in Unity! - ZDev-9 Unity Tutorials!, , , , APex Developments, 2021-10-28T02:11:02.000000Z, 20, Unity C# Fundamentals - String manipulation by concatenation, string, www.youtube.com, 1280 x 720, jpeg, , 20, unity-string-to-int, QnA" />
+    <meta property="og:site_name" content="QnA" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Unity String To Int - QnA" />
+    <meta name="twitter:description" content="Unity String To Int, How to go from string to int and int to string in Unity! - ZDev-9 Unity Tutorials!, , , , APex Developments, 2021-10-28T02:11:02.000000Z, 20, Unity C# Fundamentals - String manipulation by concatenation, string, www.youtube.com, 1280 x 720, jpeg, , 20, unity-string-to-int, QnA" />
+    <link rel='stylesheet' id='generate-style-css' href='https://jneweducation.github.io/css/main.min.css'?ver=3.2.4'
+        media='all' />
+    <link rel='stylesheet' id='ez-toc-css' href='https://jneweducation.github.io/css/screen.min.css'?ver=2.0.40' media='all' />
+    <style id='generate-style-inline-css'>
+        body {
+            background-color: #f7f7f7;
+            color: #222222;
+        }
+
+        a {
+            color: #1e73be;
+        }
+
+        a:hover,
+        a:focus,
+        a:active {
+            color: #000000;
+        }
+
+        .wp-block-group__inner-container {
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .generate-back-to-top {
+            font-size: 20px;
+            border-radius: 3px;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            line-height: 40px;
+            width: 40px;
+            text-align: center;
+            z-index: 10;
+            transition: opacity 300ms ease-in-out;
+            opacity: 0.1;
+            transform: translateY(1000px);
+        }
+
+        .generate-back-to-top__show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .navigation-search {
+            position: absolute;
+            left: -99999px;
+            pointer-events: none;
+            visibility: hidden;
+            z-index: 20;
+            width: 100%;
+            top: 0;
+            transition: opacity 100ms ease-in-out;
+            opacity: 0;
+        }
+
+        .navigation-search.nav-search-active {
+            left: 0;
+            right: 0;
+            pointer-events: auto;
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .navigation-search input[type="search"] {
+            outline: 0;
+            border: 0;
+            vertical-align: bottom;
+            line-height: 1;
+            opacity: 0.9;
+            width: 100%;
+            z-index: 20;
+            border-radius: 0;
+            -webkit-appearance: none;
+            height: 60px;
+        }
+
+        .navigation-search input::-ms-clear {
+            display: none;
+            width: 0;
+            height: 0;
+        }
+
+        .navigation-search input::-ms-reveal {
+            display: none;
+            width: 0;
+            height: 0;
+        }
+
+        .navigation-search input::-webkit-search-decoration,
+        .navigation-search input::-webkit-search-cancel-button,
+        .navigation-search input::-webkit-search-results-button,
+        .navigation-search input::-webkit-search-results-decoration {
+            display: none;
+        }
+
+        .gen-sidebar-nav .navigation-search {
+            top: auto;
+            bottom: 0;
+        }
+
+        :root {
+            --contrast: #222222;
+            --contrast-2: #575760;
+            --contrast-3: #b2b2be;
+            --base: #f0f0f0;
+            --base-2: #f7f8f9;
+            --base-3: #ffffff;
+            --accent: #1e73be;
+        }
+
+        .has-contrast-color {
+            color: var(--contrast);
+        }
+
+        .has-contrast-background-color {
+            background-color: var(--contrast);
+        }
+
+        .has-contrast-2-color {
+            color: var(--contrast-2);
+        }
+
+        .has-contrast-2-background-color {
+            background-color: var(--contrast-2);
+        }
+
+        .has-contrast-3-color {
+            color: var(--contrast-3);
+        }
+
+        .has-contrast-3-background-color {
+            background-color: var(--contrast-3);
+        }
+
+        .has-base-color {
+            color: var(--base);
+        }
+
+        .has-base-background-color {
+            background-color: var(--base);
+        }
+
+        .has-base-2-color {
+            color: var(--base-2);
+        }
+
+        .has-base-2-background-color {
+            background-color: var(--base-2);
+        }
+
+        .has-base-3-color {
+            color: var(--base-3);
+        }
+
+        .has-base-3-background-color {
+            background-color: var(--base-3);
+        }
+
+        .has-accent-color {
+            color: var(--accent);
+        }
+
+        .has-accent-background-color {
+            background-color: var(--accent);
+        }
+
+        body,
+        button,
+        input,
+        select,
+        textarea {
+            font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        }
+
+        body {
+            line-height: 1.5;
+        }
+
+        .entry-content>[class*="wp-block-"]:not(:last-child) {
+            margin-bottom: 1.5em;
+        }
+
+        .main-navigation .main-nav ul ul li a {
+            font-size: 14px;
+        }
+
+        .sidebar .widget,
+        .footer-widgets .widget {
+            font-size: 17px;
+        }
+
+        @media (max-width:768px) {
+            h1 {
+                font-size: 31px;
+            }
+
+            h2 {
+                font-size: 27px;
+            }
+
+            h3 {
+                font-size: 24px;
+            }
+
+            h4 {
+                font-size: 22px;
+            }
+
+            h5 {
+                font-size: 19px;
+            }
+        }
+
+        .top-bar {
+            background-color: #636363;
+            color: #ffffff;
+        }
+
+        .top-bar a {
+            color: #ffffff;
+        }
+
+        .top-bar a:hover {
+            color: #303030;
+        }
+
+        .site-header {
+            background-color: #ffffff;
+        }
+
+        .main-title a,
+        .main-title a:hover {
+            color: #222222;
+        }
+
+        .site-description {
+            color: #757575;
+        }
+
+        .main-navigation,
+        .main-navigation ul ul {
+            background-color: #ed4250;
+        }
+
+        .main-navigation .main-nav ul li a,
+        .main-navigation .menu-toggle,
+        .main-navigation .menu-bar-items {
+            color: #ffffff;
+        }
+
+        .main-navigation .main-nav ul li:not([class*="current-menu-"]):hover>a,
+        .main-navigation .main-nav ul li:not([class*="current-menu-"]):focus>a,
+        .main-navigation .main-nav ul li.sfHover:not([class*="current-menu-"])>a,
+        .main-navigation .menu-bar-item:hover>a,
+        .main-navigation .menu-bar-item.sfHover>a {
+            color: #ffffff;
+            background-color: #c42f2f;
+        }
+
+        button.menu-toggle:hover,
+        button.menu-toggle:focus {
+            color: #ffffff;
+        }
+
+        .main-navigation .main-nav ul li[class*="current-menu-"]>a {
+            color: #ffffff;
+            background-color: #c42f2f;
+        }
+
+        .navigation-search input[type="search"],
+        .navigation-search input[type="search"]:active,
+        .navigation-search input[type="search"]:focus,
+        .main-navigation .main-nav ul li.search-item.active>a,
+        .main-navigation .menu-bar-items .search-item.active>a {
+            color: #ffffff;
+            background-color: #c42f2f;
+        }
+
+        .main-navigation ul ul {
+            background-color: #c42f2f;
+        }
+
+        .main-navigation .main-nav ul ul li a {
+            color: #ffffff;
+        }
+
+        .main-navigation .main-nav ul ul li:not([class*="current-menu-"]):hover>a,
+        .main-navigation .main-nav ul ul li:not([class*="current-menu-"]):focus>a,
+        .main-navigation .main-nav ul ul li.sfHover:not([class*="current-menu-"])>a {
+            color: #fcd9d6;
+            background-color: #c42f2f;
+        }
+
+        .main-navigation .main-nav ul ul li[class*="current-menu-"]>a {
+            color: #fcd9d6;
+            background-color: #c42f2f;
+        }
+
+        .separate-containers .inside-article,
+        .separate-containers .comments-area,
+        .separate-containers .page-header,
+        .one-container .container,
+        .separate-containers .paging-navigation,
+        .inside-page-header {
+            background-color: #ffffff;
+        }
+
+        .entry-title a {
+            color: #222222;
+        }
+
+        .entry-title a:hover {
+            color: #55555e;
+        }
+
+        .entry-meta {
+            color: #595959;
+        }
+
+        .sidebar .widget {
+            background-color: #ffffff;
+        }
+
+        .footer-widgets {
+            background-color: #ffffff;
+        }
+
+        .footer-widgets .widget-title {
+            color: #000000;
+        }
+
+        .site-info {
+            color: #ffffff;
+            background-color: #55555e;
+        }
+
+        .site-info a {
+            color: #ffffff;
+        }
+
+        .site-info a:hover {
+            color: #d3d3d3;
+        }
+
+        .footer-bar .widget_nav_menu .current-menu-item a {
+            color: #d3d3d3;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="url"],
+        input[type="password"],
+        input[type="search"],
+        input[type="tel"],
+        input[type="number"],
+        textarea,
+        select {
+            color: #666666;
+            background-color: #fafafa;
+            border-color: #cccccc;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="url"]:focus,
+        input[type="password"]:focus,
+        input[type="search"]:focus,
+        input[type="tel"]:focus,
+        input[type="number"]:focus,
+        textarea:focus,
+        select:focus {
+            color: #666666;
+            background-color: #ffffff;
+            border-color: #bfbfbf;
+        }
+
+        button,
+        html input[type="button"],
+        input[type="reset"],
+        input[type="submit"],
+        a.button,
+        a.wp-block-button__link:not(.has-background) {
+            color: #ffffff;
+            background-color: #55555e;
+        }
+
+        button:hover,
+        html input[type="button"]:hover,
+        input[type="reset"]:hover,
+        input[type="submit"]:hover,
+        a.button:hover,
+        button:focus,
+        html input[type="button"]:focus,
+        input[type="reset"]:focus,
+        input[type="submit"]:focus,
+        a.button:focus,
+        a.wp-block-button__link:not(.has-background):active,
+        a.wp-block-button__link:not(.has-background):focus,
+        a.wp-block-button__link:not(.has-background):hover {
+            color: #ffffff;
+            background-color: #3f4047;
+        }
+
+        a.generate-back-to-top {
+            background-color: rgba(0, 0, 0, 0.4);
+            color: #ffffff;
+        }
+
+        a.generate-back-to-top:hover,
+        a.generate-back-to-top:focus {
+            background-color: rgba(0, 0, 0, 0.6);
+            color: #ffffff;
+        }
+
+        @media (max-width:768px) {
+
+            .main-navigation .menu-bar-item:hover>a,
+            .main-navigation .menu-bar-item.sfHover>a {
+                background: none;
+                color: #ffffff;
+            }
+        }
+
+        .nav-below-header .main-navigation .inside-navigation.grid-container,
+        .nav-above-header .main-navigation .inside-navigation.grid-container {
+            padding: 0px 20px 0px 20px;
+        }
+
+        .site-main .wp-block-group__inner-container {
+            padding: 40px;
+        }
+
+        .separate-containers .paging-navigation {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .entry-content .alignwide,
+        body:not(.no-sidebar) .entry-content .alignfull {
+            margin-left: -40px;
+            width: calc(100% + 80px);
+            max-width: calc(100% + 80px);
+        }
+
+        .rtl .menu-item-has-children .dropdown-menu-toggle {
+            padding-left: 20px;
+        }
+
+        .rtl .main-navigation .main-nav ul li.menu-item-has-children>a {
+            padding-right: 20px;
+        }
+
+        @media (max-width:768px) {
+
+            .separate-containers .inside-article,
+            .separate-containers .comments-area,
+            .separate-containers .page-header,
+            .separate-containers .paging-navigation,
+            .one-container .site-content,
+            .inside-page-header {
+                padding: 30px;
+            }
+
+            .site-main .wp-block-group__inner-container {
+                padding: 30px;
+            }
+
+            .inside-top-bar {
+                padding-right: 30px;
+                padding-left: 30px;
+            }
+
+            .inside-header {
+                padding-right: 30px;
+                padding-left: 30px;
+            }
+
+            .widget-area .widget {
+                padding-top: 30px;
+                padding-right: 30px;
+                padding-bottom: 30px;
+                padding-left: 30px;
+            }
+
+            .footer-widgets-container {
+                padding-top: 30px;
+                padding-right: 30px;
+                padding-bottom: 30px;
+                padding-left: 30px;
+            }
+
+            .inside-site-info {
+                padding-right: 30px;
+                padding-left: 30px;
+            }
+
+            .entry-content .alignwide,
+            body:not(.no-sidebar) .entry-content .alignfull {
+                margin-left: -30px;
+                width: calc(100% + 60px);
+                max-width: calc(100% + 60px);
+            }
+
+            .one-container .site-main .paging-navigation {
+                margin-bottom: 20px;
+            }
+        }
+
+        /* End cached CSS */
+        .is-right-sidebar {
+            width: 30%;
+        }
+
+        .is-left-sidebar {
+            width: 30%;
+        }
+
+        .site-content .content-area {
+            width: 70%;
+        }
+
+        @media (max-width:768px) {
+
+            .main-navigation .menu-toggle,
+            .sidebar-nav-mobile:not(#sticky-placeholder) {
+                display: block;
+            }
+
+            .main-navigation ul,
+            .gen-sidebar-nav,
+            .main-navigation:not(.slideout-navigation):not(.toggled) .main-nav>ul,
+            .has-inline-mobile-toggle #site-navigation .inside-navigation>*:not(.navigation-search):not(.main-nav) {
+                display: none;
+            }
+
+            .nav-align-right .inside-navigation,
+            .nav-align-center .inside-navigation {
+                justify-content: space-between;
+            }
+        }
+    </style>
+    <link rel="icon" href="https://jneweducation.github.io/img/cropped-soalbelajar-32x32.png" sizes="32x32" />
+    <link rel="icon" href="https://jneweducation.github.io/img/cropped-soalbelajar-192x192.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="https://jneweducation.github.io/img/cropped-soalbelajar-180x180.png" />
+    <meta name="msapplication-TileImage" content="https://jneweducation.github.io/img/cropped-soalbelajar-270x270.png" />
+</head>
+
+<body
+    class="home blog wp-custom-logo wp-embed-responsive right-sidebar nav-above-header separate-containers nav-search-enabled nav-aligned-center header-aligned-center dropdown-hover"
+    itemtype="https://schema.org/Blog" itemscope>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-dark-grayscale">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 0.49803921568627" />
+                    <feFuncG type="table" tableValues="0 0.49803921568627" />
+                    <feFuncB type="table" tableValues="0 0.49803921568627" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-grayscale">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 1" />
+                    <feFuncG type="table" tableValues="0 1" />
+                    <feFuncB type="table" tableValues="0 1" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-purple-yellow">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.54901960784314 0.98823529411765" />
+                    <feFuncG type="table" tableValues="0 1" />
+                    <feFuncB type="table" tableValues="0.71764705882353 0.25490196078431" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-blue-red">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 1" />
+                    <feFuncG type="table" tableValues="0 0.27843137254902" />
+                    <feFuncB type="table" tableValues="0.5921568627451 0.27843137254902" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-midnight">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 0" />
+                    <feFuncG type="table" tableValues="0 0.64705882352941" />
+                    <feFuncB type="table" tableValues="0 1" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-magenta-yellow">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.78039215686275 1" />
+                    <feFuncG type="table" tableValues="0 0.94901960784314" />
+                    <feFuncB type="table" tableValues="0.35294117647059 0.47058823529412" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-purple-green">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.65098039215686 0.40392156862745" />
+                    <feFuncG type="table" tableValues="0 1" />
+                    <feFuncB type="table" tableValues="0.44705882352941 0.4" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-blue-orange">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.098039215686275 1" />
+                    <feFuncG type="table" tableValues="0 0.66274509803922" />
+                    <feFuncB type="table" tableValues="0.84705882352941 0.41960784313725" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><a class="screen-reader-text skip-link" href="#content" title="Langsung ke isi">Langsung ke isi</a>
+    <nav class="main-navigation nav-align-center has-menu-bar-items sub-menu-right" id="site-navigation"
+        aria-label="Utama" itemtype="https://schema.org/SiteNavigationElement" itemscope>
+        <div class="inside-navigation grid-container">
+            <form method="get" class="search-form navigation-search" action="/">
+                <input type="search" class="search-field" value="" name="q" title="Cari" />
+            </form> <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+                <span class="gp-icon icon-menu-bars"><svg viewBox="0 0 512 512" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" width="1em" height="1em">
+                        <path
+                            d="M0 96c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24zm0 160c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24zm0 160c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24z" />
+                    </svg><svg viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                        width="1em" height="1em">
+                        <path
+                            d="M71.029 71.029c9.373-9.372 24.569-9.372 33.942 0L256 222.059l151.029-151.03c9.373-9.372 24.569-9.372 33.942 0 9.372 9.373 9.372 24.569 0 33.942L289.941 256l151.03 151.029c9.372 9.373 9.372 24.569 0 33.942-9.373 9.372-24.569 9.372-33.942 0L256 289.941l-151.029 151.03c-9.373 9.372-24.569 9.372-33.942 0-9.372-9.373-9.372-24.569 0-33.942L222.059 256 71.029 104.971c-9.372-9.373-9.372-24.569 0-33.942z" />
+                    </svg></span><span class="mobile-menu">Menu</span> </button>
+            <div id="primary-menu" class="main-nav">
+                <ul id="menu-soal-belajar" class=" menu sf-menu">
+                    <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1"><a
+                            href="https://jneweducation.github.io">Home</a></li>
+                </ul>
+                </ul>
+            </div>
+            <div class="menu-bar-items"><span class="menu-bar-item search-item"><a aria-label="Buka Kolom Pencarian"
+                        href="#"><span class="gp-icon icon-search"><svg viewBox="0 0 512 512"
+                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M208 48c-88.366 0-160 71.634-160 160s71.634 160 160 160 160-71.634 160-160S296.366 48 208 48zM0 208C0 93.125 93.125 0 208 0s208 93.125 208 208c0 48.741-16.765 93.566-44.843 129.024l133.826 134.018c9.366 9.379 9.355 24.575-.025 33.941-9.379 9.366-24.575 9.355-33.941-.025L337.238 370.987C301.747 399.167 256.839 416 208 416 93.125 416 0 322.875 0 208z" />
+                            </svg><svg viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                width="1em" height="1em">
+                                <path
+                                    d="M71.029 71.029c9.373-9.372 24.569-9.372 33.942 0L256 222.059l151.029-151.03c9.373-9.372 24.569-9.372 33.942 0 9.372 9.373 9.372 24.569 0 33.942L289.941 256l151.03 151.029c9.372 9.373 9.372 24.569 0 33.942-9.373 9.372-24.569 9.372-33.942 0L256 289.941l-151.029 151.03c-9.373 9.372-24.569 9.372-33.942 0-9.372-9.373-9.372-24.569 0-33.942L222.059 256 71.029 104.971c-9.372-9.373-9.372-24.569 0-33.942z" />
+                            </svg></span></a></span></div>
+        </div>
+    </nav>
+    <header class="site-header grid-container" id="masthead" aria-label="Situs"
+        itemtype="https://schema.org/WPHeader" itemscope>
+        <div class="inside-header grid-container">
+            <h1 class="site-logo">
+                <a href="https://jneweducation.github.io" rel="home"> QnA</a>
+            </h1>
+        </div>
+    </header>
+
+    <div class="site grid-container container hfeed" id="page">
+        <div class="site-content" id="content">
+            <div class="content-area" id="primary">
+                    <main class="site-main" id="main">
+        <article id="post-1327" class="post-1327 post type-post status-publish format-standard hentry category-info"
+            itemtype="https://schema.org/CreativeWork" itemscope="">
+            <div class="inside-article">
+                <header class="entry-header" aria-label="Konten">
+                    <h1 class="entry-title" itemprop="headline">Unity String To Int</h1>
+                    <div class="entry-meta">
+                       <span
+                            class="byline">oleh <span class="author vcard" itemprop="author"
+                                itemtype="https://schema.org/Person" itemscope=""><span class="author-name"
+                                    itemprop="name">necaaa</span></span></span>
+                    </div>
+                </header>
+                <div class="entry-content" itemprop="text">
+                    <div style="text-align: center">
+                        <img src="https://tse1.mm.bing.net/th?q=Unity+String+To+Int" alt="Unity String To Int">
+                    </div>
+                    <p></p>
+                    <p>what is string int double? example please</p>
+                    <div id="ez-toc-container"
+                        class="ez-toc-v2_0_40 counter-hierarchy ez-toc-counter ez-toc-light-blue ez-toc-container-direction">
+                        <div class="ez-toc-title-container">
+                            <p class="ez-toc-title">Daftar Isi</p>
+                            <span class="ez-toc-title-toggle"><a href="#"
+                                    class="ez-toc-pull-right ez-toc-btn ez-toc-btn-xs ez-toc-btn-default ez-toc-toggle"
+                                    area-label="ez-toc-toggle-icon-1"><label for="item-63b392361c4a0"
+                                        aria-label="Table of Content"><span
+                                            style="display: flex;align-items: center;width: 35px;height: 30px;justify-content: center;direction:ltr;"><svg
+                                                style="fill: #999;color:#999" xmlns="http://www.w3.org/2000/svg"
+                                                class="list-377408" width="20px" height="20px" viewBox="0 0 24 24"
+                                                fill="none">
+                                                <path
+                                                    d="M6 6H4v2h2V6zm14 0H8v2h12V6zM4 11h2v2H4v-2zm16 0H8v2h12v-2zM4 16h2v2H4v-2zm16 0H8v2h12v-2z"
+                                                    fill="currentColor"></path>
+                                            </svg><svg style="fill: #999;color:#999" class="arrow-unsorted-368013"
+                                                xmlns="http://www.w3.org/2000/svg" width="10px" height="10px"
+                                                viewBox="0 0 24 24" version="1.2" baseProfile="tiny">
+                                                <path
+                                                    d="M18.2 9.3l-6.2-6.3-6.2 6.3c-.2.2-.3.4-.3.7s.1.5.3.7c.2.2.4.3.7.3h11c.3 0 .5-.1.7-.3.2-.2.3-.5.3-.7s-.1-.5-.3-.7zM5.8 14.7l6.2 6.3 6.2-6.3c.2-.2.3-.5.3-.7s-.1-.5-.3-.7c-.2-.2-.4-.3-.7-.3h-11c-.3 0-.5.1-.7.3-.2.2-.3.5-.3.7s.1.5.3.7z">
+                                                </path>
+                                            </svg></span></label><input type="checkbox" id="item-63b392361c4a0"></a></span>
+                        </div>
+                        <nav>
+                            <ul class="ez-toc-list ez-toc-list-level-1 ">
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#what-is-string-int-double-example-please">1.
+                                            what is string int double? example please</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#for-java-computer-programmingmodifies-a-string-by-appending-a-new-string-to-the-end-a-appendstring-s-b-closestring-s-c-reversestring-s-d-getstring-sinserts-a-string-s-into-the-posi">2.
+                                            For Java Computer Programming:
+Modifies a string by appending a new string to the end. 
+A. append(String s) 
+B. close(String s) 
+C. reverse(String s) 
+D. get(String s)
+Inserts a string s into the position specified by the offset. 
+A. append(String s) 
+B. close(String s) 
+C.reverse(String s) 
+D. insert(int offset, int i)</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#explain-the-ff-data-types-intfloatboolstring">3.
+                                            Explain the ff. Data types.
+Int
+Float
+Bool
+String</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#4-the-default-variable-type-for-floating-pointsa-intb-doublec-stringd-float%e2%80%8b">4.
+                                            4. The default variable type for floating pointsa. intb. doublec. stringd. float​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#public-static-void-mainstring-args-int-i-11-dosystem-out-printi-i-whilei11-%e2%80%8b">5.
+                                            public static void main(String[] args) { int i =11; do{System.out.print(i); i++; } while(i&lt;11); }​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#what-is-wrong-with-the-following-function-int-integer_add-int-x-int-y-int-z-int-sum-sum-x-y-z-return-sum">6.
+                                            What is wrong with the following function?  int integer_add( int x, int y, int z )  {       int sum;       sum = x + y + z:       return sum;  }</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#public-class-main-public-static-void-mainstring-arg-system-out-printlnhello-world-for-int-i0-arg-length-i-system-out-printlnargiargi%e2%80%8b">7.
+                                            public class Main public static void main(String arg[]) { System.out.println("Hello World"); for (int i=0 &lt; arg.length; i++) System.out.println("arg["+i+""+arg[i])​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#identify-the-difference-between-the-two-examples-of-code-belowstring-text-3-3andint-text-3-3%e2%80%8b">8.
+                                            identify the difference between the two examples of code belowstring text= "3" + "3";andint text= 3 + 3;​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#write-v-it-it%e2%80%99s-valid-iv-if-it%e2%80%99s-invalidstring-name-%e2%80%9clovely%e2%80%9d-int-num1-1-char-ch-%e2%80%98n%e2%80%99-decimal-2ndnumber-12-6m-bool-answer-%e2%80%9ctr">9.
+                                            Write V it it’s valid, IV if it’s invalid:
+string name = “Lovely”; 
+int num1 = 1; 
+char ch = ‘ñ’; 
+decimal 2ndNumber = 12.6M; 
+bool answer = “True”; 
+short a = 12345; 
+byte count = 300; 
+int number = 12L; 
+double val1 = 2.694D; 
+string city = 'Quezon City'; 
+uint ThirdNum = 98765; 
+ulong num6 = -789; 
+char letter = "A"; 
+decimal h = -123.456M; 
+byte months = 12;</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#the-return-value-of-the-equals-method-is-________-select-onea-an-intb-all-of-the-choicesc-a-doubled-a-stringe-none-of-the-choices%e2%80%8b">10.
+                                            The return value of the equals( ) method is ________ .Select one:a. An intb. All of the choicesc. A doubled. A stringe. None of the choices​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#let%e2%80%99s-try-thesubtractionpublic-class-main-public-static-void-mainstring-args-int-x-6int-y-3system-out-printlnx-y">11.
+                                            Let’s try thesubtraction:
+public class Main {
+ public static void main(String[] args) {
+int x = 6;
+int y = 3;
+System.out.println(x - y);
+ }
+}</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#write-a-program-that-would-stores-new-char-values-such-as-abcde-sample-programimport-java-io-public-class-array1d-public-static-void-mainstring-args-throws-ioexception">12.
+                                            Write a program that would stores new char values such as a,b,c,d,e.
+Sample Program
+import java.io.*;
+public class Array1D{
+            public static void main(String args[]) throws IOException{
+                        BufferedReader reader = new
+                        BufferedReader(new InputStreamReader(System.in));
+                        int num[] = new int[5];
+                       System.out.print("Enter elements of the array num: ");
+                       for (int i=0; i
+                              num[i]=Integer.parseInt(reader.readLine());
+                       }
+             }
+}</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#fill-in-the-blankstring-val_1-foobarint-num-val_1-lengthsystem-out-printlnnumoutput_____%e2%80%8b">13.
+                                            Fill in the blank:String val_1 = "foobar";int num = val_1.length();System.out.println(num);Output:_____​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#identify-the-difference-between-the-two-examples-of-code-below-string-text-3-3-and-int-text-3-3%e2%80%8b">14.
+                                            identify the difference between the two examples of code below string text= "3" + "3"; and int text= 3 + 3;​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#can-someone-tell-me-whats-wrong-with-my-java-calculator-code-plsimport-java-util-scamnerclass-calculator-public-void-addint-x-int-y-int-sum-x-y-system-out-printlnthe-sum">15.
+                                            Can someone tell me what's wrong with my java calculator code? plsimport java.util.Scamner;class Calculator{    public void add(int x, int y)    {     int sum = x + y;     System.out.println("The sum is: "+ sum);          }         public void substract(int x, int y)    {     int sum = x-y;     System.out.println("The difference is: "+ sum);        }         public void multiply(int x, int y)    {     int sum = x*y;     System.out.println("The product is: "+ sum);          }         public void divide(int x, int y)    {     int sum = x/y;     System.out.println("The qoitient is: "+ sum);          }         static void menu(int a, int b)    {      Scanner in = new Scanner(System.in);      System.out.println("Add [1]: ");      System.out.println("substract [2]: ");      System.out.println("multiply [3]: ");      System.out.println("divide [4]: ");      System.out.println("exit [5]: ");      System.out.print("Enter your Choice: ");      int z = nextInt();        }        Calculator opetation = new Calculator();        switch (z)        {           operation.add(a,b); break;           operation.substract(a,b); break;           operation.multiply(a,b); break;           operation.divide(a,b); break;           operation.exit(a,b); break;            }public static void main(String[]args){    Scanner in = new Scanner(System.in);    System.out.println("Enter first number: ");    int x = nextInt();    System.out.println("Enter second number");    int y = nextInt();    menu(x,y);}    }​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#find-the-output-of-this-operators-1-class-arithmeticoperator-public-static-void-mainstring-args-int-a15-int-b5-system-out-printlnab-system-out-printlna-b-system-out-printlnab-sy">16.
+                                            Find the output of this operators: . 1. class ArithmeticOperator public static void main(String args[]){ int a=15; int b=5; System.out.println(a+b); System.out.println(a-b) System.out.println(a*b); System.out.println(a/b); System.out.println(a%b); }}​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#what-is-the-possible-output-of-the-given-codepublic-class-for_looppublic-static-void-mainstring-argsfor-int-ctrlctr5ctr-system-out-printlnctr">17.
+                                            What is the possible output of the given code?
+public class For_Loop
+public static void main(String[] args)
+{
+for (int Ctr=l;Ctr&lt;=5;Ctr++) {
+System.out.println(Ctr);</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#in-the-equation-y-2x-%e2%80%93-4-give-the-x-and-y-intercepts-a-x-int-3-y-int-4-b-x-int-2-y-int-4-c-x-int-2-y-int-4%e2%80%8b">18.
+                                            In the equation y = 2x – 4, give the x- and y-intercepts. a. x-int = 3, y-int = 4 b. x-int = 2, y-int = -4 c. x-int = -2, y-int = -4​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#non-negative-integer-m-is-called-the-decimal-reverse-of-a-given-non-negative-integer-n-if-a-string-containing-the-decimal-representation-of-n-without-leading-zeros-when-reversed-becomes-a-decimal">19.
+                                            non-negative integer M is called the decimal reverse of a given non-negative integer N if a string containing the decimal representation of N (without leading zeros). When reversed, becomes a decimal representation of M (possibly with leading zeros). Write a C# console program with: class Solution { public int Method(int N);}</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#using-system-using-system-collections-generic-using-system-linq-using-system-text-using-system-threading-tasks-namespace-elmsactivity3-class-program-static-int-factint-num-if-num-1-r">20.
+                                            using System; using System.Collections.Generic; using System.Linq; using System.Text; using System.Threading.Tasks; namespace eLMSActivity3 { class Program { static int Fact(int num) { if (num == 1) return 1; else return num * Fact(num - 1); } static void Main(string[] args) { Console.WriteLine(Fact(6)); } } }</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#activity-2-what-is-the-output-of-the-code-below-public-class-test-public-static-void-mainstring-args-int-a-5-int-b-10-int-c-15-int-d-30-system-out-printlna-b-a-b">21.
+                                            ACTIVITY 2 What is the output of the code below? public class Test { public static void main(String args[]) { int a = 5; int b = 10; int c = 15; int d = 30; System.out.println("a + b = " + (a + b) ); System.out.println("b - a = " + (b - a) ); System.out.println("c * d = " + (c * d) ); System.out.println("b / a = " + (b / a) ); System.out.println("b % a = " + (b % a) ); System.out.println("c % a = " + (c % a) ); System.out.println("a++ = " + (a++) ); System.out.println("a-- = " + (a--) ); // Check the difference in d++ and ++d System.out.println("d++ = " + (d++) ); System.out.println("++d = " + (++d) ); } } Write your answer inside this box:​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#what-data-type-in-c-is-occupationdata-typesbool-booleanstringcharintfloatdouble%e2%80%8b">22.
+                                            what data type in C++ is occupationDATA TYPESbool (boolean)stringcharintfloat/double​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#public-class-scoperule-line-1-line-2static-double-intrate-0-055-line-3static-string-name-line-4static-int-t-line-5public-static-int-mainstring-args-line-6-line-7int-fir">23.
+                                            public class scopeRule //Line 1
+{ //Line 2
+static double intRate = 0.055; //Line 3
+static String name; //Line 4
+static int t; //Line 5
+public static int main(String[] args) //Line 6
+{ //Line 7
+int first; //Line 8
+double u, t; //Line 9
+String str; //Line 10
+//... //Line 11
+} //Line 12
+public static int first(int x, int y) //Line 13
+{ //Line 14
+int t; //Line 15
+//... //Line 16
+}
+public static double salary; //Line 17
+public static void funcOne(int first, double x) //Line 18
+{ //Line 19
+char ch; //Line 20
+int y; //Line 21
+//block one //Line 22
+{ //Line 23
+int u = 18; //Line 24
+//... //Line 25
+} //end block one //Line 26
+} //Line 27
+} //Line 28
+Which of the following identifiers is visible in main?
+ a) t (Line 5)
+ b )salary (Line 17)
+ c) local variables of method funcOne
+ d) All identifiers are visible in main.</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#which-of-the-following-data-types-cannot-store-the-number-14125-a-string-b-int-c-doubled-char%e2%80%8b">24.
+                                            Which of the following data types CANNOT store the number 14,125? A. String B. int C. doubleD. char​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#give-2-example-of-specific-data-type-of-a-variable-shortcharstringbool-intdoublefloat%e2%80%8b">25.
+                                            give 2 example of specific data type of a variable, shortcharstringbool intdoublefloat​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#what-is-wrong-with-the-following-functionint-3integer_add-int-x-int-y-int-z-int-sum-sum-x-y-z-return-sum">26.
+                                            What is wrong with the following function?
+int 3integer_add( int x, int y, int z )
+{
+ int sum;
+ sum = x + y + z;
+ return sum;</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#c-given-the-intercepts-find-the-equations-of-a-line-1-x-int2-y-int-10-2-x-int2-y-int-63-x-int-4-y-int-8-4-x-int1-y-int-75-x-int-3-y-int-5%e2%80%8b">27.
+                                            C. Given the intercepts, find the equations of a line. 1. x-int:2; y-int: 10 2. x-int:2; y-int: -63. x-int:-4 ; y-int: 8 4. x-int:1; y-int: 75. x-int:-3; y-int:-5​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#package-midtermpublic-class-deguzman-public-static-void-mainstring-args-int-row-5-int-a-0forint-i1-i-rows-i-a0forint-space-1-spacerows-ispace">28.
+                                            package Midterm;public class DEGUZMAN {  public static void main(String[] args) {   int row = 5;   int a = 0;for(int i=1; i &lt;= rows ; ++i, a=0){for(int space = 1; space&lt;=rows -i;++space){       System.out.print(" ");     }     while (a != 2 * i - 1){       System.out.print("* ");       ++a;     }     System.out.println();   }  }} Help me how this program work​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#what-is-error-in-the-code-belowpublic-class-school-private-nameandaddress-nameadd-private-int-enrollment-public-schoolstring-name-string-add-int-zip-int-enrolled-enrollment-enrolle">29.
+                                            what is error in the code below:
+public class School
+{
+ private NameAndAddress nameAdd;
+ private int enrollment;
+ public School(String name, String add, int zip, int enrolled)
+ {
+ enrollment = enrolled;
+ }
+ public void display()
+ {
+ System.out.println("The school information:");
+ nameAdd.display();
+ System.out.println("Enrollment is " + enrollment);
+ }
+}</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#12-it-is-a-popular-instrument-and-is-played-by-strumming-and-plucking-the-str-13-the-stringed-instrument-that-has-only-4-strings-and-the-largest-instrument-14-this-instrument-gas-the-highest-pitch">30.
+                                            12. It is a popular instrument and is played by strumming and plucking the str 13. The stringed instrument that has only 4 strings and the largest instrument 14. This instrument gas the highest pitch range and usually plays the melody 15. A National Artist for Music who said that the rondalla started as a very int ARTS​</a>
+                                    </li>
+                                                            </ul>
+                        </nav>
+                    </div>
+                                            <h2 class="ez-toc-section" id="what-is-string-int-double-example-please">
+                            1. what is string int double? example please</h2><br />
+                        An integer (more commonly called an int) is a number without a decimal point. <br />ex. any whole number. 74 69 69 63 22 -31<br /><br />A float is a floating-point number, which means it is a number that has a decimal place. Floats are used when more precision is needed.<br />ex. 13.1415 77.9999 69.6969<br />a double has 2x the precision of float. In general a double has 15 to 16 decimal digits of precision, while float only has 7.<br /><br />string is a sequence of characters. A string is noted by surrounding a group of letters with double quotes. Chars and strings are most often used with the keyboard methods, to display text to the screen, and to load images or files.<br />ex.<br />("dedpuol")<br />("BURP")<br />
+                                            <h2 class="ez-toc-section" id="for-java-computer-programmingmodifies-a-string-by-appending-a-new-string-to-the-end-a-appendstring-s-b-closestring-s-c-reversestring-s-d-getstring-sinserts-a-string-s-into-the-posi">
+                            2. For Java Computer Programming:
+Modifies a string by appending a new string to the end. 
+A. append(String s) 
+B. close(String s) 
+C. reverse(String s) 
+D. get(String s)
+Inserts a string s into the position specified by the offset. 
+A. append(String s) 
+B. close(String s) 
+C.reverse(String s) 
+D. insert(int offset, int i)</h2><br />
+                        The answer to the first question is A. append(String s).  <br /><br />The answer to the second question is D. insert(int offset, int i).<br /><br />
+                                            <h2 class="ez-toc-section" id="explain-the-ff-data-types-intfloatboolstring">
+                            3. Explain the ff. Data types.
+Int
+Float
+Bool
+String</h2><br />
+                        <p><strong>Int</strong> is a data type used for values that has no fractional part. For example, -1, 3, and 67.</p><p><strong>Float</strong> is a data type used for values that has a fractional part. For example, 4.3, 5.55 and -3.14.</p><p><strong>Bool</strong> is a data type used to determine if a condition is either true or false. For example, 5 = 4, 1 &lt; 2, and 55=2.</p><p><strong>String</strong> is a data type used for values that includes a set of characters. For example, "word", "5plus" and "444".</p><p> </p><p></p><br />
+                                            <h2 class="ez-toc-section" id="4-the-default-variable-type-for-floating-pointsa-intb-doublec-stringd-float%e2%80%8b">
+                            4. 4. The default variable type for floating pointsa. intb. doublec. stringd. float​</h2><br />
+                        <p><strong>Answer:</strong></p><p>d. float</p><p><strong>Explanation:</strong></p><p>hope it helppps...</p><br />
+                                            <h2 class="ez-toc-section" id="public-static-void-mainstring-args-int-i-11-dosystem-out-printi-i-whilei11-%e2%80%8b">
+                            5. public static void main(String[] args) { int i =11; do{System.out.print(i); i++; } while(i&lt;11); }​</h2><br />
+                        <p><strong>Answer:</strong></p><p>what grade</p><p><strong>Explanation:</strong></p><p>not sure po kase</p><br />
+                                            <h2 class="ez-toc-section" id="what-is-wrong-with-the-following-function-int-integer_add-int-x-int-y-int-z-int-sum-sum-x-y-z-return-sum">
+                            6. What is wrong with the following function?  int integer_add( int x, int y, int z )  {       int sum;       sum = x + y + z:       return sum;  }</h2><br />
+                        <p><strong>Answer:</strong></p><p>int integer_add( int x, int y, int z ) {</p><p> int sum; </p><p>sum = x + y + z; </p><p>return sum; </p><p>}</p><p><strong>Step-by-step explanation:</strong></p><p>A statement is end with semi colon sign not with colon sign.</p><p>Error: sum = x + y + z:</p><p>Correct: sum = x + y + z;</p><br />
+                                            <h2 class="ez-toc-section" id="public-class-main-public-static-void-mainstring-arg-system-out-printlnhello-world-for-int-i0-arg-length-i-system-out-printlnargiargi%e2%80%8b">
+                            7. public class Main public static void main(String arg[]) { System.out.println("Hello World"); for (int i=0 &lt; arg.length; i++) System.out.println("arg["+i+""+arg[i])​</h2><br />
+                        <p>answer:</p><p>sqrt(cos(x))*cos(300x)+sqrt(abs(x))-0.7)*(4-x*x)^0.01, sqrt(6-x^2) from -4.5 to 4.5</p><p></p><br />
+                                            <h2 class="ez-toc-section" id="identify-the-difference-between-the-two-examples-of-code-belowstring-text-3-3andint-text-3-3%e2%80%8b">
+                            8. identify the difference between the two examples of code belowstring text= "3" + "3";andint text= 3 + 3;​</h2><br />
+                        <p><strong>Answer:</strong></p><p>Both a string and text field will hold information that you can freely write in. The major difference between the two fields is how many characters you can put in these fields. A string field has a limit of 255 characters, whereas a text field has a character limit of 30,000 characters.</p><p><strong>Explanation:</strong></p><p></p><p><strong>Answer:</strong></p><p>Di ko po alam sagot sorry</p><br />
+                                            <h2 class="ez-toc-section" id="write-v-it-it%e2%80%99s-valid-iv-if-it%e2%80%99s-invalidstring-name-%e2%80%9clovely%e2%80%9d-int-num1-1-char-ch-%e2%80%98n%e2%80%99-decimal-2ndnumber-12-6m-bool-answer-%e2%80%9ctr">
+                            9. Write V it it’s valid, IV if it’s invalid:
+string name = “Lovely”; 
+int num1 = 1; 
+char ch = ‘ñ’; 
+decimal 2ndNumber = 12.6M; 
+bool answer = “True”; 
+short a = 12345; 
+byte count = 300; 
+int number = 12L; 
+double val1 = 2.694D; 
+string city = 'Quezon City'; 
+uint ThirdNum = 98765; 
+ulong num6 = -789; 
+char letter = "A"; 
+decimal h = -123.456M; 
+byte months = 12;</h2><br />
+                        <p><strong>Answer:</strong></p><p>1V</p><p>2IV</p><p>3IV</p><p>4IV</p><p></p><p><strong>Explanation:</strong></p><p>dq knws ang iba</p><p></p>VIVIVVVVIVVIVVVVIVIVV<br />
+                                            <h2 class="ez-toc-section" id="the-return-value-of-the-equals-method-is-________-select-onea-an-intb-all-of-the-choicesc-a-doubled-a-stringe-none-of-the-choices%e2%80%8b">
+                            10. The return value of the equals( ) method is ________ .Select one:a. An intb. All of the choicesc. A doubled. A stringe. None of the choices​</h2><br />
+                        <p><strong>Answer:</strong></p><p>c po</p><p><strong>Explanation:</strong></p><p>correct me po if im wrong thanks po</p><br />
+                                            <h2 class="ez-toc-section" id="let%e2%80%99s-try-thesubtractionpublic-class-main-public-static-void-mainstring-args-int-x-6int-y-3system-out-printlnx-y">
+                            11. Let’s try thesubtraction:
+public class Main {
+ public static void main(String[] args) {
+int x = 6;
+int y = 3;
+System.out.println(x - y);
+ }
+}</h2><br />
+                        <p>public class Main {</p><p>public static void main(String[] args) {</p><p>int x = 6;</p><p>int y = 3;</p><p>System.out.println(x - y);</p><p>}</p><p>}</p><p></p><p>Result: 3</p><br />
+                                            <h2 class="ez-toc-section" id="write-a-program-that-would-stores-new-char-values-such-as-abcde-sample-programimport-java-io-public-class-array1d-public-static-void-mainstring-args-throws-ioexception">
+                            12. Write a program that would stores new char values such as a,b,c,d,e.
+Sample Program
+import java.io.*;
+public class Array1D{
+            public static void main(String args[]) throws IOException{
+                        BufferedReader reader = new
+                        BufferedReader(new InputStreamReader(System.in));
+                        int num[] = new int[5];
+                       System.out.print("Enter elements of the array num: ");
+                       for (int i=0; i
+                              num[i]=Integer.parseInt(reader.readLine());
+                       }
+             }
+}</h2><br />
+                        <p>A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</p><p><strong>Answer:</strong></p><p>We did not find results for: Write a program that would stores new char values such as a,b,c,d,e. Sample Program import java.io.*; public class Array1D{ public static void main(String args[]) throws IOException{ BufferedReader reader = new BufferedReader(new InputStreamReader(System.in)); int num[] = new int[5]; System.out.print("Enter elements of the array num: " ); for (int i=0; i num[i]=Integer.parseInt(reader.readLine).</p><p></p><p></p><br />
+                                            <h2 class="ez-toc-section" id="fill-in-the-blankstring-val_1-foobarint-num-val_1-lengthsystem-out-printlnnumoutput_____%e2%80%8b">
+                            13. Fill in the blank:String val_1 = "foobar";int num = val_1.length();System.out.println(num);Output:_____​</h2><br />
+                        <p><strong>Answer:</strong></p><p>Soory is error</p><p><strong>Explanation:</strong></p><p>Error po siya sakin :)</p><br />
+                                            <h2 class="ez-toc-section" id="identify-the-difference-between-the-two-examples-of-code-below-string-text-3-3-and-int-text-3-3%e2%80%8b">
+                            14. identify the difference between the two examples of code below string text= "3" + "3"; and int text= 3 + 3;​</h2><br />
+                        <p><strong>Answer:</strong></p><p>habol k lmng ay points Hehheh3h3</p><br />
+                                            <h2 class="ez-toc-section" id="can-someone-tell-me-whats-wrong-with-my-java-calculator-code-plsimport-java-util-scamnerclass-calculator-public-void-addint-x-int-y-int-sum-x-y-system-out-printlnthe-sum">
+                            15. Can someone tell me what's wrong with my java calculator code? plsimport java.util.Scamner;class Calculator{    public void add(int x, int y)    {     int sum = x + y;     System.out.println("The sum is: "+ sum);          }         public void substract(int x, int y)    {     int sum = x-y;     System.out.println("The difference is: "+ sum);        }         public void multiply(int x, int y)    {     int sum = x*y;     System.out.println("The product is: "+ sum);          }         public void divide(int x, int y)    {     int sum = x/y;     System.out.println("The qoitient is: "+ sum);          }         static void menu(int a, int b)    {      Scanner in = new Scanner(System.in);      System.out.println("Add [1]: ");      System.out.println("substract [2]: ");      System.out.println("multiply [3]: ");      System.out.println("divide [4]: ");      System.out.println("exit [5]: ");      System.out.print("Enter your Choice: ");      int z = nextInt();        }        Calculator opetation = new Calculator();        switch (z)        {           operation.add(a,b); break;           operation.substract(a,b); break;           operation.multiply(a,b); break;           operation.divide(a,b); break;           operation.exit(a,b); break;            }public static void main(String[]args){    Scanner in = new Scanner(System.in);    System.out.println("Enter first number: ");    int x = nextInt();    System.out.println("Enter second number");    int y = nextInt();    menu(x,y);}    }​</h2><br />
+                        <p>Please check the attached file for the working code solution.</p><p></p><p>Note: To the moderator, do not delete this answer. The O.P is asking about what is wrong in his/her code. The answer here is inside the attached file. Thank you.</p><br />
+                                            <h2 class="ez-toc-section" id="find-the-output-of-this-operators-1-class-arithmeticoperator-public-static-void-mainstring-args-int-a15-int-b5-system-out-printlnab-system-out-printlna-b-system-out-printlnab-sy">
+                            16. Find the output of this operators: . 1. class ArithmeticOperator public static void main(String args[]){ int a=15; int b=5; System.out.println(a+b); System.out.println(a-b) System.out.println(a*b); System.out.println(a/b); System.out.println(a%b); }}​</h2><br />
+                        <p><strong>Answer:</strong></p><p>20</p><p>10</p><p>75</p><p>3</p><p>0</p><p></p><p>yan po, welcome!</p><p></p><br />
+                                            <h2 class="ez-toc-section" id="what-is-the-possible-output-of-the-given-codepublic-class-for_looppublic-static-void-mainstring-argsfor-int-ctrlctr5ctr-system-out-printlnctr">
+                            17. What is the possible output of the given code?
+public class For_Loop
+public static void main(String[] args)
+{
+for (int Ctr=l;Ctr&lt;=5;Ctr++) {
+System.out.println(Ctr);</h2><br />
+                        <strong>Answer:</strong><p>1</p><p>2</p><p>3</p><p>4</p><p>5</p><strong>Explanation:</strong><p>The System.out.println(Ctr); statement is just displaying the value of your variable Ctr. Since it begins with a value of 1 and ends with a value of 5, it will loop and display each number stored in Ctr for each iteration. </p><p></p><br />
+                                            <h2 class="ez-toc-section" id="in-the-equation-y-2x-%e2%80%93-4-give-the-x-and-y-intercepts-a-x-int-3-y-int-4-b-x-int-2-y-int-4-c-x-int-2-y-int-4%e2%80%8b">
+                            18. In the equation y = 2x – 4, give the x- and y-intercepts. a. x-int = 3, y-int = 4 b. x-int = 2, y-int = -4 c. x-int = -2, y-int = -4​</h2><br />
+                        <p><strong>Answer:</strong></p><p>for me A po</p><p><strong>Step-by-step explanation:</strong></p><p>sana makatulong </p><p><strong>Answer:</strong></p><p>b. x-int = 2, y-int = -4</p><p><strong>Step-by-step explanation:</strong></p><p>to find x- and y-intercepts, you need to substitute zero (0) to the variables. refer to the image attached. hope this helped!</p><p></p><p></p><br />
+                                            <h2 class="ez-toc-section" id="non-negative-integer-m-is-called-the-decimal-reverse-of-a-given-non-negative-integer-n-if-a-string-containing-the-decimal-representation-of-n-without-leading-zeros-when-reversed-becomes-a-decimal">
+                            19. non-negative integer M is called the decimal reverse of a given non-negative integer N if a string containing the decimal representation of N (without leading zeros). When reversed, becomes a decimal representation of M (possibly with leading zeros). Write a C# console program with: class Solution { public int Method(int N);}</h2><br />
+                        <p><strong>Answer:</strong></p><p>Here is an example C# console program that defines a class Solution with a method Method that takes a non-negative integer N and returns the decimal reverse of N.</p><p></p><p></p><p></p><p>using System;</p><p></p><p>class Solution {</p><p>    public int Method(int N) {</p><p>        string strN = N.ToString(); // convert N to a string</p><p>        char[] charN = strN.ToCharArray(); // convert the string to a char array</p><p>        Array.Reverse(charN); // reverse the order of the char array</p><p>        string strM = new string(charN); // convert the reversed char array to a string</p><p>        int M = int.Parse(strM); // convert the string back to an int</p><p>        return M; // return the decimal reverse of N</p><p>    }</p><p>}</p><p></p><p>class Program {</p><p>    static void Main(string[] args) {</p><p>        Solution solution = new Solution();</p><p>        int N = 12345;</p><p>        int M = solution.Method(N);</p><p>        Console.WriteLine("The decimal reverse of " + N + " is " + M);</p><p>    }</p><p>}</p><p></p><p></p><p></p><p></p><p></p><p>In this program, we first convert the input integer N to a string strN using the ToString() method. We then convert the string to a char array charN using the ToCharArray() method. We use the Array.Reverse() method to reverse the order of the characters in the array, and then convert the reversed char array back to a string strM using the new string() constructor. Finally, we convert the string strM back to an integer M using the int.Parse() method and return the decimal reverse of N.</p><p></p><p>In the Main method, we create an instance of the Solution class and call the Method method with an input value of N = 12345. We then print the result to the console using the Console.WriteLine() method. The output of the program will be: "The decimal reverse of 12345 is 54321".</p><br />
+                                            <h2 class="ez-toc-section" id="using-system-using-system-collections-generic-using-system-linq-using-system-text-using-system-threading-tasks-namespace-elmsactivity3-class-program-static-int-factint-num-if-num-1-r">
+                            20. using System; using System.Collections.Generic; using System.Linq; using System.Text; using System.Threading.Tasks; namespace eLMSActivity3 { class Program { static int Fact(int num) { if (num == 1) return 1; else return num * Fact(num - 1); } static void Main(string[] args) { Console.WriteLine(Fact(6)); } } }</h2><br />
+                        Idontknowtheanswersorry<p></p><p></p><br />
+                                            <h2 class="ez-toc-section" id="activity-2-what-is-the-output-of-the-code-below-public-class-test-public-static-void-mainstring-args-int-a-5-int-b-10-int-c-15-int-d-30-system-out-printlna-b-a-b">
+                            21. ACTIVITY 2 What is the output of the code below? public class Test { public static void main(String args[]) { int a = 5; int b = 10; int c = 15; int d = 30; System.out.println("a + b = " + (a + b) ); System.out.println("b - a = " + (b - a) ); System.out.println("c * d = " + (c * d) ); System.out.println("b / a = " + (b / a) ); System.out.println("b % a = " + (b % a) ); System.out.println("c % a = " + (c % a) ); System.out.println("a++ = " + (a++) ); System.out.println("a-- = " + (a--) ); // Check the difference in d++ and ++d System.out.println("d++ = " + (d++) ); System.out.println("++d = " + (++d) ); } } Write your answer inside this box:​</h2><br />
+                        <p><strong>Answer:</strong></p><p>eml eml eml emle eml</p><p><strong>Explanation:</strong></p><p>mythic glory na ako guyss</p><br />
+                                            <h2 class="ez-toc-section" id="what-data-type-in-c-is-occupationdata-typesbool-booleanstringcharintfloatdouble%e2%80%8b">
+                            22. what data type in C++ is occupationDATA TYPESbool (boolean)stringcharintfloat/double​</h2><br />
+                        <p><strong>Answer:</strong></p><p>float/double yan po tama </p><br />
+                                            <h2 class="ez-toc-section" id="public-class-scoperule-line-1-line-2static-double-intrate-0-055-line-3static-string-name-line-4static-int-t-line-5public-static-int-mainstring-args-line-6-line-7int-fir">
+                            23. public class scopeRule //Line 1
+{ //Line 2
+static double intRate = 0.055; //Line 3
+static String name; //Line 4
+static int t; //Line 5
+public static int main(String[] args) //Line 6
+{ //Line 7
+int first; //Line 8
+double u, t; //Line 9
+String str; //Line 10
+//... //Line 11
+} //Line 12
+public static int first(int x, int y) //Line 13
+{ //Line 14
+int t; //Line 15
+//... //Line 16
+}
+public static double salary; //Line 17
+public static void funcOne(int first, double x) //Line 18
+{ //Line 19
+char ch; //Line 20
+int y; //Line 21
+//block one //Line 22
+{ //Line 23
+int u = 18; //Line 24
+//... //Line 25
+} //end block one //Line 26
+} //Line 27
+} //Line 28
+Which of the following identifiers is visible in main?
+ a) t (Line 5)
+ b )salary (Line 17)
+ c) local variables of method funcOne
+ d) All identifiers are visible in main.</h2><br />
+                        <p><strong>Answer: D) All identifiers are visible in main.</strong></p><p></p><p><strong>Explanation: In the above java code, we have 5 identifiers namely:</strong></p><p><strong></strong></p><p>scopeRule -&gt; class name</p><p>main -&gt; method name</p><p>String -&gt; predefined class name</p><p>args -&gt; variable name</p><p>first -&gt; variable name</p><p>u -&gt; variable name</p><p>t -&gt; variable name</p><p>str -&gt; variable name</p><br />
+                                            <h2 class="ez-toc-section" id="which-of-the-following-data-types-cannot-store-the-number-14125-a-string-b-int-c-doubled-char%e2%80%8b">
+                            24. Which of the following data types CANNOT store the number 14,125? A. String B. int C. doubleD. char​</h2><br />
+                        <p><strong>Answer:</strong></p><p>&gt;&gt;&gt;a. string&lt;&lt;&lt;</p><p><strong>Explanation:</strong></p><p>&gt;&gt;&gt;hope its help :D &lt;&lt;&lt;</p><br />
+                                            <h2 class="ez-toc-section" id="give-2-example-of-specific-data-type-of-a-variable-shortcharstringbool-intdoublefloat%e2%80%8b">
+                            25. give 2 example of specific data type of a variable, shortcharstringbool intdoublefloat​</h2><br />
+                        <p><strong>Answer:</strong></p><p>short value = -31;</p><p>short value = 31;</p><p></p><p>char letter = 'A';</p><p>char letter = 'B';</p><p></p><p>String name = "Hello World";</p><p>String name = "Programming";</p><p></p><p>boolean isDie = true;</p><p>boolean isShort = false;</p><p></p><p>int age = 4;</p><p>int age = 20;</p><p></p><p>double gpa = 1.8;</p><p>double gpa = 3.0;</p><p></p><p>float gpa = 1.8f;</p><p>float gpa = 3.0f;</p><br />
+                                            <h2 class="ez-toc-section" id="what-is-wrong-with-the-following-functionint-3integer_add-int-x-int-y-int-z-int-sum-sum-x-y-z-return-sum">
+                            26. What is wrong with the following function?
+int 3integer_add( int x, int y, int z )
+{
+ int sum;
+ sum = x + y + z;
+ return sum;</h2><br />
+                        <p><strong>Answer:</strong></p><p>The correct form is:
+</p><p>int integer_add3(int x, int y, int z)
+</p><p>{
+</p><p>int sum;
+</p><p>sum=x+y+z;
+</p><p>return sum;
+</p><p>}
+</p><p></p><p><strong>Step-by-step explanation:</strong></p><p>The above function having two errors:
+</p><p>1. The function name is not a valid identifier name, since an identifier name never begins with digits.
+</p><p>2. Function body closing braces "}" is not given.</p><br />
+                                            <h2 class="ez-toc-section" id="c-given-the-intercepts-find-the-equations-of-a-line-1-x-int2-y-int-10-2-x-int2-y-int-63-x-int-4-y-int-8-4-x-int1-y-int-75-x-int-3-y-int-5%e2%80%8b">
+                            27. C. Given the intercepts, find the equations of a line. 1. x-int:2; y-int: 10 2. x-int:2; y-int: -63. x-int:-4 ; y-int: 8 4. x-int:1; y-int: 75. x-int:-3; y-int:-5​</h2><br />
+                        <p><strong>Answer:</strong></p><p>======================================</p><p>1. The slope-intercept form of a line is y = mx+b, where m is the slope and b is the y-intercept. We can use the x-intercept and y-intercept given to find the values of m and b.</p><p></p><p>x-int: 2 means that the point (2,0) is on the line.</p><p>y-int: 10 means that the point (0,10) is on the line.</p><p></p><p>Using these two points, we can find the slope of the line:</p><p></p><p>m = (y2 - y1) / (x2 - x1)</p><p>m = (10 - 0) / (0 - 2)</p><p>m = -5</p><p></p><p>Now we can use the slope and one of the points to find the y-intercept:</p><p></p><p>y = mx + b</p><p>0 = -5(2) + b</p><p>b = 10</p><p></p>The equation of the line is y = -5x + 10.<p>==================================</p><p>2. Using the same process as above:</p><p></p><p>x-int: 2 means that the point (2,0) is on the line.</p><p>y-int: -6 means that the point (0,-6) is on the line.</p><p></p><p>m = (y2 - y1) / (x2 - x1)</p><p>m = (-6 - 0) / (0 - 2)</p><p>m = 3</p><p></p><p>y = mx + b</p><p>-6 = 3(0) + b</p><p>b = -6</p><p></p>The equation of the line is y = 3x - 6.<p>=================================</p><p>3. Using the same process as above:</p><p></p><p>x-int: -4 means that the point (-4,0) is on the line.</p><p>y-int: 8 means that the point (0,8) is on the line.</p><p></p><p>m = (y2 - y1) / (x2 - x1)</p><p>m = (8 - 0) / (0 - (-4))</p><p>m = 2</p><p></p><p>y = mx + b</p><p>8 = 2(0) + b</p><p>b = 8</p><p></p>The equation of the line is y = 2x + 8.<p>=================================</p><p>4. Using the same process as above:</p><p></p><p>x-int: 1 means that the point (1,0) is on the line.</p><p>y-int: 7 means that the point (0,7) is on the line.</p><p></p><p>m = (y2 - y1) / (x2 - x1)</p><p>m = (7 - 0) / (0 - 1)</p><p>m = -7</p><p></p><p>y = mx + b</p><p>0 = -7(1) + b</p><p>b = 7</p><p></p>The equation of the line is y = -7x + 7.<p>=================≠==================</p><p>5. Using the same process as above:</p><p></p><p>x-int: -3 means that the point (-3,0) is on the line.</p><p>y-int: -5 means that the point (0,-5) is on the line.</p><p></p><p>m = (y2 - y1) / (x2 - x1)</p><p>m = (-5 - 0) / (0 - (-3))</p><p>m = 5/3</p><p></p><p>y = mx + b</p><p>-5 = (5/3)(0) + b</p><p>b = -5</p><p></p>The equation of the line is y = (5/3)x - 5.<p></p><p></p><p>hope it <strong>helpps</strong></p><p><strong>Step-by-step explanation:</strong></p>pa followpa brainliestpa react<p></p><strong>#</strong><strong>C</strong><strong>A</strong><strong>R</strong><strong>R</strong><strong>Y</strong><strong> </strong><strong>ON </strong><strong>LEARNING</strong><br />
+                                            <h2 class="ez-toc-section" id="package-midtermpublic-class-deguzman-public-static-void-mainstring-args-int-row-5-int-a-0forint-i1-i-rows-i-a0forint-space-1-spacerows-ispace">
+                            28. package Midterm;public class DEGUZMAN {  public static void main(String[] args) {   int row = 5;   int a = 0;for(int i=1; i &lt;= rows ; ++i, a=0){for(int space = 1; space&lt;=rows -i;++space){       System.out.print(" ");     }     while (a != 2 * i - 1){       System.out.print("* ");       ++a;     }     System.out.println();   }  }} Help me how this program work​</h2><br />
+                        <p><strong>Answer:</strong></p><p>Types of computer Network Geographic</p><p><strong>Explanation:</strong></p><p></p><br />
+                                            <h2 class="ez-toc-section" id="what-is-error-in-the-code-belowpublic-class-school-private-nameandaddress-nameadd-private-int-enrollment-public-schoolstring-name-string-add-int-zip-int-enrolled-enrollment-enrolle">
+                            29. what is error in the code below:
+public class School
+{
+ private NameAndAddress nameAdd;
+ private int enrollment;
+ public School(String name, String add, int zip, int enrolled)
+ {
+ enrollment = enrolled;
+ }
+ public void display()
+ {
+ System.out.println("The school information:");
+ nameAdd.display();
+ System.out.println("Enrollment is " + enrollment);
+ }
+}</h2><br />
+                        <p><strong>Answer:</strong></p><p>nameAdd is declared but no values assigned to it. </p><br />
+                                            <h2 class="ez-toc-section" id="12-it-is-a-popular-instrument-and-is-played-by-strumming-and-plucking-the-str-13-the-stringed-instrument-that-has-only-4-strings-and-the-largest-instrument-14-this-instrument-gas-the-highest-pitch">
+                            30. 12. It is a popular instrument and is played by strumming and plucking the str 13. The stringed instrument that has only 4 strings and the largest instrument 14. This instrument gas the highest pitch range and usually plays the melody 15. A National Artist for Music who said that the rondalla started as a very int ARTS​</h2><br />
+                        <p>12. Guitar</p><p>13. double bass</p><p>14. Trumpet </p><p>15 Ryan Cayabyab </p><p></p><p></p><p><strong>followformore</strong></p><br />
+                    
+                </div>
+                <div class="youtubeVideo" style="text-align: center">
+                    <h3>Video Terkait</h3>
+                    <iframe width="560" height="315"
+                        src="https://www.youtube.com/embed/b0M9wwSxqIQ?controls=0" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"allowfullscreen></iframe>
+                </div>
+                <footer class="entry-meta" aria-label="Meta postingan">
+                    <span class="cat-links"><span class="gp-icon icon-categories"><svg viewBox="0 0 512 512"
+                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em">
+                                <path
+                                    d="M0 112c0-26.51 21.49-48 48-48h110.014a48 48 0 0143.592 27.907l12.349 26.791A16 16 0 00228.486 128H464c26.51 0 48 21.49 48 48v224c0 26.51-21.49 48-48 48H48c-26.51 0-48-21.49-48-48V112z">
+                                </path>
+                            </svg></span><span class="screen-reader-text">Kategori </span>computer_science</span>
+            </div>
+        </article>
+    </main>
+            </div>
+            <div class="widget-area sidebar is-right-sidebar" id="right-sidebar">
+                <div class="inside-right-sidebar">
+                    <aside id="categories-2" class="widget inner-padding widget_categories">
+                        <h2 class="widget-title">Topik</h2>
+                        <ul>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/var-dump-in-java.html">Var dump In Java</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/paragraph-proof.html">Paragraph Proof</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/mayomaya.html">Mayomaya</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/one-way-slab-detail.html">One Way Slab Detail</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/kicksrus.html">Kicksrus</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/breathers-a-zombie-s-lament.html">Breathers A Zombie s Lament</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/meniere-s-disease-icd-10.html">Meniere s Disease Icd 10</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/what-is-the-basis-of-scientists-in-dividing-earth-s-lithosphere.html">What Is The Basis Of Scientists In Dividing Earth s Lithosphere</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/aluminum-ferrocyanide-formula.html">Aluminum Ferrocyanide Formula</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/330-322.html">330 322</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/mga-bagay-na-magkasalungat.html">Mga Bagay Na Magkasalungat</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/flagella-arrangements.html">Flagella Arrangements</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/g-ml-to-ppm.html">G Ml To Ppm</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/ambroxol-zobrixol.html">Ambroxol Zobrixol</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/background-for-recognition.html">Background For Recognition</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/jons-kitchen.html">Jons Kitchen</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/break-even-analysis-problems.html">Break Even Analysis Problems</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/oda-halimbawa-tagalog.html">Oda Halimbawa Tagalog</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/the-sun-s-rays-are-observed-to-focus.html">The Sun s Rays Are Observed To Focus</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/operations-and-sales-are-the-two-functions-in-businesses.html">Operations And Sales Are The Two Functions In Businesses</a>
+                                </li>
+                                                    </ul>
+
+                    </aside>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="site-footer">
+        <footer class="site-info" aria-label="Situs" itemtype="https://schema.org/WPFooter" itemscope>
+            <div class="inside-site-info grid-container">
+                <div class="copyright-bar">
+                    <span class="copyright">&copy; 2023 <a href="https://jneweducation.github.io"
+                            itemprop="url">QnA</a></span>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <a title="Gulirkan kembali ke puncak laman" aria-label="Gulirkan kembali ke puncak laman" rel="nofollow"
+        href="#" class="generate-back-to-top" data-scroll-speed="400" data-start-scroll="300">
+        <span class="gp-icon icon-arrow-up"><svg viewBox="0 0 330 512" aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill-rule="evenodd"
+                clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414">
+                <path
+                    d="M305.863 314.916c0 2.266-1.133 4.815-2.832 6.514l-14.157 14.163c-1.699 1.7-3.964 2.832-6.513 2.832-2.265 0-4.813-1.133-6.512-2.832L164.572 224.276 53.295 335.593c-1.699 1.7-4.247 2.832-6.512 2.832-2.265 0-4.814-1.133-6.513-2.832L26.113 321.43c-1.699-1.7-2.831-4.248-2.831-6.514s1.132-4.816 2.831-6.515L158.06 176.408c1.699-1.7 4.247-2.833 6.512-2.833 2.265 0 4.814 1.133 6.513 2.833L303.03 308.4c1.7 1.7 2.832 4.249 2.832 6.515z"
+                    fill-rule="nonzero" />
+            </svg></span>
+    </a>
+    <script id="generate-a11y">
+        ! function() {
+            "use strict";
+            if ("querySelector" in document && "addEventListener" in window) {
+                var e = document.body;
+                e.addEventListener("mousedown", function() {
+                    e.classList.add("using-mouse")
+                }), e.addEventListener("keydown", function() {
+                    e.classList.remove("using-mouse")
+                })
+            }
+        }();
+    </script>
+    <!--[if lte IE 11]>
+<script src='https://jneweducation.github.io/js/classList.min.js' ?ver=3.2.4' id='generate-classlist-js'></script>
+<![endif]-->
+    <script id='generate-menu-js-extra'>
+        var generatepressMenu = {
+            "toggleOpenedSubMenus": "1",
+            "openSubMenuLabel": "Buka Submenu",
+            "closeSubMenuLabel": "Tutup submenu"
+        };
+    </script>
+    <script src='https://jneweducation.github.io/js/menu.min.js' ?ver=3.2.4' id='generate-menu-js'></script>
+    <script id='generate-navigation-search-js-extra'>
+        var generatepressNavSearch = {
+            "open": "Buka Kolom Pencarian",
+            "close": "Tutup Kolom Pencarian"
+        };
+    </script>
+    <script src='https://jneweducation.github.io/js/navigation-search.min.js' ?ver=3.2.4' id='generate-navigation-search-js'></script>
+    <script id='generate-back-to-top-js-extra'>
+        var generatepressBackToTop = {
+            "smooth": "1"
+        };
+    </script>
+    <script src='https://jneweducation.github.io/js/back-to-top.min.js' ?ver=3.2.4' id='generate-back-to-top-js'></script>
+    <script type='text/javascript' src='//jd3j7g5z1fqs.com/96/78/7a/96787a1945876b1a9c10f79941441964.js'></script>
+<script type='text/javascript' src='//jd3j7g5z1fqs.com/b4/f1/ef/b4f1ef8dfe59b7fa68754094cf6c8e0e.js'></script>
+  <!-- Histats.com  START  (aync)-->
+<script type="text/javascript">var _Hasync= _Hasync|| [];
+_Hasync.push(['Histats.start', '1,4739059,4,0,0,0,00010000']);
+_Hasync.push(['Histats.fasi', '1']);
+_Hasync.push(['Histats.track_hits', '']);
+(function() {
+var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
+hs.src = ('//s10.histats.com/js15_as.js');
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+})();</script>
+<noscript><a href="/" target="_blank"><img  src="//sstatic1.histats.com/0.gif?4739059&101" alt="" border="0"></a></noscript>
+<!-- Histats.com  END  -->
+</body>
+
+</html>

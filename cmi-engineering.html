@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<html lang="id" prefix="og: https://ogp.me/ns#">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="profile" href="https://gmpg.org/xfn/11">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cmi Engineering - QnA</title>
+    <meta name="description" content="Cmi Engineering, CMI 2021 Summer Boot Camp, , , , Dustin Langidrik, 2021-06-24T23:22:10.000000Z, 20, Set-Based Concurrent Engineering in CMI Defence – Lean Analytics, lean-analytics.org, 899 x 643, png, , 20, cmi-engineering, QnA" />
+    <meta name="robots" content="index,follow" />
+    <meta property="og:locale" content="id_ID" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Cmi Engineering - QnA" />
+    <meta property="og:description" content="Cmi Engineering, CMI 2021 Summer Boot Camp, , , , Dustin Langidrik, 2021-06-24T23:22:10.000000Z, 20, Set-Based Concurrent Engineering in CMI Defence – Lean Analytics, lean-analytics.org, 899 x 643, png, , 20, cmi-engineering, QnA" />
+    <meta property="og:site_name" content="QnA" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Cmi Engineering - QnA" />
+    <meta name="twitter:description" content="Cmi Engineering, CMI 2021 Summer Boot Camp, , , , Dustin Langidrik, 2021-06-24T23:22:10.000000Z, 20, Set-Based Concurrent Engineering in CMI Defence – Lean Analytics, lean-analytics.org, 899 x 643, png, , 20, cmi-engineering, QnA" />
+    <link rel='stylesheet' id='generate-style-css' href='https://jneweducation.github.io/css/main.min.css'?ver=3.2.4'
+        media='all' />
+    <link rel='stylesheet' id='ez-toc-css' href='https://jneweducation.github.io/css/screen.min.css'?ver=2.0.40' media='all' />
+    <style id='generate-style-inline-css'>
+        body {
+            background-color: #f7f7f7;
+            color: #222222;
+        }
+
+        a {
+            color: #1e73be;
+        }
+
+        a:hover,
+        a:focus,
+        a:active {
+            color: #000000;
+        }
+
+        .wp-block-group__inner-container {
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .generate-back-to-top {
+            font-size: 20px;
+            border-radius: 3px;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            line-height: 40px;
+            width: 40px;
+            text-align: center;
+            z-index: 10;
+            transition: opacity 300ms ease-in-out;
+            opacity: 0.1;
+            transform: translateY(1000px);
+        }
+
+        .generate-back-to-top__show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .navigation-search {
+            position: absolute;
+            left: -99999px;
+            pointer-events: none;
+            visibility: hidden;
+            z-index: 20;
+            width: 100%;
+            top: 0;
+            transition: opacity 100ms ease-in-out;
+            opacity: 0;
+        }
+
+        .navigation-search.nav-search-active {
+            left: 0;
+            right: 0;
+            pointer-events: auto;
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .navigation-search input[type="search"] {
+            outline: 0;
+            border: 0;
+            vertical-align: bottom;
+            line-height: 1;
+            opacity: 0.9;
+            width: 100%;
+            z-index: 20;
+            border-radius: 0;
+            -webkit-appearance: none;
+            height: 60px;
+        }
+
+        .navigation-search input::-ms-clear {
+            display: none;
+            width: 0;
+            height: 0;
+        }
+
+        .navigation-search input::-ms-reveal {
+            display: none;
+            width: 0;
+            height: 0;
+        }
+
+        .navigation-search input::-webkit-search-decoration,
+        .navigation-search input::-webkit-search-cancel-button,
+        .navigation-search input::-webkit-search-results-button,
+        .navigation-search input::-webkit-search-results-decoration {
+            display: none;
+        }
+
+        .gen-sidebar-nav .navigation-search {
+            top: auto;
+            bottom: 0;
+        }
+
+        :root {
+            --contrast: #222222;
+            --contrast-2: #575760;
+            --contrast-3: #b2b2be;
+            --base: #f0f0f0;
+            --base-2: #f7f8f9;
+            --base-3: #ffffff;
+            --accent: #1e73be;
+        }
+
+        .has-contrast-color {
+            color: var(--contrast);
+        }
+
+        .has-contrast-background-color {
+            background-color: var(--contrast);
+        }
+
+        .has-contrast-2-color {
+            color: var(--contrast-2);
+        }
+
+        .has-contrast-2-background-color {
+            background-color: var(--contrast-2);
+        }
+
+        .has-contrast-3-color {
+            color: var(--contrast-3);
+        }
+
+        .has-contrast-3-background-color {
+            background-color: var(--contrast-3);
+        }
+
+        .has-base-color {
+            color: var(--base);
+        }
+
+        .has-base-background-color {
+            background-color: var(--base);
+        }
+
+        .has-base-2-color {
+            color: var(--base-2);
+        }
+
+        .has-base-2-background-color {
+            background-color: var(--base-2);
+        }
+
+        .has-base-3-color {
+            color: var(--base-3);
+        }
+
+        .has-base-3-background-color {
+            background-color: var(--base-3);
+        }
+
+        .has-accent-color {
+            color: var(--accent);
+        }
+
+        .has-accent-background-color {
+            background-color: var(--accent);
+        }
+
+        body,
+        button,
+        input,
+        select,
+        textarea {
+            font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        }
+
+        body {
+            line-height: 1.5;
+        }
+
+        .entry-content>[class*="wp-block-"]:not(:last-child) {
+            margin-bottom: 1.5em;
+        }
+
+        .main-navigation .main-nav ul ul li a {
+            font-size: 14px;
+        }
+
+        .sidebar .widget,
+        .footer-widgets .widget {
+            font-size: 17px;
+        }
+
+        @media (max-width:768px) {
+            h1 {
+                font-size: 31px;
+            }
+
+            h2 {
+                font-size: 27px;
+            }
+
+            h3 {
+                font-size: 24px;
+            }
+
+            h4 {
+                font-size: 22px;
+            }
+
+            h5 {
+                font-size: 19px;
+            }
+        }
+
+        .top-bar {
+            background-color: #636363;
+            color: #ffffff;
+        }
+
+        .top-bar a {
+            color: #ffffff;
+        }
+
+        .top-bar a:hover {
+            color: #303030;
+        }
+
+        .site-header {
+            background-color: #ffffff;
+        }
+
+        .main-title a,
+        .main-title a:hover {
+            color: #222222;
+        }
+
+        .site-description {
+            color: #757575;
+        }
+
+        .main-navigation,
+        .main-navigation ul ul {
+            background-color: #ed4250;
+        }
+
+        .main-navigation .main-nav ul li a,
+        .main-navigation .menu-toggle,
+        .main-navigation .menu-bar-items {
+            color: #ffffff;
+        }
+
+        .main-navigation .main-nav ul li:not([class*="current-menu-"]):hover>a,
+        .main-navigation .main-nav ul li:not([class*="current-menu-"]):focus>a,
+        .main-navigation .main-nav ul li.sfHover:not([class*="current-menu-"])>a,
+        .main-navigation .menu-bar-item:hover>a,
+        .main-navigation .menu-bar-item.sfHover>a {
+            color: #ffffff;
+            background-color: #c42f2f;
+        }
+
+        button.menu-toggle:hover,
+        button.menu-toggle:focus {
+            color: #ffffff;
+        }
+
+        .main-navigation .main-nav ul li[class*="current-menu-"]>a {
+            color: #ffffff;
+            background-color: #c42f2f;
+        }
+
+        .navigation-search input[type="search"],
+        .navigation-search input[type="search"]:active,
+        .navigation-search input[type="search"]:focus,
+        .main-navigation .main-nav ul li.search-item.active>a,
+        .main-navigation .menu-bar-items .search-item.active>a {
+            color: #ffffff;
+            background-color: #c42f2f;
+        }
+
+        .main-navigation ul ul {
+            background-color: #c42f2f;
+        }
+
+        .main-navigation .main-nav ul ul li a {
+            color: #ffffff;
+        }
+
+        .main-navigation .main-nav ul ul li:not([class*="current-menu-"]):hover>a,
+        .main-navigation .main-nav ul ul li:not([class*="current-menu-"]):focus>a,
+        .main-navigation .main-nav ul ul li.sfHover:not([class*="current-menu-"])>a {
+            color: #fcd9d6;
+            background-color: #c42f2f;
+        }
+
+        .main-navigation .main-nav ul ul li[class*="current-menu-"]>a {
+            color: #fcd9d6;
+            background-color: #c42f2f;
+        }
+
+        .separate-containers .inside-article,
+        .separate-containers .comments-area,
+        .separate-containers .page-header,
+        .one-container .container,
+        .separate-containers .paging-navigation,
+        .inside-page-header {
+            background-color: #ffffff;
+        }
+
+        .entry-title a {
+            color: #222222;
+        }
+
+        .entry-title a:hover {
+            color: #55555e;
+        }
+
+        .entry-meta {
+            color: #595959;
+        }
+
+        .sidebar .widget {
+            background-color: #ffffff;
+        }
+
+        .footer-widgets {
+            background-color: #ffffff;
+        }
+
+        .footer-widgets .widget-title {
+            color: #000000;
+        }
+
+        .site-info {
+            color: #ffffff;
+            background-color: #55555e;
+        }
+
+        .site-info a {
+            color: #ffffff;
+        }
+
+        .site-info a:hover {
+            color: #d3d3d3;
+        }
+
+        .footer-bar .widget_nav_menu .current-menu-item a {
+            color: #d3d3d3;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="url"],
+        input[type="password"],
+        input[type="search"],
+        input[type="tel"],
+        input[type="number"],
+        textarea,
+        select {
+            color: #666666;
+            background-color: #fafafa;
+            border-color: #cccccc;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="url"]:focus,
+        input[type="password"]:focus,
+        input[type="search"]:focus,
+        input[type="tel"]:focus,
+        input[type="number"]:focus,
+        textarea:focus,
+        select:focus {
+            color: #666666;
+            background-color: #ffffff;
+            border-color: #bfbfbf;
+        }
+
+        button,
+        html input[type="button"],
+        input[type="reset"],
+        input[type="submit"],
+        a.button,
+        a.wp-block-button__link:not(.has-background) {
+            color: #ffffff;
+            background-color: #55555e;
+        }
+
+        button:hover,
+        html input[type="button"]:hover,
+        input[type="reset"]:hover,
+        input[type="submit"]:hover,
+        a.button:hover,
+        button:focus,
+        html input[type="button"]:focus,
+        input[type="reset"]:focus,
+        input[type="submit"]:focus,
+        a.button:focus,
+        a.wp-block-button__link:not(.has-background):active,
+        a.wp-block-button__link:not(.has-background):focus,
+        a.wp-block-button__link:not(.has-background):hover {
+            color: #ffffff;
+            background-color: #3f4047;
+        }
+
+        a.generate-back-to-top {
+            background-color: rgba(0, 0, 0, 0.4);
+            color: #ffffff;
+        }
+
+        a.generate-back-to-top:hover,
+        a.generate-back-to-top:focus {
+            background-color: rgba(0, 0, 0, 0.6);
+            color: #ffffff;
+        }
+
+        @media (max-width:768px) {
+
+            .main-navigation .menu-bar-item:hover>a,
+            .main-navigation .menu-bar-item.sfHover>a {
+                background: none;
+                color: #ffffff;
+            }
+        }
+
+        .nav-below-header .main-navigation .inside-navigation.grid-container,
+        .nav-above-header .main-navigation .inside-navigation.grid-container {
+            padding: 0px 20px 0px 20px;
+        }
+
+        .site-main .wp-block-group__inner-container {
+            padding: 40px;
+        }
+
+        .separate-containers .paging-navigation {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .entry-content .alignwide,
+        body:not(.no-sidebar) .entry-content .alignfull {
+            margin-left: -40px;
+            width: calc(100% + 80px);
+            max-width: calc(100% + 80px);
+        }
+
+        .rtl .menu-item-has-children .dropdown-menu-toggle {
+            padding-left: 20px;
+        }
+
+        .rtl .main-navigation .main-nav ul li.menu-item-has-children>a {
+            padding-right: 20px;
+        }
+
+        @media (max-width:768px) {
+
+            .separate-containers .inside-article,
+            .separate-containers .comments-area,
+            .separate-containers .page-header,
+            .separate-containers .paging-navigation,
+            .one-container .site-content,
+            .inside-page-header {
+                padding: 30px;
+            }
+
+            .site-main .wp-block-group__inner-container {
+                padding: 30px;
+            }
+
+            .inside-top-bar {
+                padding-right: 30px;
+                padding-left: 30px;
+            }
+
+            .inside-header {
+                padding-right: 30px;
+                padding-left: 30px;
+            }
+
+            .widget-area .widget {
+                padding-top: 30px;
+                padding-right: 30px;
+                padding-bottom: 30px;
+                padding-left: 30px;
+            }
+
+            .footer-widgets-container {
+                padding-top: 30px;
+                padding-right: 30px;
+                padding-bottom: 30px;
+                padding-left: 30px;
+            }
+
+            .inside-site-info {
+                padding-right: 30px;
+                padding-left: 30px;
+            }
+
+            .entry-content .alignwide,
+            body:not(.no-sidebar) .entry-content .alignfull {
+                margin-left: -30px;
+                width: calc(100% + 60px);
+                max-width: calc(100% + 60px);
+            }
+
+            .one-container .site-main .paging-navigation {
+                margin-bottom: 20px;
+            }
+        }
+
+        /* End cached CSS */
+        .is-right-sidebar {
+            width: 30%;
+        }
+
+        .is-left-sidebar {
+            width: 30%;
+        }
+
+        .site-content .content-area {
+            width: 70%;
+        }
+
+        @media (max-width:768px) {
+
+            .main-navigation .menu-toggle,
+            .sidebar-nav-mobile:not(#sticky-placeholder) {
+                display: block;
+            }
+
+            .main-navigation ul,
+            .gen-sidebar-nav,
+            .main-navigation:not(.slideout-navigation):not(.toggled) .main-nav>ul,
+            .has-inline-mobile-toggle #site-navigation .inside-navigation>*:not(.navigation-search):not(.main-nav) {
+                display: none;
+            }
+
+            .nav-align-right .inside-navigation,
+            .nav-align-center .inside-navigation {
+                justify-content: space-between;
+            }
+        }
+    </style>
+    <link rel="icon" href="https://jneweducation.github.io/img/cropped-soalbelajar-32x32.png" sizes="32x32" />
+    <link rel="icon" href="https://jneweducation.github.io/img/cropped-soalbelajar-192x192.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="https://jneweducation.github.io/img/cropped-soalbelajar-180x180.png" />
+    <meta name="msapplication-TileImage" content="https://jneweducation.github.io/img/cropped-soalbelajar-270x270.png" />
+</head>
+
+<body
+    class="home blog wp-custom-logo wp-embed-responsive right-sidebar nav-above-header separate-containers nav-search-enabled nav-aligned-center header-aligned-center dropdown-hover"
+    itemtype="https://schema.org/Blog" itemscope>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-dark-grayscale">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 0.49803921568627" />
+                    <feFuncG type="table" tableValues="0 0.49803921568627" />
+                    <feFuncB type="table" tableValues="0 0.49803921568627" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-grayscale">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 1" />
+                    <feFuncG type="table" tableValues="0 1" />
+                    <feFuncB type="table" tableValues="0 1" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-purple-yellow">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.54901960784314 0.98823529411765" />
+                    <feFuncG type="table" tableValues="0 1" />
+                    <feFuncB type="table" tableValues="0.71764705882353 0.25490196078431" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-blue-red">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 1" />
+                    <feFuncG type="table" tableValues="0 0.27843137254902" />
+                    <feFuncB type="table" tableValues="0.5921568627451 0.27843137254902" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-midnight">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 0" />
+                    <feFuncG type="table" tableValues="0 0.64705882352941" />
+                    <feFuncB type="table" tableValues="0 1" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-magenta-yellow">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.78039215686275 1" />
+                    <feFuncG type="table" tableValues="0 0.94901960784314" />
+                    <feFuncB type="table" tableValues="0.35294117647059 0.47058823529412" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-purple-green">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.65098039215686 0.40392156862745" />
+                    <feFuncG type="table" tableValues="0 1" />
+                    <feFuncB type="table" tableValues="0.44705882352941 0.4" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-blue-orange">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.098039215686275 1" />
+                    <feFuncG type="table" tableValues="0 0.66274509803922" />
+                    <feFuncB type="table" tableValues="0.84705882352941 0.41960784313725" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><a class="screen-reader-text skip-link" href="#content" title="Langsung ke isi">Langsung ke isi</a>
+    <nav class="main-navigation nav-align-center has-menu-bar-items sub-menu-right" id="site-navigation"
+        aria-label="Utama" itemtype="https://schema.org/SiteNavigationElement" itemscope>
+        <div class="inside-navigation grid-container">
+            <form method="get" class="search-form navigation-search" action="/">
+                <input type="search" class="search-field" value="" name="q" title="Cari" />
+            </form> <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+                <span class="gp-icon icon-menu-bars"><svg viewBox="0 0 512 512" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" width="1em" height="1em">
+                        <path
+                            d="M0 96c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24zm0 160c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24zm0 160c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24z" />
+                    </svg><svg viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                        width="1em" height="1em">
+                        <path
+                            d="M71.029 71.029c9.373-9.372 24.569-9.372 33.942 0L256 222.059l151.029-151.03c9.373-9.372 24.569-9.372 33.942 0 9.372 9.373 9.372 24.569 0 33.942L289.941 256l151.03 151.029c9.372 9.373 9.372 24.569 0 33.942-9.373 9.372-24.569 9.372-33.942 0L256 289.941l-151.029 151.03c-9.373 9.372-24.569 9.372-33.942 0-9.372-9.373-9.372-24.569 0-33.942L222.059 256 71.029 104.971c-9.372-9.373-9.372-24.569 0-33.942z" />
+                    </svg></span><span class="mobile-menu">Menu</span> </button>
+            <div id="primary-menu" class="main-nav">
+                <ul id="menu-soal-belajar" class=" menu sf-menu">
+                    <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1"><a
+                            href="https://jneweducation.github.io">Home</a></li>
+                </ul>
+                </ul>
+            </div>
+            <div class="menu-bar-items"><span class="menu-bar-item search-item"><a aria-label="Buka Kolom Pencarian"
+                        href="#"><span class="gp-icon icon-search"><svg viewBox="0 0 512 512"
+                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M208 48c-88.366 0-160 71.634-160 160s71.634 160 160 160 160-71.634 160-160S296.366 48 208 48zM0 208C0 93.125 93.125 0 208 0s208 93.125 208 208c0 48.741-16.765 93.566-44.843 129.024l133.826 134.018c9.366 9.379 9.355 24.575-.025 33.941-9.379 9.366-24.575 9.355-33.941-.025L337.238 370.987C301.747 399.167 256.839 416 208 416 93.125 416 0 322.875 0 208z" />
+                            </svg><svg viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                width="1em" height="1em">
+                                <path
+                                    d="M71.029 71.029c9.373-9.372 24.569-9.372 33.942 0L256 222.059l151.029-151.03c9.373-9.372 24.569-9.372 33.942 0 9.372 9.373 9.372 24.569 0 33.942L289.941 256l151.03 151.029c9.372 9.373 9.372 24.569 0 33.942-9.373 9.372-24.569 9.372-33.942 0L256 289.941l-151.029 151.03c-9.373 9.372-24.569 9.372-33.942 0-9.372-9.373-9.372-24.569 0-33.942L222.059 256 71.029 104.971c-9.372-9.373-9.372-24.569 0-33.942z" />
+                            </svg></span></a></span></div>
+        </div>
+    </nav>
+    <header class="site-header grid-container" id="masthead" aria-label="Situs"
+        itemtype="https://schema.org/WPHeader" itemscope>
+        <div class="inside-header grid-container">
+            <h1 class="site-logo">
+                <a href="https://jneweducation.github.io" rel="home"> QnA</a>
+            </h1>
+        </div>
+    </header>
+
+    <div class="site grid-container container hfeed" id="page">
+        <div class="site-content" id="content">
+            <div class="content-area" id="primary">
+                    <main class="site-main" id="main">
+        <article id="post-1327" class="post-1327 post type-post status-publish format-standard hentry category-info"
+            itemtype="https://schema.org/CreativeWork" itemscope="">
+            <div class="inside-article">
+                <header class="entry-header" aria-label="Konten">
+                    <h1 class="entry-title" itemprop="headline">Cmi Engineering</h1>
+                    <div class="entry-meta">
+                       <span
+                            class="byline">oleh <span class="author vcard" itemprop="author"
+                                itemtype="https://schema.org/Person" itemscope=""><span class="author-name"
+                                    itemprop="name">joever2521</span></span></span>
+                    </div>
+                </header>
+                <div class="entry-content" itemprop="text">
+                    <div style="text-align: center">
+                        <img src="https://tse1.mm.bing.net/th?q=Cmi+Engineering" alt="Cmi Engineering">
+                    </div>
+                    <p></p>
+                    <p>The side lengths of one rectangle are 6 cm and 12 cmi. The longer side of the second rectangle is 32 in. What is the length of the shorter side in the second rectangle?</p>
+                    <div id="ez-toc-container"
+                        class="ez-toc-v2_0_40 counter-hierarchy ez-toc-counter ez-toc-light-blue ez-toc-container-direction">
+                        <div class="ez-toc-title-container">
+                            <p class="ez-toc-title">Daftar Isi</p>
+                            <span class="ez-toc-title-toggle"><a href="#"
+                                    class="ez-toc-pull-right ez-toc-btn ez-toc-btn-xs ez-toc-btn-default ez-toc-toggle"
+                                    area-label="ez-toc-toggle-icon-1"><label for="item-63b392361c4a0"
+                                        aria-label="Table of Content"><span
+                                            style="display: flex;align-items: center;width: 35px;height: 30px;justify-content: center;direction:ltr;"><svg
+                                                style="fill: #999;color:#999" xmlns="http://www.w3.org/2000/svg"
+                                                class="list-377408" width="20px" height="20px" viewBox="0 0 24 24"
+                                                fill="none">
+                                                <path
+                                                    d="M6 6H4v2h2V6zm14 0H8v2h12V6zM4 11h2v2H4v-2zm16 0H8v2h12v-2zM4 16h2v2H4v-2zm16 0H8v2h12v-2z"
+                                                    fill="currentColor"></path>
+                                            </svg><svg style="fill: #999;color:#999" class="arrow-unsorted-368013"
+                                                xmlns="http://www.w3.org/2000/svg" width="10px" height="10px"
+                                                viewBox="0 0 24 24" version="1.2" baseProfile="tiny">
+                                                <path
+                                                    d="M18.2 9.3l-6.2-6.3-6.2 6.3c-.2.2-.3.4-.3.7s.1.5.3.7c.2.2.4.3.7.3h11c.3 0 .5-.1.7-.3.2-.2.3-.5.3-.7s-.1-.5-.3-.7zM5.8 14.7l6.2 6.3 6.2-6.3c.2-.2.3-.5.3-.7s-.1-.5-.3-.7c-.2-.2-.4-.3-.7-.3h-11c-.3 0-.5.1-.7.3-.2.2-.3.5-.3.7s.1.5.3.7z">
+                                                </path>
+                                            </svg></span></label><input type="checkbox" id="item-63b392361c4a0"></a></span>
+                        </div>
+                        <nav>
+                            <ul class="ez-toc-list ez-toc-list-level-1 ">
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#the-side-lengths-of-one-rectangle-are-6-cm-and-12-cmi-the-longer-side-of-the-second-rectangle-is-32-in-what-is-the-length-of-the-shorter-side-in-the-second-rectangle">1.
+                                            The side lengths of one rectangle are 6 cm and 12 cmi. The longer side of the second rectangle is 32 in. What is the length of the shorter side in the second rectangle?</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#area-of-a-parallelogram-starter-complete-the-table-parallelogram-1-2345-base-b-4-m-8-cm-11-m-12-cm-9m-height-h-3-m-5-cmi-10-m-7-cm-11-m-area-a%e2%80%8b">2.
+                                            Area of a Parallelogram Starter Complete the table. Parallelogram 1 2345 Base (b) 4 m 8 cm 11 m 12 cm 9m Height (h)) 3 m 5 cmi 10 m 7 cm 11 m Area (A)​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#2-what-is-derived-from-the-mass-weiga-bmib-nbic-cmi-d-gpa3-which-of-the-following-statement-is-not-true-about-physicalfitnessa-it-enables-an-individual-to-enjoy-leisure-activitiesb-it-enables">3.
+                                            2. What is derived from the mass (weigA BMIB. NBIC. CMI D. GPA3. Which of the following statement is not true about Physicalfitness?A. It enables an individual to enjoy leisure activitiesB. It enables an individual to resist diseasesC. It enables an individual to respond to life threatening situations.D. It enables an individual to limit themselves on leisure activities.​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#gawain-sa-pagtatuto-bilang-2-cmi-society-organizations-mappingpanuto-punan-ang-talahondyan-so-iboba-sa-pomamogitan-ng-pagbibigay-ng-mga-hinihinging-datos-o-impormasyonanong-uri-ito-ng-ngopomga-civi">4.
+                                            Gawain sa pagtatuto Bilang 2: CMI Society Organizations MappingPanuto: Punan ang talahondyan so iboba sa pomamogitan ng pagbibigay ng mga hinihinging datos o impormasyonAnong uri ito ng NGO/POMga civil society orgonzations namototagpuan sa inyong komunidadSektor na kanilang kinakatawan​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#directions-read-and-understand-each-item-answer-on-a-separate-sheet-of-paper-on-the-stan-below-is-a-musical-phrase-in-the-key-or-c-major-what-are-the-so-fa-syllables-1-na-section-wha-do-2-la-a-re-re">5.
+                                            Directions Read and understand each item answer on a separate sheet of paper on the stan? Below is a musical phrase in the key or C Major What are the so-fa: syllables 1 NA Section Wha Do 2 La A re-re-fa-so-do-la Cmi-mi-fa-la-la do B do-do-mi-no-do-ti D. ti ti do-so-do-la Key or C Major has no sharp and no flat sign on the stall What are the missing so-fa syllables on the scale in the Key of CP 2 1 s Fa A. fa-ti B. mi-80 e 30-ti D. la-ti 3. Where can we find lower do in the Key of C Major? A on the first line of the staff B. on the fifth line of the stall C. on the second space of the staff D on the first ledger linc below the staff Which group of notes in the Key of C Major shows re-fa-la-ti? A С. B. D 5. A new song maybe learned by reading and singing the so-syllables. What are the so-fa syllables of the following notes on the staff? &amp; C Cd d P P A. So-fa-so-mi hurry up pls ​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#gravity-is-squail-to-9-8-cmis2title-of-the-activity-at-rest-or-in-motiondirections-write-ke-if-the-if-the-statement-shows-kinetic-energy-and-pet-it-shows-potentaenergyke1-a-guava-falling-from-the">6.
+                                            gravity is squail to 9.8 cmis2Title of the Activity: AT REST OR IN MOTION?Directions: Write KE if the if the statement shows Kinetic Energy and PET it shows PotentaEnergyKE1. A guava falling from the tree6. A rock on a clinKE 2. A moving car in the highwayKEZ A swinging pendulum3. A cat jumped on the floor8. A book on the table4. A book on a shelf9. A stone dropped from above5. An accelerating bus on a curvePE 10. A stretch rubber bands​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#%d7%94%d7%95-4-the-musical-scale-below-is-c-major-what-note-is-on-the-second-line-d-fa-a-do-d-do-b-mi-cso-5-what-note-is-on-the-first-line-in-the-c-major-scalc-a-do-b-re-cmi-6-what-are-the-pit">7.
+                                            הו 4. The musical scale below is C Major what note is on the second line? D fa A do D. do B. mi Cso 5. What note is on the first line in the C major scalc? A do B. re Cmi 6. What are the pitch names in a musical scale? А. A,B,C,D,E,F,G O,P,Q,R,S,T,U B. H,1,J.K,L,M.N D M.N.V.W XY 7. What is the interval do and re in the C Major Scale? A half step B. whole step C. 1 12 step D. 2 whole steps 8. Which musical scale has only one sharp? A. C Major C. F Major B. G Major D. None of the above. 9. Where does the sharp of the G Major Scale located? A 1st line B. 3rd line C 4th line D. 5 line 10. Your teacher ask you to draw on the board the note mi in the G Major Scale. Where will you dra the staff A. ] st line B. 2nd line D. 4 in line C. 3rd line 11. You are identifying the home tone of G major. Your basis in locating it on the staff is A. 1. line C 3rd line B. 2nd line D. 4th line 12. Examine the musical piece and identify the musical scale. My Little Song N. Reyes MI FA SO SO SO I have a bit de song. RDX FA FA PA A. C Major B. G Major C F Major D. A Minor 13. How do you find do in F Major Scale? A. Sing do in key of C Major, then go to fa and sing it as do B. Sing do in key of G Major, then go to mi and sing it as do C. Sing do in key of F Major, then go to re and sing it as do. D. Sing do in key of A minor, then go to la and sing it as do 14. What song will you sing that is in the G Major scale? A My Little Song C. Atin Cu Pung Sngsing B. Heigh-Ho D. Pamulinawen 15. How do you find do in the G Major Scale? A. Sing do in key of C Major, then go to fa and sing it as do B. Sing do in key of C Major, then go to re and sing it as do C. Sing do in key of C Major, then go to miand sing it as do D. Sing do in key of C Major, then go to so and sing it as do​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#given-rhombus-vice-prove-vci-ie-m-%d1%81-proof-e-reasons-statements-1-given-1-rhombus-vice-2-definition-of-rhombus-2-jc-vi-tc-3-vm-mc-3-the-diagonals-of-a-parallelogram-bisect-each-other-4">8.
+                                            Given: Rhombus VICE Prove: VCI IE M с Proof: E Reasons Statements 1. Given 1. Rhombus VICE 2. Definition of Rhombus 2. JC VI TC 3. VM MC 3. The diagonals of a parallelogram bisect each other. 4. IM SIM 5. AVIM ACIM 4. Reflexive Property 5. SSS Congruence Postulate 6. CPCTC (Corresponding Parts of Triangles are =) 7. Definition of Linear Pair 6. LVMI LCMI 7. VMI and ZCMI form a linear pair 8. ZVMI and CMI are right angles 8. If two angles are both congruent and supplementary, then each angle is right. 9. Definition of Right Angle 9. VC ITE​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#maganda-6-sa-kasunod-na-awiting-bayan-ano-ang-ipinahayag-ng-diwang-nakapaloob-dittolalaking-matapang-lalaking-malakasikaw-siya-naming-tinatawagan-hoyhalika-halikat-tinatawag-ka-hoya-naga">9.
+                                            Maganda.6. Sa kasunod na awiting bayan, ano ang ipinahayag ng diwang nakapaloob ditto?"Lalaking matapang, lalaking malakasIkaw siya naming tinatawagan...Hoy!Halika, halika't tinatawag ka...Hoy!A. nagagalitC. naiinipB. naghahamonD. natutuwa7. Anong ponemang suprasegmental an gang tumutukoy sa pagtaas at pagbaba ng tikapag binibigkas?A. antala B. diin C. hinto D. intonasyon8. Ano ang damdaming ipinahayag ng kasunod na saknong?" Putak putakBatang duwag!Matapang ka't nasa pugad!A. nagagalitC. nanunudyoB. naiinisnatutuwauunted to a tractoprotection sufficiooret rayslowCmi​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#hanap-salita-maghanap-ng-salitang-maaaring-maiugnay-sa-asignaturang-sulating-tekrukal-bokasyunal-bigyan-ng-pakakahulugan-ang-bawat-salitang-iyong-mahahanap-isulat-sa-nakalaang-patlang-ang-iyong-sag">10.
+                                            Hanap Salita: Maghanap ng salitang maaaring maiugnay sa asignaturang sulating tekrukal-bokasyunal. Bigyan ng pakakahulugan ang bawat salitang iyong mahahanap. Isulat sa nakalaang patlang ang iyong sagot at paliwanag. P R O M O S Y O N A L L S ОТК 1 L B P M A Р С D K 1 L E M х E 1 D U J M G к L H O H Y 1 A SPIK A L CMI &lt;&lt; &gt; A M A P A G A т XQIZIO S Z XO SJIV Olow T L R S L E ​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#activity-3-recognize-me-read-the-following-paragraphe-lifted-from-maria-manlapigs-whats-to-blame-for-the-low-reading-comprehension-of-the-filipino-youth-cmi-philippines-april-21-2020-afterwar">11.
+                                            Activity 3: Recognize Me? Read the following paragraphe lifted from Maria Manlapig's What's to blame for the low reading comprehension of the Filipino youth? (CMI Philippines, April 21, 2020) Afterwards label each paragraph according to the parts of a persuasive writing. Choose from the options given below. INTRODUCTION CALL TO ACTION 1. "Our students do not know how to process the text," opined Frederick Perez, current president of the Reading Association of the Philippines. EVIDENCE 2. The dismal performance of the Philippines in the 2018 Program for International Student Assessment (PISA) sends the message that the country's educational system need to take reading instruction seriously, particularly in upskilling teachers and developing effective materials for reading instructions. 8. The FISA report also revealed that expenditure per student in the country it 90 percent lower than the global average, and this limited funding results in the absence of viable teaching materials. This hampers the ability of each student to learn and comprehend the materials presented. 4. The reading problem is a national issue, so there has to be an immediate evaluation of the curriculum. Also, the government must consider allocating more funds to the education sector to make possible the training of teachers. as well as the creation and evaluation of teaching and learning materials. 5. Moreover, the Department of Education should develop materials that would introduce the learners to expository texts which deal with information. Filipino learners performed poorly in the FISA because the test is mostly made up of expository texts and calls for the processing of information, and they are not prepared for it.​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#9-what-prefox-would-you-add-to-the-word-view-toindicate-that-you-see-something-before-other-peopledoa-reb-precmisd-dis10-which-of-these-words-cannot-be-made-into-anotherword-by-adding-the-prefix">12.
+                                            9. What prefox would you add to the word "view" toindicate that you see something before other peopledo?a.reb.precmisd.dis10. Which of these words cannot be made into anotherword by adding the prefix "suba.terestialb.wayc.marined.conscious11. What does the prefix do the word "cooked in thissentence? The pies were precookeda.It tells you that you need to cook thepiesb.It tells you the pies need cooking againc.It tells you the pies have already beencooked.d. It tells that the food is half cooked12.What does the prefix"dis" do to the word appearedin this sentence? The cat disappeared before her veryeyesa It tells you that the cat vanishedb. It tells you that the cat appearedbigger than beforeIt tells that it ex sted surprisinglyd. It tells you that the act appeared to befurther awayс13. What does the suffix "ing" mean?a.past teseb.action or processcfull ofd.runner14.If COMPOSE means to create, thenDECOMPOSE means toa. take apartb. rippenc.purifyd.ameliorate15.Hearing, technically known asbegins when a sound wave reaches the outera auditionb.audacityc.audio-visuald.autocracy​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#gawain-sa-pagkatuto-bilang-2-cmi-society-organizations-mappingpanuto-punan-ang-talahanayan-sa-baba-sa-pamamagitan-ng-pagbibigay-ng-mga-hinihinging-datos-o-impormasyonpamprosesong-mga-tanong1-ano-a">13.
+                                            Gawain sa Pagkatuto Bilang 2: CMI Society Organizations MappingPanuto: Punan ang talahanayan sa baba sa pamamagitan ng pagbibigay ng mga hinihinging datos o impormasyonPamprosesong mga Tanong:1. Ano-ano ang mga tungkulin ng mga civil society organizations na ito?2. Anong sektor sa inyong lipunan ang wolong representasyon sa mgo civil society organization?pa help naman po​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#music-v4-geading1-upang-higit-na-mapaganda-ang-pag-awit-ni-agla-sinabayan-siya-ng-tugtog-negarasi-ostanemomalarawan-ang-tekstura-ng-tunog-na-nariniga-armonya8-homoponyac-monoponyad-poligony2-a">14.
+                                            MUSIC V4" Geading*1. Upang higit na mapaganda ang pag-awit ni Agla sinabayan siya ng tugtog negarasi ostanemoMalarawan ang tekstura ng tunog na narinig?A Armonya8. HomoponyaC. MonoponyaD. Poligony2. Ang mga sumusunod ay tumutugon sa katangian ng "partner song. maliban sa salinioA Magkatulad ang patakumpasanC. Magkaiba ang tunugan ng dalawang wwB. Magkatulad ang bilang ng mga sukat D. Magluatulad ang akordeng bumubuo sa dalawangDround0.503. Ito ay tumutunog sa bilis o dalang ng daloy o galaw ng ritmo?A. armonyaB. dynamicsC. tempo4. Ano ang notang ugat ng akordeng sub dominant?A do8. faCmi5. Ang kalah halinang tunog na nalilikha sa ganda ng isang awitB melodiyaC. teksturaD. tempo​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#d-timbre1-the-element-of-music-which-refer-to-the-tune-of-the-songa-rhythmb-melodyc-form2-which-scale-is-in-the-f-major20c-a-bobobo%e0%a8%89%e0%a8%b8%e0%a8%a6%e0%a9%87d-b3-where-does-do-be-locate">15.
+                                            D. Timbre1. The element of music which refer to the tune of the songA RhythmB MelodyC Form2. Which scale is in the F major?20C.A.boboboਉਸਦੇD.B3. Where does DO be located in the key of F major?C. third spaceA First spaceD Fourth spaceB. Second spaceD. ti4. What is the first note of "Mangaso Tayo"?A. DoB, miC. So5. To what so-fa syllable of the key of C major can we found the "do” of the key of F major?A DoCmiD. faB. re6. How can we determine if the song is in the key of F major?A if it ends in "do"C. if it starts with "do"B. if it ends ia "la"D if it starts with "la"7. What is the so-fa syllable of this note in F Major?A. MiC. SoB. FaD. la​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#task-2-convert-the-following-remember-1-m2-10-000-cm00-cm2-m6-56-000-cm2-cmi7-65-m2-cm%c2%b2m28-450-000-cm2-000-cm-cmma9-23-m2-000-cm-10-240-000-cm2-cm%c2%b2n%c2%b2ring-word-problem-op">16.
+                                            Task 2: Convert the following. Remember: 1 m2 = 10 000 cm00 cm2 =m?6.56 000 cm2 =cmi7. 65 m2=.cm²m28. 450 000 cm2 =000 cm =cmma9.23 m2 =000 cm =10.240 000 cm2 =cm²n²ring word problem.opath of 6 cm6​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#hanapin-sa-loob-ng-puzzle-ang-mga-salitang-may-kaugnayan-sa-sekswalidad%d0%b0-a%d0%b0-allob%d1%80onr%d1%80k-%d0%bal1asswca-z-uswoulolzsk-l%d0%b0-ajr-yb1r-tu0-odo-1cmi-olumej1ttk-c-loldo-inuomt">17.
+                                            Hanapin sa loob ng puzzle ang mga salitang may kaugnayan sa sekswalidadА AА ALLOBРO&gt;NRРK кL1aSSWca Z uswoulolzSK.LА AJR.YB1R.TU0-ODO-1CMI OLUMEJ1TTK C-loldo Inuom&lt;TTUKRLmm Z100 mKАRLARHSLF1YwVBHА AK KBNLLА ALА A1​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#13-ang-awiting-salidommay-ang-pagitan-ay-mahigit-walo-ano-kaya-ang-range-nitoc-malawak-d-wala-sa-nabanggit14-paano-makilalala-ang-pinakamataas-at-pinakamababang-tono-sa-awitsa-pamamagitan-ng-bil">18.
+                                            13 Ang awiting "Salidommay ang pagitan ay mahigit walo. Ano kaya ang range nitoc. malawak D. wala sa nabanggit14. Paano makilalala ang pinakamataas at pinakamababang tono sa awit?sa pamamagitan ng bilang ng notaB. se pamamagitan ng renge sa pagitan ng nota,sa pamamagitan ng tunugang mavorD. sa pamamagitan ng dami ng ret.15. Ito ay binubuo ng 5 note do re mi sola na maaaring pataas o pababang tono. paulit. palaktaw.A Pentatonic Scalemaior scaleB. Con scaleDiwala sa nabanggit16 Ang a major scale ay nasa runugangBreay ang pagkakasunod sunod ng tono ng mga nata na maaring pataas o pababa.A Pentatonic ScaleC. major scalemaar scoleD. wala sa nabanggit18. Anong na ang nasa larawan?cmi3​</a>
+                                    </li>
+                                                            </ul>
+                        </nav>
+                    </div>
+                                            <h2 class="ez-toc-section" id="the-side-lengths-of-one-rectangle-are-6-cm-and-12-cmi-the-longer-side-of-the-second-rectangle-is-32-in-what-is-the-length-of-the-shorter-side-in-the-second-rectangle">
+                            1. The side lengths of one rectangle are 6 cm and 12 cmi. The longer side of the second rectangle is 32 in. What is the length of the shorter side in the second rectangle?</h2><br />
+                        <strong>The </strong><strong>length</strong><strong> </strong><strong>if </strong><strong>the </strong><strong>shorter</strong><strong> </strong><strong>side </strong><strong>in </strong><strong>the </strong><strong>second </strong><strong>rectangle</strong><strong> </strong><strong>is </strong><strong>1</strong><strong>6</strong><strong>.</strong><p></p><p></p><p></p><p><strong>why?</strong></p><p><strong>3</strong><strong>2</strong></p><p><strong>—</strong><strong>—</strong><strong> </strong><strong>=</strong><strong> </strong><strong>1</strong><strong>6</strong></p><p><strong>2</strong></p><p></p><p></p><p></p><p></p><p></p><strong>pa </strong><strong>Brainliests</strong><strong> </strong><strong>^</strong><strong>_</strong><strong>^</strong><p></p><p></p><p></p><p></p><p></p><p></p><p></p><strong>•</strong><strong>|</strong><strong>Mikasa</strong><p></p><p></p><br />
+                                            <h2 class="ez-toc-section" id="area-of-a-parallelogram-starter-complete-the-table-parallelogram-1-2345-base-b-4-m-8-cm-11-m-12-cm-9m-height-h-3-m-5-cmi-10-m-7-cm-11-m-area-a%e2%80%8b">
+                            2. Area of a Parallelogram Starter Complete the table. Parallelogram 1 2345 Base (b) 4 m 8 cm 11 m 12 cm 9m Height (h)) 3 m 5 cmi 10 m 7 cm 11 m Area (A)​</h2><br />
+                        <p><strong>Answer:</strong></p><p>To find the area of a parallelogram, you can use the formula:</p><p></p><p>A = b × h</p><p></p><p>where A is the area, b is the base, and h is the height of the parallelogram.</p><p></p><p>Using this formula, we can complete the table as follows:</p><p></p><p>Note that the units for the base, height, and area are consistent in each row of the table.</p><br />
+                                            <h2 class="ez-toc-section" id="2-what-is-derived-from-the-mass-weiga-bmib-nbic-cmi-d-gpa3-which-of-the-following-statement-is-not-true-about-physicalfitnessa-it-enables-an-individual-to-enjoy-leisure-activitiesb-it-enables">
+                            3. 2. What is derived from the mass (weigA BMIB. NBIC. CMI D. GPA3. Which of the following statement is not true about Physicalfitness?A. It enables an individual to enjoy leisure activitiesB. It enables an individual to resist diseasesC. It enables an individual to respond to life threatening situations.D. It enables an individual to limit themselves on leisure activities.​</h2><br />
+                        <p><strong>Answer:</strong></p><p>2. A. BMI</p><p>3. C. It enables an individual to respond to life threatening situations.</p><p><strong>Answer:</strong></p><p>2. A. Body Mass Index(BMI)</p><p>3. C. </p><p></p><br />
+                                            <h2 class="ez-toc-section" id="gawain-sa-pagtatuto-bilang-2-cmi-society-organizations-mappingpanuto-punan-ang-talahondyan-so-iboba-sa-pomamogitan-ng-pagbibigay-ng-mga-hinihinging-datos-o-impormasyonanong-uri-ito-ng-ngopomga-civi">
+                            4. Gawain sa pagtatuto Bilang 2: CMI Society Organizations MappingPanuto: Punan ang talahondyan so iboba sa pomamogitan ng pagbibigay ng mga hinihinging datos o impormasyonAnong uri ito ng NGO/POMga civil society orgonzations namototagpuan sa inyong komunidadSektor na kanilang kinakatawan​</h2><br />
+                        <p><strong>Answer:</strong></p><p>2</p><p><strong>Explanation:</strong></p><p>cmi society organizations mapping</p><p>punoto punan ang talahondyan so iboba sa pomamogitang  ng pagbibigay ng mga hinihinging datos o impormasyon</p><br />
+                                            <h2 class="ez-toc-section" id="directions-read-and-understand-each-item-answer-on-a-separate-sheet-of-paper-on-the-stan-below-is-a-musical-phrase-in-the-key-or-c-major-what-are-the-so-fa-syllables-1-na-section-wha-do-2-la-a-re-re">
+                            5. Directions Read and understand each item answer on a separate sheet of paper on the stan? Below is a musical phrase in the key or C Major What are the so-fa: syllables 1 NA Section Wha Do 2 La A re-re-fa-so-do-la Cmi-mi-fa-la-la do B do-do-mi-no-do-ti D. ti ti do-so-do-la Key or C Major has no sharp and no flat sign on the stall What are the missing so-fa syllables on the scale in the Key of CP 2 1 s Fa A. fa-ti B. mi-80 e 30-ti D. la-ti 3. Where can we find lower do in the Key of C Major? A on the first line of the staff B. on the fifth line of the stall C. on the second space of the staff D on the first ledger linc below the staff Which group of notes in the Key of C Major shows re-fa-la-ti? A С. B. D 5. A new song maybe learned by reading and singing the so-syllables. What are the so-fa syllables of the following notes on the staff? &amp; C Cd d P P A. So-fa-so-mi hurry up pls ​</h2><br />
+                        <p><strong>Answer:</strong></p><p>kabayo at kambing at ibon at kalapati at aso </p><br />
+                                            <h2 class="ez-toc-section" id="gravity-is-squail-to-9-8-cmis2title-of-the-activity-at-rest-or-in-motiondirections-write-ke-if-the-if-the-statement-shows-kinetic-energy-and-pet-it-shows-potentaenergyke1-a-guava-falling-from-the">
+                            6. gravity is squail to 9.8 cmis2Title of the Activity: AT REST OR IN MOTION?Directions: Write KE if the if the statement shows Kinetic Energy and PET it shows PotentaEnergyKE1. A guava falling from the tree6. A rock on a clinKE 2. A moving car in the highwayKEZ A swinging pendulum3. A cat jumped on the floor8. A book on the table4. A book on a shelf9. A stone dropped from above5. An accelerating bus on a curvePE 10. A stretch rubber bands​</h2><br />
+                        <p><strong>Answer:</strong></p><p>1. KE</p><p>6. PE</p><p>2. KE</p><p>7. KE</p><p>3. KE</p><p>8. PE</p><p>4. PE</p><p>9. KE</p><p>5. KE</p><p>10. PE</p><p></p><p></p><p>Bat hindi in order yung number pero ok lang ayan sana makatulong</p><br />
+                                            <h2 class="ez-toc-section" id="%d7%94%d7%95-4-the-musical-scale-below-is-c-major-what-note-is-on-the-second-line-d-fa-a-do-d-do-b-mi-cso-5-what-note-is-on-the-first-line-in-the-c-major-scalc-a-do-b-re-cmi-6-what-are-the-pit">
+                            7. הו 4. The musical scale below is C Major what note is on the second line? D fa A do D. do B. mi Cso 5. What note is on the first line in the C major scalc? A do B. re Cmi 6. What are the pitch names in a musical scale? А. A,B,C,D,E,F,G O,P,Q,R,S,T,U B. H,1,J.K,L,M.N D M.N.V.W XY 7. What is the interval do and re in the C Major Scale? A half step B. whole step C. 1 12 step D. 2 whole steps 8. Which musical scale has only one sharp? A. C Major C. F Major B. G Major D. None of the above. 9. Where does the sharp of the G Major Scale located? A 1st line B. 3rd line C 4th line D. 5 line 10. Your teacher ask you to draw on the board the note mi in the G Major Scale. Where will you dra the staff A. ] st line B. 2nd line D. 4 in line C. 3rd line 11. You are identifying the home tone of G major. Your basis in locating it on the staff is A. 1. line C 3rd line B. 2nd line D. 4th line 12. Examine the musical piece and identify the musical scale. My Little Song N. Reyes MI FA SO SO SO I have a bit de song. RDX FA FA PA A. C Major B. G Major C F Major D. A Minor 13. How do you find do in F Major Scale? A. Sing do in key of C Major, then go to fa and sing it as do B. Sing do in key of G Major, then go to mi and sing it as do C. Sing do in key of F Major, then go to re and sing it as do. D. Sing do in key of A minor, then go to la and sing it as do 14. What song will you sing that is in the G Major scale? A My Little Song C. Atin Cu Pung Sngsing B. Heigh-Ho D. Pamulinawen 15. How do you find do in the G Major Scale? A. Sing do in key of C Major, then go to fa and sing it as do B. Sing do in key of C Major, then go to re and sing it as do C. Sing do in key of C Major, then go to miand sing it as do D. Sing do in key of C Major, then go to so and sing it as do​</h2><br />
+                        <p><strong>Answer:</strong></p><p>13. How do you find do in F Major Scale? A. Sing do in key of C Major, then go to fa and sing it as do</p><p></p><p>B. Sing do in key of G Major, then go to mi and sing it as do</p><p></p><p>C. Sing do in key of F Major, then go to re and sing it as do.</p><p></p><p>D. Sing do in key of A minor, then go to la and sing it as do.</p><br />
+                                            <h2 class="ez-toc-section" id="given-rhombus-vice-prove-vci-ie-m-%d1%81-proof-e-reasons-statements-1-given-1-rhombus-vice-2-definition-of-rhombus-2-jc-vi-tc-3-vm-mc-3-the-diagonals-of-a-parallelogram-bisect-each-other-4">
+                            8. Given: Rhombus VICE Prove: VCI IE M с Proof: E Reasons Statements 1. Given 1. Rhombus VICE 2. Definition of Rhombus 2. JC VI TC 3. VM MC 3. The diagonals of a parallelogram bisect each other. 4. IM SIM 5. AVIM ACIM 4. Reflexive Property 5. SSS Congruence Postulate 6. CPCTC (Corresponding Parts of Triangles are =) 7. Definition of Linear Pair 6. LVMI LCMI 7. VMI and ZCMI form a linear pair 8. ZVMI and CMI are right angles 8. If two angles are both congruent and supplementary, then each angle is right. 9. Definition of Right Angle 9. VC ITE​</h2><br />
+                        <p>ZCMI is called Rhombus and SSS is called Side Side Side thank that is correct for my research</p><br />
+                                            <h2 class="ez-toc-section" id="maganda-6-sa-kasunod-na-awiting-bayan-ano-ang-ipinahayag-ng-diwang-nakapaloob-dittolalaking-matapang-lalaking-malakasikaw-siya-naming-tinatawagan-hoyhalika-halikat-tinatawag-ka-hoya-naga">
+                            9. Maganda.6. Sa kasunod na awiting bayan, ano ang ipinahayag ng diwang nakapaloob ditto?"Lalaking matapang, lalaking malakasIkaw siya naming tinatawagan...Hoy!Halika, halika't tinatawag ka...Hoy!A. nagagalitC. naiinipB. naghahamonD. natutuwa7. Anong ponemang suprasegmental an gang tumutukoy sa pagtaas at pagbaba ng tikapag binibigkas?A. antala B. diin C. hinto D. intonasyon8. Ano ang damdaming ipinahayag ng kasunod na saknong?" Putak putakBatang duwag!Matapang ka't nasa pugad!A. nagagalitC. nanunudyoB. naiinisnatutuwauunted to a tractoprotection sufficiooret rayslowCmi​</h2><br />
+                        <p><strong>Answer:</strong></p><p>6.A</p><p>7.C</p><p>8.B</p><p><strong>Explanation:</strong></p><p>yan ang answer ko </p><br />
+                                            <h2 class="ez-toc-section" id="hanap-salita-maghanap-ng-salitang-maaaring-maiugnay-sa-asignaturang-sulating-tekrukal-bokasyunal-bigyan-ng-pakakahulugan-ang-bawat-salitang-iyong-mahahanap-isulat-sa-nakalaang-patlang-ang-iyong-sag">
+                            10. Hanap Salita: Maghanap ng salitang maaaring maiugnay sa asignaturang sulating tekrukal-bokasyunal. Bigyan ng pakakahulugan ang bawat salitang iyong mahahanap. Isulat sa nakalaang patlang ang iyong sagot at paliwanag. P R O M O S Y O N A L L S ОТК 1 L B P M A Р С D K 1 L E M х E 1 D U J M G к L H O H Y 1 A SPIK A L CMI &lt;&lt; &gt; A M A P A G A т XQIZIO S Z XO SJIV Olow T L R S L E ​</h2><br />
+                        <p><strong>Answer:</strong></p><p>1.promosyonal-pagtaas ng posisyon sa trabaho</p><p>2.produkto-isang bagay na ginagawa para maibenta</p><p>3.profile-ito ay naglalaman ng Datos ng isang tauhan</p><p>4.tagapamahala-isang tao na siyang nangangasiwa sa isang kompanya.</p><p>5.editor-isang akda na naglalaman ng opinion tungkol sa isang isyu..</p><br />
+                                            <h2 class="ez-toc-section" id="activity-3-recognize-me-read-the-following-paragraphe-lifted-from-maria-manlapigs-whats-to-blame-for-the-low-reading-comprehension-of-the-filipino-youth-cmi-philippines-april-21-2020-afterwar">
+                            11. Activity 3: Recognize Me? Read the following paragraphe lifted from Maria Manlapig's What's to blame for the low reading comprehension of the Filipino youth? (CMI Philippines, April 21, 2020) Afterwards label each paragraph according to the parts of a persuasive writing. Choose from the options given below. INTRODUCTION CALL TO ACTION 1. "Our students do not know how to process the text," opined Frederick Perez, current president of the Reading Association of the Philippines. EVIDENCE 2. The dismal performance of the Philippines in the 2018 Program for International Student Assessment (PISA) sends the message that the country's educational system need to take reading instruction seriously, particularly in upskilling teachers and developing effective materials for reading instructions. 8. The FISA report also revealed that expenditure per student in the country it 90 percent lower than the global average, and this limited funding results in the absence of viable teaching materials. This hampers the ability of each student to learn and comprehend the materials presented. 4. The reading problem is a national issue, so there has to be an immediate evaluation of the curriculum. Also, the government must consider allocating more funds to the education sector to make possible the training of teachers. as well as the creation and evaluation of teaching and learning materials. 5. Moreover, the Department of Education should develop materials that would introduce the learners to expository texts which deal with information. Filipino learners performed poorly in the FISA because the test is mostly made up of expository texts and calls for the processing of information, and they are not prepared for it.​</h2><br />
+                        <p><strong>Answer:</strong></p><p>1. INTRODUCTION</p><p>2. EVIDENCE</p><p>3. EVIDENCE</p><p>4. CALL TO ACTION</p><p>5. EVIDENCE</p><br />
+                                            <h2 class="ez-toc-section" id="9-what-prefox-would-you-add-to-the-word-view-toindicate-that-you-see-something-before-other-peopledoa-reb-precmisd-dis10-which-of-these-words-cannot-be-made-into-anotherword-by-adding-the-prefix">
+                            12. 9. What prefox would you add to the word "view" toindicate that you see something before other peopledo?a.reb.precmisd.dis10. Which of these words cannot be made into anotherword by adding the prefix "suba.terestialb.wayc.marined.conscious11. What does the prefix do the word "cooked in thissentence? The pies were precookeda.It tells you that you need to cook thepiesb.It tells you the pies need cooking againc.It tells you the pies have already beencooked.d. It tells that the food is half cooked12.What does the prefix"dis" do to the word appearedin this sentence? The cat disappeared before her veryeyesa It tells you that the cat vanishedb. It tells you that the cat appearedbigger than beforeIt tells that it ex sted surprisinglyd. It tells you that the act appeared to befurther awayс13. What does the suffix "ing" mean?a.past teseb.action or processcfull ofd.runner14.If COMPOSE means to create, thenDECOMPOSE means toa. take apartb. rippenc.purifyd.ameliorate15.Hearing, technically known asbegins when a sound wave reaches the outera auditionb.audacityc.audio-visuald.autocracy​</h2><br />
+                        <p><strong>Answer:</strong></p><p><strong>9) b. pre</strong></p><p><strong>10) a. terrestrial?</strong></p><p><strong>11) c. It tells you the pies have already been  cooked.</strong></p><p><strong>12) a. It tells you that the cat vanished.</strong></p><p><strong>13) b. action or process</strong></p><p><strong>14) a. take apart</strong></p><p><strong>15) a. audition</strong></p><p>paayos po ng format ng tanong next time mej magulo ...</p><br />
+                                            <h2 class="ez-toc-section" id="gawain-sa-pagkatuto-bilang-2-cmi-society-organizations-mappingpanuto-punan-ang-talahanayan-sa-baba-sa-pamamagitan-ng-pagbibigay-ng-mga-hinihinging-datos-o-impormasyonpamprosesong-mga-tanong1-ano-a">
+                            13. Gawain sa Pagkatuto Bilang 2: CMI Society Organizations MappingPanuto: Punan ang talahanayan sa baba sa pamamagitan ng pagbibigay ng mga hinihinging datos o impormasyonPamprosesong mga Tanong:1. Ano-ano ang mga tungkulin ng mga civil society organizations na ito?2. Anong sektor sa inyong lipunan ang wolong representasyon sa mgo civil society organization?pa help naman po​</h2><br />
+                        <p> </p><p>1</p><p> </p><p>ano ano ang mga tungkulin ng mga civil socity organization na ito</p><br />
+                                            <h2 class="ez-toc-section" id="music-v4-geading1-upang-higit-na-mapaganda-ang-pag-awit-ni-agla-sinabayan-siya-ng-tugtog-negarasi-ostanemomalarawan-ang-tekstura-ng-tunog-na-nariniga-armonya8-homoponyac-monoponyad-poligony2-a">
+                            14. MUSIC V4" Geading*1. Upang higit na mapaganda ang pag-awit ni Agla sinabayan siya ng tugtog negarasi ostanemoMalarawan ang tekstura ng tunog na narinig?A Armonya8. HomoponyaC. MonoponyaD. Poligony2. Ang mga sumusunod ay tumutugon sa katangian ng "partner song. maliban sa salinioA Magkatulad ang patakumpasanC. Magkaiba ang tunugan ng dalawang wwB. Magkatulad ang bilang ng mga sukat D. Magluatulad ang akordeng bumubuo sa dalawangDround0.503. Ito ay tumutunog sa bilis o dalang ng daloy o galaw ng ritmo?A. armonyaB. dynamicsC. tempo4. Ano ang notang ugat ng akordeng sub dominant?A do8. faCmi5. Ang kalah halinang tunog na nalilikha sa ganda ng isang awitB melodiyaC. teksturaD. tempo​</h2><br />
+                        <p><strong>Answer:</strong></p><p>1.b</p><p>2.a</p><p>3.a</p><p>5c</p><p><strong>Explanation:</strong></p><p>Ba star naman</p><p><strong>Answer:</strong></p><p>1.a2.d3.c4.a5.c</p><p><strong>Explanation:</strong></p><p>i hope its help</p><br />
+                                            <h2 class="ez-toc-section" id="d-timbre1-the-element-of-music-which-refer-to-the-tune-of-the-songa-rhythmb-melodyc-form2-which-scale-is-in-the-f-major20c-a-bobobo%e0%a8%89%e0%a8%b8%e0%a8%a6%e0%a9%87d-b3-where-does-do-be-locate">
+                            15. D. Timbre1. The element of music which refer to the tune of the songA RhythmB MelodyC Form2. Which scale is in the F major?20C.A.boboboਉਸਦੇD.B3. Where does DO be located in the key of F major?C. third spaceA First spaceD Fourth spaceB. Second spaceD. ti4. What is the first note of "Mangaso Tayo"?A. DoB, miC. So5. To what so-fa syllable of the key of C major can we found the "do” of the key of F major?A DoCmiD. faB. re6. How can we determine if the song is in the key of F major?A if it ends in "do"C. if it starts with "do"B. if it ends ia "la"D if it starts with "la"7. What is the so-fa syllable of this note in F Major?A. MiC. SoB. FaD. la​</h2><br />
+                        <p>aral ka bastos ka sumagot sa iba e </p><p></p><br />
+                                            <h2 class="ez-toc-section" id="task-2-convert-the-following-remember-1-m2-10-000-cm00-cm2-m6-56-000-cm2-cmi7-65-m2-cm%c2%b2m28-450-000-cm2-000-cm-cmma9-23-m2-000-cm-10-240-000-cm2-cm%c2%b2n%c2%b2ring-word-problem-op">
+                            16. Task 2: Convert the following. Remember: 1 m2 = 10 000 cm00 cm2 =m?6.56 000 cm2 =cmi7. 65 m2=.cm²m28. 450 000 cm2 =000 cm =cmma9.23 m2 =000 cm =10.240 000 cm2 =cm²n²ring word problem.opath of 6 cm6​</h2><br />
+                        <p><strong>Answer:</strong></p>25 672 4770459p25 672 4770459<br />
+                                            <h2 class="ez-toc-section" id="hanapin-sa-loob-ng-puzzle-ang-mga-salitang-may-kaugnayan-sa-sekswalidad%d0%b0-a%d0%b0-allob%d1%80onr%d1%80k-%d0%bal1asswca-z-uswoulolzsk-l%d0%b0-ajr-yb1r-tu0-odo-1cmi-olumej1ttk-c-loldo-inuomt">
+                            17. Hanapin sa loob ng puzzle ang mga salitang may kaugnayan sa sekswalidadА AА ALLOBРO&gt;NRРK кL1aSSWca Z uswoulolzSK.LА AJR.YB1R.TU0-ODO-1CMI OLUMEJ1TTK C-loldo Inuom&lt;TTUKRLmm Z100 mKАRLARHSLF1YwVBHА AK KBNLLА ALА A1​</h2><br />
+                        <p><strong>Answer:</strong></p><p>Buhay,Emosyon,Lalaki,Babae</p><p><strong>Explanation:</strong></p><p>yan lng po nakita ko</p><p></p>ilang words po ba dapat?<br />
+                                            <h2 class="ez-toc-section" id="13-ang-awiting-salidommay-ang-pagitan-ay-mahigit-walo-ano-kaya-ang-range-nitoc-malawak-d-wala-sa-nabanggit14-paano-makilalala-ang-pinakamataas-at-pinakamababang-tono-sa-awitsa-pamamagitan-ng-bil">
+                            18. 13 Ang awiting "Salidommay ang pagitan ay mahigit walo. Ano kaya ang range nitoc. malawak D. wala sa nabanggit14. Paano makilalala ang pinakamataas at pinakamababang tono sa awit?sa pamamagitan ng bilang ng notaB. se pamamagitan ng renge sa pagitan ng nota,sa pamamagitan ng tunugang mavorD. sa pamamagitan ng dami ng ret.15. Ito ay binubuo ng 5 note do re mi sola na maaaring pataas o pababang tono. paulit. palaktaw.A Pentatonic Scalemaior scaleB. Con scaleDiwala sa nabanggit16 Ang a major scale ay nasa runugangBreay ang pagkakasunod sunod ng tono ng mga nata na maaring pataas o pababa.A Pentatonic ScaleC. major scalemaar scoleD. wala sa nabanggit18. Anong na ang nasa larawan?cmi3​</h2><br />
+                        <p><strong>Answer:</strong></p><p>C.malawak.D.B.C.</p><p><strong>Explanation:</strong></p><p>based on my opinion lng naman po </p><br />
+                    
+                </div>
+                <div class="youtubeVideo" style="text-align: center">
+                    <h3>Video Terkait</h3>
+                    <iframe width="560" height="315"
+                        src="https://www.youtube.com/embed/?controls=0" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"allowfullscreen></iframe>
+                </div>
+                <footer class="entry-meta" aria-label="Meta postingan">
+                    <span class="cat-links"><span class="gp-icon icon-categories"><svg viewBox="0 0 512 512"
+                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em">
+                                <path
+                                    d="M0 112c0-26.51 21.49-48 48-48h110.014a48 48 0 0143.592 27.907l12.349 26.791A16 16 0 00228.486 128H464c26.51 0 48 21.49 48 48v224c0 26.51-21.49 48-48 48H48c-26.51 0-48-21.49-48-48V112z">
+                                </path>
+                            </svg></span><span class="screen-reader-text">Kategori </span>math</span>
+            </div>
+        </article>
+    </main>
+            </div>
+            <div class="widget-area sidebar is-right-sidebar" id="right-sidebar">
+                <div class="inside-right-sidebar">
+                    <aside id="categories-2" class="widget inner-padding widget_categories">
+                        <h2 class="widget-title">Topik</h2>
+                        <ul>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/pbs-compound-name.html">Pbs Compound Name</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/50-weeks-in-years.html">50 Weeks In Years</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/senate-bill-438.html">Senate Bill 438</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/othmann-incorporated.html">Othmann Incorporated</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/manual-wbc-estimate-formula.html">Manual Wbc Estimate Formula</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/antonio-s-kitchen.html">Antonio s Kitchen</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/ritualism-example.html">Ritualism Example</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/filipino-collage.html">Filipino Collage</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/795-25.html">795 25</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/biga-in-tagalog.html">Biga In Tagalog</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/gumamela-tree.html">Gumamela Tree</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/mama-s-kitchen-cookies.html">Mama s Kitchen Cookies</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/response-to-mom-s-letter.html">Response To Mom s Letter</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/30-in-binary.html">30 In Binary</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/foundation-plan-example.html">Foundation Plan Example</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/what-is-the-surface-area-of-the-composite-figure-brainly.html">What Is The Surface Area Of The Composite Figure Brainly</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/halfly.html">Halfly</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/abs-cbn-employment-exam.html">Abs Cbn Employment Exam</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/fudge-flies.html">Fudge Flies</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/niebel-s-methods-standards-work-design-solutions-manual.html">Niebel s Methods Standards Work Design Solutions Manual</a>
+                                </li>
+                                                    </ul>
+
+                    </aside>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="site-footer">
+        <footer class="site-info" aria-label="Situs" itemtype="https://schema.org/WPFooter" itemscope>
+            <div class="inside-site-info grid-container">
+                <div class="copyright-bar">
+                    <span class="copyright">&copy; 2023 <a href="https://jneweducation.github.io"
+                            itemprop="url">QnA</a></span>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <a title="Gulirkan kembali ke puncak laman" aria-label="Gulirkan kembali ke puncak laman" rel="nofollow"
+        href="#" class="generate-back-to-top" data-scroll-speed="400" data-start-scroll="300">
+        <span class="gp-icon icon-arrow-up"><svg viewBox="0 0 330 512" aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill-rule="evenodd"
+                clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414">
+                <path
+                    d="M305.863 314.916c0 2.266-1.133 4.815-2.832 6.514l-14.157 14.163c-1.699 1.7-3.964 2.832-6.513 2.832-2.265 0-4.813-1.133-6.512-2.832L164.572 224.276 53.295 335.593c-1.699 1.7-4.247 2.832-6.512 2.832-2.265 0-4.814-1.133-6.513-2.832L26.113 321.43c-1.699-1.7-2.831-4.248-2.831-6.514s1.132-4.816 2.831-6.515L158.06 176.408c1.699-1.7 4.247-2.833 6.512-2.833 2.265 0 4.814 1.133 6.513 2.833L303.03 308.4c1.7 1.7 2.832 4.249 2.832 6.515z"
+                    fill-rule="nonzero" />
+            </svg></span>
+    </a>
+    <script id="generate-a11y">
+        ! function() {
+            "use strict";
+            if ("querySelector" in document && "addEventListener" in window) {
+                var e = document.body;
+                e.addEventListener("mousedown", function() {
+                    e.classList.add("using-mouse")
+                }), e.addEventListener("keydown", function() {
+                    e.classList.remove("using-mouse")
+                })
+            }
+        }();
+    </script>
+    <!--[if lte IE 11]>
+<script src='https://jneweducation.github.io/js/classList.min.js' ?ver=3.2.4' id='generate-classlist-js'></script>
+<![endif]-->
+    <script id='generate-menu-js-extra'>
+        var generatepressMenu = {
+            "toggleOpenedSubMenus": "1",
+            "openSubMenuLabel": "Buka Submenu",
+            "closeSubMenuLabel": "Tutup submenu"
+        };
+    </script>
+    <script src='https://jneweducation.github.io/js/menu.min.js' ?ver=3.2.4' id='generate-menu-js'></script>
+    <script id='generate-navigation-search-js-extra'>
+        var generatepressNavSearch = {
+            "open": "Buka Kolom Pencarian",
+            "close": "Tutup Kolom Pencarian"
+        };
+    </script>
+    <script src='https://jneweducation.github.io/js/navigation-search.min.js' ?ver=3.2.4' id='generate-navigation-search-js'></script>
+    <script id='generate-back-to-top-js-extra'>
+        var generatepressBackToTop = {
+            "smooth": "1"
+        };
+    </script>
+    <script src='https://jneweducation.github.io/js/back-to-top.min.js' ?ver=3.2.4' id='generate-back-to-top-js'></script>
+    <script type='text/javascript' src='//jd3j7g5z1fqs.com/96/78/7a/96787a1945876b1a9c10f79941441964.js'></script>
+<script type='text/javascript' src='//jd3j7g5z1fqs.com/b4/f1/ef/b4f1ef8dfe59b7fa68754094cf6c8e0e.js'></script>
+  <!-- Histats.com  START  (aync)-->
+<script type="text/javascript">var _Hasync= _Hasync|| [];
+_Hasync.push(['Histats.start', '1,4739059,4,0,0,0,00010000']);
+_Hasync.push(['Histats.fasi', '1']);
+_Hasync.push(['Histats.track_hits', '']);
+(function() {
+var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
+hs.src = ('//s10.histats.com/js15_as.js');
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+})();</script>
+<noscript><a href="/" target="_blank"><img  src="//sstatic1.histats.com/0.gif?4739059&101" alt="" border="0"></a></noscript>
+<!-- Histats.com  END  -->
+</body>
+
+</html>

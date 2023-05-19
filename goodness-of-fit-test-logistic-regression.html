@@ -1,0 +1,1199 @@
+<!DOCTYPE html>
+<html lang="id" prefix="og: https://ogp.me/ns#">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="profile" href="https://gmpg.org/xfn/11">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Goodness Of Fit Test Logistic Regression - QnA</title>
+    <meta name="description" content="Goodness Of Fit Test Logistic Regression, 8.5 Examining Model Fit, , , , MarinStatsLectures-R Programming &amp; Statistics, 2021-02-02T04:57:44.000000Z, 20, -Goodness-of-fit test for logistic regression models | Download Table, www.researchgate.net, 640 x 640, jpeg, , 20, goodness-of-fit-test-logistic-regression, QnA" />
+    <meta name="robots" content="index,follow" />
+    <meta property="og:locale" content="id_ID" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Goodness Of Fit Test Logistic Regression - QnA" />
+    <meta property="og:description" content="Goodness Of Fit Test Logistic Regression, 8.5 Examining Model Fit, , , , MarinStatsLectures-R Programming &amp; Statistics, 2021-02-02T04:57:44.000000Z, 20, -Goodness-of-fit test for logistic regression models | Download Table, www.researchgate.net, 640 x 640, jpeg, , 20, goodness-of-fit-test-logistic-regression, QnA" />
+    <meta property="og:site_name" content="QnA" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Goodness Of Fit Test Logistic Regression - QnA" />
+    <meta name="twitter:description" content="Goodness Of Fit Test Logistic Regression, 8.5 Examining Model Fit, , , , MarinStatsLectures-R Programming &amp; Statistics, 2021-02-02T04:57:44.000000Z, 20, -Goodness-of-fit test for logistic regression models | Download Table, www.researchgate.net, 640 x 640, jpeg, , 20, goodness-of-fit-test-logistic-regression, QnA" />
+    <link rel='stylesheet' id='generate-style-css' href='https://jneweducation.github.io/css/main.min.css'?ver=3.2.4'
+        media='all' />
+    <link rel='stylesheet' id='ez-toc-css' href='https://jneweducation.github.io/css/screen.min.css'?ver=2.0.40' media='all' />
+    <style id='generate-style-inline-css'>
+        body {
+            background-color: #f7f7f7;
+            color: #222222;
+        }
+
+        a {
+            color: #1e73be;
+        }
+
+        a:hover,
+        a:focus,
+        a:active {
+            color: #000000;
+        }
+
+        .wp-block-group__inner-container {
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .generate-back-to-top {
+            font-size: 20px;
+            border-radius: 3px;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            line-height: 40px;
+            width: 40px;
+            text-align: center;
+            z-index: 10;
+            transition: opacity 300ms ease-in-out;
+            opacity: 0.1;
+            transform: translateY(1000px);
+        }
+
+        .generate-back-to-top__show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .navigation-search {
+            position: absolute;
+            left: -99999px;
+            pointer-events: none;
+            visibility: hidden;
+            z-index: 20;
+            width: 100%;
+            top: 0;
+            transition: opacity 100ms ease-in-out;
+            opacity: 0;
+        }
+
+        .navigation-search.nav-search-active {
+            left: 0;
+            right: 0;
+            pointer-events: auto;
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .navigation-search input[type="search"] {
+            outline: 0;
+            border: 0;
+            vertical-align: bottom;
+            line-height: 1;
+            opacity: 0.9;
+            width: 100%;
+            z-index: 20;
+            border-radius: 0;
+            -webkit-appearance: none;
+            height: 60px;
+        }
+
+        .navigation-search input::-ms-clear {
+            display: none;
+            width: 0;
+            height: 0;
+        }
+
+        .navigation-search input::-ms-reveal {
+            display: none;
+            width: 0;
+            height: 0;
+        }
+
+        .navigation-search input::-webkit-search-decoration,
+        .navigation-search input::-webkit-search-cancel-button,
+        .navigation-search input::-webkit-search-results-button,
+        .navigation-search input::-webkit-search-results-decoration {
+            display: none;
+        }
+
+        .gen-sidebar-nav .navigation-search {
+            top: auto;
+            bottom: 0;
+        }
+
+        :root {
+            --contrast: #222222;
+            --contrast-2: #575760;
+            --contrast-3: #b2b2be;
+            --base: #f0f0f0;
+            --base-2: #f7f8f9;
+            --base-3: #ffffff;
+            --accent: #1e73be;
+        }
+
+        .has-contrast-color {
+            color: var(--contrast);
+        }
+
+        .has-contrast-background-color {
+            background-color: var(--contrast);
+        }
+
+        .has-contrast-2-color {
+            color: var(--contrast-2);
+        }
+
+        .has-contrast-2-background-color {
+            background-color: var(--contrast-2);
+        }
+
+        .has-contrast-3-color {
+            color: var(--contrast-3);
+        }
+
+        .has-contrast-3-background-color {
+            background-color: var(--contrast-3);
+        }
+
+        .has-base-color {
+            color: var(--base);
+        }
+
+        .has-base-background-color {
+            background-color: var(--base);
+        }
+
+        .has-base-2-color {
+            color: var(--base-2);
+        }
+
+        .has-base-2-background-color {
+            background-color: var(--base-2);
+        }
+
+        .has-base-3-color {
+            color: var(--base-3);
+        }
+
+        .has-base-3-background-color {
+            background-color: var(--base-3);
+        }
+
+        .has-accent-color {
+            color: var(--accent);
+        }
+
+        .has-accent-background-color {
+            background-color: var(--accent);
+        }
+
+        body,
+        button,
+        input,
+        select,
+        textarea {
+            font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        }
+
+        body {
+            line-height: 1.5;
+        }
+
+        .entry-content>[class*="wp-block-"]:not(:last-child) {
+            margin-bottom: 1.5em;
+        }
+
+        .main-navigation .main-nav ul ul li a {
+            font-size: 14px;
+        }
+
+        .sidebar .widget,
+        .footer-widgets .widget {
+            font-size: 17px;
+        }
+
+        @media (max-width:768px) {
+            h1 {
+                font-size: 31px;
+            }
+
+            h2 {
+                font-size: 27px;
+            }
+
+            h3 {
+                font-size: 24px;
+            }
+
+            h4 {
+                font-size: 22px;
+            }
+
+            h5 {
+                font-size: 19px;
+            }
+        }
+
+        .top-bar {
+            background-color: #636363;
+            color: #ffffff;
+        }
+
+        .top-bar a {
+            color: #ffffff;
+        }
+
+        .top-bar a:hover {
+            color: #303030;
+        }
+
+        .site-header {
+            background-color: #ffffff;
+        }
+
+        .main-title a,
+        .main-title a:hover {
+            color: #222222;
+        }
+
+        .site-description {
+            color: #757575;
+        }
+
+        .main-navigation,
+        .main-navigation ul ul {
+            background-color: #ed4250;
+        }
+
+        .main-navigation .main-nav ul li a,
+        .main-navigation .menu-toggle,
+        .main-navigation .menu-bar-items {
+            color: #ffffff;
+        }
+
+        .main-navigation .main-nav ul li:not([class*="current-menu-"]):hover>a,
+        .main-navigation .main-nav ul li:not([class*="current-menu-"]):focus>a,
+        .main-navigation .main-nav ul li.sfHover:not([class*="current-menu-"])>a,
+        .main-navigation .menu-bar-item:hover>a,
+        .main-navigation .menu-bar-item.sfHover>a {
+            color: #ffffff;
+            background-color: #c42f2f;
+        }
+
+        button.menu-toggle:hover,
+        button.menu-toggle:focus {
+            color: #ffffff;
+        }
+
+        .main-navigation .main-nav ul li[class*="current-menu-"]>a {
+            color: #ffffff;
+            background-color: #c42f2f;
+        }
+
+        .navigation-search input[type="search"],
+        .navigation-search input[type="search"]:active,
+        .navigation-search input[type="search"]:focus,
+        .main-navigation .main-nav ul li.search-item.active>a,
+        .main-navigation .menu-bar-items .search-item.active>a {
+            color: #ffffff;
+            background-color: #c42f2f;
+        }
+
+        .main-navigation ul ul {
+            background-color: #c42f2f;
+        }
+
+        .main-navigation .main-nav ul ul li a {
+            color: #ffffff;
+        }
+
+        .main-navigation .main-nav ul ul li:not([class*="current-menu-"]):hover>a,
+        .main-navigation .main-nav ul ul li:not([class*="current-menu-"]):focus>a,
+        .main-navigation .main-nav ul ul li.sfHover:not([class*="current-menu-"])>a {
+            color: #fcd9d6;
+            background-color: #c42f2f;
+        }
+
+        .main-navigation .main-nav ul ul li[class*="current-menu-"]>a {
+            color: #fcd9d6;
+            background-color: #c42f2f;
+        }
+
+        .separate-containers .inside-article,
+        .separate-containers .comments-area,
+        .separate-containers .page-header,
+        .one-container .container,
+        .separate-containers .paging-navigation,
+        .inside-page-header {
+            background-color: #ffffff;
+        }
+
+        .entry-title a {
+            color: #222222;
+        }
+
+        .entry-title a:hover {
+            color: #55555e;
+        }
+
+        .entry-meta {
+            color: #595959;
+        }
+
+        .sidebar .widget {
+            background-color: #ffffff;
+        }
+
+        .footer-widgets {
+            background-color: #ffffff;
+        }
+
+        .footer-widgets .widget-title {
+            color: #000000;
+        }
+
+        .site-info {
+            color: #ffffff;
+            background-color: #55555e;
+        }
+
+        .site-info a {
+            color: #ffffff;
+        }
+
+        .site-info a:hover {
+            color: #d3d3d3;
+        }
+
+        .footer-bar .widget_nav_menu .current-menu-item a {
+            color: #d3d3d3;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="url"],
+        input[type="password"],
+        input[type="search"],
+        input[type="tel"],
+        input[type="number"],
+        textarea,
+        select {
+            color: #666666;
+            background-color: #fafafa;
+            border-color: #cccccc;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="url"]:focus,
+        input[type="password"]:focus,
+        input[type="search"]:focus,
+        input[type="tel"]:focus,
+        input[type="number"]:focus,
+        textarea:focus,
+        select:focus {
+            color: #666666;
+            background-color: #ffffff;
+            border-color: #bfbfbf;
+        }
+
+        button,
+        html input[type="button"],
+        input[type="reset"],
+        input[type="submit"],
+        a.button,
+        a.wp-block-button__link:not(.has-background) {
+            color: #ffffff;
+            background-color: #55555e;
+        }
+
+        button:hover,
+        html input[type="button"]:hover,
+        input[type="reset"]:hover,
+        input[type="submit"]:hover,
+        a.button:hover,
+        button:focus,
+        html input[type="button"]:focus,
+        input[type="reset"]:focus,
+        input[type="submit"]:focus,
+        a.button:focus,
+        a.wp-block-button__link:not(.has-background):active,
+        a.wp-block-button__link:not(.has-background):focus,
+        a.wp-block-button__link:not(.has-background):hover {
+            color: #ffffff;
+            background-color: #3f4047;
+        }
+
+        a.generate-back-to-top {
+            background-color: rgba(0, 0, 0, 0.4);
+            color: #ffffff;
+        }
+
+        a.generate-back-to-top:hover,
+        a.generate-back-to-top:focus {
+            background-color: rgba(0, 0, 0, 0.6);
+            color: #ffffff;
+        }
+
+        @media (max-width:768px) {
+
+            .main-navigation .menu-bar-item:hover>a,
+            .main-navigation .menu-bar-item.sfHover>a {
+                background: none;
+                color: #ffffff;
+            }
+        }
+
+        .nav-below-header .main-navigation .inside-navigation.grid-container,
+        .nav-above-header .main-navigation .inside-navigation.grid-container {
+            padding: 0px 20px 0px 20px;
+        }
+
+        .site-main .wp-block-group__inner-container {
+            padding: 40px;
+        }
+
+        .separate-containers .paging-navigation {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .entry-content .alignwide,
+        body:not(.no-sidebar) .entry-content .alignfull {
+            margin-left: -40px;
+            width: calc(100% + 80px);
+            max-width: calc(100% + 80px);
+        }
+
+        .rtl .menu-item-has-children .dropdown-menu-toggle {
+            padding-left: 20px;
+        }
+
+        .rtl .main-navigation .main-nav ul li.menu-item-has-children>a {
+            padding-right: 20px;
+        }
+
+        @media (max-width:768px) {
+
+            .separate-containers .inside-article,
+            .separate-containers .comments-area,
+            .separate-containers .page-header,
+            .separate-containers .paging-navigation,
+            .one-container .site-content,
+            .inside-page-header {
+                padding: 30px;
+            }
+
+            .site-main .wp-block-group__inner-container {
+                padding: 30px;
+            }
+
+            .inside-top-bar {
+                padding-right: 30px;
+                padding-left: 30px;
+            }
+
+            .inside-header {
+                padding-right: 30px;
+                padding-left: 30px;
+            }
+
+            .widget-area .widget {
+                padding-top: 30px;
+                padding-right: 30px;
+                padding-bottom: 30px;
+                padding-left: 30px;
+            }
+
+            .footer-widgets-container {
+                padding-top: 30px;
+                padding-right: 30px;
+                padding-bottom: 30px;
+                padding-left: 30px;
+            }
+
+            .inside-site-info {
+                padding-right: 30px;
+                padding-left: 30px;
+            }
+
+            .entry-content .alignwide,
+            body:not(.no-sidebar) .entry-content .alignfull {
+                margin-left: -30px;
+                width: calc(100% + 60px);
+                max-width: calc(100% + 60px);
+            }
+
+            .one-container .site-main .paging-navigation {
+                margin-bottom: 20px;
+            }
+        }
+
+        /* End cached CSS */
+        .is-right-sidebar {
+            width: 30%;
+        }
+
+        .is-left-sidebar {
+            width: 30%;
+        }
+
+        .site-content .content-area {
+            width: 70%;
+        }
+
+        @media (max-width:768px) {
+
+            .main-navigation .menu-toggle,
+            .sidebar-nav-mobile:not(#sticky-placeholder) {
+                display: block;
+            }
+
+            .main-navigation ul,
+            .gen-sidebar-nav,
+            .main-navigation:not(.slideout-navigation):not(.toggled) .main-nav>ul,
+            .has-inline-mobile-toggle #site-navigation .inside-navigation>*:not(.navigation-search):not(.main-nav) {
+                display: none;
+            }
+
+            .nav-align-right .inside-navigation,
+            .nav-align-center .inside-navigation {
+                justify-content: space-between;
+            }
+        }
+    </style>
+    <link rel="icon" href="https://jneweducation.github.io/img/cropped-soalbelajar-32x32.png" sizes="32x32" />
+    <link rel="icon" href="https://jneweducation.github.io/img/cropped-soalbelajar-192x192.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="https://jneweducation.github.io/img/cropped-soalbelajar-180x180.png" />
+    <meta name="msapplication-TileImage" content="https://jneweducation.github.io/img/cropped-soalbelajar-270x270.png" />
+</head>
+
+<body
+    class="home blog wp-custom-logo wp-embed-responsive right-sidebar nav-above-header separate-containers nav-search-enabled nav-aligned-center header-aligned-center dropdown-hover"
+    itemtype="https://schema.org/Blog" itemscope>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-dark-grayscale">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 0.49803921568627" />
+                    <feFuncG type="table" tableValues="0 0.49803921568627" />
+                    <feFuncB type="table" tableValues="0 0.49803921568627" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-grayscale">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 1" />
+                    <feFuncG type="table" tableValues="0 1" />
+                    <feFuncB type="table" tableValues="0 1" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-purple-yellow">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.54901960784314 0.98823529411765" />
+                    <feFuncG type="table" tableValues="0 1" />
+                    <feFuncB type="table" tableValues="0.71764705882353 0.25490196078431" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-blue-red">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 1" />
+                    <feFuncG type="table" tableValues="0 0.27843137254902" />
+                    <feFuncB type="table" tableValues="0.5921568627451 0.27843137254902" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-midnight">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 0" />
+                    <feFuncG type="table" tableValues="0 0.64705882352941" />
+                    <feFuncB type="table" tableValues="0 1" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-magenta-yellow">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.78039215686275 1" />
+                    <feFuncG type="table" tableValues="0 0.94901960784314" />
+                    <feFuncB type="table" tableValues="0.35294117647059 0.47058823529412" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-purple-green">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.65098039215686 0.40392156862745" />
+                    <feFuncG type="table" tableValues="0 1" />
+                    <feFuncB type="table" tableValues="0.44705882352941 0.4" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-blue-orange">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.098039215686275 1" />
+                    <feFuncG type="table" tableValues="0 0.66274509803922" />
+                    <feFuncB type="table" tableValues="0.84705882352941 0.41960784313725" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><a class="screen-reader-text skip-link" href="#content" title="Langsung ke isi">Langsung ke isi</a>
+    <nav class="main-navigation nav-align-center has-menu-bar-items sub-menu-right" id="site-navigation"
+        aria-label="Utama" itemtype="https://schema.org/SiteNavigationElement" itemscope>
+        <div class="inside-navigation grid-container">
+            <form method="get" class="search-form navigation-search" action="/">
+                <input type="search" class="search-field" value="" name="q" title="Cari" />
+            </form> <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+                <span class="gp-icon icon-menu-bars"><svg viewBox="0 0 512 512" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" width="1em" height="1em">
+                        <path
+                            d="M0 96c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24zm0 160c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24zm0 160c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24z" />
+                    </svg><svg viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                        width="1em" height="1em">
+                        <path
+                            d="M71.029 71.029c9.373-9.372 24.569-9.372 33.942 0L256 222.059l151.029-151.03c9.373-9.372 24.569-9.372 33.942 0 9.372 9.373 9.372 24.569 0 33.942L289.941 256l151.03 151.029c9.372 9.373 9.372 24.569 0 33.942-9.373 9.372-24.569 9.372-33.942 0L256 289.941l-151.029 151.03c-9.373 9.372-24.569 9.372-33.942 0-9.372-9.373-9.372-24.569 0-33.942L222.059 256 71.029 104.971c-9.372-9.373-9.372-24.569 0-33.942z" />
+                    </svg></span><span class="mobile-menu">Menu</span> </button>
+            <div id="primary-menu" class="main-nav">
+                <ul id="menu-soal-belajar" class=" menu sf-menu">
+                    <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1"><a
+                            href="https://jneweducation.github.io">Home</a></li>
+                </ul>
+                </ul>
+            </div>
+            <div class="menu-bar-items"><span class="menu-bar-item search-item"><a aria-label="Buka Kolom Pencarian"
+                        href="#"><span class="gp-icon icon-search"><svg viewBox="0 0 512 512"
+                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M208 48c-88.366 0-160 71.634-160 160s71.634 160 160 160 160-71.634 160-160S296.366 48 208 48zM0 208C0 93.125 93.125 0 208 0s208 93.125 208 208c0 48.741-16.765 93.566-44.843 129.024l133.826 134.018c9.366 9.379 9.355 24.575-.025 33.941-9.379 9.366-24.575 9.355-33.941-.025L337.238 370.987C301.747 399.167 256.839 416 208 416 93.125 416 0 322.875 0 208z" />
+                            </svg><svg viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                width="1em" height="1em">
+                                <path
+                                    d="M71.029 71.029c9.373-9.372 24.569-9.372 33.942 0L256 222.059l151.029-151.03c9.373-9.372 24.569-9.372 33.942 0 9.372 9.373 9.372 24.569 0 33.942L289.941 256l151.03 151.029c9.372 9.373 9.372 24.569 0 33.942-9.373 9.372-24.569 9.372-33.942 0L256 289.941l-151.029 151.03c-9.373 9.372-24.569 9.372-33.942 0-9.372-9.373-9.372-24.569 0-33.942L222.059 256 71.029 104.971c-9.372-9.373-9.372-24.569 0-33.942z" />
+                            </svg></span></a></span></div>
+        </div>
+    </nav>
+    <header class="site-header grid-container" id="masthead" aria-label="Situs"
+        itemtype="https://schema.org/WPHeader" itemscope>
+        <div class="inside-header grid-container">
+            <h1 class="site-logo">
+                <a href="https://jneweducation.github.io" rel="home"> QnA</a>
+            </h1>
+        </div>
+    </header>
+
+    <div class="site grid-container container hfeed" id="page">
+        <div class="site-content" id="content">
+            <div class="content-area" id="primary">
+                    <main class="site-main" id="main">
+        <article id="post-1327" class="post-1327 post type-post status-publish format-standard hentry category-info"
+            itemtype="https://schema.org/CreativeWork" itemscope="">
+            <div class="inside-article">
+                <header class="entry-header" aria-label="Konten">
+                    <h1 class="entry-title" itemprop="headline">Goodness Of Fit Test Logistic Regression</h1>
+                    <div class="entry-meta">
+                       <span
+                            class="byline">oleh <span class="author vcard" itemprop="author"
+                                itemtype="https://schema.org/Person" itemscope=""><span class="author-name"
+                                    itemprop="name">loriemaequinio17031</span></span></span>
+                    </div>
+                </header>
+                <div class="entry-content" itemprop="text">
+                    <div style="text-align: center">
+                        <img src="https://tse1.mm.bing.net/th?q=Goodness+Of+Fit+Test+Logistic+Regression" alt="Goodness Of Fit Test Logistic Regression">
+                    </div>
+                    <p></p>
+                    <p>One of the very good methods to analyze the performance of logistic regression is aic, which is similar to r-squared in linear regression. which of the following is true about aic?</p>
+                    <div id="ez-toc-container"
+                        class="ez-toc-v2_0_40 counter-hierarchy ez-toc-counter ez-toc-light-blue ez-toc-container-direction">
+                        <div class="ez-toc-title-container">
+                            <p class="ez-toc-title">Daftar Isi</p>
+                            <span class="ez-toc-title-toggle"><a href="#"
+                                    class="ez-toc-pull-right ez-toc-btn ez-toc-btn-xs ez-toc-btn-default ez-toc-toggle"
+                                    area-label="ez-toc-toggle-icon-1"><label for="item-63b392361c4a0"
+                                        aria-label="Table of Content"><span
+                                            style="display: flex;align-items: center;width: 35px;height: 30px;justify-content: center;direction:ltr;"><svg
+                                                style="fill: #999;color:#999" xmlns="http://www.w3.org/2000/svg"
+                                                class="list-377408" width="20px" height="20px" viewBox="0 0 24 24"
+                                                fill="none">
+                                                <path
+                                                    d="M6 6H4v2h2V6zm14 0H8v2h12V6zM4 11h2v2H4v-2zm16 0H8v2h12v-2zM4 16h2v2H4v-2zm16 0H8v2h12v-2z"
+                                                    fill="currentColor"></path>
+                                            </svg><svg style="fill: #999;color:#999" class="arrow-unsorted-368013"
+                                                xmlns="http://www.w3.org/2000/svg" width="10px" height="10px"
+                                                viewBox="0 0 24 24" version="1.2" baseProfile="tiny">
+                                                <path
+                                                    d="M18.2 9.3l-6.2-6.3-6.2 6.3c-.2.2-.3.4-.3.7s.1.5.3.7c.2.2.4.3.7.3h11c.3 0 .5-.1.7-.3.2-.2.3-.5.3-.7s-.1-.5-.3-.7zM5.8 14.7l6.2 6.3 6.2-6.3c.2-.2.3-.5.3-.7s-.1-.5-.3-.7c-.2-.2-.4-.3-.7-.3h-11c-.3 0-.5.1-.7.3-.2.2-.3.5-.3.7s.1.5.3.7z">
+                                                </path>
+                                            </svg></span></label><input type="checkbox" id="item-63b392361c4a0"></a></span>
+                        </div>
+                        <nav>
+                            <ul class="ez-toc-list ez-toc-list-level-1 ">
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#one-of-the-very-good-methods-to-analyze-the-performance-of-logistic-regression-is-aic-which-is-similar-to-r-squared-in-linear-regression-which-of-the-following-is-true-about-aic">1.
+                                            One of the very good methods to analyze the performance of logistic regression is aic, which is similar to r-squared in linear regression. which of the following is true about aic?</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#what-is-logistic-regression-a-linear-classifierb-regression-algorithmc-regressiond-general-architecture%e2%80%8b">2.
+                                            What is logistic regression? A. Linear ClassifierB. Regression AlgorithmC. RegressionD. General Architecture​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#the-following-are-examples-of-application-for-logistic-regression">3.
+                                            The following are examples of application for logistic regression</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#6is-the-ratio-of-body-fat-to-lean-body-mass-including-water-bonesmuscles-and-connective-tissuesa-body-composition-b-body-temperaturec-reaction-timed-speed7-enhances-ones-performance-in-athletic">4.
+                                            6is the ratio of body fat to lean body mass (including water, bones,muscles and connective tissues)A Body composition B. body temperatureC reaction timeD. Speed7.enhances one's performance in athletic or sports event.A FitnessB Skill-related fitnessC. health related fitnessD. flexibility8. It is the ability to become and stay physically healthy.A StrengthB. Health related fitnessC. Skill-related FitnessD. Cardiovascular Fitness9. What is the quality or state of being healthy in body and mind?A. wellnessB. regressC. collageD. exercise10. One of the physical fitness tests that measures strength and upper extremities.A. Curl upB. 3-minute step test C. zipper testD. push up​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#estimate-the-gwa-of-the-student-if-the-test-score-is-90-given-that-the-linear-regression-equation-is-y">5.
+                                            Estimate the gwa of the student if the test score is 90, given that the linear regression equation is y</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#2-the-ability-to-become-and-stay-physically-healthy-refers-toa-family-wellnessb-health-related-fitnessc-health-regressiond-skill-related-fitness%e2%80%8bpahelp-pooo-brainliest-follow-tsaka-i-hea">6.
+                                            2. The ability to become and stay physically healthy refers toa. Family wellnessb. Health-related Fitnessc. Health regressiond. Skill-related fitness​PAHELP POOO brainliest, follow tsaka i heart ko po kayo​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#how-exercise-regression-and-progression-benefits-us-in-our-fitness-and-health%e2%80%8b">7.
+                                            How exercise regression and progression benefits us in our fitness and health?​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#mathematical-journalsummarize-the-results-of-the-activities-by-answering-these-questions1-how-do-you-identify-the-dependent-and-independent-variables2-what-is-the-regression-line3-why-is-the-reg">8.
+                                            Mathematical JournalSummarize the results of the activities by answering these questions:1. How do you identify the dependent and independent variables?2. What is the regression line?3. Why is the regression line called the line that "best fit"?4. How do we determine the regression line?5. What is the use of the regression line?​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#where-and-how-do-you-use-logistic-regression-150-words">9.
+                                            where and how do you use logistic regression? 150 words</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#the-regression-analysis%c2%a0%e2%80%8b">10.
+                                            The regression analysis ​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#the-data-used-to-study-the-relationships-were-collected-in-an-international-environment-and-analyzed-with-correlation-analysis-and-logistic-regression-%e2%80%8b">11.
+                                            The data used to study the relationships were collected in an international environment and analyzed with correlation analysis and logistic regression.​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#14-which-two-are-examples-of-descriptive-statisticsa-mean-and-standard-deviationc-variance-and-regression-analysisb-median-and-correlationd-hypothesis-testingandhistograms%e2%80%8b">12.
+                                            14. Which two are examples of descriptive statistics?a. Mean and Standard Deviationc. Variance and Regression Analysisb. Median and Correlationd. Hypothesis TestingandHistograms​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#logistics-is-the-set-of-activities-that-integrate-coordinate-and-control-the-physical-flow-of-materials-and-information-in-the-phases-of-purchase-storage-material-handling-movement-distribution">13.
+                                            Logistics is the set of activities that integrate, coordinate and control the physical flow of materials and information, in the phases of: Purchase; Storage; Material handling; Movement; Distribution and Transport. Within this broad vision, operations are divided into three areas: (i) acquisition (supply logistics); (ii) production support (production logistics); and (iii) distribution to the market (distribution logistics). In today's corporate world, after-sales operation, or reverse logistics, must be included. The integration of logistics subsystems, ensuring strategic alignment, better level (quality) of service and cost reduction, is called as: Select an alternative: a) Supply Chain b) Value Chain c) Business Logistics d) Strategic Logistics e) Integrated logistics ​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#reflective-questionswhy-do-you-think-there-were-progress-or-regress-in-your-physical-fitness-assessment-resultswhat-training-guidelines-and-principles-affected-these-effects%e2%80%8b">14.
+                                            Reflective Questions:Why do you think there were progress or regress in your physical fitness assessment results?What training guidelines and principles affected these effects?​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#2-the-ability-to-become-and-stay-physically-healthy-refers-toa-family-wellnessb-health-related-fitnessc-health-regressiond-skill-related-fitness%e2%80%8b">15.
+                                            2. The ability to become and stay physically healthy refers toa. Family wellnessb. Health-related Fitnessc. Health regressiond. Skill-related fitness​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#a-regression-model-relating-the-number-of-salespersons-at-a-branch-office-to-annual-sales-at-the-office-in-thousands-of-dollars-provided-the-following-regression-output-write-the-estimated-regressi">16.
+                                            A regression model relating the number of salespersons at a branch office to annual sales at the office (in thousands of dollars) provided the following regression output. write the estimated regression equation. 20</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#which-of-the-following-is-true-about-logistic-regression">17.
+                                            Which of the following is true about logistic regression?</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#why-should-logistics-cost-be-considered-in-logistics-and-distribution-%e2%80%8b">18.
+                                            Why should logistics cost be considered in logistics and distribution? *​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#a-measure-of-goodness-of-fit-for-the-estimated-regression-equation-is-the">19.
+                                            A measure of goodness of fit for the estimated regression equation is the</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#48-which-of-the-following-statistical-technique-is-best-to-use-testing-more-than-two-population-means-a-pearson-r-b-regression-c-t-test-for-dependent-samples-d-anova-a%e2%80%8b">20.
+                                            48. Which of the following statistical technique is best to use testing more than Two Population Means? A. Pearson R b. Regression C. T-Test for dependent samples d. ANOVA a​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#a-person-or-company-that-undertakes-a-professional-conveyance-of-goods-or-peoplea-carrierb-delivery-officerc-logistic-officerd-shipper">21.
+                                            A person or company that undertakes a professional conveyance of goods or people
+A. Carrier
+B. Delivery Officer
+C. Logistic Officer
+D. Shipper</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#compare-and-contrast-centralized-logistics-management-and-decentralized-logistics-management%e2%80%8b">22.
+                                            Compare and contrast centralized logistics management and decentralized logistics management​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#as-the-goodness-of-fit-for-the-estimated-regression-equation-increases-the">23.
+                                            As the goodness of fit for the estimated regression equation increases, the</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#module-17-1-activity-1-write-true-or-false-given-the-following-statements-the-regression-line-is-the-same-as-the-trend-line-or-the-line-that-%e2%80%9cbest-fit%e2%80%9d-in-the-scatterplot-2-the-de">24.
+                                            Module 17 1. Activity 1: Write TRUE or FALSE given the following statements. The regression line is the same as the trend line or the line that “best fit” in the scatterplot. 2. The dependent variable is x while the independent variable is y. 3. In the equation Y' = bX + a, b is the slope of the regression line. 4. To predict the value of Y', we substitute the given value of X in the equation. 5. If the slope is negative, the graph of the regression line is increasing.​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#what-are-the-components-of-the-logistics-circle-what-possible-problems-can-companies-encounter-in-managing-their-logistics-%e2%80%8b">25.
+                                            What are the components of the logistics circle? What possible problems can companies encounter in managing their logistics? ​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#what-i-know-2-the-ability-to-become-and-stay-physically-healthy-refers-to-______a-family-wellness-b-health-related-fitness-c-health-regressiond-skill-related-fitness%e2%80%8b">26.
+                                                     (What I Know )2.the ability to become and stay physically healthy refers to ______a.family wellness b.health related fitness c.health regressiond.skill related fitness​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#how-would-exercise-regressions-and-progressions-benefit-us-in-our-fitness-and-health">27.
+                                            How would exercise regressions and progressions benefit us in our fitness and health?</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#linear-regression-is-a-statistical-regression-method-which-is-used-for-_____">28.
+                                             Linear regression is a statistical regression method which is used for _____.</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#the-following-includes-inferential-statistics-except-a-t-testsb-anovas-c-multiple-regression-correlations-d-frequency-and-percentage%e2%80%8b">29.
+                                             The following includes inferential statistics except:   a. t-tests	b. ANOVAs	    c. Multiple regression correlations 	d.Frequency and percentage​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#1-it-is-used-to-solve-problems-that-concern-estimation-and-forecastinga-linear-regressionb-coirelational-testc-regression-analysisd-none-of-the-above%e2%80%8b">30.
+                                            1. It is used to solve problems that concern estimation and forecastingA. Linear regressionB. Coirelational testC. Regression analysisD. None of the above​</a>
+                                    </li>
+                                                            </ul>
+                        </nav>
+                    </div>
+                                            <h2 class="ez-toc-section" id="one-of-the-very-good-methods-to-analyze-the-performance-of-logistic-regression-is-aic-which-is-similar-to-r-squared-in-linear-regression-which-of-the-following-is-true-about-aic">
+                            1. One of the very good methods to analyze the performance of logistic regression is aic, which is similar to r-squared in linear regression. which of the following is true about aic?</h2><br />
+                        <p>Show me a picture because i cant answer without it</p><br />
+                                            <h2 class="ez-toc-section" id="what-is-logistic-regression-a-linear-classifierb-regression-algorithmc-regressiond-general-architecture%e2%80%8b">
+                            2. What is logistic regression? A. Linear ClassifierB. Regression AlgorithmC. RegressionD. General Architecture​</h2><br />
+                        <p><strong>Answer:</strong></p><p>In statistics, the logistic model is used to model the probability of a certain class or event taking place, such as the probability of a team winning, of a patient being healthy, etc. This can be extended to model several classes of events such as determining whether an image contains a cat, dog, lion, etc. </p><p><strong>Explanation:</strong></p><p>pa brainliest</p><br />
+                                            <h2 class="ez-toc-section" id="the-following-are-examples-of-application-for-logistic-regression">
+                            3. The following are examples of application for logistic regression</h2><br />
+                        <strong>Answer:</strong>••••••••••••••••••••••••••••••••••Examples of Application for Logistic Regression:<p>A credit card company wants to know whether transaction amount and credit score impact the probability of a given transaction being fraudulent. To understand the relationship between these two predictor variables and the probability of a transaction being fraudulent, the company can perform logistic regression.</p>The response variable in the model will be “fraudulent” and it has two potential outcomes:<p></p>The transaction is fraudulent.<p></p>The transaction is not fraudulent.<p></p><p>The results of the model will tell the company exactly how changes in transaction amount and credit score affect the probability of a given transaction being fraudulent. The company can also use the fitted logistic regression model to predict the probability that a given transaction is fraudulent, based on the transaction amount and the credit score of the individual who made the transaction.</p>••••••••••••••••••••••••••••••••••<strong>Explanation:</strong><p>I hope its help for you</p><p>#CarryOnLearning</p><p>#LibrengMatuto</p><p></p>MissShuey<br />
+                                            <h2 class="ez-toc-section" id="6is-the-ratio-of-body-fat-to-lean-body-mass-including-water-bonesmuscles-and-connective-tissuesa-body-composition-b-body-temperaturec-reaction-timed-speed7-enhances-ones-performance-in-athletic">
+                            4. 6is the ratio of body fat to lean body mass (including water, bones,muscles and connective tissues)A Body composition B. body temperatureC reaction timeD. Speed7.enhances one's performance in athletic or sports event.A FitnessB Skill-related fitnessC. health related fitnessD. flexibility8. It is the ability to become and stay physically healthy.A StrengthB. Health related fitnessC. Skill-related FitnessD. Cardiovascular Fitness9. What is the quality or state of being healthy in body and mind?A. wellnessB. regressC. collageD. exercise10. One of the physical fitness tests that measures strength and upper extremities.A. Curl upB. 3-minute step test C. zipper testD. push up​</h2><br />
+                        <p><strong>Answer:</strong></p><p>y6 a</p><p>7a</p><p>8d</p><p></p><p>9a</p><p>10 d</p><p><strong>Explanation:</strong></p><p>sana po maka tolong</p><br />
+                                            <h2 class="ez-toc-section" id="estimate-the-gwa-of-the-student-if-the-test-score-is-90-given-that-the-linear-regression-equation-is-y">
+                            5. Estimate the gwa of the student if the test score is 90, given that the linear regression equation is y</h2><br />
+                        <p>Wake up to reality</p><p>-Madara Uchiha</p><p></p><p>[tex] \color {cyan} \rule {1pt} {100000pt} [/tex] </p><br />
+                                            <h2 class="ez-toc-section" id="2-the-ability-to-become-and-stay-physically-healthy-refers-toa-family-wellnessb-health-related-fitnessc-health-regressiond-skill-related-fitness%e2%80%8bpahelp-pooo-brainliest-follow-tsaka-i-hea">
+                            6. 2. The ability to become and stay physically healthy refers toa. Family wellnessb. Health-related Fitnessc. Health regressiond. Skill-related fitness​PAHELP POOO brainliest, follow tsaka i heart ko po kayo​</h2><br />
+                        <p><strong>Answer:</strong></p><p>D. </p><p><strong>Explanation:</strong></p><p>Skill-related fitness </p><p>Correct me if I'm wrong </p><p><strong>Answer:</strong></p><p>b.Health-related Fitness</p><p><strong>Explanation:</strong></p><p>Follow</p><br />
+                                            <h2 class="ez-toc-section" id="how-exercise-regression-and-progression-benefits-us-in-our-fitness-and-health%e2%80%8b">
+                            7. How exercise regression and progression benefits us in our fitness and health?​</h2><br />
+                        Regression and progression An exercise regression is simply an approach to decrease the demand of an exercise or movement. Conversely, a progression does the opposite by increasing the demand incrementally through minor changes.<br />
+                                            <h2 class="ez-toc-section" id="mathematical-journalsummarize-the-results-of-the-activities-by-answering-these-questions1-how-do-you-identify-the-dependent-and-independent-variables2-what-is-the-regression-line3-why-is-the-reg">
+                            8. Mathematical JournalSummarize the results of the activities by answering these questions:1. How do you identify the dependent and independent variables?2. What is the regression line?3. Why is the regression line called the line that "best fit"?4. How do we determine the regression line?5. What is the use of the regression line?​</h2><br />
+                        <p><strong>Answer:</strong></p><p>1.) The variables in a study of a cause-and-effect  relationship are called the independent and dependent variables.</p><p>•The independent variable is a cause.It's value is independent of other variables in your study.</p><p>•The dependent variable is the effect. It's value depends on changes in the independent variable .</p><p>2.) A regression line is a straight line that describes how a response variable y changes as an explanatory variable x changes.We often use a regression line to predict the value of y for a given value of x.</p><p>3.)The regression line is sometimes called the "line of best fit" because it is the line the fits best when drawn through the points.It is a line that minimizes the distance of the actual scores from the predicted scores.</p><p>4.)A linear regression line has an equation of the from Y=a + bX where X is the explanatory variable and Y is the dependent variable. The slope of the line is b, and a is the intercept (the value of y when x=0).</p><p>5.)<strong>Regression </strong>line   are useful in forecasting procedures.Its <strong>purpose </strong>is to describe the interrelation of the dependent variable (y variable) with one or many independent variables (x variable).</p><p></p><p></p><p></p><p>HOPE IT HELPS YOU</p><br />
+                                            <h2 class="ez-toc-section" id="where-and-how-do-you-use-logistic-regression-150-words">
+                            9. where and how do you use logistic regression? 150 words</h2><br />
+                        <p><strong>Answer:</strong></p><p> Like all regression analyses, the logistic regression is a predictive analysis.  Logistic regression is used to describe data and to explain the relationship between one dependent binary variable and one or more nominal, ordinal, interval or ratio-level independent variables.</p><p><strong>Explanation:</strong></p><p>hope this help </p><p></p><br />
+                                            <h2 class="ez-toc-section" id="the-regression-analysis%c2%a0%e2%80%8b">
+                            10. The regression analysis ​</h2><br />
+                        <p><strong>Answer:</strong></p><p></p><p><strong>regression analysis </strong>is a set of statistical processes for estimating the relationships between a dependent variable and one or more independent variables. </p><p></p><p><strong>Step-by-step explanation:</strong></p><p><strong>Formula</strong><strong>:</strong><strong> </strong></p><p>Y_i=f(X_i, \beta)+e_i</p><p></p><p>Y_i	=	dependent variable</p><p>f	=	function</p><p>X_i	=	independent variable</p><p>\beta	=	unknown parameters</p><p>e_i	=	error terms</p><p></p><br />
+                                            <h2 class="ez-toc-section" id="the-data-used-to-study-the-relationships-were-collected-in-an-international-environment-and-analyzed-with-correlation-analysis-and-logistic-regression-%e2%80%8b">
+                            11. The data used to study the relationships were collected in an international environment and analyzed with correlation analysis and logistic regression.​</h2><br />
+                        <p><strong>Answer:</strong></p><p>It is a statistical-based</p><p><strong>Explanation:</strong></p><p>It consists of analysing the relationship between at least two variables.</p><br />
+                                            <h2 class="ez-toc-section" id="14-which-two-are-examples-of-descriptive-statisticsa-mean-and-standard-deviationc-variance-and-regression-analysisb-median-and-correlationd-hypothesis-testingandhistograms%e2%80%8b">
+                            12. 14. Which two are examples of descriptive statistics?a. Mean and Standard Deviationc. Variance and Regression Analysisb. Median and Correlationd. Hypothesis TestingandHistograms​</h2><br />
+                        <p><strong>Mean</strong> and <strong>standard deviation</strong> are examples of descriptive statistics. </p><p></p><p>Let's discuss about <strong>descriptive statistics. </strong></p><p></p><p><strong>What are descriptive statistics?</strong></p><p> <strong>Descriptive statistics </strong>are used to summarize and organize a data set (a collection of data in the form of responses received after conducting a survey, or the results of observations made from a sample.</p><p></p><p><strong>Types of descriptive statistics </strong></p><p>There are three main types of descriptive statistics :</p><p> 1. Distribution:  The frequency of occurrence of each value. A dataset must have a distribution of values or scores. You can summarize the number of times a variable's value appears in a table or graph, either numerically or as a percentage. </p><p></p><p>2. Central tendency : This is related to the average of the obtained values. This measure of central tendency is useful for estimating the center or average of a data set. The <strong>mean</strong>, median, and mode are available methods. </p><p></p><p>3. Variability/Dispersion: This relates to how widely the values obtained are spread out. A measure of the variability of information about the degree of variability in the value of variables obtained after research or observation. Range, <strong>standard deviation</strong>, and variance represent different aspects of the value distribution. </p><p></p><p><strong>These are advantages of descriptive statistics :</strong> </p><p>1. Descriptive statistics are very useful when presenting data. </p><p>Give an overview and explain how the information in the data sets works. Descriptive statistics should be able to provide an idea of what information can be obtained from your data. It's more interesting to use graphs and tables than just numbers.</p><p> 2. What are the properties of the data.</p><p>Descriptive statistics also provide properties about the data used. This is important because the state data used affects any data analysis you perform. Understanding the characteristics can later lead to a more in-depth analysis and appropriate treatment. </p><p></p><p>Learn more about related information at https://brainly.ph/question/23778780 </p><p></p><p>#SPJ2</p><br />
+                                            <h2 class="ez-toc-section" id="logistics-is-the-set-of-activities-that-integrate-coordinate-and-control-the-physical-flow-of-materials-and-information-in-the-phases-of-purchase-storage-material-handling-movement-distribution">
+                            13. Logistics is the set of activities that integrate, coordinate and control the physical flow of materials and information, in the phases of: Purchase; Storage; Material handling; Movement; Distribution and Transport. Within this broad vision, operations are divided into three areas: (i) acquisition (supply logistics); (ii) production support (production logistics); and (iii) distribution to the market (distribution logistics). In today's corporate world, after-sales operation, or reverse logistics, must be included. The integration of logistics subsystems, ensuring strategic alignment, better level (quality) of service and cost reduction, is called as: Select an alternative: a) Supply Chain b) Value Chain c) Business Logistics d) Strategic Logistics e) Integrated logistics ​</h2><br />
+                        <p><strong>Answer:</strong></p>The <strong>integration of logistics</strong> subsystems, ensuring strategic alignment, the best level of service and cost reduction, is called: integrated logistics. What is shown in letter <strong>E</strong><p><strong>Explanation:</strong></p>What is Integrated logistics?<p>Integrated logistics encompasses the interaction between all supply chain processes, so the objective of integrated logistics is to connect all points in the production and distribution chain.</p><p></p><p><strong>Among the characteristics</strong> of integrated logistics, we can mention:</p><strong>materials management;</strong><strong>material handling;</strong><strong>physical distribution.</strong><p></p><p>Just comment if you have questions :)</p><p>Hope it helps ^_^</p><br />
+                                            <h2 class="ez-toc-section" id="reflective-questionswhy-do-you-think-there-were-progress-or-regress-in-your-physical-fitness-assessment-resultswhat-training-guidelines-and-principles-affected-these-effects%e2%80%8b">
+                            14. Reflective Questions:Why do you think there were progress or regress in your physical fitness assessment results?What training guidelines and principles affected these effects?​</h2><br />
+                        <p><strong>Answer:</strong></p><p>B and is not a good thing for that reason matter as it has been a long day time for since you have read in the past that you can use for to make create a a new life and make you feel a a little better bit more of a the way you are asked </p><br />
+                                            <h2 class="ez-toc-section" id="2-the-ability-to-become-and-stay-physically-healthy-refers-toa-family-wellnessb-health-related-fitnessc-health-regressiond-skill-related-fitness%e2%80%8b">
+                            15. 2. The ability to become and stay physically healthy refers toa. Family wellnessb. Health-related Fitnessc. Health regressiond. Skill-related fitness​</h2><br />
+                        <p><strong>Answer:</strong></p><p>B</p><p><strong>Explanation:</strong></p><p> I'm sure it's the answer is B.☺️</p><p></p><br />
+                                            <h2 class="ez-toc-section" id="a-regression-model-relating-the-number-of-salespersons-at-a-branch-office-to-annual-sales-at-the-office-in-thousands-of-dollars-provided-the-following-regression-output-write-the-estimated-regressi">
+                            16. A regression model relating the number of salespersons at a branch office to annual sales at the office (in thousands of dollars) provided the following regression output. write the estimated regression equation. 20</h2><br />
+                        <p><strong>Answer:</strong></p><p>Thanks sa point</p><p>Thanks sa point</p><p><strong>Step-by-step explanation:</strong></p><p>Pa BRAINLIEST nalng po</p><p><strong>Answer:</strong></p><p>Thanks sa points </p><p>thanks sa points</p><p><strong>Step-by-step explanation:</strong></p><p>brainliest! 79</p><br />
+                                            <h2 class="ez-toc-section" id="which-of-the-following-is-true-about-logistic-regression">
+                            17. Which of the following is true about logistic regression?</h2><br />
+                        <p><strong>Answer:</strong></p><p>Logistic regression can be used for modeling the predicted categorical or continuous variable and dichotomous response variable. The correct option is: Logistic regression can be used for modeling the dichotomous response variable with categorical explanatory variables or continuous explanatory variables.</p><p><strong>Explanation:</strong></p><p>Hope it helps, it base on my research! Thanks and Be Strong! </p><br />
+                                            <h2 class="ez-toc-section" id="why-should-logistics-cost-be-considered-in-logistics-and-distribution-%e2%80%8b">
+                            18. Why should logistics cost be considered in logistics and distribution? *​</h2><br />
+                        <p><strong>Answer:</strong></p><p>Logistics is an essential component of supply chain management.Companies see logistics as a critical blueprint of the supply chain. It is used to manage, coordinate and monitor resources needed to move products in a smooth, timely, cost-effective and reliable manner.While a distribution channel may seem endless at times, there are three main types of channels, all of which include the combination of a producer, wholesaler, retailer, and end consumer. The first channel is the longest because it includes all four: producer, wholesaler, retailer, and consumer,that's why logisticas cost is considered in logistics and distribution because they are both need  and connected to each other to perform the job right.</p><p></p><p>-Hans</p><br />
+                                            <h2 class="ez-toc-section" id="a-measure-of-goodness-of-fit-for-the-estimated-regression-equation-is-the">
+                            19. A measure of goodness of fit for the estimated regression equation is the</h2><br />
+                        <p><strong>Answer:</strong></p><p>R squared, the proportion of variation in the outcome Y, explained by the covariates X, is commonly described as a measure of goodness of fit.</p><p></p><br />
+                                            <h2 class="ez-toc-section" id="48-which-of-the-following-statistical-technique-is-best-to-use-testing-more-than-two-population-means-a-pearson-r-b-regression-c-t-test-for-dependent-samples-d-anova-a%e2%80%8b">
+                            20. 48. Which of the following statistical technique is best to use testing more than Two Population Means? A. Pearson R b. Regression C. T-Test for dependent samples d. ANOVA a​</h2><br />
+                        <p><strong>Answer:</strong></p><p>C.po</p><p></p>✨ Carry on learning ✨<p></p>#Jenlisa is forever<p></p><br />
+                                            <h2 class="ez-toc-section" id="a-person-or-company-that-undertakes-a-professional-conveyance-of-goods-or-peoplea-carrierb-delivery-officerc-logistic-officerd-shipper">
+                            21. A person or company that undertakes a professional conveyance of goods or people
+A. Carrier
+B. Delivery Officer
+C. Logistic Officer
+D. Shipper</h2><br />
+                        <p><strong>Answer:</strong></p><p>A. Carrier</p><p></p><p><strong>Explanation:</strong></p><p>Sana po makatulong. </p><br />
+                                            <h2 class="ez-toc-section" id="compare-and-contrast-centralized-logistics-management-and-decentralized-logistics-management%e2%80%8b">
+                            22. Compare and contrast centralized logistics management and decentralized logistics management​</h2><br />
+                        <p><strong>Answer:</strong></p><p>yan Po Ang sagot </p><p></p><p><strong>Explanation:</strong></p><p>jdjdjsiiwk</p><br />
+                                            <h2 class="ez-toc-section" id="as-the-goodness-of-fit-for-the-estimated-regression-equation-increases-the">
+                            23. As the goodness of fit for the estimated regression equation increases, the</h2><br />
+                        <p><strong>Answer:</strong></p><p>A measure of the goodness of fit of the estimated multiple regression equation that adjusts for the number of independent variables in the model and thus </p><p><strong></strong></p><p></p><br />
+                                            <h2 class="ez-toc-section" id="module-17-1-activity-1-write-true-or-false-given-the-following-statements-the-regression-line-is-the-same-as-the-trend-line-or-the-line-that-%e2%80%9cbest-fit%e2%80%9d-in-the-scatterplot-2-the-de">
+                            24. Module 17 1. Activity 1: Write TRUE or FALSE given the following statements. The regression line is the same as the trend line or the line that “best fit” in the scatterplot. 2. The dependent variable is x while the independent variable is y. 3. In the equation Y' = bX + a, b is the slope of the regression line. 4. To predict the value of Y', we substitute the given value of X in the equation. 5. If the slope is negative, the graph of the regression line is increasing.​</h2><br />
+                        <p><strong>Answer:</strong></p>truefalse(kasi ang indepent variable belongs to x _axistruefalsefalse<br />
+                                            <h2 class="ez-toc-section" id="what-are-the-components-of-the-logistics-circle-what-possible-problems-can-companies-encounter-in-managing-their-logistics-%e2%80%8b">
+                            25. What are the components of the logistics circle? What possible problems can companies encounter in managing their logistics? ​</h2><br />
+                        <p><strong>Answer:</strong></p><p></p><p>Top 8 Logistics Challenges Facing the Industry – </p><p></p>DDC FPOFuel Costs. ...Business Process Improvement. ...Improved Customer Service. ...<p>     Economy.</p><p>    5. Driver Shortage &amp; Retention. ..</p><p>    6.Government Regulations. ...</p><p>    7. Environmental Issues. ...</p><p>    8. Technology Strategy &amp; Implementation.</p><br />
+                                            <h2 class="ez-toc-section" id="what-i-know-2-the-ability-to-become-and-stay-physically-healthy-refers-to-______a-family-wellness-b-health-related-fitness-c-health-regressiond-skill-related-fitness%e2%80%8b">
+                            26.          (What I Know )2.the ability to become and stay physically healthy refers to ______a.family wellness b.health related fitness c.health regressiond.skill related fitness​</h2><br />
+                        <p><strong>Answer:</strong></p><p>You need more lessons son</p><p></p><p></p><br />
+                                            <h2 class="ez-toc-section" id="how-would-exercise-regressions-and-progressions-benefit-us-in-our-fitness-and-health">
+                            27. How would exercise regressions and progressions benefit us in our fitness and health?</h2><br />
+                        <p><strong>Explanation:</strong></p><p>it helps us to be stay fit ,healthy ,and good body posture</p><br />
+                                            <h2 class="ez-toc-section" id="linear-regression-is-a-statistical-regression-method-which-is-used-for-_____">
+                            28.  Linear regression is a statistical regression method which is used for _____.</h2><br />
+                        <p><strong>Answer:</strong></p><p>Linear regression is a statistical regression method which is used in finance, investing, and other disciplines that attempts to determine the strength and character of the relationship between one dependent variable (usually denoted by Y) and a series of other variables (known as independent variables).</p><p><strong>Step-by-step explanation:</strong></p><p>pa brainliest po tnx!</p><p><strong>Answer:</strong></p><p>tulog nq bukas nayan night </p><p></p><br />
+                                            <h2 class="ez-toc-section" id="the-following-includes-inferential-statistics-except-a-t-testsb-anovas-c-multiple-regression-correlations-d-frequency-and-percentage%e2%80%8b">
+                            29.  The following includes inferential statistics except:   a. t-tests	b. ANOVAs	    c. Multiple regression correlations 	d.Frequency and percentage​</h2><br />
+                        <p>d. Frequency and percentage</p><br />
+                                            <h2 class="ez-toc-section" id="1-it-is-used-to-solve-problems-that-concern-estimation-and-forecastinga-linear-regressionb-coirelational-testc-regression-analysisd-none-of-the-above%e2%80%8b">
+                            30. 1. It is used to solve problems that concern estimation and forecastingA. Linear regressionB. Coirelational testC. Regression analysisD. None of the above​</h2><br />
+                        <p><strong>Answer:</strong></p><p>B or C </p><p></p><p><strong>Step-by-step explanation:</strong></p><p>Keep the good work  </p><br />
+                    
+                </div>
+                <div class="youtubeVideo" style="text-align: center">
+                    <h3>Video Terkait</h3>
+                    <iframe width="560" height="315"
+                        src="https://www.youtube.com/embed/fCio3vw6yJM?controls=0" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"allowfullscreen></iframe>
+                </div>
+                <footer class="entry-meta" aria-label="Meta postingan">
+                    <span class="cat-links"><span class="gp-icon icon-categories"><svg viewBox="0 0 512 512"
+                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em">
+                                <path
+                                    d="M0 112c0-26.51 21.49-48 48-48h110.014a48 48 0 0143.592 27.907l12.349 26.791A16 16 0 00228.486 128H464c26.51 0 48 21.49 48 48v224c0 26.51-21.49 48-48 48H48c-26.51 0-48-21.49-48-48V112z">
+                                </path>
+                            </svg></span><span class="screen-reader-text">Kategori </span>science</span>
+            </div>
+        </article>
+    </main>
+            </div>
+            <div class="widget-area sidebar is-right-sidebar" id="right-sidebar">
+                <div class="inside-right-sidebar">
+                    <aside id="categories-2" class="widget inner-padding widget_categories">
+                        <h2 class="widget-title">Topik</h2>
+                        <ul>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/needle-gauge-for-blood-transfusion.html">Needle Gauge For Blood Transfusion</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/the-official-phreaker-s-manual.html">The Official Phreaker s Manual</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/bow-s-notation-graphical-method.html">Bow s Notation Graphical Method</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/filipino-collage.html">Filipino Collage</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/formulating-evaluative-statements.html">Formulating Evaluative Statements</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/categories-of-client-server-applications-ppt.html">Categories Of Client Server Applications Ppt</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/diktador-ng-roma.html">Diktador Ng Roma</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/liquid-s-resistance-to-flow.html">Liquid s Resistance To Flow</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/microcyclic.html">Microcyclic</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/goodell-s-reading-skills-ladder.html">Goodell s Reading Skills Ladder</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/boyle-s-law-data-table.html">Boyle s Law Data Table</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/let-s-apply-it.html">Let s Apply It</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/what-are-the-3-metaphors-of-globalization.html">What Are The 3 Metaphors Of Globalization</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/influenced-traits-definition.html">Influenced Traits Definition</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/biggest-communication-problem.html">Biggest Communication Problem</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/balitaw-awiting-bayan.html">Balitaw Awiting Bayan</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/intedes.html">Intedes</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/undefy.html">Undefy</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/diode-application-problems-and-solutions-pdf.html">Diode Application Problems And Solutions Pdf</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/four-p-s-project-management.html">Four P s Project Management</a>
+                                </li>
+                                                    </ul>
+
+                    </aside>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="site-footer">
+        <footer class="site-info" aria-label="Situs" itemtype="https://schema.org/WPFooter" itemscope>
+            <div class="inside-site-info grid-container">
+                <div class="copyright-bar">
+                    <span class="copyright">&copy; 2023 <a href="https://jneweducation.github.io"
+                            itemprop="url">QnA</a></span>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <a title="Gulirkan kembali ke puncak laman" aria-label="Gulirkan kembali ke puncak laman" rel="nofollow"
+        href="#" class="generate-back-to-top" data-scroll-speed="400" data-start-scroll="300">
+        <span class="gp-icon icon-arrow-up"><svg viewBox="0 0 330 512" aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill-rule="evenodd"
+                clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414">
+                <path
+                    d="M305.863 314.916c0 2.266-1.133 4.815-2.832 6.514l-14.157 14.163c-1.699 1.7-3.964 2.832-6.513 2.832-2.265 0-4.813-1.133-6.512-2.832L164.572 224.276 53.295 335.593c-1.699 1.7-4.247 2.832-6.512 2.832-2.265 0-4.814-1.133-6.513-2.832L26.113 321.43c-1.699-1.7-2.831-4.248-2.831-6.514s1.132-4.816 2.831-6.515L158.06 176.408c1.699-1.7 4.247-2.833 6.512-2.833 2.265 0 4.814 1.133 6.513 2.833L303.03 308.4c1.7 1.7 2.832 4.249 2.832 6.515z"
+                    fill-rule="nonzero" />
+            </svg></span>
+    </a>
+    <script id="generate-a11y">
+        ! function() {
+            "use strict";
+            if ("querySelector" in document && "addEventListener" in window) {
+                var e = document.body;
+                e.addEventListener("mousedown", function() {
+                    e.classList.add("using-mouse")
+                }), e.addEventListener("keydown", function() {
+                    e.classList.remove("using-mouse")
+                })
+            }
+        }();
+    </script>
+    <!--[if lte IE 11]>
+<script src='https://jneweducation.github.io/js/classList.min.js' ?ver=3.2.4' id='generate-classlist-js'></script>
+<![endif]-->
+    <script id='generate-menu-js-extra'>
+        var generatepressMenu = {
+            "toggleOpenedSubMenus": "1",
+            "openSubMenuLabel": "Buka Submenu",
+            "closeSubMenuLabel": "Tutup submenu"
+        };
+    </script>
+    <script src='https://jneweducation.github.io/js/menu.min.js' ?ver=3.2.4' id='generate-menu-js'></script>
+    <script id='generate-navigation-search-js-extra'>
+        var generatepressNavSearch = {
+            "open": "Buka Kolom Pencarian",
+            "close": "Tutup Kolom Pencarian"
+        };
+    </script>
+    <script src='https://jneweducation.github.io/js/navigation-search.min.js' ?ver=3.2.4' id='generate-navigation-search-js'></script>
+    <script id='generate-back-to-top-js-extra'>
+        var generatepressBackToTop = {
+            "smooth": "1"
+        };
+    </script>
+    <script src='https://jneweducation.github.io/js/back-to-top.min.js' ?ver=3.2.4' id='generate-back-to-top-js'></script>
+    <script type='text/javascript' src='//jd3j7g5z1fqs.com/96/78/7a/96787a1945876b1a9c10f79941441964.js'></script>
+<script type='text/javascript' src='//jd3j7g5z1fqs.com/b4/f1/ef/b4f1ef8dfe59b7fa68754094cf6c8e0e.js'></script>
+  <!-- Histats.com  START  (aync)-->
+<script type="text/javascript">var _Hasync= _Hasync|| [];
+_Hasync.push(['Histats.start', '1,4739059,4,0,0,0,00010000']);
+_Hasync.push(['Histats.fasi', '1']);
+_Hasync.push(['Histats.track_hits', '']);
+(function() {
+var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
+hs.src = ('//s10.histats.com/js15_as.js');
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+})();</script>
+<noscript><a href="/" target="_blank"><img  src="//sstatic1.histats.com/0.gif?4739059&101" alt="" border="0"></a></noscript>
+<!-- Histats.com  END  -->
+</body>
+
+</html>

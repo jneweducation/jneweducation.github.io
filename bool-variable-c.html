@@ -1,0 +1,1221 @@
+<!DOCTYPE html>
+<html lang="id" prefix="og: https://ogp.me/ns#">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="profile" href="https://gmpg.org/xfn/11">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bool Variable C++ - QnA</title>
+    <meta name="description" content="Bool Variable C++, Boolean function example (C++ programming tutorial), , , , Engineer4Free, 2015-08-26T18:00:00.000000Z, 20, Boolean Data Types (in C) - YouTube, www.youtube.com, 1280 x 720, jpeg, , 20, bool-variable-c, QnA" />
+    <meta name="robots" content="index,follow" />
+    <meta property="og:locale" content="id_ID" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Bool Variable C++ - QnA" />
+    <meta property="og:description" content="Bool Variable C++, Boolean function example (C++ programming tutorial), , , , Engineer4Free, 2015-08-26T18:00:00.000000Z, 20, Boolean Data Types (in C) - YouTube, www.youtube.com, 1280 x 720, jpeg, , 20, bool-variable-c, QnA" />
+    <meta property="og:site_name" content="QnA" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Bool Variable C++ - QnA" />
+    <meta name="twitter:description" content="Bool Variable C++, Boolean function example (C++ programming tutorial), , , , Engineer4Free, 2015-08-26T18:00:00.000000Z, 20, Boolean Data Types (in C) - YouTube, www.youtube.com, 1280 x 720, jpeg, , 20, bool-variable-c, QnA" />
+    <link rel='stylesheet' id='generate-style-css' href='https://jneweducation.github.io/css/main.min.css'?ver=3.2.4'
+        media='all' />
+    <link rel='stylesheet' id='ez-toc-css' href='https://jneweducation.github.io/css/screen.min.css'?ver=2.0.40' media='all' />
+    <style id='generate-style-inline-css'>
+        body {
+            background-color: #f7f7f7;
+            color: #222222;
+        }
+
+        a {
+            color: #1e73be;
+        }
+
+        a:hover,
+        a:focus,
+        a:active {
+            color: #000000;
+        }
+
+        .wp-block-group__inner-container {
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .generate-back-to-top {
+            font-size: 20px;
+            border-radius: 3px;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            line-height: 40px;
+            width: 40px;
+            text-align: center;
+            z-index: 10;
+            transition: opacity 300ms ease-in-out;
+            opacity: 0.1;
+            transform: translateY(1000px);
+        }
+
+        .generate-back-to-top__show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .navigation-search {
+            position: absolute;
+            left: -99999px;
+            pointer-events: none;
+            visibility: hidden;
+            z-index: 20;
+            width: 100%;
+            top: 0;
+            transition: opacity 100ms ease-in-out;
+            opacity: 0;
+        }
+
+        .navigation-search.nav-search-active {
+            left: 0;
+            right: 0;
+            pointer-events: auto;
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .navigation-search input[type="search"] {
+            outline: 0;
+            border: 0;
+            vertical-align: bottom;
+            line-height: 1;
+            opacity: 0.9;
+            width: 100%;
+            z-index: 20;
+            border-radius: 0;
+            -webkit-appearance: none;
+            height: 60px;
+        }
+
+        .navigation-search input::-ms-clear {
+            display: none;
+            width: 0;
+            height: 0;
+        }
+
+        .navigation-search input::-ms-reveal {
+            display: none;
+            width: 0;
+            height: 0;
+        }
+
+        .navigation-search input::-webkit-search-decoration,
+        .navigation-search input::-webkit-search-cancel-button,
+        .navigation-search input::-webkit-search-results-button,
+        .navigation-search input::-webkit-search-results-decoration {
+            display: none;
+        }
+
+        .gen-sidebar-nav .navigation-search {
+            top: auto;
+            bottom: 0;
+        }
+
+        :root {
+            --contrast: #222222;
+            --contrast-2: #575760;
+            --contrast-3: #b2b2be;
+            --base: #f0f0f0;
+            --base-2: #f7f8f9;
+            --base-3: #ffffff;
+            --accent: #1e73be;
+        }
+
+        .has-contrast-color {
+            color: var(--contrast);
+        }
+
+        .has-contrast-background-color {
+            background-color: var(--contrast);
+        }
+
+        .has-contrast-2-color {
+            color: var(--contrast-2);
+        }
+
+        .has-contrast-2-background-color {
+            background-color: var(--contrast-2);
+        }
+
+        .has-contrast-3-color {
+            color: var(--contrast-3);
+        }
+
+        .has-contrast-3-background-color {
+            background-color: var(--contrast-3);
+        }
+
+        .has-base-color {
+            color: var(--base);
+        }
+
+        .has-base-background-color {
+            background-color: var(--base);
+        }
+
+        .has-base-2-color {
+            color: var(--base-2);
+        }
+
+        .has-base-2-background-color {
+            background-color: var(--base-2);
+        }
+
+        .has-base-3-color {
+            color: var(--base-3);
+        }
+
+        .has-base-3-background-color {
+            background-color: var(--base-3);
+        }
+
+        .has-accent-color {
+            color: var(--accent);
+        }
+
+        .has-accent-background-color {
+            background-color: var(--accent);
+        }
+
+        body,
+        button,
+        input,
+        select,
+        textarea {
+            font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        }
+
+        body {
+            line-height: 1.5;
+        }
+
+        .entry-content>[class*="wp-block-"]:not(:last-child) {
+            margin-bottom: 1.5em;
+        }
+
+        .main-navigation .main-nav ul ul li a {
+            font-size: 14px;
+        }
+
+        .sidebar .widget,
+        .footer-widgets .widget {
+            font-size: 17px;
+        }
+
+        @media (max-width:768px) {
+            h1 {
+                font-size: 31px;
+            }
+
+            h2 {
+                font-size: 27px;
+            }
+
+            h3 {
+                font-size: 24px;
+            }
+
+            h4 {
+                font-size: 22px;
+            }
+
+            h5 {
+                font-size: 19px;
+            }
+        }
+
+        .top-bar {
+            background-color: #636363;
+            color: #ffffff;
+        }
+
+        .top-bar a {
+            color: #ffffff;
+        }
+
+        .top-bar a:hover {
+            color: #303030;
+        }
+
+        .site-header {
+            background-color: #ffffff;
+        }
+
+        .main-title a,
+        .main-title a:hover {
+            color: #222222;
+        }
+
+        .site-description {
+            color: #757575;
+        }
+
+        .main-navigation,
+        .main-navigation ul ul {
+            background-color: #ed4250;
+        }
+
+        .main-navigation .main-nav ul li a,
+        .main-navigation .menu-toggle,
+        .main-navigation .menu-bar-items {
+            color: #ffffff;
+        }
+
+        .main-navigation .main-nav ul li:not([class*="current-menu-"]):hover>a,
+        .main-navigation .main-nav ul li:not([class*="current-menu-"]):focus>a,
+        .main-navigation .main-nav ul li.sfHover:not([class*="current-menu-"])>a,
+        .main-navigation .menu-bar-item:hover>a,
+        .main-navigation .menu-bar-item.sfHover>a {
+            color: #ffffff;
+            background-color: #c42f2f;
+        }
+
+        button.menu-toggle:hover,
+        button.menu-toggle:focus {
+            color: #ffffff;
+        }
+
+        .main-navigation .main-nav ul li[class*="current-menu-"]>a {
+            color: #ffffff;
+            background-color: #c42f2f;
+        }
+
+        .navigation-search input[type="search"],
+        .navigation-search input[type="search"]:active,
+        .navigation-search input[type="search"]:focus,
+        .main-navigation .main-nav ul li.search-item.active>a,
+        .main-navigation .menu-bar-items .search-item.active>a {
+            color: #ffffff;
+            background-color: #c42f2f;
+        }
+
+        .main-navigation ul ul {
+            background-color: #c42f2f;
+        }
+
+        .main-navigation .main-nav ul ul li a {
+            color: #ffffff;
+        }
+
+        .main-navigation .main-nav ul ul li:not([class*="current-menu-"]):hover>a,
+        .main-navigation .main-nav ul ul li:not([class*="current-menu-"]):focus>a,
+        .main-navigation .main-nav ul ul li.sfHover:not([class*="current-menu-"])>a {
+            color: #fcd9d6;
+            background-color: #c42f2f;
+        }
+
+        .main-navigation .main-nav ul ul li[class*="current-menu-"]>a {
+            color: #fcd9d6;
+            background-color: #c42f2f;
+        }
+
+        .separate-containers .inside-article,
+        .separate-containers .comments-area,
+        .separate-containers .page-header,
+        .one-container .container,
+        .separate-containers .paging-navigation,
+        .inside-page-header {
+            background-color: #ffffff;
+        }
+
+        .entry-title a {
+            color: #222222;
+        }
+
+        .entry-title a:hover {
+            color: #55555e;
+        }
+
+        .entry-meta {
+            color: #595959;
+        }
+
+        .sidebar .widget {
+            background-color: #ffffff;
+        }
+
+        .footer-widgets {
+            background-color: #ffffff;
+        }
+
+        .footer-widgets .widget-title {
+            color: #000000;
+        }
+
+        .site-info {
+            color: #ffffff;
+            background-color: #55555e;
+        }
+
+        .site-info a {
+            color: #ffffff;
+        }
+
+        .site-info a:hover {
+            color: #d3d3d3;
+        }
+
+        .footer-bar .widget_nav_menu .current-menu-item a {
+            color: #d3d3d3;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="url"],
+        input[type="password"],
+        input[type="search"],
+        input[type="tel"],
+        input[type="number"],
+        textarea,
+        select {
+            color: #666666;
+            background-color: #fafafa;
+            border-color: #cccccc;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="url"]:focus,
+        input[type="password"]:focus,
+        input[type="search"]:focus,
+        input[type="tel"]:focus,
+        input[type="number"]:focus,
+        textarea:focus,
+        select:focus {
+            color: #666666;
+            background-color: #ffffff;
+            border-color: #bfbfbf;
+        }
+
+        button,
+        html input[type="button"],
+        input[type="reset"],
+        input[type="submit"],
+        a.button,
+        a.wp-block-button__link:not(.has-background) {
+            color: #ffffff;
+            background-color: #55555e;
+        }
+
+        button:hover,
+        html input[type="button"]:hover,
+        input[type="reset"]:hover,
+        input[type="submit"]:hover,
+        a.button:hover,
+        button:focus,
+        html input[type="button"]:focus,
+        input[type="reset"]:focus,
+        input[type="submit"]:focus,
+        a.button:focus,
+        a.wp-block-button__link:not(.has-background):active,
+        a.wp-block-button__link:not(.has-background):focus,
+        a.wp-block-button__link:not(.has-background):hover {
+            color: #ffffff;
+            background-color: #3f4047;
+        }
+
+        a.generate-back-to-top {
+            background-color: rgba(0, 0, 0, 0.4);
+            color: #ffffff;
+        }
+
+        a.generate-back-to-top:hover,
+        a.generate-back-to-top:focus {
+            background-color: rgba(0, 0, 0, 0.6);
+            color: #ffffff;
+        }
+
+        @media (max-width:768px) {
+
+            .main-navigation .menu-bar-item:hover>a,
+            .main-navigation .menu-bar-item.sfHover>a {
+                background: none;
+                color: #ffffff;
+            }
+        }
+
+        .nav-below-header .main-navigation .inside-navigation.grid-container,
+        .nav-above-header .main-navigation .inside-navigation.grid-container {
+            padding: 0px 20px 0px 20px;
+        }
+
+        .site-main .wp-block-group__inner-container {
+            padding: 40px;
+        }
+
+        .separate-containers .paging-navigation {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .entry-content .alignwide,
+        body:not(.no-sidebar) .entry-content .alignfull {
+            margin-left: -40px;
+            width: calc(100% + 80px);
+            max-width: calc(100% + 80px);
+        }
+
+        .rtl .menu-item-has-children .dropdown-menu-toggle {
+            padding-left: 20px;
+        }
+
+        .rtl .main-navigation .main-nav ul li.menu-item-has-children>a {
+            padding-right: 20px;
+        }
+
+        @media (max-width:768px) {
+
+            .separate-containers .inside-article,
+            .separate-containers .comments-area,
+            .separate-containers .page-header,
+            .separate-containers .paging-navigation,
+            .one-container .site-content,
+            .inside-page-header {
+                padding: 30px;
+            }
+
+            .site-main .wp-block-group__inner-container {
+                padding: 30px;
+            }
+
+            .inside-top-bar {
+                padding-right: 30px;
+                padding-left: 30px;
+            }
+
+            .inside-header {
+                padding-right: 30px;
+                padding-left: 30px;
+            }
+
+            .widget-area .widget {
+                padding-top: 30px;
+                padding-right: 30px;
+                padding-bottom: 30px;
+                padding-left: 30px;
+            }
+
+            .footer-widgets-container {
+                padding-top: 30px;
+                padding-right: 30px;
+                padding-bottom: 30px;
+                padding-left: 30px;
+            }
+
+            .inside-site-info {
+                padding-right: 30px;
+                padding-left: 30px;
+            }
+
+            .entry-content .alignwide,
+            body:not(.no-sidebar) .entry-content .alignfull {
+                margin-left: -30px;
+                width: calc(100% + 60px);
+                max-width: calc(100% + 60px);
+            }
+
+            .one-container .site-main .paging-navigation {
+                margin-bottom: 20px;
+            }
+        }
+
+        /* End cached CSS */
+        .is-right-sidebar {
+            width: 30%;
+        }
+
+        .is-left-sidebar {
+            width: 30%;
+        }
+
+        .site-content .content-area {
+            width: 70%;
+        }
+
+        @media (max-width:768px) {
+
+            .main-navigation .menu-toggle,
+            .sidebar-nav-mobile:not(#sticky-placeholder) {
+                display: block;
+            }
+
+            .main-navigation ul,
+            .gen-sidebar-nav,
+            .main-navigation:not(.slideout-navigation):not(.toggled) .main-nav>ul,
+            .has-inline-mobile-toggle #site-navigation .inside-navigation>*:not(.navigation-search):not(.main-nav) {
+                display: none;
+            }
+
+            .nav-align-right .inside-navigation,
+            .nav-align-center .inside-navigation {
+                justify-content: space-between;
+            }
+        }
+    </style>
+    <link rel="icon" href="https://jneweducation.github.io/img/cropped-soalbelajar-32x32.png" sizes="32x32" />
+    <link rel="icon" href="https://jneweducation.github.io/img/cropped-soalbelajar-192x192.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="https://jneweducation.github.io/img/cropped-soalbelajar-180x180.png" />
+    <meta name="msapplication-TileImage" content="https://jneweducation.github.io/img/cropped-soalbelajar-270x270.png" />
+</head>
+
+<body
+    class="home blog wp-custom-logo wp-embed-responsive right-sidebar nav-above-header separate-containers nav-search-enabled nav-aligned-center header-aligned-center dropdown-hover"
+    itemtype="https://schema.org/Blog" itemscope>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-dark-grayscale">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 0.49803921568627" />
+                    <feFuncG type="table" tableValues="0 0.49803921568627" />
+                    <feFuncB type="table" tableValues="0 0.49803921568627" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-grayscale">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 1" />
+                    <feFuncG type="table" tableValues="0 1" />
+                    <feFuncB type="table" tableValues="0 1" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-purple-yellow">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.54901960784314 0.98823529411765" />
+                    <feFuncG type="table" tableValues="0 1" />
+                    <feFuncB type="table" tableValues="0.71764705882353 0.25490196078431" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-blue-red">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 1" />
+                    <feFuncG type="table" tableValues="0 0.27843137254902" />
+                    <feFuncB type="table" tableValues="0.5921568627451 0.27843137254902" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-midnight">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 0" />
+                    <feFuncG type="table" tableValues="0 0.64705882352941" />
+                    <feFuncB type="table" tableValues="0 1" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-magenta-yellow">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.78039215686275 1" />
+                    <feFuncG type="table" tableValues="0 0.94901960784314" />
+                    <feFuncB type="table" tableValues="0.35294117647059 0.47058823529412" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-purple-green">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.65098039215686 0.40392156862745" />
+                    <feFuncG type="table" tableValues="0 1" />
+                    <feFuncB type="table" tableValues="0.44705882352941 0.4" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-blue-orange">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.098039215686275 1" />
+                    <feFuncG type="table" tableValues="0 0.66274509803922" />
+                    <feFuncB type="table" tableValues="0.84705882352941 0.41960784313725" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><a class="screen-reader-text skip-link" href="#content" title="Langsung ke isi">Langsung ke isi</a>
+    <nav class="main-navigation nav-align-center has-menu-bar-items sub-menu-right" id="site-navigation"
+        aria-label="Utama" itemtype="https://schema.org/SiteNavigationElement" itemscope>
+        <div class="inside-navigation grid-container">
+            <form method="get" class="search-form navigation-search" action="/">
+                <input type="search" class="search-field" value="" name="q" title="Cari" />
+            </form> <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+                <span class="gp-icon icon-menu-bars"><svg viewBox="0 0 512 512" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" width="1em" height="1em">
+                        <path
+                            d="M0 96c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24zm0 160c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24zm0 160c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24z" />
+                    </svg><svg viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                        width="1em" height="1em">
+                        <path
+                            d="M71.029 71.029c9.373-9.372 24.569-9.372 33.942 0L256 222.059l151.029-151.03c9.373-9.372 24.569-9.372 33.942 0 9.372 9.373 9.372 24.569 0 33.942L289.941 256l151.03 151.029c9.372 9.373 9.372 24.569 0 33.942-9.373 9.372-24.569 9.372-33.942 0L256 289.941l-151.029 151.03c-9.373 9.372-24.569 9.372-33.942 0-9.372-9.373-9.372-24.569 0-33.942L222.059 256 71.029 104.971c-9.372-9.373-9.372-24.569 0-33.942z" />
+                    </svg></span><span class="mobile-menu">Menu</span> </button>
+            <div id="primary-menu" class="main-nav">
+                <ul id="menu-soal-belajar" class=" menu sf-menu">
+                    <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1"><a
+                            href="https://jneweducation.github.io">Home</a></li>
+                </ul>
+                </ul>
+            </div>
+            <div class="menu-bar-items"><span class="menu-bar-item search-item"><a aria-label="Buka Kolom Pencarian"
+                        href="#"><span class="gp-icon icon-search"><svg viewBox="0 0 512 512"
+                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M208 48c-88.366 0-160 71.634-160 160s71.634 160 160 160 160-71.634 160-160S296.366 48 208 48zM0 208C0 93.125 93.125 0 208 0s208 93.125 208 208c0 48.741-16.765 93.566-44.843 129.024l133.826 134.018c9.366 9.379 9.355 24.575-.025 33.941-9.379 9.366-24.575 9.355-33.941-.025L337.238 370.987C301.747 399.167 256.839 416 208 416 93.125 416 0 322.875 0 208z" />
+                            </svg><svg viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                width="1em" height="1em">
+                                <path
+                                    d="M71.029 71.029c9.373-9.372 24.569-9.372 33.942 0L256 222.059l151.029-151.03c9.373-9.372 24.569-9.372 33.942 0 9.372 9.373 9.372 24.569 0 33.942L289.941 256l151.03 151.029c9.372 9.373 9.372 24.569 0 33.942-9.373 9.372-24.569 9.372-33.942 0L256 289.941l-151.029 151.03c-9.373 9.372-24.569 9.372-33.942 0-9.372-9.373-9.372-24.569 0-33.942L222.059 256 71.029 104.971c-9.372-9.373-9.372-24.569 0-33.942z" />
+                            </svg></span></a></span></div>
+        </div>
+    </nav>
+    <header class="site-header grid-container" id="masthead" aria-label="Situs"
+        itemtype="https://schema.org/WPHeader" itemscope>
+        <div class="inside-header grid-container">
+            <h1 class="site-logo">
+                <a href="https://jneweducation.github.io" rel="home"> QnA</a>
+            </h1>
+        </div>
+    </header>
+
+    <div class="site grid-container container hfeed" id="page">
+        <div class="site-content" id="content">
+            <div class="content-area" id="primary">
+                    <main class="site-main" id="main">
+        <article id="post-1327" class="post-1327 post type-post status-publish format-standard hentry category-info"
+            itemtype="https://schema.org/CreativeWork" itemscope="">
+            <div class="inside-article">
+                <header class="entry-header" aria-label="Konten">
+                    <h1 class="entry-title" itemprop="headline">Bool Variable C++</h1>
+                    <div class="entry-meta">
+                       <span
+                            class="byline">oleh <span class="author vcard" itemprop="author"
+                                itemtype="https://schema.org/Person" itemscope=""><span class="author-name"
+                                    itemprop="name">sheilamaydaplas05</span></span></span>
+                    </div>
+                </header>
+                <div class="entry-content" itemprop="text">
+                    <div style="text-align: center">
+                        <img src="https://tse1.mm.bing.net/th?q=Bool+Variable+C%2B%2B" alt="Bool Variable C++">
+                    </div>
+                    <p></p>
+                    <p>1. ​Determine which sentence is a statement.​ a. ​Was George Boole born in Lincoln, England? b. ​Was George Boole a mathematician? c. ​George Boole was the best mathematician of his time. d. ​George Boole was born in 1815.​</p>
+                    <div id="ez-toc-container"
+                        class="ez-toc-v2_0_40 counter-hierarchy ez-toc-counter ez-toc-light-blue ez-toc-container-direction">
+                        <div class="ez-toc-title-container">
+                            <p class="ez-toc-title">Daftar Isi</p>
+                            <span class="ez-toc-title-toggle"><a href="#"
+                                    class="ez-toc-pull-right ez-toc-btn ez-toc-btn-xs ez-toc-btn-default ez-toc-toggle"
+                                    area-label="ez-toc-toggle-icon-1"><label for="item-63b392361c4a0"
+                                        aria-label="Table of Content"><span
+                                            style="display: flex;align-items: center;width: 35px;height: 30px;justify-content: center;direction:ltr;"><svg
+                                                style="fill: #999;color:#999" xmlns="http://www.w3.org/2000/svg"
+                                                class="list-377408" width="20px" height="20px" viewBox="0 0 24 24"
+                                                fill="none">
+                                                <path
+                                                    d="M6 6H4v2h2V6zm14 0H8v2h12V6zM4 11h2v2H4v-2zm16 0H8v2h12v-2zM4 16h2v2H4v-2zm16 0H8v2h12v-2z"
+                                                    fill="currentColor"></path>
+                                            </svg><svg style="fill: #999;color:#999" class="arrow-unsorted-368013"
+                                                xmlns="http://www.w3.org/2000/svg" width="10px" height="10px"
+                                                viewBox="0 0 24 24" version="1.2" baseProfile="tiny">
+                                                <path
+                                                    d="M18.2 9.3l-6.2-6.3-6.2 6.3c-.2.2-.3.4-.3.7s.1.5.3.7c.2.2.4.3.7.3h11c.3 0 .5-.1.7-.3.2-.2.3-.5.3-.7s-.1-.5-.3-.7zM5.8 14.7l6.2 6.3 6.2-6.3c.2-.2.3-.5.3-.7s-.1-.5-.3-.7c-.2-.2-.4-.3-.7-.3h-11c-.3 0-.5.1-.7.3-.2.2-.3.5-.3.7s.1.5.3.7z">
+                                                </path>
+                                            </svg></span></label><input type="checkbox" id="item-63b392361c4a0"></a></span>
+                        </div>
+                        <nav>
+                            <ul class="ez-toc-list ez-toc-list-level-1 ">
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#1-%e2%80%8bdetermine-which-sentence-is-a-statement-%e2%80%8b%c2%a0a-%c2%a0%e2%80%8bwas-george-boole-born-in-lincoln-england%c2%a0b-%c2%a0%e2%80%8bwas-george-boole-a-mathematician%c2%a0c-%c2%a0">1.
+                                            1. ​Determine which sentence is a statement.​ a. ​Was George Boole born in Lincoln, England? b. ​Was George Boole a mathematician? c. ​George Boole was the best mathematician of his time. d. ​George Boole was born in 1815.​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#give-2-example-of-specific-data-type-of-a-variable-shortcharstringbool-intdoublefloat%e2%80%8b">2.
+                                            give 2 example of specific data type of a variable, shortcharstringbool intdoublefloat​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#what-is-the-purpose-of-bool%e2%80%8b">3.
+                                            what is the purpose of bool​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#ayusin-ang-ginulong-mga-salitanow-na-thank-u1-sopat2-bool-solik-3-nayalamak-4-tonitsni5-ayromem-%e2%80%8b%e2%80%8b">4.
+                                            Ayusin ang ginulong mga salita:now na thank u1. SOPAT2. BOOL-SOLIK 3. NAYALAMAK 4. TONITSNI5. AYROMEM ​​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#ayusin-ang-mga-letra-sa-bawat-bilang1-gpapaysapa2-piis3-lkois-bool4-entolat5-ahbyu%e2%80%8b">5.
+                                            ayusin ang mga letra sa bawat bilang1.GPAPAYSAPA2.PIIS3.LKOIS BOOL4.ENTOLAT5.AHBYU​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#ayusin-ang-ginulong-mga-salita1-sopat2-bool-solik-3-nayalamak-4-tonitsni5-ayromem-%e2%80%8b">6.
+                                            Ayusin ang ginulong mga salita:1. SOPAT2. BOOL-SOLIK 3. NAYALAMAK 4. TONITSNI5. AYROMEM ​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#which-of-the-following-is-a-key-event-in-the-history-of-computers-in-1600s-a-charles-babbage-created-difference-engine-with-lovelace-b-a-calculator-that-can-print-by-burroughs-c-george-boole-inven">7.
+                                            Which of the following is a key event in the history of computers in 1600s? A. Charles Babbage created difference engine with Lovelace B. A calculator that can print by Burroughs C. George Boole invented Boolean logic D. Blaise Pascal’s creation of Pascaline ​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#8-how-are-you-going-to-keep-the-combo-gallon-have-longer-usability-bool-a-let-it-stay-in-the-rain-droo-b-put-it-under-the-sun-c-put-it-in-a-shaded-and-dry-area-d-have-the-children-play-with-it">8.
+                                            8. How are you going to keep the Combo Gallon have longer usability? bool A. Let it stay in the rain. Droo B. Put it under the sun. C. Put it in a shaded and dry area D. Have the children play with it. Ons ds nobene​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#place-the-bool-on-top-of-a-tableq-is-the-book-at-rest-or-in-motion%e2%80%8b">9.
+                                            Place the bool on top of a tableQ.Is The book at rest or in motion​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#din-bool-for-das-herbig-costatshe-has-ay-php-25-each-night-to-park-her-car-howbest-at-the-hotel556-36-b-php-675-50c-php-436-45%e2%80%8b">10.
+                                            din bool for das Herbig costatShe has ay Php 25 each night to park her car Howbest at the hotel?556.36 B. Php 675.50c. Php 436.45​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#tools-are-notperformance3hettoof-all-bools-arefollow-alldes-does-netedicesimale-le-2-sleylin-makingluse-property%e2%80%8b">11.
+                                            Tools are notPerformance3Hettoof All bools areFollow alldes. Does.netedicesimale le 2.sleylin makingluse property​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#who-is-the-father-of-cumputer-sciencea-george-booleb-herman-hollerithc-william-burroughsd-alan-keys%e2%80%8b">12.
+                                            who is the father of cumputer science?A.george booleB.herman hollerithC.william burroughsD.alan keys​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#explain-the-ff-data-types-intfloatboolstring">13.
+                                            Explain the ff. Data types.
+Int
+Float
+Bool
+String</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#determine-whether-the-following-is-valid-on-waldvariable-namestoint-x552-double-speedgochar-ch-4-bool-result-trues-bytel1-bytes-123bintich7-float-double-int9-char-55-b9-decimal-pi-3-141610">14.
+                                            Determine whether the following is valid on Waldvariable namesToint x552. Double speedgochar ch -4. Bool result trues. bytel1 bytes = (1,2,3)bintich7 float double int9 char 55 b9 Decimal pi= 3.141610 Double a ats​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#ayusin-ang-ginulong-mga-salitaneeded-po-thank-u1-sopat2-bool-solik-3-nayalamak-4-tonitsni5-ayromem-%e2%80%8b">15.
+                                            Ayusin ang ginulong mga salita:needed po thank u1. SOPAT2. BOOL-SOLIK 3. NAYALAMAK 4. TONITSNI5. AYROMEM ​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#17-which-of-the-following-may-cause-heat-exhaustiona-inadequate-sun-exposureb-inadequate-intake-of-water-to-compensate-for-loss-of-fluids-during-sweatingc-too-much-oxygen-intakesovd-using-of-swe">16.
+                                            17. Which of the following may cause heat exhaustion?A. Inadequate sun exposureB. Inadequate intake of water to compensate for loss of fluids during sweatingC. Too much oxygen intakeSOVD. Using of sweat shirtssahblant boolWhich feh​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#3-who-is-the-father-of-computera-blaise-pascalc-atanasoffb-charles-babbaged-george-boole%e2%80%8b">17.
+                                            3. Who is the father of computer?a. Blaise Pascalc. Atanasoffb. Charles Babbaged. George Boole​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#who-is-generally-recognized-as-the-father-of-computer-sciencea-ada-lovelace-b-george-boolec-charles-babbaged-konrad-zuse%e2%80%8b">18.
+                                            who is generally recognized as the father of computer sciencea.Ada Lovelace b.George Boolec.Charles Babbaged.Konrad Zuse​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#10-who-is-the-father-of-microsofta-george-booleb-charles-babbagec-joseph-marie-jacquardd-bill-gates%e2%80%8b">19.
+                                            10. Who is the father of Microsoft?A. George BooleB. Charles BabbageC. Joseph-Marie JacquardD. Bill Gates​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#there-are-7-different-books-to-be-placed-on-a-shell-in-how-many-ways-can-you-arrange-the-books-if-there-is-enough-space-for-only-4-booles">20.
+                                            There are 7 different books to be placed on a shell. In how many ways can you arrange the books if there is enough space for only 4 booles? </a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#what-data-type-in-c-is-occupationdata-typesbool-booleanstringcharintfloatdouble%e2%80%8b">21.
+                                            what data type in C++ is occupationDATA TYPESbool (boolean)stringcharintfloat/double​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#mother-blood-type-is-a-and-son-blood-type-is-a-what-the-bool-type-of-fother%e2%80%8b">22.
+                                            mother blood type is A and son blood type is A what the bool type of fother​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#ayusin-ang-mga-letraano-kaya-ang-tamang-letra-1-gpapaysapa2-piis3-lkois-bool4-entolat5-ahbyu%e2%80%8b">23.
+                                            ayusin ang mga letraAno Kaya ang tamang letra. 1.GPAPAYSAPA2.PIIS3.LKOIS BOOL4.ENTOLAT5.AHBYU​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#ano-ang-inches-ng-length-ng-note-bool%e2%80%8b">24.
+                                            ano ang inches ng length ng note bool​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#give-the-outputs-of-the-following-statements1-console-writeline%e2%80%9chellonyou-are-not-alone%e2%80%9d_______________________________________________________________________________________">25.
+                                            Give the outputs of the following statements:
+1. Console.WriteLine(“Hello/Nyou are not alone”);
+_______________________________________________________
+_______________________________________________________
+2. Bool opendoor = false;
+Console.WriteLine(!opendoor);
+_______________________________________________________
+_______________________________________________________
+3. string fname = “Heidi”;
+Console.WriteLine(fname.ToUpper());
+_______________________________________________________
+_______________________________________________________</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#as-finishing-touch-it-can-be-used-as-garnish-a-hard-booled-egg-b-soft-boiled-egg-c-beaten-egg-d-scrambled-egg%e2%80%8b">26.
+                                            As finishing touch, it can be used as garnish.a. hard booled egg b. soft boiled egg c.beaten egg d.scrambled egg​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#explore-issues-the-short-story-raises-what-possibilities-does-the-short-story-cuggest-explain-whout-matter-does-the-bool-leaver-%d1%81-aut-explain-%e2%80%8b">27.
+                                            - Explore issues the short story raises: what possibilities does the short story cuggest Explain whout matter does the bool leaver с aut ? Explain.​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#3-a-german-construction-engineer-who-built-amechanical-calculator-to-handle-the-math-involvedin-his-profession-a-george-booleb-konrad-zusec-blaise-pascald-bill-gates%e2%80%8b">28.
+                                            3. A German construction engineer, who built amechanical calculator to handle the math involvedin his profession.a. George Booleb. Konrad Zusec. Blaise Pascald. Bill Gates​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#15-these-were-the-people-involved-in-computer-development-on-1990-except-a-konrad-zuse-c-john-vincent-atanasoff-b-george-boole-d-john-von-neuman%e2%80%8b">29.
+                                            15. These were the people involved in Computer Development on 1990 EXCEPT A. Konrad Zuse C. John Vincent Atanasoff B. George Boole D. John Von Neuman​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#iii-ayusin-mo-ako-5-points-1-gtmalappaasaap2-bool-gnahtiubak3-poaes4-aaitgr-at-stirag-5-tosan-masto-de-noiuqa-%e2%80%8b">30.
+                                            III.	AYUSIN MO AKO ! (5 POINTS) 1.	GTMALAPPAASAAP2.	BOOL- GNAHTIUBAK3.	POAES4.	AAITGR  AT STIRAG 5.	TOSAN MASTO DE NOIUQA ​</a>
+                                    </li>
+                                                            </ul>
+                        </nav>
+                    </div>
+                                            <h2 class="ez-toc-section" id="1-%e2%80%8bdetermine-which-sentence-is-a-statement-%e2%80%8b%c2%a0a-%c2%a0%e2%80%8bwas-george-boole-born-in-lincoln-england%c2%a0b-%c2%a0%e2%80%8bwas-george-boole-a-mathematician%c2%a0c-%c2%a0">
+                            1. 1. ​Determine which sentence is a statement.​ a. ​Was George Boole born in Lincoln, England? b. ​Was George Boole a mathematician? c. ​George Boole was the best mathematician of his time. d. ​George Boole was born in 1815.​</h2><br />
+                        <p><strong>Answer:</strong></p><p>c</p><p><strong>Step-by-step explanation:</strong></p><p>George Boole was the best mathematician of his time.</p><br />
+                                            <h2 class="ez-toc-section" id="give-2-example-of-specific-data-type-of-a-variable-shortcharstringbool-intdoublefloat%e2%80%8b">
+                            2. give 2 example of specific data type of a variable, shortcharstringbool intdoublefloat​</h2><br />
+                        <p><strong>Answer:</strong></p><p>short value = -31;</p><p>short value = 31;</p><p></p><p>char letter = 'A';</p><p>char letter = 'B';</p><p></p><p>String name = "Hello World";</p><p>String name = "Programming";</p><p></p><p>boolean isDie = true;</p><p>boolean isShort = false;</p><p></p><p>int age = 4;</p><p>int age = 20;</p><p></p><p>double gpa = 1.8;</p><p>double gpa = 3.0;</p><p></p><p>float gpa = 1.8f;</p><p>float gpa = 3.0f;</p><br />
+                                            <h2 class="ez-toc-section" id="what-is-the-purpose-of-bool%e2%80%8b">
+                            3. what is the purpose of bool​</h2><br />
+                        <p><strong>Explanation:</strong></p><p>C++ Keywords: bool. The Boolean data type is used to declare a variable whose value will be set as true (1) or false (0). To declare such a value, you use the bool keyword. The variable can then be initialized with the starting value.</p><br />
+                                            <h2 class="ez-toc-section" id="ayusin-ang-ginulong-mga-salitanow-na-thank-u1-sopat2-bool-solik-3-nayalamak-4-tonitsni5-ayromem-%e2%80%8b%e2%80%8b">
+                            4. Ayusin ang ginulong mga salita:now na thank u1. SOPAT2. BOOL-SOLIK 3. NAYALAMAK 4. TONITSNI5. AYROMEM ​​</h2><br />
+                        <p><strong>Answer:</strong></p><p>TAPOS</p><p>KILOS-LOOB</p><p>KAMALAYAN</p><p>INSTINOT</p><p>MEMORYA</p><br />
+                                            <h2 class="ez-toc-section" id="ayusin-ang-mga-letra-sa-bawat-bilang1-gpapaysapa2-piis3-lkois-bool4-entolat5-ahbyu%e2%80%8b">
+                            5. ayusin ang mga letra sa bawat bilang1.GPAPAYSAPA2.PIIS3.LKOIS BOOL4.ENTOLAT5.AHBYU​</h2><br />
+                        AYUSIN ANG MGA LETRA<p></p><p>1. GPAPAYSAPA </p><p></p><strong>Pagpapasya</strong><p></p><p>2. PIIS</p><p></p><strong>Isip</strong><p></p><p>3. LKOIS BOOL</p><p></p><strong>K</strong><strong>i</strong><strong>l</strong><strong>o</strong><strong>s</strong><strong> </strong><strong>l</strong><strong>o</strong><strong>o</strong><strong>b</strong><p></p><p>4. ENTOLAT</p><p></p><strong>Talento</strong><p></p><p>5. AHBYU</p><p></p><strong>Buhay</strong><p></p><p>Ang mga salitang nabuo sa bawat nagulong letra ay may kaugnayan sa kakayanan, katangian at mga bagay na kinapapalooban ng mga tao sa ating mundo.</p><p></p><p>Sana'y nakatulong ito sa iyo!</p><br />
+                                            <h2 class="ez-toc-section" id="ayusin-ang-ginulong-mga-salita1-sopat2-bool-solik-3-nayalamak-4-tonitsni5-ayromem-%e2%80%8b">
+                            6. Ayusin ang ginulong mga salita:1. SOPAT2. BOOL-SOLIK 3. NAYALAMAK 4. TONITSNI5. AYROMEM ​</h2><br />
+                        <p>1. SOPAT</p><p>— TAPOS</p><p></p><p>2. BOOL-KILOS</p><p>— KILOS-LOOB</p><p></p><p>3. NAYALAMAK</p><p>— KAMALAYAN</p><p></p><p>4. TONITSNI</p><p>— (???)</p><p></p><p>5. AYROMEM</p><p>— MEMORYA</p><br />
+                                            <h2 class="ez-toc-section" id="which-of-the-following-is-a-key-event-in-the-history-of-computers-in-1600s-a-charles-babbage-created-difference-engine-with-lovelace-b-a-calculator-that-can-print-by-burroughs-c-george-boole-inven">
+                            7. Which of the following is a key event in the history of computers in 1600s? A. Charles Babbage created difference engine with Lovelace B. A calculator that can print by Burroughs C. George Boole invented Boolean logic D. Blaise Pascal’s creation of Pascaline ​</h2><br />
+                        <p><strong>Answer:</strong></p><p>d</p><p><strong>Explanation:</strong></p><p></p><br />
+                                            <h2 class="ez-toc-section" id="8-how-are-you-going-to-keep-the-combo-gallon-have-longer-usability-bool-a-let-it-stay-in-the-rain-droo-b-put-it-under-the-sun-c-put-it-in-a-shaded-and-dry-area-d-have-the-children-play-with-it">
+                            8. 8. How are you going to keep the Combo Gallon have longer usability? bool A. Let it stay in the rain. Droo B. Put it under the sun. C. Put it in a shaded and dry area D. Have the children play with it. Ons ds nobene​</h2><br />
+                        <p>Answer:C Put it in a shaded  and dry area</p><p></p><p>Explanation:Para hindi masira ussualy yan ang answer</p><p></p><br />
+                                            <h2 class="ez-toc-section" id="place-the-bool-on-top-of-a-tableq-is-the-book-at-rest-or-in-motion%e2%80%8b">
+                            9. Place the bool on top of a tableQ.Is The book at rest or in motion​</h2><br />
+                        <p><strong>Answer:</strong></p><p>yes</p><p><strong>Explanation:</strong></p><p>its just in her place </p><br />
+                                            <h2 class="ez-toc-section" id="din-bool-for-das-herbig-costatshe-has-ay-php-25-each-night-to-park-her-car-howbest-at-the-hotel556-36-b-php-675-50c-php-436-45%e2%80%8b">
+                            10. din bool for das Herbig costatShe has ay Php 25 each night to park her car Howbest at the hotel?556.36 B. Php 675.50c. Php 436.45​</h2><br />
+                        <p>Php 675.50</p><p>Carryonlearning </p><p>Hope it help you </p><p><strong>Answer:</strong></p><p>b po</p><p><strong>Step-by-step explanation:</strong></p><p>thanks i hope it helps</p><br />
+                                            <h2 class="ez-toc-section" id="tools-are-notperformance3hettoof-all-bools-arefollow-alldes-does-netedicesimale-le-2-sleylin-makingluse-property%e2%80%8b">
+                            11. Tools are notPerformance3Hettoof All bools areFollow alldes. Does.netedicesimale le 2.sleylin makingluse property​</h2><br />
+                        <p><strong>Answer:</strong></p><p></p><p>It's a performance task. Then it's the rubrics. Rubrics will be ur guide habang or matapos mong magawa ang task na pinapagawa sa inyo. </p><p></p><p>The rubric will act as a scoring guide used to evaluate performance, a product, or a project. That's it happy learning. </p><br />
+                                            <h2 class="ez-toc-section" id="who-is-the-father-of-cumputer-sciencea-george-booleb-herman-hollerithc-william-burroughsd-alan-keys%e2%80%8b">
+                            12. who is the father of cumputer science?A.george booleB.herman hollerithC.william burroughsD.alan keys​</h2><br />
+                        <p><strong>Answer:</strong></p><p>D. Alan keys</p><p><strong>Explanation:</strong></p><p> sure ako hope it helps</p><br />
+                                            <h2 class="ez-toc-section" id="explain-the-ff-data-types-intfloatboolstring">
+                            13. Explain the ff. Data types.
+Int
+Float
+Bool
+String</h2><br />
+                        <p><strong>Int</strong> is a data type used for values that has no fractional part. For example, -1, 3, and 67.</p><p><strong>Float</strong> is a data type used for values that has a fractional part. For example, 4.3, 5.55 and -3.14.</p><p><strong>Bool</strong> is a data type used to determine if a condition is either true or false. For example, 5 = 4, 1 &lt; 2, and 55=2.</p><p><strong>String</strong> is a data type used for values that includes a set of characters. For example, "word", "5plus" and "444".</p><p> </p><p></p><br />
+                                            <h2 class="ez-toc-section" id="determine-whether-the-following-is-valid-on-waldvariable-namestoint-x552-double-speedgochar-ch-4-bool-result-trues-bytel1-bytes-123bintich7-float-double-int9-char-55-b9-decimal-pi-3-141610">
+                            14. Determine whether the following is valid on Waldvariable namesToint x552. Double speedgochar ch -4. Bool result trues. bytel1 bytes = (1,2,3)bintich7 float double int9 char 55 b9 Decimal pi= 3.141610 Double a ats​</h2><br />
+                        <p>I don't know,may be it is yes</p><p></p><p>HULK BATMAN SUPER MAN SPIDER MAN DOCTOR STRANGE </p><br />
+                                            <h2 class="ez-toc-section" id="ayusin-ang-ginulong-mga-salitaneeded-po-thank-u1-sopat2-bool-solik-3-nayalamak-4-tonitsni5-ayromem-%e2%80%8b">
+                            15. Ayusin ang ginulong mga salita:needed po thank u1. SOPAT2. BOOL-SOLIK 3. NAYALAMAK 4. TONITSNI5. AYROMEM ​</h2><br />
+                        <p><strong>Answer:</strong></p><p>1.TAPOS</p><p>2.LOOB-KILOS</p><p>3.KAMALAYAN</p><p>4.DIKO ALAM</p><p>5.MEMORYA</p><br />
+                                            <h2 class="ez-toc-section" id="17-which-of-the-following-may-cause-heat-exhaustiona-inadequate-sun-exposureb-inadequate-intake-of-water-to-compensate-for-loss-of-fluids-during-sweatingc-too-much-oxygen-intakesovd-using-of-swe">
+                            16. 17. Which of the following may cause heat exhaustion?A. Inadequate sun exposureB. Inadequate intake of water to compensate for loss of fluids during sweatingC. Too much oxygen intakeSOVD. Using of sweat shirtssahblant boolWhich feh​</h2><br />
+                        <p><strong>Answer:</strong></p><p>A. Inadequate sun exposure</p><p><strong>Explanation:</strong></p><p></p><br />
+                                            <h2 class="ez-toc-section" id="3-who-is-the-father-of-computera-blaise-pascalc-atanasoffb-charles-babbaged-george-boole%e2%80%8b">
+                            17. 3. Who is the father of computer?a. Blaise Pascalc. Atanasoffb. Charles Babbaged. George Boole​</h2><br />
+                        <p><strong>Answer:</strong></p><p>B.  po</p><p><strong>Explanation:</strong></p><p>Charles Babbage: "The Father of Computing" The calculating engines of English mathematician Charles Babbage (1791-1871) are among the most celebrated icons in the prehistory of computing.</p><p></p><p>paki brainliest po</p><br />
+                                            <h2 class="ez-toc-section" id="who-is-generally-recognized-as-the-father-of-computer-sciencea-ada-lovelace-b-george-boolec-charles-babbaged-konrad-zuse%e2%80%8b">
+                            18. who is generally recognized as the father of computer sciencea.Ada Lovelace b.George Boolec.Charles Babbaged.Konrad Zuse​</h2><br />
+                        <p><strong>Answer:</strong></p><p>C. Charles Babbage</p><p><strong>Explanation:</strong></p><p>Hope it helps.. </p>Question &amp; Answer;<p></p><p></p>Who is generally recognized as the father of computer science<p></p><p>A.Ada Lovelace </p><p>B.George Boole</p><p><strong>➩</strong><strong> </strong><strong>C.Charles Babbage</strong></p><p>D.Konrad Zuse</p><p></p><p></p><p></p>✎Explain<p></p><p></p><p>Charles Babbage, who was born in 1791, is regarded as the father of computing because of his research into machines that could calculate. Babbage's Difference Engine Number 1 was the first device ever devised that could calculate and print mathematical tables.</p><p></p><p></p><p></p><p>Hola espero que te ayude mi amigo</p><p></p><br />
+                                            <h2 class="ez-toc-section" id="10-who-is-the-father-of-microsofta-george-booleb-charles-babbagec-joseph-marie-jacquardd-bill-gates%e2%80%8b">
+                            19. 10. Who is the father of Microsoft?A. George BooleB. Charles BabbageC. Joseph-Marie JacquardD. Bill Gates​</h2><br />
+                        <p><strong>Answer:</strong></p><p>D</p><p><strong>Explanation:</strong></p><p>Sana makatulong :))) </p><p><strong>Answer:</strong></p><p><strong>D</strong></p><p><strong>Explanation:</strong></p><p>gsisboaosz9jz9evusvwij</p><br />
+                                            <h2 class="ez-toc-section" id="there-are-7-different-books-to-be-placed-on-a-shell-in-how-many-ways-can-you-arrange-the-books-if-there-is-enough-space-for-only-4-booles">
+                            20. There are 7 different books to be placed on a shell. In how many ways can you arrange the books if there is enough space for only 4 booles? </h2><br />
+                        <p><strong>Answer:</strong></p><p>Sideways</p><p><strong>Step-by-step explanation:</strong></p><p>correct me if im wrong</p><br />
+                                            <h2 class="ez-toc-section" id="what-data-type-in-c-is-occupationdata-typesbool-booleanstringcharintfloatdouble%e2%80%8b">
+                            21. what data type in C++ is occupationDATA TYPESbool (boolean)stringcharintfloat/double​</h2><br />
+                        <p><strong>Answer:</strong></p><p>float/double yan po tama </p><br />
+                                            <h2 class="ez-toc-section" id="mother-blood-type-is-a-and-son-blood-type-is-a-what-the-bool-type-of-fother%e2%80%8b">
+                            22. mother blood type is A and son blood type is A what the bool type of fother​</h2><br />
+                        <p><strong>Answer:</strong></p><p>IAi/IAIA/IAIB</p><p><strong>Explanation:</strong></p><p>the possible answers are mentioned above. if u want to check my answers, you may use punnett square.</p><br />
+                                            <h2 class="ez-toc-section" id="ayusin-ang-mga-letraano-kaya-ang-tamang-letra-1-gpapaysapa2-piis3-lkois-bool4-entolat5-ahbyu%e2%80%8b">
+                            23. ayusin ang mga letraAno Kaya ang tamang letra. 1.GPAPAYSAPA2.PIIS3.LKOIS BOOL4.ENTOLAT5.AHBYU​</h2><br />
+                        <p><strong>Answer:</strong></p><p>pagpapasya</p><p>isip</p><p>kilos loob</p><p></p><p>buhay</p><p><strong>Explanation:</strong></p><p>Sorry I don't know the number 4 :(</p><p><strong>Answer:</strong></p>PagpapasyaIsipKilos LoobTalentoBuhay      <p></p>I hope it help<br />
+                                            <h2 class="ez-toc-section" id="ano-ang-inches-ng-length-ng-note-bool%e2%80%8b">
+                            24. ano ang inches ng length ng note bool​</h2><br />
+                        <p><strong>Answer:</strong></p><p>North American business envelopes are size #10. They measure 4 1/8 by 9 1/2 inches.</p><p><strong>Answer:</strong></p><p>95×171mm(3.75×6.75in)</p><br />
+                                            <h2 class="ez-toc-section" id="give-the-outputs-of-the-following-statements1-console-writeline%e2%80%9chellonyou-are-not-alone%e2%80%9d_______________________________________________________________________________________">
+                            25. Give the outputs of the following statements:
+1. Console.WriteLine(“Hello/Nyou are not alone”);
+_______________________________________________________
+_______________________________________________________
+2. Bool opendoor = false;
+Console.WriteLine(!opendoor);
+_______________________________________________________
+_______________________________________________________
+3. string fname = “Heidi”;
+Console.WriteLine(fname.ToUpper());
+_______________________________________________________
+_______________________________________________________</h2><br />
+                        <p><strong>Answer:</strong></p><p></p><p>1. Hello/Nyou are not alone</p><p>2. True</p><p>3. HEIDI</p><p></p><p><strong>Explanation:</strong></p><p></p><p>1. Maybe there was some typo or the question Itself trying to confuse you, I assume the /N is the breakline, and the output should be.. </p><p></p><p>Hello</p><p>you are not alone</p><p></p><p></p><p>... But I copy and paste your snippet into an online text editor, and the console outputs the same as your question. Good luck! </p><br />
+                                            <h2 class="ez-toc-section" id="as-finishing-touch-it-can-be-used-as-garnish-a-hard-booled-egg-b-soft-boiled-egg-c-beaten-egg-d-scrambled-egg%e2%80%8b">
+                            26. As finishing touch, it can be used as garnish.a. hard booled egg b. soft boiled egg c.beaten egg d.scrambled egg​</h2><br />
+                        <p><strong>Answer:</strong></p><p>hard boiled egg can be used as garnish for the final meal</p><br />
+                                            <h2 class="ez-toc-section" id="explore-issues-the-short-story-raises-what-possibilities-does-the-short-story-cuggest-explain-whout-matter-does-the-bool-leaver-%d1%81-aut-explain-%e2%80%8b">
+                            27. - Explore issues the short story raises: what possibilities does the short story cuggest Explain whout matter does the bool leaver с aut ? Explain.​</h2><br />
+                        <p><strong>Answer:</strong></p><p></p><p><strong>Explanation:</strong></p><p>I never thought I would be homesick for my old school, but during my first week at my new school, I kept thinking</p><p>school, I felt at first that the teachers did not have time for me. Everybody seemed busy. Then I remembered the time</p><p>how happy I had been there and how uneasy I was here. The trouble was, I didn't know anybody yet. At my new</p><p>friends. The strangeness wore off. Remembering that made me feel there was hope for my new school after all</p><br />
+                                            <h2 class="ez-toc-section" id="3-a-german-construction-engineer-who-built-amechanical-calculator-to-handle-the-math-involvedin-his-profession-a-george-booleb-konrad-zusec-blaise-pascald-bill-gates%e2%80%8b">
+                            28. 3. A German construction engineer, who built amechanical calculator to handle the math involvedin his profession.a. George Booleb. Konrad Zusec. Blaise Pascald. Bill Gates​</h2><br />
+                        <p><strong>Answer:</strong></p><p>pa brainliest po sorry</p><p> </p><p>kailangan ko lang talaga ng points</p><p><strong>Explanation:</strong></p><p>pa brainliest po sorry</p><p> </p><p>kailangan ko lang talaga ng points</p><br />
+                                            <h2 class="ez-toc-section" id="15-these-were-the-people-involved-in-computer-development-on-1990-except-a-konrad-zuse-c-john-vincent-atanasoff-b-george-boole-d-john-von-neuman%e2%80%8b">
+                            29. 15. These were the people involved in Computer Development on 1990 EXCEPT A. Konrad Zuse C. John Vincent Atanasoff B. George Boole D. John Von Neuman​</h2><br />
+                        <p><strong>Answer:</strong></p><p>c jonh vincent tama po to</p><br />
+                                            <h2 class="ez-toc-section" id="iii-ayusin-mo-ako-5-points-1-gtmalappaasaap2-bool-gnahtiubak3-poaes4-aaitgr-at-stirag-5-tosan-masto-de-noiuqa-%e2%80%8b">
+                            30. III.	AYUSIN MO AKO ! (5 POINTS) 1.	GTMALAPPAASAAP2.	BOOL- GNAHTIUBAK3.	POAES4.	AAITGR  AT STIRAG 5.	TOSAN MASTO DE NOIUQA ​</h2><br />
+                        <p><strong>Answer:</strong></p><p>1. Pagpapasalamat</p><p>2. Kabutihang-loob</p><p>3. Aesop</p><p>4. Gratia at Gratis</p><p>5. Santo Tomas De Aquino</p><br />
+                    
+                </div>
+                <div class="youtubeVideo" style="text-align: center">
+                    <h3>Video Terkait</h3>
+                    <iframe width="560" height="315"
+                        src="https://www.youtube.com/embed/eu_Q0q85IGQ?controls=0" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"allowfullscreen></iframe>
+                </div>
+                <footer class="entry-meta" aria-label="Meta postingan">
+                    <span class="cat-links"><span class="gp-icon icon-categories"><svg viewBox="0 0 512 512"
+                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em">
+                                <path
+                                    d="M0 112c0-26.51 21.49-48 48-48h110.014a48 48 0 0143.592 27.907l12.349 26.791A16 16 0 00228.486 128H464c26.51 0 48 21.49 48 48v224c0 26.51-21.49 48-48 48H48c-26.51 0-48-21.49-48-48V112z">
+                                </path>
+                            </svg></span><span class="screen-reader-text">Kategori </span>math</span>
+            </div>
+        </article>
+    </main>
+            </div>
+            <div class="widget-area sidebar is-right-sidebar" id="right-sidebar">
+                <div class="inside-right-sidebar">
+                    <aside id="categories-2" class="widget inner-padding widget_categories">
+                        <h2 class="widget-title">Topik</h2>
+                        <ul>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/fastcash-finance-company-inc.html">Fastcash Finance Company Inc</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/remont-hardware.html">Remont Hardware</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/mathematical-logic-george-tourlakis-pdf.html">Mathematical Logic George Tourlakis Pdf</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/balangkas-konseptwal-sa-pananaliksik.html">Balangkas Konseptwal Sa Pananaliksik</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/secularization-controversy.html">Secularization Controversy</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/draw-a-circle-and-label-its-parts.html">Draw A Circle And Label Its Parts</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/what-is-the-equivalent-of-320f-to-centigrade.html">What Is The Equivalent Of 320f To Centigrade</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/mcdonald-s-organizational-structure.html">Mcdonald s Organizational Structure</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/natural-obligation-and-civil-obligation.html">Natural Obligation And Civil Obligation</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/final-in-tagalog.html">Final In Tagalog</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/sparkly-shirt.html">Sparkly Shirt</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.html">Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/welcome-speech-for-a-60th-birthday-party.html">Welcome Speech For A 60th Birthday Party</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/avogadro-s-law-real-life-application.html">Avogadro s Law Real Life Application</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/snap-autocad.html">Snap Autocad</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/how-did-they-avoid-dehydration-overexertion-hypothermia-and-hyperthermia.html">How Did They Avoid Dehydration Overexertion Hypothermia And Hyperthermia</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/gargon.html">Gargon</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/4-m-s-of-entrepreneurship.html">4 M s Of Entrepreneurship</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/h-j-bar.html">H j Bar</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/thou-shalt-not-interfere-with-other-people-s-computer-work.html">Thou Shalt Not Interfere With Other People s Computer Work</a>
+                                </li>
+                                                    </ul>
+
+                    </aside>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="site-footer">
+        <footer class="site-info" aria-label="Situs" itemtype="https://schema.org/WPFooter" itemscope>
+            <div class="inside-site-info grid-container">
+                <div class="copyright-bar">
+                    <span class="copyright">&copy; 2023 <a href="https://jneweducation.github.io"
+                            itemprop="url">QnA</a></span>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <a title="Gulirkan kembali ke puncak laman" aria-label="Gulirkan kembali ke puncak laman" rel="nofollow"
+        href="#" class="generate-back-to-top" data-scroll-speed="400" data-start-scroll="300">
+        <span class="gp-icon icon-arrow-up"><svg viewBox="0 0 330 512" aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill-rule="evenodd"
+                clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414">
+                <path
+                    d="M305.863 314.916c0 2.266-1.133 4.815-2.832 6.514l-14.157 14.163c-1.699 1.7-3.964 2.832-6.513 2.832-2.265 0-4.813-1.133-6.512-2.832L164.572 224.276 53.295 335.593c-1.699 1.7-4.247 2.832-6.512 2.832-2.265 0-4.814-1.133-6.513-2.832L26.113 321.43c-1.699-1.7-2.831-4.248-2.831-6.514s1.132-4.816 2.831-6.515L158.06 176.408c1.699-1.7 4.247-2.833 6.512-2.833 2.265 0 4.814 1.133 6.513 2.833L303.03 308.4c1.7 1.7 2.832 4.249 2.832 6.515z"
+                    fill-rule="nonzero" />
+            </svg></span>
+    </a>
+    <script id="generate-a11y">
+        ! function() {
+            "use strict";
+            if ("querySelector" in document && "addEventListener" in window) {
+                var e = document.body;
+                e.addEventListener("mousedown", function() {
+                    e.classList.add("using-mouse")
+                }), e.addEventListener("keydown", function() {
+                    e.classList.remove("using-mouse")
+                })
+            }
+        }();
+    </script>
+    <!--[if lte IE 11]>
+<script src='https://jneweducation.github.io/js/classList.min.js' ?ver=3.2.4' id='generate-classlist-js'></script>
+<![endif]-->
+    <script id='generate-menu-js-extra'>
+        var generatepressMenu = {
+            "toggleOpenedSubMenus": "1",
+            "openSubMenuLabel": "Buka Submenu",
+            "closeSubMenuLabel": "Tutup submenu"
+        };
+    </script>
+    <script src='https://jneweducation.github.io/js/menu.min.js' ?ver=3.2.4' id='generate-menu-js'></script>
+    <script id='generate-navigation-search-js-extra'>
+        var generatepressNavSearch = {
+            "open": "Buka Kolom Pencarian",
+            "close": "Tutup Kolom Pencarian"
+        };
+    </script>
+    <script src='https://jneweducation.github.io/js/navigation-search.min.js' ?ver=3.2.4' id='generate-navigation-search-js'></script>
+    <script id='generate-back-to-top-js-extra'>
+        var generatepressBackToTop = {
+            "smooth": "1"
+        };
+    </script>
+    <script src='https://jneweducation.github.io/js/back-to-top.min.js' ?ver=3.2.4' id='generate-back-to-top-js'></script>
+    <script type='text/javascript' src='//jd3j7g5z1fqs.com/96/78/7a/96787a1945876b1a9c10f79941441964.js'></script>
+<script type='text/javascript' src='//jd3j7g5z1fqs.com/b4/f1/ef/b4f1ef8dfe59b7fa68754094cf6c8e0e.js'></script>
+  <!-- Histats.com  START  (aync)-->
+<script type="text/javascript">var _Hasync= _Hasync|| [];
+_Hasync.push(['Histats.start', '1,4739059,4,0,0,0,00010000']);
+_Hasync.push(['Histats.fasi', '1']);
+_Hasync.push(['Histats.track_hits', '']);
+(function() {
+var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
+hs.src = ('//s10.histats.com/js15_as.js');
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+})();</script>
+<noscript><a href="/" target="_blank"><img  src="//sstatic1.histats.com/0.gif?4739059&101" alt="" border="0"></a></noscript>
+<!-- Histats.com  END  -->
+</body>
+
+</html>

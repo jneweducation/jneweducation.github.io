@@ -1,0 +1,1383 @@
+<!DOCTYPE html>
+<html lang="id" prefix="og: https://ogp.me/ns#">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="profile" href="https://gmpg.org/xfn/11">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>This Information Accessibility Focuses On The Visual Input - QnA</title>
+    <meta name="description" content="This Information Accessibility Focuses On The Visual Input, What is Focus -- A11ycasts #03, , , , Google Chrome Developers, 2016-08-19T17:21:32.000000Z, 20, Information Accessibility and Visual Impairment / 978-3-8484-0619-7, www.lap-publishing.com, 2000 x 1441, jpeg, , 20, this-information-accessibility-focuses-on-the-visual-input, QnA" />
+    <meta name="robots" content="index,follow" />
+    <meta property="og:locale" content="id_ID" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="This Information Accessibility Focuses On The Visual Input - QnA" />
+    <meta property="og:description" content="This Information Accessibility Focuses On The Visual Input, What is Focus -- A11ycasts #03, , , , Google Chrome Developers, 2016-08-19T17:21:32.000000Z, 20, Information Accessibility and Visual Impairment / 978-3-8484-0619-7, www.lap-publishing.com, 2000 x 1441, jpeg, , 20, this-information-accessibility-focuses-on-the-visual-input, QnA" />
+    <meta property="og:site_name" content="QnA" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="This Information Accessibility Focuses On The Visual Input - QnA" />
+    <meta name="twitter:description" content="This Information Accessibility Focuses On The Visual Input, What is Focus -- A11ycasts #03, , , , Google Chrome Developers, 2016-08-19T17:21:32.000000Z, 20, Information Accessibility and Visual Impairment / 978-3-8484-0619-7, www.lap-publishing.com, 2000 x 1441, jpeg, , 20, this-information-accessibility-focuses-on-the-visual-input, QnA" />
+    <link rel='stylesheet' id='generate-style-css' href='https://jneweducation.github.io/css/main.min.css'?ver=3.2.4'
+        media='all' />
+    <link rel='stylesheet' id='ez-toc-css' href='https://jneweducation.github.io/css/screen.min.css'?ver=2.0.40' media='all' />
+    <style id='generate-style-inline-css'>
+        body {
+            background-color: #f7f7f7;
+            color: #222222;
+        }
+
+        a {
+            color: #1e73be;
+        }
+
+        a:hover,
+        a:focus,
+        a:active {
+            color: #000000;
+        }
+
+        .wp-block-group__inner-container {
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .generate-back-to-top {
+            font-size: 20px;
+            border-radius: 3px;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            line-height: 40px;
+            width: 40px;
+            text-align: center;
+            z-index: 10;
+            transition: opacity 300ms ease-in-out;
+            opacity: 0.1;
+            transform: translateY(1000px);
+        }
+
+        .generate-back-to-top__show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .navigation-search {
+            position: absolute;
+            left: -99999px;
+            pointer-events: none;
+            visibility: hidden;
+            z-index: 20;
+            width: 100%;
+            top: 0;
+            transition: opacity 100ms ease-in-out;
+            opacity: 0;
+        }
+
+        .navigation-search.nav-search-active {
+            left: 0;
+            right: 0;
+            pointer-events: auto;
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .navigation-search input[type="search"] {
+            outline: 0;
+            border: 0;
+            vertical-align: bottom;
+            line-height: 1;
+            opacity: 0.9;
+            width: 100%;
+            z-index: 20;
+            border-radius: 0;
+            -webkit-appearance: none;
+            height: 60px;
+        }
+
+        .navigation-search input::-ms-clear {
+            display: none;
+            width: 0;
+            height: 0;
+        }
+
+        .navigation-search input::-ms-reveal {
+            display: none;
+            width: 0;
+            height: 0;
+        }
+
+        .navigation-search input::-webkit-search-decoration,
+        .navigation-search input::-webkit-search-cancel-button,
+        .navigation-search input::-webkit-search-results-button,
+        .navigation-search input::-webkit-search-results-decoration {
+            display: none;
+        }
+
+        .gen-sidebar-nav .navigation-search {
+            top: auto;
+            bottom: 0;
+        }
+
+        :root {
+            --contrast: #222222;
+            --contrast-2: #575760;
+            --contrast-3: #b2b2be;
+            --base: #f0f0f0;
+            --base-2: #f7f8f9;
+            --base-3: #ffffff;
+            --accent: #1e73be;
+        }
+
+        .has-contrast-color {
+            color: var(--contrast);
+        }
+
+        .has-contrast-background-color {
+            background-color: var(--contrast);
+        }
+
+        .has-contrast-2-color {
+            color: var(--contrast-2);
+        }
+
+        .has-contrast-2-background-color {
+            background-color: var(--contrast-2);
+        }
+
+        .has-contrast-3-color {
+            color: var(--contrast-3);
+        }
+
+        .has-contrast-3-background-color {
+            background-color: var(--contrast-3);
+        }
+
+        .has-base-color {
+            color: var(--base);
+        }
+
+        .has-base-background-color {
+            background-color: var(--base);
+        }
+
+        .has-base-2-color {
+            color: var(--base-2);
+        }
+
+        .has-base-2-background-color {
+            background-color: var(--base-2);
+        }
+
+        .has-base-3-color {
+            color: var(--base-3);
+        }
+
+        .has-base-3-background-color {
+            background-color: var(--base-3);
+        }
+
+        .has-accent-color {
+            color: var(--accent);
+        }
+
+        .has-accent-background-color {
+            background-color: var(--accent);
+        }
+
+        body,
+        button,
+        input,
+        select,
+        textarea {
+            font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        }
+
+        body {
+            line-height: 1.5;
+        }
+
+        .entry-content>[class*="wp-block-"]:not(:last-child) {
+            margin-bottom: 1.5em;
+        }
+
+        .main-navigation .main-nav ul ul li a {
+            font-size: 14px;
+        }
+
+        .sidebar .widget,
+        .footer-widgets .widget {
+            font-size: 17px;
+        }
+
+        @media (max-width:768px) {
+            h1 {
+                font-size: 31px;
+            }
+
+            h2 {
+                font-size: 27px;
+            }
+
+            h3 {
+                font-size: 24px;
+            }
+
+            h4 {
+                font-size: 22px;
+            }
+
+            h5 {
+                font-size: 19px;
+            }
+        }
+
+        .top-bar {
+            background-color: #636363;
+            color: #ffffff;
+        }
+
+        .top-bar a {
+            color: #ffffff;
+        }
+
+        .top-bar a:hover {
+            color: #303030;
+        }
+
+        .site-header {
+            background-color: #ffffff;
+        }
+
+        .main-title a,
+        .main-title a:hover {
+            color: #222222;
+        }
+
+        .site-description {
+            color: #757575;
+        }
+
+        .main-navigation,
+        .main-navigation ul ul {
+            background-color: #ed4250;
+        }
+
+        .main-navigation .main-nav ul li a,
+        .main-navigation .menu-toggle,
+        .main-navigation .menu-bar-items {
+            color: #ffffff;
+        }
+
+        .main-navigation .main-nav ul li:not([class*="current-menu-"]):hover>a,
+        .main-navigation .main-nav ul li:not([class*="current-menu-"]):focus>a,
+        .main-navigation .main-nav ul li.sfHover:not([class*="current-menu-"])>a,
+        .main-navigation .menu-bar-item:hover>a,
+        .main-navigation .menu-bar-item.sfHover>a {
+            color: #ffffff;
+            background-color: #c42f2f;
+        }
+
+        button.menu-toggle:hover,
+        button.menu-toggle:focus {
+            color: #ffffff;
+        }
+
+        .main-navigation .main-nav ul li[class*="current-menu-"]>a {
+            color: #ffffff;
+            background-color: #c42f2f;
+        }
+
+        .navigation-search input[type="search"],
+        .navigation-search input[type="search"]:active,
+        .navigation-search input[type="search"]:focus,
+        .main-navigation .main-nav ul li.search-item.active>a,
+        .main-navigation .menu-bar-items .search-item.active>a {
+            color: #ffffff;
+            background-color: #c42f2f;
+        }
+
+        .main-navigation ul ul {
+            background-color: #c42f2f;
+        }
+
+        .main-navigation .main-nav ul ul li a {
+            color: #ffffff;
+        }
+
+        .main-navigation .main-nav ul ul li:not([class*="current-menu-"]):hover>a,
+        .main-navigation .main-nav ul ul li:not([class*="current-menu-"]):focus>a,
+        .main-navigation .main-nav ul ul li.sfHover:not([class*="current-menu-"])>a {
+            color: #fcd9d6;
+            background-color: #c42f2f;
+        }
+
+        .main-navigation .main-nav ul ul li[class*="current-menu-"]>a {
+            color: #fcd9d6;
+            background-color: #c42f2f;
+        }
+
+        .separate-containers .inside-article,
+        .separate-containers .comments-area,
+        .separate-containers .page-header,
+        .one-container .container,
+        .separate-containers .paging-navigation,
+        .inside-page-header {
+            background-color: #ffffff;
+        }
+
+        .entry-title a {
+            color: #222222;
+        }
+
+        .entry-title a:hover {
+            color: #55555e;
+        }
+
+        .entry-meta {
+            color: #595959;
+        }
+
+        .sidebar .widget {
+            background-color: #ffffff;
+        }
+
+        .footer-widgets {
+            background-color: #ffffff;
+        }
+
+        .footer-widgets .widget-title {
+            color: #000000;
+        }
+
+        .site-info {
+            color: #ffffff;
+            background-color: #55555e;
+        }
+
+        .site-info a {
+            color: #ffffff;
+        }
+
+        .site-info a:hover {
+            color: #d3d3d3;
+        }
+
+        .footer-bar .widget_nav_menu .current-menu-item a {
+            color: #d3d3d3;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="url"],
+        input[type="password"],
+        input[type="search"],
+        input[type="tel"],
+        input[type="number"],
+        textarea,
+        select {
+            color: #666666;
+            background-color: #fafafa;
+            border-color: #cccccc;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="url"]:focus,
+        input[type="password"]:focus,
+        input[type="search"]:focus,
+        input[type="tel"]:focus,
+        input[type="number"]:focus,
+        textarea:focus,
+        select:focus {
+            color: #666666;
+            background-color: #ffffff;
+            border-color: #bfbfbf;
+        }
+
+        button,
+        html input[type="button"],
+        input[type="reset"],
+        input[type="submit"],
+        a.button,
+        a.wp-block-button__link:not(.has-background) {
+            color: #ffffff;
+            background-color: #55555e;
+        }
+
+        button:hover,
+        html input[type="button"]:hover,
+        input[type="reset"]:hover,
+        input[type="submit"]:hover,
+        a.button:hover,
+        button:focus,
+        html input[type="button"]:focus,
+        input[type="reset"]:focus,
+        input[type="submit"]:focus,
+        a.button:focus,
+        a.wp-block-button__link:not(.has-background):active,
+        a.wp-block-button__link:not(.has-background):focus,
+        a.wp-block-button__link:not(.has-background):hover {
+            color: #ffffff;
+            background-color: #3f4047;
+        }
+
+        a.generate-back-to-top {
+            background-color: rgba(0, 0, 0, 0.4);
+            color: #ffffff;
+        }
+
+        a.generate-back-to-top:hover,
+        a.generate-back-to-top:focus {
+            background-color: rgba(0, 0, 0, 0.6);
+            color: #ffffff;
+        }
+
+        @media (max-width:768px) {
+
+            .main-navigation .menu-bar-item:hover>a,
+            .main-navigation .menu-bar-item.sfHover>a {
+                background: none;
+                color: #ffffff;
+            }
+        }
+
+        .nav-below-header .main-navigation .inside-navigation.grid-container,
+        .nav-above-header .main-navigation .inside-navigation.grid-container {
+            padding: 0px 20px 0px 20px;
+        }
+
+        .site-main .wp-block-group__inner-container {
+            padding: 40px;
+        }
+
+        .separate-containers .paging-navigation {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .entry-content .alignwide,
+        body:not(.no-sidebar) .entry-content .alignfull {
+            margin-left: -40px;
+            width: calc(100% + 80px);
+            max-width: calc(100% + 80px);
+        }
+
+        .rtl .menu-item-has-children .dropdown-menu-toggle {
+            padding-left: 20px;
+        }
+
+        .rtl .main-navigation .main-nav ul li.menu-item-has-children>a {
+            padding-right: 20px;
+        }
+
+        @media (max-width:768px) {
+
+            .separate-containers .inside-article,
+            .separate-containers .comments-area,
+            .separate-containers .page-header,
+            .separate-containers .paging-navigation,
+            .one-container .site-content,
+            .inside-page-header {
+                padding: 30px;
+            }
+
+            .site-main .wp-block-group__inner-container {
+                padding: 30px;
+            }
+
+            .inside-top-bar {
+                padding-right: 30px;
+                padding-left: 30px;
+            }
+
+            .inside-header {
+                padding-right: 30px;
+                padding-left: 30px;
+            }
+
+            .widget-area .widget {
+                padding-top: 30px;
+                padding-right: 30px;
+                padding-bottom: 30px;
+                padding-left: 30px;
+            }
+
+            .footer-widgets-container {
+                padding-top: 30px;
+                padding-right: 30px;
+                padding-bottom: 30px;
+                padding-left: 30px;
+            }
+
+            .inside-site-info {
+                padding-right: 30px;
+                padding-left: 30px;
+            }
+
+            .entry-content .alignwide,
+            body:not(.no-sidebar) .entry-content .alignfull {
+                margin-left: -30px;
+                width: calc(100% + 60px);
+                max-width: calc(100% + 60px);
+            }
+
+            .one-container .site-main .paging-navigation {
+                margin-bottom: 20px;
+            }
+        }
+
+        /* End cached CSS */
+        .is-right-sidebar {
+            width: 30%;
+        }
+
+        .is-left-sidebar {
+            width: 30%;
+        }
+
+        .site-content .content-area {
+            width: 70%;
+        }
+
+        @media (max-width:768px) {
+
+            .main-navigation .menu-toggle,
+            .sidebar-nav-mobile:not(#sticky-placeholder) {
+                display: block;
+            }
+
+            .main-navigation ul,
+            .gen-sidebar-nav,
+            .main-navigation:not(.slideout-navigation):not(.toggled) .main-nav>ul,
+            .has-inline-mobile-toggle #site-navigation .inside-navigation>*:not(.navigation-search):not(.main-nav) {
+                display: none;
+            }
+
+            .nav-align-right .inside-navigation,
+            .nav-align-center .inside-navigation {
+                justify-content: space-between;
+            }
+        }
+    </style>
+    <link rel="icon" href="https://jneweducation.github.io/img/cropped-soalbelajar-32x32.png" sizes="32x32" />
+    <link rel="icon" href="https://jneweducation.github.io/img/cropped-soalbelajar-192x192.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="https://jneweducation.github.io/img/cropped-soalbelajar-180x180.png" />
+    <meta name="msapplication-TileImage" content="https://jneweducation.github.io/img/cropped-soalbelajar-270x270.png" />
+</head>
+
+<body
+    class="home blog wp-custom-logo wp-embed-responsive right-sidebar nav-above-header separate-containers nav-search-enabled nav-aligned-center header-aligned-center dropdown-hover"
+    itemtype="https://schema.org/Blog" itemscope>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-dark-grayscale">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 0.49803921568627" />
+                    <feFuncG type="table" tableValues="0 0.49803921568627" />
+                    <feFuncB type="table" tableValues="0 0.49803921568627" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-grayscale">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 1" />
+                    <feFuncG type="table" tableValues="0 1" />
+                    <feFuncB type="table" tableValues="0 1" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-purple-yellow">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.54901960784314 0.98823529411765" />
+                    <feFuncG type="table" tableValues="0 1" />
+                    <feFuncB type="table" tableValues="0.71764705882353 0.25490196078431" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-blue-red">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 1" />
+                    <feFuncG type="table" tableValues="0 0.27843137254902" />
+                    <feFuncB type="table" tableValues="0.5921568627451 0.27843137254902" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-midnight">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 0" />
+                    <feFuncG type="table" tableValues="0 0.64705882352941" />
+                    <feFuncB type="table" tableValues="0 1" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-magenta-yellow">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.78039215686275 1" />
+                    <feFuncG type="table" tableValues="0 0.94901960784314" />
+                    <feFuncB type="table" tableValues="0.35294117647059 0.47058823529412" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-purple-green">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.65098039215686 0.40392156862745" />
+                    <feFuncG type="table" tableValues="0 1" />
+                    <feFuncB type="table" tableValues="0.44705882352941 0.4" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-blue-orange">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.098039215686275 1" />
+                    <feFuncG type="table" tableValues="0 0.66274509803922" />
+                    <feFuncB type="table" tableValues="0.84705882352941 0.41960784313725" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><a class="screen-reader-text skip-link" href="#content" title="Langsung ke isi">Langsung ke isi</a>
+    <nav class="main-navigation nav-align-center has-menu-bar-items sub-menu-right" id="site-navigation"
+        aria-label="Utama" itemtype="https://schema.org/SiteNavigationElement" itemscope>
+        <div class="inside-navigation grid-container">
+            <form method="get" class="search-form navigation-search" action="/">
+                <input type="search" class="search-field" value="" name="q" title="Cari" />
+            </form> <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+                <span class="gp-icon icon-menu-bars"><svg viewBox="0 0 512 512" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" width="1em" height="1em">
+                        <path
+                            d="M0 96c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24zm0 160c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24zm0 160c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24z" />
+                    </svg><svg viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                        width="1em" height="1em">
+                        <path
+                            d="M71.029 71.029c9.373-9.372 24.569-9.372 33.942 0L256 222.059l151.029-151.03c9.373-9.372 24.569-9.372 33.942 0 9.372 9.373 9.372 24.569 0 33.942L289.941 256l151.03 151.029c9.372 9.373 9.372 24.569 0 33.942-9.373 9.372-24.569 9.372-33.942 0L256 289.941l-151.029 151.03c-9.373 9.372-24.569 9.372-33.942 0-9.372-9.373-9.372-24.569 0-33.942L222.059 256 71.029 104.971c-9.372-9.373-9.372-24.569 0-33.942z" />
+                    </svg></span><span class="mobile-menu">Menu</span> </button>
+            <div id="primary-menu" class="main-nav">
+                <ul id="menu-soal-belajar" class=" menu sf-menu">
+                    <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1"><a
+                            href="https://jneweducation.github.io">Home</a></li>
+                </ul>
+                </ul>
+            </div>
+            <div class="menu-bar-items"><span class="menu-bar-item search-item"><a aria-label="Buka Kolom Pencarian"
+                        href="#"><span class="gp-icon icon-search"><svg viewBox="0 0 512 512"
+                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M208 48c-88.366 0-160 71.634-160 160s71.634 160 160 160 160-71.634 160-160S296.366 48 208 48zM0 208C0 93.125 93.125 0 208 0s208 93.125 208 208c0 48.741-16.765 93.566-44.843 129.024l133.826 134.018c9.366 9.379 9.355 24.575-.025 33.941-9.379 9.366-24.575 9.355-33.941-.025L337.238 370.987C301.747 399.167 256.839 416 208 416 93.125 416 0 322.875 0 208z" />
+                            </svg><svg viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                width="1em" height="1em">
+                                <path
+                                    d="M71.029 71.029c9.373-9.372 24.569-9.372 33.942 0L256 222.059l151.029-151.03c9.373-9.372 24.569-9.372 33.942 0 9.372 9.373 9.372 24.569 0 33.942L289.941 256l151.03 151.029c9.372 9.373 9.372 24.569 0 33.942-9.373 9.372-24.569 9.372-33.942 0L256 289.941l-151.029 151.03c-9.373 9.372-24.569 9.372-33.942 0-9.372-9.373-9.372-24.569 0-33.942L222.059 256 71.029 104.971c-9.372-9.373-9.372-24.569 0-33.942z" />
+                            </svg></span></a></span></div>
+        </div>
+    </nav>
+    <header class="site-header grid-container" id="masthead" aria-label="Situs"
+        itemtype="https://schema.org/WPHeader" itemscope>
+        <div class="inside-header grid-container">
+            <h1 class="site-logo">
+                <a href="https://jneweducation.github.io" rel="home"> QnA</a>
+            </h1>
+        </div>
+    </header>
+
+    <div class="site grid-container container hfeed" id="page">
+        <div class="site-content" id="content">
+            <div class="content-area" id="primary">
+                    <main class="site-main" id="main">
+        <article id="post-1327" class="post-1327 post type-post status-publish format-standard hentry category-info"
+            itemtype="https://schema.org/CreativeWork" itemscope="">
+            <div class="inside-article">
+                <header class="entry-header" aria-label="Konten">
+                    <h1 class="entry-title" itemprop="headline">This Information Accessibility Focuses On The Visual Input</h1>
+                    <div class="entry-meta">
+                       <span
+                            class="byline">oleh <span class="author vcard" itemprop="author"
+                                itemtype="https://schema.org/Person" itemscope=""><span class="author-name"
+                                    itemprop="name">damz05</span></span></span>
+                    </div>
+                </header>
+                <div class="entry-content" itemprop="text">
+                    <div style="text-align: center">
+                        <img src="https://tse1.mm.bing.net/th?q=This+Information+Accessibility+Focuses+On+The+Visual+Input" alt="This Information Accessibility Focuses On The Visual Input">
+                    </div>
+                    <p></p>
+                    <p>This information accessibility focuses on the visual input presented using an additional description of the information in order for images to be useful fo allA.video accessibilityB.audio accessibilityC.text accessibilityD.image accessibility​</p>
+                    <div id="ez-toc-container"
+                        class="ez-toc-v2_0_40 counter-hierarchy ez-toc-counter ez-toc-light-blue ez-toc-container-direction">
+                        <div class="ez-toc-title-container">
+                            <p class="ez-toc-title">Daftar Isi</p>
+                            <span class="ez-toc-title-toggle"><a href="#"
+                                    class="ez-toc-pull-right ez-toc-btn ez-toc-btn-xs ez-toc-btn-default ez-toc-toggle"
+                                    area-label="ez-toc-toggle-icon-1"><label for="item-63b392361c4a0"
+                                        aria-label="Table of Content"><span
+                                            style="display: flex;align-items: center;width: 35px;height: 30px;justify-content: center;direction:ltr;"><svg
+                                                style="fill: #999;color:#999" xmlns="http://www.w3.org/2000/svg"
+                                                class="list-377408" width="20px" height="20px" viewBox="0 0 24 24"
+                                                fill="none">
+                                                <path
+                                                    d="M6 6H4v2h2V6zm14 0H8v2h12V6zM4 11h2v2H4v-2zm16 0H8v2h12v-2zM4 16h2v2H4v-2zm16 0H8v2h12v-2z"
+                                                    fill="currentColor"></path>
+                                            </svg><svg style="fill: #999;color:#999" class="arrow-unsorted-368013"
+                                                xmlns="http://www.w3.org/2000/svg" width="10px" height="10px"
+                                                viewBox="0 0 24 24" version="1.2" baseProfile="tiny">
+                                                <path
+                                                    d="M18.2 9.3l-6.2-6.3-6.2 6.3c-.2.2-.3.4-.3.7s.1.5.3.7c.2.2.4.3.7.3h11c.3 0 .5-.1.7-.3.2-.2.3-.5.3-.7s-.1-.5-.3-.7zM5.8 14.7l6.2 6.3 6.2-6.3c.2-.2.3-.5.3-.7s-.1-.5-.3-.7c-.2-.2-.4-.3-.7-.3h-11c-.3 0-.5.1-.7.3-.2.2-.3.5-.3.7s.1.5.3.7z">
+                                                </path>
+                                            </svg></span></label><input type="checkbox" id="item-63b392361c4a0"></a></span>
+                        </div>
+                        <nav>
+                            <ul class="ez-toc-list ez-toc-list-level-1 ">
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#this-information-accessibility-focuses-on-the-visual-input-presented-using-an-additional-description-of-the-information-in-order-for-images-to-be-useful-fo-alla-video-accessibilityb-audio-accessibilit">1.
+                                            This information accessibility focuses on the visual input presented using an additional description of the information in order for images to be useful fo allA.video accessibilityB.audio accessibilityC.text accessibilityD.image accessibility​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#b-accessibilityd-credibility3-this-information-accessibility-focuses-on-the-visual-input-presented-using-anadditional-description-of-the-information-in-order-for-images-to-be-useful-for-all-a-video">2.
+                                            b. accessibilityd. credibility3. This information accessibility focuses on the visual input presented using anadditional description of the information in order for images to be useful for all.a video accessibilityc. text accessibilityb. audio accessibilityd. image accessibility4. This information accessibility deals with scripts about the video which arerequired for users who cannot access visual or audio media channels.a. text accessibilityc. audio accessibilityb. video accessibilityd. image accessibility5. This kind of information source contains the most recent information oropinionsa. reference materialsc. government documentsb. booksd. news/magazine articles6. This information source uses technical language and contains bibliography aswell as research methods, data and conclusions.a. scholarly articlesc. reference materialsb. government documents d. news/magazine articles7. The use of outside sources of information helps the writer and reader to do thefollowing EXCEPTa. to gain additional information on the topicb. to lend credibility to the written materialc. to influence the reader to agree with the writerd. to make the writing less persuasive​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#learning-task-3-read-each-item-carefully-identify-what-is-asked-in-each-item-write-the-letters-of-your-answers-in-your-notebook-1-this-characteristic-of-written-communication-enables-one-to-under">3.
+                                            Learning Task 3: Read each item carefully. Identify what is asked in each item. Write the letters of your answers in your notebook. 1. This characteristic of written communication enables one to understand, evaluate, use and engage with written texts to participate in society, achieve goals and realize potentials. a. effectiveness c. reliability b. accessibility d. credibility 2. It is described as the degree to which something is successful in producing a desired result a. effectiveness c. reliability b. accessibility d. credibility 3. This information accessibility focuses on the visual input presented using an additional description of the information in order for images to be useful for all. a. video accessibility c. text accessibility b. audio accessibility d. image accessibility 4. This information accessibility deals with scripts about the video which are required for users who cannot access visual or audio media channels. a. text accessibility c. audio accessibility b. video accessibility d. image accessibility 5. This kind of information source contains the most recent information or opinions a. reference materials c. government documents b. books d. news/magazine articles dontoins bibliography as​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#data-is-the-raw-facts-to-be-inputted-into-the-computer-information-it-is-the-processed-data-motherboard-it-contains-different-computer-parts-ram-random-access-memory-rom-read-only-memory-l">4.
+                                            . Data - is the raw facts to be inputted into the computer Information- it is the processed data. Motherboard- it contains different computer parts. RAM - Random Access Memory ROM - Read Only Memory LEARNING OUTCOME 1:​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#what-is-correct-order-of-the-information-processing-cycle-a-outinputstoresprocess-b-processoutputstoresinput-c-inputprocessoutputstores-d-inputoutputprocessstores%e2%80%8b">5.
+                                            what is correct order of the information processing cycle? a. out,input,stores,process b. process,output,stores,input c. input,process,output,stores d. input,output,process,stores​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#input-device-is-a-hardware-device-capable-of-holding-information">6.
+                                            (Input device) is a hardware device capable of holding information.</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#4-which-is-true-about-input-devicesa-input-devices-take-information-out-of-the-cab-input-devices-put-information-in-the-compu%e2%80%8b">7.
+                                            4. Which is true about input devices?A. Input devices take information out of the caB. Input devices put information in the compu​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#this-is-an-input-device-the-main-way-to-enter-information-into-your-computer-%e2%80%8b">8.
+                                            This is an input device the main way to enter information into your computer.​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#15-they-input-_____-the-information-in-the-database-yesterday">9.
+                                            15. They (input) _____ the information in the database yesterday.</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#1-this-characteristic-of-written-communication-enables-one-to-understandevaluate-use-and-engage-with-written-texts-to-participate-in-society-achievegoals-and-realize-potentials-a-effectivenessc">10.
+                                            1. This characteristic of written communication enables one to understand,evaluate, use and engage with written texts to participate in society, achievegoals and realize potentials.a. effectivenessc. reliabilityb. accessibility2. It is described as the degree to which something is successful in producing ad. credibilitydesired resulta. effectivenessc. reliabilityb. accessibilityd. credibility3. This information accessibility focuses on the visual input presented using anadditional description of the information in order for images to be useful for all.a. video accessibilityc. text accessibilityb. audio accessibilityd. image accessibility4. This information accessibility deals with scripts about the video which arerequired for users who cannot access visual or audio media channels.a. text accessibilityc. audio accessibilityb. video accessibilityd. image accessibility5. This kind of information source contains the most recent information oropinionsa. reference materialsb. books6. This information source uses technical language and contains bibliography aswell as research methods, data and conclusions.c. government documentsd. news/magazine articlesa. scholarly articlesc. reference materialsb. government documents d. news/magazine articles7. The use of outside sources of information helps the writer and reader to do thefollowing EXCEPTa. to gain additional information on the topicb. to lend credibility to the written materialc. to influence the reader to agree with the writerd. to make the writing less persuasive​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#learning-task-3-read-each-item-carefully-identify-what-is-asked-in-each-item-1-this-characteristic-of-written-communication-enables-one-to-understandevaluate-use-and-engage-with-written-texts-to">11.
+                                            Learning Task 3: Read each item carefully. Identify what is asked in each item.1. This characteristic of written communication enables one to understand,evaluate, use and engage with written texts to participate in society, achieve2. It is described as the degree to which something is successful in producing aadditional description of the information in order for images to be useful for allWrite the letters of your answers in your notebook.goals and realize potentials.a. effectivenessc. reliabilityb. accessibilityadesired resulta. effectivenessc. reliabilityb. accessibility3. This information accessibility focuses on the visual input presented using ara. video accessibilityc. text accessibilityb. audio accessibilityd. image accessibility4. This information accessibility deals with scripts about the video which arequired for users who cannot access visual or audio media channels.a. text accessibilityc. audio accessibilityb. video accessibilityd. image accessibility5. This kind of information source contains the most recent informationopinionsa. reference materialsc. government documentsb. booksd. news/magazine articles6. This information source uses technical language and contains bibliographywell as research methods, data and conclusions.​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#what-allows-input-of-voice-or-music-to-be-converted-to-digital-information%e2%80%8b">12.
+                                            what allows input of voice or music to be converted to digital information​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#what-devices-used-to-input-data-and-information-to-the-computer-%e2%80%8b">13.
+                                            what devices used to input data and information to the computer ?​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#5-position-the-terminal-of-the-input-output-and-auxialliarycomponents-accessible-yes-or-no%e2%80%8b">14.
+                                            5. Position the terminal of the input, output and auxialliarycomponents accessible? YES OR NO​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#it-usually-used-as-its-input-or-output-channels-to-access-and-transfer-the-desired-data-using-intermediate-area-in-primary-storage%e2%80%8b">15.
+                                            it usually used as its input or output channels to access and transfer the desired data using intermediate area in primary storage​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#learning-task-3-read-each-item-carefully-identify-what-is-asked-in-each-itemwrite-the-letters-of-vour-answers-in-your-notebook1-this-characteristic-of-written-communication-enables-one-to-understan">16.
+                                            Learning Task 3: Read each item carefully. Identify what is asked in each itemWrite the letters of vour answers in your notebook1. This characteristic of written communication enables one to understand, evaluate, use and engage with written texts to participate in society, achievegoals and realize potentials.a effectivenessc. reliabilityb. accessibilityd. credibility2. It is described as the degree to which something is successful in producing adesired resulta. effectivenessc. reliabilityb. accessibilityd. credibility3. This information accessibility focuses on the visual input presented using anadditional description of the information in order for images to be useful for alla video accessibilityc. text accessibilityb. audio accessibilityd. image accessibility4. This information accessibility deals with scripts about the video which arerequired for users who cannot access visual or audio media channels.a text accessibilityc. audio accessibilityb. video accessibilityd. image accessibility5. This kind of information source contains the most recent information oropinionsa reference materialsc. government documentsb. booksd. news/magazine articles6. This information source uses technical language and contains bibliography aswell as research methods, data and conclusions.a scholarly articlesc. reference materialsb. government documents d. news/magazine articles7. The use of outside sources of information helps the writer and reader to do thefollowing EXCEPTa. to gain additional information on the topicb. to lend credibility to the written materialc. to influence the reader to agree with the writerd. to make the writing less persuasive​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#learning-task-3-read-each-item-carefully-identify-what-is-asked-in-each-item-write-the-letters-of-your-answers-in-your-notebook-1-this-characteristic-of-written-communication-enables-one-to-understan">17.
+                                            Learning Task 3 Read each item carefully identify what is asked in each item Write the letters of your answers in your notebook 1. This characteristic of written communication enables one to understand. evaluate, use and engage with written texts to participate in society, achieve goals and realize potentials. a. effectiveness c. reliability b. accessibility d. credibility 2. It is described as the degree to which something is successful in producing a desired result a. effectiveness c. reliability b. accessibility d. credibility 3. This information accessibility focuses on the visual input presented using an additional description of the information in order for images to be useful for all. a video accessibility c. text accessibility b. audio accessibility d. image accessibility 4. This information accessibility deals with scripts about the video which are required for users who cannot access visual or audio media channels a text accessibility c. audio accessibility b. video accessibility d. image accessibility 5. This kind of information source contains the most recent information or opinions a. reference materials c. government documents b. books d. news/magazine articles 6. This information source uses technical language and contains bibliography as well as research methods, data and conclusions. a scholarly articles c. reference materials b. government documents d. news/magazine articles 7. The use of outside sources of information helps the writer and reader to do the following EXCEPT a. to gain additional information on the topic b. to lend credibility to the written material c. to influence the reader to agree with the writer d. to make the writing less persuasiveanswer : 1.A2.A3.D4.B5.D6.A7.B​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#learning-task-3-direction-write-the-word-true-if-the-statement-is-correct-and-false-if-it-is-not-write-your-answer-on-the-blank-before-each-number-1-a-monitor-is-an-input-device-that-visually-di">18.
+                                            Learning Task #3: Direction: Write the word TRUE if the statement is correct and FALSE if it is not. Write your answer on the blank before each number. 1. A monitor is an input device that visually displays text and graphics. 2. A computer can run by itself without input devices. 3. Computer cameras convert printed material into digital information. 4. A speaker allows input of voice or music while a microphone reproduce sound. 5. Input devices help users interact to computers effectively.​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#a-directions-read-the-statements-carefully-and-write-true-if-the-statement-iscorrect-and-false-if-it-is-wrong-1-a-monitor-is-an-input-device-which-displays-visual-information-of-thecomputer-__">19.
+                                            A. Directions: Read the statements carefully and write TRUE if the statement is
+correct and FALSE if it is wrong. 
+1. A monitor is an input device which displays visual information of the
+computer.
+________2. A printer is one of the storage devices which print digital information
+into hard copies.
+________3. Keyboard is an input device of the computer which enters information
+through text, letters, and symbols.
+________4. The speaker of the computer is an example of output device which
+converts electrical energy into sound energy.
+________5. One example of storage device is the HDD or hard disk drive of the
+computer.
+________6. Storage devices are always connected to the computer.
+________7. Cloud storage is an example of output device which uses a device to
+store data.
+________8. Memory or Random Access Memory is a secondary device which
+stores data permanently.
+________9. A scanner is an input device which digitizes a paper photograph.
+_________10. The most suitable input device for feeding in a short report in the
+computer is the mouse.
+report ko mali sagot</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#it-is-one-of-the-controls-in-visual-basic-that-accepts-input-from-the-user%e2%80%8b">20.
+                                            it is one of the controls in visual basic that accepts input from the user​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#it-is-a-programmable-device-designed-to-accept-input-and-produces-this-into-information%e2%80%8b">21.
+                                            it is a programmable device designed to accept input and produces this into information​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#learning-activity-question-and-answerdirection-answer-the-following-questions-in-one-sheet-of-paper-1-explain-input-data-in-computer-processing-2-explain-how-to-access-information-through-computer">22.
+                                            LEARNING ACTIVITY: QUESTION AND ANSWERDirection: Answer the following questions in one sheet of paper.1. Explain Input data in computer processing.2. Explain how to access information through computer3. What are the basic functions of the web browser?​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#they-input-___-the-information-in-the-database-yesterday-inputted-have-inputted-input-have-input">23.
+                                            They (input) ___ the information in the database yesterday.
+ inputted
+ have inputted
+ input
+ have input</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#enumerate-the-parts-of-ms-access-and-input-short-description">24.
+                                            Enumerate the parts of MS Access and input short description.</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#q1w2l2-accessibility-and-effectivenesslearning-task-2-read-the-items-below-identify-the-correct-terminology-described-by-the-following-statements-write-the-letters-of-your-answers-in-the-blank-pro">25.
+                                            Q1W2L2: Accessibility and Effectiveness
+Learning Task 2: Read the items below.Identify the correct terminology described by the following statements. Write the letters of your answers in the blank provided.
+Choices
+a. books b. reference materials c. scholarly articles
+d. news/magazines e. government documents
+__c_____1. documents written by experts or scholars discussing results of scholearly works like research
+___e___2. reports, censuses, policies, data and statistics issued and published by the government and its attached agencies
+____b___3. sources providing answers to questions such as statistics, maps, background information (re)directing to additional sources
+_____d__4. source containing timely, brief and non-technical explanations of events or commentaries for the general public
+____a___5. source providing information in details segregated into chapters or parts
+Learning Task 3: Read each item carefully. Identify what is asked in each item.
+1. This characteristic of written communication enables one to understand, evaluate, use and engage with written texts to participate in society, achieve goals and realize potentials.
+a. effectiveness b. accessibility c. reliability d. credibility
+2. It is described as the degree to which something is successful in producing a desired result
+a. effectiveness b. Accessibility c. reliability d. credibility
+3. This information accessibility focuses on the visual input presented using an additional description of the information in order for images to be useful for all.
+a. video accessibility c. text accessibility
+b. audio accessibility d. image accessibility
+4. This information accessibility deals with scripts about the video which are required for users who cannot access visual or audio media channels.
+a. text accessibility c. audio accessibility
+b. video accessibility d. image accessibility
+5. This kind of information source contains the most recent information or opinions
+a. reference materials c. government documents
+b. Books d. news/magazine articles
+6. This information source uses technical language and contains bibliography as well as research methods, data and conclusions.
+a. scholarly articles c. reference materials b. government documents d. news/magazine articles
+7. The use of outside sources of information helps the writer and reader to do the following EXCEPT _____________.
+a. to gain additional information on the topic
+b. to lend credibility to the written material
+c. to influence the reader to agree with the writer
+d. to make the writing less persuasive
+Learning Task 5 : In each information source, provide at least five examples of documents classified under their groups.
+Scholarly Articles
+Books
+Government Documents
+News/Magazine Articles
+Reference Materials</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#q1w2l2-accessibility-and-effectivenesslearning-task-2-read-the-items-below-identify-the-correct-terminology-described-by-the-following-statements-write-the-letters-of-your-answers-in-the-blank-pro">26.
+                                            Q1W2L2: Accessibility and Effectiveness
+Learning Task 2: Read the items below.Identify the correct terminology described by the following statements. Write the letters of your answers in the blank provided.
+Choices
+a. books b. reference materials c. scholarly articles 
+ d. news/magazines e. government documents
+ _______1. documents written by experts or scholars discussing results of scholearly works like research
+ ______2. reports, censuses, policies, data and statistics issued and published by the government and its attached agencies
+_______3. sources providing answers to questions such as statistics, maps, background information (re)directing to additional sources
+_______4. source containing timely, brief and non-technical explanations of events or commentaries for the general public
+_______5. source providing information in details segregated into chapters or parts
+Learning Task 3: Read each item carefully. Identify what is asked in each item. 
+1. This characteristic of written communication enables one to understand, evaluate, use and engage with written texts to participate in society, achieve goals and realize potentials.
+a. effectiveness b. accessibility c. reliability d. credibility
+2. It is described as the degree to which something is successful in producing a desired result
+a. effectiveness b. Accessibility c. reliability d. credibility
+3. This information accessibility focuses on the visual input presented using an additional description of the information in order for images to be useful for all.
+a. video accessibility c. text accessibility
+b. audio accessibility d. image accessibility
+4. This information accessibility deals with scripts about the video which are required for users who cannot access visual or audio media channels.
+a. text accessibility c. audio accessibility
+b. video accessibility d. image accessibility
+5. This kind of information source contains the most recent information or opinions
+a. reference materials c. government documents
+b. Books d. news/magazine articles
+6. This information source uses technical language and contains bibliography as well as research methods, data and conclusions.
+a. scholarly articles c. reference materials b. government documents d. news/magazine articles
+7. The use of outside sources of information helps the writer and reader to do the following EXCEPT _____________.
+a. to gain additional information on the topic
+b. to lend credibility to the written material
+c. to influence the reader to agree with the writer
+d. to make the writing less persuasive
+Learning Task 5 : In each information source, provide at least five examples of documents classified under their groups. 
+Scholarly Articles
+Books
+Government Documents
+News/Magazine Articles
+Reference Materials</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#how-is-a-postural-response-determined-when-visual-and-soma-to-sensory-input-conflict%e2%80%8b">27.
+                                            How is a postural response determined when visual and soma to sensory input conflict?​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#a-device-that-usually-use-its-input-output-channels-to-access-and-transfer-the-desired-data-using-intermediate-area-and-primary-storage%e2%80%8b">28.
+                                            a device that usually use its input output channels to access and transfer the desired data using intermediate area and primary storage​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#providing-input-and-output-facilities-managing-files-of-information">29.
+                                            Providing input and output facilities, managing files of information</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#what-is-the-role-of-input-devices-in-information-system%e2%80%8b">30.
+                                            What is the role of input devices in information system?​</a>
+                                    </li>
+                                                            </ul>
+                        </nav>
+                    </div>
+                                            <h2 class="ez-toc-section" id="this-information-accessibility-focuses-on-the-visual-input-presented-using-an-additional-description-of-the-information-in-order-for-images-to-be-useful-fo-alla-video-accessibilityb-audio-accessibilit">
+                            1. This information accessibility focuses on the visual input presented using an additional description of the information in order for images to be useful fo allA.video accessibilityB.audio accessibilityC.text accessibilityD.image accessibility​</h2><br />
+                        <p><strong>Answer:</strong></p><p>Letter D</p><p><strong>Explanation:</strong></p><p>:D</p><br />
+                                            <h2 class="ez-toc-section" id="b-accessibilityd-credibility3-this-information-accessibility-focuses-on-the-visual-input-presented-using-anadditional-description-of-the-information-in-order-for-images-to-be-useful-for-all-a-video">
+                            2. b. accessibilityd. credibility3. This information accessibility focuses on the visual input presented using anadditional description of the information in order for images to be useful for all.a video accessibilityc. text accessibilityb. audio accessibilityd. image accessibility4. This information accessibility deals with scripts about the video which arerequired for users who cannot access visual or audio media channels.a. text accessibilityc. audio accessibilityb. video accessibilityd. image accessibility5. This kind of information source contains the most recent information oropinionsa. reference materialsc. government documentsb. booksd. news/magazine articles6. This information source uses technical language and contains bibliography aswell as research methods, data and conclusions.a. scholarly articlesc. reference materialsb. government documents d. news/magazine articles7. The use of outside sources of information helps the writer and reader to do thefollowing EXCEPTa. to gain additional information on the topicb. to lend credibility to the written materialc. to influence the reader to agree with the writerd. to make the writing less persuasive​</h2><br />
+                        <p>anong grade </p><p>pero prediction lng ha not sure</p><p>3.d</p><p>4.b</p><p>5.a</p><p>6.a</p><p>7.a </p><p>hehe not sure</p><br />
+                                            <h2 class="ez-toc-section" id="learning-task-3-read-each-item-carefully-identify-what-is-asked-in-each-item-write-the-letters-of-your-answers-in-your-notebook-1-this-characteristic-of-written-communication-enables-one-to-under">
+                            3. Learning Task 3: Read each item carefully. Identify what is asked in each item. Write the letters of your answers in your notebook. 1. This characteristic of written communication enables one to understand, evaluate, use and engage with written texts to participate in society, achieve goals and realize potentials. a. effectiveness c. reliability b. accessibility d. credibility 2. It is described as the degree to which something is successful in producing a desired result a. effectiveness c. reliability b. accessibility d. credibility 3. This information accessibility focuses on the visual input presented using an additional description of the information in order for images to be useful for all. a. video accessibility c. text accessibility b. audio accessibility d. image accessibility 4. This information accessibility deals with scripts about the video which are required for users who cannot access visual or audio media channels. a. text accessibility c. audio accessibility b. video accessibility d. image accessibility 5. This kind of information source contains the most recent information or opinions a. reference materials c. government documents b. books d. news/magazine articles dontoins bibliography as​</h2><br />
+                        <p><strong>Answer:</strong></p><p>hi lodi may free brainliest give away ako punta kalang sa question ko</p><p></p><p>pa brainliest na ako at follow need ko po virstuo</p><p><strong>Answer:</strong></p>bdbbd<p><strong>Explanation:</strong></p><p>helps</p><br />
+                                            <h2 class="ez-toc-section" id="data-is-the-raw-facts-to-be-inputted-into-the-computer-information-it-is-the-processed-data-motherboard-it-contains-different-computer-parts-ram-random-access-memory-rom-read-only-memory-l">
+                            4. . Data - is the raw facts to be inputted into the computer Information- it is the processed data. Motherboard- it contains different computer parts. RAM - Random Access Memory ROM - Read Only Memory LEARNING OUTCOME 1:​</h2><br />
+                        <p><strong>Answer:</strong></p><p>asan Ang question?</p><p><strong>Explanation:</strong></p><p>pa lagay </p><br />
+                                            <h2 class="ez-toc-section" id="what-is-correct-order-of-the-information-processing-cycle-a-outinputstoresprocess-b-processoutputstoresinput-c-inputprocessoutputstores-d-inputoutputprocessstores%e2%80%8b">
+                            5. what is correct order of the information processing cycle? a. out,input,stores,process b. process,output,stores,input c. input,process,output,stores d. input,output,process,stores​</h2><br />
+                        <p><strong>Answer:</strong></p><p>Letter C po hihi</p><p><strong>Explanation:</strong></p><p>If hindi po kayo sure sa sagot ko, wag niyo po ito isagot.</p><br />
+                                            <h2 class="ez-toc-section" id="input-device-is-a-hardware-device-capable-of-holding-information">
+                            6. (Input device) is a hardware device capable of holding information.</h2><br />
+                        <p><strong>Answer:</strong></p><p>Primary Storage</p><p><strong>Explanation:</strong></p><p>Primary storage (also known as main memory ) is the component of the computer that holds data, programs, and instructions that are currently in use. Primary storage is located on the motherboard. ... random access memory (RAM) flash memory. cache memory.</p><br />
+                                            <h2 class="ez-toc-section" id="4-which-is-true-about-input-devicesa-input-devices-take-information-out-of-the-cab-input-devices-put-information-in-the-compu%e2%80%8b">
+                            7. 4. Which is true about input devices?A. Input devices take information out of the caB. Input devices put information in the compu​</h2><br />
+                        <p><strong>Answer:</strong></p><p>A. </p><p><strong>Explanation:</strong></p><p>I'm not sure if my answer is correct </p><p></p><p>sana PO makatulong :):):)</p><p></p><p>keep safe and keep learning :):):)</p><p></p><br />
+                                            <h2 class="ez-toc-section" id="this-is-an-input-device-the-main-way-to-enter-information-into-your-computer-%e2%80%8b">
+                            8. This is an input device the main way to enter information into your computer.​</h2><br />
+                        <p>Cellphone and many more to connect information to your computer because We need a tank to connect</p><br />
+                                            <h2 class="ez-toc-section" id="15-they-input-_____-the-information-in-the-database-yesterday">
+                            9. 15. They (input) _____ the information in the database yesterday.</h2><br />
+                        The answer is <strong>have input</strong>.<br /><br />They <strong>have input</strong> the information in the database yesterday.<br />
+                                            <h2 class="ez-toc-section" id="1-this-characteristic-of-written-communication-enables-one-to-understandevaluate-use-and-engage-with-written-texts-to-participate-in-society-achievegoals-and-realize-potentials-a-effectivenessc">
+                            10. 1. This characteristic of written communication enables one to understand,evaluate, use and engage with written texts to participate in society, achievegoals and realize potentials.a. effectivenessc. reliabilityb. accessibility2. It is described as the degree to which something is successful in producing ad. credibilitydesired resulta. effectivenessc. reliabilityb. accessibilityd. credibility3. This information accessibility focuses on the visual input presented using anadditional description of the information in order for images to be useful for all.a. video accessibilityc. text accessibilityb. audio accessibilityd. image accessibility4. This information accessibility deals with scripts about the video which arerequired for users who cannot access visual or audio media channels.a. text accessibilityc. audio accessibilityb. video accessibilityd. image accessibility5. This kind of information source contains the most recent information oropinionsa. reference materialsb. books6. This information source uses technical language and contains bibliography aswell as research methods, data and conclusions.c. government documentsd. news/magazine articlesa. scholarly articlesc. reference materialsb. government documents d. news/magazine articles7. The use of outside sources of information helps the writer and reader to do thefollowing EXCEPTa. to gain additional information on the topicb. to lend credibility to the written materialc. to influence the reader to agree with the writerd. to make the writing less persuasive​</h2><br />
+                        <p>1. This characteristic of written communication enables one to understand,evaluate, use and engage with written texts to participate in society, achieve goals and realize potentials.</p><p><strong>B. accessibility</strong></p><p></p><p>Accessible communication is an umbrella term to describe communication that is clear, direct, easy to understand and that can be made available in multiple formats so that all users have equal access.</p><p></p><p>2. It is described as the degree to which something is successful in producing a desired result</p><p><strong>A. effectiveness</strong></p><p></p><p>Effective communication is the process of exchanging ideas, thoughts, opinions, knowledge, and data so that the message is received and understood with clarity and purpose.</p><p></p><p>3. This information accessibility focuses on the visual input presented using an additional description of the information in order for images to be useful for all.</p><p><strong>D. image accessibility</strong></p><p></p><p>Image descriptions help those with visual impairments understand the meaning of an image. This description is often labeled alt text or alternative text. When a screen reader reaches an image, it will read aloud the description that has been added. The user gets a sense of what that image is and its purpose in context.</p><p></p><p>4. This information accessibility deals with scripts about the video which are required for users who cannot access visual or audio media channels.</p><p><strong>B. video accessibility</strong></p><p></p><p>Video accessibility is the ability for a person with a disability to understand and use an online video. It allows people with disabilities to access information like anyone else; interact with others without being classed as “disabled” and allows them to undertake activities which they may not otherwise be able to do.</p><p></p><p>5. This kind of information source contains the most recent information or opinions</p><p><strong>D. news/magazine articles</strong></p><p></p><p>Magazine articles or popular articles are articles often written by a staff writer or journalist who may or may not have subject expertise. Popular articles: Are usually short in length. Contain images to encourage readership. Often have advertisements.</p><p></p><p>6. This information source uses technical language and contains bibliography as well as research methods, data and conclusions.</p><p><strong>A. scholarly articles</strong></p><p></p><p>Scholarly articles are written by researchers or experts in a field in order to share the results of their original research or analysis with other researchers and students. These articles often go through a process known as peer review where the article is reviewed by a group of experts in the field.</p><p></p><p></p><p>7. The use of outside sources of information helps the writer and reader to do the</p><p>following EXCEPT</p><p><strong>D. to make the writing less persuasive</strong></p><p></p><p>Source material helps you establish your credibility in several ways. When you include outside sources in your writing it indicates to your reader that you are basing your opinions on more than a personal, surface knowledge of the subject.</p><p></p><p><strong>Learn More About :</strong></p><p>Explain the communication affect globalization and globalization by communication https://brainly.ph/question/3957188</p><p>#SPJ2</p><br />
+                                            <h2 class="ez-toc-section" id="learning-task-3-read-each-item-carefully-identify-what-is-asked-in-each-item-1-this-characteristic-of-written-communication-enables-one-to-understandevaluate-use-and-engage-with-written-texts-to">
+                            11. Learning Task 3: Read each item carefully. Identify what is asked in each item.1. This characteristic of written communication enables one to understand,evaluate, use and engage with written texts to participate in society, achieve2. It is described as the degree to which something is successful in producing aadditional description of the information in order for images to be useful for allWrite the letters of your answers in your notebook.goals and realize potentials.a. effectivenessc. reliabilityb. accessibilityadesired resulta. effectivenessc. reliabilityb. accessibility3. This information accessibility focuses on the visual input presented using ara. video accessibilityc. text accessibilityb. audio accessibilityd. image accessibility4. This information accessibility deals with scripts about the video which arequired for users who cannot access visual or audio media channels.a. text accessibilityc. audio accessibilityb. video accessibilityd. image accessibility5. This kind of information source contains the most recent informationopinionsa. reference materialsc. government documentsb. booksd. news/magazine articles6. This information source uses technical language and contains bibliographywell as research methods, data and conclusions.​</h2><br />
+                        <p><strong>Answer:</strong></p><p>1 <strong>A</strong></p><p>2<strong>A</strong></p><p>3<strong>D</strong></p><p>4<strong>B</strong></p><p>5<strong>D</strong></p><p>6<strong>A</strong></p><p>7<strong>D</strong></p><p>you can do it just pray </p><br />
+                                            <h2 class="ez-toc-section" id="what-allows-input-of-voice-or-music-to-be-converted-to-digital-information%e2%80%8b">
+                            12. what allows input of voice or music to be converted to digital information​</h2><br />
+                        <p><strong>Answer:</strong></p><p>Microphone works like the microphone on a tape</p><br />
+                                            <h2 class="ez-toc-section" id="what-devices-used-to-input-data-and-information-to-the-computer-%e2%80%8b">
+                            13. what devices used to input data and information to the computer ?​</h2><br />
+                        <p><strong>Answer:</strong></p><p>Keyboard, Microphone</p><p><strong>Explanation:</strong></p><p>#KeepOnLearning</p><br />
+                                            <h2 class="ez-toc-section" id="5-position-the-terminal-of-the-input-output-and-auxialliarycomponents-accessible-yes-or-no%e2%80%8b">
+                            14. 5. Position the terminal of the input, output and auxialliarycomponents accessible? YES OR NO​</h2><br />
+                        <p><strong>Answer:</strong></p><p><strong>Yes</strong></p><p></p><p></p><p></p><p></p><p><strong>I </strong><strong>HOPE</strong><strong> ITS</strong><strong> HELP</strong><strong>:</strong><strong>)</strong></p><p></p><p></p><p></p><p></p><p><strong>STAYSAFE;</strong><strong>)</strong></p><br />
+                                            <h2 class="ez-toc-section" id="it-usually-used-as-its-input-or-output-channels-to-access-and-transfer-the-desired-data-using-intermediate-area-in-primary-storage%e2%80%8b">
+                            15. it usually used as its input or output channels to access and transfer the desired data using intermediate area in primary storage​</h2><br />
+                        <p><strong>Answer:</strong></p><p>b.RAM</p><p><strong>Explanation:</strong></p><p>Thankyou for supporting</p><br />
+                                            <h2 class="ez-toc-section" id="learning-task-3-read-each-item-carefully-identify-what-is-asked-in-each-itemwrite-the-letters-of-vour-answers-in-your-notebook1-this-characteristic-of-written-communication-enables-one-to-understan">
+                            16. Learning Task 3: Read each item carefully. Identify what is asked in each itemWrite the letters of vour answers in your notebook1. This characteristic of written communication enables one to understand, evaluate, use and engage with written texts to participate in society, achievegoals and realize potentials.a effectivenessc. reliabilityb. accessibilityd. credibility2. It is described as the degree to which something is successful in producing adesired resulta. effectivenessc. reliabilityb. accessibilityd. credibility3. This information accessibility focuses on the visual input presented using anadditional description of the information in order for images to be useful for alla video accessibilityc. text accessibilityb. audio accessibilityd. image accessibility4. This information accessibility deals with scripts about the video which arerequired for users who cannot access visual or audio media channels.a text accessibilityc. audio accessibilityb. video accessibilityd. image accessibility5. This kind of information source contains the most recent information oropinionsa reference materialsc. government documentsb. booksd. news/magazine articles6. This information source uses technical language and contains bibliography aswell as research methods, data and conclusions.a scholarly articlesc. reference materialsb. government documents d. news/magazine articles7. The use of outside sources of information helps the writer and reader to do thefollowing EXCEPTa. to gain additional information on the topicb. to lend credibility to the written materialc. to influence the reader to agree with the writerd. to make the writing less persuasive​</h2><br />
+                        <p><strong>Explanation:</strong></p><p>1.A</p><p>2.A</p><p>3.D</p><p>4.B</p><p>5.D</p><p>6.A</p><p>7.D</p><p></p><br />
+                                            <h2 class="ez-toc-section" id="learning-task-3-read-each-item-carefully-identify-what-is-asked-in-each-item-write-the-letters-of-your-answers-in-your-notebook-1-this-characteristic-of-written-communication-enables-one-to-understan">
+                            17. Learning Task 3 Read each item carefully identify what is asked in each item Write the letters of your answers in your notebook 1. This characteristic of written communication enables one to understand. evaluate, use and engage with written texts to participate in society, achieve goals and realize potentials. a. effectiveness c. reliability b. accessibility d. credibility 2. It is described as the degree to which something is successful in producing a desired result a. effectiveness c. reliability b. accessibility d. credibility 3. This information accessibility focuses on the visual input presented using an additional description of the information in order for images to be useful for all. a video accessibility c. text accessibility b. audio accessibility d. image accessibility 4. This information accessibility deals with scripts about the video which are required for users who cannot access visual or audio media channels a text accessibility c. audio accessibility b. video accessibility d. image accessibility 5. This kind of information source contains the most recent information or opinions a. reference materials c. government documents b. books d. news/magazine articles 6. This information source uses technical language and contains bibliography as well as research methods, data and conclusions. a scholarly articles c. reference materials b. government documents d. news/magazine articles 7. The use of outside sources of information helps the writer and reader to do the following EXCEPT a. to gain additional information on the topic b. to lend credibility to the written material c. to influence the reader to agree with the writer d. to make the writing less persuasiveanswer : 1.A2.A3.D4.B5.D6.A7.B​</h2><br />
+                        1.D <br />2.A<br />3.D<br />4.B<br />5.D<br />6.A<br />7.B<br />
+                                            <h2 class="ez-toc-section" id="learning-task-3-direction-write-the-word-true-if-the-statement-is-correct-and-false-if-it-is-not-write-your-answer-on-the-blank-before-each-number-1-a-monitor-is-an-input-device-that-visually-di">
+                            18. Learning Task #3: Direction: Write the word TRUE if the statement is correct and FALSE if it is not. Write your answer on the blank before each number. 1. A monitor is an input device that visually displays text and graphics. 2. A computer can run by itself without input devices. 3. Computer cameras convert printed material into digital information. 4. A speaker allows input of voice or music while a microphone reproduce sound. 5. Input devices help users interact to computers effectively.​</h2><br />
+                        <p><strong>Answer:</strong></p><p>1.false</p><p>2.false</p><p>3.true</p><p>4.false</p><p>5.true</p><br />
+                                            <h2 class="ez-toc-section" id="a-directions-read-the-statements-carefully-and-write-true-if-the-statement-iscorrect-and-false-if-it-is-wrong-1-a-monitor-is-an-input-device-which-displays-visual-information-of-thecomputer-__">
+                            19. A. Directions: Read the statements carefully and write TRUE if the statement is
+correct and FALSE if it is wrong. 
+1. A monitor is an input device which displays visual information of the
+computer.
+________2. A printer is one of the storage devices which print digital information
+into hard copies.
+________3. Keyboard is an input device of the computer which enters information
+through text, letters, and symbols.
+________4. The speaker of the computer is an example of output device which
+converts electrical energy into sound energy.
+________5. One example of storage device is the HDD or hard disk drive of the
+computer.
+________6. Storage devices are always connected to the computer.
+________7. Cloud storage is an example of output device which uses a device to
+store data.
+________8. Memory or Random Access Memory is a secondary device which
+stores data permanently.
+________9. A scanner is an input device which digitizes a paper photograph.
+_________10. The most suitable input device for feeding in a short report in the
+computer is the mouse.
+report ko mali sagot</h2><br />
+                        <p><strong>Answer:</strong></p><p>1.true</p><p>2.true</p><p>3.true</p><p>4.true</p><p>5.true</p><p>6.false</p><p>7.true</p><p>8.false</p><p>9.true</p><p>10.false</p><p><strong>Explanation:</strong></p><p>trust me </p><p>napagaralan na namin yan </p><p>pabrainliest po</p><br />
+                                            <h2 class="ez-toc-section" id="it-is-one-of-the-controls-in-visual-basic-that-accepts-input-from-the-user%e2%80%8b">
+                            20. it is one of the controls in visual basic that accepts input from the user​</h2><br />
+                        <p><strong>Answer:</strong></p><p><strong>In the settings search; user</strong></p><p><strong>Explanation:</strong></p><p>i hope makatulong</p><br />
+                                            <h2 class="ez-toc-section" id="it-is-a-programmable-device-designed-to-accept-input-and-produces-this-into-information%e2%80%8b">
+                            21. it is a programmable device designed to accept input and produces this into information​</h2><br />
+                        <p><strong>Answer:</strong></p><p>Computer</p><p><strong>Explanation:</strong></p><p>A computer is a machine that can be programmed to accept data (input), process it into useful information (output), and store it away (in a secondary storage device) for safekeeping or later reuse.</p><p></p><p>#CarryOnLearning</p><br />
+                                            <h2 class="ez-toc-section" id="learning-activity-question-and-answerdirection-answer-the-following-questions-in-one-sheet-of-paper-1-explain-input-data-in-computer-processing-2-explain-how-to-access-information-through-computer">
+                            22. LEARNING ACTIVITY: QUESTION AND ANSWERDirection: Answer the following questions in one sheet of paper.1. Explain Input data in computer processing.2. Explain how to access information through computer3. What are the basic functions of the web browser?​</h2><br />
+                        <p>1.</p><p>Input: Getting Data from the User to the Computer</p><p>Some input data can go directly to the computer for processing. Input in this category includes bar codes, speech that enters the computer through a microphone, and data entered by means of a device that converts motions to on-screen action. Some input data, however, goes through a good deal of intermediate handling, such as when it is copied from a source document and translated to a medium that a machine can read, such as a magnetic disk. In either case the task is to gather data to be processed by the computer 虐ometimes called raw data and convert it into some form the computer can understand.</p><p>2.</p><p>System Information" in the search box. Alternatively, you could hit "Windows + r" simultaneously on your keyboard, and type "msinfo32" into the Run dialogue.</p><p>3.</p><p>The primary function of a web browser is to render HTML, the code used to design or "mark up" webpages. Each time a browser loads a web page, it processes the HTML, which may include text, links, and references to images and other items, such as cascading style sheets and JavaScript functions. The browser processes these items, then renders them in the browser window.</p><p></p><p>Early web browsers, such as Mosaic and Netscape Navigator, were simple applications that rendered HTML, processed form input, and supported bookmarks. As websites have evolved, so have web browser requirements. Today's browsers are far more advanced, supporting multiple types of HTML (such as XHTML and HTML 5), dynamic JavaScript, and encryption used by secure websites.</p><p></p><p>The capabilities of modern web browsers allow web developers to create highly interactive websites. For example, Ajax enables a browser to dynamically update information on a webpage without the need to reload the page. Advances in CSS allow browsers to display a responsive website layouts and a wide array of visual effects. Cookies allow browsers to remember your settings for specific websites.</p><p></p><p>While web browser technology has come a long way since Netscape, browser compatibility issues remain a problem. Since browsers use different rendering engines, websites may not appear the same across multiple browsers. In some cases, a website may work fine in one browser, but not function properly in another. Therefore, it is smart to install multiple browsers on your computer so you can use an alternate browser if necessary.</p><p></p><p></p><p></p><p></p><p></p><p>SAY YES TO GOD SAY NO TO DRUGS</p><p></p><br />
+                                            <h2 class="ez-toc-section" id="they-input-___-the-information-in-the-database-yesterday-inputted-have-inputted-input-have-input">
+                            23. They (input) ___ the information in the database yesterday.
+ inputted
+ have inputted
+ input
+ have input</h2><br />
+                        they have inputted the information in the database yesterday.<br /><br /><br />
+                                            <h2 class="ez-toc-section" id="enumerate-the-parts-of-ms-access-and-input-short-description">
+                            24. Enumerate the parts of MS Access and input short description.</h2><br />
+                        <p></p><p>1. Tables: This is where the data is stored in MS Access. Tables are made up of rows and columns, and each row represents a record and each column represents a field.</p><p></p><p>2. Queries: This is where you can retrieve specific data from tables by specifying criteria. Queries can also be used to modify or update data in tables.</p><p></p><p>3. Forms: This is where you can input, edit, and view data in a user-friendly format. Forms can also be used to filter and sort data.</p><p></p><p>4. Reports: This is where you can present data in a formatted and organized way. Reports can be used to print or export data for further analysis.</p><p></p><p>5. Macros: This is a set of instructions that can automate tasks in MS Access. Macros can be used to perform repetitive tasks, such as opening a form or running a query.</p><p></p><p>6. Modules: This is where you can write Visual Basic for Applications (VBA) code to customize the behavior of MS Access. Modules can be used to create custom functions or procedures that can be used in forms, reports, or macros.</p><p></p><p>7. Navigation Pane: This is where you can access all the objects in a database, such as tables, queries, forms, and reports. It is also where you can create new objects or organize existing ones.</p><p></p><p>8. Ribbon: This is the main toolbar in MS Access that provides access to the most commonly used commands. The ribbon is organized into tabs, each of which contains a set of related commands</p><br />
+                                            <h2 class="ez-toc-section" id="q1w2l2-accessibility-and-effectivenesslearning-task-2-read-the-items-below-identify-the-correct-terminology-described-by-the-following-statements-write-the-letters-of-your-answers-in-the-blank-pro">
+                            25. Q1W2L2: Accessibility and Effectiveness
+Learning Task 2: Read the items below.Identify the correct terminology described by the following statements. Write the letters of your answers in the blank provided.
+Choices
+a. books b. reference materials c. scholarly articles
+d. news/magazines e. government documents
+__c_____1. documents written by experts or scholars discussing results of scholearly works like research
+___e___2. reports, censuses, policies, data and statistics issued and published by the government and its attached agencies
+____b___3. sources providing answers to questions such as statistics, maps, background information (re)directing to additional sources
+_____d__4. source containing timely, brief and non-technical explanations of events or commentaries for the general public
+____a___5. source providing information in details segregated into chapters or parts
+Learning Task 3: Read each item carefully. Identify what is asked in each item.
+1. This characteristic of written communication enables one to understand, evaluate, use and engage with written texts to participate in society, achieve goals and realize potentials.
+a. effectiveness b. accessibility c. reliability d. credibility
+2. It is described as the degree to which something is successful in producing a desired result
+a. effectiveness b. Accessibility c. reliability d. credibility
+3. This information accessibility focuses on the visual input presented using an additional description of the information in order for images to be useful for all.
+a. video accessibility c. text accessibility
+b. audio accessibility d. image accessibility
+4. This information accessibility deals with scripts about the video which are required for users who cannot access visual or audio media channels.
+a. text accessibility c. audio accessibility
+b. video accessibility d. image accessibility
+5. This kind of information source contains the most recent information or opinions
+a. reference materials c. government documents
+b. Books d. news/magazine articles
+6. This information source uses technical language and contains bibliography as well as research methods, data and conclusions.
+a. scholarly articles c. reference materials b. government documents d. news/magazine articles
+7. The use of outside sources of information helps the writer and reader to do the following EXCEPT _____________.
+a. to gain additional information on the topic
+b. to lend credibility to the written material
+c. to influence the reader to agree with the writer
+d. to make the writing less persuasive
+Learning Task 5 : In each information source, provide at least five examples of documents classified under their groups.
+Scholarly Articles
+Books
+Government Documents
+News/Magazine Articles
+Reference Materials</h2><br />
+                        <p><strong>Answer:</strong></p><p>[tex][tex]\orange{\rule{40pt}{555555pt}}\green{\rule{40pt}{555555pt}}\blue{\rule{40pt}{555555pt}}\red{\rule{40pt}{555555pt}}[/tex]</p><br />
+                                            <h2 class="ez-toc-section" id="q1w2l2-accessibility-and-effectivenesslearning-task-2-read-the-items-below-identify-the-correct-terminology-described-by-the-following-statements-write-the-letters-of-your-answers-in-the-blank-pro">
+                            26. Q1W2L2: Accessibility and Effectiveness
+Learning Task 2: Read the items below.Identify the correct terminology described by the following statements. Write the letters of your answers in the blank provided.
+Choices
+a. books b. reference materials c. scholarly articles 
+ d. news/magazines e. government documents
+ _______1. documents written by experts or scholars discussing results of scholearly works like research
+ ______2. reports, censuses, policies, data and statistics issued and published by the government and its attached agencies
+_______3. sources providing answers to questions such as statistics, maps, background information (re)directing to additional sources
+_______4. source containing timely, brief and non-technical explanations of events or commentaries for the general public
+_______5. source providing information in details segregated into chapters or parts
+Learning Task 3: Read each item carefully. Identify what is asked in each item. 
+1. This characteristic of written communication enables one to understand, evaluate, use and engage with written texts to participate in society, achieve goals and realize potentials.
+a. effectiveness b. accessibility c. reliability d. credibility
+2. It is described as the degree to which something is successful in producing a desired result
+a. effectiveness b. Accessibility c. reliability d. credibility
+3. This information accessibility focuses on the visual input presented using an additional description of the information in order for images to be useful for all.
+a. video accessibility c. text accessibility
+b. audio accessibility d. image accessibility
+4. This information accessibility deals with scripts about the video which are required for users who cannot access visual or audio media channels.
+a. text accessibility c. audio accessibility
+b. video accessibility d. image accessibility
+5. This kind of information source contains the most recent information or opinions
+a. reference materials c. government documents
+b. Books d. news/magazine articles
+6. This information source uses technical language and contains bibliography as well as research methods, data and conclusions.
+a. scholarly articles c. reference materials b. government documents d. news/magazine articles
+7. The use of outside sources of information helps the writer and reader to do the following EXCEPT _____________.
+a. to gain additional information on the topic
+b. to lend credibility to the written material
+c. to influence the reader to agree with the writer
+d. to make the writing less persuasive
+Learning Task 5 : In each information source, provide at least five examples of documents classified under their groups. 
+Scholarly Articles
+Books
+Government Documents
+News/Magazine Articles
+Reference Materials</h2><br />
+                        <p><strong>Answer:</strong></p><p>1.a</p><p>2.c</p><p>3.b</p><p>4.d</p><p>5.e</p><p><strong>Explanation:</strong></p><p>pa brailiest</p><p><strong>Answer:</strong></p><p>b</p><p>a</p><p>d</p><p>c</p><p>d</p><p></p>dadbcab<p></p><p>salamat sa points</p><p></p><br />
+                                            <h2 class="ez-toc-section" id="how-is-a-postural-response-determined-when-visual-and-soma-to-sensory-input-conflict%e2%80%8b">
+                            27. How is a postural response determined when visual and soma to sensory input conflict?​</h2><br />
+                        <p><strong>Answer:</strong></p><p></p>The vestibular system provides the defining input to make a postural response when a conflict exists between the information from the visual system and that from the somatosensory system.<p><strong>Explanation:</strong></p><p>hope its help brainliest me </p><p><strong>Answer:</strong></p><p>ENGLISH:</p><p><strong>How is postural response determined when visual and somatosensory input conflict?</strong></p><p><strong>The vestibular system provides the defining input to make a postural response when a conflict exists between the information from the visual system and that from the somatosensory system.</strong></p><p><strong>Explanation:</strong></p><p>TAGALOG:</p><p>Paano natutukoy ang postural na tugon kapag ang visual at somatosensory input ay sumasalungat?</p><p>Ang vestibular system ay nagbibigay ng pagtukoy sa input upang makagawa ng postural na tugon kapag may salungatan sa pagitan ng impormasyon mula sa visual system at mula sa somatosensory system.</p><p></p><p>#CARRYONLEARNING!</p><br />
+                                            <h2 class="ez-toc-section" id="a-device-that-usually-use-its-input-output-channels-to-access-and-transfer-the-desired-data-using-intermediate-area-and-primary-storage%e2%80%8b">
+                            28. a device that usually use its input output channels to access and transfer the desired data using intermediate area and primary storage​</h2><br />
+                        <p><strong>Answer:</strong></p><p>Secondary storage</p><p><strong>Explanation:</strong></p><p>Example: Hard disk drive</p><p></p><p>#BrainlyEveryday</p><br />
+                                            <h2 class="ez-toc-section" id="providing-input-and-output-facilities-managing-files-of-information">
+                            29. Providing input and output facilities, managing files of information</h2><br />
+                        the answer is OPERATING SYSTEM (OS)<br />
+                                            <h2 class="ez-toc-section" id="what-is-the-role-of-input-devices-in-information-system%e2%80%8b">
+                            30. What is the role of input devices in information system?​</h2><br />
+                        <p><strong>Answer:</strong></p><p>The role of input device in information system is to provide data and control signals to an information processing system such as a computer or information appliance. Examples of input devices include keyboards, mouse, scanners, cameras, joysticks, and microphones.</p><br />
+                    
+                </div>
+                <div class="youtubeVideo" style="text-align: center">
+                    <h3>Video Terkait</h3>
+                    <iframe width="560" height="315"
+                        src="https://www.youtube.com/embed/ELqsF3rD920?controls=0" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"allowfullscreen></iframe>
+                </div>
+                <footer class="entry-meta" aria-label="Meta postingan">
+                    <span class="cat-links"><span class="gp-icon icon-categories"><svg viewBox="0 0 512 512"
+                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em">
+                                <path
+                                    d="M0 112c0-26.51 21.49-48 48-48h110.014a48 48 0 0143.592 27.907l12.349 26.791A16 16 0 00228.486 128H464c26.51 0 48 21.49 48 48v224c0 26.51-21.49 48-48 48H48c-26.51 0-48-21.49-48-48V112z">
+                                </path>
+                            </svg></span><span class="screen-reader-text">Kategori </span>english</span>
+            </div>
+        </article>
+    </main>
+            </div>
+            <div class="widget-area sidebar is-right-sidebar" id="right-sidebar">
+                <div class="inside-right-sidebar">
+                    <aside id="categories-2" class="widget inner-padding widget_categories">
+                        <h2 class="widget-title">Topik</h2>
+                        <ul>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/what-is-think-before-you-click.html">What Is Think Before You Click</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/garnishes-and-accompaniments.html">Garnishes And Accompaniments</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/identify-similarities-and-differences-between-production-and-service-operations.html">Identify Similarities And Differences Between Production And Service Operations</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/ano-ang-dahilan-ng-mga-heograpo-sa-paghahating-heograpiya.html">Ano Ang Dahilan Ng Mga Heograpo Sa Paghahating Heograpiya</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/let-s-analyze.html">Let s Analyze</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/culinary-nutrition-principles-and-applications.html">Culinary Nutrition Principles And Applications</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/synert.html">Synert</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/tonya-s-buffet.html">Tonya s Buffet</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/what-is-the-result-of-willy-s-conversation-with-howard.html">What Is The Result Of Willy s Conversation With Howard</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/cocl3.html">Cocl3</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/pic16f84-microcontroller.html">Pic16f84 Microcontroller</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/why-nstp-is-important-to-you-as-a-student.html">Why Nstp Is Important To You As A Student</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/he-s-into-her-song-playlist.html">He s Into Her Song Playlist</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/estrategy-solutions.html">Estrategy Solutions</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/ambroxol-zobrixol.html">Ambroxol Zobrixol</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/auxiliary-memory.html">Auxiliary Memory</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/junction-room.html">Junction Room</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/pull-doorbell.html">Pull Doorbell</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/php-session-active.html">Php session active</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/there-s-a-drone-in-your-soup.html">There s A Drone In Your Soup</a>
+                                </li>
+                                                    </ul>
+
+                    </aside>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="site-footer">
+        <footer class="site-info" aria-label="Situs" itemtype="https://schema.org/WPFooter" itemscope>
+            <div class="inside-site-info grid-container">
+                <div class="copyright-bar">
+                    <span class="copyright">&copy; 2023 <a href="https://jneweducation.github.io"
+                            itemprop="url">QnA</a></span>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <a title="Gulirkan kembali ke puncak laman" aria-label="Gulirkan kembali ke puncak laman" rel="nofollow"
+        href="#" class="generate-back-to-top" data-scroll-speed="400" data-start-scroll="300">
+        <span class="gp-icon icon-arrow-up"><svg viewBox="0 0 330 512" aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill-rule="evenodd"
+                clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414">
+                <path
+                    d="M305.863 314.916c0 2.266-1.133 4.815-2.832 6.514l-14.157 14.163c-1.699 1.7-3.964 2.832-6.513 2.832-2.265 0-4.813-1.133-6.512-2.832L164.572 224.276 53.295 335.593c-1.699 1.7-4.247 2.832-6.512 2.832-2.265 0-4.814-1.133-6.513-2.832L26.113 321.43c-1.699-1.7-2.831-4.248-2.831-6.514s1.132-4.816 2.831-6.515L158.06 176.408c1.699-1.7 4.247-2.833 6.512-2.833 2.265 0 4.814 1.133 6.513 2.833L303.03 308.4c1.7 1.7 2.832 4.249 2.832 6.515z"
+                    fill-rule="nonzero" />
+            </svg></span>
+    </a>
+    <script id="generate-a11y">
+        ! function() {
+            "use strict";
+            if ("querySelector" in document && "addEventListener" in window) {
+                var e = document.body;
+                e.addEventListener("mousedown", function() {
+                    e.classList.add("using-mouse")
+                }), e.addEventListener("keydown", function() {
+                    e.classList.remove("using-mouse")
+                })
+            }
+        }();
+    </script>
+    <!--[if lte IE 11]>
+<script src='https://jneweducation.github.io/js/classList.min.js' ?ver=3.2.4' id='generate-classlist-js'></script>
+<![endif]-->
+    <script id='generate-menu-js-extra'>
+        var generatepressMenu = {
+            "toggleOpenedSubMenus": "1",
+            "openSubMenuLabel": "Buka Submenu",
+            "closeSubMenuLabel": "Tutup submenu"
+        };
+    </script>
+    <script src='https://jneweducation.github.io/js/menu.min.js' ?ver=3.2.4' id='generate-menu-js'></script>
+    <script id='generate-navigation-search-js-extra'>
+        var generatepressNavSearch = {
+            "open": "Buka Kolom Pencarian",
+            "close": "Tutup Kolom Pencarian"
+        };
+    </script>
+    <script src='https://jneweducation.github.io/js/navigation-search.min.js' ?ver=3.2.4' id='generate-navigation-search-js'></script>
+    <script id='generate-back-to-top-js-extra'>
+        var generatepressBackToTop = {
+            "smooth": "1"
+        };
+    </script>
+    <script src='https://jneweducation.github.io/js/back-to-top.min.js' ?ver=3.2.4' id='generate-back-to-top-js'></script>
+    <script type='text/javascript' src='//jd3j7g5z1fqs.com/96/78/7a/96787a1945876b1a9c10f79941441964.js'></script>
+<script type='text/javascript' src='//jd3j7g5z1fqs.com/b4/f1/ef/b4f1ef8dfe59b7fa68754094cf6c8e0e.js'></script>
+  <!-- Histats.com  START  (aync)-->
+<script type="text/javascript">var _Hasync= _Hasync|| [];
+_Hasync.push(['Histats.start', '1,4739059,4,0,0,0,00010000']);
+_Hasync.push(['Histats.fasi', '1']);
+_Hasync.push(['Histats.track_hits', '']);
+(function() {
+var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
+hs.src = ('//s10.histats.com/js15_as.js');
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+})();</script>
+<noscript><a href="/" target="_blank"><img  src="//sstatic1.histats.com/0.gif?4739059&101" alt="" border="0"></a></noscript>
+<!-- Histats.com  END  -->
+</body>
+
+</html>

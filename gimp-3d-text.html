@@ -1,0 +1,1192 @@
+<!DOCTYPE html>
+<html lang="id" prefix="og: https://ogp.me/ns#">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="profile" href="https://gmpg.org/xfn/11">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gimp 3d Text - QnA</title>
+    <meta name="description" content="Gimp 3d Text, Create 3D Text in GIMP with Proper Shadows &amp;amp; Highlights, , , , Davies Media Design, 2023-04-06T12:00:21.000000Z, 20, Tut 41 - Deutsch: 3D Text mit Gimp 2.8.0 erstellen - YouTube, youtube.com, 1280 x 720, jpeg, , 20, gimp-3d-text, QnA" />
+    <meta name="robots" content="index,follow" />
+    <meta property="og:locale" content="id_ID" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Gimp 3d Text - QnA" />
+    <meta property="og:description" content="Gimp 3d Text, Create 3D Text in GIMP with Proper Shadows &amp;amp; Highlights, , , , Davies Media Design, 2023-04-06T12:00:21.000000Z, 20, Tut 41 - Deutsch: 3D Text mit Gimp 2.8.0 erstellen - YouTube, youtube.com, 1280 x 720, jpeg, , 20, gimp-3d-text, QnA" />
+    <meta property="og:site_name" content="QnA" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Gimp 3d Text - QnA" />
+    <meta name="twitter:description" content="Gimp 3d Text, Create 3D Text in GIMP with Proper Shadows &amp;amp; Highlights, , , , Davies Media Design, 2023-04-06T12:00:21.000000Z, 20, Tut 41 - Deutsch: 3D Text mit Gimp 2.8.0 erstellen - YouTube, youtube.com, 1280 x 720, jpeg, , 20, gimp-3d-text, QnA" />
+    <link rel='stylesheet' id='generate-style-css' href='https://jneweducation.github.io/css/main.min.css'?ver=3.2.4'
+        media='all' />
+    <link rel='stylesheet' id='ez-toc-css' href='https://jneweducation.github.io/css/screen.min.css'?ver=2.0.40' media='all' />
+    <style id='generate-style-inline-css'>
+        body {
+            background-color: #f7f7f7;
+            color: #222222;
+        }
+
+        a {
+            color: #1e73be;
+        }
+
+        a:hover,
+        a:focus,
+        a:active {
+            color: #000000;
+        }
+
+        .wp-block-group__inner-container {
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .generate-back-to-top {
+            font-size: 20px;
+            border-radius: 3px;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            line-height: 40px;
+            width: 40px;
+            text-align: center;
+            z-index: 10;
+            transition: opacity 300ms ease-in-out;
+            opacity: 0.1;
+            transform: translateY(1000px);
+        }
+
+        .generate-back-to-top__show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .navigation-search {
+            position: absolute;
+            left: -99999px;
+            pointer-events: none;
+            visibility: hidden;
+            z-index: 20;
+            width: 100%;
+            top: 0;
+            transition: opacity 100ms ease-in-out;
+            opacity: 0;
+        }
+
+        .navigation-search.nav-search-active {
+            left: 0;
+            right: 0;
+            pointer-events: auto;
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .navigation-search input[type="search"] {
+            outline: 0;
+            border: 0;
+            vertical-align: bottom;
+            line-height: 1;
+            opacity: 0.9;
+            width: 100%;
+            z-index: 20;
+            border-radius: 0;
+            -webkit-appearance: none;
+            height: 60px;
+        }
+
+        .navigation-search input::-ms-clear {
+            display: none;
+            width: 0;
+            height: 0;
+        }
+
+        .navigation-search input::-ms-reveal {
+            display: none;
+            width: 0;
+            height: 0;
+        }
+
+        .navigation-search input::-webkit-search-decoration,
+        .navigation-search input::-webkit-search-cancel-button,
+        .navigation-search input::-webkit-search-results-button,
+        .navigation-search input::-webkit-search-results-decoration {
+            display: none;
+        }
+
+        .gen-sidebar-nav .navigation-search {
+            top: auto;
+            bottom: 0;
+        }
+
+        :root {
+            --contrast: #222222;
+            --contrast-2: #575760;
+            --contrast-3: #b2b2be;
+            --base: #f0f0f0;
+            --base-2: #f7f8f9;
+            --base-3: #ffffff;
+            --accent: #1e73be;
+        }
+
+        .has-contrast-color {
+            color: var(--contrast);
+        }
+
+        .has-contrast-background-color {
+            background-color: var(--contrast);
+        }
+
+        .has-contrast-2-color {
+            color: var(--contrast-2);
+        }
+
+        .has-contrast-2-background-color {
+            background-color: var(--contrast-2);
+        }
+
+        .has-contrast-3-color {
+            color: var(--contrast-3);
+        }
+
+        .has-contrast-3-background-color {
+            background-color: var(--contrast-3);
+        }
+
+        .has-base-color {
+            color: var(--base);
+        }
+
+        .has-base-background-color {
+            background-color: var(--base);
+        }
+
+        .has-base-2-color {
+            color: var(--base-2);
+        }
+
+        .has-base-2-background-color {
+            background-color: var(--base-2);
+        }
+
+        .has-base-3-color {
+            color: var(--base-3);
+        }
+
+        .has-base-3-background-color {
+            background-color: var(--base-3);
+        }
+
+        .has-accent-color {
+            color: var(--accent);
+        }
+
+        .has-accent-background-color {
+            background-color: var(--accent);
+        }
+
+        body,
+        button,
+        input,
+        select,
+        textarea {
+            font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        }
+
+        body {
+            line-height: 1.5;
+        }
+
+        .entry-content>[class*="wp-block-"]:not(:last-child) {
+            margin-bottom: 1.5em;
+        }
+
+        .main-navigation .main-nav ul ul li a {
+            font-size: 14px;
+        }
+
+        .sidebar .widget,
+        .footer-widgets .widget {
+            font-size: 17px;
+        }
+
+        @media (max-width:768px) {
+            h1 {
+                font-size: 31px;
+            }
+
+            h2 {
+                font-size: 27px;
+            }
+
+            h3 {
+                font-size: 24px;
+            }
+
+            h4 {
+                font-size: 22px;
+            }
+
+            h5 {
+                font-size: 19px;
+            }
+        }
+
+        .top-bar {
+            background-color: #636363;
+            color: #ffffff;
+        }
+
+        .top-bar a {
+            color: #ffffff;
+        }
+
+        .top-bar a:hover {
+            color: #303030;
+        }
+
+        .site-header {
+            background-color: #ffffff;
+        }
+
+        .main-title a,
+        .main-title a:hover {
+            color: #222222;
+        }
+
+        .site-description {
+            color: #757575;
+        }
+
+        .main-navigation,
+        .main-navigation ul ul {
+            background-color: #ed4250;
+        }
+
+        .main-navigation .main-nav ul li a,
+        .main-navigation .menu-toggle,
+        .main-navigation .menu-bar-items {
+            color: #ffffff;
+        }
+
+        .main-navigation .main-nav ul li:not([class*="current-menu-"]):hover>a,
+        .main-navigation .main-nav ul li:not([class*="current-menu-"]):focus>a,
+        .main-navigation .main-nav ul li.sfHover:not([class*="current-menu-"])>a,
+        .main-navigation .menu-bar-item:hover>a,
+        .main-navigation .menu-bar-item.sfHover>a {
+            color: #ffffff;
+            background-color: #c42f2f;
+        }
+
+        button.menu-toggle:hover,
+        button.menu-toggle:focus {
+            color: #ffffff;
+        }
+
+        .main-navigation .main-nav ul li[class*="current-menu-"]>a {
+            color: #ffffff;
+            background-color: #c42f2f;
+        }
+
+        .navigation-search input[type="search"],
+        .navigation-search input[type="search"]:active,
+        .navigation-search input[type="search"]:focus,
+        .main-navigation .main-nav ul li.search-item.active>a,
+        .main-navigation .menu-bar-items .search-item.active>a {
+            color: #ffffff;
+            background-color: #c42f2f;
+        }
+
+        .main-navigation ul ul {
+            background-color: #c42f2f;
+        }
+
+        .main-navigation .main-nav ul ul li a {
+            color: #ffffff;
+        }
+
+        .main-navigation .main-nav ul ul li:not([class*="current-menu-"]):hover>a,
+        .main-navigation .main-nav ul ul li:not([class*="current-menu-"]):focus>a,
+        .main-navigation .main-nav ul ul li.sfHover:not([class*="current-menu-"])>a {
+            color: #fcd9d6;
+            background-color: #c42f2f;
+        }
+
+        .main-navigation .main-nav ul ul li[class*="current-menu-"]>a {
+            color: #fcd9d6;
+            background-color: #c42f2f;
+        }
+
+        .separate-containers .inside-article,
+        .separate-containers .comments-area,
+        .separate-containers .page-header,
+        .one-container .container,
+        .separate-containers .paging-navigation,
+        .inside-page-header {
+            background-color: #ffffff;
+        }
+
+        .entry-title a {
+            color: #222222;
+        }
+
+        .entry-title a:hover {
+            color: #55555e;
+        }
+
+        .entry-meta {
+            color: #595959;
+        }
+
+        .sidebar .widget {
+            background-color: #ffffff;
+        }
+
+        .footer-widgets {
+            background-color: #ffffff;
+        }
+
+        .footer-widgets .widget-title {
+            color: #000000;
+        }
+
+        .site-info {
+            color: #ffffff;
+            background-color: #55555e;
+        }
+
+        .site-info a {
+            color: #ffffff;
+        }
+
+        .site-info a:hover {
+            color: #d3d3d3;
+        }
+
+        .footer-bar .widget_nav_menu .current-menu-item a {
+            color: #d3d3d3;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="url"],
+        input[type="password"],
+        input[type="search"],
+        input[type="tel"],
+        input[type="number"],
+        textarea,
+        select {
+            color: #666666;
+            background-color: #fafafa;
+            border-color: #cccccc;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="url"]:focus,
+        input[type="password"]:focus,
+        input[type="search"]:focus,
+        input[type="tel"]:focus,
+        input[type="number"]:focus,
+        textarea:focus,
+        select:focus {
+            color: #666666;
+            background-color: #ffffff;
+            border-color: #bfbfbf;
+        }
+
+        button,
+        html input[type="button"],
+        input[type="reset"],
+        input[type="submit"],
+        a.button,
+        a.wp-block-button__link:not(.has-background) {
+            color: #ffffff;
+            background-color: #55555e;
+        }
+
+        button:hover,
+        html input[type="button"]:hover,
+        input[type="reset"]:hover,
+        input[type="submit"]:hover,
+        a.button:hover,
+        button:focus,
+        html input[type="button"]:focus,
+        input[type="reset"]:focus,
+        input[type="submit"]:focus,
+        a.button:focus,
+        a.wp-block-button__link:not(.has-background):active,
+        a.wp-block-button__link:not(.has-background):focus,
+        a.wp-block-button__link:not(.has-background):hover {
+            color: #ffffff;
+            background-color: #3f4047;
+        }
+
+        a.generate-back-to-top {
+            background-color: rgba(0, 0, 0, 0.4);
+            color: #ffffff;
+        }
+
+        a.generate-back-to-top:hover,
+        a.generate-back-to-top:focus {
+            background-color: rgba(0, 0, 0, 0.6);
+            color: #ffffff;
+        }
+
+        @media (max-width:768px) {
+
+            .main-navigation .menu-bar-item:hover>a,
+            .main-navigation .menu-bar-item.sfHover>a {
+                background: none;
+                color: #ffffff;
+            }
+        }
+
+        .nav-below-header .main-navigation .inside-navigation.grid-container,
+        .nav-above-header .main-navigation .inside-navigation.grid-container {
+            padding: 0px 20px 0px 20px;
+        }
+
+        .site-main .wp-block-group__inner-container {
+            padding: 40px;
+        }
+
+        .separate-containers .paging-navigation {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .entry-content .alignwide,
+        body:not(.no-sidebar) .entry-content .alignfull {
+            margin-left: -40px;
+            width: calc(100% + 80px);
+            max-width: calc(100% + 80px);
+        }
+
+        .rtl .menu-item-has-children .dropdown-menu-toggle {
+            padding-left: 20px;
+        }
+
+        .rtl .main-navigation .main-nav ul li.menu-item-has-children>a {
+            padding-right: 20px;
+        }
+
+        @media (max-width:768px) {
+
+            .separate-containers .inside-article,
+            .separate-containers .comments-area,
+            .separate-containers .page-header,
+            .separate-containers .paging-navigation,
+            .one-container .site-content,
+            .inside-page-header {
+                padding: 30px;
+            }
+
+            .site-main .wp-block-group__inner-container {
+                padding: 30px;
+            }
+
+            .inside-top-bar {
+                padding-right: 30px;
+                padding-left: 30px;
+            }
+
+            .inside-header {
+                padding-right: 30px;
+                padding-left: 30px;
+            }
+
+            .widget-area .widget {
+                padding-top: 30px;
+                padding-right: 30px;
+                padding-bottom: 30px;
+                padding-left: 30px;
+            }
+
+            .footer-widgets-container {
+                padding-top: 30px;
+                padding-right: 30px;
+                padding-bottom: 30px;
+                padding-left: 30px;
+            }
+
+            .inside-site-info {
+                padding-right: 30px;
+                padding-left: 30px;
+            }
+
+            .entry-content .alignwide,
+            body:not(.no-sidebar) .entry-content .alignfull {
+                margin-left: -30px;
+                width: calc(100% + 60px);
+                max-width: calc(100% + 60px);
+            }
+
+            .one-container .site-main .paging-navigation {
+                margin-bottom: 20px;
+            }
+        }
+
+        /* End cached CSS */
+        .is-right-sidebar {
+            width: 30%;
+        }
+
+        .is-left-sidebar {
+            width: 30%;
+        }
+
+        .site-content .content-area {
+            width: 70%;
+        }
+
+        @media (max-width:768px) {
+
+            .main-navigation .menu-toggle,
+            .sidebar-nav-mobile:not(#sticky-placeholder) {
+                display: block;
+            }
+
+            .main-navigation ul,
+            .gen-sidebar-nav,
+            .main-navigation:not(.slideout-navigation):not(.toggled) .main-nav>ul,
+            .has-inline-mobile-toggle #site-navigation .inside-navigation>*:not(.navigation-search):not(.main-nav) {
+                display: none;
+            }
+
+            .nav-align-right .inside-navigation,
+            .nav-align-center .inside-navigation {
+                justify-content: space-between;
+            }
+        }
+    </style>
+    <link rel="icon" href="https://jneweducation.github.io/img/cropped-soalbelajar-32x32.png" sizes="32x32" />
+    <link rel="icon" href="https://jneweducation.github.io/img/cropped-soalbelajar-192x192.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="https://jneweducation.github.io/img/cropped-soalbelajar-180x180.png" />
+    <meta name="msapplication-TileImage" content="https://jneweducation.github.io/img/cropped-soalbelajar-270x270.png" />
+</head>
+
+<body
+    class="home blog wp-custom-logo wp-embed-responsive right-sidebar nav-above-header separate-containers nav-search-enabled nav-aligned-center header-aligned-center dropdown-hover"
+    itemtype="https://schema.org/Blog" itemscope>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-dark-grayscale">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 0.49803921568627" />
+                    <feFuncG type="table" tableValues="0 0.49803921568627" />
+                    <feFuncB type="table" tableValues="0 0.49803921568627" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-grayscale">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 1" />
+                    <feFuncG type="table" tableValues="0 1" />
+                    <feFuncB type="table" tableValues="0 1" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-purple-yellow">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.54901960784314 0.98823529411765" />
+                    <feFuncG type="table" tableValues="0 1" />
+                    <feFuncB type="table" tableValues="0.71764705882353 0.25490196078431" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-blue-red">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 1" />
+                    <feFuncG type="table" tableValues="0 0.27843137254902" />
+                    <feFuncB type="table" tableValues="0.5921568627451 0.27843137254902" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-midnight">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 0" />
+                    <feFuncG type="table" tableValues="0 0.64705882352941" />
+                    <feFuncB type="table" tableValues="0 1" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-magenta-yellow">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.78039215686275 1" />
+                    <feFuncG type="table" tableValues="0 0.94901960784314" />
+                    <feFuncB type="table" tableValues="0.35294117647059 0.47058823529412" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-purple-green">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.65098039215686 0.40392156862745" />
+                    <feFuncG type="table" tableValues="0 1" />
+                    <feFuncB type="table" tableValues="0.44705882352941 0.4" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-blue-orange">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.098039215686275 1" />
+                    <feFuncG type="table" tableValues="0 0.66274509803922" />
+                    <feFuncB type="table" tableValues="0.84705882352941 0.41960784313725" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><a class="screen-reader-text skip-link" href="#content" title="Langsung ke isi">Langsung ke isi</a>
+    <nav class="main-navigation nav-align-center has-menu-bar-items sub-menu-right" id="site-navigation"
+        aria-label="Utama" itemtype="https://schema.org/SiteNavigationElement" itemscope>
+        <div class="inside-navigation grid-container">
+            <form method="get" class="search-form navigation-search" action="/">
+                <input type="search" class="search-field" value="" name="q" title="Cari" />
+            </form> <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+                <span class="gp-icon icon-menu-bars"><svg viewBox="0 0 512 512" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" width="1em" height="1em">
+                        <path
+                            d="M0 96c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24zm0 160c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24zm0 160c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24z" />
+                    </svg><svg viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                        width="1em" height="1em">
+                        <path
+                            d="M71.029 71.029c9.373-9.372 24.569-9.372 33.942 0L256 222.059l151.029-151.03c9.373-9.372 24.569-9.372 33.942 0 9.372 9.373 9.372 24.569 0 33.942L289.941 256l151.03 151.029c9.372 9.373 9.372 24.569 0 33.942-9.373 9.372-24.569 9.372-33.942 0L256 289.941l-151.029 151.03c-9.373 9.372-24.569 9.372-33.942 0-9.372-9.373-9.372-24.569 0-33.942L222.059 256 71.029 104.971c-9.372-9.373-9.372-24.569 0-33.942z" />
+                    </svg></span><span class="mobile-menu">Menu</span> </button>
+            <div id="primary-menu" class="main-nav">
+                <ul id="menu-soal-belajar" class=" menu sf-menu">
+                    <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1"><a
+                            href="https://jneweducation.github.io">Home</a></li>
+                </ul>
+                </ul>
+            </div>
+            <div class="menu-bar-items"><span class="menu-bar-item search-item"><a aria-label="Buka Kolom Pencarian"
+                        href="#"><span class="gp-icon icon-search"><svg viewBox="0 0 512 512"
+                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M208 48c-88.366 0-160 71.634-160 160s71.634 160 160 160 160-71.634 160-160S296.366 48 208 48zM0 208C0 93.125 93.125 0 208 0s208 93.125 208 208c0 48.741-16.765 93.566-44.843 129.024l133.826 134.018c9.366 9.379 9.355 24.575-.025 33.941-9.379 9.366-24.575 9.355-33.941-.025L337.238 370.987C301.747 399.167 256.839 416 208 416 93.125 416 0 322.875 0 208z" />
+                            </svg><svg viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                width="1em" height="1em">
+                                <path
+                                    d="M71.029 71.029c9.373-9.372 24.569-9.372 33.942 0L256 222.059l151.029-151.03c9.373-9.372 24.569-9.372 33.942 0 9.372 9.373 9.372 24.569 0 33.942L289.941 256l151.03 151.029c9.372 9.373 9.372 24.569 0 33.942-9.373 9.372-24.569 9.372-33.942 0L256 289.941l-151.029 151.03c-9.373 9.372-24.569 9.372-33.942 0-9.372-9.373-9.372-24.569 0-33.942L222.059 256 71.029 104.971c-9.372-9.373-9.372-24.569 0-33.942z" />
+                            </svg></span></a></span></div>
+        </div>
+    </nav>
+    <header class="site-header grid-container" id="masthead" aria-label="Situs"
+        itemtype="https://schema.org/WPHeader" itemscope>
+        <div class="inside-header grid-container">
+            <h1 class="site-logo">
+                <a href="https://jneweducation.github.io" rel="home"> QnA</a>
+            </h1>
+        </div>
+    </header>
+
+    <div class="site grid-container container hfeed" id="page">
+        <div class="site-content" id="content">
+            <div class="content-area" id="primary">
+                    <main class="site-main" id="main">
+        <article id="post-1327" class="post-1327 post type-post status-publish format-standard hentry category-info"
+            itemtype="https://schema.org/CreativeWork" itemscope="">
+            <div class="inside-article">
+                <header class="entry-header" aria-label="Konten">
+                    <h1 class="entry-title" itemprop="headline">Gimp 3d Text</h1>
+                    <div class="entry-meta">
+                       <span
+                            class="byline">oleh <span class="author vcard" itemprop="author"
+                                itemtype="https://schema.org/Person" itemscope=""><span class="author-name"
+                                    itemprop="name">joreibermio</span></span></span>
+                    </div>
+                </header>
+                <div class="entry-content" itemprop="text">
+                    <div style="text-align: center">
+                        <img src="https://tse1.mm.bing.net/th?q=Gimp+3d+Text" alt="Gimp 3d Text">
+                    </div>
+                    <p></p>
+                    <p>What is an open-source vector graphics editor which is the equivalent of Adobe illustrator?  A.CAD  B.Inkscape  C. 3D software  D. GIMPpakisagot po plsss help​</p>
+                    <div id="ez-toc-container"
+                        class="ez-toc-v2_0_40 counter-hierarchy ez-toc-counter ez-toc-light-blue ez-toc-container-direction">
+                        <div class="ez-toc-title-container">
+                            <p class="ez-toc-title">Daftar Isi</p>
+                            <span class="ez-toc-title-toggle"><a href="#"
+                                    class="ez-toc-pull-right ez-toc-btn ez-toc-btn-xs ez-toc-btn-default ez-toc-toggle"
+                                    area-label="ez-toc-toggle-icon-1"><label for="item-63b392361c4a0"
+                                        aria-label="Table of Content"><span
+                                            style="display: flex;align-items: center;width: 35px;height: 30px;justify-content: center;direction:ltr;"><svg
+                                                style="fill: #999;color:#999" xmlns="http://www.w3.org/2000/svg"
+                                                class="list-377408" width="20px" height="20px" viewBox="0 0 24 24"
+                                                fill="none">
+                                                <path
+                                                    d="M6 6H4v2h2V6zm14 0H8v2h12V6zM4 11h2v2H4v-2zm16 0H8v2h12v-2zM4 16h2v2H4v-2zm16 0H8v2h12v-2z"
+                                                    fill="currentColor"></path>
+                                            </svg><svg style="fill: #999;color:#999" class="arrow-unsorted-368013"
+                                                xmlns="http://www.w3.org/2000/svg" width="10px" height="10px"
+                                                viewBox="0 0 24 24" version="1.2" baseProfile="tiny">
+                                                <path
+                                                    d="M18.2 9.3l-6.2-6.3-6.2 6.3c-.2.2-.3.4-.3.7s.1.5.3.7c.2.2.4.3.7.3h11c.3 0 .5-.1.7-.3.2-.2.3-.5.3-.7s-.1-.5-.3-.7zM5.8 14.7l6.2 6.3 6.2-6.3c.2-.2.3-.5.3-.7s-.1-.5-.3-.7c-.2-.2-.4-.3-.7-.3h-11c-.3 0-.5.1-.7.3-.2.2-.3.5-.3.7s.1.5.3.7z">
+                                                </path>
+                                            </svg></span></label><input type="checkbox" id="item-63b392361c4a0"></a></span>
+                        </div>
+                        <nav>
+                            <ul class="ez-toc-list ez-toc-list-level-1 ">
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#what-is-an-open-source-vector-graphics-editor-which-is-the-equivalent-of-adobe-illustrator-a-cad-b-inkscape-c-3d-software-d-gimppakisagot-po-plsss-help%e2%80%8b">1.
+                                            What is an open-source vector graphics editor which is the equivalent of Adobe illustrator?  A.CAD  B.Inkscape  C. 3D software  D. GIMPpakisagot po plsss help​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#3d-text-can-be-used-as-screen-saver-%e2%80%8b">2.
+                                             3D text can be used as screen saver.​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#identify-the-image-if-the-applied-format-to-the-text-is-a-3d-rotation-or-bevel%e2%80%8b">3.
+                                            identify the image if the applied format to the text is a 3d rotation or bevel​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#it-is-the-basic-entities-used-by-gimp%e2%80%8b">4.
+                                            it is the basic entities used by GIMP​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#today-gimp-stands-for">5.
+                                            Today GIMP stands for</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#it-is-easy-to-access-gimpwhy">6.
+                                            it is easy to access GIMP?why?</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#four-example-of-gimp-paths%e2%80%8b">7.
+                                            four example of GIMP paths​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#explore-painting-techniques-further-using-gimp-for-computer-laptop-paint-free-drawing-fun-for-android-phone-or-tablet-for-example-give-your-2d-image-a-3d-effect-digitally-drawing-fun-version-po">8.
+                                            explore painting techniques further using GIMP (for computer laptop) paint free - drawing fun for android phone or tablet for example give your 2D image a 3D effect digitally.( Drawing fun version po )Nonesence= Reportsend Pic = brainliest ​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#what-is-gimp-paanswer%e2%80%8b">9.
+                                            what is GIMP? paanswer​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#the-mode-is-gimps-default-mode">10.
+                                            The ( ) mode is GIMP's default mode.</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#enumerate-the-gimp-interface%e2%80%8b">11.
+                                            Enumerate the GIMP interface​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#a-true-or-falsewrite-the-word-true-if-the-statement-is-correct-and-false-if-it-is-not-write-your-answer-on-your-answer-sheet-_________1-the-intersection-of-text-and-image-can-create-a-dynamic-comp">12.
+                                            A. TRUE OR FALSEWrite the word TRUE if the statement is correct and FALSE if it is not. Write your answer on your answer sheet. _________1. The intersection of text and image can create a dynamic composition._________2. The graphic effect, overlay, borders, stylize, stickers, and text are the first set of tools of Gimp GIMP or GNU._________3. Using alignment creates monotonous effects as it combines with text and image._________4. Contrast between text and image is important to make the text readable with little effort._________5. The scale function permits changes in the overall dimension of an object.​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#today-gimp-stands-for-______">13.
+                                            Today, GIMP stands for ______.</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#arts6-common-print-promotional-technique-used-by-small-business-a-computer-graphics-design-b-text-and-type-tools-c-gimp-d-advertisementcommercial-poster7-___includes-a-visual-design-images-c">14.
+                                            ARTS:6. Common print promotional technique used by small business.A. Computer graphics design B. Text and Type tools C. GIMP D. Advertisement/Commercial poster7. ___includes a visual design, images, colors, and copy.A. GIMP B.Text and Type tools C. Textured image D. Poster8.___is to communicate a message.A. The purpose of disasterC. The purpose of awarenessB. The purpose of textD. The purpose of poster9. Use the___from your toolbar to create and place tests in the picture.A. Computer graphics design B.Text and Type tools C. GIMP D. Advertisement/Commercial poster10. Click on the picture with the Type tool and select a box the size of the area you want to___A. text box B. add text C. textured image D. save and print your finished poster​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#it-is-the-extension-of-a-gimp-image%e2%80%8b">15.
+                                            It is the extension of a gimp image​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#what-are-the-other-applications-of-gimp%e2%80%8b">16.
+                                            what are the other applications of GIMP?​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#gimp-is-an-acronym-for-________%e2%80%8b">17.
+                                            GIMP is an acronym for ________​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#it-is-the-basic-entities-used-by-gimp%e2%80%8b">18.
+                                            It is the basic entities used by GIMP?​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#what-are-the-advantages-of-using-gimp-image-editor-what-are-the-other-applications-of-gimp-%e2%80%8b">19.
+                                            what are the advantages of using GIMP image editor? what are the other applications of GIMP? ​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#the-5-important-gimp-tool%e2%80%8b">20.
+                                            the 5 important Gimp tool​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#give-one-example-from-the-text-of-how-3d-printing-can-be-quicker-than-using-traditional-methods-%e2%80%8b">21.
+                                            Give one example from the text of how 3D printing can be quicker than using traditional methods.​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#difference-and-similarities-of-gimp-and-paint-net%e2%80%8b">22.
+                                            Difference and Similarities of GIMP and Paint.Net​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#identify-the-gimp-painting-tolls">23.
+                                            identify the GIMP painting tolls</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#gimp-image-that-looks-like">24.
+                                            Gimp image that looks like</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#5-it-is-a-way-in-which-text-or-pictures-are-set-out-on-a-page-gimpb-photo-editing-c-layout-answer-these-please%e2%80%8b">25.
+                                            5. It is a way in which text or pictures are set out on a page.GIMPb. Photo Editing c. Layout answer these please​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#what-is-gimp-quickies">26.
+                                            What is GIMP Quickies?</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#it-is-icon-reffering-to-gimp%e2%80%8b">27.
+                                            it is icon reffering to GIMP​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#gimp-is-an-acronym-for">28.
+                                            GIMP IS AN ACRONYM FOR</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#what-are-the-advantages-of-gimp%e2%80%8b">29.
+                                            what are the advantages of GIMP?​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#what-meaning-of-gimp%e2%80%8b">30.
+                                            what meaning of GIMP​</a>
+                                    </li>
+                                                            </ul>
+                        </nav>
+                    </div>
+                                            <h2 class="ez-toc-section" id="what-is-an-open-source-vector-graphics-editor-which-is-the-equivalent-of-adobe-illustrator-a-cad-b-inkscape-c-3d-software-d-gimppakisagot-po-plsss-help%e2%80%8b">
+                            1. What is an open-source vector graphics editor which is the equivalent of Adobe illustrator?  A.CAD  B.Inkscape  C. 3D software  D. GIMPpakisagot po plsss help​</h2><br />
+                        <p><strong>Answer:</strong></p><p>B. Inkscape</p><p><strong>Explanation:</strong></p><p>an open-source vector editor and it is available for free. It operates on Windows, macOS and Linux and supports a wide range of design formats, including Adobe Illustrator's AI format, Boxy SVG format and CorelDRAW's CDR format, among others.</p><br />
+                                            <h2 class="ez-toc-section" id="3d-text-can-be-used-as-screen-saver-%e2%80%8b">
+                            2.  3D text can be used as screen saver.​</h2><br />
+                        <p><strong>Answer:</strong></p><p>yessssssssssssssssss</p><br />
+                                            <h2 class="ez-toc-section" id="identify-the-image-if-the-applied-format-to-the-text-is-a-3d-rotation-or-bevel%e2%80%8b">
+                            3. identify the image if the applied format to the text is a 3d rotation or bevel​</h2><br />
+                        <p><strong>Answer:</strong></p><p>Wheres an image i cant answer that sorry</p><p><strong>Answer:</strong></p><p>rtret</p><p><strong>Explanation:</strong></p><p></p><br />
+                                            <h2 class="ez-toc-section" id="it-is-the-basic-entities-used-by-gimp%e2%80%8b">
+                            4. it is the basic entities used by GIMP​</h2><br />
+                        <p><strong>Answer:</strong></p><p>Images are the basic entities used by GIMP . Roughly speaking, an “image” corresponds to a single file, such as a TIFF or JPEG file. ... Instead of thinking of it as a sheet of paper with a picture on it, think of it as more like a stack of sheets, called “layers”.</p><p></p><p>GIMP is an acronym for GNU Image Manipulation Program. It is a freely distributed program for such tasks as photo retouching, image composition and image authoring. ... GIMP is written and developed under X11 on UNIX platforms.</p><p></p><p>Four functions are available: rotate the image or the selection around an arbitrary rotation point, enlarge or reduce (Scaling), convert a rectangle into a trapezoid (Shearing), or distort the perspective of an area.</p><p><strong>Explanation:</strong></p><p>  </p><p></p><p>I think it help to your lesson </p><p></p><p></p><p>Pa brainliests na lng po thank you</p><p></p><p>good luck</p><p><strong>Answer:</strong></p><p><strong>Images</strong> are the basic entities used by GIMP . Roughly speaking, an “image” corresponds to a single file, such as a TIFF or JPEG file. ... Instead of thinking of it as a sheet of paper with a picture on it, think of it as more like a stack of sheets, called “layers”.</p><br />
+                                            <h2 class="ez-toc-section" id="today-gimp-stands-for">
+                            5. Today GIMP stands for</h2><br />
+                        Today, GIMP stands for GNU Image Manipulation Program. <p><strong>GIMP means GNU Image Manipulation Program. </strong>It is being used for complex paint and editing purposes. In connection with this, other details that are related to<strong> what GIMP stands for</strong> are indicated below. </p><p>What is GIMP? </p>GIMP was discovered by Peter Mattis and Spencer Kimball who were undergraduates at the University of California back then. After which, different programmers contributed to the improvement of GIMP, making it a complex image tool. GIMP can be used for Unix, X Window, Microsoft Windows and Mac OS X. <p>What is GIMP for? </p>GIMP is used for complex paint and photo editing purposes.It allows third-party plug-ins, supports layers, alpha channels and three scripting languages. <p>Those are some information regarding GIMP. </p><p>Here are other links that are related to the said topic. </p>What is the name of the organization that created GIMP: <strong>https://brainly.ph/question/1850383 </strong>Meaning of GIMP: <strong>https://brainly.ph/question/878026 </strong>Other information about GIMP: <strong>https://brainly.ph/question/1011016 </strong><br />
+                                            <h2 class="ez-toc-section" id="it-is-easy-to-access-gimpwhy">
+                            6. it is easy to access GIMP?why?</h2><br />
+                        <p><strong>Answer:</strong></p><p>no, it is a beginner user friendly and has a tutorial.</p><br />
+                                            <h2 class="ez-toc-section" id="four-example-of-gimp-paths%e2%80%8b">
+                            7. four example of GIMP paths​</h2><br />
+                        <p><strong>Answer:</strong></p><p>Four examples of GIMP paths: one closed and polygonal; one open and polygonal; one closed and curved; one with a mixture of straight and curved segments.</p><p>...</p><p>5.1. Path Creation</p><p>Use Tools → Path from the image menu.</p><p>Use the relevant icon in toolbox.</p><p>Use the hotkey B</p><br />
+                                            <h2 class="ez-toc-section" id="explore-painting-techniques-further-using-gimp-for-computer-laptop-paint-free-drawing-fun-for-android-phone-or-tablet-for-example-give-your-2d-image-a-3d-effect-digitally-drawing-fun-version-po">
+                            8. explore painting techniques further using GIMP (for computer laptop) paint free - drawing fun for android phone or tablet for example give your 2D image a 3D effect digitally.( Drawing fun version po )Nonesence= Reportsend Pic = brainliest ​</h2><br />
+                        <p><strong>Answer:</strong></p><p>pano mag lagay ng pic? </p><p>diko alm huhu pano?</p><br />
+                                            <h2 class="ez-toc-section" id="what-is-gimp-paanswer%e2%80%8b">
+                            9. what is GIMP? paanswer​</h2><br />
+                        <p><strong>Answer:</strong></p><p>GIMP is a free and open-source raster graphics editor used for image manipulation and image editing, free-form drawing, transcoding between different image file formats, and more specialized tasks. GIMP is released under GPLv3+ license and is available for Linux, macOS, and Microsoft Windows.</p><p><strong>Explanation:</strong></p><p>GIMP (/ɡɪmp/ GHIMP; GNU Image Manipulation Program) is a free and open-source raster graphics editor used for image manipulation (retouching) and image editing, free-form drawing, transcoding between different image file formats, and more specialized tasks</p><br />
+                                            <h2 class="ez-toc-section" id="the-mode-is-gimps-default-mode">
+                            10. The ( ) mode is GIMP's default mode.</h2><br />
+                        multi-window?...................................................<br />
+                                            <h2 class="ez-toc-section" id="enumerate-the-gimp-interface%e2%80%8b">
+                            11. Enumerate the GIMP interface​</h2><br />
+                        <p>GIMP is an acronym for GNU Image Manipulation Program. It is a freely distributed program for such tasks as photo retouching, image composition and image authoring</p><p></p><p>-heart, rate, and follow thankssss</p><br />
+                                            <h2 class="ez-toc-section" id="a-true-or-falsewrite-the-word-true-if-the-statement-is-correct-and-false-if-it-is-not-write-your-answer-on-your-answer-sheet-_________1-the-intersection-of-text-and-image-can-create-a-dynamic-comp">
+                            12. A. TRUE OR FALSEWrite the word TRUE if the statement is correct and FALSE if it is not. Write your answer on your answer sheet. _________1. The intersection of text and image can create a dynamic composition._________2. The graphic effect, overlay, borders, stylize, stickers, and text are the first set of tools of Gimp GIMP or GNU._________3. Using alignment creates monotonous effects as it combines with text and image._________4. Contrast between text and image is important to make the text readable with little effort._________5. The scale function permits changes in the overall dimension of an object.​</h2><br />
+                        <p><strong>Answer:</strong></p><p></p><p>1. TRUE</p><p></p><p>2. TRUE</p><p></p><p>3. FALSE</p><p></p><p>4. TRUE</p><p></p><p>5. TRUE</p><p>kong wrong </p><p>report nalang po </p><p>ako ninyo </p><br />
+                                            <h2 class="ez-toc-section" id="today-gimp-stands-for-______">
+                            13. Today, GIMP stands for ______.</h2><br />
+                        <strong>Today, GIMP stands for GNU Image Manipulation Program.</strong> <p><strong>Today, GIMP stands for GNU Image Manipulation Program.</strong> GIMP is a program that is being used for retouching photos, editing photos, converting image formats, and more. In connection with this, other details that are related to <strong>what GIMP stands for</strong> are indicated below. </p><p>Here are <strong>other information and features</strong> of GIMP. </p>GIMP is free to use. GIMP was written and developed under X11 on UNIX. GIMP can be utilized similar with Paint program. It is also used for improving the quality of photos. It is used to convert the formats of images (example: PNG, JPG, JPEG, etc.). It can also be used as an online batch processing system. GIMP can be used with extensions and plug-ins so that it can be used for other useful things. <p>That is the meaning of GIMP. </p><p>Here are other links that are related to the said topic. </p>What is the name of the organization that created GIMP: <strong>https://brainly.ph/question/1850383 </strong>Meaning of GIMP: <strong>https://brainly.ph/question/978649</strong>Other information about GIMP: <strong>https://brainly.ph/question/1011016 </strong><br />
+                                            <h2 class="ez-toc-section" id="arts6-common-print-promotional-technique-used-by-small-business-a-computer-graphics-design-b-text-and-type-tools-c-gimp-d-advertisementcommercial-poster7-___includes-a-visual-design-images-c">
+                            14. ARTS:6. Common print promotional technique used by small business.A. Computer graphics design B. Text and Type tools C. GIMP D. Advertisement/Commercial poster7. ___includes a visual design, images, colors, and copy.A. GIMP B.Text and Type tools C. Textured image D. Poster8.___is to communicate a message.A. The purpose of disasterC. The purpose of awarenessB. The purpose of textD. The purpose of poster9. Use the___from your toolbar to create and place tests in the picture.A. Computer graphics design B.Text and Type tools C. GIMP D. Advertisement/Commercial poster10. Click on the picture with the Type tool and select a box the size of the area you want to___A. text box B. add text C. textured image D. save and print your finished poster​</h2><br />
+                        <p><strong>Answer:</strong></p><p>1.d</p><p>2.b</p><p>3.b</p><p>4.d</p><p>5.a</p><p><strong>Explanation:</strong></p><p>I hope it help</p><br />
+                                            <h2 class="ez-toc-section" id="it-is-the-extension-of-a-gimp-image%e2%80%8b">
+                            15. It is the extension of a gimp image​</h2><br />
+                        <p><strong>Answer:</strong></p><p>Experimental Computing Facility or XCF</p><br />
+                                            <h2 class="ez-toc-section" id="what-are-the-other-applications-of-gimp%e2%80%8b">
+                            16. what are the other applications of GIMP?​</h2><br />
+                        <p><strong>Answer:</strong></p><p>It can be used as a simple paint program, an expert quality photo retouching program, an online batch processing system, a mass production image renderer, an image format converter, etc. GIMP is expandable and extensible.</p><p><strong>Explanation:</strong></p><p>❤️HOPE IT HELPS❤️</p><br />
+                                            <h2 class="ez-toc-section" id="gimp-is-an-acronym-for-________%e2%80%8b">
+                            17. GIMP is an acronym for ________​</h2><br />
+                        <p><strong>Answer:</strong></p><p>GIMP is an acronym for GNU Image Manipulation Program. It is a freely distributed program for such tasks as photo retouching, image composition and image authoring.</p><p><strong>Answer:</strong></p><p>GIMP is an acronym for GNU Image Manipulation Program</p><p><strong>Explanation:</strong></p><p>It's a freely distributed program for tasks like photo retouching, image composition and image authoring.
+</p><p></p><br />
+                                            <h2 class="ez-toc-section" id="it-is-the-basic-entities-used-by-gimp%e2%80%8b">
+                            18. It is the basic entities used by GIMP?​</h2><br />
+                        <p><strong>Answer:</strong></p><p>1.images</p><p>2.layers</p><p>3.format</p><p>4.main windows</p><br />
+                                            <h2 class="ez-toc-section" id="what-are-the-advantages-of-using-gimp-image-editor-what-are-the-other-applications-of-gimp-%e2%80%8b">
+                            19. what are the advantages of using GIMP image editor? what are the other applications of GIMP? ​</h2><br />
+                        <p><strong>Explanation:</strong></p><p>other applications of GIMP that contains the window that has tool box work area and layers window </p><br />
+                                            <h2 class="ez-toc-section" id="the-5-important-gimp-tool%e2%80%8b">
+                            20. the 5 important Gimp tool​</h2><br />
+                        <p><strong>Answer:</strong></p><strong>paint brush</strong><strong>pencil</strong><strong>airbrush</strong><strong>eraser</strong><strong>ink tools</strong><p><strong>Explanation:</strong></p><p>what I listed is just some of the common tools :)</p><p></p><p><strong>#</strong><strong>hope</strong><strong> </strong><strong>it</strong><strong> </strong><strong>can</strong><strong> </strong><strong>help</strong></p><p><strong>#</strong><strong>correct</strong><strong> </strong><strong>me</strong><strong> </strong><strong>if</strong><strong> </strong><strong>wrong </strong><strong>:</strong><strong>)</strong></p><p><strong>#</strong><strong>h</strong><strong>i</strong><strong>i</strong><strong>i</strong><strong>.</strong><strong>1</strong><strong>0</strong><strong>_</strong><strong>a</strong><strong>n</strong><strong>s</strong><strong>w</strong><strong>e</strong><strong>r</strong></p><br />
+                                            <h2 class="ez-toc-section" id="give-one-example-from-the-text-of-how-3d-printing-can-be-quicker-than-using-traditional-methods-%e2%80%8b">
+                            21. Give one example from the text of how 3D printing can be quicker than using traditional methods.​</h2><br />
+                        <p></p>     The Advantages of 3D Printing<p></p><p><strong>Manufacturing Options</strong>: 3D printing provides a wide variety of manufactured products, including customizable products and even an individual’s personal designs.</p><p> </p><p><strong>Rapid Prototyping</strong>: Products can more quickly go from just a design to an actual prototype.</p><p> </p><p><strong>Manufacturing Speed</strong>: Just like the previous advantage, the manufacturing speed for a large number of final products is equally fast.</p><p> </p><p><strong>Reduced Costs</strong>: Even though the initial setup costs are higher, 3D printing has become cheaper than cheap labor in third world countries. Additionally, the costs of 3D printing are still decreasing, with the potential of 3D printers in homes in the near future. Furthermore, the costs of customized products are the same for mass production products.</p><p> </p><p><strong>Warehousing</strong>: With traditional manufacturing technologies, it is much faster and cheaper to manufacture additional products that you probably know that you will eventually need. However with 3D printing, only products that are sold need to be manufactured, thus warehousing of excess inventory is significantly less needed.</p><p></p><p></p><br />
+                                            <h2 class="ez-toc-section" id="difference-and-similarities-of-gimp-and-paint-net%e2%80%8b">
+                            22. Difference and Similarities of GIMP and Paint.Net​</h2><br />
+                        <p></p>Both GIMP and Paint NET support layers, and both have all of the basic image editing options and tools you would reasonably expect to find GIMP and Paint NET can both be used as photo editors, but the range of tools available in the former also means that it is full capable as a tool for creating original work<p></p><p>CORRECT ME IF IM RONG </p><p></p><p>HOPE IT HELPS PO</p><br />
+                                            <h2 class="ez-toc-section" id="identify-the-gimp-painting-tolls">
+                            23. identify the GIMP painting tolls</h2><br />
+                        <p><strong>Answer:</strong></p><p>brush tool</p><p>airbrush tool</p><p>ink tools</p><p>bucket fill</p><p>smudge tool</p><br />
+                                            <h2 class="ez-toc-section" id="gimp-image-that-looks-like">
+                            24. Gimp image that looks like</h2><br />
+                        <p><strong>Answer:</strong></p><p>Layers</p><p><strong>Explanation:</strong></p><p>Pa brainliest na din Po thank you</p><br />
+                                            <h2 class="ez-toc-section" id="5-it-is-a-way-in-which-text-or-pictures-are-set-out-on-a-page-gimpb-photo-editing-c-layout-answer-these-please%e2%80%8b">
+                            25. 5. It is a way in which text or pictures are set out on a page.GIMPb. Photo Editing c. Layout answer these please​</h2><br />
+                        <p><strong>Layout</strong></p><p><strong>Explanation:</strong></p><p>Hope it will help!</p><br />
+                                            <h2 class="ez-toc-section" id="what-is-gimp-quickies">
+                            26. What is GIMP Quickies?</h2><br />
+                        <p>GNU Image Manipulation Program or GIMP is a free and open-source raster graphics editor used for image retouching and editing, free-form drawing, converting between different image formats, and more specialized tasks.</p><br />
+                                            <h2 class="ez-toc-section" id="it-is-icon-reffering-to-gimp%e2%80%8b">
+                            27. it is icon reffering to GIMP​</h2><br />
+                        <p><strong>Answer:</strong></p><p>A is the icon reffering GIMP</p><p></p><p>Hope it helps</p><p></p><br />
+                                            <h2 class="ez-toc-section" id="gimp-is-an-acronym-for">
+                            28. GIMP IS AN ACRONYM FOR</h2><br />
+                        <p><strong>Answer:</strong></p><p>naol cute ,pretty</p><p><strong>Explanation:</strong></p><p>hheehheeh</p><br />
+                                            <h2 class="ez-toc-section" id="what-are-the-advantages-of-gimp%e2%80%8b">
+                            29. what are the advantages of GIMP?​</h2><br />
+                        <p><strong>Answer:</strong></p><p><strong>Advantages</strong></p>GIMP is free, because it is being developed as an open source project.It is practically as powerful a piece of software as Photoshop.You can open Photoshop files in GIMP, and use Photoshop brushes and patterns there as well.<p><strong>Disadvantages</strong></p>It needs to be downloaded.Some features are unclear on how they work.The editing options of color are limited, and you cannot change the image to be half a color and half another.Managing the layers is not easy, it is difficult.<p><strong></strong></p><p></p><br />
+                                            <h2 class="ez-toc-section" id="what-meaning-of-gimp%e2%80%8b">
+                            30. what meaning of GIMP​</h2><br />
+                        <p><strong>GIMP (/ɡɪmp/ GHIMP; GNU Image Manipulation Program) is a free and open-source raster graphics editor used for image manipulation (retouching) and image editing, free-form drawing, transcoding between different image file formats, and more specialized tasks</strong></p><p></p><p></p><p></p><br />
+                    
+                </div>
+                <div class="youtubeVideo" style="text-align: center">
+                    <h3>Video Terkait</h3>
+                    <iframe width="560" height="315"
+                        src="https://www.youtube.com/embed/GrS9W2x69PY?controls=0" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"allowfullscreen></iframe>
+                </div>
+                <footer class="entry-meta" aria-label="Meta postingan">
+                    <span class="cat-links"><span class="gp-icon icon-categories"><svg viewBox="0 0 512 512"
+                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em">
+                                <path
+                                    d="M0 112c0-26.51 21.49-48 48-48h110.014a48 48 0 0143.592 27.907l12.349 26.791A16 16 0 00228.486 128H464c26.51 0 48 21.49 48 48v224c0 26.51-21.49 48-48 48H48c-26.51 0-48-21.49-48-48V112z">
+                                </path>
+                            </svg></span><span class="screen-reader-text">Kategori </span>art</span>
+            </div>
+        </article>
+    </main>
+            </div>
+            <div class="widget-area sidebar is-right-sidebar" id="right-sidebar">
+                <div class="inside-right-sidebar">
+                    <aside id="categories-2" class="widget inner-padding widget_categories">
+                        <h2 class="widget-title">Topik</h2>
+                        <ul>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/carabull.html">Carabull</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/convert-maximization-to-minimization-problem.html">Convert Maximization To Minimization Problem</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/examples-of-factor-isolating-questions.html">Examples Of Factor Isolating Questions</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/27-5-cm-to-inches.html">27 5 Cm To Inches</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/needle-gauge-for-blood-transfusion.html">Needle Gauge For Blood Transfusion</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/timeline-of-rizal-s-childhood-and-early-education.html">Timeline Of Rizal s Childhood And Early Education</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/795-25.html">795 25</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/00000000000000000000.html">00000000000000000000</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/metacognitive-report.html">Metacognitive Report</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/flame-test-lab-worksheet.html">Flame Test Lab Worksheet</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/alipin-sa-gigilid.html">Alipin Sa Gigilid</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/z-bar-sizes.html">Z Bar Sizes</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/sap-gui-for-html-download.html">Sap Gui For Html Download</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/ducks-and-cows.html">Ducks And Cows</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/10-of-9000.html">10 Of 9000</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/an2-bn-c.html">An2 Bn C</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/how-elements-are-arranged-in-the-periodic-table.html">How Elements Are Arranged In The Periodic Table</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/efe-matrix-example.html">Efe Matrix Example</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/earth-s-layer-drawing.html">Earth s Layer Drawing</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/shigley-s-mechanical-engineering-design-11th-edition-solutions.html">Shigley s Mechanical Engineering Design 11th Edition Solutions</a>
+                                </li>
+                                                    </ul>
+
+                    </aside>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="site-footer">
+        <footer class="site-info" aria-label="Situs" itemtype="https://schema.org/WPFooter" itemscope>
+            <div class="inside-site-info grid-container">
+                <div class="copyright-bar">
+                    <span class="copyright">&copy; 2023 <a href="https://jneweducation.github.io"
+                            itemprop="url">QnA</a></span>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <a title="Gulirkan kembali ke puncak laman" aria-label="Gulirkan kembali ke puncak laman" rel="nofollow"
+        href="#" class="generate-back-to-top" data-scroll-speed="400" data-start-scroll="300">
+        <span class="gp-icon icon-arrow-up"><svg viewBox="0 0 330 512" aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill-rule="evenodd"
+                clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414">
+                <path
+                    d="M305.863 314.916c0 2.266-1.133 4.815-2.832 6.514l-14.157 14.163c-1.699 1.7-3.964 2.832-6.513 2.832-2.265 0-4.813-1.133-6.512-2.832L164.572 224.276 53.295 335.593c-1.699 1.7-4.247 2.832-6.512 2.832-2.265 0-4.814-1.133-6.513-2.832L26.113 321.43c-1.699-1.7-2.831-4.248-2.831-6.514s1.132-4.816 2.831-6.515L158.06 176.408c1.699-1.7 4.247-2.833 6.512-2.833 2.265 0 4.814 1.133 6.513 2.833L303.03 308.4c1.7 1.7 2.832 4.249 2.832 6.515z"
+                    fill-rule="nonzero" />
+            </svg></span>
+    </a>
+    <script id="generate-a11y">
+        ! function() {
+            "use strict";
+            if ("querySelector" in document && "addEventListener" in window) {
+                var e = document.body;
+                e.addEventListener("mousedown", function() {
+                    e.classList.add("using-mouse")
+                }), e.addEventListener("keydown", function() {
+                    e.classList.remove("using-mouse")
+                })
+            }
+        }();
+    </script>
+    <!--[if lte IE 11]>
+<script src='https://jneweducation.github.io/js/classList.min.js' ?ver=3.2.4' id='generate-classlist-js'></script>
+<![endif]-->
+    <script id='generate-menu-js-extra'>
+        var generatepressMenu = {
+            "toggleOpenedSubMenus": "1",
+            "openSubMenuLabel": "Buka Submenu",
+            "closeSubMenuLabel": "Tutup submenu"
+        };
+    </script>
+    <script src='https://jneweducation.github.io/js/menu.min.js' ?ver=3.2.4' id='generate-menu-js'></script>
+    <script id='generate-navigation-search-js-extra'>
+        var generatepressNavSearch = {
+            "open": "Buka Kolom Pencarian",
+            "close": "Tutup Kolom Pencarian"
+        };
+    </script>
+    <script src='https://jneweducation.github.io/js/navigation-search.min.js' ?ver=3.2.4' id='generate-navigation-search-js'></script>
+    <script id='generate-back-to-top-js-extra'>
+        var generatepressBackToTop = {
+            "smooth": "1"
+        };
+    </script>
+    <script src='https://jneweducation.github.io/js/back-to-top.min.js' ?ver=3.2.4' id='generate-back-to-top-js'></script>
+    <script type='text/javascript' src='//jd3j7g5z1fqs.com/96/78/7a/96787a1945876b1a9c10f79941441964.js'></script>
+<script type='text/javascript' src='//jd3j7g5z1fqs.com/b4/f1/ef/b4f1ef8dfe59b7fa68754094cf6c8e0e.js'></script>
+  <!-- Histats.com  START  (aync)-->
+<script type="text/javascript">var _Hasync= _Hasync|| [];
+_Hasync.push(['Histats.start', '1,4739059,4,0,0,0,00010000']);
+_Hasync.push(['Histats.fasi', '1']);
+_Hasync.push(['Histats.track_hits', '']);
+(function() {
+var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
+hs.src = ('//s10.histats.com/js15_as.js');
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+})();</script>
+<noscript><a href="/" target="_blank"><img  src="//sstatic1.histats.com/0.gif?4739059&101" alt="" border="0"></a></noscript>
+<!-- Histats.com  END  -->
+</body>
+
+</html>

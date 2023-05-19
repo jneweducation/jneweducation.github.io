@@ -1,0 +1,1249 @@
+<!DOCTYPE html>
+<html lang="id" prefix="og: https://ogp.me/ns#">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="profile" href="https://gmpg.org/xfn/11">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Web Graph - QnA</title>
+    <meta name="description" content="Web Graph, , , , , , , 0, What are the Applications of Graphs in Computer Science? – Finxter, blog.finxter.com, 1024 x 576, jpeg, , 20, web-graph, QnA" />
+    <meta name="robots" content="index,follow" />
+    <meta property="og:locale" content="id_ID" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Web Graph - QnA" />
+    <meta property="og:description" content="Web Graph, , , , , , , 0, What are the Applications of Graphs in Computer Science? – Finxter, blog.finxter.com, 1024 x 576, jpeg, , 20, web-graph, QnA" />
+    <meta property="og:site_name" content="QnA" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Web Graph - QnA" />
+    <meta name="twitter:description" content="Web Graph, , , , , , , 0, What are the Applications of Graphs in Computer Science? – Finxter, blog.finxter.com, 1024 x 576, jpeg, , 20, web-graph, QnA" />
+    <link rel='stylesheet' id='generate-style-css' href='https://jneweducation.github.io/css/main.min.css'?ver=3.2.4'
+        media='all' />
+    <link rel='stylesheet' id='ez-toc-css' href='https://jneweducation.github.io/css/screen.min.css'?ver=2.0.40' media='all' />
+    <style id='generate-style-inline-css'>
+        body {
+            background-color: #f7f7f7;
+            color: #222222;
+        }
+
+        a {
+            color: #1e73be;
+        }
+
+        a:hover,
+        a:focus,
+        a:active {
+            color: #000000;
+        }
+
+        .wp-block-group__inner-container {
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .generate-back-to-top {
+            font-size: 20px;
+            border-radius: 3px;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            line-height: 40px;
+            width: 40px;
+            text-align: center;
+            z-index: 10;
+            transition: opacity 300ms ease-in-out;
+            opacity: 0.1;
+            transform: translateY(1000px);
+        }
+
+        .generate-back-to-top__show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .navigation-search {
+            position: absolute;
+            left: -99999px;
+            pointer-events: none;
+            visibility: hidden;
+            z-index: 20;
+            width: 100%;
+            top: 0;
+            transition: opacity 100ms ease-in-out;
+            opacity: 0;
+        }
+
+        .navigation-search.nav-search-active {
+            left: 0;
+            right: 0;
+            pointer-events: auto;
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .navigation-search input[type="search"] {
+            outline: 0;
+            border: 0;
+            vertical-align: bottom;
+            line-height: 1;
+            opacity: 0.9;
+            width: 100%;
+            z-index: 20;
+            border-radius: 0;
+            -webkit-appearance: none;
+            height: 60px;
+        }
+
+        .navigation-search input::-ms-clear {
+            display: none;
+            width: 0;
+            height: 0;
+        }
+
+        .navigation-search input::-ms-reveal {
+            display: none;
+            width: 0;
+            height: 0;
+        }
+
+        .navigation-search input::-webkit-search-decoration,
+        .navigation-search input::-webkit-search-cancel-button,
+        .navigation-search input::-webkit-search-results-button,
+        .navigation-search input::-webkit-search-results-decoration {
+            display: none;
+        }
+
+        .gen-sidebar-nav .navigation-search {
+            top: auto;
+            bottom: 0;
+        }
+
+        :root {
+            --contrast: #222222;
+            --contrast-2: #575760;
+            --contrast-3: #b2b2be;
+            --base: #f0f0f0;
+            --base-2: #f7f8f9;
+            --base-3: #ffffff;
+            --accent: #1e73be;
+        }
+
+        .has-contrast-color {
+            color: var(--contrast);
+        }
+
+        .has-contrast-background-color {
+            background-color: var(--contrast);
+        }
+
+        .has-contrast-2-color {
+            color: var(--contrast-2);
+        }
+
+        .has-contrast-2-background-color {
+            background-color: var(--contrast-2);
+        }
+
+        .has-contrast-3-color {
+            color: var(--contrast-3);
+        }
+
+        .has-contrast-3-background-color {
+            background-color: var(--contrast-3);
+        }
+
+        .has-base-color {
+            color: var(--base);
+        }
+
+        .has-base-background-color {
+            background-color: var(--base);
+        }
+
+        .has-base-2-color {
+            color: var(--base-2);
+        }
+
+        .has-base-2-background-color {
+            background-color: var(--base-2);
+        }
+
+        .has-base-3-color {
+            color: var(--base-3);
+        }
+
+        .has-base-3-background-color {
+            background-color: var(--base-3);
+        }
+
+        .has-accent-color {
+            color: var(--accent);
+        }
+
+        .has-accent-background-color {
+            background-color: var(--accent);
+        }
+
+        body,
+        button,
+        input,
+        select,
+        textarea {
+            font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        }
+
+        body {
+            line-height: 1.5;
+        }
+
+        .entry-content>[class*="wp-block-"]:not(:last-child) {
+            margin-bottom: 1.5em;
+        }
+
+        .main-navigation .main-nav ul ul li a {
+            font-size: 14px;
+        }
+
+        .sidebar .widget,
+        .footer-widgets .widget {
+            font-size: 17px;
+        }
+
+        @media (max-width:768px) {
+            h1 {
+                font-size: 31px;
+            }
+
+            h2 {
+                font-size: 27px;
+            }
+
+            h3 {
+                font-size: 24px;
+            }
+
+            h4 {
+                font-size: 22px;
+            }
+
+            h5 {
+                font-size: 19px;
+            }
+        }
+
+        .top-bar {
+            background-color: #636363;
+            color: #ffffff;
+        }
+
+        .top-bar a {
+            color: #ffffff;
+        }
+
+        .top-bar a:hover {
+            color: #303030;
+        }
+
+        .site-header {
+            background-color: #ffffff;
+        }
+
+        .main-title a,
+        .main-title a:hover {
+            color: #222222;
+        }
+
+        .site-description {
+            color: #757575;
+        }
+
+        .main-navigation,
+        .main-navigation ul ul {
+            background-color: #ed4250;
+        }
+
+        .main-navigation .main-nav ul li a,
+        .main-navigation .menu-toggle,
+        .main-navigation .menu-bar-items {
+            color: #ffffff;
+        }
+
+        .main-navigation .main-nav ul li:not([class*="current-menu-"]):hover>a,
+        .main-navigation .main-nav ul li:not([class*="current-menu-"]):focus>a,
+        .main-navigation .main-nav ul li.sfHover:not([class*="current-menu-"])>a,
+        .main-navigation .menu-bar-item:hover>a,
+        .main-navigation .menu-bar-item.sfHover>a {
+            color: #ffffff;
+            background-color: #c42f2f;
+        }
+
+        button.menu-toggle:hover,
+        button.menu-toggle:focus {
+            color: #ffffff;
+        }
+
+        .main-navigation .main-nav ul li[class*="current-menu-"]>a {
+            color: #ffffff;
+            background-color: #c42f2f;
+        }
+
+        .navigation-search input[type="search"],
+        .navigation-search input[type="search"]:active,
+        .navigation-search input[type="search"]:focus,
+        .main-navigation .main-nav ul li.search-item.active>a,
+        .main-navigation .menu-bar-items .search-item.active>a {
+            color: #ffffff;
+            background-color: #c42f2f;
+        }
+
+        .main-navigation ul ul {
+            background-color: #c42f2f;
+        }
+
+        .main-navigation .main-nav ul ul li a {
+            color: #ffffff;
+        }
+
+        .main-navigation .main-nav ul ul li:not([class*="current-menu-"]):hover>a,
+        .main-navigation .main-nav ul ul li:not([class*="current-menu-"]):focus>a,
+        .main-navigation .main-nav ul ul li.sfHover:not([class*="current-menu-"])>a {
+            color: #fcd9d6;
+            background-color: #c42f2f;
+        }
+
+        .main-navigation .main-nav ul ul li[class*="current-menu-"]>a {
+            color: #fcd9d6;
+            background-color: #c42f2f;
+        }
+
+        .separate-containers .inside-article,
+        .separate-containers .comments-area,
+        .separate-containers .page-header,
+        .one-container .container,
+        .separate-containers .paging-navigation,
+        .inside-page-header {
+            background-color: #ffffff;
+        }
+
+        .entry-title a {
+            color: #222222;
+        }
+
+        .entry-title a:hover {
+            color: #55555e;
+        }
+
+        .entry-meta {
+            color: #595959;
+        }
+
+        .sidebar .widget {
+            background-color: #ffffff;
+        }
+
+        .footer-widgets {
+            background-color: #ffffff;
+        }
+
+        .footer-widgets .widget-title {
+            color: #000000;
+        }
+
+        .site-info {
+            color: #ffffff;
+            background-color: #55555e;
+        }
+
+        .site-info a {
+            color: #ffffff;
+        }
+
+        .site-info a:hover {
+            color: #d3d3d3;
+        }
+
+        .footer-bar .widget_nav_menu .current-menu-item a {
+            color: #d3d3d3;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="url"],
+        input[type="password"],
+        input[type="search"],
+        input[type="tel"],
+        input[type="number"],
+        textarea,
+        select {
+            color: #666666;
+            background-color: #fafafa;
+            border-color: #cccccc;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="url"]:focus,
+        input[type="password"]:focus,
+        input[type="search"]:focus,
+        input[type="tel"]:focus,
+        input[type="number"]:focus,
+        textarea:focus,
+        select:focus {
+            color: #666666;
+            background-color: #ffffff;
+            border-color: #bfbfbf;
+        }
+
+        button,
+        html input[type="button"],
+        input[type="reset"],
+        input[type="submit"],
+        a.button,
+        a.wp-block-button__link:not(.has-background) {
+            color: #ffffff;
+            background-color: #55555e;
+        }
+
+        button:hover,
+        html input[type="button"]:hover,
+        input[type="reset"]:hover,
+        input[type="submit"]:hover,
+        a.button:hover,
+        button:focus,
+        html input[type="button"]:focus,
+        input[type="reset"]:focus,
+        input[type="submit"]:focus,
+        a.button:focus,
+        a.wp-block-button__link:not(.has-background):active,
+        a.wp-block-button__link:not(.has-background):focus,
+        a.wp-block-button__link:not(.has-background):hover {
+            color: #ffffff;
+            background-color: #3f4047;
+        }
+
+        a.generate-back-to-top {
+            background-color: rgba(0, 0, 0, 0.4);
+            color: #ffffff;
+        }
+
+        a.generate-back-to-top:hover,
+        a.generate-back-to-top:focus {
+            background-color: rgba(0, 0, 0, 0.6);
+            color: #ffffff;
+        }
+
+        @media (max-width:768px) {
+
+            .main-navigation .menu-bar-item:hover>a,
+            .main-navigation .menu-bar-item.sfHover>a {
+                background: none;
+                color: #ffffff;
+            }
+        }
+
+        .nav-below-header .main-navigation .inside-navigation.grid-container,
+        .nav-above-header .main-navigation .inside-navigation.grid-container {
+            padding: 0px 20px 0px 20px;
+        }
+
+        .site-main .wp-block-group__inner-container {
+            padding: 40px;
+        }
+
+        .separate-containers .paging-navigation {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .entry-content .alignwide,
+        body:not(.no-sidebar) .entry-content .alignfull {
+            margin-left: -40px;
+            width: calc(100% + 80px);
+            max-width: calc(100% + 80px);
+        }
+
+        .rtl .menu-item-has-children .dropdown-menu-toggle {
+            padding-left: 20px;
+        }
+
+        .rtl .main-navigation .main-nav ul li.menu-item-has-children>a {
+            padding-right: 20px;
+        }
+
+        @media (max-width:768px) {
+
+            .separate-containers .inside-article,
+            .separate-containers .comments-area,
+            .separate-containers .page-header,
+            .separate-containers .paging-navigation,
+            .one-container .site-content,
+            .inside-page-header {
+                padding: 30px;
+            }
+
+            .site-main .wp-block-group__inner-container {
+                padding: 30px;
+            }
+
+            .inside-top-bar {
+                padding-right: 30px;
+                padding-left: 30px;
+            }
+
+            .inside-header {
+                padding-right: 30px;
+                padding-left: 30px;
+            }
+
+            .widget-area .widget {
+                padding-top: 30px;
+                padding-right: 30px;
+                padding-bottom: 30px;
+                padding-left: 30px;
+            }
+
+            .footer-widgets-container {
+                padding-top: 30px;
+                padding-right: 30px;
+                padding-bottom: 30px;
+                padding-left: 30px;
+            }
+
+            .inside-site-info {
+                padding-right: 30px;
+                padding-left: 30px;
+            }
+
+            .entry-content .alignwide,
+            body:not(.no-sidebar) .entry-content .alignfull {
+                margin-left: -30px;
+                width: calc(100% + 60px);
+                max-width: calc(100% + 60px);
+            }
+
+            .one-container .site-main .paging-navigation {
+                margin-bottom: 20px;
+            }
+        }
+
+        /* End cached CSS */
+        .is-right-sidebar {
+            width: 30%;
+        }
+
+        .is-left-sidebar {
+            width: 30%;
+        }
+
+        .site-content .content-area {
+            width: 70%;
+        }
+
+        @media (max-width:768px) {
+
+            .main-navigation .menu-toggle,
+            .sidebar-nav-mobile:not(#sticky-placeholder) {
+                display: block;
+            }
+
+            .main-navigation ul,
+            .gen-sidebar-nav,
+            .main-navigation:not(.slideout-navigation):not(.toggled) .main-nav>ul,
+            .has-inline-mobile-toggle #site-navigation .inside-navigation>*:not(.navigation-search):not(.main-nav) {
+                display: none;
+            }
+
+            .nav-align-right .inside-navigation,
+            .nav-align-center .inside-navigation {
+                justify-content: space-between;
+            }
+        }
+    </style>
+    <link rel="icon" href="https://jneweducation.github.io/img/cropped-soalbelajar-32x32.png" sizes="32x32" />
+    <link rel="icon" href="https://jneweducation.github.io/img/cropped-soalbelajar-192x192.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="https://jneweducation.github.io/img/cropped-soalbelajar-180x180.png" />
+    <meta name="msapplication-TileImage" content="https://jneweducation.github.io/img/cropped-soalbelajar-270x270.png" />
+</head>
+
+<body
+    class="home blog wp-custom-logo wp-embed-responsive right-sidebar nav-above-header separate-containers nav-search-enabled nav-aligned-center header-aligned-center dropdown-hover"
+    itemtype="https://schema.org/Blog" itemscope>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-dark-grayscale">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 0.49803921568627" />
+                    <feFuncG type="table" tableValues="0 0.49803921568627" />
+                    <feFuncB type="table" tableValues="0 0.49803921568627" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-grayscale">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 1" />
+                    <feFuncG type="table" tableValues="0 1" />
+                    <feFuncB type="table" tableValues="0 1" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-purple-yellow">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.54901960784314 0.98823529411765" />
+                    <feFuncG type="table" tableValues="0 1" />
+                    <feFuncB type="table" tableValues="0.71764705882353 0.25490196078431" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-blue-red">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 1" />
+                    <feFuncG type="table" tableValues="0 0.27843137254902" />
+                    <feFuncB type="table" tableValues="0.5921568627451 0.27843137254902" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-midnight">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 0" />
+                    <feFuncG type="table" tableValues="0 0.64705882352941" />
+                    <feFuncB type="table" tableValues="0 1" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-magenta-yellow">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.78039215686275 1" />
+                    <feFuncG type="table" tableValues="0 0.94901960784314" />
+                    <feFuncB type="table" tableValues="0.35294117647059 0.47058823529412" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-purple-green">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.65098039215686 0.40392156862745" />
+                    <feFuncG type="table" tableValues="0 1" />
+                    <feFuncB type="table" tableValues="0.44705882352941 0.4" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-blue-orange">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.098039215686275 1" />
+                    <feFuncG type="table" tableValues="0 0.66274509803922" />
+                    <feFuncB type="table" tableValues="0.84705882352941 0.41960784313725" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><a class="screen-reader-text skip-link" href="#content" title="Langsung ke isi">Langsung ke isi</a>
+    <nav class="main-navigation nav-align-center has-menu-bar-items sub-menu-right" id="site-navigation"
+        aria-label="Utama" itemtype="https://schema.org/SiteNavigationElement" itemscope>
+        <div class="inside-navigation grid-container">
+            <form method="get" class="search-form navigation-search" action="/">
+                <input type="search" class="search-field" value="" name="q" title="Cari" />
+            </form> <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+                <span class="gp-icon icon-menu-bars"><svg viewBox="0 0 512 512" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" width="1em" height="1em">
+                        <path
+                            d="M0 96c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24zm0 160c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24zm0 160c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24z" />
+                    </svg><svg viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                        width="1em" height="1em">
+                        <path
+                            d="M71.029 71.029c9.373-9.372 24.569-9.372 33.942 0L256 222.059l151.029-151.03c9.373-9.372 24.569-9.372 33.942 0 9.372 9.373 9.372 24.569 0 33.942L289.941 256l151.03 151.029c9.372 9.373 9.372 24.569 0 33.942-9.373 9.372-24.569 9.372-33.942 0L256 289.941l-151.029 151.03c-9.373 9.372-24.569 9.372-33.942 0-9.372-9.373-9.372-24.569 0-33.942L222.059 256 71.029 104.971c-9.372-9.373-9.372-24.569 0-33.942z" />
+                    </svg></span><span class="mobile-menu">Menu</span> </button>
+            <div id="primary-menu" class="main-nav">
+                <ul id="menu-soal-belajar" class=" menu sf-menu">
+                    <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1"><a
+                            href="https://jneweducation.github.io">Home</a></li>
+                </ul>
+                </ul>
+            </div>
+            <div class="menu-bar-items"><span class="menu-bar-item search-item"><a aria-label="Buka Kolom Pencarian"
+                        href="#"><span class="gp-icon icon-search"><svg viewBox="0 0 512 512"
+                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M208 48c-88.366 0-160 71.634-160 160s71.634 160 160 160 160-71.634 160-160S296.366 48 208 48zM0 208C0 93.125 93.125 0 208 0s208 93.125 208 208c0 48.741-16.765 93.566-44.843 129.024l133.826 134.018c9.366 9.379 9.355 24.575-.025 33.941-9.379 9.366-24.575 9.355-33.941-.025L337.238 370.987C301.747 399.167 256.839 416 208 416 93.125 416 0 322.875 0 208z" />
+                            </svg><svg viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                width="1em" height="1em">
+                                <path
+                                    d="M71.029 71.029c9.373-9.372 24.569-9.372 33.942 0L256 222.059l151.029-151.03c9.373-9.372 24.569-9.372 33.942 0 9.372 9.373 9.372 24.569 0 33.942L289.941 256l151.03 151.029c9.372 9.373 9.372 24.569 0 33.942-9.373 9.372-24.569 9.372-33.942 0L256 289.941l-151.029 151.03c-9.373 9.372-24.569 9.372-33.942 0-9.372-9.373-9.372-24.569 0-33.942L222.059 256 71.029 104.971c-9.372-9.373-9.372-24.569 0-33.942z" />
+                            </svg></span></a></span></div>
+        </div>
+    </nav>
+    <header class="site-header grid-container" id="masthead" aria-label="Situs"
+        itemtype="https://schema.org/WPHeader" itemscope>
+        <div class="inside-header grid-container">
+            <h1 class="site-logo">
+                <a href="https://jneweducation.github.io" rel="home"> QnA</a>
+            </h1>
+        </div>
+    </header>
+
+    <div class="site grid-container container hfeed" id="page">
+        <div class="site-content" id="content">
+            <div class="content-area" id="primary">
+                    <main class="site-main" id="main">
+        <article id="post-1327" class="post-1327 post type-post status-publish format-standard hentry category-info"
+            itemtype="https://schema.org/CreativeWork" itemscope="">
+            <div class="inside-article">
+                <header class="entry-header" aria-label="Konten">
+                    <h1 class="entry-title" itemprop="headline">Web Graph</h1>
+                    <div class="entry-meta">
+                       <span
+                            class="byline">oleh <span class="author vcard" itemprop="author"
+                                itemtype="https://schema.org/Person" itemscope=""><span class="author-name"
+                                    itemprop="name">bogoybocabal</span></span></span>
+                    </div>
+                </header>
+                <div class="entry-content" itemprop="text">
+                    <div style="text-align: center">
+                        <img src="https://tse1.mm.bing.net/th?q=Web+Graph" alt="Web Graph">
+                    </div>
+                    <p></p>
+                    <p>. What kind of graphic organizer is shown?A. bar graphB. pie graphC. semantic web​</p>
+                    <div id="ez-toc-container"
+                        class="ez-toc-v2_0_40 counter-hierarchy ez-toc-counter ez-toc-light-blue ez-toc-container-direction">
+                        <div class="ez-toc-title-container">
+                            <p class="ez-toc-title">Daftar Isi</p>
+                            <span class="ez-toc-title-toggle"><a href="#"
+                                    class="ez-toc-pull-right ez-toc-btn ez-toc-btn-xs ez-toc-btn-default ez-toc-toggle"
+                                    area-label="ez-toc-toggle-icon-1"><label for="item-63b392361c4a0"
+                                        aria-label="Table of Content"><span
+                                            style="display: flex;align-items: center;width: 35px;height: 30px;justify-content: center;direction:ltr;"><svg
+                                                style="fill: #999;color:#999" xmlns="http://www.w3.org/2000/svg"
+                                                class="list-377408" width="20px" height="20px" viewBox="0 0 24 24"
+                                                fill="none">
+                                                <path
+                                                    d="M6 6H4v2h2V6zm14 0H8v2h12V6zM4 11h2v2H4v-2zm16 0H8v2h12v-2zM4 16h2v2H4v-2zm16 0H8v2h12v-2z"
+                                                    fill="currentColor"></path>
+                                            </svg><svg style="fill: #999;color:#999" class="arrow-unsorted-368013"
+                                                xmlns="http://www.w3.org/2000/svg" width="10px" height="10px"
+                                                viewBox="0 0 24 24" version="1.2" baseProfile="tiny">
+                                                <path
+                                                    d="M18.2 9.3l-6.2-6.3-6.2 6.3c-.2.2-.3.4-.3.7s.1.5.3.7c.2.2.4.3.7.3h11c.3 0 .5-.1.7-.3.2-.2.3-.5.3-.7s-.1-.5-.3-.7zM5.8 14.7l6.2 6.3 6.2-6.3c.2-.2.3-.5.3-.7s-.1-.5-.3-.7c-.2-.2-.4-.3-.7-.3h-11c-.3 0-.5.1-.7.3-.2.2-.3.5-.3.7s.1.5.3.7z">
+                                                </path>
+                                            </svg></span></label><input type="checkbox" id="item-63b392361c4a0"></a></span>
+                        </div>
+                        <nav>
+                            <ul class="ez-toc-list ez-toc-list-level-1 ">
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#what-kind-of-graphic-organizer-is-showna-bar-graphb-pie-graphc-semantic-web%e2%80%8b">1.
+                                            . What kind of graphic organizer is shown?A. bar graphB. pie graphC. semantic web​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#9-this-type-of-graph-is-shaped-like-a-circlea-web-mapb-geographical-mapsc-bar-graphd-circle-graph%e2%80%8b">2.
+                                            9. This type of graph is shaped like a circleA Web mapB. Geographical MapsC. Bar GraphD. Circle Graph​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#create-two-separate-web-graphsfigures-to-show-the-benefits-provided-by-a-reading-and-b-books-%e2%80%8b">3.
+                                            Create two separate web graphs/figures to show the benefits provided by (a) reading and (b) books.​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#what-is-newlearning-task-1-1directions-using-the-web-diagram-below-connects-words-which-are-related-to-the-maintopic-located-at-the-middle-part-of-the-graph-multimedia%e2%80%8bpaki-sagot-po-plss">4.
+                                             What is new?Learning Task 1.1Directions. Using the web diagram below, connects words which are related to the maintopic located at the middle part of the graph.multi:media:​paki sagot po plsssss​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#what-is-the-most-popular-way-of-structuring-a-web-page-a-by-creating-tables-b-by-creating-graph-c-by-creating-line-d-by-creating-boxes%e2%80%8b">5.
+                                            What is the most popular way of structuring a web page. a. By creating tables b. By creating graph . c. By creating line d. By creating boxes​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#1-it-is-a-visual-display-that-depicts-the-relationships-between-facts-terms-andor-ideas-within-a-leaming-task-a-pie-graphc-fishboneb-venn-diagramd-graphic-organizer2-it-is-an-overlapping-circl">6.
+                                            1. It is a visual display that depicts the relationships between facts, terms, andor ideas within a leaming task.A. Pie GraphC. FishboneB. Venn DiagramD. Graphic Organizer2. It is an overlapping circles that illustrate similarity and differencesA. FishboneC. Semantic WebB. Venn DiagramD. Graphic Organizer3. It is a cause and effect organizer,A. FishboneC. Semantic WebB. Venn DiagramD. Graphic Organizer4. It builds side-by-side graphical representation about the key themesA. FishboneC Semantic WebB. Venn DiagramD. Graphic Organizer​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#how-to-make-a-graph-in-english-subject-in-your-topic-is-about-webs-please-po-para-bukas-kasi-project-namin-%e2%80%8b">7.
+                                            how to make a graph in english subject in your topic is about webs please po para bukas kasi project namin ​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#how-can-organizing-data-into-tables-and-graphs-help-scientists-analyze-their-data-a-by-speeding-up-the-collection-of-data-b-by-adding-color-to-their-web-site-c-by-making-relationships-easier-to-se">8.
+                                            How can organizing data into tables and graphs help scientists analyze their data? A. by speeding up the collection of data B. by adding color to their Web site C. by making relationships easier to see D. by increasing efficiency</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#2-this-allows-you-to-organize-your-content-in-a-web-ofrows-and-columns-they-are-commonly-used-to-make-iteasier-for-readers-to-digest-large-amounts-ofinformation-or-when-it-is-required-to-compare-di">9.
+                                            2. This allows you to organize your content in a web ofrows and columns. They are commonly used to make iteasier for readers to digest large amounts ofinformation, or when it is required to compare differenttypes of data.A. chart B. diagram C. graph D. table​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#oose-the-letter-of-the-correct-answer-write-the-letter-on-the-blank-before-each1-these-are-visuals-that-show-relationships-between-data-and-are-intended-to-diseasy-to-understand-and-remember-diagram">10.
+                                            oose the letter of the correct answer. Write the letter on the blank before each1. These are visuals that show relationships between data and are intended to diseasy to understand and remember.DiagramsB. GraphsC.Maps2. A graph that illustrates how related data changes over a specific period of timBar GraphB. HistogramC. Line Graph3. It may be horizontal or vertical. Also, it gives information about numbers arby means of bars of different sizes or heavy lines drawn to scale.Bar GraphB. HistogramC. Line Graph4. A kind of graph that illustrates data using pictures. Usually a picture repreindicated in a legend.Bar GraphB. HistogramC. Pictograph5.shows how a whole is divided in different parts.Bar GraphB. HistogramC. Pictograph6. It is another type of bar graph that illustrates the distribution of numeric dHistogramB. Line GraphC. Pictograph7.allow you to organize your content in a web of rows anddoor to direct lare amounts of information, or wh​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#what-type-of-organizer-is-used-to-compare-and-contrast-a-web-b-sidebars-c-venn-diagram-d-bar-graph%e2%80%8b">11.
+                                            what type of organizer is used to compare and contrast A. web B. sidebars C. venn diagram D. bar graph​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#5-what-visual-tool-is-used-in-organizing-information-into-different-categories-illustrated-in-rowsand-columnsa-expository-b-graphc-tabled-information-map6-what-visual-tool-is-characterized">12.
+                                            5. What visual tool is used in organizing information into different categories illustrated in rows
+and columns?
+a. expository b. graph
+c. table
+d. information map
+6. What visual tool is characterized by two overlapping circles to represent similarities and
+differences?
+a. Venn diagram b. Tree diagram c. Main Idea and Details Chart d. Line graph
+7. What visual tool presents data with rectangular bars which differ in sizes?
+a. Pie chart
+b. Line graph
+c. Bar graph
+d. Tree diagram
+8. What visual tool is characterized by web-like structure that show relationship between major
+concepts and subordinate elements?
+a. Venn diagram b. Tree diagram c. Main Idea and Details Chart d. Line graph
+9. What composes a table?
+a. Horizontal lines b. vertical lines
+c. rows and columns d. line segments
+10. What is the term used to describe the main vertical and horizontal lines that make up a line
+graph or bar graph?
+a. title
+b. heading
+d. axes
+c. line segment
+Answer it please I badly need help:(</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#what-is-newlearning-task-1-1directions-using-the-web-diagram-below-connects-words-which-are-related-to-the-maintopic-located-at-the-middle-part-of-the-graph-multimedia%e2%80%8b">13.
+                                            What is new?Learning Task 1.1Directions. Using the web diagram below, connects words which are related to the maintopic located at the middle part of the graph.multi:media:​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#the-different-example-of-_______-include-advertisemet-cartons-chairs-and-tables-college-comic-books-diagrams-diorams-dvd-as-graphs-icons-magazines-map-photo-signages-storyboard-symbol-timelines-video">14.
+                                            The different example of _______ include advertisemet cartons chairs and tables college comic books diagrams diorams dvd as graphs icons magazines map photo signages storyboard symbol timelines video and web site​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#what-is-newlearning-task-1-1irections-using-the-web-diagram-below-connects-words-which-are-related-to-the-mainpic-located-at-the-middle-part-of-the-graph-multimediaina-task-12%e2%80%8b">15.
+                                            What is new?Learning Task 1.1irections: Using the web diagram below, connects words which are related to the mainpic located at the middle part of the graph.multimediaina Task 12​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#fill-in-the-word-web-by-the-words-or-phrases-that-you-can-associate-with-non-communicable-diseases-you-may-use-the-graph-below-as-your-guide%e2%80%8b">16.
+                                            fill in the word web by the words or phrases that you can associate with Non-communicable diseases You may use the graph below as your guide​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#across-1-worldwide-web-text-and-graphical-image-5-differences-down-2-chart-graph-3-tells-a-story-though-cartoon-drawings-4-printed-picture-or-notice-6-similarities-7-combination-of-two-or-mor">17.
+                                            Across: 1. worldwide web, text and graphical image 5. differences Down: 2. chart, graph 3 tells a story though cartoon drawings 4. printed picture or notice 6. similarities 7 combination of two or more approaches​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#12-it-is-a-circular-graph-that-is-broken-down-into-segments-it-is-best-to-use-when-youwork-out-on-the-composition-of-something-concept-mapc-venn-diagramb-spider-webd-pie-graph%e2%80%8b">18.
+                                            12. It is a circular graph that is broken down into segments. It is best to use when youwork out on the composition of something.Concept Mapc. Venn Diagramb. Spider Webd. Pie Graph​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#learning-task-1-1directions-using-the-web-diagram-below-connects-words-which-are-related-to-themain-topic-located-at-the-middle-part-of-the-graph-multimedia%e2%80%8b">19.
+                                            Learning Task 1.1Directions: Using the web diagram below, connects words which are related to themain topic located at the middle part of the graph.multimedia​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#gumising-nang-400-para-lang-matapos-pa-help-ako-preif-you-are-asked-to-illustrate-the-difference-and-similarities-of-your-favorite-korean-drama-and-filipino-soap-opera-what-graphic-organizer-is-the-b">20.
+                                            GUMISING NANG 4:00 PARA LANG MATAPOS PA HELP AKO PREif you are asked to illustrate the difference and similarities of your favorite korean drama and filipino soap opera what graphic organizer is the best to useA BAR GRAPHB DESCRIPTIVE NARRATIVE C VENN DIAGRAM D WORD WEB​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#what-visual-tool-is-characterized-by-web-like-structure-that-show-relationship-between-major-concepts-and-subordinate-elementsa-venn-diagramb-tree-diagramc-main-idea-and-details-chartd-line-graph">21.
+                                            what visual tool is characterized by web-like structure that show relationship between major concepts and subordinate elements?a.venn diagramb.tree diagramc.main idea and details chartd.line graph​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#using-the-web-diagram-belowconnects-words-which-are-related-tto-the-main-topic-located-at-the-middle-part-of-graph-multi-media1-12-23-3">22.
+                                            Using the web diagram below,connects words which are related tto the main topic located at the middle part of graph.
+Multi Media
+1 1
+2 2
+3 3</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#read-the-statements-carefully-write-t-if-the-sentence-is-correct-and-fit-is-wrong-1-educational-sites-ending-in-edu-usually-are-safe-sites-2-it-is-important-to-evaluate-the-information-you-intend">23.
+                                            READ THE STATEMENTS CAREFULLY. WRITE T IF THE SENTENCE IS CORRECT AND FIT IS WRONG 1. Educational sites ending in.edu usually are safe sites. 2. It is important to evaluate the information you intend to use for a guided research. 3. WWW is an information system where documents and other web resources are identified. 4. Research skills is NOT a vital part in the writing process. 5. Summary is a brief restatement of the most important parts of the story or text. 6. Non-linear text refers to traditional text that needs to be read from beginning to the end. 7 Graphs, Diagram and Charts are examples of Non-linear text. 8. Summarizing is when you tell what you have read in your own words. 9. A web browser is a software application for accessing information on the world wide web. 10. Listening strategies are helpful techniques for better comprehension of text listened to.​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#c-13-in-grade-10-jose-rizal-class-teacher-joan-brought-an-apple-and-orange-in-class-asher-activity-teacher-joan-ask-them-to-compare-and-contrast-these-fruits-what-diagram-wouldsuit-for-this-activity">24.
+                                            C 13 In Grade 10 Jose Rizal Class, teacher Joan brought an apple and orange in class. Asher activity teacher Joan ask them to compare and contrast these fruits What diagram wouldsuit for this activity?a Concept Mapc. Venn DiagramSpider Webd. Pie Graph​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#what-do-you-call-visual-and-graphic-display-that-depicts-the-relationship-between-facts-termsandor-ideas-within-a-learning-taska-linear-graphb-graphic-organizerc-venn-diagramd-picture-web">25.
+                                            what do you. call visual and graphic display that depicts the relationship between facts, terms,and/or ideas within a learning task?a.linear graphb.graphic organizerc.venn diagramd.picture web​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#cite-five-reasons-why-do-we-need-to-use-para-graph-tags-and-heading-tags-in-web-page%e2%80%8b">26.
+                                            cite five reasons why do we need to use para graph tags and Heading tags in web page​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#ibaloi-folkdances-to-kalinga-folkdancesa-clustering-graphb-fishbonec-webd-venn-diagrampasagot-explain-why-wlang-promise-yan-yung-sagot-nakoo%e2%80%8b">27.
+                                            Ibaloi Folkdances to Kalinga Folkdancesa. Clustering graphb. Fishbonec. Webd. Venn DiagramPasagot explain why wlang *promise yan yung sagot* Nakoo​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#assessment-direction-to-test-how-far-you-have-learned-in-this-lesson-read-and-answer-the-following-questions-below-choose-the-letter-of-the-correct-answer-write-your-answers-on-a-separate-sheet-of">28.
+                                            Assessment Direction: To test how far you have learned in this lesson, read and answer the following questions below. Choose the letter of the correct answer. Write your answers on a separate sheet of paper. a C. maps D. to go up 1. Talking comes under which type of communication? A. dramatic B. non-verbal C. verbal D. written 2. This type of graph is useful for illustrating trends such as temperature changes during certain dates. A. bar graph B. line graph C. ple graph D. table 3. This kind of graph uses pictures that represents a certain number which is indicated in a legend, A. bar graph B. histogram D. pictograph 4. There were steadily increasing mentions of antidepressant drugs between 1993 and 2000. A. declined B. peak C. steeply 5. The following words are used to express the movements of the line except for one. A. considerable C. increase D. plunge 6. Which of the following is an example of visual communication tool? A. grunt B. oration C. traffic signs D. yell 7. This type of graph that illustrates the distribution of numeric data across categories. A. bar graph B. histogram C. pictograph D. pie graph 8. This allow you to organize your content in a web of rows and columns They are commonly used to make it easier for readers to digest large amounts of information, or when it is required to compare different types of data. A. chart B. diagram C. graph D. table B. grow MOST POPULATED COUNTRIES Population (in Hundred Millions) China india​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#posterinfographicwebpagecomic-stripmultimodal1-it-refers-to-combination-of-two-or-more-communication-approaches-or-modes-2-it-presents-a-series-of-cartoon-drawings-that-tell-a-story-or-part-of-a-sto">29.
+                                            POSTERINFOGRAPHICWEBPAGECOMIC STRIPMULTIMODAL1. It refers to combination of two or more communication approaches or modes.2. It presents a series of cartoon drawings that tell a story or part of a story.3. It is a single file on the World Wide Web, providing text, graphical images, etc.: it may have hypertext linked with other Web pages at a website.4. It is a visual presentation of information in the form of a chart, graph, or other image accompanied by minimal text, intended to give an easilyunderstood overview, often of a complex subject.5. It is a large printed picture, notice, or advertisement displayed in a public place.​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#draw-a-check-mark-in-the-box-if-the-statement-is-correct-draw-a-circle-o-if-the-incorrect-1-a-graph-shows-relationships-between-data-and-are-intended-to-display-the-data-in-a-way-that-is-easy">30.
+                                            Draw a check mark (/) in the box if the statement is correct. draw a circle (o) if the incorrect 1. A graph shows relationships between data and are intended to display the data in a way that is easy to understand andremember2. Bar graph shows comparison by means of bars of different sizes or heavy lines drawn to scale.3. Pictures are used to show data in a line graph.4. Pie graph is used to organize content in a web or rows and columns.5. Diagrams that representvisually the way topics and concepts are related and organize are called Informational MapsALTERNATE RESPONSE. Draw a check mark (/) in the box if the statement is correct. Draw a circle (O) if the statement is​</a>
+                                    </li>
+                                                            </ul>
+                        </nav>
+                    </div>
+                                            <h2 class="ez-toc-section" id="what-kind-of-graphic-organizer-is-showna-bar-graphb-pie-graphc-semantic-web%e2%80%8b">
+                            1. . What kind of graphic organizer is shown?A. bar graphB. pie graphC. semantic web​</h2><br />
+                        <p><strong>Answer:</strong></p><p>its B.pie graph</p><p><strong>Explanation:</strong></p><p>I already study this </p><p></p><br />
+                                            <h2 class="ez-toc-section" id="9-this-type-of-graph-is-shaped-like-a-circlea-web-mapb-geographical-mapsc-bar-graphd-circle-graph%e2%80%8b">
+                            2. 9. This type of graph is shaped like a circleA Web mapB. Geographical MapsC. Bar GraphD. Circle Graph​</h2><br />
+                        <p><strong>Answer:</strong></p><p>I think A</p><p><strong>Explanation:</strong></p><p>i dont no what is the answer</p><p><strong>Answer:</strong></p><p>circle graph or pie graph</p><p></p><p><strong>Explanation:</strong></p><p>a circle graph is also known as pie graph.</p><br />
+                                            <h2 class="ez-toc-section" id="create-two-separate-web-graphsfigures-to-show-the-benefits-provided-by-a-reading-and-b-books-%e2%80%8b">
+                            3. Create two separate web graphs/figures to show the benefits provided by (a) reading and (b) books.​</h2><br />
+                        <p><strong>Answer:</strong></p><p>read the books to provide the figure of benefits</p><br />
+                                            <h2 class="ez-toc-section" id="what-is-newlearning-task-1-1directions-using-the-web-diagram-below-connects-words-which-are-related-to-the-maintopic-located-at-the-middle-part-of-the-graph-multimedia%e2%80%8bpaki-sagot-po-plss">
+                            4.  What is new?Learning Task 1.1Directions. Using the web diagram below, connects words which are related to the maintopic located at the middle part of the graph.multi:media:​paki sagot po plsssss​</h2><br />
+                        <p><strong>ANSWER</strong><strong>:</strong><strong>MULTI</strong><strong> </strong><strong>MEDIA</strong><strong> </strong><strong>MULTITASKING</strong><strong> </strong><strong>MULTIPLIER</strong></p><br />
+                                            <h2 class="ez-toc-section" id="what-is-the-most-popular-way-of-structuring-a-web-page-a-by-creating-tables-b-by-creating-graph-c-by-creating-line-d-by-creating-boxes%e2%80%8b">
+                            5. What is the most popular way of structuring a web page. a. By creating tables b. By creating graph . c. By creating line d. By creating boxes​</h2><br />
+                        <p><strong>Answer:</strong></p><p>What is the most popular way of structuring a web page. </p><p><strong>a. By creating tables </strong></p><p>b. By creating graph .</p><p> c. By creating line </p><p>d. By creating boxes</p><p><strong>Explanation:</strong></p><p>hope it helps po</p><p>o(〃＾▽＾〃)o</p><br />
+                                            <h2 class="ez-toc-section" id="1-it-is-a-visual-display-that-depicts-the-relationships-between-facts-terms-andor-ideas-within-a-leaming-task-a-pie-graphc-fishboneb-venn-diagramd-graphic-organizer2-it-is-an-overlapping-circl">
+                            6. 1. It is a visual display that depicts the relationships between facts, terms, andor ideas within a leaming task.A. Pie GraphC. FishboneB. Venn DiagramD. Graphic Organizer2. It is an overlapping circles that illustrate similarity and differencesA. FishboneC. Semantic WebB. Venn DiagramD. Graphic Organizer3. It is a cause and effect organizer,A. FishboneC. Semantic WebB. Venn DiagramD. Graphic Organizer4. It builds side-by-side graphical representation about the key themesA. FishboneC Semantic WebB. Venn DiagramD. Graphic Organizer​</h2><br />
+                        <p><strong>Answer:</strong></p><p>1. D</p><p>2. B</p><p>3. A</p><p>4. C</p><p><strong>Explanation:</strong></p><p>sana makatulong </p><br />
+                                            <h2 class="ez-toc-section" id="how-to-make-a-graph-in-english-subject-in-your-topic-is-about-webs-please-po-para-bukas-kasi-project-namin-%e2%80%8b">
+                            7. how to make a graph in english subject in your topic is about webs please po para bukas kasi project namin ​</h2><br />
+                        <p><strong>If you're looking to make a graph about webs in an English subject, you migh</strong><strong>t</strong></p><p><strong>consider creating a spiderweb diagram or a mind map to visually represent your ideas. Here are some steps you can follow</strong><strong>:</strong></p><p></p>Decide on the main idea or theme of your graph. In this case, it might be the concept of webs in literature, or the different types of webs found in nature.<p></p>Choose a graph format that works best for your data. A spiderweb diagram or a mind map could work well for webs, as they both allow for multiple branches and connections between ideas.<p></p>Gather your data and organize it into categories. For example, if you're creating a graph about types of spider webs, you might group them into categories like orb webs, cobwebs, and sheet webs.<p></p>Use software or tools to create your graph. There are a variety of free and paid tools available, such as Microsoft Excel, Google Sheets, or Canva. Choose the tool that works best for your needs and expertise.<p></p>Add your data to the graph and format it appropriately. You may want to use different colors, fonts, or icons to help distinguish between different types of webs.<p></p>Add a title and labels to your graph to help explain what it represents. You might also want to include a key or legend to explain what the different colors or symbols represent.<p></p>Finally, review your graph to make sure it is clear and easy to understand. Ask yourself if the data is presented in a way that is easy to read and interpret, and make any necessary adjustments.<p></p><p><strong>M</strong><strong>a</strong><strong>r</strong><strong>k</strong><strong> </strong><strong>t</strong><strong>h</strong><strong>i</strong><strong>s</strong><strong> </strong><strong>a</strong><strong>s</strong><strong> </strong><strong>a</strong><strong> </strong><strong>B</strong><strong>r</strong><strong>a</strong><strong>i</strong><strong>n</strong><strong>l</strong><strong>i</strong><strong>e</strong><strong>s</strong><strong>t</strong><strong> </strong><strong>i</strong><strong>f</strong><strong> </strong><strong>t</strong><strong>h</strong><strong>i</strong><strong>s</strong><strong> </strong><strong>a</strong><strong>n</strong><strong>swer </strong><strong>i</strong><strong>s</strong><strong> </strong><strong>H</strong><strong>e</strong><strong>l</strong><strong>p</strong><strong>f</strong><strong>u</strong><strong>l</strong><strong>.</strong></p><p><strong>C</strong><strong>o</strong><strong>r</strong><strong>r</strong><strong>e</strong><strong>c</strong><strong>t</strong><strong> </strong><strong>m</strong><strong>e</strong><strong> </strong><strong>i</strong><strong>f</strong><strong> </strong><strong>I'm </strong><strong>w</strong><strong>r</strong><strong>o</strong><strong>n</strong><strong>g</strong><strong>.</strong><strong> </strong><strong>T</strong><strong>h</strong><strong>a</strong><strong>n</strong><strong>k</strong><strong> </strong><strong>y</strong><strong>o</strong><strong>u</strong><strong>!</strong><strong> </strong><strong>(⁠^⁠^⁠)</strong></p><p></p><br />
+                                            <h2 class="ez-toc-section" id="how-can-organizing-data-into-tables-and-graphs-help-scientists-analyze-their-data-a-by-speeding-up-the-collection-of-data-b-by-adding-color-to-their-web-site-c-by-making-relationships-easier-to-se">
+                            8. How can organizing data into tables and graphs help scientists analyze their data? A. by speeding up the collection of data B. by adding color to their Web site C. by making relationships easier to see D. by increasing efficiency</h2><br />
+                        <p><strong>Answer:</strong></p><p>C po </p><p><strong>Explanation:</strong></p><p>NASA answer key ko yan</p><br />
+                                            <h2 class="ez-toc-section" id="2-this-allows-you-to-organize-your-content-in-a-web-ofrows-and-columns-they-are-commonly-used-to-make-iteasier-for-readers-to-digest-large-amounts-ofinformation-or-when-it-is-required-to-compare-di">
+                            9. 2. This allows you to organize your content in a web ofrows and columns. They are commonly used to make iteasier for readers to digest large amounts ofinformation, or when it is required to compare differenttypes of data.A. chart B. diagram C. graph D. table​</h2><br />
+                        <p><strong>Answer:</strong></p><p>C.  Graph</p><p><strong>Explanation:</strong></p><p>#carryonlearning</p><br />
+                                            <h2 class="ez-toc-section" id="oose-the-letter-of-the-correct-answer-write-the-letter-on-the-blank-before-each1-these-are-visuals-that-show-relationships-between-data-and-are-intended-to-diseasy-to-understand-and-remember-diagram">
+                            10. oose the letter of the correct answer. Write the letter on the blank before each1. These are visuals that show relationships between data and are intended to diseasy to understand and remember.DiagramsB. GraphsC.Maps2. A graph that illustrates how related data changes over a specific period of timBar GraphB. HistogramC. Line Graph3. It may be horizontal or vertical. Also, it gives information about numbers arby means of bars of different sizes or heavy lines drawn to scale.Bar GraphB. HistogramC. Line Graph4. A kind of graph that illustrates data using pictures. Usually a picture repreindicated in a legend.Bar GraphB. HistogramC. Pictograph5.shows how a whole is divided in different parts.Bar GraphB. HistogramC. Pictograph6. It is another type of bar graph that illustrates the distribution of numeric dHistogramB. Line GraphC. Pictograph7.allow you to organize your content in a web of rows anddoor to direct lare amounts of information, or wh​</h2><br />
+                        <p><strong>Answer:</strong></p><p><strong>1.</strong><strong> </strong><strong>B</strong></p><p><strong>2.</strong><strong> </strong><strong>C</strong></p><p><strong>3.</strong><strong> </strong><strong>?</strong></p><p><strong>4.</strong><strong> </strong><strong>C</strong></p><p><strong>5.</strong><strong> </strong><strong>?</strong></p><p><strong>6.</strong><strong> </strong><strong>B</strong></p><p><strong>7.</strong><strong> </strong><strong>?</strong></p><p></p><p><strong>Explanation:</strong></p><p><strong>SORRY </strong><strong>YAN </strong><strong>LANG </strong><strong>ALAM </strong><strong>KO</strong><strong> </strong><strong>:</strong><strong>&gt;</strong></p><p><strong>#</strong>CareToLearn </p><p></p><br />
+                                            <h2 class="ez-toc-section" id="what-type-of-organizer-is-used-to-compare-and-contrast-a-web-b-sidebars-c-venn-diagram-d-bar-graph%e2%80%8b">
+                            11. what type of organizer is used to compare and contrast A. web B. sidebars C. venn diagram D. bar graph​</h2><br />
+                        <p><strong>Answer:</strong></p><p>C.Venn diagram</p><p><strong></strong></p><p></p><br />
+                                            <h2 class="ez-toc-section" id="5-what-visual-tool-is-used-in-organizing-information-into-different-categories-illustrated-in-rowsand-columnsa-expository-b-graphc-tabled-information-map6-what-visual-tool-is-characterized">
+                            12. 5. What visual tool is used in organizing information into different categories illustrated in rows
+and columns?
+a. expository b. graph
+c. table
+d. information map
+6. What visual tool is characterized by two overlapping circles to represent similarities and
+differences?
+a. Venn diagram b. Tree diagram c. Main Idea and Details Chart d. Line graph
+7. What visual tool presents data with rectangular bars which differ in sizes?
+a. Pie chart
+b. Line graph
+c. Bar graph
+d. Tree diagram
+8. What visual tool is characterized by web-like structure that show relationship between major
+concepts and subordinate elements?
+a. Venn diagram b. Tree diagram c. Main Idea and Details Chart d. Line graph
+9. What composes a table?
+a. Horizontal lines b. vertical lines
+c. rows and columns d. line segments
+10. What is the term used to describe the main vertical and horizontal lines that make up a line
+graph or bar graph?
+a. title
+b. heading
+d. axes
+c. line segment
+Answer it please I badly need help:(</h2><br />
+                        <p><strong>Answer:</strong></p><p>5.) C</p><p>6.) A</p><p>7.) C</p><p>8.) A</p><p>9.) C</p><p>10.) D</p><br />
+                                            <h2 class="ez-toc-section" id="what-is-newlearning-task-1-1directions-using-the-web-diagram-below-connects-words-which-are-related-to-the-maintopic-located-at-the-middle-part-of-the-graph-multimedia%e2%80%8b">
+                            13. What is new?Learning Task 1.1Directions. Using the web diagram below, connects words which are related to the maintopic located at the middle part of the graph.multi:media:​</h2><br />
+                        <p></p><p><strong>Explanation:</strong></p><p> </p><p>may sagot po ako jan pm me para ma send ko yung picture</p><p></p><p>john patrick padecio</p><p> </p><p></p><p></p><br />
+                                            <h2 class="ez-toc-section" id="the-different-example-of-_______-include-advertisemet-cartons-chairs-and-tables-college-comic-books-diagrams-diorams-dvd-as-graphs-icons-magazines-map-photo-signages-storyboard-symbol-timelines-video">
+                            14. The different example of _______ include advertisemet cartons chairs and tables college comic books diagrams diorams dvd as graphs icons magazines map photo signages storyboard symbol timelines video and web site​</h2><br />
+                        <p><strong>Answer:</strong></p><p>brainly</p><p><strong>Explanation:</strong></p><p>because of the grvity</p><br />
+                                            <h2 class="ez-toc-section" id="what-is-newlearning-task-1-1irections-using-the-web-diagram-below-connects-words-which-are-related-to-the-mainpic-located-at-the-middle-part-of-the-graph-multimediaina-task-12%e2%80%8b">
+                            15. What is new?Learning Task 1.1irections: Using the web diagram below, connects words which are related to the mainpic located at the middle part of the graph.multimediaina Task 12​</h2><br />
+                        <p>Answer:</p><p>multi- many, multiple,  assorted</p><p></p><p>media- route, publicity , transport</p><p>Explanation:</p><p>hope it helps</p><p>cuz that's my answer✊</p><br />
+                                            <h2 class="ez-toc-section" id="fill-in-the-word-web-by-the-words-or-phrases-that-you-can-associate-with-non-communicable-diseases-you-may-use-the-graph-below-as-your-guide%e2%80%8b">
+                            16. fill in the word web by the words or phrases that you can associate with Non-communicable diseases You may use the graph below as your guide​</h2><br />
+                        <p>1. ALLERGY</p><p>2. ASTHMA</p><p>3. ALLERGIC ECZEMA</p><p>4. HIVES</p><p>5. ALLERGIC CONJUNCTIVITIS</p><p></p><br />
+                                            <h2 class="ez-toc-section" id="across-1-worldwide-web-text-and-graphical-image-5-differences-down-2-chart-graph-3-tells-a-story-though-cartoon-drawings-4-printed-picture-or-notice-6-similarities-7-combination-of-two-or-mor">
+                            17. Across: 1. worldwide web, text and graphical image 5. differences Down: 2. chart, graph 3 tells a story though cartoon drawings 4. printed picture or notice 6. similarities 7 combination of two or more approaches​</h2><br />
+                        <p><strong>Answer:</strong></p><p>ano po answer ni to pa help nman po</p><br />
+                                            <h2 class="ez-toc-section" id="12-it-is-a-circular-graph-that-is-broken-down-into-segments-it-is-best-to-use-when-youwork-out-on-the-composition-of-something-concept-mapc-venn-diagramb-spider-webd-pie-graph%e2%80%8b">
+                            18. 12. It is a circular graph that is broken down into segments. It is best to use when youwork out on the composition of something.Concept Mapc. Venn Diagramb. Spider Webd. Pie Graph​</h2><br />
+                        <p><strong>Answer:</strong></p><p>b.yan po sagot</p><p><strong>Explanation:</strong></p><p>surenesss po ako dyan</p><br />
+                                            <h2 class="ez-toc-section" id="learning-task-1-1directions-using-the-web-diagram-below-connects-words-which-are-related-to-themain-topic-located-at-the-middle-part-of-the-graph-multimedia%e2%80%8b">
+                            19. Learning Task 1.1Directions: Using the web diagram below, connects words which are related to themain topic located at the middle part of the graph.multimedia​</h2><br />
+                        <p>Answer:</p><p>multi- many,assorted,multiple</p><p></p><p>media- route, publicity, transport</p><p>Explanation:</p><p>hope it helps</p><br />
+                                            <h2 class="ez-toc-section" id="gumising-nang-400-para-lang-matapos-pa-help-ako-preif-you-are-asked-to-illustrate-the-difference-and-similarities-of-your-favorite-korean-drama-and-filipino-soap-opera-what-graphic-organizer-is-the-b">
+                            20. GUMISING NANG 4:00 PARA LANG MATAPOS PA HELP AKO PREif you are asked to illustrate the difference and similarities of your favorite korean drama and filipino soap opera what graphic organizer is the best to useA BAR GRAPHB DESCRIPTIVE NARRATIVE C VENN DIAGRAM D WORD WEB​</h2><br />
+                        <p><strong>Answer:</strong></p><p>parasakin told at b. </p><p><strong>Explanation:</strong></p><p>yan kasi Yan Ang parang Tama saakin</p><p></p><p><strong>Answer:</strong></p><p>A. bar graph</p><p><strong>Explanation:</strong></p><p>hope it helps</p><br />
+                                            <h2 class="ez-toc-section" id="what-visual-tool-is-characterized-by-web-like-structure-that-show-relationship-between-major-concepts-and-subordinate-elementsa-venn-diagramb-tree-diagramc-main-idea-and-details-chartd-line-graph">
+                            21. what visual tool is characterized by web-like structure that show relationship between major concepts and subordinate elements?a.venn diagramb.tree diagramc.main idea and details chartd.line graph​</h2><br />
+                        <p><strong>Answer:</strong></p><p>C.Main idaal and details chart </p><p><strong>Explanation:</strong></p><p>Sana makatulong po</p><p></p><br />
+                                            <h2 class="ez-toc-section" id="using-the-web-diagram-belowconnects-words-which-are-related-tto-the-main-topic-located-at-the-middle-part-of-graph-multi-media1-12-23-3">
+                            22. Using the web diagram below,connects words which are related tto the main topic located at the middle part of graph.
+Multi Media
+1 1
+2 2
+3 3</h2><br />
+                        <p>Answer:</p><p>multi- multiple, many, assorted</p><p></p><p>media-many, publicity , transport</p><p>Explanation:</p><p>hope it helps if you think my answer is wrong then don't judge it</p><br />
+                                            <h2 class="ez-toc-section" id="read-the-statements-carefully-write-t-if-the-sentence-is-correct-and-fit-is-wrong-1-educational-sites-ending-in-edu-usually-are-safe-sites-2-it-is-important-to-evaluate-the-information-you-intend">
+                            23. READ THE STATEMENTS CAREFULLY. WRITE T IF THE SENTENCE IS CORRECT AND FIT IS WRONG 1. Educational sites ending in.edu usually are safe sites. 2. It is important to evaluate the information you intend to use for a guided research. 3. WWW is an information system where documents and other web resources are identified. 4. Research skills is NOT a vital part in the writing process. 5. Summary is a brief restatement of the most important parts of the story or text. 6. Non-linear text refers to traditional text that needs to be read from beginning to the end. 7 Graphs, Diagram and Charts are examples of Non-linear text. 8. Summarizing is when you tell what you have read in your own words. 9. A web browser is a software application for accessing information on the world wide web. 10. Listening strategies are helpful techniques for better comprehension of text listened to.​</h2><br />
+                        <p><strong>Answer:</strong></p><p>False</p><p>True</p><p>True</p><p>T"  "</p><p>T" "</p><p>T  "</p><p>T </p><p>T</p><p>T</p><p>True</p><br />
+                                            <h2 class="ez-toc-section" id="c-13-in-grade-10-jose-rizal-class-teacher-joan-brought-an-apple-and-orange-in-class-asher-activity-teacher-joan-ask-them-to-compare-and-contrast-these-fruits-what-diagram-wouldsuit-for-this-activity">
+                            24. C 13 In Grade 10 Jose Rizal Class, teacher Joan brought an apple and orange in class. Asher activity teacher Joan ask them to compare and contrast these fruits What diagram wouldsuit for this activity?a Concept Mapc. Venn DiagramSpider Webd. Pie Graph​</h2><br />
+                        <p><strong>Answer:</strong></p><p>C. po</p><p><strong>Explanation:</strong></p><p>Baka mali ako haha</p><br />
+                                            <h2 class="ez-toc-section" id="what-do-you-call-visual-and-graphic-display-that-depicts-the-relationship-between-facts-termsandor-ideas-within-a-learning-taska-linear-graphb-graphic-organizerc-venn-diagramd-picture-web">
+                            25. what do you. call visual and graphic display that depicts the relationship between facts, terms,and/or ideas within a learning task?a.linear graphb.graphic organizerc.venn diagramd.picture web​</h2><br />
+                        <p><strong>Answer:</strong></p><p>D.</p><p><strong>Explanation:</strong></p><p>Sana po makatulong ako</p><br />
+                                            <h2 class="ez-toc-section" id="cite-five-reasons-why-do-we-need-to-use-para-graph-tags-and-heading-tags-in-web-page%e2%80%8b">
+                            26. cite five reasons why do we need to use para graph tags and Heading tags in web page​</h2><br />
+                        <p><strong>Answer:</strong></p><p>to identify every Questions or Subjects.</p><br />
+                                            <h2 class="ez-toc-section" id="ibaloi-folkdances-to-kalinga-folkdancesa-clustering-graphb-fishbonec-webd-venn-diagrampasagot-explain-why-wlang-promise-yan-yung-sagot-nakoo%e2%80%8b">
+                            27. Ibaloi Folkdances to Kalinga Folkdancesa. Clustering graphb. Fishbonec. Webd. Venn DiagramPasagot explain why wlang *promise yan yung sagot* Nakoo​</h2><br />
+                        <p><strong>Answer:</strong></p><p>A. Clustering graph</p><p><strong>Explanation:</strong></p><p>I Hope It Help❤</p><p><strong>Answer:</strong></p><p>nasa dulo Ang sagut</p><p>[tex]\red{\rule{100pt}{10000000pt}}[/tex]</p><br />
+                                            <h2 class="ez-toc-section" id="assessment-direction-to-test-how-far-you-have-learned-in-this-lesson-read-and-answer-the-following-questions-below-choose-the-letter-of-the-correct-answer-write-your-answers-on-a-separate-sheet-of">
+                            28. Assessment Direction: To test how far you have learned in this lesson, read and answer the following questions below. Choose the letter of the correct answer. Write your answers on a separate sheet of paper. a C. maps D. to go up 1. Talking comes under which type of communication? A. dramatic B. non-verbal C. verbal D. written 2. This type of graph is useful for illustrating trends such as temperature changes during certain dates. A. bar graph B. line graph C. ple graph D. table 3. This kind of graph uses pictures that represents a certain number which is indicated in a legend, A. bar graph B. histogram D. pictograph 4. There were steadily increasing mentions of antidepressant drugs between 1993 and 2000. A. declined B. peak C. steeply 5. The following words are used to express the movements of the line except for one. A. considerable C. increase D. plunge 6. Which of the following is an example of visual communication tool? A. grunt B. oration C. traffic signs D. yell 7. This type of graph that illustrates the distribution of numeric data across categories. A. bar graph B. histogram C. pictograph D. pie graph 8. This allow you to organize your content in a web of rows and columns They are commonly used to make it easier for readers to digest large amounts of information, or when it is required to compare different types of data. A. chart B. diagram C. graph D. table B. grow MOST POPULATED COUNTRIES Population (in Hundred Millions) China india​</h2><br />
+                        <p><strong>Answer:</strong></p><p>1:D</p><p>2:D</p><p>3:D</p><p>4:B</p><p>5:A</p><p>6:C</p><p>7:B</p><p>8:B</p><p></p><p><strong>Explanation:</strong></p><p>Sana nakatulog sa inyo</p><br />
+                                            <h2 class="ez-toc-section" id="posterinfographicwebpagecomic-stripmultimodal1-it-refers-to-combination-of-two-or-more-communication-approaches-or-modes-2-it-presents-a-series-of-cartoon-drawings-that-tell-a-story-or-part-of-a-sto">
+                            29. POSTERINFOGRAPHICWEBPAGECOMIC STRIPMULTIMODAL1. It refers to combination of two or more communication approaches or modes.2. It presents a series of cartoon drawings that tell a story or part of a story.3. It is a single file on the World Wide Web, providing text, graphical images, etc.: it may have hypertext linked with other Web pages at a website.4. It is a visual presentation of information in the form of a chart, graph, or other image accompanied by minimal text, intended to give an easilyunderstood overview, often of a complex subject.5. It is a large printed picture, notice, or advertisement displayed in a public place.​</h2><br />
+                        <p><strong>Answer:</strong></p><p>1. multimodal </p><p>2. comic strip </p><p>3. web page</p><p>4. infographic</p><p>5. poster</p><br />
+                                            <h2 class="ez-toc-section" id="draw-a-check-mark-in-the-box-if-the-statement-is-correct-draw-a-circle-o-if-the-incorrect-1-a-graph-shows-relationships-between-data-and-are-intended-to-display-the-data-in-a-way-that-is-easy">
+                            30. Draw a check mark (/) in the box if the statement is correct. draw a circle (o) if the incorrect 1. A graph shows relationships between data and are intended to display the data in a way that is easy to understand andremember2. Bar graph shows comparison by means of bars of different sizes or heavy lines drawn to scale.3. Pictures are used to show data in a line graph.4. Pie graph is used to organize content in a web or rows and columns.5. Diagrams that representvisually the way topics and concepts are related and organize are called Informational MapsALTERNATE RESPONSE. Draw a check mark (/) in the box if the statement is correct. Draw a circle (O) if the statement is​</h2><br />
+                        <p><strong>Answer:</strong></p><p>1. ✔</p><p>2. O</p><p>3. ✔</p><p>4. ✔</p><p>5. O</p><p><strong>Explanation:</strong></p><p>Correct me if I'm wrong :)</p><br />
+                    
+                </div>
+                <div class="youtubeVideo" style="text-align: center">
+                    <h3>Video Terkait</h3>
+                    <iframe width="560" height="315"
+                        src="https://www.youtube.com/embed/?controls=0" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"allowfullscreen></iframe>
+                </div>
+                <footer class="entry-meta" aria-label="Meta postingan">
+                    <span class="cat-links"><span class="gp-icon icon-categories"><svg viewBox="0 0 512 512"
+                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em">
+                                <path
+                                    d="M0 112c0-26.51 21.49-48 48-48h110.014a48 48 0 0143.592 27.907l12.349 26.791A16 16 0 00228.486 128H464c26.51 0 48 21.49 48 48v224c0 26.51-21.49 48-48 48H48c-26.51 0-48-21.49-48-48V112z">
+                                </path>
+                            </svg></span><span class="screen-reader-text">Kategori </span>english</span>
+            </div>
+        </article>
+    </main>
+            </div>
+            <div class="widget-area sidebar is-right-sidebar" id="right-sidebar">
+                <div class="inside-right-sidebar">
+                    <aside id="categories-2" class="widget inner-padding widget_categories">
+                        <h2 class="widget-title">Topik</h2>
+                        <ul>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/alkalimetric-titration.html">Alkalimetric Titration</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/language-is-rule-governed.html">Language Is Rule Governed</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/how-do-you-express-your-attraction-toward-another-person.html">How Do You Express Your Attraction Toward Another Person</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/heograpiyang-pisikal.html">Heograpiyang Pisikal</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/conv-std-logic-vector.html">Conv std logic vector</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/barron-s-geometry.html">Barron s Geometry</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/synert.html">Synert</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/c-11-r-165.html">C 11 R 165</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/master-budget-problems-with-solutions-pdf.html">Master Budget Problems With Solutions Pdf</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/luke-s-diner-interior.html">Luke s Diner Interior</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/calmorin-s-formula.html">Calmorin s Formula</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/rizal-s-life-exile-trial-and-death.html">Rizal s Life Exile Trial And Death</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/jizz.html">Jizz</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/elements-of-discipline.html">Elements Of Discipline</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/physiologically-speaking.html">Physiologically Speaking</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/x-2-2x-4.html">X 2 2x 4</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/cramer-s-rule-economics.html">Cramer s Rule Economics</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/3-tennis-balls-in-a-cylinder.html">3 Tennis Balls In A Cylinder</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/chosen-program.html">Chosen Program</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/thou-shalt-not-interfere-with-other-people-s-computer-work.html">Thou Shalt Not Interfere With Other People s Computer Work</a>
+                                </li>
+                                                    </ul>
+
+                    </aside>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="site-footer">
+        <footer class="site-info" aria-label="Situs" itemtype="https://schema.org/WPFooter" itemscope>
+            <div class="inside-site-info grid-container">
+                <div class="copyright-bar">
+                    <span class="copyright">&copy; 2023 <a href="https://jneweducation.github.io"
+                            itemprop="url">QnA</a></span>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <a title="Gulirkan kembali ke puncak laman" aria-label="Gulirkan kembali ke puncak laman" rel="nofollow"
+        href="#" class="generate-back-to-top" data-scroll-speed="400" data-start-scroll="300">
+        <span class="gp-icon icon-arrow-up"><svg viewBox="0 0 330 512" aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill-rule="evenodd"
+                clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414">
+                <path
+                    d="M305.863 314.916c0 2.266-1.133 4.815-2.832 6.514l-14.157 14.163c-1.699 1.7-3.964 2.832-6.513 2.832-2.265 0-4.813-1.133-6.512-2.832L164.572 224.276 53.295 335.593c-1.699 1.7-4.247 2.832-6.512 2.832-2.265 0-4.814-1.133-6.513-2.832L26.113 321.43c-1.699-1.7-2.831-4.248-2.831-6.514s1.132-4.816 2.831-6.515L158.06 176.408c1.699-1.7 4.247-2.833 6.512-2.833 2.265 0 4.814 1.133 6.513 2.833L303.03 308.4c1.7 1.7 2.832 4.249 2.832 6.515z"
+                    fill-rule="nonzero" />
+            </svg></span>
+    </a>
+    <script id="generate-a11y">
+        ! function() {
+            "use strict";
+            if ("querySelector" in document && "addEventListener" in window) {
+                var e = document.body;
+                e.addEventListener("mousedown", function() {
+                    e.classList.add("using-mouse")
+                }), e.addEventListener("keydown", function() {
+                    e.classList.remove("using-mouse")
+                })
+            }
+        }();
+    </script>
+    <!--[if lte IE 11]>
+<script src='https://jneweducation.github.io/js/classList.min.js' ?ver=3.2.4' id='generate-classlist-js'></script>
+<![endif]-->
+    <script id='generate-menu-js-extra'>
+        var generatepressMenu = {
+            "toggleOpenedSubMenus": "1",
+            "openSubMenuLabel": "Buka Submenu",
+            "closeSubMenuLabel": "Tutup submenu"
+        };
+    </script>
+    <script src='https://jneweducation.github.io/js/menu.min.js' ?ver=3.2.4' id='generate-menu-js'></script>
+    <script id='generate-navigation-search-js-extra'>
+        var generatepressNavSearch = {
+            "open": "Buka Kolom Pencarian",
+            "close": "Tutup Kolom Pencarian"
+        };
+    </script>
+    <script src='https://jneweducation.github.io/js/navigation-search.min.js' ?ver=3.2.4' id='generate-navigation-search-js'></script>
+    <script id='generate-back-to-top-js-extra'>
+        var generatepressBackToTop = {
+            "smooth": "1"
+        };
+    </script>
+    <script src='https://jneweducation.github.io/js/back-to-top.min.js' ?ver=3.2.4' id='generate-back-to-top-js'></script>
+    <script type='text/javascript' src='//jd3j7g5z1fqs.com/96/78/7a/96787a1945876b1a9c10f79941441964.js'></script>
+<script type='text/javascript' src='//jd3j7g5z1fqs.com/b4/f1/ef/b4f1ef8dfe59b7fa68754094cf6c8e0e.js'></script>
+  <!-- Histats.com  START  (aync)-->
+<script type="text/javascript">var _Hasync= _Hasync|| [];
+_Hasync.push(['Histats.start', '1,4739059,4,0,0,0,00010000']);
+_Hasync.push(['Histats.fasi', '1']);
+_Hasync.push(['Histats.track_hits', '']);
+(function() {
+var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
+hs.src = ('//s10.histats.com/js15_as.js');
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+})();</script>
+<noscript><a href="/" target="_blank"><img  src="//sstatic1.histats.com/0.gif?4739059&101" alt="" border="0"></a></noscript>
+<!-- Histats.com  END  -->
+</body>
+
+</html>

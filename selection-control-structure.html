@@ -1,0 +1,1431 @@
+<!DOCTYPE html>
+<html lang="id" prefix="og: https://ogp.me/ns#">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="profile" href="https://gmpg.org/xfn/11">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Selection Control Structure - QnA</title>
+    <meta name="description" content="Selection Control Structure, Introduction to Selection Control Structure, , , , Norhidayah Mohamad Yatim, 2021-05-24T09:43:54.000000Z, 20, Control Structure: Binary Selection - YouTube, www.youtube.com, 1280 x 720, jpeg, , 20, selection-control-structure, QnA" />
+    <meta name="robots" content="index,follow" />
+    <meta property="og:locale" content="id_ID" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Selection Control Structure - QnA" />
+    <meta property="og:description" content="Selection Control Structure, Introduction to Selection Control Structure, , , , Norhidayah Mohamad Yatim, 2021-05-24T09:43:54.000000Z, 20, Control Structure: Binary Selection - YouTube, www.youtube.com, 1280 x 720, jpeg, , 20, selection-control-structure, QnA" />
+    <meta property="og:site_name" content="QnA" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Selection Control Structure - QnA" />
+    <meta name="twitter:description" content="Selection Control Structure, Introduction to Selection Control Structure, , , , Norhidayah Mohamad Yatim, 2021-05-24T09:43:54.000000Z, 20, Control Structure: Binary Selection - YouTube, www.youtube.com, 1280 x 720, jpeg, , 20, selection-control-structure, QnA" />
+    <link rel='stylesheet' id='generate-style-css' href='https://jneweducation.github.io/css/main.min.css'?ver=3.2.4'
+        media='all' />
+    <link rel='stylesheet' id='ez-toc-css' href='https://jneweducation.github.io/css/screen.min.css'?ver=2.0.40' media='all' />
+    <style id='generate-style-inline-css'>
+        body {
+            background-color: #f7f7f7;
+            color: #222222;
+        }
+
+        a {
+            color: #1e73be;
+        }
+
+        a:hover,
+        a:focus,
+        a:active {
+            color: #000000;
+        }
+
+        .wp-block-group__inner-container {
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .generate-back-to-top {
+            font-size: 20px;
+            border-radius: 3px;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            line-height: 40px;
+            width: 40px;
+            text-align: center;
+            z-index: 10;
+            transition: opacity 300ms ease-in-out;
+            opacity: 0.1;
+            transform: translateY(1000px);
+        }
+
+        .generate-back-to-top__show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .navigation-search {
+            position: absolute;
+            left: -99999px;
+            pointer-events: none;
+            visibility: hidden;
+            z-index: 20;
+            width: 100%;
+            top: 0;
+            transition: opacity 100ms ease-in-out;
+            opacity: 0;
+        }
+
+        .navigation-search.nav-search-active {
+            left: 0;
+            right: 0;
+            pointer-events: auto;
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .navigation-search input[type="search"] {
+            outline: 0;
+            border: 0;
+            vertical-align: bottom;
+            line-height: 1;
+            opacity: 0.9;
+            width: 100%;
+            z-index: 20;
+            border-radius: 0;
+            -webkit-appearance: none;
+            height: 60px;
+        }
+
+        .navigation-search input::-ms-clear {
+            display: none;
+            width: 0;
+            height: 0;
+        }
+
+        .navigation-search input::-ms-reveal {
+            display: none;
+            width: 0;
+            height: 0;
+        }
+
+        .navigation-search input::-webkit-search-decoration,
+        .navigation-search input::-webkit-search-cancel-button,
+        .navigation-search input::-webkit-search-results-button,
+        .navigation-search input::-webkit-search-results-decoration {
+            display: none;
+        }
+
+        .gen-sidebar-nav .navigation-search {
+            top: auto;
+            bottom: 0;
+        }
+
+        :root {
+            --contrast: #222222;
+            --contrast-2: #575760;
+            --contrast-3: #b2b2be;
+            --base: #f0f0f0;
+            --base-2: #f7f8f9;
+            --base-3: #ffffff;
+            --accent: #1e73be;
+        }
+
+        .has-contrast-color {
+            color: var(--contrast);
+        }
+
+        .has-contrast-background-color {
+            background-color: var(--contrast);
+        }
+
+        .has-contrast-2-color {
+            color: var(--contrast-2);
+        }
+
+        .has-contrast-2-background-color {
+            background-color: var(--contrast-2);
+        }
+
+        .has-contrast-3-color {
+            color: var(--contrast-3);
+        }
+
+        .has-contrast-3-background-color {
+            background-color: var(--contrast-3);
+        }
+
+        .has-base-color {
+            color: var(--base);
+        }
+
+        .has-base-background-color {
+            background-color: var(--base);
+        }
+
+        .has-base-2-color {
+            color: var(--base-2);
+        }
+
+        .has-base-2-background-color {
+            background-color: var(--base-2);
+        }
+
+        .has-base-3-color {
+            color: var(--base-3);
+        }
+
+        .has-base-3-background-color {
+            background-color: var(--base-3);
+        }
+
+        .has-accent-color {
+            color: var(--accent);
+        }
+
+        .has-accent-background-color {
+            background-color: var(--accent);
+        }
+
+        body,
+        button,
+        input,
+        select,
+        textarea {
+            font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        }
+
+        body {
+            line-height: 1.5;
+        }
+
+        .entry-content>[class*="wp-block-"]:not(:last-child) {
+            margin-bottom: 1.5em;
+        }
+
+        .main-navigation .main-nav ul ul li a {
+            font-size: 14px;
+        }
+
+        .sidebar .widget,
+        .footer-widgets .widget {
+            font-size: 17px;
+        }
+
+        @media (max-width:768px) {
+            h1 {
+                font-size: 31px;
+            }
+
+            h2 {
+                font-size: 27px;
+            }
+
+            h3 {
+                font-size: 24px;
+            }
+
+            h4 {
+                font-size: 22px;
+            }
+
+            h5 {
+                font-size: 19px;
+            }
+        }
+
+        .top-bar {
+            background-color: #636363;
+            color: #ffffff;
+        }
+
+        .top-bar a {
+            color: #ffffff;
+        }
+
+        .top-bar a:hover {
+            color: #303030;
+        }
+
+        .site-header {
+            background-color: #ffffff;
+        }
+
+        .main-title a,
+        .main-title a:hover {
+            color: #222222;
+        }
+
+        .site-description {
+            color: #757575;
+        }
+
+        .main-navigation,
+        .main-navigation ul ul {
+            background-color: #ed4250;
+        }
+
+        .main-navigation .main-nav ul li a,
+        .main-navigation .menu-toggle,
+        .main-navigation .menu-bar-items {
+            color: #ffffff;
+        }
+
+        .main-navigation .main-nav ul li:not([class*="current-menu-"]):hover>a,
+        .main-navigation .main-nav ul li:not([class*="current-menu-"]):focus>a,
+        .main-navigation .main-nav ul li.sfHover:not([class*="current-menu-"])>a,
+        .main-navigation .menu-bar-item:hover>a,
+        .main-navigation .menu-bar-item.sfHover>a {
+            color: #ffffff;
+            background-color: #c42f2f;
+        }
+
+        button.menu-toggle:hover,
+        button.menu-toggle:focus {
+            color: #ffffff;
+        }
+
+        .main-navigation .main-nav ul li[class*="current-menu-"]>a {
+            color: #ffffff;
+            background-color: #c42f2f;
+        }
+
+        .navigation-search input[type="search"],
+        .navigation-search input[type="search"]:active,
+        .navigation-search input[type="search"]:focus,
+        .main-navigation .main-nav ul li.search-item.active>a,
+        .main-navigation .menu-bar-items .search-item.active>a {
+            color: #ffffff;
+            background-color: #c42f2f;
+        }
+
+        .main-navigation ul ul {
+            background-color: #c42f2f;
+        }
+
+        .main-navigation .main-nav ul ul li a {
+            color: #ffffff;
+        }
+
+        .main-navigation .main-nav ul ul li:not([class*="current-menu-"]):hover>a,
+        .main-navigation .main-nav ul ul li:not([class*="current-menu-"]):focus>a,
+        .main-navigation .main-nav ul ul li.sfHover:not([class*="current-menu-"])>a {
+            color: #fcd9d6;
+            background-color: #c42f2f;
+        }
+
+        .main-navigation .main-nav ul ul li[class*="current-menu-"]>a {
+            color: #fcd9d6;
+            background-color: #c42f2f;
+        }
+
+        .separate-containers .inside-article,
+        .separate-containers .comments-area,
+        .separate-containers .page-header,
+        .one-container .container,
+        .separate-containers .paging-navigation,
+        .inside-page-header {
+            background-color: #ffffff;
+        }
+
+        .entry-title a {
+            color: #222222;
+        }
+
+        .entry-title a:hover {
+            color: #55555e;
+        }
+
+        .entry-meta {
+            color: #595959;
+        }
+
+        .sidebar .widget {
+            background-color: #ffffff;
+        }
+
+        .footer-widgets {
+            background-color: #ffffff;
+        }
+
+        .footer-widgets .widget-title {
+            color: #000000;
+        }
+
+        .site-info {
+            color: #ffffff;
+            background-color: #55555e;
+        }
+
+        .site-info a {
+            color: #ffffff;
+        }
+
+        .site-info a:hover {
+            color: #d3d3d3;
+        }
+
+        .footer-bar .widget_nav_menu .current-menu-item a {
+            color: #d3d3d3;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="url"],
+        input[type="password"],
+        input[type="search"],
+        input[type="tel"],
+        input[type="number"],
+        textarea,
+        select {
+            color: #666666;
+            background-color: #fafafa;
+            border-color: #cccccc;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="url"]:focus,
+        input[type="password"]:focus,
+        input[type="search"]:focus,
+        input[type="tel"]:focus,
+        input[type="number"]:focus,
+        textarea:focus,
+        select:focus {
+            color: #666666;
+            background-color: #ffffff;
+            border-color: #bfbfbf;
+        }
+
+        button,
+        html input[type="button"],
+        input[type="reset"],
+        input[type="submit"],
+        a.button,
+        a.wp-block-button__link:not(.has-background) {
+            color: #ffffff;
+            background-color: #55555e;
+        }
+
+        button:hover,
+        html input[type="button"]:hover,
+        input[type="reset"]:hover,
+        input[type="submit"]:hover,
+        a.button:hover,
+        button:focus,
+        html input[type="button"]:focus,
+        input[type="reset"]:focus,
+        input[type="submit"]:focus,
+        a.button:focus,
+        a.wp-block-button__link:not(.has-background):active,
+        a.wp-block-button__link:not(.has-background):focus,
+        a.wp-block-button__link:not(.has-background):hover {
+            color: #ffffff;
+            background-color: #3f4047;
+        }
+
+        a.generate-back-to-top {
+            background-color: rgba(0, 0, 0, 0.4);
+            color: #ffffff;
+        }
+
+        a.generate-back-to-top:hover,
+        a.generate-back-to-top:focus {
+            background-color: rgba(0, 0, 0, 0.6);
+            color: #ffffff;
+        }
+
+        @media (max-width:768px) {
+
+            .main-navigation .menu-bar-item:hover>a,
+            .main-navigation .menu-bar-item.sfHover>a {
+                background: none;
+                color: #ffffff;
+            }
+        }
+
+        .nav-below-header .main-navigation .inside-navigation.grid-container,
+        .nav-above-header .main-navigation .inside-navigation.grid-container {
+            padding: 0px 20px 0px 20px;
+        }
+
+        .site-main .wp-block-group__inner-container {
+            padding: 40px;
+        }
+
+        .separate-containers .paging-navigation {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .entry-content .alignwide,
+        body:not(.no-sidebar) .entry-content .alignfull {
+            margin-left: -40px;
+            width: calc(100% + 80px);
+            max-width: calc(100% + 80px);
+        }
+
+        .rtl .menu-item-has-children .dropdown-menu-toggle {
+            padding-left: 20px;
+        }
+
+        .rtl .main-navigation .main-nav ul li.menu-item-has-children>a {
+            padding-right: 20px;
+        }
+
+        @media (max-width:768px) {
+
+            .separate-containers .inside-article,
+            .separate-containers .comments-area,
+            .separate-containers .page-header,
+            .separate-containers .paging-navigation,
+            .one-container .site-content,
+            .inside-page-header {
+                padding: 30px;
+            }
+
+            .site-main .wp-block-group__inner-container {
+                padding: 30px;
+            }
+
+            .inside-top-bar {
+                padding-right: 30px;
+                padding-left: 30px;
+            }
+
+            .inside-header {
+                padding-right: 30px;
+                padding-left: 30px;
+            }
+
+            .widget-area .widget {
+                padding-top: 30px;
+                padding-right: 30px;
+                padding-bottom: 30px;
+                padding-left: 30px;
+            }
+
+            .footer-widgets-container {
+                padding-top: 30px;
+                padding-right: 30px;
+                padding-bottom: 30px;
+                padding-left: 30px;
+            }
+
+            .inside-site-info {
+                padding-right: 30px;
+                padding-left: 30px;
+            }
+
+            .entry-content .alignwide,
+            body:not(.no-sidebar) .entry-content .alignfull {
+                margin-left: -30px;
+                width: calc(100% + 60px);
+                max-width: calc(100% + 60px);
+            }
+
+            .one-container .site-main .paging-navigation {
+                margin-bottom: 20px;
+            }
+        }
+
+        /* End cached CSS */
+        .is-right-sidebar {
+            width: 30%;
+        }
+
+        .is-left-sidebar {
+            width: 30%;
+        }
+
+        .site-content .content-area {
+            width: 70%;
+        }
+
+        @media (max-width:768px) {
+
+            .main-navigation .menu-toggle,
+            .sidebar-nav-mobile:not(#sticky-placeholder) {
+                display: block;
+            }
+
+            .main-navigation ul,
+            .gen-sidebar-nav,
+            .main-navigation:not(.slideout-navigation):not(.toggled) .main-nav>ul,
+            .has-inline-mobile-toggle #site-navigation .inside-navigation>*:not(.navigation-search):not(.main-nav) {
+                display: none;
+            }
+
+            .nav-align-right .inside-navigation,
+            .nav-align-center .inside-navigation {
+                justify-content: space-between;
+            }
+        }
+    </style>
+    <link rel="icon" href="https://jneweducation.github.io/img/cropped-soalbelajar-32x32.png" sizes="32x32" />
+    <link rel="icon" href="https://jneweducation.github.io/img/cropped-soalbelajar-192x192.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="https://jneweducation.github.io/img/cropped-soalbelajar-180x180.png" />
+    <meta name="msapplication-TileImage" content="https://jneweducation.github.io/img/cropped-soalbelajar-270x270.png" />
+</head>
+
+<body
+    class="home blog wp-custom-logo wp-embed-responsive right-sidebar nav-above-header separate-containers nav-search-enabled nav-aligned-center header-aligned-center dropdown-hover"
+    itemtype="https://schema.org/Blog" itemscope>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-dark-grayscale">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 0.49803921568627" />
+                    <feFuncG type="table" tableValues="0 0.49803921568627" />
+                    <feFuncB type="table" tableValues="0 0.49803921568627" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-grayscale">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 1" />
+                    <feFuncG type="table" tableValues="0 1" />
+                    <feFuncB type="table" tableValues="0 1" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-purple-yellow">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.54901960784314 0.98823529411765" />
+                    <feFuncG type="table" tableValues="0 1" />
+                    <feFuncB type="table" tableValues="0.71764705882353 0.25490196078431" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-blue-red">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 1" />
+                    <feFuncG type="table" tableValues="0 0.27843137254902" />
+                    <feFuncB type="table" tableValues="0.5921568627451 0.27843137254902" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-midnight">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 0" />
+                    <feFuncG type="table" tableValues="0 0.64705882352941" />
+                    <feFuncB type="table" tableValues="0 1" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-magenta-yellow">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.78039215686275 1" />
+                    <feFuncG type="table" tableValues="0 0.94901960784314" />
+                    <feFuncB type="table" tableValues="0.35294117647059 0.47058823529412" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-purple-green">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.65098039215686 0.40392156862745" />
+                    <feFuncG type="table" tableValues="0 1" />
+                    <feFuncB type="table" tableValues="0.44705882352941 0.4" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-blue-orange">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.098039215686275 1" />
+                    <feFuncG type="table" tableValues="0 0.66274509803922" />
+                    <feFuncB type="table" tableValues="0.84705882352941 0.41960784313725" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><a class="screen-reader-text skip-link" href="#content" title="Langsung ke isi">Langsung ke isi</a>
+    <nav class="main-navigation nav-align-center has-menu-bar-items sub-menu-right" id="site-navigation"
+        aria-label="Utama" itemtype="https://schema.org/SiteNavigationElement" itemscope>
+        <div class="inside-navigation grid-container">
+            <form method="get" class="search-form navigation-search" action="/">
+                <input type="search" class="search-field" value="" name="q" title="Cari" />
+            </form> <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+                <span class="gp-icon icon-menu-bars"><svg viewBox="0 0 512 512" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" width="1em" height="1em">
+                        <path
+                            d="M0 96c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24zm0 160c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24zm0 160c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24z" />
+                    </svg><svg viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                        width="1em" height="1em">
+                        <path
+                            d="M71.029 71.029c9.373-9.372 24.569-9.372 33.942 0L256 222.059l151.029-151.03c9.373-9.372 24.569-9.372 33.942 0 9.372 9.373 9.372 24.569 0 33.942L289.941 256l151.03 151.029c9.372 9.373 9.372 24.569 0 33.942-9.373 9.372-24.569 9.372-33.942 0L256 289.941l-151.029 151.03c-9.373 9.372-24.569 9.372-33.942 0-9.372-9.373-9.372-24.569 0-33.942L222.059 256 71.029 104.971c-9.372-9.373-9.372-24.569 0-33.942z" />
+                    </svg></span><span class="mobile-menu">Menu</span> </button>
+            <div id="primary-menu" class="main-nav">
+                <ul id="menu-soal-belajar" class=" menu sf-menu">
+                    <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1"><a
+                            href="https://jneweducation.github.io">Home</a></li>
+                </ul>
+                </ul>
+            </div>
+            <div class="menu-bar-items"><span class="menu-bar-item search-item"><a aria-label="Buka Kolom Pencarian"
+                        href="#"><span class="gp-icon icon-search"><svg viewBox="0 0 512 512"
+                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M208 48c-88.366 0-160 71.634-160 160s71.634 160 160 160 160-71.634 160-160S296.366 48 208 48zM0 208C0 93.125 93.125 0 208 0s208 93.125 208 208c0 48.741-16.765 93.566-44.843 129.024l133.826 134.018c9.366 9.379 9.355 24.575-.025 33.941-9.379 9.366-24.575 9.355-33.941-.025L337.238 370.987C301.747 399.167 256.839 416 208 416 93.125 416 0 322.875 0 208z" />
+                            </svg><svg viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                width="1em" height="1em">
+                                <path
+                                    d="M71.029 71.029c9.373-9.372 24.569-9.372 33.942 0L256 222.059l151.029-151.03c9.373-9.372 24.569-9.372 33.942 0 9.372 9.373 9.372 24.569 0 33.942L289.941 256l151.03 151.029c9.372 9.373 9.372 24.569 0 33.942-9.373 9.372-24.569 9.372-33.942 0L256 289.941l-151.029 151.03c-9.373 9.372-24.569 9.372-33.942 0-9.372-9.373-9.372-24.569 0-33.942L222.059 256 71.029 104.971c-9.372-9.373-9.372-24.569 0-33.942z" />
+                            </svg></span></a></span></div>
+        </div>
+    </nav>
+    <header class="site-header grid-container" id="masthead" aria-label="Situs"
+        itemtype="https://schema.org/WPHeader" itemscope>
+        <div class="inside-header grid-container">
+            <h1 class="site-logo">
+                <a href="https://jneweducation.github.io" rel="home"> QnA</a>
+            </h1>
+        </div>
+    </header>
+
+    <div class="site grid-container container hfeed" id="page">
+        <div class="site-content" id="content">
+            <div class="content-area" id="primary">
+                    <main class="site-main" id="main">
+        <article id="post-1327" class="post-1327 post type-post status-publish format-standard hentry category-info"
+            itemtype="https://schema.org/CreativeWork" itemscope="">
+            <div class="inside-article">
+                <header class="entry-header" aria-label="Konten">
+                    <h1 class="entry-title" itemprop="headline">Selection Control Structure</h1>
+                    <div class="entry-meta">
+                       <span
+                            class="byline">oleh <span class="author vcard" itemprop="author"
+                                itemtype="https://schema.org/Person" itemscope=""><span class="author-name"
+                                    itemprop="name">chxllogaming</span></span></span>
+                    </div>
+                </header>
+                <div class="entry-content" itemprop="text">
+                    <div style="text-align: center">
+                        <img src="https://tse1.mm.bing.net/th?q=Selection+Control+Structure" alt="Selection Control Structure">
+                    </div>
+                    <p></p>
+                    <p>This control structure shows an action sequentially followed by another action.a. Repetition control structureb. Sequence control structurec. Selection control structure</p>
+                    <div id="ez-toc-container"
+                        class="ez-toc-v2_0_40 counter-hierarchy ez-toc-counter ez-toc-light-blue ez-toc-container-direction">
+                        <div class="ez-toc-title-container">
+                            <p class="ez-toc-title">Daftar Isi</p>
+                            <span class="ez-toc-title-toggle"><a href="#"
+                                    class="ez-toc-pull-right ez-toc-btn ez-toc-btn-xs ez-toc-btn-default ez-toc-toggle"
+                                    area-label="ez-toc-toggle-icon-1"><label for="item-63b392361c4a0"
+                                        aria-label="Table of Content"><span
+                                            style="display: flex;align-items: center;width: 35px;height: 30px;justify-content: center;direction:ltr;"><svg
+                                                style="fill: #999;color:#999" xmlns="http://www.w3.org/2000/svg"
+                                                class="list-377408" width="20px" height="20px" viewBox="0 0 24 24"
+                                                fill="none">
+                                                <path
+                                                    d="M6 6H4v2h2V6zm14 0H8v2h12V6zM4 11h2v2H4v-2zm16 0H8v2h12v-2zM4 16h2v2H4v-2zm16 0H8v2h12v-2z"
+                                                    fill="currentColor"></path>
+                                            </svg><svg style="fill: #999;color:#999" class="arrow-unsorted-368013"
+                                                xmlns="http://www.w3.org/2000/svg" width="10px" height="10px"
+                                                viewBox="0 0 24 24" version="1.2" baseProfile="tiny">
+                                                <path
+                                                    d="M18.2 9.3l-6.2-6.3-6.2 6.3c-.2.2-.3.4-.3.7s.1.5.3.7c.2.2.4.3.7.3h11c.3 0 .5-.1.7-.3.2-.2.3-.5.3-.7s-.1-.5-.3-.7zM5.8 14.7l6.2 6.3 6.2-6.3c.2-.2.3-.5.3-.7s-.1-.5-.3-.7c-.2-.2-.4-.3-.7-.3h-11c-.3 0-.5.1-.7.3-.2.2-.3.5-.3.7s.1.5.3.7z">
+                                                </path>
+                                            </svg></span></label><input type="checkbox" id="item-63b392361c4a0"></a></span>
+                        </div>
+                        <nav>
+                            <ul class="ez-toc-list ez-toc-list-level-1 ">
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#this-control-structure-shows-an-action-sequentially-followed-by-another-action-a-repetition-control-structureb-sequence-control-structurec-selection-control-structure">1.
+                                            This control structure shows an action sequentially followed by another action.a. Repetition control structureb. Sequence control structurec. Selection control structure</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#answer-the-following-questions-what-is-the-sequence-control-structure-what-is-the-purpose-of-the-selection-structure-how-can-the-repetition-control-structure-be-used-%e2%80%8b">2.
+                                            Answer the following questions :What is the sequence control structure ?What is the purpose of the selection structure ?How can the repetition control structure be used ?​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#1-what-are-the-three-control-structures2-what-are-control-structures3-what-is-sequence-4-what-is-condition-selection5-what-is-repectitionitertion-loops%e2%80%8b">3.
+                                            1, what are the three control structures2, what are control structures3, what is sequence 4, what is condition selection5, what is repectition/itertion (loops)​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#3-ways-to-lessen-the-occurrence-of-landslides-1-adopt-selective-cutting-logging-companies-must-allow-old-trees-to-remain-this-method-cuts-down-mature-or-inferior-kind-of-trees-to-encourage-the-gro">4.
+                                            3. Ways to Lessen the Occurrence of Landslides 1. Adopt selective cutting- logging companies must allow old trees to remain. This method cuts down mature or inferior kind of trees to encourage the growth of the remaining trees in the forest. 2. Do alley-cropping instead of slash-and-burn method. Alley-cropping is a method of simultaneously growing an agricultural crop with a tree crop, retaining soil fertility. Plant more trees with strong root structures that hold the soil together. 4. The government must set mining rules based on the evaluation of slope stability and landslide threat in the mining areas. Mining companies must follow these rules. In case of disobedience, temporary or permanent suspension of mining operations must be implemented. 5. Avoid construction on steep slopes. As this is not entirely possible, evaluation on the area for land development should be performed by engineers and geologists 6. Construct proper drainage away from the slope to control water accuratation and to avoid slope instability. 7. Check broken or leaking pipes during because oversaturation or oil with water can trigger landslides. ​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#directions-read-the-paragraph-below-and-identify-the-correct-word-from-the-boxthat-fits-in-the-given-sentences-write-your-answer-on-a-separate-sheet-select-youranswers-from-the-word-pool-below-nucl">5.
+                                            Directions: Read the paragraph below and identify the correct word from the boxthat fits in the given sentences. Write your answer on a separate sheet. Select youranswers from the word pool below.NucleusEukaryotesCell wallCytoplasm NucleoidEukaryotic CellPlasma MembraneProkaryotic Cell ProkaryotesTransport of substancesPproduce energyprovide support and structureIn your science class, your teacher asked you to identify the cells in thepictures posted on the board. You observed that picture 1 has no defined nucleusand you labeled it as (1)_For picture 2 the nucleus is veryvisible then this type of a cell is (2)Your teacher continuedto deliver her lesson. She presented that a cell has three basic parts.The (3),encloses the cell and separates the insideorganelles from the outside. she explained. Your classmate said that (4)are jelly-like substances where all other cell parts are located.You raised your hand and told the class that (5)the most easilyseen part it controls the activities of the other parts of the cell. Xione added thatmulticellular organisms whose cells have nucleus are called (6)On the other hand, Ysah continued to discuss that a unicellular organism whose cellhas no defined nucleus but has a nucleoid region is called (7)Finally your teacher emphasized that cells are the building blocks of life andare considered as basic structural and functional unit of life. Because basically theyperform all life processes that enable all organisms to grow and develop. Among thegeneral functions of cells are: (8)(9)and (10)​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#review-of-the-previous-lesson-direction-read-and-analyze-each-statement-below-write-true-if-the-statement-is-con-set-while-false-if-the-statement-is-incorrect-write-your-answer-on-the-blank-space-p">6.
+                                            Review of the Previous lesson Direction: Read and analyze each statement below. Write TRUE if the statement is con set while FALSE if the statement is incorrect. Write your answer on the blank space provided be ore the number. (10 pts.) 1. Area refers to the structured pieces of and combined. 2. The number of day/s the work completed by 1 person is called MOND, Y. 3. The process of developing the seed into a young plant is termed Germination. 4. Fertilizers refers to any material added to the soil to provide support of the needed nutrient. 5. Principal refers to the amount you owed. 6. Labor refers to the work performed by farm workers in exchange for salary, 7. Insecticides are considered control measures to kill bacteria in most plints. 8. Mostly harvested quality crops are due to selected quality seeds. 9. Graph is a drawing in which the relationship between two or more itens of information shown in a symbolic way. 10. Volume refers to the content of a body or objects.​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#1-which-two-plant-cell-structures-are-respensible-for-storing-energy-from-sunlight-and-later-releasing-it-for-cells-to-use-a-chloroplast-and-nucleus-e-chloroplast-and-mitochondria-mitochondria-and-ce">7.
+                                            1. Which two plant cell structures are respensible for storing energy from sunlight and later releasing it for cells to use a chloroplast and nucleus e chloroplast and mitochondria mitochondria and cell wall d. nucleus and cell wall 2. Which we plant cell structures work together, like security guards, for the cell? Cytoplasm and Nucleus c. Nucleus and Oxygen h Cell Membrane and Cell Wall d. Oxygen and Cell Membrane 3. This seragraph (picture taken through a microscope) probably shows what type of cell? a animal o plant d. bacteria 4. What features do plant cells have that animal cells lack? a nucleus and cell membrane c. centrosomes and centrioles Deell wall and chloroplasts d. cell membrane and chloroplast 5. Which one of the following correctly matches the organelle with its function? a cell wall: produces energy for the cell h nucleus: control center of the cell c. cell membrane: gives rigid structure to the plant cell d. chloroplasts: colorless, jelly-like substance that supports the other organelles 6. Which organelle functions as the "powerhouse of the cell by producing the energy necessary for all cell functions to occur? a. cytoplasm c. nucleus ribosomes d. mitochondria 7. Select the statement that best describes the function of the cell wall. a. It gives shape to plant cells. b. It produces food from sunlight, c. Its jelly-like fluid surrounds the nucleus and most of the cell's internal parts. d. It contains the cell's nuclear material. S. What is a function of the nucleus of an animal cell? a. It is the place where energy is produced. b. It stores the genetic information, the DNA (chromosomes). c. It defends the cell from infections, d. It captures sunlight to produce food. 9. Select a statement that best completes the phrase below. In a plant cell... a. there is one large vacuole that stores water and helps hold up the plant. b. the vacuoles enter and leave through the cell membrane. c. there are lots of small vacuoles. d. there are no vacuoles.​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#read-each-paragraph-then-select-the-answer-that-best-describes-the-author%e2%80%99s-purpose-and-perspectives-in-writing-until-the-1960s-people-in-the-united-states-did-not-particularly-pay-attenti">8.
+                                            Read each paragraph. Then select the answer that best describes the author’s purpose and perspectives in writing.  Until the 1960s, people in the United States did not particularly pay attention to the natural environment. Rather, Americans were more focused on the economy. However, with an increase in oil spills, polluting factories and power plants, and the loss of wilderness, suddenly  people  realizes they shared  common values.  They called for a national  organization  to protect  the environment. Accordingly, on April 22, 1970, the first Earth DAY, 20 MILLION Americans  took to the streets, parks  and auditoriums  to demonstrate  for a healthy, sustainable  environment. Thousands  of colleges  and universities  organized protests against  the  deterioration   of the environment.  The first Earth Day led to the creation of the United States  Environmental  Protection Agency (EPA)  and the passage of the Clean Air, Clean Water, and Endangered   Species Acts. President Richard Nixon and Congress  worked together  to established the EPA in response  to the growing public demand  for cleaner water, air and land. Prior to the establishment of the EPA, the  national government was not structured to make  coordinated attack on the pollutants, which harm  human  health  and degrade  the environment. The EPA  was  assigned  the daunting  task  of repairing  the damage already done  to the natural environment.  Question:  What is the author’s purpose in paragraph 2?  Select one: a. to propose the need for further actions by the government b. to describe how the government became more involved in cleaning the environment c. to discuss public demonstration that demanded a cleaner environment d. to suggest that the government needed to control polluting factories and power plants</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#which-of-the-following-applies-to-the-matrix-structureselect-onea-it-attempts-to-merge-the-benefits-of-decentralization-with-co-ordination-across-all-areas-of-the-businessb-it-is-found-in-companies">9.
+                                            Which of the following applies to the matrix structure?Select one:a.It attempts to merge the benefits of decentralization with co-ordination across all areas of the businessb.It is found in companies offering a diverse range of products in a home marketc.It allows the owner to control all aspects of the businessd.It is found in large industrial conglomerates​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#spot-the-thesis-statement-in-the-following-passage-in-the-1940s-george-orwell-warned-%e2%80%9cwho-controls-the-past-controls-the-future-who-controls-the-present-controls-the-past%e2%80%9d-orwell">10.
+                                            Spot the thesis statement in the following passage:  In the 1940s, George Orwell warned “Who controls the past controls the future. Who controls the present controls the past” (Orwell 30). In the 1990s a band called Rage Against the Machine, the name itself referring to a people’s movement to fight against control (corporation, government or otherwise) used this mantra in their song “Testify,” a warning to not silently endure oppression. This warning is not only relevant to the 20th century, but has been applicable since human beings started forming structures of power to control and oppress one another. This can vividly be seen during the times of slavery in the United States when blacks were enslaved for two and a half centuries. In Frederick Douglass’s novel Narrative of the Life of Frederick Douglass, an American Slave, Douglass reveals how this long and brutal control of human beings was partly accomplished through control over literacy. The control and limitations over reading and writing during slavery sought to make slaves like Douglass ignorant, powerless, and therefore more easily controlled, and this control over literacy and education is still happening in the world today.    --Sample essay on Frederick Douglass’s Narrative of the Life of Frederick Douglass, an American Slave  Select one: a. The control and limitations over reading and writing during slavery sought to make slaves like Douglass ignorant, powerless, and therefore more easily controlled, and this control over literacy and education is still happening in the world today.  b. In the 1990s a band called Rage Against the Machine, the name itself referring to a people’s movement to fight against control (corporation, government or otherwise) used this mantra in their song “Testify,” a warning to not silently endure oppression.  c. In Frederick Douglass’s novel Narrative of the Life of Frederick Douglass, an American Slave, Douglass reveals how this long and brutal control of human beings was partly accomplished through control over literacy. d. In the 1940s, George Orwell warned “Who controls the past controls the future. Who controls the present controls the past” (Orwell 30).</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#14-which-of-the-following-is-not-included-on-the-network-devicea-modemsc-routersb-keyboardsd-network-connections15-it-is-an-electronic-device-for-storing-and-processing-data-typically-in-binar">11.
+                                            14. Which of the following is NOT included on the network device?A. ModemsC. RoutersB. KeyboardsD. Network Connections15. It is an electronic device for storing and processing data, typically in binary form. According toinstructions given to it in a variable program.A. Operating systemC. ComputerB. NetworkD. Windows16. It is a boot configuration utility that allows you to set the programs that will run at startup and toedit the files configurationA. Microsoft system ConfigurationC. Windows ConfigurationB. System Configuration UtilityD. Network Configuration17. It starts windows with basic services and drivers and the other services and (drivers only) startupprograms thatyouselect.A. Normal startupC. selective settingsB. Diagnostic startupD. General startup18. Which among the following is not included on the five functional tabs of system Configuration utility?A. GeneralC. servicesB. BootD. error19. It is the default tab in the system configuration and shows how the computer will start, by defaultnormal startup should be selected.A. GeneralC. BootB. TabD, services20. It allows you to enable or disable any of the Microsoft Windows services or other program servicesrunning on the computer.A. GeneralC. BootB. TabD. services21. It provides a convenient list of diagnostic tools and other advanced tools that you can run.A. GeneralC. ToolsB. BootsD. services22. It has a hierarchical structure like the directions on your hard disk.A. RegistryC. Control Panel AppletsD. Register Edit​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#the-1_________-lelc-is-the-basic-unit-of-all-living-organisms-each-of-this-unit-is-structurally-composed-of-a2____________-cluesunwhich-controls-all-the-cell%e2%80%99s-activities-a-3______">12.
+                                            The (1)_________ (LELC) is the basic unit of all living organisms. Each of this unit is structurally composed of a(2)____________ (CLUESUN)which controls all the cell’s activities, a (3)_________________ (MSOTPASYCL)that containsorganelles, and a selective (4)____________________ (LELC EARENBMM)that regulates the flow of materials into and outof the cell. Not all substances can pass through the membrane, this property of the plasma membrane is called(5)___________________________ (TIVECELSE MEAPERBLITYI).The cell membrane is also called the (6) ________(MASALP) membrane and is made of a bilayer of (7)_______________(HIDPHPOLIOSPS). The membrane has a hydrophilic (8)____________ (DAEH) and two hydrophobic (9)_________(SLTIA). The head of a phospholipid is made of an alcohol and a (10)______________ (ATPHPHOSE) group,while the tails are chains of (11)____________________ (TTFAY CIADS). Embedded in the phospholipid bilayer are(12)________________(IEGRNTAL) proteins, while (13)______________ (RIPERAPHEL) proteins are only in one side.Some of themembrane proteins have (14)______________________ (COHADRATRBYE) receptors to help cells in recognizing eachother and certain molecules. (15)___________________ (CESTEHOLROL) molecules are often found stuck betweenphospholipid molecules in the plasma membrane. They have a role in maintaining the fluidity of the membrane​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#direction-choose-the-best-letter-of-your-answer-that-best-describes-to-each-statement-a-background-of-the-study-c-significance-of-the-study-b-statement-of-the-problemd-scope-and-delimitation-of">13.
+                                            Direction: Choose the best letter of your answer that best describes to each statement. A. Background of the Study C. Significance of the Study B. Statement of the ProblemD. Scope and Delimitation of the Study1. It indicates the reasonable area of study. 2. The nature of subjects treated, their number and treatments received should be stated specifically. 3. It should be defined in terms of the data that can be obtained. 4. It refers to a brief statement of the of the origin of the problem. 5. It should be stated precisely, accurately and clearly. 6. It justifies the study itself. 7. It indicates a statement on relevance to felt needs. 8. It contains an account describing the circumstances which suggested the research. 9. It can be stated in the declarative or interrogative form. 10. It may include a justification of the selection or choice of the study.  II. Write the word Yes if the statement is true and No if the statement is false. 1. In research, concept is a general idea or information needs to narrow down. 2. In research, the data is usually gathered using structured research instruments. 3 The action research essential aim is to push/expand the frontiers of knowledge. 4. In a quantitative research, all kinds of variables are manipulative in nature. 5. A research is empirical in nature, if the step-by-step procedures is followed. 6. A variable is continuous if it is with group of more than two (2) classes or variations. 7. In a typical research stage, selecting a problem is the first thing needs to consider. 8. In research, independent variable is a factor over which the researcher has control. 9. Data describes as the attributes that takes on different values. 10. In research, the dependent variable is the influential or the predictor factor. ​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#in-the-1940s-george-orwell-warned-%e2%80%9cwho-controls-the-past-controls-the-future-who-controls-the-present-controls-the-past%e2%80%9d-orwell-30-in-the-1990s-a-band-called-rage-against-the-mach">14.
+                                            In the 1940s, George Orwell warned “Who controls the past controls the future. Who controls the present controls the past” (Orwell 30). In the 1990s a band called Rage Against the Machine, the name itself referring to a people’s movement to fight against control (corporation, government or otherwise) used this mantra in their song “Testify,” a warning to not silently endure oppression. This warning is not only relevant to the 20th century, but has been applicable since human beings started forming structures of power to control and oppress one another. This can vividly be seen during the times of slavery in the United States when blacks were enslaved for two and a half centuries. In Frederick Douglass’s novel Narrative of the Life of Frederick Douglass, an American Slave, Douglass reveals how this long and brutal control of human beings was partly accomplished through control over literacy. The control and limitations over reading and writing during slavery sought to make slaves like Douglass ignorant, powerless, and therefore more easily controlled, and this control over literacy and education is still happening in the world today.    --Sample essay on Frederick Douglass’s Narrative of the Life of Frederick Douglass, an American Slave  Select one: a. In Frederick Douglass’s novel Narrative of the Life of Frederick Douglass, an American Slave, Douglass reveals how this long and brutal control of human beings was partly accomplished through control over literacy. b. In the 1990s a band called Rage Against the Machine, the name itself referring to a people’s movement to fight against control (corporation, government or otherwise) used this mantra in their song “Testify,” a warning to not silently endure oppression.  c. In the 1940s, George Orwell warned “Who controls the past controls the future. Who controls the present controls the past” (Orwell 30). d. The control and limitations over reading and writing during slavery sought to make slaves like Douglass ignorant, powerless, and therefore more easily controlled, and this control over literacy and education is still happening in the world today. </a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#ii-write-the-word-yes-if-the-statement-is-true-and-no-if-the-statement-is-false-1-in-research-concept-is-a-general-idea-or-information-needs-to-narrow-down-2-in-research-the-data-is-usually-gat">15.
+                                            II. Write the word Yes if the statement is true and No if the statement is false. 1. In research, concept is a general idea or information needs to narrow down. 2. In research, the data is usually gathered using structured research instruments. 3 The action research essential aim is to push/expand the frontiers of knowledge. 4. In a quantitative research, all kinds of variables are manipulative in nature. 5. A research is empirical in nature, if the step-by-step procedures is followed. 6. A variable is continuous if it is with group of more than two (2) classes or variations. 7. In a typical research stage, selecting a problem is the first thing needs to consider. 8. In research, independent variable is a factor over which the researcher has control. 9. Data describes as the attributes that takes on different values. 10. In research, the dependent variable is the influential or the predictor factor. ​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#what-is-the-term-used-to-define-the-number-of-subordinates-directly-controlled-by-a-managerselect-onea-investment-spanb-division-structurec-span-of-management%e2%80%8b">16.
+                                            What is the term used to define the number of subordinates directly controlled by a manager?Select one:a.Investment spanb.Division structurec.Span of management​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#a-social-institution-that-is-not-under-the-control-of-the-government-an-essential-part-of-a-society-of-which-its-structure-principle-and-revenue-is-separated-from-the-state-select-one-a-family">17.
+                                            A social institution that is not under the control of the government, an essential part of a society, of which its structure, principle and revenue is separated from the state. 
+Select one: 
+a. Family 
+b. Society 
+c. School 
+d. Religion ✔</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#2-give-me-one-1-sample-process-that-can-executed-by-each-kernel-component-you-have-selected-explain-each-sample-process-relative-to-its-corresponding-process-control-structure-perform-additional">18.
+                                            2. Give me one (1) sample process that can executed by each kernel component you have selected. Explain each sample process relative to its corresponding process control structure/. Perform additional research necessary</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#identify-what-is-asked-in-the-following-statement-______________1-it-is-the-study-of-animals-______________2-it-is-the-change-in-the-genetic-make-up-of-populations-of-organism-over-time-_________">19.
+                                            Identify what is asked in the following statement. ______________1. It is the study of animals. ______________2. It is the change in the genetic make-up of populations of organism over time. ______________3. It is a global overpopulation which is rooted on a virtually environmental problems. ______________4. It is an understanding of basic ecological principles that can help prevent ecological disasters. ______________ 5. It is a process that does not need cell energy. ______________6. It is a carrier protein in a plasma membrane that temporarily bind with molecules. ______________7. Water molecules that diffuse across selectively permeable membranes from areas of higher concentration to areas of lower concentration. ______________8. It is essentially protein-free plasma that moves across capillary walls due to a pressure gradient across the wall. ______________ 9. It is a specific carrier protein in the plasma that membrane bind with molecules. ______________10. It is a bulk movement of material into a cell by the formation of a vesicle. ______________11. A term for a plasma membrane that encloses small amounts of fluid droplets and takes them into the cell. ______________12. It is a plasma membrane that forms a vesicle around a solid particle. ______________13. It is the extracellular molecules that bind with specific receptor protein on a plasma membrane, causing the membrane to invaginate and draw molecules into the cell. ______________14. It is a bulk movement of materials out of a cell. ______________15. It forms basal body of cilia and flagella functions in mitotic spindle formation. ______________16. It traps, transforms, and uses light energy to convert carbon dioxide and water into glucose and oxygen. ______________17. It is a structure of a cell that controls heredity and cellular activities. ______________18. It moves small particles past fixed cells and is a major form of locomotion in some cells. ______________19. It is a structure of a cell that dissolves substance, houses organelles and vesicles. ______________ 20. It assists in cell movement; provides support and site for binding of specific enzymes. ______________ 21. It is a structure of a cell that houses organelles and serves as fluid medium for metabolic reactions. ______________22. It functions as a storage and internal transport. ______________23. It carries signals to distant parts of an animal’s body. ______________24. It is a cell function that sorts, packages, and routes cell’s synthesized products. ______________25. It is a cell function that digest materials. ______________26. It isolates particular chemical activities from the rest of the cell. ______________27. It gives structural support and assist in cell movement. ______________28. It assists in movement of cilia, flagella, and chromosomes; transport system. ______________29. It is the dense site in the cytoplasm that gives rise to large numbers of microtubules with different functions in the cytoskeleton. ______________30. It converts energy into a form the cell can use. ______________31. It is a cell structure that preassembles the point for ribosomes. ______________32. It contains DNA that controls cell’s genetic program and metabolic activities. ______________33. It is a cell structure that regulates movement of materials. ______________34. Is the site of cell function for protein synthesis. ______________35. It is the storage site of food and other compounds; also pumps water out of a cell. ______________36. It is a cell structure believed to transport messenger RNA from the nucleus to the ribosomes. ______________37. It is a site of intracellular digestion, storage or transport. ______________38. It consists of a single layer of tightly packed, flatted disked-shaped cells. ______________39. It consists of a single layer of tightly packed, cube shaped cells. ______________ 40. It consists of a single layer of elongated cells.​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#b-match-the-following-types-of-observation-in-column-b-with-the-descriptions-in-column-a-write-the-letter-of-your-answer-on-the-space-provided-column-a-__1-a-special-environment-is-created__2-time">20.
+                                            B. Match the following types of observation in column B with the descriptions in column A. Write the letter of your answer on the space provided.Column A.__1. a special environment is created__2. time is selected and particular actions counted __3. no advanced characteristics sougth __4. observer makes himself part of the group __5. observation done in natural setting __6. observer not part of group Column B.A. structuredB. personal C. participantD. unstructured E. non-participant F. uncontrolled G. controlled ​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#ii-identification-read-the-following-and-identify-the-answer-inside-the-box-write-the-letter-on-the-space-provided-d-none-of-the-above26-structures-that-is-similar-in-forms-and-origin-but-have-di">21.
+                                            II. Identification. Read the following and identify the answer inside the box. Write the letter on the space provided.d. none of the above26. Structures that is similar in forms and origin but have different functions.27. Structures that is different in forms and origin but similar in function.28. Evidence or any remnants of organisms that lived a long time ago.29. This happens when individual organisms leave and go to another place where they can find food, comfort,and resources for survival and reproduction.30. Refers to the highest number of population that the environment can sustainably support.31. It happens after the population reached its carrying capacity population getting smaller and smaller becauseevery individual competes for limited resources in his environment.32. A period happens before the population reaches carrying capacity resources are plenty for every organism,making the population grow faster and faster as it gets large,33. Is a resource or environmental condition which controls or stops the population.34. A process through which populations of living organisms adapt and change.35. Defined as the change in the characteristics of species over time.Emigratione. Fossilsf. disease and parasite 1. Limiting Factorb. Homologous structuresg. Logistic growthk. Natural selectionh. Exponential growth I. Populationi. EvolutionNoted by:Prepared by:MARIA BAMBI L. BILLANESHERNALYN R. ILLANUEVAPrincipal IScience Teachera.C.Carrying Capacityd. Analogous structurese. Fossilsitha​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#spot-the-thesis-statement-in-the-following-passagein-the-1940s-george-orwell-warned-%e2%80%9cwho-controls-the-past-controls-the-future-who-controls-the-present-controls-the-past%e2%80%9d-orwell-3">22.
+                                            Spot the thesis statement in the following passage:
+In the 1940s, George Orwell warned “Who controls the past controls the future. Who controls the present controls the past” (Orwell 30). In the 1990s a band called Rage Against the Machine, the name itself referring to a people’s movement to fight against control (corporation, government or otherwise) used this mantra in their song “Testify,” a warning to not silently endure oppression. This warning is not only relevant to the 20th century, but has been applicable since human beings started forming structures of power to control and oppress one another. This can vividly be seen during the times of slavery in the United States when blacks were enslaved for two and a half centuries. In Frederick Douglass’s novel Narrative of the Life of Frederick Douglass, an American Slave, Douglass reveals how this long and brutal control of human beings was partly accomplished through control over literacy. The control and limitations over reading and writing during slavery sought to make slaves like Douglass ignorant, powerless, and therefore more easily controlled, and this control over literacy and education is still happening in the world today.
+--Sample essay on Frederick Douglass’s Narrative of the Life of Frederick Douglass, an American Slave
+Select one:
+a. In the 1940s, George Orwell warned “Who controls the past controls the future. Who controls the present controls the past” (Orwell 30).
+b. In Frederick Douglass’s novel Narrative of the Life of Frederick Douglass, an American Slave, Douglass reveals how this long and brutal control of human beings was partly accomplished through control over literacy.
+c. The control and limitations over reading and writing during slavery sought to make slaves like Douglass ignorant, powerless, and therefore more easily controlled, and this control over literacy and education is still happening in the world today. 
+d. In the 1990s a band called Rage Against the Machine, the name itself referring to a people’s movement to fight against control (corporation, government or otherwise) used this mantra in their song “Testify,” a warning to not silently endure oppression. </a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#identify-the-following-pictures-based-on-level-of-biological-organization-1-cell-membrane-_________-this-is-a-selectively-permeable-barrier-that-controls-what-goes-in-and-out-of-the-cell-2-bladd">23.
+                                            Identify the following pictures based on level of biological organization. 1. Cell membrane (_________) This is a selectively permeable barrier that controls what goes in and out of the cell. 2. Bladder (_________) The bladder is a hollow, muscular organ that collects urine excreted by the kidneys before disposal by urination. 3. Lysosomes (_________) Lysosomes are organelles that contain enzymes to break down and remove waste in the cell. 4. Mitochondria (_________) Mitochondria are the site of cellular respiration in which sugar molecules are broken down to release energy. 5. Skin (_________) The skin is the largest organ of the integumentary system. It protects the underlying muscles, bones, and organs as well contributing to heat regulation and sensory perception. 6. Microtubules (________) Microtubules serve as part of the cell's system of structural support. They are also involved in the process of cellular division. 7. Cardiac (________) Coordinated contractions of cardiac tissue in the heart pump blood throughout the body.8. Digestive (________) Although digestive system take many forms in organisms throughout the world, the main function of digestion is to break down food so that it can be used for energy by the body. 9. Nervous (________) Nervous tissue is the main component of the brain and spinal cord which regulate and control body functions. 10. Epithelial (________) Epithelial tissue is located on the very outside of an organism (i.e.skin) as well as in the lining of hollow organs such as the bladder. Its purpose include protection and secretion. 11. Skeletal (________) The skeletal system is a rigid framework to which the softer tissues and organs of the body are attached. It provides protection and structural support for the body. 12. Urinary (_______) The urinary system produces, stores, and eliminates urinary waste. Through this process, the body is able to regulate electrolyte balance as well as maintain a healthy pH level. 13. Bones (_______) Bones are rigid organs that form part of the endoskeleton of vertebrates. They help to move, support and protect the body as well as producing red and white blood cells. 14. Nucleus (_______) This organelle contains the cell's genetic material (DNA) and therefore controls the cell's activities. 15. Brain (_______) In most vertebrate animals, the brain is the central organ of the nervous system. It controls the other systems of the body by either activating muscles or releasing chemicals. 16. Heart (_______) The heart is a muscular organ found in all animals with a circulatory system. It is responsible for pumping blood throughout the body through the use of coordinated contractions. 17. Endoplasmic Reticulum (________) The endoplasmic reticulum is an organelle that forms an interconnected network of tubules that serve to transport newly synthesized proteins. 18. Stomach (_________) The stomach is a muscular, hollow organ that works with the digestive system. It releases enzymes and strong acids that help to break down food to release useable energy. 19. Circulatory (________) This system transports nutrients (gases, hormones, etc.) carried in blood and lymph throughout tue body. It is powered by the 20. Connective (________) Connective tissue is made of a network of protein fibers that provide structural support. Bone, blood, cartilage, and fat are the four main types of connective tissue. 21. Nervous (_________) This system contains a network of specialized cells called neurons that coordinate actions by transmitting signals throughout the body. 22. Integumentary (________) The Integumentary system consists of the skin and its appendages (hair, feathers, nails, etc.). It serves to protect tye body as well to detect pain, sensation, and pressure. 23. Smooth Muscle (_______) Smooth tissue is able to contract on its own without a signal from the brain. These involuntary contractions help organs such as the stomach and intestines to break down and move food through the digestion process. ​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#dorm-radene-prowathe-ents-select-you-wees-the-poolotoplasm-aclecideukaryotaeukaryosi-cabplana-membraneprokaryotic-cellprokaryotaproduce-energyprovide-support-and-structuretransport-of-subein-your-sce">24.
+                                            Dorm Radene prowathe ents. Select you wees the poolOtoplasm aclecidEukaryotaEukaryosi CabPlana MembraneProkaryotic CellProkaryotaproduce energyprovide support and structureTransport of subein your scence class, your teacher asked you to identify the cells in the piratesposted on the board. You observed that plaure 1 has no defined nucleus and you labeled it asFor Picture 2 the nucleus is very visible then this type of aces127Your teacher continued to deliver her lesson. She presentedData e has three basic parts. The (3)encloses the cell andseparates the inside organelles from the outside she explained. Your classmate said thatare jelly-like substances where all other cell parts are located. YouFaused your band and toló the dass that (5)the most easily seen partbecause it controls the activities of other parts of the cell Xione added that maticellularorganismes whose cells have nucleus are called (ELOn the other hansVsan continued to discuss that a unicellular organism whose red has no defined nucleus but hasapudeoid region is called (7)Finally your teacher emphasued that cells are the building blocks of life and are considered asbasic structural and functional unit of life. Because basically they perform all life processes thatenable organisms to grow and develop. Among the general functions of cells are: (8)(9)and (10)​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#question-1not-yet-answeredmarked-out-of-1-00not-flaggedflag-questionquestion-textscientific-management-is-based-on-the-assumption-thatselect-onea-observation-would-reveal-the-workers-need-to">25.
+                                            Question 1
+Not yet answered
+Marked out of 1.00
+Not flaggedFlag question
+Question text
+Scientific management is based on the assumption that:
+Select one:
+a. Observation would reveal the workers need to be multi-skilled.
+b. The scientific observation of people at work would reveal the one best way to do the task.
+c. Workers would receive a set wage regardless of performance.
+Question 2
+Not yet answered
+Marked out of 1.00
+Not flaggedFlag question
+Question text
+It is the intentional structure of roles, in a formally organized enterprise.
+Select one:
+a. Informal organization
+b. Tall organization
+c. Flat organization
+d. Formal organization
+Question 3
+Not yet answered
+Marked out of 1.00
+Not flaggedFlag question
+Question text
+Benchmarking is one source of alternative solutions that is coming into wider use.
+Select one:
+True
+False
+Question 4
+Not yet answered
+Marked out of 1.00
+Not flaggedFlag question
+Question text
+A company decision to diversify into new products and markets is an example of non-programmed decisions.
+Select one:
+True
+False
+Question 5
+Not yet answered
+Marked out of 1.00
+Not flaggedFlag question
+Question text
+They spell out specific required actions or non-actions, allowing no discretion.
+Select one:
+a. Budgets
+b. Strategies
+c. Objectives
+d. Rules
+Question 6
+Not yet answered
+Marked out of 1.00
+Not flaggedFlag question
+Question text
+The framework of interrelationships among individuals and departments that describe relationships of reporting and accountability is called:
+Select one:
+a. Organizational structure
+b. Span of control
+c. Specialization
+Question 7
+Not yet answered
+Marked out of 1.00
+Not flaggedFlag question
+Question text
+Authority moves _______, while accountability move________ within the organization.
+Select one:
+a. downward, upward
+b. upward, literally
+c. upward, downward
+Question 8
+Not yet answered
+Marked out of 1.00
+Not flaggedFlag question
+Question text
+What is the term used to define the number of subordinates directly controlled by a manager?
+Select one:
+a. Span of management
+b. Division structure
+c. Investment span
+Question 9
+Not yet answered
+Marked out of 1.00
+Not flaggedFlag question
+Question text
+Delegation is one-sided relationship.
+Select one:
+a. True
+b. False
+Question 10
+Not yet answered
+Marked out of 1.00
+Not flaggedFlag question
+Question text
+Which of the following is incorrect?
+Select one:
+a. Planning is the part of the management process that attempts to define the organization's future.
+b. Planning is a one-time event.
+c. The approach to planning can differ greatly from manager to manager.</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#which-control-structure-will-execute-an-instruction-only-after-the-computer-evaluates-conditions-to-determine-if-a-certain-condition-existsanswer-choicesa-selectionb-loopc-functionald-sequen">26.
+                                            Which control structure will execute an instruction only after the computer evaluates conditions to determine if a certain condition exists?
+answer choices
+A. Selection
+B. Loop
+C. Functional
+D. Sequence</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#using-the-selection-%e2%80%95bacteria-and-viruses%e2%80%96-and-your-answer-in-the-table-under-%e2%80%95what-is-it%e2%80%96-differentiate-bacteria-and-viruses-by-filling-out-the-diagram-below-do-this">27.
+                                            Using the selection ―BACTERIA and VIRUSES‖ and your answer in the table under ―What is it,‖ Differentiate bacteria and viruses by filling out the diagram below. Do this on a sheet of paper.DefinitionStructureLiving or NotKingdomSize Harmfulness Control BACTERIA VIRUSES​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#natural-objects-and-phenomenon-behave-by-the-underlying-mathematical-structure-interactions-and-relationships-of-nature-can-be-best-described-by-mathematical-equations-select-one-a-mathematics-fo">28.
+                                            Natural objects and phenomenon behave by the underlying mathematical structure. Interactions and relationships of nature can be best described by mathematical equations
+ Select one: 
+a. Mathematics for Organization
+ b. Mathematics for Control
+ c. Mathematics for Prediction 
+d. Mathematics is indespensible</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#identification-identify-if-the-following-organizational-structure-design-is-traditional-t-or-modern-m-_____a-design-that-groups-together-similar-or-related-specialties-_____b-it-is-made-up-of">29.
+                                            Identification. Identify if the following Organizational Structure Design is Traditional (T) or Modern (M).  _____a. Design that groups together similar or related specialties _____b. It is made up of work teams _____c. Design where employees continuously work on a project _____d. Focus on performance improvement of people _____e. Focus on flexibility and problem solving _____f. Design made up of separate units where present             corporation acts as overseer  _____g. Boundaryless _____h. Big number of subordinates reporting to a centralized              authority figure _____i. Matrix Design _____j. Design with few departments, wide spans of control  Arrangement in Chronological Order. Arrange the following Delegation steps in chronological order. Number the first step 1, and the last step 8. _____a. Granting to the assigned person the authority to act _____b. Assigning of responsibility _____c. Checking the task accomplishment progress _____d. Defining the goal clearly _____e. Giving the assigned person enough time and resources to             do the task _____f. Making sure that the task objectives have been achieved _____g. Asking person assigned about these planned approaches _____h. Selecting the person who will be given the task ​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#activity-3-identifyidentify-the-characteristics-of-life-described-in-the-following-statement-write-your-answer-on-a-separate-sheet-of-paper-1-generate-offspring-2-get-bigger-more-complex-or-dev">30.
+                                            Activity 3. Identify!Identify the characteristics of life described in the following statement.Write your answer on a separate sheet of paper..1. Generate offspring.2. Get bigger, more complex, or develop in some ways.3. Eat, breathe, excrete waste; energy usage.4. Made of one or more cells with complex structures and chemicalprocesses5. Adjust over time due to mutation and natural selection, whichimproves survival.6. Respond to things to their external environment (often as movement).7. Maintain a relatively controlled internal environment.​</a>
+                                    </li>
+                                                            </ul>
+                        </nav>
+                    </div>
+                                            <h2 class="ez-toc-section" id="this-control-structure-shows-an-action-sequentially-followed-by-another-action-a-repetition-control-structureb-sequence-control-structurec-selection-control-structure">
+                            1. This control structure shows an action sequentially followed by another action.a. Repetition control structureb. Sequence control structurec. Selection control structure</h2><br />
+                        <p><strong>Answer:</strong></p><p><strong>B.</strong><strong> </strong><strong>Sequence </strong><strong>control </strong><strong>structure</strong></p><p><strong>Explanation:</strong></p><p>The sequential control structure, as the name implies, <strong>follows the sequential flow of control. </strong>The execution of the program statements happens line by line. In the sequence control structure, an activity leads to the next activity, which is ordered linearly.</p><p></p><p><strong>HOPE </strong><strong>IT </strong><strong>HELPS</strong></p><p><strong>BRAINLIEST </strong><strong>ME </strong><strong>PLSS</strong></p><p><strong>Answer:</strong></p><p>Repetitive control structures, also referred to as iterative structures, are groupings of code which are designed to repeat a set of related statements. This repetition (or iteration) can repeat zero or more times, until some control value or condition causes the repetition to cease.</p><p><strong>Explanation:</strong></p><p></p><br />
+                                            <h2 class="ez-toc-section" id="answer-the-following-questions-what-is-the-sequence-control-structure-what-is-the-purpose-of-the-selection-structure-how-can-the-repetition-control-structure-be-used-%e2%80%8b">
+                            2. Answer the following questions :What is the sequence control structure ?What is the purpose of the selection structure ?How can the repetition control structure be used ?​</h2><br />
+                        <p>1. Control flow structure refers to the predetermined way in which a program's instructions are executed sequentially in the order in which they are written in the code.</p><p></p><p>2. The purpose of the choice structure is to allow the program to make decisions and take different actions depending on whether certain conditions are true or false. This allows for more complex and flexible behavior from the program since it can react differently to different situations.</p><p></p><p>3. The repeat control structure, also known as a loop, allows the program to repeat a set of statements multiple times, either for a fixed number of iterations or until a specified condition is met. This is useful for tasks that require the same operations to be performed on multiple inputs or for tasks that need to be repeated a specified number of times until a certain condition is met. There are several types of loops, including the while loop, the do-while loop, and the for loop, each with their own specific uses and exit conditions.</p><p></p><br />
+                                            <h2 class="ez-toc-section" id="1-what-are-the-three-control-structures2-what-are-control-structures3-what-is-sequence-4-what-is-condition-selection5-what-is-repectitionitertion-loops%e2%80%8b">
+                            3. 1, what are the three control structures2, what are control structures3, what is sequence 4, what is condition selection5, what is repectition/itertion (loops)​</h2><br />
+                        <p><strong>Answer:</strong></p><p>1. The three control structures in programming are sequence, selection, and iteration.</p><p></p><p>2. Control structures are programming constructs that allow developers to control the flow of execution in a program. They enable the program to take different paths based on certain conditions and repeat certain blocks of code multiple times.</p><p></p><p>3. Sequence is a control structure that represents the execution of a series of instructions in a specific order. It is the simplest control structure and is used to perform a set of statements one after the other.</p><p></p><p>4. Condition selection is a control structure that allows the program to make decisions based on some conditions. In other words, it enables the program to take different paths based on whether a certain condition is true or false. The most common way to implement condition selection is by using if-else statements.</p><p></p><p>5. Repetition/iteration, also known as loops, is a control structure that allows developers to execute a block of code multiple times. Loops are used when a certain set of instructions needs to be repeated multiple times with slight variations. There are three types of loops: for loop, while loop, and do-while loop.</p><p><strong>Explanation:</strong></p><p>HOPE IT HELPS :-)</p><br />
+                                            <h2 class="ez-toc-section" id="3-ways-to-lessen-the-occurrence-of-landslides-1-adopt-selective-cutting-logging-companies-must-allow-old-trees-to-remain-this-method-cuts-down-mature-or-inferior-kind-of-trees-to-encourage-the-gro">
+                            4. 3. Ways to Lessen the Occurrence of Landslides 1. Adopt selective cutting- logging companies must allow old trees to remain. This method cuts down mature or inferior kind of trees to encourage the growth of the remaining trees in the forest. 2. Do alley-cropping instead of slash-and-burn method. Alley-cropping is a method of simultaneously growing an agricultural crop with a tree crop, retaining soil fertility. Plant more trees with strong root structures that hold the soil together. 4. The government must set mining rules based on the evaluation of slope stability and landslide threat in the mining areas. Mining companies must follow these rules. In case of disobedience, temporary or permanent suspension of mining operations must be implemented. 5. Avoid construction on steep slopes. As this is not entirely possible, evaluation on the area for land development should be performed by engineers and geologists 6. Construct proper drainage away from the slope to control water accuratation and to avoid slope instability. 7. Check broken or leaking pipes during because oversaturation or oil with water can trigger landslides. ​</h2><br />
+                        <p><strong>Answer:</strong></p><p>[tex]\huge\blue{\overline{\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad}}[/tex]</p><p>[tex] \red{ \rule{1pt}{999999pt}}[/tex]</p><p>[tex]\huge\blue{\overline{\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad}}[/tex]</p><br />
+                                            <h2 class="ez-toc-section" id="directions-read-the-paragraph-below-and-identify-the-correct-word-from-the-boxthat-fits-in-the-given-sentences-write-your-answer-on-a-separate-sheet-select-youranswers-from-the-word-pool-below-nucl">
+                            5. Directions: Read the paragraph below and identify the correct word from the boxthat fits in the given sentences. Write your answer on a separate sheet. Select youranswers from the word pool below.NucleusEukaryotesCell wallCytoplasm NucleoidEukaryotic CellPlasma MembraneProkaryotic Cell ProkaryotesTransport of substancesPproduce energyprovide support and structureIn your science class, your teacher asked you to identify the cells in thepictures posted on the board. You observed that picture 1 has no defined nucleusand you labeled it as (1)_For picture 2 the nucleus is veryvisible then this type of a cell is (2)Your teacher continuedto deliver her lesson. She presented that a cell has three basic parts.The (3),encloses the cell and separates the insideorganelles from the outside. she explained. Your classmate said that (4)are jelly-like substances where all other cell parts are located.You raised your hand and told the class that (5)the most easilyseen part it controls the activities of the other parts of the cell. Xione added thatmulticellular organisms whose cells have nucleus are called (6)On the other hand, Ysah continued to discuss that a unicellular organism whose cellhas no defined nucleus but has a nucleoid region is called (7)Finally your teacher emphasized that cells are the building blocks of life andare considered as basic structural and functional unit of life. Because basically theyperform all life processes that enable all organisms to grow and develop. Among thegeneral functions of cells are: (8)(9)and (10)​</h2><br />
+                        <p><strong>Answer:</strong></p><p></p>1) CELL WALL2) NUCLEUS3) EUKARYOTES4) PROKARYOTES5) EUKARYOTIC CELL6) PROKARYOTIC CELL7) PLASMA MEMBRANE8) TRANSPORT OF SUBSTANCES9) PROVIDE SUPPORT AND STRUCTURE10) REPRODUCE ENERGY<p><strong>Explanation:</strong></p><p></p>PA BRAINLIEST AT PA FOLLOW<br />
+                                            <h2 class="ez-toc-section" id="review-of-the-previous-lesson-direction-read-and-analyze-each-statement-below-write-true-if-the-statement-is-con-set-while-false-if-the-statement-is-incorrect-write-your-answer-on-the-blank-space-p">
+                            6. Review of the Previous lesson Direction: Read and analyze each statement below. Write TRUE if the statement is con set while FALSE if the statement is incorrect. Write your answer on the blank space provided be ore the number. (10 pts.) 1. Area refers to the structured pieces of and combined. 2. The number of day/s the work completed by 1 person is called MOND, Y. 3. The process of developing the seed into a young plant is termed Germination. 4. Fertilizers refers to any material added to the soil to provide support of the needed nutrient. 5. Principal refers to the amount you owed. 6. Labor refers to the work performed by farm workers in exchange for salary, 7. Insecticides are considered control measures to kill bacteria in most plints. 8. Mostly harvested quality crops are due to selected quality seeds. 9. Graph is a drawing in which the relationship between two or more itens of information shown in a symbolic way. 10. Volume refers to the content of a body or objects.​</h2><br />
+                        <p><strong>Answer:</strong></p><p>1. true</p><p>2. true</p><p>3. False</p><p>4. true</p><p>5. false</p><p>6. false</p><p>7. false</p><p>8. true</p><p>9. false</p><p>10. true</p><p></p><br />
+                                            <h2 class="ez-toc-section" id="1-which-two-plant-cell-structures-are-respensible-for-storing-energy-from-sunlight-and-later-releasing-it-for-cells-to-use-a-chloroplast-and-nucleus-e-chloroplast-and-mitochondria-mitochondria-and-ce">
+                            7. 1. Which two plant cell structures are respensible for storing energy from sunlight and later releasing it for cells to use a chloroplast and nucleus e chloroplast and mitochondria mitochondria and cell wall d. nucleus and cell wall 2. Which we plant cell structures work together, like security guards, for the cell? Cytoplasm and Nucleus c. Nucleus and Oxygen h Cell Membrane and Cell Wall d. Oxygen and Cell Membrane 3. This seragraph (picture taken through a microscope) probably shows what type of cell? a animal o plant d. bacteria 4. What features do plant cells have that animal cells lack? a nucleus and cell membrane c. centrosomes and centrioles Deell wall and chloroplasts d. cell membrane and chloroplast 5. Which one of the following correctly matches the organelle with its function? a cell wall: produces energy for the cell h nucleus: control center of the cell c. cell membrane: gives rigid structure to the plant cell d. chloroplasts: colorless, jelly-like substance that supports the other organelles 6. Which organelle functions as the "powerhouse of the cell by producing the energy necessary for all cell functions to occur? a. cytoplasm c. nucleus ribosomes d. mitochondria 7. Select the statement that best describes the function of the cell wall. a. It gives shape to plant cells. b. It produces food from sunlight, c. Its jelly-like fluid surrounds the nucleus and most of the cell's internal parts. d. It contains the cell's nuclear material. S. What is a function of the nucleus of an animal cell? a. It is the place where energy is produced. b. It stores the genetic information, the DNA (chromosomes). c. It defends the cell from infections, d. It captures sunlight to produce food. 9. Select a statement that best completes the phrase below. In a plant cell... a. there is one large vacuole that stores water and helps hold up the plant. b. the vacuoles enter and leave through the cell membrane. c. there are lots of small vacuoles. d. there are no vacuoles.​</h2><br />
+                        <p><strong>Answer:</strong></p><p><strong>1</strong><strong>.</strong><strong>c</strong></p><p><strong>2</strong><strong>.</strong><strong>a</strong></p><p><strong>3</strong><strong>.</strong><strong>d</strong></p><p><strong>4</strong><strong>.</strong><strong>d</strong></p><p><strong>5</strong><strong>.</strong><strong>c</strong></p><p><strong>6</strong><strong>.</strong><strong>a</strong></p><p><strong>7</strong><strong>.</strong><strong>c</strong></p><p><strong>8</strong><strong>.</strong><strong>a</strong></p><p><strong>9</strong><strong>.</strong><strong>d</strong></p><strong>h</strong><strong>o</strong><strong>p</strong><strong>e</strong><strong> </strong><strong>i</strong><strong>t</strong><strong> </strong><strong>h</strong><strong>e</strong><strong>l</strong><strong>p</strong><p><strong>Explanation:</strong></p><strong>h</strong><strong>e</strong><strong>a</strong><strong>r</strong><strong>t</strong><strong> </strong><strong>a</strong><strong>t</strong><strong> </strong><strong>f</strong><strong>o</strong><strong>l</strong><strong>l</strong><strong>o</strong><strong>w</strong><strong> </strong><strong>n</strong><strong>a</strong><strong>l</strong><strong>n</strong><strong>g</strong><strong> </strong><strong>p</strong><strong>o</strong><br />
+                                            <h2 class="ez-toc-section" id="read-each-paragraph-then-select-the-answer-that-best-describes-the-author%e2%80%99s-purpose-and-perspectives-in-writing-until-the-1960s-people-in-the-united-states-did-not-particularly-pay-attenti">
+                            8. Read each paragraph. Then select the answer that best describes the author’s purpose and perspectives in writing.  Until the 1960s, people in the United States did not particularly pay attention to the natural environment. Rather, Americans were more focused on the economy. However, with an increase in oil spills, polluting factories and power plants, and the loss of wilderness, suddenly  people  realizes they shared  common values.  They called for a national  organization  to protect  the environment. Accordingly, on April 22, 1970, the first Earth DAY, 20 MILLION Americans  took to the streets, parks  and auditoriums  to demonstrate  for a healthy, sustainable  environment. Thousands  of colleges  and universities  organized protests against  the  deterioration   of the environment.  The first Earth Day led to the creation of the United States  Environmental  Protection Agency (EPA)  and the passage of the Clean Air, Clean Water, and Endangered   Species Acts. President Richard Nixon and Congress  worked together  to established the EPA in response  to the growing public demand  for cleaner water, air and land. Prior to the establishment of the EPA, the  national government was not structured to make  coordinated attack on the pollutants, which harm  human  health  and degrade  the environment. The EPA  was  assigned  the daunting  task  of repairing  the damage already done  to the natural environment.  Question:  What is the author’s purpose in paragraph 2?  Select one: a. to propose the need for further actions by the government b. to describe how the government became more involved in cleaning the environment c. to discuss public demonstration that demanded a cleaner environment d. to suggest that the government needed to control polluting factories and power plants</h2><br />
+                        Its letter B..............Its letter B..............<br />
+                                            <h2 class="ez-toc-section" id="which-of-the-following-applies-to-the-matrix-structureselect-onea-it-attempts-to-merge-the-benefits-of-decentralization-with-co-ordination-across-all-areas-of-the-businessb-it-is-found-in-companies">
+                            9. Which of the following applies to the matrix structure?Select one:a.It attempts to merge the benefits of decentralization with co-ordination across all areas of the businessb.It is found in companies offering a diverse range of products in a home marketc.It allows the owner to control all aspects of the businessd.It is found in large industrial conglomerates​</h2><br />
+                        <p><strong>Answer:</strong></p><p>A. It attempts to merge the benefits of decentralization with co-ordination across all areas of the business</p><p><strong>Explanation:</strong></p><p><strong>Paki</strong><strong> </strong><strong>tama</strong><strong> </strong><strong>po</strong><strong> </strong><strong>kung</strong><strong> </strong><strong>may</strong><strong> </strong><strong>mali</strong><strong> </strong><strong></strong><strong> </strong><strong></strong><strong> </strong></p><p></p><strong>Paki</strong><strong> </strong><strong>Brainliest</strong><strong> </strong><strong>na din</strong><strong> </strong><strong>po</strong><strong> </strong><strong>plsssss</strong><strong> </strong><strong></strong><strong> </strong><strong></strong><strong> </strong><strong></strong><strong> </strong><br />
+                                            <h2 class="ez-toc-section" id="spot-the-thesis-statement-in-the-following-passage-in-the-1940s-george-orwell-warned-%e2%80%9cwho-controls-the-past-controls-the-future-who-controls-the-present-controls-the-past%e2%80%9d-orwell">
+                            10. Spot the thesis statement in the following passage:  In the 1940s, George Orwell warned “Who controls the past controls the future. Who controls the present controls the past” (Orwell 30). In the 1990s a band called Rage Against the Machine, the name itself referring to a people’s movement to fight against control (corporation, government or otherwise) used this mantra in their song “Testify,” a warning to not silently endure oppression. This warning is not only relevant to the 20th century, but has been applicable since human beings started forming structures of power to control and oppress one another. This can vividly be seen during the times of slavery in the United States when blacks were enslaved for two and a half centuries. In Frederick Douglass’s novel Narrative of the Life of Frederick Douglass, an American Slave, Douglass reveals how this long and brutal control of human beings was partly accomplished through control over literacy. The control and limitations over reading and writing during slavery sought to make slaves like Douglass ignorant, powerless, and therefore more easily controlled, and this control over literacy and education is still happening in the world today.    --Sample essay on Frederick Douglass’s Narrative of the Life of Frederick Douglass, an American Slave  Select one: a. The control and limitations over reading and writing during slavery sought to make slaves like Douglass ignorant, powerless, and therefore more easily controlled, and this control over literacy and education is still happening in the world today.  b. In the 1990s a band called Rage Against the Machine, the name itself referring to a people’s movement to fight against control (corporation, government or otherwise) used this mantra in their song “Testify,” a warning to not silently endure oppression.  c. In Frederick Douglass’s novel Narrative of the Life of Frederick Douglass, an American Slave, Douglass reveals how this long and brutal control of human beings was partly accomplished through control over literacy. d. In the 1940s, George Orwell warned “Who controls the past controls the future. Who controls the present controls the past” (Orwell 30).</h2><br />
+                        1940s, George Orwell warned “Who controls the past controls the future. Who controls the present controls the past” (Orwell 30)<br />
+                                            <h2 class="ez-toc-section" id="14-which-of-the-following-is-not-included-on-the-network-devicea-modemsc-routersb-keyboardsd-network-connections15-it-is-an-electronic-device-for-storing-and-processing-data-typically-in-binar">
+                            11. 14. Which of the following is NOT included on the network device?A. ModemsC. RoutersB. KeyboardsD. Network Connections15. It is an electronic device for storing and processing data, typically in binary form. According toinstructions given to it in a variable program.A. Operating systemC. ComputerB. NetworkD. Windows16. It is a boot configuration utility that allows you to set the programs that will run at startup and toedit the files configurationA. Microsoft system ConfigurationC. Windows ConfigurationB. System Configuration UtilityD. Network Configuration17. It starts windows with basic services and drivers and the other services and (drivers only) startupprograms thatyouselect.A. Normal startupC. selective settingsB. Diagnostic startupD. General startup18. Which among the following is not included on the five functional tabs of system Configuration utility?A. GeneralC. servicesB. BootD. error19. It is the default tab in the system configuration and shows how the computer will start, by defaultnormal startup should be selected.A. GeneralC. BootB. TabD, services20. It allows you to enable or disable any of the Microsoft Windows services or other program servicesrunning on the computer.A. GeneralC. BootB. TabD. services21. It provides a convenient list of diagnostic tools and other advanced tools that you can run.A. GeneralC. ToolsB. BootsD. services22. It has a hierarchical structure like the directions on your hard disk.A. RegistryC. Control Panel AppletsD. Register Edit​</h2><br />
+                        <p><strong>Answer:</strong></p><p>B.</p><p>C</p><p>A</p><p>C</p><p>A</p><p>C</p><p>D</p><p>C</p><p><strong>Explanation:</strong></p><p>correct me if I'm wrong</p><br />
+                                            <h2 class="ez-toc-section" id="the-1_________-lelc-is-the-basic-unit-of-all-living-organisms-each-of-this-unit-is-structurally-composed-of-a2____________-cluesunwhich-controls-all-the-cell%e2%80%99s-activities-a-3______">
+                            12. The (1)_________ (LELC) is the basic unit of all living organisms. Each of this unit is structurally composed of a(2)____________ (CLUESUN)which controls all the cell’s activities, a (3)_________________ (MSOTPASYCL)that containsorganelles, and a selective (4)____________________ (LELC EARENBMM)that regulates the flow of materials into and outof the cell. Not all substances can pass through the membrane, this property of the plasma membrane is called(5)___________________________ (TIVECELSE MEAPERBLITYI).The cell membrane is also called the (6) ________(MASALP) membrane and is made of a bilayer of (7)_______________(HIDPHPOLIOSPS). The membrane has a hydrophilic (8)____________ (DAEH) and two hydrophobic (9)_________(SLTIA). The head of a phospholipid is made of an alcohol and a (10)______________ (ATPHPHOSE) group,while the tails are chains of (11)____________________ (TTFAY CIADS). Embedded in the phospholipid bilayer are(12)________________(IEGRNTAL) proteins, while (13)______________ (RIPERAPHEL) proteins are only in one side.Some of themembrane proteins have (14)______________________ (COHADRATRBYE) receptors to help cells in recognizing eachother and certain molecules. (15)___________________ (CESTEHOLROL) molecules are often found stuck betweenphospholipid molecules in the plasma membrane. They have a role in maintaining the fluidity of the membrane​</h2><br />
+                        <p><strong>Answer:</strong></p><p>1. Cell</p><p>2. Nucleus</p><p>3. </p><p>4. Cell membrane</p><p>5. Selective permeability</p><p>6. Plasma</p><p>7. Phospholipid</p><p>8.Head</p><p>9.</p><p>10. Phosphate</p><p>11. Fatty acids</p><p>12. Integral</p><p>13. Peripheral</p><p>14. carbohydrate</p><p>15.cholesterol</p><br />
+                                            <h2 class="ez-toc-section" id="direction-choose-the-best-letter-of-your-answer-that-best-describes-to-each-statement-a-background-of-the-study-c-significance-of-the-study-b-statement-of-the-problemd-scope-and-delimitation-of">
+                            13. Direction: Choose the best letter of your answer that best describes to each statement. A. Background of the Study C. Significance of the Study B. Statement of the ProblemD. Scope and Delimitation of the Study1. It indicates the reasonable area of study. 2. The nature of subjects treated, their number and treatments received should be stated specifically. 3. It should be defined in terms of the data that can be obtained. 4. It refers to a brief statement of the of the origin of the problem. 5. It should be stated precisely, accurately and clearly. 6. It justifies the study itself. 7. It indicates a statement on relevance to felt needs. 8. It contains an account describing the circumstances which suggested the research. 9. It can be stated in the declarative or interrogative form. 10. It may include a justification of the selection or choice of the study.  II. Write the word Yes if the statement is true and No if the statement is false. 1. In research, concept is a general idea or information needs to narrow down. 2. In research, the data is usually gathered using structured research instruments. 3 The action research essential aim is to push/expand the frontiers of knowledge. 4. In a quantitative research, all kinds of variables are manipulative in nature. 5. A research is empirical in nature, if the step-by-step procedures is followed. 6. A variable is continuous if it is with group of more than two (2) classes or variations. 7. In a typical research stage, selecting a problem is the first thing needs to consider. 8. In research, independent variable is a factor over which the researcher has control. 9. Data describes as the attributes that takes on different values. 10. In research, the dependent variable is the influential or the predictor factor. ​</h2><br />
+                        <p><strong>Answer:</strong></p><p><strong>1.D.</strong></p><p><strong>2.C</strong><strong>.</strong></p><p><strong>3.A.</strong></p><p><strong>4.B.</strong></p><p><strong>5.C</strong></p><p><strong>6.A.</strong></p><p><strong>7.D</strong></p><p><strong>8.C</strong></p><p><strong>9.A</strong></p><p><strong>10.B</strong></p><p></p><p></p><br />
+                                            <h2 class="ez-toc-section" id="in-the-1940s-george-orwell-warned-%e2%80%9cwho-controls-the-past-controls-the-future-who-controls-the-present-controls-the-past%e2%80%9d-orwell-30-in-the-1990s-a-band-called-rage-against-the-mach">
+                            14. In the 1940s, George Orwell warned “Who controls the past controls the future. Who controls the present controls the past” (Orwell 30). In the 1990s a band called Rage Against the Machine, the name itself referring to a people’s movement to fight against control (corporation, government or otherwise) used this mantra in their song “Testify,” a warning to not silently endure oppression. This warning is not only relevant to the 20th century, but has been applicable since human beings started forming structures of power to control and oppress one another. This can vividly be seen during the times of slavery in the United States when blacks were enslaved for two and a half centuries. In Frederick Douglass’s novel Narrative of the Life of Frederick Douglass, an American Slave, Douglass reveals how this long and brutal control of human beings was partly accomplished through control over literacy. The control and limitations over reading and writing during slavery sought to make slaves like Douglass ignorant, powerless, and therefore more easily controlled, and this control over literacy and education is still happening in the world today.    --Sample essay on Frederick Douglass’s Narrative of the Life of Frederick Douglass, an American Slave  Select one: a. In Frederick Douglass’s novel Narrative of the Life of Frederick Douglass, an American Slave, Douglass reveals how this long and brutal control of human beings was partly accomplished through control over literacy. b. In the 1990s a band called Rage Against the Machine, the name itself referring to a people’s movement to fight against control (corporation, government or otherwise) used this mantra in their song “Testify,” a warning to not silently endure oppression.  c. In the 1940s, George Orwell warned “Who controls the past controls the future. Who controls the present controls the past” (Orwell 30). d. The control and limitations over reading and writing during slavery sought to make slaves like Douglass ignorant, powerless, and therefore more easily controlled, and this control over literacy and education is still happening in the world today. </h2><br />
+                        c. In the 1940s, George Orwell warned “Who controls the past controls the future. Who controls the present controls the past” (Orwell 30).<br /><br /><br />
+                                            <h2 class="ez-toc-section" id="ii-write-the-word-yes-if-the-statement-is-true-and-no-if-the-statement-is-false-1-in-research-concept-is-a-general-idea-or-information-needs-to-narrow-down-2-in-research-the-data-is-usually-gat">
+                            15. II. Write the word Yes if the statement is true and No if the statement is false. 1. In research, concept is a general idea or information needs to narrow down. 2. In research, the data is usually gathered using structured research instruments. 3 The action research essential aim is to push/expand the frontiers of knowledge. 4. In a quantitative research, all kinds of variables are manipulative in nature. 5. A research is empirical in nature, if the step-by-step procedures is followed. 6. A variable is continuous if it is with group of more than two (2) classes or variations. 7. In a typical research stage, selecting a problem is the first thing needs to consider. 8. In research, independent variable is a factor over which the researcher has control. 9. Data describes as the attributes that takes on different values. 10. In research, the dependent variable is the influential or the predictor factor. ​</h2><br />
+                        <p><strong>Answer:</strong></p><p>1. No</p><p>2. Yes</p><p>3. Yes</p><p>4. No</p><p>5. No</p><p>6. Yes</p><p>7. Yes</p><p>8. No</p><p>9. Yes</p><p>10. No</p><p></p><p></p><p><strong>Explanation:</strong></p><p>Sana po makatulong hihi</p><br />
+                                            <h2 class="ez-toc-section" id="what-is-the-term-used-to-define-the-number-of-subordinates-directly-controlled-by-a-managerselect-onea-investment-spanb-division-structurec-span-of-management%e2%80%8b">
+                            16. What is the term used to define the number of subordinates directly controlled by a manager?Select one:a.Investment spanb.Division structurec.Span of management​</h2><br />
+                        <p><strong>Answer:</strong></p><p>C. Span of Management</p><p><strong>Explanation:</strong></p><p>There is a keyword to the question don't make your self hard. </p><p><strong>Answer:</strong></p><p>C.Span of management</p><p><strong>Explanation:</strong></p><p>ayun lng Alam napagaralan namin eh</p><br />
+                                            <h2 class="ez-toc-section" id="a-social-institution-that-is-not-under-the-control-of-the-government-an-essential-part-of-a-society-of-which-its-structure-principle-and-revenue-is-separated-from-the-state-select-one-a-family">
+                            17. A social institution that is not under the control of the government, an essential part of a society, of which its structure, principle and revenue is separated from the state. 
+Select one: 
+a. Family 
+b. Society 
+c. School 
+d. Religion ✔</h2><br />
+                        <p><strong>Answer:</strong></p><p>A. Family because its private </p><p></p><br />
+                                            <h2 class="ez-toc-section" id="2-give-me-one-1-sample-process-that-can-executed-by-each-kernel-component-you-have-selected-explain-each-sample-process-relative-to-its-corresponding-process-control-structure-perform-additional">
+                            18. 2. Give me one (1) sample process that can executed by each kernel component you have selected. Explain each sample process relative to its corresponding process control structure/. Perform additional research necessary</h2><br />
+                        <p><strong>Answer:</strong></p><p></p><p>answer:nothing I just want points</p><br />
+                                            <h2 class="ez-toc-section" id="identify-what-is-asked-in-the-following-statement-______________1-it-is-the-study-of-animals-______________2-it-is-the-change-in-the-genetic-make-up-of-populations-of-organism-over-time-_________">
+                            19. Identify what is asked in the following statement. ______________1. It is the study of animals. ______________2. It is the change in the genetic make-up of populations of organism over time. ______________3. It is a global overpopulation which is rooted on a virtually environmental problems. ______________4. It is an understanding of basic ecological principles that can help prevent ecological disasters. ______________ 5. It is a process that does not need cell energy. ______________6. It is a carrier protein in a plasma membrane that temporarily bind with molecules. ______________7. Water molecules that diffuse across selectively permeable membranes from areas of higher concentration to areas of lower concentration. ______________8. It is essentially protein-free plasma that moves across capillary walls due to a pressure gradient across the wall. ______________ 9. It is a specific carrier protein in the plasma that membrane bind with molecules. ______________10. It is a bulk movement of material into a cell by the formation of a vesicle. ______________11. A term for a plasma membrane that encloses small amounts of fluid droplets and takes them into the cell. ______________12. It is a plasma membrane that forms a vesicle around a solid particle. ______________13. It is the extracellular molecules that bind with specific receptor protein on a plasma membrane, causing the membrane to invaginate and draw molecules into the cell. ______________14. It is a bulk movement of materials out of a cell. ______________15. It forms basal body of cilia and flagella functions in mitotic spindle formation. ______________16. It traps, transforms, and uses light energy to convert carbon dioxide and water into glucose and oxygen. ______________17. It is a structure of a cell that controls heredity and cellular activities. ______________18. It moves small particles past fixed cells and is a major form of locomotion in some cells. ______________19. It is a structure of a cell that dissolves substance, houses organelles and vesicles. ______________ 20. It assists in cell movement; provides support and site for binding of specific enzymes. ______________ 21. It is a structure of a cell that houses organelles and serves as fluid medium for metabolic reactions. ______________22. It functions as a storage and internal transport. ______________23. It carries signals to distant parts of an animal’s body. ______________24. It is a cell function that sorts, packages, and routes cell’s synthesized products. ______________25. It is a cell function that digest materials. ______________26. It isolates particular chemical activities from the rest of the cell. ______________27. It gives structural support and assist in cell movement. ______________28. It assists in movement of cilia, flagella, and chromosomes; transport system. ______________29. It is the dense site in the cytoplasm that gives rise to large numbers of microtubules with different functions in the cytoskeleton. ______________30. It converts energy into a form the cell can use. ______________31. It is a cell structure that preassembles the point for ribosomes. ______________32. It contains DNA that controls cell’s genetic program and metabolic activities. ______________33. It is a cell structure that regulates movement of materials. ______________34. Is the site of cell function for protein synthesis. ______________35. It is the storage site of food and other compounds; also pumps water out of a cell. ______________36. It is a cell structure believed to transport messenger RNA from the nucleus to the ribosomes. ______________37. It is a site of intracellular digestion, storage or transport. ______________38. It consists of a single layer of tightly packed, flatted disked-shaped cells. ______________39. It consists of a single layer of tightly packed, cube shaped cells. ______________ 40. It consists of a single layer of elongated cells.​</h2><br />
+                        <p><strong>Answer:</strong></p><p>1.zoology</p><p>2. evolution</p><p>3. population</p><p>4. </p><p>5.passive transport</p><p>6.</p><p>7.osmosis</p><p>8.</p><p>9.</p><p>10. endocytosis</p><p>11.exocytosis</p><p>12.endocytosis</p><p>13.pinocytosis</p><p>14.exocytosis</p><p>15.centrioles</p><p>16.photosynthesis</p><p>17. nucleus</p><p>18.cytoskeleton</p><p>19.lysosomes</p><p>20.</p><p>21.cytoplasm</p><p>22.skeletal system</p><p>23.nervous system</p><p>24.golgi apparatus</p><p>25.lysosomes</p><p>26.</p><p>27.cytoskeleton</p><p>28.microtubeles</p><p>29.centrosome</p><p>30. cellular respiration</p><p>31.ribosome</p><p>32.nucleus</p><p>33.cell membrane</p><p>34.ribosomes</p><p>35.vacuole</p><p>36.mrna</p><p>37.lysosomes</p><p>38.simple cuboidal</p><p>39. simple epithelium</p><p>40. simple columnar epithelium</p><p></p><p><strong>Explanation:</strong></p><p>pabrainliest po salamat:&gt;</p><br />
+                                            <h2 class="ez-toc-section" id="b-match-the-following-types-of-observation-in-column-b-with-the-descriptions-in-column-a-write-the-letter-of-your-answer-on-the-space-provided-column-a-__1-a-special-environment-is-created__2-time">
+                            20. B. Match the following types of observation in column B with the descriptions in column A. Write the letter of your answer on the space provided.Column A.__1. a special environment is created__2. time is selected and particular actions counted __3. no advanced characteristics sougth __4. observer makes himself part of the group __5. observation done in natural setting __6. observer not part of group Column B.A. structuredB. personal C. participantD. unstructured E. non-participant F. uncontrolled G. controlled ​</h2><br />
+                        <p><strong>Answer:</strong></p><p>1.E</p><p>2.A</p><p>3.G</p><p>4.B</p><p>5.C</p><p>6.F</p><p><strong>Explanation:</strong></p><p>thats all</p><br />
+                                            <h2 class="ez-toc-section" id="ii-identification-read-the-following-and-identify-the-answer-inside-the-box-write-the-letter-on-the-space-provided-d-none-of-the-above26-structures-that-is-similar-in-forms-and-origin-but-have-di">
+                            21. II. Identification. Read the following and identify the answer inside the box. Write the letter on the space provided.d. none of the above26. Structures that is similar in forms and origin but have different functions.27. Structures that is different in forms and origin but similar in function.28. Evidence or any remnants of organisms that lived a long time ago.29. This happens when individual organisms leave and go to another place where they can find food, comfort,and resources for survival and reproduction.30. Refers to the highest number of population that the environment can sustainably support.31. It happens after the population reached its carrying capacity population getting smaller and smaller becauseevery individual competes for limited resources in his environment.32. A period happens before the population reaches carrying capacity resources are plenty for every organism,making the population grow faster and faster as it gets large,33. Is a resource or environmental condition which controls or stops the population.34. A process through which populations of living organisms adapt and change.35. Defined as the change in the characteristics of species over time.Emigratione. Fossilsf. disease and parasite 1. Limiting Factorb. Homologous structuresg. Logistic growthk. Natural selectionh. Exponential growth I. Populationi. EvolutionNoted by:Prepared by:MARIA BAMBI L. BILLANESHERNALYN R. ILLANUEVAPrincipal IScience Teachera.C.Carrying Capacityd. Analogous structurese. Fossilsitha​</h2><br />
+                        <p><strong>Answer:</strong></p><p>26. analogous structures</p><p>27.  biological structures </p><p>28. Fossils</p><p>29. habitat</p><p>30. Carrying capacity</p><p>31. Logistic growth</p><p>32. Population growth</p><p>33. Exponential growth</p><p>34. Natural selection</p><p>35. Evolution</p><p><strong>Explanation:</strong></p><p>#carry_on_learning</p><p>pa brainliest</p><br />
+                                            <h2 class="ez-toc-section" id="spot-the-thesis-statement-in-the-following-passagein-the-1940s-george-orwell-warned-%e2%80%9cwho-controls-the-past-controls-the-future-who-controls-the-present-controls-the-past%e2%80%9d-orwell-3">
+                            22. Spot the thesis statement in the following passage:
+In the 1940s, George Orwell warned “Who controls the past controls the future. Who controls the present controls the past” (Orwell 30). In the 1990s a band called Rage Against the Machine, the name itself referring to a people’s movement to fight against control (corporation, government or otherwise) used this mantra in their song “Testify,” a warning to not silently endure oppression. This warning is not only relevant to the 20th century, but has been applicable since human beings started forming structures of power to control and oppress one another. This can vividly be seen during the times of slavery in the United States when blacks were enslaved for two and a half centuries. In Frederick Douglass’s novel Narrative of the Life of Frederick Douglass, an American Slave, Douglass reveals how this long and brutal control of human beings was partly accomplished through control over literacy. The control and limitations over reading and writing during slavery sought to make slaves like Douglass ignorant, powerless, and therefore more easily controlled, and this control over literacy and education is still happening in the world today.
+--Sample essay on Frederick Douglass’s Narrative of the Life of Frederick Douglass, an American Slave
+Select one:
+a. In the 1940s, George Orwell warned “Who controls the past controls the future. Who controls the present controls the past” (Orwell 30).
+b. In Frederick Douglass’s novel Narrative of the Life of Frederick Douglass, an American Slave, Douglass reveals how this long and brutal control of human beings was partly accomplished through control over literacy.
+c. The control and limitations over reading and writing during slavery sought to make slaves like Douglass ignorant, powerless, and therefore more easily controlled, and this control over literacy and education is still happening in the world today. 
+d. In the 1990s a band called Rage Against the Machine, the name itself referring to a people’s movement to fight against control (corporation, government or otherwise) used this mantra in their song “Testify,” a warning to not silently endure oppression. </h2><br />
+                        c. The control and limitations over reading and writing during slavery sought to make slaves like Douglas is ignorant, powerless, and therefore more easily controlled, and this control over literacy and education is still happening in the world today. I believe<br /><br />c. The control and limitations over reading and writing during slavery sought to make slaves like Douglas is ignorant, powerless, and therefore more easily controlled, and this control over literacy and education is still happening in the world today. I believe <br />I think I hope you well<br />
+                                            <h2 class="ez-toc-section" id="identify-the-following-pictures-based-on-level-of-biological-organization-1-cell-membrane-_________-this-is-a-selectively-permeable-barrier-that-controls-what-goes-in-and-out-of-the-cell-2-bladd">
+                            23. Identify the following pictures based on level of biological organization. 1. Cell membrane (_________) This is a selectively permeable barrier that controls what goes in and out of the cell. 2. Bladder (_________) The bladder is a hollow, muscular organ that collects urine excreted by the kidneys before disposal by urination. 3. Lysosomes (_________) Lysosomes are organelles that contain enzymes to break down and remove waste in the cell. 4. Mitochondria (_________) Mitochondria are the site of cellular respiration in which sugar molecules are broken down to release energy. 5. Skin (_________) The skin is the largest organ of the integumentary system. It protects the underlying muscles, bones, and organs as well contributing to heat regulation and sensory perception. 6. Microtubules (________) Microtubules serve as part of the cell's system of structural support. They are also involved in the process of cellular division. 7. Cardiac (________) Coordinated contractions of cardiac tissue in the heart pump blood throughout the body.8. Digestive (________) Although digestive system take many forms in organisms throughout the world, the main function of digestion is to break down food so that it can be used for energy by the body. 9. Nervous (________) Nervous tissue is the main component of the brain and spinal cord which regulate and control body functions. 10. Epithelial (________) Epithelial tissue is located on the very outside of an organism (i.e.skin) as well as in the lining of hollow organs such as the bladder. Its purpose include protection and secretion. 11. Skeletal (________) The skeletal system is a rigid framework to which the softer tissues and organs of the body are attached. It provides protection and structural support for the body. 12. Urinary (_______) The urinary system produces, stores, and eliminates urinary waste. Through this process, the body is able to regulate electrolyte balance as well as maintain a healthy pH level. 13. Bones (_______) Bones are rigid organs that form part of the endoskeleton of vertebrates. They help to move, support and protect the body as well as producing red and white blood cells. 14. Nucleus (_______) This organelle contains the cell's genetic material (DNA) and therefore controls the cell's activities. 15. Brain (_______) In most vertebrate animals, the brain is the central organ of the nervous system. It controls the other systems of the body by either activating muscles or releasing chemicals. 16. Heart (_______) The heart is a muscular organ found in all animals with a circulatory system. It is responsible for pumping blood throughout the body through the use of coordinated contractions. 17. Endoplasmic Reticulum (________) The endoplasmic reticulum is an organelle that forms an interconnected network of tubules that serve to transport newly synthesized proteins. 18. Stomach (_________) The stomach is a muscular, hollow organ that works with the digestive system. It releases enzymes and strong acids that help to break down food to release useable energy. 19. Circulatory (________) This system transports nutrients (gases, hormones, etc.) carried in blood and lymph throughout tue body. It is powered by the 20. Connective (________) Connective tissue is made of a network of protein fibers that provide structural support. Bone, blood, cartilage, and fat are the four main types of connective tissue. 21. Nervous (_________) This system contains a network of specialized cells called neurons that coordinate actions by transmitting signals throughout the body. 22. Integumentary (________) The Integumentary system consists of the skin and its appendages (hair, feathers, nails, etc.). It serves to protect tye body as well to detect pain, sensation, and pressure. 23. Smooth Muscle (_______) Smooth tissue is able to contract on its own without a signal from the brain. These involuntary contractions help organs such as the stomach and intestines to break down and move food through the digestion process. ​</h2><br />
+                        <p><strong>Answer:</strong></p><p>Identify the following pictures based on level of biological organization. </p><p></p><p>1. Cell membrane (_____ORGANELLE____) </p><p>This is a selectively permeable barrier that controls what goes in and out of the cell. </p><p></p><p>2. Bladder (____ORGAN_____) </p><p>The bladder is a hollow, muscular organ that collects urine excreted by the kidneys before disposal by urination. </p><p></p><p>3. Lysosomes (____ORGANELLE_____) </p><p>Lysosomes are organelles that contain enzymes to break down and remove waste in the cell. </p><p></p><p>4. Mitochondria (____ORGANELLE_____) </p><p>Mitochondria are the site of cellular respiration in which sugar molecules are broken down to release energy. </p><p></p><p>5. Skin (_____ORGAN____) </p><p>The skin is the largest organ of the integumentary system. It protects the underlying muscles, bones, and organs as well contributing to heat regulation and sensory perception. </p><p></p><p>6. Microtubules (____ORGANELLE____) </p><p>Microtubules serve as part of the cell's system of structural support. They are also involved in the process of cellular division. </p><p></p><p>7. Cardiac (____TISSUE____) </p><p>Coordinated contractions of cardiac tissue in the heart pump blood throughout the body.</p><p></p><p>8. Digestive (____ORGAN SYSTEM____) </p><p>Although digestive system take many forms in organisms throughout the world, the main function of digestion is to break down food so that it can be used for energy by the body. </p><p></p><p>9. Nervous (____TISSUE____) </p><p>Nervous tissue is the main component of the brain and spinal cord which regulate and control body functions. </p><p></p><p>10. Epithelial (____TISSUE____) </p><p>Epithelial tissue is located on the very outside of an organism (i.e.skin) as well as in the lining of hollow organs such as the bladder. Its purpose include protection and secretion. </p><p></p><p>11. Skeletal (____ORGAN SYSTEM____) </p><p>The skeletal system is a rigid framework to which the softer tissues and organs of the body are attached. It provides protection and structural support for the body. </p><p></p><p>12. Urinary (____ORGAN SYSTEM___) </p><p>The urinary system produces, stores, and eliminates urinary waste. Through this process, the body is able to regulate electrolyte balance as well as maintain a healthy pH level. </p><p></p><p>13. Bones (___ORGAN SYSTEM____) </p><p>Bones are rigid organs that form part of the endoskeleton of vertebrates. They help to move, support and protect the body as well as producing red and white blood cells. </p><p></p><p>14. Nucleus (___ORGANELLE____) </p><p>This organelle contains the cell's genetic material (DNA) and therefore controls the cell's activities. </p><p></p><p>15. Brain (___ORGAN____) </p><p>In most vertebrate animals, the brain is the central organ of the nervous system. It controls the other systems of the body by either activating muscles or releasing chemicals. </p><p></p><p>16. Heart (___ORGAN____) </p><p>The heart is a muscular organ found in all animals with a circulatory system. It is responsible for pumping blood throughout the body through the use of coordinated contractions. </p><p></p><p>17. Endoplasmic Reticulum </p><p>(___ORGANELLE_____) </p><p>The endoplasmic reticulum is an organelle that forms an interconnected network of tubules that serve to transport newly synthesized proteins. </p><p></p><p>18. Stomach (____ORGAN_____) </p><p>The stomach is a muscular, hollow organ that works with the digestive system. It releases enzymes and strong acids that help to break down food to release useable energy. </p><p></p><p>19. Circulatory (___ORGAN SYSTEM_____) </p><p>This system transports nutrients (gases, hormones, etc.) carried in blood and lymph throughout tue body. It is powered by the </p><p></p><p>20. Connective (____TISSUE____) </p><p>Connective tissue is made of a network of protein fibers that provide structural support. Bone, blood, cartilage, and fat are the four main types of connective tissue. </p><p></p><p>21. Nervous (____ORGAN SYSTEM_____) </p><p>This system contains a network of specialized cells called neurons that coordinate actions by transmitting signals throughout the body. </p><p></p><p>22. Integumentary (___ORGAN SYSTEM_____) </p><p>The Integumentary system consists of the skin and its appendages (hair, feathers, nails, etc.). It serves to protect tye body as well to detect pain, sensation, and pressure. </p><p></p><p>23. Smooth Muscle (___TISSUE____) </p><p>Smooth tissue is able to contract on its own without a signal from the brain. These involuntary contractions help organs such as the stomach and intestines to break down and move food through the digestion process. </p><p></p><p></p><p><strong>Explanation:</strong></p><p>NOTE: Kindly refer to your lesdons, which was the lowest life heirarchy? Cell or Organelle. IIf Cell is the lowest then substitute ORGANELLE into CELL.</p><br />
+                                            <h2 class="ez-toc-section" id="dorm-radene-prowathe-ents-select-you-wees-the-poolotoplasm-aclecideukaryotaeukaryosi-cabplana-membraneprokaryotic-cellprokaryotaproduce-energyprovide-support-and-structuretransport-of-subein-your-sce">
+                            24. Dorm Radene prowathe ents. Select you wees the poolOtoplasm aclecidEukaryotaEukaryosi CabPlana MembraneProkaryotic CellProkaryotaproduce energyprovide support and structureTransport of subein your scence class, your teacher asked you to identify the cells in the piratesposted on the board. You observed that plaure 1 has no defined nucleus and you labeled it asFor Picture 2 the nucleus is very visible then this type of aces127Your teacher continued to deliver her lesson. She presentedData e has three basic parts. The (3)encloses the cell andseparates the inside organelles from the outside she explained. Your classmate said thatare jelly-like substances where all other cell parts are located. YouFaused your band and toló the dass that (5)the most easily seen partbecause it controls the activities of other parts of the cell Xione added that maticellularorganismes whose cells have nucleus are called (ELOn the other hansVsan continued to discuss that a unicellular organism whose red has no defined nucleus but hasapudeoid region is called (7)Finally your teacher emphasued that cells are the building blocks of life and are considered asbasic structural and functional unit of life. Because basically they perform all life processes thatenable organisms to grow and develop. Among the general functions of cells are: (8)(9)and (10)​</h2><br />
+                        <p><strong>Answer:</strong></p><p>iduno</p><p></p><p><strong>Explanation:</strong></p><p>ano Pong gagawin, kulang po kasi ang direksyon</p><br />
+                                            <h2 class="ez-toc-section" id="question-1not-yet-answeredmarked-out-of-1-00not-flaggedflag-questionquestion-textscientific-management-is-based-on-the-assumption-thatselect-onea-observation-would-reveal-the-workers-need-to">
+                            25. Question 1
+Not yet answered
+Marked out of 1.00
+Not flaggedFlag question
+Question text
+Scientific management is based on the assumption that:
+Select one:
+a. Observation would reveal the workers need to be multi-skilled.
+b. The scientific observation of people at work would reveal the one best way to do the task.
+c. Workers would receive a set wage regardless of performance.
+Question 2
+Not yet answered
+Marked out of 1.00
+Not flaggedFlag question
+Question text
+It is the intentional structure of roles, in a formally organized enterprise.
+Select one:
+a. Informal organization
+b. Tall organization
+c. Flat organization
+d. Formal organization
+Question 3
+Not yet answered
+Marked out of 1.00
+Not flaggedFlag question
+Question text
+Benchmarking is one source of alternative solutions that is coming into wider use.
+Select one:
+True
+False
+Question 4
+Not yet answered
+Marked out of 1.00
+Not flaggedFlag question
+Question text
+A company decision to diversify into new products and markets is an example of non-programmed decisions.
+Select one:
+True
+False
+Question 5
+Not yet answered
+Marked out of 1.00
+Not flaggedFlag question
+Question text
+They spell out specific required actions or non-actions, allowing no discretion.
+Select one:
+a. Budgets
+b. Strategies
+c. Objectives
+d. Rules
+Question 6
+Not yet answered
+Marked out of 1.00
+Not flaggedFlag question
+Question text
+The framework of interrelationships among individuals and departments that describe relationships of reporting and accountability is called:
+Select one:
+a. Organizational structure
+b. Span of control
+c. Specialization
+Question 7
+Not yet answered
+Marked out of 1.00
+Not flaggedFlag question
+Question text
+Authority moves _______, while accountability move________ within the organization.
+Select one:
+a. downward, upward
+b. upward, literally
+c. upward, downward
+Question 8
+Not yet answered
+Marked out of 1.00
+Not flaggedFlag question
+Question text
+What is the term used to define the number of subordinates directly controlled by a manager?
+Select one:
+a. Span of management
+b. Division structure
+c. Investment span
+Question 9
+Not yet answered
+Marked out of 1.00
+Not flaggedFlag question
+Question text
+Delegation is one-sided relationship.
+Select one:
+a. True
+b. False
+Question 10
+Not yet answered
+Marked out of 1.00
+Not flaggedFlag question
+Question text
+Which of the following is incorrect?
+Select one:
+a. Planning is the part of the management process that attempts to define the organization's future.
+b. Planning is a one-time event.
+c. The approach to planning can differ greatly from manager to manager.</h2><br />
+                        planning is a one-time event<br />
+                                            <h2 class="ez-toc-section" id="which-control-structure-will-execute-an-instruction-only-after-the-computer-evaluates-conditions-to-determine-if-a-certain-condition-existsanswer-choicesa-selectionb-loopc-functionald-sequen">
+                            26. Which control structure will execute an instruction only after the computer evaluates conditions to determine if a certain condition exists?
+answer choices
+A. Selection
+B. Loop
+C. Functional
+D. Sequence</h2><br />
+                        <p><strong>Selection</strong> is a control structure that will execute an instruction only after the computer evaluates conditions to determine if a certain condition exists.</p><p></p><p><strong>Control Structures</strong> can be thought of as the skeletons of computer programs. It is a piece of code that analyzes variables and determines where the program should go. It is also a codebase component that supports decisions based on variable analysis. Control structures can be classified as sequence, selection, or repetition.</p><p></p><p>In a <strong>structural programming language</strong>, the sequence control structure is a type of control structure. The <strong>linear execution</strong> of codes within a program is referred to as sequence control. Instructions are carried out one by one.</p><p></p><p><strong>If you want to learn more about algorithm, please visit the link below:</strong></p>https://brainly.ph/question/12902170<p>#SPJ4</p><p></p><p></p><p></p><p></p><br />
+                                            <h2 class="ez-toc-section" id="using-the-selection-%e2%80%95bacteria-and-viruses%e2%80%96-and-your-answer-in-the-table-under-%e2%80%95what-is-it%e2%80%96-differentiate-bacteria-and-viruses-by-filling-out-the-diagram-below-do-this">
+                            27. Using the selection ―BACTERIA and VIRUSES‖ and your answer in the table under ―What is it,‖ Differentiate bacteria and viruses by filling out the diagram below. Do this on a sheet of paper.DefinitionStructureLiving or NotKingdomSize Harmfulness Control BACTERIA VIRUSES​</h2><br />
+                        <p><strong>Answer:</strong></p><p>Bacteria Definition:a member of a large group of unicellular microorganisms which have cell walls but lack organelles and an organized nucleus, including some that can cause disease.</p><p></p><p>Structure of the bacteria:They come in many shapes and sizes, from minute spheres, cylinders and spiral threads, to flagellated rods, and filamentous chains</p><p></p><p>Bacteria is a living thing </p><p></p><p>The kingdom of bacteria is Monera,their are many bacteria kingdom but their kingdom formerly called Monera some example of bacteria kingdom:</p><p>*Archaebacteria Kingdom</p><p>*Eubacteria Kingdom </p><p></p><p>Size of the bacteria:1 to 2 microns in diameter and 5 to 10 microns long</p><p></p><p>Harmfulness: If you consume or come in contact with harmful bacteria, they may reproduce in your body and release toxins that can damage your body's tissues and make you feel ill.</p><p></p><p>Control:physical agents and chemical agent.</p><p></p><p>Sana maka tulong sa module mo.</p><p>Hindi KO sinagutan ang Virus kasi ang haba na.</p><p></p><br />
+                                            <h2 class="ez-toc-section" id="natural-objects-and-phenomenon-behave-by-the-underlying-mathematical-structure-interactions-and-relationships-of-nature-can-be-best-described-by-mathematical-equations-select-one-a-mathematics-fo">
+                            28. Natural objects and phenomenon behave by the underlying mathematical structure. Interactions and relationships of nature can be best described by mathematical equations
+ Select one: 
+a. Mathematics for Organization
+ b. Mathematics for Control
+ c. Mathematics for Prediction 
+d. Mathematics is indespensible</h2><br />
+                        d. mathematics is indespensible<br />
+                                            <h2 class="ez-toc-section" id="identification-identify-if-the-following-organizational-structure-design-is-traditional-t-or-modern-m-_____a-design-that-groups-together-similar-or-related-specialties-_____b-it-is-made-up-of">
+                            29. Identification. Identify if the following Organizational Structure Design is Traditional (T) or Modern (M).  _____a. Design that groups together similar or related specialties _____b. It is made up of work teams _____c. Design where employees continuously work on a project _____d. Focus on performance improvement of people _____e. Focus on flexibility and problem solving _____f. Design made up of separate units where present             corporation acts as overseer  _____g. Boundaryless _____h. Big number of subordinates reporting to a centralized              authority figure _____i. Matrix Design _____j. Design with few departments, wide spans of control  Arrangement in Chronological Order. Arrange the following Delegation steps in chronological order. Number the first step 1, and the last step 8. _____a. Granting to the assigned person the authority to act _____b. Assigning of responsibility _____c. Checking the task accomplishment progress _____d. Defining the goal clearly _____e. Giving the assigned person enough time and resources to             do the task _____f. Making sure that the task objectives have been achieved _____g. Asking person assigned about these planned approaches _____h. Selecting the person who will be given the task ​</h2><br />
+                        <p><strong>Answer:</strong></p><p>a.T</p><p>b.T</p><p>c.T</p><p>d.M</p><p>e.m</p><p>f.T</p><p>g.M</p><p>h.M</p><p>I.M</p><p>j.T</p><p>B.</p><p>a.5</p><p>b.4</p><p>c.7</p><p>d.8</p><p>e.3</p><p>f.6</p><p>g.2</p><p>h.1</p><br />
+                                            <h2 class="ez-toc-section" id="activity-3-identifyidentify-the-characteristics-of-life-described-in-the-following-statement-write-your-answer-on-a-separate-sheet-of-paper-1-generate-offspring-2-get-bigger-more-complex-or-dev">
+                            30. Activity 3. Identify!Identify the characteristics of life described in the following statement.Write your answer on a separate sheet of paper..1. Generate offspring.2. Get bigger, more complex, or develop in some ways.3. Eat, breathe, excrete waste; energy usage.4. Made of one or more cells with complex structures and chemicalprocesses5. Adjust over time due to mutation and natural selection, whichimproves survival.6. Respond to things to their external environment (often as movement).7. Maintain a relatively controlled internal environment.​</h2><br />
+                        <p>Answer:</p><p>1. Reproduction</p><p>2. Growth and development </p><p>3. Energy metabolism </p><p>4. Organization </p><p>5. Adaptation</p><p>6. Response to stimuli</p><p>7. Homeostasis </p><br />
+                    
+                </div>
+                <div class="youtubeVideo" style="text-align: center">
+                    <h3>Video Terkait</h3>
+                    <iframe width="560" height="315"
+                        src="https://www.youtube.com/embed/?controls=0" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"allowfullscreen></iframe>
+                </div>
+                <footer class="entry-meta" aria-label="Meta postingan">
+                    <span class="cat-links"><span class="gp-icon icon-categories"><svg viewBox="0 0 512 512"
+                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em">
+                                <path
+                                    d="M0 112c0-26.51 21.49-48 48-48h110.014a48 48 0 0143.592 27.907l12.349 26.791A16 16 0 00228.486 128H464c26.51 0 48 21.49 48 48v224c0 26.51-21.49 48-48 48H48c-26.51 0-48-21.49-48-48V112z">
+                                </path>
+                            </svg></span><span class="screen-reader-text">Kategori </span>computer_science</span>
+            </div>
+        </article>
+    </main>
+            </div>
+            <div class="widget-area sidebar is-right-sidebar" id="right-sidebar">
+                <div class="inside-right-sidebar">
+                    <aside id="categories-2" class="widget inner-padding widget_categories">
+                        <h2 class="widget-title">Topik</h2>
+                        <ul>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/soft-hurdle-rate.html">Soft Hurdle Rate</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/250-meters-to-feet.html">250 Meters To Feet</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/what-i-notice-while-reading.html">What I Notice While Reading</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/5-percent-of-200000.html">5 Percent Of 200000</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/ree-diagram.html">Ree Diagram</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/armored-train-gino-severini.html">Armored Train Gino Severini</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/inaayon.html">Inaayon</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/emily-post-s-etiquette-18.html">Emily Post s Etiquette 18</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/hooke-s-law-example-problems.html">Hooke s Law Example Problems</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/greek-word-for-drama.html">Greek Word For Drama</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/halfly.html">Halfly</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/66-2-3-to-fraction.html">66 2 3 To Fraction</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/intedes.html">Intedes</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/spartan-advisory.html">Spartan Advisory</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/nescafe-3-in-1-calories.html">Nescafe 3 In 1 Calories</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/carrier-ac-modes.html">Carrier Ac Modes</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/evaluate-5649.html">Evaluate 5/6+4/9</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/bcd-subtraction-using-10-s-complement.html">Bcd Subtraction Using 10 s Complement</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/plug-flow-reactor-p-id.html">Plug Flow Reactor P id</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/the-sun-s-photosphere-is-by-mass-about-75.html">The Sun s Photosphere Is By Mass About 75</a>
+                                </li>
+                                                    </ul>
+
+                    </aside>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="site-footer">
+        <footer class="site-info" aria-label="Situs" itemtype="https://schema.org/WPFooter" itemscope>
+            <div class="inside-site-info grid-container">
+                <div class="copyright-bar">
+                    <span class="copyright">&copy; 2023 <a href="https://jneweducation.github.io"
+                            itemprop="url">QnA</a></span>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <a title="Gulirkan kembali ke puncak laman" aria-label="Gulirkan kembali ke puncak laman" rel="nofollow"
+        href="#" class="generate-back-to-top" data-scroll-speed="400" data-start-scroll="300">
+        <span class="gp-icon icon-arrow-up"><svg viewBox="0 0 330 512" aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill-rule="evenodd"
+                clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414">
+                <path
+                    d="M305.863 314.916c0 2.266-1.133 4.815-2.832 6.514l-14.157 14.163c-1.699 1.7-3.964 2.832-6.513 2.832-2.265 0-4.813-1.133-6.512-2.832L164.572 224.276 53.295 335.593c-1.699 1.7-4.247 2.832-6.512 2.832-2.265 0-4.814-1.133-6.513-2.832L26.113 321.43c-1.699-1.7-2.831-4.248-2.831-6.514s1.132-4.816 2.831-6.515L158.06 176.408c1.699-1.7 4.247-2.833 6.512-2.833 2.265 0 4.814 1.133 6.513 2.833L303.03 308.4c1.7 1.7 2.832 4.249 2.832 6.515z"
+                    fill-rule="nonzero" />
+            </svg></span>
+    </a>
+    <script id="generate-a11y">
+        ! function() {
+            "use strict";
+            if ("querySelector" in document && "addEventListener" in window) {
+                var e = document.body;
+                e.addEventListener("mousedown", function() {
+                    e.classList.add("using-mouse")
+                }), e.addEventListener("keydown", function() {
+                    e.classList.remove("using-mouse")
+                })
+            }
+        }();
+    </script>
+    <!--[if lte IE 11]>
+<script src='https://jneweducation.github.io/js/classList.min.js' ?ver=3.2.4' id='generate-classlist-js'></script>
+<![endif]-->
+    <script id='generate-menu-js-extra'>
+        var generatepressMenu = {
+            "toggleOpenedSubMenus": "1",
+            "openSubMenuLabel": "Buka Submenu",
+            "closeSubMenuLabel": "Tutup submenu"
+        };
+    </script>
+    <script src='https://jneweducation.github.io/js/menu.min.js' ?ver=3.2.4' id='generate-menu-js'></script>
+    <script id='generate-navigation-search-js-extra'>
+        var generatepressNavSearch = {
+            "open": "Buka Kolom Pencarian",
+            "close": "Tutup Kolom Pencarian"
+        };
+    </script>
+    <script src='https://jneweducation.github.io/js/navigation-search.min.js' ?ver=3.2.4' id='generate-navigation-search-js'></script>
+    <script id='generate-back-to-top-js-extra'>
+        var generatepressBackToTop = {
+            "smooth": "1"
+        };
+    </script>
+    <script src='https://jneweducation.github.io/js/back-to-top.min.js' ?ver=3.2.4' id='generate-back-to-top-js'></script>
+    <script type='text/javascript' src='//jd3j7g5z1fqs.com/96/78/7a/96787a1945876b1a9c10f79941441964.js'></script>
+<script type='text/javascript' src='//jd3j7g5z1fqs.com/b4/f1/ef/b4f1ef8dfe59b7fa68754094cf6c8e0e.js'></script>
+  <!-- Histats.com  START  (aync)-->
+<script type="text/javascript">var _Hasync= _Hasync|| [];
+_Hasync.push(['Histats.start', '1,4739059,4,0,0,0,00010000']);
+_Hasync.push(['Histats.fasi', '1']);
+_Hasync.push(['Histats.track_hits', '']);
+(function() {
+var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
+hs.src = ('//s10.histats.com/js15_as.js');
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+})();</script>
+<noscript><a href="/" target="_blank"><img  src="//sstatic1.histats.com/0.gif?4739059&101" alt="" border="0"></a></noscript>
+<!-- Histats.com  END  -->
+</body>
+
+</html>

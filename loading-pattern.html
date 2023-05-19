@@ -1,0 +1,1233 @@
+<!DOCTYPE html>
+<html lang="id" prefix="og: https://ogp.me/ns#">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="profile" href="https://gmpg.org/xfn/11">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Loading Pattern - QnA</title>
+    <meta name="description" content="Loading Pattern, Past CE Board Exam Problem about Pattern Loading Solved!, , , , Gillesania Engineering Videos, 2020-08-31T08:00:57.000000Z, 20, Deciding how many load patterns to use, docs.bentley.com, 618 x 516, png, , 20, loading-pattern, QnA" />
+    <meta name="robots" content="index,follow" />
+    <meta property="og:locale" content="id_ID" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Loading Pattern - QnA" />
+    <meta property="og:description" content="Loading Pattern, Past CE Board Exam Problem about Pattern Loading Solved!, , , , Gillesania Engineering Videos, 2020-08-31T08:00:57.000000Z, 20, Deciding how many load patterns to use, docs.bentley.com, 618 x 516, png, , 20, loading-pattern, QnA" />
+    <meta property="og:site_name" content="QnA" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Loading Pattern - QnA" />
+    <meta name="twitter:description" content="Loading Pattern, Past CE Board Exam Problem about Pattern Loading Solved!, , , , Gillesania Engineering Videos, 2020-08-31T08:00:57.000000Z, 20, Deciding how many load patterns to use, docs.bentley.com, 618 x 516, png, , 20, loading-pattern, QnA" />
+    <link rel='stylesheet' id='generate-style-css' href='https://jneweducation.github.io/css/main.min.css'?ver=3.2.4'
+        media='all' />
+    <link rel='stylesheet' id='ez-toc-css' href='https://jneweducation.github.io/css/screen.min.css'?ver=2.0.40' media='all' />
+    <style id='generate-style-inline-css'>
+        body {
+            background-color: #f7f7f7;
+            color: #222222;
+        }
+
+        a {
+            color: #1e73be;
+        }
+
+        a:hover,
+        a:focus,
+        a:active {
+            color: #000000;
+        }
+
+        .wp-block-group__inner-container {
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .generate-back-to-top {
+            font-size: 20px;
+            border-radius: 3px;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            line-height: 40px;
+            width: 40px;
+            text-align: center;
+            z-index: 10;
+            transition: opacity 300ms ease-in-out;
+            opacity: 0.1;
+            transform: translateY(1000px);
+        }
+
+        .generate-back-to-top__show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .navigation-search {
+            position: absolute;
+            left: -99999px;
+            pointer-events: none;
+            visibility: hidden;
+            z-index: 20;
+            width: 100%;
+            top: 0;
+            transition: opacity 100ms ease-in-out;
+            opacity: 0;
+        }
+
+        .navigation-search.nav-search-active {
+            left: 0;
+            right: 0;
+            pointer-events: auto;
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .navigation-search input[type="search"] {
+            outline: 0;
+            border: 0;
+            vertical-align: bottom;
+            line-height: 1;
+            opacity: 0.9;
+            width: 100%;
+            z-index: 20;
+            border-radius: 0;
+            -webkit-appearance: none;
+            height: 60px;
+        }
+
+        .navigation-search input::-ms-clear {
+            display: none;
+            width: 0;
+            height: 0;
+        }
+
+        .navigation-search input::-ms-reveal {
+            display: none;
+            width: 0;
+            height: 0;
+        }
+
+        .navigation-search input::-webkit-search-decoration,
+        .navigation-search input::-webkit-search-cancel-button,
+        .navigation-search input::-webkit-search-results-button,
+        .navigation-search input::-webkit-search-results-decoration {
+            display: none;
+        }
+
+        .gen-sidebar-nav .navigation-search {
+            top: auto;
+            bottom: 0;
+        }
+
+        :root {
+            --contrast: #222222;
+            --contrast-2: #575760;
+            --contrast-3: #b2b2be;
+            --base: #f0f0f0;
+            --base-2: #f7f8f9;
+            --base-3: #ffffff;
+            --accent: #1e73be;
+        }
+
+        .has-contrast-color {
+            color: var(--contrast);
+        }
+
+        .has-contrast-background-color {
+            background-color: var(--contrast);
+        }
+
+        .has-contrast-2-color {
+            color: var(--contrast-2);
+        }
+
+        .has-contrast-2-background-color {
+            background-color: var(--contrast-2);
+        }
+
+        .has-contrast-3-color {
+            color: var(--contrast-3);
+        }
+
+        .has-contrast-3-background-color {
+            background-color: var(--contrast-3);
+        }
+
+        .has-base-color {
+            color: var(--base);
+        }
+
+        .has-base-background-color {
+            background-color: var(--base);
+        }
+
+        .has-base-2-color {
+            color: var(--base-2);
+        }
+
+        .has-base-2-background-color {
+            background-color: var(--base-2);
+        }
+
+        .has-base-3-color {
+            color: var(--base-3);
+        }
+
+        .has-base-3-background-color {
+            background-color: var(--base-3);
+        }
+
+        .has-accent-color {
+            color: var(--accent);
+        }
+
+        .has-accent-background-color {
+            background-color: var(--accent);
+        }
+
+        body,
+        button,
+        input,
+        select,
+        textarea {
+            font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        }
+
+        body {
+            line-height: 1.5;
+        }
+
+        .entry-content>[class*="wp-block-"]:not(:last-child) {
+            margin-bottom: 1.5em;
+        }
+
+        .main-navigation .main-nav ul ul li a {
+            font-size: 14px;
+        }
+
+        .sidebar .widget,
+        .footer-widgets .widget {
+            font-size: 17px;
+        }
+
+        @media (max-width:768px) {
+            h1 {
+                font-size: 31px;
+            }
+
+            h2 {
+                font-size: 27px;
+            }
+
+            h3 {
+                font-size: 24px;
+            }
+
+            h4 {
+                font-size: 22px;
+            }
+
+            h5 {
+                font-size: 19px;
+            }
+        }
+
+        .top-bar {
+            background-color: #636363;
+            color: #ffffff;
+        }
+
+        .top-bar a {
+            color: #ffffff;
+        }
+
+        .top-bar a:hover {
+            color: #303030;
+        }
+
+        .site-header {
+            background-color: #ffffff;
+        }
+
+        .main-title a,
+        .main-title a:hover {
+            color: #222222;
+        }
+
+        .site-description {
+            color: #757575;
+        }
+
+        .main-navigation,
+        .main-navigation ul ul {
+            background-color: #ed4250;
+        }
+
+        .main-navigation .main-nav ul li a,
+        .main-navigation .menu-toggle,
+        .main-navigation .menu-bar-items {
+            color: #ffffff;
+        }
+
+        .main-navigation .main-nav ul li:not([class*="current-menu-"]):hover>a,
+        .main-navigation .main-nav ul li:not([class*="current-menu-"]):focus>a,
+        .main-navigation .main-nav ul li.sfHover:not([class*="current-menu-"])>a,
+        .main-navigation .menu-bar-item:hover>a,
+        .main-navigation .menu-bar-item.sfHover>a {
+            color: #ffffff;
+            background-color: #c42f2f;
+        }
+
+        button.menu-toggle:hover,
+        button.menu-toggle:focus {
+            color: #ffffff;
+        }
+
+        .main-navigation .main-nav ul li[class*="current-menu-"]>a {
+            color: #ffffff;
+            background-color: #c42f2f;
+        }
+
+        .navigation-search input[type="search"],
+        .navigation-search input[type="search"]:active,
+        .navigation-search input[type="search"]:focus,
+        .main-navigation .main-nav ul li.search-item.active>a,
+        .main-navigation .menu-bar-items .search-item.active>a {
+            color: #ffffff;
+            background-color: #c42f2f;
+        }
+
+        .main-navigation ul ul {
+            background-color: #c42f2f;
+        }
+
+        .main-navigation .main-nav ul ul li a {
+            color: #ffffff;
+        }
+
+        .main-navigation .main-nav ul ul li:not([class*="current-menu-"]):hover>a,
+        .main-navigation .main-nav ul ul li:not([class*="current-menu-"]):focus>a,
+        .main-navigation .main-nav ul ul li.sfHover:not([class*="current-menu-"])>a {
+            color: #fcd9d6;
+            background-color: #c42f2f;
+        }
+
+        .main-navigation .main-nav ul ul li[class*="current-menu-"]>a {
+            color: #fcd9d6;
+            background-color: #c42f2f;
+        }
+
+        .separate-containers .inside-article,
+        .separate-containers .comments-area,
+        .separate-containers .page-header,
+        .one-container .container,
+        .separate-containers .paging-navigation,
+        .inside-page-header {
+            background-color: #ffffff;
+        }
+
+        .entry-title a {
+            color: #222222;
+        }
+
+        .entry-title a:hover {
+            color: #55555e;
+        }
+
+        .entry-meta {
+            color: #595959;
+        }
+
+        .sidebar .widget {
+            background-color: #ffffff;
+        }
+
+        .footer-widgets {
+            background-color: #ffffff;
+        }
+
+        .footer-widgets .widget-title {
+            color: #000000;
+        }
+
+        .site-info {
+            color: #ffffff;
+            background-color: #55555e;
+        }
+
+        .site-info a {
+            color: #ffffff;
+        }
+
+        .site-info a:hover {
+            color: #d3d3d3;
+        }
+
+        .footer-bar .widget_nav_menu .current-menu-item a {
+            color: #d3d3d3;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="url"],
+        input[type="password"],
+        input[type="search"],
+        input[type="tel"],
+        input[type="number"],
+        textarea,
+        select {
+            color: #666666;
+            background-color: #fafafa;
+            border-color: #cccccc;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="url"]:focus,
+        input[type="password"]:focus,
+        input[type="search"]:focus,
+        input[type="tel"]:focus,
+        input[type="number"]:focus,
+        textarea:focus,
+        select:focus {
+            color: #666666;
+            background-color: #ffffff;
+            border-color: #bfbfbf;
+        }
+
+        button,
+        html input[type="button"],
+        input[type="reset"],
+        input[type="submit"],
+        a.button,
+        a.wp-block-button__link:not(.has-background) {
+            color: #ffffff;
+            background-color: #55555e;
+        }
+
+        button:hover,
+        html input[type="button"]:hover,
+        input[type="reset"]:hover,
+        input[type="submit"]:hover,
+        a.button:hover,
+        button:focus,
+        html input[type="button"]:focus,
+        input[type="reset"]:focus,
+        input[type="submit"]:focus,
+        a.button:focus,
+        a.wp-block-button__link:not(.has-background):active,
+        a.wp-block-button__link:not(.has-background):focus,
+        a.wp-block-button__link:not(.has-background):hover {
+            color: #ffffff;
+            background-color: #3f4047;
+        }
+
+        a.generate-back-to-top {
+            background-color: rgba(0, 0, 0, 0.4);
+            color: #ffffff;
+        }
+
+        a.generate-back-to-top:hover,
+        a.generate-back-to-top:focus {
+            background-color: rgba(0, 0, 0, 0.6);
+            color: #ffffff;
+        }
+
+        @media (max-width:768px) {
+
+            .main-navigation .menu-bar-item:hover>a,
+            .main-navigation .menu-bar-item.sfHover>a {
+                background: none;
+                color: #ffffff;
+            }
+        }
+
+        .nav-below-header .main-navigation .inside-navigation.grid-container,
+        .nav-above-header .main-navigation .inside-navigation.grid-container {
+            padding: 0px 20px 0px 20px;
+        }
+
+        .site-main .wp-block-group__inner-container {
+            padding: 40px;
+        }
+
+        .separate-containers .paging-navigation {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .entry-content .alignwide,
+        body:not(.no-sidebar) .entry-content .alignfull {
+            margin-left: -40px;
+            width: calc(100% + 80px);
+            max-width: calc(100% + 80px);
+        }
+
+        .rtl .menu-item-has-children .dropdown-menu-toggle {
+            padding-left: 20px;
+        }
+
+        .rtl .main-navigation .main-nav ul li.menu-item-has-children>a {
+            padding-right: 20px;
+        }
+
+        @media (max-width:768px) {
+
+            .separate-containers .inside-article,
+            .separate-containers .comments-area,
+            .separate-containers .page-header,
+            .separate-containers .paging-navigation,
+            .one-container .site-content,
+            .inside-page-header {
+                padding: 30px;
+            }
+
+            .site-main .wp-block-group__inner-container {
+                padding: 30px;
+            }
+
+            .inside-top-bar {
+                padding-right: 30px;
+                padding-left: 30px;
+            }
+
+            .inside-header {
+                padding-right: 30px;
+                padding-left: 30px;
+            }
+
+            .widget-area .widget {
+                padding-top: 30px;
+                padding-right: 30px;
+                padding-bottom: 30px;
+                padding-left: 30px;
+            }
+
+            .footer-widgets-container {
+                padding-top: 30px;
+                padding-right: 30px;
+                padding-bottom: 30px;
+                padding-left: 30px;
+            }
+
+            .inside-site-info {
+                padding-right: 30px;
+                padding-left: 30px;
+            }
+
+            .entry-content .alignwide,
+            body:not(.no-sidebar) .entry-content .alignfull {
+                margin-left: -30px;
+                width: calc(100% + 60px);
+                max-width: calc(100% + 60px);
+            }
+
+            .one-container .site-main .paging-navigation {
+                margin-bottom: 20px;
+            }
+        }
+
+        /* End cached CSS */
+        .is-right-sidebar {
+            width: 30%;
+        }
+
+        .is-left-sidebar {
+            width: 30%;
+        }
+
+        .site-content .content-area {
+            width: 70%;
+        }
+
+        @media (max-width:768px) {
+
+            .main-navigation .menu-toggle,
+            .sidebar-nav-mobile:not(#sticky-placeholder) {
+                display: block;
+            }
+
+            .main-navigation ul,
+            .gen-sidebar-nav,
+            .main-navigation:not(.slideout-navigation):not(.toggled) .main-nav>ul,
+            .has-inline-mobile-toggle #site-navigation .inside-navigation>*:not(.navigation-search):not(.main-nav) {
+                display: none;
+            }
+
+            .nav-align-right .inside-navigation,
+            .nav-align-center .inside-navigation {
+                justify-content: space-between;
+            }
+        }
+    </style>
+    <link rel="icon" href="https://jneweducation.github.io/img/cropped-soalbelajar-32x32.png" sizes="32x32" />
+    <link rel="icon" href="https://jneweducation.github.io/img/cropped-soalbelajar-192x192.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="https://jneweducation.github.io/img/cropped-soalbelajar-180x180.png" />
+    <meta name="msapplication-TileImage" content="https://jneweducation.github.io/img/cropped-soalbelajar-270x270.png" />
+</head>
+
+<body
+    class="home blog wp-custom-logo wp-embed-responsive right-sidebar nav-above-header separate-containers nav-search-enabled nav-aligned-center header-aligned-center dropdown-hover"
+    itemtype="https://schema.org/Blog" itemscope>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-dark-grayscale">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 0.49803921568627" />
+                    <feFuncG type="table" tableValues="0 0.49803921568627" />
+                    <feFuncB type="table" tableValues="0 0.49803921568627" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-grayscale">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 1" />
+                    <feFuncG type="table" tableValues="0 1" />
+                    <feFuncB type="table" tableValues="0 1" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-purple-yellow">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.54901960784314 0.98823529411765" />
+                    <feFuncG type="table" tableValues="0 1" />
+                    <feFuncB type="table" tableValues="0.71764705882353 0.25490196078431" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-blue-red">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 1" />
+                    <feFuncG type="table" tableValues="0 0.27843137254902" />
+                    <feFuncB type="table" tableValues="0.5921568627451 0.27843137254902" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-midnight">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 0" />
+                    <feFuncG type="table" tableValues="0 0.64705882352941" />
+                    <feFuncB type="table" tableValues="0 1" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-magenta-yellow">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.78039215686275 1" />
+                    <feFuncG type="table" tableValues="0 0.94901960784314" />
+                    <feFuncB type="table" tableValues="0.35294117647059 0.47058823529412" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-purple-green">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.65098039215686 0.40392156862745" />
+                    <feFuncG type="table" tableValues="0 1" />
+                    <feFuncB type="table" tableValues="0.44705882352941 0.4" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-blue-orange">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.098039215686275 1" />
+                    <feFuncG type="table" tableValues="0 0.66274509803922" />
+                    <feFuncB type="table" tableValues="0.84705882352941 0.41960784313725" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><a class="screen-reader-text skip-link" href="#content" title="Langsung ke isi">Langsung ke isi</a>
+    <nav class="main-navigation nav-align-center has-menu-bar-items sub-menu-right" id="site-navigation"
+        aria-label="Utama" itemtype="https://schema.org/SiteNavigationElement" itemscope>
+        <div class="inside-navigation grid-container">
+            <form method="get" class="search-form navigation-search" action="/">
+                <input type="search" class="search-field" value="" name="q" title="Cari" />
+            </form> <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+                <span class="gp-icon icon-menu-bars"><svg viewBox="0 0 512 512" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" width="1em" height="1em">
+                        <path
+                            d="M0 96c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24zm0 160c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24zm0 160c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24z" />
+                    </svg><svg viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                        width="1em" height="1em">
+                        <path
+                            d="M71.029 71.029c9.373-9.372 24.569-9.372 33.942 0L256 222.059l151.029-151.03c9.373-9.372 24.569-9.372 33.942 0 9.372 9.373 9.372 24.569 0 33.942L289.941 256l151.03 151.029c9.372 9.373 9.372 24.569 0 33.942-9.373 9.372-24.569 9.372-33.942 0L256 289.941l-151.029 151.03c-9.373 9.372-24.569 9.372-33.942 0-9.372-9.373-9.372-24.569 0-33.942L222.059 256 71.029 104.971c-9.372-9.373-9.372-24.569 0-33.942z" />
+                    </svg></span><span class="mobile-menu">Menu</span> </button>
+            <div id="primary-menu" class="main-nav">
+                <ul id="menu-soal-belajar" class=" menu sf-menu">
+                    <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1"><a
+                            href="https://jneweducation.github.io">Home</a></li>
+                </ul>
+                </ul>
+            </div>
+            <div class="menu-bar-items"><span class="menu-bar-item search-item"><a aria-label="Buka Kolom Pencarian"
+                        href="#"><span class="gp-icon icon-search"><svg viewBox="0 0 512 512"
+                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M208 48c-88.366 0-160 71.634-160 160s71.634 160 160 160 160-71.634 160-160S296.366 48 208 48zM0 208C0 93.125 93.125 0 208 0s208 93.125 208 208c0 48.741-16.765 93.566-44.843 129.024l133.826 134.018c9.366 9.379 9.355 24.575-.025 33.941-9.379 9.366-24.575 9.355-33.941-.025L337.238 370.987C301.747 399.167 256.839 416 208 416 93.125 416 0 322.875 0 208z" />
+                            </svg><svg viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                width="1em" height="1em">
+                                <path
+                                    d="M71.029 71.029c9.373-9.372 24.569-9.372 33.942 0L256 222.059l151.029-151.03c9.373-9.372 24.569-9.372 33.942 0 9.372 9.373 9.372 24.569 0 33.942L289.941 256l151.03 151.029c9.372 9.373 9.372 24.569 0 33.942-9.373 9.372-24.569 9.372-33.942 0L256 289.941l-151.029 151.03c-9.373 9.372-24.569 9.372-33.942 0-9.372-9.373-9.372-24.569 0-33.942L222.059 256 71.029 104.971c-9.372-9.373-9.372-24.569 0-33.942z" />
+                            </svg></span></a></span></div>
+        </div>
+    </nav>
+    <header class="site-header grid-container" id="masthead" aria-label="Situs"
+        itemtype="https://schema.org/WPHeader" itemscope>
+        <div class="inside-header grid-container">
+            <h1 class="site-logo">
+                <a href="https://jneweducation.github.io" rel="home"> QnA</a>
+            </h1>
+        </div>
+    </header>
+
+    <div class="site grid-container container hfeed" id="page">
+        <div class="site-content" id="content">
+            <div class="content-area" id="primary">
+                    <main class="site-main" id="main">
+        <article id="post-1327" class="post-1327 post type-post status-publish format-standard hentry category-info"
+            itemtype="https://schema.org/CreativeWork" itemscope="">
+            <div class="inside-article">
+                <header class="entry-header" aria-label="Konten">
+                    <h1 class="entry-title" itemprop="headline">Loading Pattern</h1>
+                    <div class="entry-meta">
+                       <span
+                            class="byline">oleh <span class="author vcard" itemprop="author"
+                                itemtype="https://schema.org/Person" itemscope=""><span class="author-name"
+                                    itemprop="name">millercarlbautista</span></span></span>
+                    </div>
+                </header>
+                <div class="entry-content" itemprop="text">
+                    <div style="text-align: center">
+                        <img src="https://tse1.mm.bing.net/th?q=Loading+Pattern" alt="Loading Pattern">
+                    </div>
+                    <p></p>
+                    <p>what note is needed to complete the rhythmic pattern to load ?​</p>
+                    <div id="ez-toc-container"
+                        class="ez-toc-v2_0_40 counter-hierarchy ez-toc-counter ez-toc-light-blue ez-toc-container-direction">
+                        <div class="ez-toc-title-container">
+                            <p class="ez-toc-title">Daftar Isi</p>
+                            <span class="ez-toc-title-toggle"><a href="#"
+                                    class="ez-toc-pull-right ez-toc-btn ez-toc-btn-xs ez-toc-btn-default ez-toc-toggle"
+                                    area-label="ez-toc-toggle-icon-1"><label for="item-63b392361c4a0"
+                                        aria-label="Table of Content"><span
+                                            style="display: flex;align-items: center;width: 35px;height: 30px;justify-content: center;direction:ltr;"><svg
+                                                style="fill: #999;color:#999" xmlns="http://www.w3.org/2000/svg"
+                                                class="list-377408" width="20px" height="20px" viewBox="0 0 24 24"
+                                                fill="none">
+                                                <path
+                                                    d="M6 6H4v2h2V6zm14 0H8v2h12V6zM4 11h2v2H4v-2zm16 0H8v2h12v-2zM4 16h2v2H4v-2zm16 0H8v2h12v-2z"
+                                                    fill="currentColor"></path>
+                                            </svg><svg style="fill: #999;color:#999" class="arrow-unsorted-368013"
+                                                xmlns="http://www.w3.org/2000/svg" width="10px" height="10px"
+                                                viewBox="0 0 24 24" version="1.2" baseProfile="tiny">
+                                                <path
+                                                    d="M18.2 9.3l-6.2-6.3-6.2 6.3c-.2.2-.3.4-.3.7s.1.5.3.7c.2.2.4.3.7.3h11c.3 0 .5-.1.7-.3.2-.2.3-.5.3-.7s-.1-.5-.3-.7zM5.8 14.7l6.2 6.3 6.2-6.3c.2-.2.3-.5.3-.7s-.1-.5-.3-.7c-.2-.2-.4-.3-.7-.3h-11c-.3 0-.5.1-.7.3-.2.2-.3.5-.3.7s.1.5.3.7z">
+                                                </path>
+                                            </svg></span></label><input type="checkbox" id="item-63b392361c4a0"></a></span>
+                        </div>
+                        <nav>
+                            <ul class="ez-toc-list ez-toc-list-level-1 ">
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#what-note-is-needed-to-complete-the-rhythmic-pattern-to-load-%e2%80%8b">1.
+                                            what note is needed to complete the rhythmic pattern to load ?​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#what-i-have-learnedthe-learner-will-write-an-essay-on-his-pattern-making-journey-and-makepoint-on-where-it-is-easy-and-difficult-does-the-activity-worthy-for-joining-2-work-pieces%e2%80%8bp-s-send-a">2.
+                                            What I have learned?The learner will write an essay on his pattern-making journey and makepoint on where it is easy and difficult.Does the activity worthy for joining 2 work pieces?​p.s send answer I'll give you 50 pesos load. </a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#1-it-is-the-sound-pattern-that-tells-you-what-part-of-the-hardware-is-falling-a-beep-codeb-mores-codec-source-coded-pin-code2-what-would-be-the-possible-problem-if-the-paper-is-not-loaded-properly-a">3.
+                                            1. It is the sound pattern that tells you what part of the hardware is falling A.Beep codeB.Mores CodeC.Source codeD.PIN Code2.What would be the possible problem if the paper is not loaded properly A. Tear into B. eject the paper C. paper jam D. not a problem​​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#21-what-application-allows-you-to-create-and-design-web-pages-without-any-encoding-knowledge-c-jimdo-d-wysiwyg-a-wordpress-b-html-22-what-web-design-principle-arranges-the-elements-in-the-order-of">4.
+                                            21. What application allows you to create and design web pages without any encoding knowledge C. JIMDO D. WYSIWYG A WordPress B.HTML 22. What Web Design Principle arranges the elements in the order of importance. This is done eith size, color, imagery, contrast, typo-graphically, whitespace, texture, and style? A. Navigation C. Load Time B. Visual Hierarchy D. Grid-Based Layout 23. It is the web design principle that explains the importance of using compelling language tha attract and influence visitors by converting them into customers. A Website Purpose C. Content B. Navigation D. F-Shaped Pattern Reading . 24.More people are using their phones and other devices to browse the web. Is important to co building your website with a responsive layout where your website can adjust to different sch A. Mobile-Friendly C. Navigation B. Grid-based Layout D. Load Time 25.is the visual content that gives you a greater chance of getting into the mind of your udience. A. Videos B. Presentation C.photograph D.infographics​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#directions-identify-the-critical-reading-strategy-being-used-in-each-of-the-following-encircle-the-letter-of-thecorrect-answer-a-recognizing-emotional-manipulation-b-reflecting-on-challenges-to-yo">5.
+                                            Directions: Identify the critical reading strategy being used in each of the following. Encircle the letter of thecorrect answer.A. Recognizing Emotional Manipulation.B. Reflecting on Challenges to your Beliefs and Values.C. Contextual ReadingD. Judging the Writer's CredibilityE. Looking for Patterns of Opposition20. As a reader, you have to be suspicious and be cautious when the writer uses emotionallyloaded words, writes very harsh and abusive things about or against someone or somethingor maligns or insults another.21. Some writers present opposing issues or hints and these are what a critical reader or thinkermay use in his or her analysis of the text.22. The critical reader is able to get clues which will help him interpret the work, and understandthe how's and why's that made the author write the text.23. The critical thinker checks if the writer is building a common ground with the readers, or ifs/he is basing his or her reasoning on shared beliefs.24. This entails the reactions or emotions that you are made to feel by the author when you readhis or her work is a good example of an occasion where you can be able to use this strategy.​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#activity-7-applying-appropriate-signals-directions-select-a-pattern-of-idea-development-and-write-an-essay-with-the-topic-assigned-to-your-preferred-pattern-use-at-least-5-appropriate-grammatical-si">6.
+                                            Activity 7 Applying Appropriate Signals Directions: Select a pattern of idea development and write an essay with the topic assigned to your preferred pattern. Use at least 5 appropriate grammatical signals in 3-5 sentences. You will be graded according to the rubrics provided. 1. Narration Topic: My learning experiences about developing positive attitudes.PAKI SAGOTBIGYAN KO NG 10 LOAD SA TAMANG SAGOTKUNG NASAGOT MONA I TEXT MO KO SA FV PR0FILEANTHONY DUMAY LUMAAD​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#learning-task-2-check-this-out-write-your-answers-in-a-separate-sheet-of-paper-a-identify-what-is-being-described-in-each-statement-1-a-ceiling-design-that-has-a-rectangular-center-that-is-either">7.
+                                            Learning Task 2: Check this out! Write your answers in a separate sheet of paper A. Identify what is being described in each statement 1. A ceiling design that has a rectangular center that is either popped out or inverted to add an effect 2. A wood or any material projecting beyond the wall of the ceiling 3. A traditional style of ceiling in which the load-bearing beams are exposed in the inside of the house 4. A classic ceiling style that creates a waffle-like pattern 5. It is a term used to primarily describe any material that block noise between floors of the house 6. Minimum ceiling height for a habitable room 7. Minimum ceiling height for the first-storey 8. Minimum ceiling height for the second storey 9. Minimum ceiling height for succeeding storey 10. Minimum ceiling height for a mezzanine floor B. Provide what is asked in each question. 1. Give the different wood materials for ceiling finishes. 2. Differentiate a plaster ceiling material to a plasterboard/dry 3. What are the two types of metal ceiling materials? 4. Provide pros and cons of using tiles for ceiling materials. 5. Give 3 features shown in a reflected ceiling plan​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#true-or-false1-yardstick-is-a-60-long-tape-with-metal-tipsmade-of-a-material-that-will-not-stretch-2-a-pincusion-hold-the-straight-pins-and-needles-while-working-to-prevent-accidents-3-the-yarn-is-t">8.
+                                            TRUE OR FALSE1.Yardstick is a 60" long tape with metal tips,made of a material that will not stretch.2.A pincusion hold the straight pins and needles while working to prevent accidents.3.The yarn is the cloth used in making garments.4.Sewing needle threader aids in putting the thread to the needle.5.Tailor's chalk is available in black or white and is used for woolen fabrics.6.Thread clipper are specifically designed for ripping out stitches from seams,either as default as a result of an error or during alterations.7.Seam rippers are a handy little spring loaded cutting tool that allows for the snipping of threads.8.Pinking shear is a popular in zigzagging or scalloped edge or for seam finishes.This is used to finish seams and raw edges and to create decorative edges on many types of fabric.9.French curve is used to shape the depth of the neck hole and armhole of the pattern.10.The tailor square or "L" is used to transfer measurements to the draft pattern.11.Ruller is flexible measuring device used in taking body measurements.12.Success in sewing calls for the right tools at the right time.All tools must be appropriate in a proper order in one must know how to use them to save time and produce the best result.13.The thread is used in assembling or constructing the parts of the garment.14.Marking tools are required for transferring pattern markings to garment fabric pieces and for making alterations on garments.15.Trimming scissors is used for trimmings,clipping threads and snipping slashes.​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#level-1-load-load-up-and-activate-your-word-power-above-each-statement-are-juinbled-letters-your-first-task-is-to-arrange-the-letters-and-form-word-that-conforms-to-the-given-statement-in-each-item">9.
+                                            Level 1: LOAD Load up and activate your word power! Above each statement are juinbled letters, your first task is to arrange the letters and form word that conforms to the given statement in each item. Complete each statement by writi your answer on the space provided and earn your first set of clues. MAMIEZRUS 1. To show full understanding of the text, either writing a book review or an article critique its content including other relevant descriptions about the tex one must w ESRUSAPVEI 2. The pattern of development in book review or article critique is main arguments and supporting details are presented to persuade the readers to read or no book or article. NITOLEVAUA 3. Book review requires in-depth analysis and on a particular text by providing detailed evidences to support the result of your analysis and evaluation. OSPPRSUE 4. One important consideration when writing a book review or an article critique is to into how the book achieved its and described it on its pages.​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#1-identification-identify-what-is-being-asked-in-each-statement-choose-your-answer-from-the-box-below-morrissues-cohesive-devices-parallel-structure-king-pirommathat-propaganda-batch-ont-for-stereo">10.
+                                            1. Identification identify what is being asked in each statement. Choose your answer from the box below. Morrissues Cohesive Devices Parallel Structure King Pirommathat Propaganda batch ont for stereotypes Look for loaded words Patriotic Appeal The OH Man Catoliy Shyam 21. A prejudice against something an author is writing about 22. refers to a type of message aimed at influencing opinions and/or the behavior of people. 23. the king Who Makes Dreams Come True. 24. if the author labels an entire group, the writing is probably biased. 25. words or phrases that show the relationship between paragraphs of a text or speech. 26. means using the same pattern of words to show that two or more ideas have the same level of importance 27 words that are charged with emotion can reveal an author's opinion about his/her topic. 28. use of memorable phrases to foster support for the product or idea. 29. are those actions which have the potential to help or harm others or ourselves. 30. the one who dreamed to marry the Rich man's daughter.​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#instruction-match-column-a-with-b-write-your-answer-in-any-clean-sheet-of-paper-a-b-1-overload-a-change-in-drills-to-avoid-boredom2-progression-b-body-will-re-condition3-specificity-c-how-ha">11.
+                                            Instruction: Match Column A with B. Write your answer in any clean sheet of paper. A B 1. Overload a. change in drills to avoid  boredom2. Progression b. body will re-condition3. Specificity c. how hard?4. Frequency d. a specific muscle group5. Adaptation e. more than the normal6. Reversibility f. no two people are alike7. Intensity g. may lead to injury8. Variation h. use it or lose it9. Recuperation i. 1-2 days rest 10. Time/Duration j. how often?11. Time Pattern k. gradual increase of load12. Individual References l. specific energy system13. Metabolic m. chronic fatigue14. Neuromuscular n. training is program both for the sport and individual15. Principles of Training o. how long? p. a condition of being fit q. time preference of the  individual</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#sewing-tools-and-equipmentrrange-the-jumbled-letters-to-get-the-correct-answer-write-it-on-the-spacrovided-e-1-this-is-used-to-shape-the-depth-of-the-neck-hole-and-armhole-ofpattern-rne-h-fcuv-cer">12.
+                                            Sewing Tools and Equipmentrrange the jumbled letters to get the correct answer. Write it on the spacrovided.E 1. This is used to shape the depth of the neck hole and armhole ofpattern. (RNE H FCUV CER)2. It is a handy little spring loaded cutting tool that allows for thesnipping of threads. (HTAE DR LPIPERC)__3. It has 4-5 inches finely tapered blades.(M BEORDIYRESISOSSCR)4. Used in making temporary stitches. (ANH DENEDEL)5. Holds the straight pins and needles while working to preventaccidents. (IN PC HNSUOI)Read and understand.Sewing Tools and Equipmentnent and different tools are used in garment construction. The skillfusurement and drafting patte​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#directions-write-t-if-the-statement-is-true-and-f-if-the-statement-is-false-__________1-cortisol-is-the-hormone-that-stirs-up-the-body-for-emergency-action-_________2-stress-is-simply-the-body">13.
+                                            Directions: Write T if the statement is True and F if the statement is False.__________1) Cortisol is the hormone that stirs up the body for emergency action. _________2) Stress is simply the body’s response to events that make one feel  threatened or upset. When the body senses danger, whether it is real or not._________3) Distress may result to increased heart rate, short and shallow breathing, constrictions of the blood vessel, and insomnia._________4) Being healthy, therefore includes sound mental health not just a healthy body. It is the condition where both the body and the mind are functioning improperly. _________5) Negative stress also known as eustress, is the condition of the body where  its well-being is threatened or attacked._________6) Repetitive negative thoughts patterns and unrealistic and high expectations are internal factor that can cause stress._________7) Habitual behavior patterns that cause stress are hectic and loaded schedule, poor time management, and proactive than reactive._________8) Motivates, focuses energy, perceived as within our coping abilities, and feels exciting are examples of distress. _________9) The mind and the body are directly linked. The mind controls the function and activities of the body and the physical changes it undergoes._________10) Good mental health cannot be seen in one’s attitude and disposition in life. It will not help one gives the best performance and makes one feel good about himself or herself.​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#activity-1-due-to-the-hardship-cause-by-covid-19-pandemic-you-decided-to-helpyour-parents-through-loading-cell-phones-and-listed-how-much-you-gain-daily-asyour-costumer-increases-your-list-goes-as">14.
+                                            Activity 1. Due to the hardship cause by COVID-19 pandemic, you decided to helpyour parents through loading cell phones and listed how much you gain daily. Asyour costumer increases, your list goes as follows, 12, 14, 16, 18,...Questions1. If what you gain daily continues in this manner, how much gain can youexpect at the end of the week?2. Is your gain shows a pattern? If yes, find its general rule​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#true-or-false-write-true-if-the-statement-is-correct-or-false-if-it-is-incorrect-write-true-if-the-statement-is-true-false-if-not-1-wysiwyg-means-what-you-see-is-what-you-get-2-web-templates-a">15.
+                                            TRUE or FALSE. Write true if the statement is correct or false if it is incorrect. Write TRUE if the statement is true, FALSE if not. 1. "WYSIWYG" means What You See Is What You Get 2. Web Templates are unique full-page layout that contains generic information which can be replaced by ne users with their own personal information. 3. Describing Expertise is not a common core purposes of websites 4. Color, typography and imagery are ways to achieve simplicity through design. 5. Simplicity is the best way to go when considering the user experience and the usability of your website. 6. Keeping navigation simple, intuitive and consistent on every page is not that important in creating web ne. 7. An effective designed website will work with a reader's natural pattern of scanning the page. 8. One of the most important functions of visual hierarchy is to establish a focal distance. 9. An effective web design has either great design and great content. 10. Optimizing image sizes will help load your site faster. a​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#6-the-material-used-inassembling-or-constructingthe-parts-of-the-garment-a-carbon-paperb-fabricc-pattern-paperd-thread7-a-handy-little-spring-loadedcutting-tool-specifically-usedto-snip-threads">16.
+                                            6. The material used inassembling or constructingthe parts of the garment.a. Carbon Paperb. Fabricc. Pattern Paperd. Thread7. A handy little spring loadedcutting tool specifically usedto snip threads.a. Buttonhole Scissorsb. Embroidery ScissorsC. Seam Ripperd. Thread Clippers8. The cloth used in makinggarments.a. Catchab. Fabricc. Threadd. None of these9. A classification of sewing toolrequired for transferring patternmarkings to garment fabricpieces and for making alterationson garmentsa. Cutting Tools b. Marking Toolsc. Measuring Tools d. Sewing Tools10. A type of sewing machine runby foot but it may also beconverted to electric powermachine?a Bartacking Machineb. Embroidery Machinec. Lockstitch Sewing Machined. Over Edging Machine​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#true-or-falsedirection-write-true-if-the-statement-is-correct-and-falso-if-is-not-write-your-answer-on-the-spaco-provided-bofore-thenumber-isulat-and-true-kung-ang-pahayag-ay-nagpapakita-ng-kutot">17.
+                                            TRUE or FALSEDirection: Write True if the statement is correct and Falso if is not. Write your answer on the spaco provided bofore thenumber. ( Isulat and True kung ang pahayag ay nagpapakita ng kutotohanan at False kung hindi Isulat ang sagotsa patlang bago ang numero.)1 Tailor's chalk is available in a range of colors and is removed by brushing.2. A hand needle small is hard pitted cup worn for protection on the finger that pushes the needle in sewing.3. Thread clipper is a handy little spring loaded cutting tool that allows for the snipping of threads.4. French curve is used to transfer draft pattern into the fabric,5. Hand needle is used in making temporary stitches and buttonholes6. Tape Measure is a flexible measuring device used in taking body measurements.7. The color of tracing paper should be chosen that is close to the color of the fabric,8. Pinking shears is not used for straight cutting.9. A clear ruler is also a good tool for marking buttonholes.Fibarnlass tane is commonly used by dressmakers.10​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#1-when-a-user-makes-a-mistake-which-of-the-following-would-they-expect-a-an-easily-understood-error-message-telling-them-how-to-solve-the-problem-b-a-detailed-error-message-which-gives-them-detai">18.
+                                            1. When a user makes a mistake which of the following would they expect? A. An easily understood error message telling them how to solve the problem. B. A detailed error message which gives them detailed instructions on how they can avoid the error next time. C. To have to log out of the site, log back in and start again. D. A re-direction to another website where you will log in. 2. Which principle of a good web design refers to the waiting time for your web site to load? A. Navigation C. Load Time B. Visual Hierarchy D. Grid-based Layout 3. The F-shaped reading pattern is designed for what specific type of reading strategy? A. Active Reading C. Skimming B. Previewing D. Scanning 4. What principle of a good web design refers to the type of font used in the web site? A. Color C. Navigation B. Grid-based Layout D. Typography 5. Which statement best describes good use of animation on a website? A. Animation should never be used on a website; it is just too distracting. B. Animation should be used sparingly and to create impact. C. Animation should be used as much as possible to attract audience attention. D. Animation should be in small sizes, so they do not get too much space in the website.​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#what-i-knowdirections-read-and-understand-each-item-carefully-write-the-letter-of-the-correctanswer-on-a-separate-sheet-of-paper-1-time-signature-marks-the-meter-of-a-composition-what-time-signatu">19.
+                                            What I KnowDirections: Read and understand each item carefully. Write the letter of the correctanswer on a separate sheet of paper.1. Time signature marks the meter of a composition. What time signature has fourbeats in a measure and a quarter note receives one beat?43.2AB.644.2. There are two types of time signature; the simple and compound timesignatures. Which does not belong to simple time signatures?264C.4D.8A.3B.44.C.8D.3. A conductor uses conducting pattern to load4.​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#activity-1-a-identity-and-arrange-the-jumbled-letters-to-get-the-correct-answer-1-this-is-used-to-shape-the-depth-of-the-neck-hole-and-armhole-of-the-pattern-rne-hfc-uv-cer-2-it-is-a-handy-little">20.
+                                            ACTIVITY 1: A. Identity and arrange the jumbled letters to get the correct answer. 1. This is used to shape the depth of the neck hole and armhole of the pattern RNE HFC UV CER 2. It is a handy little spring loaded cutting tool that allows for the snipping of threads HTA EDR L PIPERC 3. It has 4-5 inches finely tapered blades MB EORD LYRE SISOS SCR​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#2-recognize-thepresentation-3-allow-the-speaker-to-build-his-or-her-speech-as-guided-by-a-distinct-pattern-of4-note-the5-observe-if-the-speaker-usesemotionally-loaded-words-words-to-express">21.
+                                            2. Recognize the
+presentation.
+3. Allow the speaker to build his or her speech as guided by a distinct pattern of
+4. Note the
+5. Observe if the speaker uses
+emotionally loaded words.
+words to express his or her ideas rather than using
+6. Note if the speaker uses results of
+overtime as these are good references.
+7. Note
+conducted over time mentioned by the speaker as this dictates the trend
+that will likely prevail.
+8. Note
+from interviews used by the speaker as this complement the quantitative
+aspect of the materials presented.
+9. Observe how the speaker is able to reconcile both the
+and
+date he or she is informing you of through statements any layman will understand.
+10. Note the
+of the progression of the date over time presented by the speaker.
+of the speaker as this will dictate the manner of his or her
+the speaker claims as his or her agenda in discussing the topic.</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#fill-in-the-blankdirections-read-the-statement-carefully-and-choose-your-answer-inside-the-box-write-youranswer-on-the-space-provided-measurement-gaugethread-clippersmarking-tools-4-5brush7-12150pre">22.
+                                            FILL IN THE BLANKDirections: Read the statement carefully and choose your answer inside the box. Write youranswer on the space provided.Measurement GaugeThread ClippersMarking tools 4-5brush7-12150pressingCutting Tools maximumfiber____________________________1.)_____are required for transferring pattern markings to garment fabric pieces and for makingalterations on garments.2. Embroidery scissors it has ____ inches finely tapered blades.3.Shears have the length of _____inches and are satisfactory for most apparel fabrics.4. The skillful use of the different sewing equipment will help take body______and drafting patternwith accuracy and speed.5._____ Is used for measurements at hem lines, button holes and areas where other smallmeasurements require checking, such as pleats and tucks.6.The front of the tape measure has the measurement of _____ centimeters and 60 inches on the other side.7. ______are  instruments that serve well if properly maintained.8.A serrated edge shears give_____cutting control and is  used for synthetic fibers and slippery knits.9.____ Are a handy little spring-loaded cutting tool that allows for the snipping of threads.10. This chalk pencil is used to make fine lines on fabric. It has an erasing______ at one end</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#c-a-circuit-is-a-metal-source-d-a-circuit-is-surrounded-with-insulators-so-the-elect-direction-ra-parallel-pearance-of-parts-of-a-flow-of-the-notice-a-ctricity-due-vire-loads-e-load-does-not-also">23.
+                                            C. A circuit is a metal source D. A circuit is surrounded with insulators so the elect direction. ra parallel pearance of parts of a flow of the notice a ctricity due vire. Loads e load does not also into them. oads in a 3. Which of the following shows a complete simple circu A. Bulb, electrons, switch, wire B. Bulb, conducting wire, socket, C. Bulb, flashlight, power bank, battery D. Bulb, conducting wire, switch, battery 4. How does electricity work? A. Electricity works by becoming a part of our dail productive. B. Electricity works by transferring and convert el electric lighting C. Electricity works by taking different forms like nuclear, and hydro D. Electricity works by getting a bunch of conduc creating a flow of electron-stealing patterns th 5. Which of the following is an example of a paralle A House lighting C. Refrigerate B. Lamps D. Water Hea Circuit 2​Pa help po marinettedupai574 ​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#6-all-of-these-are-the-purposes-of-packaging-excepta-it-serves-to-protect-a-product-b-it-serves-to-aid-in-handling-a-product-c-it-helps-with-product-recognition-d-it-brings-the-cost-down-for-the">24.
+                                            6. All of these are the purposes of packaging EXCEPTA. It serves to protect a product.B. It serves to aid in handling a product.C. It helps with product recognition.D. It brings the cost down for the product.7. Which of the following is incorrect?A. Packages design to uniform shipping cannot be loaded into mixed shipping.B. Packaging gives more attraction with costumers.C. Shrink wraps is one of the forms of packing useD. None of the mentioned8. In creating contrast in a composition, we must considerA. Smooth and rough textures C. Plain areas against areas of patternB. Large and small shapesD. All of the above     ​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#ii-direction-identify-the-critical-reading-strategy-being-used-in-each-of-the-following-statements-write-the-letter-of-youranswer-on-the-space-before-the-number-choices-are-in-the-box-below-a-con">25.
+                                            II. Direction: Identify the critical reading strategy being used in each of the following statements. Write the letter of youranswer on the space before the number. Choices are in the box below.A. Contextual ReadingB. Judging the Writer's CredibilityC. Looking for Patterns of OppositionD. Recognizing Emotional ManipulationE. Reflecting on Challenges to your Beliefs and Values1. As a reader, you have to be suspicious and be cautious when the writer uses emotionally loaded words, writes veryharsh and abusive things about or against someone or something or maligns or insults another.2. Some writers present opposing issues or hints and these are what a critical reader or thinker may use in his or heranalysis of the text.3. The critical reader is able to get clues which will help him interpret the work, and understand the how's and why's thatmade the author write the text.4. The critical thinker checks the credibility of the writer.5. This entails the reactions or emotions that you are made to feel by the author when you read his or her work is a goodexample of an occasion where you can be able to use this strategy.​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#subukin-ang-hanay-a-ay-binubuo-ng-mga-rhythmic-pattern-samantalang-ang-hanay-b-ay-mga-larawan-o-kilos-na-batay-sa-rhythmic-pattern-alin-sa-mga-larawan-sa-hanay-b-ang-angkop-sa-bawat-rhythmic-pattern">26.
+                                            Subukin Ang Hanay A ay binubuo ng mga rhythmic pattern samantalang ang Hanay B ay mga larawan o kilos na batay sa rhythmic pattern. Alin sa mga larawan sa Hanay B ang angkop sa bawat rhythmic pattern na makikita sa Hanay A? Isulat ang titik ng tamang sagot sa sagutang papel. Hanay B Hanay A A. 1 III 41 1. 41 2. 41 1941 load 3. 4114 411 il D. 4. ТЕ.​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#which-of-the-following-statements-is-not-true-about-propagandaa-it-is-very-common-in-advertisements-where-they-try-to-make-consumers-patronize-the-products-or-services-they-offerb-it-is-a-communic">27.
+                                            Which of the following statements is NOT true about propaganda?a. It is very common in advertisements, where they try to make consumers patronize the products or services they offerb. It is a communication that is primarily used to influence an audience.c. It is an art of persuasion.d. It can range from claims that the majority of people are using the products/services, approvals from experts or famous personalities, and so on2. Which of the following statements is NOT applicable to recognize bias?a. Watch for stereotypesb. Look for loaded wordsc. Ignore sides of argumentationd. Notice vague language or generalizations3. Which of the following questions is NOT aligned to focus on the audience?a. What is the situation around you when delivering a speech?b. Who are the intended listeners?c. Will the choice of words appropriate to the level of listeners?d. What must be learned and felt in your speech?c.4. Which is not an attribute of an active listener?a. Paying attentionb. Giving prejudicec. Responding appropriatelyd. Providing feedback5. Which purpose do you use the following cohesive devices: thus, hence, thereforea. addition of ideasb. contrasting ideasc. concluding ideasd. introducing ideas6. It is an opinion or prejudice that affects the author's writing and prevents the author from being completely neutral about a topic or issue.a. stereptypesb. biasc. generalizationsd. loaded wordsOption 37. Which among the following statements is NOT true?a. Faulty parallelism happens when patterns of words in a sequence or a list is not parallel orb. Conjunctions are used to join parallel parts in a sentence with similar ideas.c. Parallel structure can be in a pattern of words, phrases and clauses.d. Parallel Structure means using the same pattern of words to show imbalance of ideas.8. It is a kind listening intended to make evaluation or scrutiny of a text.a. Informational Listeningb. Critical Listeningc. Intensive Listeningd. Empathetic Listening9. It is a propaganda technique that is often vague but presents positive ideas like those found in slogan or posters.a. Glittering Generalitiesb. Bandwagonc. Plain Folksd. Testimonial10. Juan is lazy. He does not do his homework or revision well. ___________, he always gets 0 marks in his tests.a. sob. thusc. howeverd. after11. ___________ save the kitten, we took him to the vet immediately.a. sinceb. whenc. in order tod. because12. Maria is a beautiful and smart girl. _________, she is kind. She always takes care of the sick animals. ___________, every one likes her very much.a. However, Sinceb. Moreover, Soc. Therefore, Howeverd. Besides, Therefore13. What kind of listening are you going to employ if you will make a reaction paper?a. Informational Listeningb. Empathetic Listeningc. Critical Listeningd. Therapeutic Listening14. It is a kind of discrimination where a group of people are labelled.a. racialb. generalizationc. biasd. stereotype15. Parallelism can be observed in the pattern of the following EXCEPT ______.a. wordb. textc. phrased. clause16. Although, despite, rather, nevertheless are words that indicate ______.a. Contrastb. Comparisonc. Conclusiond. Introduction17. They can indicate sequence, addition, comparison, contrast, causation, illustration, or emphasisa. Coordinating Conjuntionsb. Signal Wordsc. Transition Markersd. Subordinating Conjunctions18. What type of speech is a eulogy?a. Informative Speechb. Persuasive Speechc. Special Occasion Speechd. Argumentative Speech19. It is a type of speech where the speaker presents points to make the audience side with the case of the speaker or to forward an advocacy.a. Persuasiveb. Informativec. Special Occasiond. Argumentative20. These are words that are expressed with strong emotions that can reveal a person's opinion or bias.a. biasb. prejudicec. stereotyped. loaded words​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#1-what-supplies-electricity-in-an-electric-circuita-batteryb-conducting-wirec-light-bulbd-switch2-what-is-a-circuit-a-a-circuit-is-used-as-a-source-of-electricity-b-a-circuit-is-the-complete">28.
+                                            1. What supplies electricity in an electric circuit?A. BatteryB. Conducting wireC. Light bulbD. Switch2. What is a circuit? A. A circuit is used as a source of electricity B. A circuit is the complete loop though which an electrical current flow. C. A circuit is a metal conductor that carries electricty to connect from the sourceD. A circuit is surrounded with insulators so the electrons can only go in one direction. 3.Which of the following shows a completebsimple circuit? A. Bulb, electrons, switch, wireB. Bulb, conducting wire, socketC. Bulb, flashlight, power bank, batteryD. Bulb, conducting wire, switch, battery4.How does electricity work? A. Electricty works by becoming a part of our daily life and make us more productive. B. Electricity works by transferring and convert electrical energy to provide electric lighting. C. Electricty work by taking different forms like coal, water, solar, wind, nuclear, and hydroD. Electricy works by getting a bunch of conductor elements togrther and creating flow of electron-stealing patterns through them. 5. Which of thr following is an example of a parallel circuit? A. House lighting B. LampsC. Refrigerator D. Water heater6. The thing being powered by the electricity in a circuit. A. bulbB. CircuitC. ConnectorsD. Load7. Connect all the parts and create the path or loop the electricty travels through. A. bulbB. CircuitC. ConnectorsD. Load pa help po ​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#7-which-of-the-following-is-incorrecta-packages-design-to-uniform-shipping-cannot-be-loaded-into-mixed-shipping-b-packaging-gives-more-attraction-with-costumers-c-shrink-wraps-is-one-of-the-forms">29.
+                                            7. Which of the following is incorrect?A. Packages design to uniform shipping cannot be loaded into mixed shipping.B. Packaging gives more attraction with costumers.C. Shrink wraps is one of the forms of packing useD. None of the mentioned8. In creating contrast in a composition, we must considerA. Smooth and rough texturesB. Large and small shapesC. Plain areas against areas of patternD. All of the above9. It is anything used to contain, protect, manage, distribute, or introduce raw materials and processedproducts,A. ContrastB. HarmonyC. PackagingD. Product Design10. It is the art of creating or projecting the outside over-all appearance and the presence of a product.A. Paper BagB. PackageC. Product Design D. Raw Materials​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#problem-2-due-to-the-hardship-caused-by-the-covid-19-pandemic-you-decided-to-help-your-parents-through-loading-cell-phones-and-listed-how-much-you-gain-daily-as-your-customer-increases-your-list-g">30.
+                                            Problem 2. Due to the hardship caused by the COVID-19 pandemic, you decided to help your parents through loading cell phones and listed how much you gain daily. As your customer increases, your list goes as follows, 12, 14, 16, 18 ... Questions: 1. If what you gain daily continues in this manner, how much gain can you expect at the end of the week? 2. Does your gain show a pattern? If yes, find its general rule. 3. Using the general rule, compute for your expected gain at the end of 30 days. ASSESSMENT CHECKLIST​sana matulongan nyuko.</a>
+                                    </li>
+                                                            </ul>
+                        </nav>
+                    </div>
+                                            <h2 class="ez-toc-section" id="what-note-is-needed-to-complete-the-rhythmic-pattern-to-load-%e2%80%8b">
+                            1. what note is needed to complete the rhythmic pattern to load ?​</h2><br />
+                        Note is a fcccccking note that has 4,2,1 and 1/2 beat / rythym<br />
+                                            <h2 class="ez-toc-section" id="what-i-have-learnedthe-learner-will-write-an-essay-on-his-pattern-making-journey-and-makepoint-on-where-it-is-easy-and-difficult-does-the-activity-worthy-for-joining-2-work-pieces%e2%80%8bp-s-send-a">
+                            2. What I have learned?The learner will write an essay on his pattern-making journey and makepoint on where it is easy and difficult.Does the activity worthy for joining 2 work pieces?​p.s send answer I'll give you 50 pesos load. </h2><br />
+                        <p><strong>Explanation:</strong></p><p>sorry Idon'tknowtheanswer</p><br />
+                                            <h2 class="ez-toc-section" id="1-it-is-the-sound-pattern-that-tells-you-what-part-of-the-hardware-is-falling-a-beep-codeb-mores-codec-source-coded-pin-code2-what-would-be-the-possible-problem-if-the-paper-is-not-loaded-properly-a">
+                            3. 1. It is the sound pattern that tells you what part of the hardware is falling A.Beep codeB.Mores CodeC.Source codeD.PIN Code2.What would be the possible problem if the paper is not loaded properly A. Tear into B. eject the paper C. paper jam D. not a problem​​</h2><br />
+                        <p><strong>Answer:</strong></p><p><strong>1. a</strong></p><p>2. c</p><p><strong>Explanation:</strong></p><p></p><p><strong>Answer:</strong></p><p>1.A</p><p></p><p>2.C</p><p><strong>Explanation:</strong></p><p>Some number of short beeps that are sounded by the BIOS upon startup when a memory, cache or processor error is encountered. There are numerous beep code patterns, and Phoenix BIOS codes are long and short beeps delivered in groups</p><p></p><p></p><p></p><p>an instance of paper becoming stuck in a printer, photocopier, etc.</p><br />
+                                            <h2 class="ez-toc-section" id="21-what-application-allows-you-to-create-and-design-web-pages-without-any-encoding-knowledge-c-jimdo-d-wysiwyg-a-wordpress-b-html-22-what-web-design-principle-arranges-the-elements-in-the-order-of">
+                            4. 21. What application allows you to create and design web pages without any encoding knowledge C. JIMDO D. WYSIWYG A WordPress B.HTML 22. What Web Design Principle arranges the elements in the order of importance. This is done eith size, color, imagery, contrast, typo-graphically, whitespace, texture, and style? A. Navigation C. Load Time B. Visual Hierarchy D. Grid-Based Layout 23. It is the web design principle that explains the importance of using compelling language tha attract and influence visitors by converting them into customers. A Website Purpose C. Content B. Navigation D. F-Shaped Pattern Reading . 24.More people are using their phones and other devices to browse the web. Is important to co building your website with a responsive layout where your website can adjust to different sch A. Mobile-Friendly C. Navigation B. Grid-based Layout D. Load Time 25.is the visual content that gives you a greater chance of getting into the mind of your udience. A. Videos B. Presentation C.photograph D.infographics​</h2><br />
+                        <p><strong>Answer:</strong></p><p>visual heirachy</p><p></p><p></p><p></p><p><strong>Explanation:</strong></p><p>correct me if I'm wrong</p><p></p><br />
+                                            <h2 class="ez-toc-section" id="directions-identify-the-critical-reading-strategy-being-used-in-each-of-the-following-encircle-the-letter-of-thecorrect-answer-a-recognizing-emotional-manipulation-b-reflecting-on-challenges-to-yo">
+                            5. Directions: Identify the critical reading strategy being used in each of the following. Encircle the letter of thecorrect answer.A. Recognizing Emotional Manipulation.B. Reflecting on Challenges to your Beliefs and Values.C. Contextual ReadingD. Judging the Writer's CredibilityE. Looking for Patterns of Opposition20. As a reader, you have to be suspicious and be cautious when the writer uses emotionallyloaded words, writes very harsh and abusive things about or against someone or somethingor maligns or insults another.21. Some writers present opposing issues or hints and these are what a critical reader or thinkermay use in his or her analysis of the text.22. The critical reader is able to get clues which will help him interpret the work, and understandthe how's and why's that made the author write the text.23. The critical thinker checks if the writer is building a common ground with the readers, or ifs/he is basing his or her reasoning on shared beliefs.24. This entails the reactions or emotions that you are made to feel by the author when you readhis or her work is a good example of an occasion where you can be able to use this strategy.​</h2><br />
+                        <p>Critical thinkers look at information and arguments and weigh them, which makes them <strong>smarter</strong>.</p>1) (A) Recognizing Emotional Manipulation<p>As a reader, you have to be suspicious and cautious when the writer uses emotionally loaded words writes very harsh and abusive things about or against someone or something, or maligns or insults another.</p><p></p>2) (E) Looking for Patterns of Opposition<p>Some writers present opposing issues or hints and these are what a critical reader or thinker may use in his or her analysis of the text.</p><p></p>3) (C) Contextual Reading<p>The critical reader is able to get clues that will help him interpret the work, and understand the how's and why’s that made the author write the text.</p><p></p>4) (D) Judging the Writer’s Credibility<p>The critical thinker checks if the writer is building a common ground with the readers, or if s/he is basing his or her reasoning on shared beliefs.</p><p></p>5) (B) Reflecting on Challenges to your Beliefs and Values<p>This entails the reactions or emotions that you are made to feel by the author when you read his or her work is a good example of an occasion where you can be able to use this strategy.​</p><p></p><p>One must be careful about how they define "<strong>critical thinking.</strong>" It's neither cynical nor a way to find fault. It's not acting like you know more than you really do. People who aren't critical tend to be impatient, easily annoyed by problems, and quick to judge based only on first impressions. Most of the time, they care more about what they think than what other people think. </p><p></p><p><strong>Learn more about critical thinking here: https://brainly.ph/question/550821</strong></p><p></p><p>#SPJ6</p><br />
+                                            <h2 class="ez-toc-section" id="activity-7-applying-appropriate-signals-directions-select-a-pattern-of-idea-development-and-write-an-essay-with-the-topic-assigned-to-your-preferred-pattern-use-at-least-5-appropriate-grammatical-si">
+                            6. Activity 7 Applying Appropriate Signals Directions: Select a pattern of idea development and write an essay with the topic assigned to your preferred pattern. Use at least 5 appropriate grammatical signals in 3-5 sentences. You will be graded according to the rubrics provided. 1. Narration Topic: My learning experiences about developing positive attitudes.PAKI SAGOTBIGYAN KO NG 10 LOAD SA TAMANG SAGOTKUNG NASAGOT MONA I TEXT MO KO SA FV PR0FILEANTHONY DUMAY LUMAAD​</h2><br />
+                        <p>A positive attitude lets you relax, remember, focus and absorb information as you learn. You're ready to welcome new experiences and recognize many different kinds ofi learning opportunities. And when you can see opportunities, hope increases</p><p></p><p>[tex] \tiny \tt{} \color{pink}pa \: brainliest \: po[/tex]</p><p></p><br />
+                                            <h2 class="ez-toc-section" id="learning-task-2-check-this-out-write-your-answers-in-a-separate-sheet-of-paper-a-identify-what-is-being-described-in-each-statement-1-a-ceiling-design-that-has-a-rectangular-center-that-is-either">
+                            7. Learning Task 2: Check this out! Write your answers in a separate sheet of paper A. Identify what is being described in each statement 1. A ceiling design that has a rectangular center that is either popped out or inverted to add an effect 2. A wood or any material projecting beyond the wall of the ceiling 3. A traditional style of ceiling in which the load-bearing beams are exposed in the inside of the house 4. A classic ceiling style that creates a waffle-like pattern 5. It is a term used to primarily describe any material that block noise between floors of the house 6. Minimum ceiling height for a habitable room 7. Minimum ceiling height for the first-storey 8. Minimum ceiling height for the second storey 9. Minimum ceiling height for succeeding storey 10. Minimum ceiling height for a mezzanine floor B. Provide what is asked in each question. 1. Give the different wood materials for ceiling finishes. 2. Differentiate a plaster ceiling material to a plasterboard/dry 3. What are the two types of metal ceiling materials? 4. Provide pros and cons of using tiles for ceiling materials. 5. Give 3 features shown in a reflected ceiling plan​</h2><br />
+                        <p><strong>Answer:</strong></p><p>how to make a great time to the public to the public and private sector and the world and the other day and the other side is a great day and the other side is the only thing that I am so happy to the world to me and my</p><br />
+                                            <h2 class="ez-toc-section" id="true-or-false1-yardstick-is-a-60-long-tape-with-metal-tipsmade-of-a-material-that-will-not-stretch-2-a-pincusion-hold-the-straight-pins-and-needles-while-working-to-prevent-accidents-3-the-yarn-is-t">
+                            8. TRUE OR FALSE1.Yardstick is a 60" long tape with metal tips,made of a material that will not stretch.2.A pincusion hold the straight pins and needles while working to prevent accidents.3.The yarn is the cloth used in making garments.4.Sewing needle threader aids in putting the thread to the needle.5.Tailor's chalk is available in black or white and is used for woolen fabrics.6.Thread clipper are specifically designed for ripping out stitches from seams,either as default as a result of an error or during alterations.7.Seam rippers are a handy little spring loaded cutting tool that allows for the snipping of threads.8.Pinking shear is a popular in zigzagging or scalloped edge or for seam finishes.This is used to finish seams and raw edges and to create decorative edges on many types of fabric.9.French curve is used to shape the depth of the neck hole and armhole of the pattern.10.The tailor square or "L" is used to transfer measurements to the draft pattern.11.Ruller is flexible measuring device used in taking body measurements.12.Success in sewing calls for the right tools at the right time.All tools must be appropriate in a proper order in one must know how to use them to save time and produce the best result.13.The thread is used in assembling or constructing the parts of the garment.14.Marking tools are required for transferring pattern markings to garment fabric pieces and for making alterations on garments.15.Trimming scissors is used for trimmings,clipping threads and snipping slashes.​</h2><br />
+                        <p><strong>Answer:</strong></p><p>1.true 2.true? 3. true 15. true 14.true .13.true 11.false 9.true 5.true</p><p><strong>Explanation:</strong></p><br />
+                                            <h2 class="ez-toc-section" id="level-1-load-load-up-and-activate-your-word-power-above-each-statement-are-juinbled-letters-your-first-task-is-to-arrange-the-letters-and-form-word-that-conforms-to-the-given-statement-in-each-item">
+                            9. Level 1: LOAD Load up and activate your word power! Above each statement are juinbled letters, your first task is to arrange the letters and form word that conforms to the given statement in each item. Complete each statement by writi your answer on the space provided and earn your first set of clues. MAMIEZRUS 1. To show full understanding of the text, either writing a book review or an article critique its content including other relevant descriptions about the tex one must w ESRUSAPVEI 2. The pattern of development in book review or article critique is main arguments and supporting details are presented to persuade the readers to read or no book or article. NITOLEVAUA 3. Book review requires in-depth analysis and on a particular text by providing detailed evidences to support the result of your analysis and evaluation. OSPPRSUE 4. One important consideration when writing a book review or an article critique is to into how the book achieved its and described it on its pages.​</h2><br />
+                        <p><strong>Answer:</strong></p><p>1.summarize</p><p>2.persuasive</p><p>3.?</p><p>4.surppose</p><p><strong>Explanation:</strong></p><p>sorry ayan lng po alam ko pero sana nakatulong; )</p><p><strong>Answer:</strong></p>1.Summarize2.I don't know3.Evaluation4.Purposes<p><strong>Explanation:</strong></p>Hope it helpssorry for number 2<br />
+                                            <h2 class="ez-toc-section" id="1-identification-identify-what-is-being-asked-in-each-statement-choose-your-answer-from-the-box-below-morrissues-cohesive-devices-parallel-structure-king-pirommathat-propaganda-batch-ont-for-stereo">
+                            10. 1. Identification identify what is being asked in each statement. Choose your answer from the box below. Morrissues Cohesive Devices Parallel Structure King Pirommathat Propaganda batch ont for stereotypes Look for loaded words Patriotic Appeal The OH Man Catoliy Shyam 21. A prejudice against something an author is writing about 22. refers to a type of message aimed at influencing opinions and/or the behavior of people. 23. the king Who Makes Dreams Come True. 24. if the author labels an entire group, the writing is probably biased. 25. words or phrases that show the relationship between paragraphs of a text or speech. 26. means using the same pattern of words to show that two or more ideas have the same level of importance 27 words that are charged with emotion can reveal an author's opinion about his/her topic. 28. use of memorable phrases to foster support for the product or idea. 29. are those actions which have the potential to help or harm others or ourselves. 30. the one who dreamed to marry the Rich man's daughter.​</h2><br />
+                        <p>21. Bias</p><p>22. Propaganda</p><p>23. The old man</p><p>24. Watch out for stereotypes</p><p>25. Cohesive devices</p><p>26. Parallel structure</p><p>27. Look for loaded words</p><p>28. Catchy slogans</p><p>29. Moral issues</p><p>30. King Phrommathat</p><br />
+                                            <h2 class="ez-toc-section" id="instruction-match-column-a-with-b-write-your-answer-in-any-clean-sheet-of-paper-a-b-1-overload-a-change-in-drills-to-avoid-boredom2-progression-b-body-will-re-condition3-specificity-c-how-ha">
+                            11. Instruction: Match Column A with B. Write your answer in any clean sheet of paper. A B 1. Overload a. change in drills to avoid  boredom2. Progression b. body will re-condition3. Specificity c. how hard?4. Frequency d. a specific muscle group5. Adaptation e. more than the normal6. Reversibility f. no two people are alike7. Intensity g. may lead to injury8. Variation h. use it or lose it9. Recuperation i. 1-2 days rest 10. Time/Duration j. how often?11. Time Pattern k. gradual increase of load12. Individual References l. specific energy system13. Metabolic m. chronic fatigue14. Neuromuscular n. training is program both for the sport and individual15. Principles of Training o. how long? p. a condition of being fit q. time preference of the  individual</h2><br />
+                        <p><strong>Answer:</strong></p><p></p>principles of trainingIn order to get the maximum out of your training, you need to apply the five key principles of training – specificity, individualisation, progressive overload, variation and be aware of reversibility.The principles of training are the five key areas that you need to focus on and are as follows:1- SPECIFICITY Your training has to be specific to the goal you are setting out the achieve, there is little point in training for a marathon if your goal race is a 5K. The stresses that are applied to the body in training must be the same as those experienced in your chosen sport or adventure, so going back to the point above. Your time is better spent focussing on speed rather than chugging out a 20-mile long run. This principle gets totally disregarded if you are training for general fitness, whereas anything goes!  2- INDVIDUALISATIONThis is a crucial principle, the fundamental fact that everyone is different and not all training is going to be suited for everyone! Different people respond to training in a different way. If you are walking or cycling with a friend, and doing exactly the same amount of training, don’t be concerned if one of you gets fitter faster than the other – this is what individualisation is all about. The same goes for training with someone who is fitter than you, it may come to a point where you are starting to overtake them instead! Lifestyle can play a big part in this, you are going to feel more rested for exercise and able to recover more if you work from home on a laptop, compared to someone who does a lot of hours and manual labour daily with minimal rest. Some days your training can go really well and the next day, even though it was exactly the same length workout, it can be a nightmare. This is what individualisation is all about.3- PROGRESSIVE OVERLOADThis is all about the need to gradually increase the workload that you put your body through. An example of this is in weight training, you wouldn’t stick to the same weight constantly otherwise you won’t make any gains, so you would safely increase the weight to gain strength throughout the weeks. active-adult-body-1032117.jpg It is essential to combine training and rest whilst at the same time increasing the stress that the body is put through. This so-called ‘stress’ is a combination of the frequency, intensity time and type of the workout:FREQUENCY: This is the amount of time you are going to be exercising throughout the week or the number of reps/sets you are going to be doing of a given exercise.INTENSITY: How hard you are going to be pushing is going to determine what kind of session you are going to be doing. If it feels like a 7 on the RPE scale if you are training by effort. TIME: This is how long you are going to be working out for, this again can relate to how long a certain rep is as well as how long you are going to be exercising for as a whole. TYPE: The type of exercise you are going to be doing, dictates what you are going to be training, are you relying on your cardiovascular endurance with a longer run? Or your strength with a weight lifting session?Progression is all about <p></p><br />
+                                            <h2 class="ez-toc-section" id="sewing-tools-and-equipmentrrange-the-jumbled-letters-to-get-the-correct-answer-write-it-on-the-spacrovided-e-1-this-is-used-to-shape-the-depth-of-the-neck-hole-and-armhole-ofpattern-rne-h-fcuv-cer">
+                            12. Sewing Tools and Equipmentrrange the jumbled letters to get the correct answer. Write it on the spacrovided.E 1. This is used to shape the depth of the neck hole and armhole ofpattern. (RNE H FCUV CER)2. It is a handy little spring loaded cutting tool that allows for thesnipping of threads. (HTAE DR LPIPERC)__3. It has 4-5 inches finely tapered blades.(M BEORDIYRESISOSSCR)4. Used in making temporary stitches. (ANH DENEDEL)5. Holds the straight pins and needles while working to preventaccidents. (IN PC HNSUOI)Read and understand.Sewing Tools and Equipmentnent and different tools are used in garment construction. The skillfusurement and drafting patte​</h2><br />
+                        <p><strong>Answer:</strong></p><p>1.FRENCH CURVE</p><p>2.THREAD CLIPPER</p><p>3.EMBROIDERY SCISSORS</p><p>4.HAND NEEDLE</p><p>5.PIN CUSHION</p><p></p><p>hope it helps.</p><p></p><br />
+                                            <h2 class="ez-toc-section" id="directions-write-t-if-the-statement-is-true-and-f-if-the-statement-is-false-__________1-cortisol-is-the-hormone-that-stirs-up-the-body-for-emergency-action-_________2-stress-is-simply-the-body">
+                            13. Directions: Write T if the statement is True and F if the statement is False.__________1) Cortisol is the hormone that stirs up the body for emergency action. _________2) Stress is simply the body’s response to events that make one feel  threatened or upset. When the body senses danger, whether it is real or not._________3) Distress may result to increased heart rate, short and shallow breathing, constrictions of the blood vessel, and insomnia._________4) Being healthy, therefore includes sound mental health not just a healthy body. It is the condition where both the body and the mind are functioning improperly. _________5) Negative stress also known as eustress, is the condition of the body where  its well-being is threatened or attacked._________6) Repetitive negative thoughts patterns and unrealistic and high expectations are internal factor that can cause stress._________7) Habitual behavior patterns that cause stress are hectic and loaded schedule, poor time management, and proactive than reactive._________8) Motivates, focuses energy, perceived as within our coping abilities, and feels exciting are examples of distress. _________9) The mind and the body are directly linked. The mind controls the function and activities of the body and the physical changes it undergoes._________10) Good mental health cannot be seen in one’s attitude and disposition in life. It will not help one gives the best performance and makes one feel good about himself or herself.​</h2><br />
+                        <p><strong>Answer:</strong></p>TTFFTTFFTT<p>YAN LANG PO ALAM KO</p><p><strong>Step-by-step explanation:</strong></p>SANA MAKATULONG（⌒▽⌒）（＾ｖ＾）<br />
+                                            <h2 class="ez-toc-section" id="activity-1-due-to-the-hardship-cause-by-covid-19-pandemic-you-decided-to-helpyour-parents-through-loading-cell-phones-and-listed-how-much-you-gain-daily-asyour-costumer-increases-your-list-goes-as">
+                            14. Activity 1. Due to the hardship cause by COVID-19 pandemic, you decided to helpyour parents through loading cell phones and listed how much you gain daily. Asyour costumer increases, your list goes as follows, 12, 14, 16, 18,...Questions1. If what you gain daily continues in this manner, how much gain can youexpect at the end of the week?2. Is your gain shows a pattern? If yes, find its general rule​</h2><br />
+                        <p><strong>Answer:</strong></p>12, 14, 16, 18, 20, 22, 24Yes, arithmetic sequence.<p></p><br />
+                                            <h2 class="ez-toc-section" id="true-or-false-write-true-if-the-statement-is-correct-or-false-if-it-is-incorrect-write-true-if-the-statement-is-true-false-if-not-1-wysiwyg-means-what-you-see-is-what-you-get-2-web-templates-a">
+                            15. TRUE or FALSE. Write true if the statement is correct or false if it is incorrect. Write TRUE if the statement is true, FALSE if not. 1. "WYSIWYG" means What You See Is What You Get 2. Web Templates are unique full-page layout that contains generic information which can be replaced by ne users with their own personal information. 3. Describing Expertise is not a common core purposes of websites 4. Color, typography and imagery are ways to achieve simplicity through design. 5. Simplicity is the best way to go when considering the user experience and the usability of your website. 6. Keeping navigation simple, intuitive and consistent on every page is not that important in creating web ne. 7. An effective designed website will work with a reader's natural pattern of scanning the page. 8. One of the most important functions of visual hierarchy is to establish a focal distance. 9. An effective web design has either great design and great content. 10. Optimizing image sizes will help load your site faster. a​</h2><br />
+                        <p><strong>Answer:</strong></p><p>1.TRUE</p><p>2.TRUE</p><p>3.TRUE</p><p>4.FALSE</p><p>5.TRUE</p><p>6.FALSE</p><p>7.TRUE</p><p>8.TRUE</p><p>9.TRUE</p><p>10.TRUE</p><p><strong>Explanation:</strong></p><p>YAN PO</p><br />
+                                            <h2 class="ez-toc-section" id="6-the-material-used-inassembling-or-constructingthe-parts-of-the-garment-a-carbon-paperb-fabricc-pattern-paperd-thread7-a-handy-little-spring-loadedcutting-tool-specifically-usedto-snip-threads">
+                            16. 6. The material used inassembling or constructingthe parts of the garment.a. Carbon Paperb. Fabricc. Pattern Paperd. Thread7. A handy little spring loadedcutting tool specifically usedto snip threads.a. Buttonhole Scissorsb. Embroidery ScissorsC. Seam Ripperd. Thread Clippers8. The cloth used in makinggarments.a. Catchab. Fabricc. Threadd. None of these9. A classification of sewing toolrequired for transferring patternmarkings to garment fabricpieces and for making alterationson garmentsa. Cutting Tools b. Marking Toolsc. Measuring Tools d. Sewing Tools10. A type of sewing machine runby foot but it may also beconverted to electric powermachine?a Bartacking Machineb. Embroidery Machinec. Lockstitch Sewing Machined. Over Edging Machine​</h2><br />
+                        <p><strong>Answer:</strong></p><p></p><p>6) <strong>d</strong><strong>.</strong><strong>t</strong><strong>h</strong><strong>r</strong><strong>e</strong><strong>a</strong><strong>d</strong></p><p>7) <strong>d</strong><strong>.</strong><strong>t</strong><strong>h</strong><strong>r</strong><strong>e</strong><strong>a</strong><strong>d</strong><strong> </strong><strong>clipp</strong><strong>ers</strong></p><p>8) <strong>b</strong><strong>.</strong><strong>f</strong><strong>a</strong><strong>b</strong><strong>r</strong><strong>i</strong><strong>c</strong></p><p>9) <strong>b</strong><strong>.</strong><strong>m</strong><strong>a</strong><strong>r</strong><strong>k</strong><strong>i</strong><strong>n</strong><strong>g</strong><strong> </strong><strong>tools</strong></p><p>10) <strong>c</strong><strong>.</strong><strong>l</strong><strong>o</strong><strong>c</strong><strong>k</strong><strong>s</strong><strong>t</strong><strong>i</strong><strong>t</strong><strong>c</strong><strong>h</strong><strong> </strong><strong>sewing</strong><strong> </strong><strong>machine</strong></p><p></p><p><strong>•́  ‿ ,•̀</strong><strong> </strong>hope it helps</p><p>pede po bang pa brainliest?</p><br />
+                                            <h2 class="ez-toc-section" id="true-or-falsedirection-write-true-if-the-statement-is-correct-and-falso-if-is-not-write-your-answer-on-the-spaco-provided-bofore-thenumber-isulat-and-true-kung-ang-pahayag-ay-nagpapakita-ng-kutot">
+                            17. TRUE or FALSEDirection: Write True if the statement is correct and Falso if is not. Write your answer on the spaco provided bofore thenumber. ( Isulat and True kung ang pahayag ay nagpapakita ng kutotohanan at False kung hindi Isulat ang sagotsa patlang bago ang numero.)1 Tailor's chalk is available in a range of colors and is removed by brushing.2. A hand needle small is hard pitted cup worn for protection on the finger that pushes the needle in sewing.3. Thread clipper is a handy little spring loaded cutting tool that allows for the snipping of threads.4. French curve is used to transfer draft pattern into the fabric,5. Hand needle is used in making temporary stitches and buttonholes6. Tape Measure is a flexible measuring device used in taking body measurements.7. The color of tracing paper should be chosen that is close to the color of the fabric,8. Pinking shears is not used for straight cutting.9. A clear ruler is also a good tool for marking buttonholes.Fibarnlass tane is commonly used by dressmakers.10​</h2><br />
+                        <p><strong>Answer:</strong></p><p>1.true</p><p>2.true</p><p>3.true</p><p>4.False</p><p>5.true </p><p>6.true</p><p>7.true</p><p>8.true</p><p>9.true </p><p>10.true</p><p><strong>Explanation:</strong></p><p>sana makatulong</p><br />
+                                            <h2 class="ez-toc-section" id="1-when-a-user-makes-a-mistake-which-of-the-following-would-they-expect-a-an-easily-understood-error-message-telling-them-how-to-solve-the-problem-b-a-detailed-error-message-which-gives-them-detai">
+                            18. 1. When a user makes a mistake which of the following would they expect? A. An easily understood error message telling them how to solve the problem. B. A detailed error message which gives them detailed instructions on how they can avoid the error next time. C. To have to log out of the site, log back in and start again. D. A re-direction to another website where you will log in. 2. Which principle of a good web design refers to the waiting time for your web site to load? A. Navigation C. Load Time B. Visual Hierarchy D. Grid-based Layout 3. The F-shaped reading pattern is designed for what specific type of reading strategy? A. Active Reading C. Skimming B. Previewing D. Scanning 4. What principle of a good web design refers to the type of font used in the web site? A. Color C. Navigation B. Grid-based Layout D. Typography 5. Which statement best describes good use of animation on a website? A. Animation should never be used on a website; it is just too distracting. B. Animation should be used sparingly and to create impact. C. Animation should be used as much as possible to attract audience attention. D. Animation should be in small sizes, so they do not get too much space in the website.​</h2><br />
+                        <p><strong>Answer:</strong></p>ABDCA<p></p><p></p><p></p><p></p><p></p><p>OKOJHOGHGYUIIUGIHYYOHHOO</p><p><strong>Answer:</strong></p><p>1.a</p><p>2.b</p><p>3.d</p><p>4.c</p><p>5. a</p><p><strong>Explanation:</strong></p><p>Correct me if I am wrong </p><p>Need points please </p><p>PA brainliest po</p><br />
+                                            <h2 class="ez-toc-section" id="what-i-knowdirections-read-and-understand-each-item-carefully-write-the-letter-of-the-correctanswer-on-a-separate-sheet-of-paper-1-time-signature-marks-the-meter-of-a-composition-what-time-signatu">
+                            19. What I KnowDirections: Read and understand each item carefully. Write the letter of the correctanswer on a separate sheet of paper.1. Time signature marks the meter of a composition. What time signature has fourbeats in a measure and a quarter note receives one beat?43.2AB.644.2. There are two types of time signature; the simple and compound timesignatures. Which does not belong to simple time signatures?264C.4D.8A.3B.44.C.8D.3. A conductor uses conducting pattern to load4.​</h2><br />
+                        <p><strong>Answer:</strong></p><p>1. 4/4</p><p>2. D</p><p><strong>Explanation:</strong></p><p>. Time signature marks the meter of a composition. What time signature has four</p><p>beats in a measure and a quarter note receives one beat? it is 4/4</p><br />
+                                            <h2 class="ez-toc-section" id="activity-1-a-identity-and-arrange-the-jumbled-letters-to-get-the-correct-answer-1-this-is-used-to-shape-the-depth-of-the-neck-hole-and-armhole-of-the-pattern-rne-hfc-uv-cer-2-it-is-a-handy-little">
+                            20. ACTIVITY 1: A. Identity and arrange the jumbled letters to get the correct answer. 1. This is used to shape the depth of the neck hole and armhole of the pattern RNE HFC UV CER 2. It is a handy little spring loaded cutting tool that allows for the snipping of threads HTA EDR L PIPERC 3. It has 4-5 inches finely tapered blades MB EORD LYRE SISOS SCR​</h2><br />
+                        <p><strong>Answer:</strong></p><p>1. french curve</p><p>2. thread clipper</p><p>3. embroidery scissors</p><br />
+                                            <h2 class="ez-toc-section" id="2-recognize-thepresentation-3-allow-the-speaker-to-build-his-or-her-speech-as-guided-by-a-distinct-pattern-of4-note-the5-observe-if-the-speaker-usesemotionally-loaded-words-words-to-express">
+                            21. 2. Recognize the
+presentation.
+3. Allow the speaker to build his or her speech as guided by a distinct pattern of
+4. Note the
+5. Observe if the speaker uses
+emotionally loaded words.
+words to express his or her ideas rather than using
+6. Note if the speaker uses results of
+overtime as these are good references.
+7. Note
+conducted over time mentioned by the speaker as this dictates the trend
+that will likely prevail.
+8. Note
+from interviews used by the speaker as this complement the quantitative
+aspect of the materials presented.
+9. Observe how the speaker is able to reconcile both the
+and
+date he or she is informing you of through statements any layman will understand.
+10. Note the
+of the progression of the date over time presented by the speaker.
+of the speaker as this will dictate the manner of his or her
+the speaker claims as his or her agenda in discussing the topic.</h2><br />
+                        <p><strong>Answer:</strong></p><p>1.  J-preconceived</p><p>2. K-perspective </p><p>3. A-exposition </p><p>4. D-framework </p><p>5. G-objective </p><p>6. B-studies </p><p>7.  F-quantitative </p><p>8.  I-direct quotes </p><p>9.  E,C-quantitative, qualitative </p><p>10. H-logic</p><p><strong>Explanation:</strong></p><p>I hope it help</p><br />
+                                            <h2 class="ez-toc-section" id="fill-in-the-blankdirections-read-the-statement-carefully-and-choose-your-answer-inside-the-box-write-youranswer-on-the-space-provided-measurement-gaugethread-clippersmarking-tools-4-5brush7-12150pre">
+                            22. FILL IN THE BLANKDirections: Read the statement carefully and choose your answer inside the box. Write youranswer on the space provided.Measurement GaugeThread ClippersMarking tools 4-5brush7-12150pressingCutting Tools maximumfiber____________________________1.)_____are required for transferring pattern markings to garment fabric pieces and for makingalterations on garments.2. Embroidery scissors it has ____ inches finely tapered blades.3.Shears have the length of _____inches and are satisfactory for most apparel fabrics.4. The skillful use of the different sewing equipment will help take body______and drafting patternwith accuracy and speed.5._____ Is used for measurements at hem lines, button holes and areas where other smallmeasurements require checking, such as pleats and tucks.6.The front of the tape measure has the measurement of _____ centimeters and 60 inches on the other side.7. ______are  instruments that serve well if properly maintained.8.A serrated edge shears give_____cutting control and is  used for synthetic fibers and slippery knits.9.____ Are a handy little spring-loaded cutting tool that allows for the snipping of threads.10. This chalk pencil is used to make fine lines on fabric. It has an erasing______ at one end</h2><br />
+                        <p><strong>Answer:</strong></p><p>basically</p><p><strong>Explanation:</strong></p><p>dali dali lang</p><br />
+                                            <h2 class="ez-toc-section" id="c-a-circuit-is-a-metal-source-d-a-circuit-is-surrounded-with-insulators-so-the-elect-direction-ra-parallel-pearance-of-parts-of-a-flow-of-the-notice-a-ctricity-due-vire-loads-e-load-does-not-also">
+                            23. C. A circuit is a metal source D. A circuit is surrounded with insulators so the elect direction. ra parallel pearance of parts of a flow of the notice a ctricity due vire. Loads e load does not also into them. oads in a 3. Which of the following shows a complete simple circu A. Bulb, electrons, switch, wire B. Bulb, conducting wire, socket, C. Bulb, flashlight, power bank, battery D. Bulb, conducting wire, switch, battery 4. How does electricity work? A. Electricity works by becoming a part of our dail productive. B. Electricity works by transferring and convert el electric lighting C. Electricity works by taking different forms like nuclear, and hydro D. Electricity works by getting a bunch of conduc creating a flow of electron-stealing patterns th 5. Which of the following is an example of a paralle A House lighting C. Refrigerate B. Lamps D. Water Hea Circuit 2​Pa help po marinettedupai574 ​</h2><br />
+                        <p>huuuuuuuuuuuuuuuuuuuuuuuu</p><br />
+                                            <h2 class="ez-toc-section" id="6-all-of-these-are-the-purposes-of-packaging-excepta-it-serves-to-protect-a-product-b-it-serves-to-aid-in-handling-a-product-c-it-helps-with-product-recognition-d-it-brings-the-cost-down-for-the">
+                            24. 6. All of these are the purposes of packaging EXCEPTA. It serves to protect a product.B. It serves to aid in handling a product.C. It helps with product recognition.D. It brings the cost down for the product.7. Which of the following is incorrect?A. Packages design to uniform shipping cannot be loaded into mixed shipping.B. Packaging gives more attraction with costumers.C. Shrink wraps is one of the forms of packing useD. None of the mentioned8. In creating contrast in a composition, we must considerA. Smooth and rough textures C. Plain areas against areas of patternB. Large and small shapesD. All of the above     ​</h2><br />
+                        <p><strong>Answer:</strong></p><p>6.a</p><p>7.c</p><p>8.a</p><p><strong>Explanation:</strong></p><p>sana makatulong </p><br />
+                                            <h2 class="ez-toc-section" id="ii-direction-identify-the-critical-reading-strategy-being-used-in-each-of-the-following-statements-write-the-letter-of-youranswer-on-the-space-before-the-number-choices-are-in-the-box-below-a-con">
+                            25. II. Direction: Identify the critical reading strategy being used in each of the following statements. Write the letter of youranswer on the space before the number. Choices are in the box below.A. Contextual ReadingB. Judging the Writer's CredibilityC. Looking for Patterns of OppositionD. Recognizing Emotional ManipulationE. Reflecting on Challenges to your Beliefs and Values1. As a reader, you have to be suspicious and be cautious when the writer uses emotionally loaded words, writes veryharsh and abusive things about or against someone or something or maligns or insults another.2. Some writers present opposing issues or hints and these are what a critical reader or thinker may use in his or heranalysis of the text.3. The critical reader is able to get clues which will help him interpret the work, and understand the how's and why's thatmade the author write the text.4. The critical thinker checks the credibility of the writer.5. This entails the reactions or emotions that you are made to feel by the author when you read his or her work is a goodexample of an occasion where you can be able to use this strategy.​</h2><br />
+                        <p><strong>Answer:</strong></p><p>The answer in number 1 given is E</p><p></p><p>The answer in number 2 given is C</p><p></p><p>The answer in number 3 given is A</p><p></p><p>The answer in number 4 given is B</p><p></p><p>The answer in number 5 given is D</p><br />
+                                            <h2 class="ez-toc-section" id="subukin-ang-hanay-a-ay-binubuo-ng-mga-rhythmic-pattern-samantalang-ang-hanay-b-ay-mga-larawan-o-kilos-na-batay-sa-rhythmic-pattern-alin-sa-mga-larawan-sa-hanay-b-ang-angkop-sa-bawat-rhythmic-pattern">
+                            26. Subukin Ang Hanay A ay binubuo ng mga rhythmic pattern samantalang ang Hanay B ay mga larawan o kilos na batay sa rhythmic pattern. Alin sa mga larawan sa Hanay B ang angkop sa bawat rhythmic pattern na makikita sa Hanay A? Isulat ang titik ng tamang sagot sa sagutang papel. Hanay B Hanay A A. 1 III 41 1. 41 2. 41 1941 load 3. 4114 411 il D. 4. ТЕ.​</h2><br />
+                        <p><strong>Answer:</strong></p><p>asan dyan ung sasagutan? btw pa brainliest </p><p><strong>Answer:</strong></p><p>where's your question ms?</p><br />
+                                            <h2 class="ez-toc-section" id="which-of-the-following-statements-is-not-true-about-propagandaa-it-is-very-common-in-advertisements-where-they-try-to-make-consumers-patronize-the-products-or-services-they-offerb-it-is-a-communic">
+                            27. Which of the following statements is NOT true about propaganda?a. It is very common in advertisements, where they try to make consumers patronize the products or services they offerb. It is a communication that is primarily used to influence an audience.c. It is an art of persuasion.d. It can range from claims that the majority of people are using the products/services, approvals from experts or famous personalities, and so on2. Which of the following statements is NOT applicable to recognize bias?a. Watch for stereotypesb. Look for loaded wordsc. Ignore sides of argumentationd. Notice vague language or generalizations3. Which of the following questions is NOT aligned to focus on the audience?a. What is the situation around you when delivering a speech?b. Who are the intended listeners?c. Will the choice of words appropriate to the level of listeners?d. What must be learned and felt in your speech?c.4. Which is not an attribute of an active listener?a. Paying attentionb. Giving prejudicec. Responding appropriatelyd. Providing feedback5. Which purpose do you use the following cohesive devices: thus, hence, thereforea. addition of ideasb. contrasting ideasc. concluding ideasd. introducing ideas6. It is an opinion or prejudice that affects the author's writing and prevents the author from being completely neutral about a topic or issue.a. stereptypesb. biasc. generalizationsd. loaded wordsOption 37. Which among the following statements is NOT true?a. Faulty parallelism happens when patterns of words in a sequence or a list is not parallel orb. Conjunctions are used to join parallel parts in a sentence with similar ideas.c. Parallel structure can be in a pattern of words, phrases and clauses.d. Parallel Structure means using the same pattern of words to show imbalance of ideas.8. It is a kind listening intended to make evaluation or scrutiny of a text.a. Informational Listeningb. Critical Listeningc. Intensive Listeningd. Empathetic Listening9. It is a propaganda technique that is often vague but presents positive ideas like those found in slogan or posters.a. Glittering Generalitiesb. Bandwagonc. Plain Folksd. Testimonial10. Juan is lazy. He does not do his homework or revision well. ___________, he always gets 0 marks in his tests.a. sob. thusc. howeverd. after11. ___________ save the kitten, we took him to the vet immediately.a. sinceb. whenc. in order tod. because12. Maria is a beautiful and smart girl. _________, she is kind. She always takes care of the sick animals. ___________, every one likes her very much.a. However, Sinceb. Moreover, Soc. Therefore, Howeverd. Besides, Therefore13. What kind of listening are you going to employ if you will make a reaction paper?a. Informational Listeningb. Empathetic Listeningc. Critical Listeningd. Therapeutic Listening14. It is a kind of discrimination where a group of people are labelled.a. racialb. generalizationc. biasd. stereotype15. Parallelism can be observed in the pattern of the following EXCEPT ______.a. wordb. textc. phrased. clause16. Although, despite, rather, nevertheless are words that indicate ______.a. Contrastb. Comparisonc. Conclusiond. Introduction17. They can indicate sequence, addition, comparison, contrast, causation, illustration, or emphasisa. Coordinating Conjuntionsb. Signal Wordsc. Transition Markersd. Subordinating Conjunctions18. What type of speech is a eulogy?a. Informative Speechb. Persuasive Speechc. Special Occasion Speechd. Argumentative Speech19. It is a type of speech where the speaker presents points to make the audience side with the case of the speaker or to forward an advocacy.a. Persuasiveb. Informativec. Special Occasiond. Argumentative20. These are words that are expressed with strong emotions that can reveal a person's opinion or bias.a. biasb. prejudicec. stereotyped. loaded words​</h2><br />
+                        <p><strong>Answer:</strong></p><p>1.D</p><p>2.A</p><p>3.D</p><p>4.A</p><p>5.C</p><p>6.B</p><p>7.D</p><p>8.A</p><p>8.C</p><p>9.B</p><p>10.D</p><p>11.A</p><p>12D.</p><p>13.D</p><p>14.B</p><p>15.B</p><p>16.A</p><p>17.A</p><p>18.C</p><p>19.B</p><p>20.D</p><p><strong>Explanation:</strong></p><p>PA BRAINLIEST ANSWER PO PLSS </p><br />
+                                            <h2 class="ez-toc-section" id="1-what-supplies-electricity-in-an-electric-circuita-batteryb-conducting-wirec-light-bulbd-switch2-what-is-a-circuit-a-a-circuit-is-used-as-a-source-of-electricity-b-a-circuit-is-the-complete">
+                            28. 1. What supplies electricity in an electric circuit?A. BatteryB. Conducting wireC. Light bulbD. Switch2. What is a circuit? A. A circuit is used as a source of electricity B. A circuit is the complete loop though which an electrical current flow. C. A circuit is a metal conductor that carries electricty to connect from the sourceD. A circuit is surrounded with insulators so the electrons can only go in one direction. 3.Which of the following shows a completebsimple circuit? A. Bulb, electrons, switch, wireB. Bulb, conducting wire, socketC. Bulb, flashlight, power bank, batteryD. Bulb, conducting wire, switch, battery4.How does electricity work? A. Electricty works by becoming a part of our daily life and make us more productive. B. Electricity works by transferring and convert electrical energy to provide electric lighting. C. Electricty work by taking different forms like coal, water, solar, wind, nuclear, and hydroD. Electricy works by getting a bunch of conductor elements togrther and creating flow of electron-stealing patterns through them. 5. Which of thr following is an example of a parallel circuit? A. House lighting B. LampsC. Refrigerator D. Water heater6. The thing being powered by the electricity in a circuit. A. bulbB. CircuitC. ConnectorsD. Load7. Connect all the parts and create the path or loop the electricty travels through. A. bulbB. CircuitC. ConnectorsD. Load pa help po ​</h2><br />
+                        <p><strong>Answer:</strong></p><p>1.B.</p><p>2B.</p><p>3.D.</p><p>4.D.</p><p>5.D.</p><p>6.A.</p><p>7.B.</p><br />
+                                            <h2 class="ez-toc-section" id="7-which-of-the-following-is-incorrecta-packages-design-to-uniform-shipping-cannot-be-loaded-into-mixed-shipping-b-packaging-gives-more-attraction-with-costumers-c-shrink-wraps-is-one-of-the-forms">
+                            29. 7. Which of the following is incorrect?A. Packages design to uniform shipping cannot be loaded into mixed shipping.B. Packaging gives more attraction with costumers.C. Shrink wraps is one of the forms of packing useD. None of the mentioned8. In creating contrast in a composition, we must considerA. Smooth and rough texturesB. Large and small shapesC. Plain areas against areas of patternD. All of the above9. It is anything used to contain, protect, manage, distribute, or introduce raw materials and processedproducts,A. ContrastB. HarmonyC. PackagingD. Product Design10. It is the art of creating or projecting the outside over-all appearance and the presence of a product.A. Paper BagB. PackageC. Product Design D. Raw Materials​</h2><br />
+                        <p>Sana makatulong po sainyo ❤️</p><p></p><p>7.a</p><p>8.d</p><p>9.b</p><p>10.b</p><p></p><p>#CarryOnLearning</p><br />
+                                            <h2 class="ez-toc-section" id="problem-2-due-to-the-hardship-caused-by-the-covid-19-pandemic-you-decided-to-help-your-parents-through-loading-cell-phones-and-listed-how-much-you-gain-daily-as-your-customer-increases-your-list-g">
+                            30. Problem 2. Due to the hardship caused by the COVID-19 pandemic, you decided to help your parents through loading cell phones and listed how much you gain daily. As your customer increases, your list goes as follows, 12, 14, 16, 18 ... Questions: 1. If what you gain daily continues in this manner, how much gain can you expect at the end of the week? 2. Does your gain show a pattern? If yes, find its general rule. 3. Using the general rule, compute for your expected gain at the end of 30 days. ASSESSMENT CHECKLIST​sana matulongan nyuko.</h2><br />
+                        <p><strong>Answer:</strong></p><p>ako rin di ko alm  </p><p></p><p>sorry sorry</p><br />
+                    
+                </div>
+                <div class="youtubeVideo" style="text-align: center">
+                    <h3>Video Terkait</h3>
+                    <iframe width="560" height="315"
+                        src="https://www.youtube.com/embed/_rtPXpk8Bg8?controls=0" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"allowfullscreen></iframe>
+                </div>
+                <footer class="entry-meta" aria-label="Meta postingan">
+                    <span class="cat-links"><span class="gp-icon icon-categories"><svg viewBox="0 0 512 512"
+                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em">
+                                <path
+                                    d="M0 112c0-26.51 21.49-48 48-48h110.014a48 48 0 0143.592 27.907l12.349 26.791A16 16 0 00228.486 128H464c26.51 0 48 21.49 48 48v224c0 26.51-21.49 48-48 48H48c-26.51 0-48-21.49-48-48V112z">
+                                </path>
+                            </svg></span><span class="screen-reader-text">Kategori </span>filipino</span>
+            </div>
+        </article>
+    </main>
+            </div>
+            <div class="widget-area sidebar is-right-sidebar" id="right-sidebar">
+                <div class="inside-right-sidebar">
+                    <aside id="categories-2" class="widget inner-padding widget_categories">
+                        <h2 class="widget-title">Topik</h2>
+                        <ul>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/multiple-tube-fermentation.html">Multiple Tube Fermentation</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/what-i-notice-while-reading.html">What I Notice While Reading</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/jenny-s-constant.html">Jenny s Constant</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/what-is-intimate-communicative-style.html">What Is Intimate Communicative Style</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/diktador-ng-roma.html">Diktador Ng Roma</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/paradermal-section.html">Paradermal Section</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/arithmetic-gradient-formula.html">Arithmetic Gradient Formula</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/gumamela-tree.html">Gumamela Tree</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/liquid-s-resistance-to-flow.html">Liquid s Resistance To Flow</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/westley-and-maclean-s-conceptual-model.html">Westley And Maclean s Conceptual Model</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/migrate-pb.html">Migrate Pb</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/330-322.html">330 322</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/0-5-hp-to-watts.html">0 5 Hp To Watts</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/melobeat-pc.html">Melobeat Pc</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/snap-autocad.html">Snap Autocad</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/translate-each-algebraic-expression-or-equation-into-a-verbal-phrase.html">Translate Each Algebraic Expression Or Equation Into A Verbal Phrase</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/barney-blow.html">Barney Blow</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/shriver-and-atkins.html">Shriver And Atkins</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/gargon.html">Gargon</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/learning-task-2-let-s-categorize.html">Learning Task 2 Let s Categorize</a>
+                                </li>
+                                                    </ul>
+
+                    </aside>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="site-footer">
+        <footer class="site-info" aria-label="Situs" itemtype="https://schema.org/WPFooter" itemscope>
+            <div class="inside-site-info grid-container">
+                <div class="copyright-bar">
+                    <span class="copyright">&copy; 2023 <a href="https://jneweducation.github.io"
+                            itemprop="url">QnA</a></span>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <a title="Gulirkan kembali ke puncak laman" aria-label="Gulirkan kembali ke puncak laman" rel="nofollow"
+        href="#" class="generate-back-to-top" data-scroll-speed="400" data-start-scroll="300">
+        <span class="gp-icon icon-arrow-up"><svg viewBox="0 0 330 512" aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill-rule="evenodd"
+                clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414">
+                <path
+                    d="M305.863 314.916c0 2.266-1.133 4.815-2.832 6.514l-14.157 14.163c-1.699 1.7-3.964 2.832-6.513 2.832-2.265 0-4.813-1.133-6.512-2.832L164.572 224.276 53.295 335.593c-1.699 1.7-4.247 2.832-6.512 2.832-2.265 0-4.814-1.133-6.513-2.832L26.113 321.43c-1.699-1.7-2.831-4.248-2.831-6.514s1.132-4.816 2.831-6.515L158.06 176.408c1.699-1.7 4.247-2.833 6.512-2.833 2.265 0 4.814 1.133 6.513 2.833L303.03 308.4c1.7 1.7 2.832 4.249 2.832 6.515z"
+                    fill-rule="nonzero" />
+            </svg></span>
+    </a>
+    <script id="generate-a11y">
+        ! function() {
+            "use strict";
+            if ("querySelector" in document && "addEventListener" in window) {
+                var e = document.body;
+                e.addEventListener("mousedown", function() {
+                    e.classList.add("using-mouse")
+                }), e.addEventListener("keydown", function() {
+                    e.classList.remove("using-mouse")
+                })
+            }
+        }();
+    </script>
+    <!--[if lte IE 11]>
+<script src='https://jneweducation.github.io/js/classList.min.js' ?ver=3.2.4' id='generate-classlist-js'></script>
+<![endif]-->
+    <script id='generate-menu-js-extra'>
+        var generatepressMenu = {
+            "toggleOpenedSubMenus": "1",
+            "openSubMenuLabel": "Buka Submenu",
+            "closeSubMenuLabel": "Tutup submenu"
+        };
+    </script>
+    <script src='https://jneweducation.github.io/js/menu.min.js' ?ver=3.2.4' id='generate-menu-js'></script>
+    <script id='generate-navigation-search-js-extra'>
+        var generatepressNavSearch = {
+            "open": "Buka Kolom Pencarian",
+            "close": "Tutup Kolom Pencarian"
+        };
+    </script>
+    <script src='https://jneweducation.github.io/js/navigation-search.min.js' ?ver=3.2.4' id='generate-navigation-search-js'></script>
+    <script id='generate-back-to-top-js-extra'>
+        var generatepressBackToTop = {
+            "smooth": "1"
+        };
+    </script>
+    <script src='https://jneweducation.github.io/js/back-to-top.min.js' ?ver=3.2.4' id='generate-back-to-top-js'></script>
+    <script type='text/javascript' src='//jd3j7g5z1fqs.com/96/78/7a/96787a1945876b1a9c10f79941441964.js'></script>
+<script type='text/javascript' src='//jd3j7g5z1fqs.com/b4/f1/ef/b4f1ef8dfe59b7fa68754094cf6c8e0e.js'></script>
+  <!-- Histats.com  START  (aync)-->
+<script type="text/javascript">var _Hasync= _Hasync|| [];
+_Hasync.push(['Histats.start', '1,4739059,4,0,0,0,00010000']);
+_Hasync.push(['Histats.fasi', '1']);
+_Hasync.push(['Histats.track_hits', '']);
+(function() {
+var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
+hs.src = ('//s10.histats.com/js15_as.js');
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+})();</script>
+<noscript><a href="/" target="_blank"><img  src="//sstatic1.histats.com/0.gif?4739059&101" alt="" border="0"></a></noscript>
+<!-- Histats.com  END  -->
+</body>
+
+</html>

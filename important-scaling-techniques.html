@@ -1,0 +1,1589 @@
+<!DOCTYPE html>
+<html lang="id" prefix="og: https://ogp.me/ns#">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="profile" href="https://gmpg.org/xfn/11">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Important Scaling Techniques - QnA</title>
+    <meta name="description" content="Important Scaling Techniques, , , , , , , 0, scaling techniques - Scribd india, woodscribdindi.blogspot.com, 1600 x 921, png, , 20, important-scaling-techniques, QnA" />
+    <meta name="robots" content="index,follow" />
+    <meta property="og:locale" content="id_ID" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Important Scaling Techniques - QnA" />
+    <meta property="og:description" content="Important Scaling Techniques, , , , , , , 0, scaling techniques - Scribd india, woodscribdindi.blogspot.com, 1600 x 921, png, , 20, important-scaling-techniques, QnA" />
+    <meta property="og:site_name" content="QnA" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Important Scaling Techniques - QnA" />
+    <meta name="twitter:description" content="Important Scaling Techniques, , , , , , , 0, scaling techniques - Scribd india, woodscribdindi.blogspot.com, 1600 x 921, png, , 20, important-scaling-techniques, QnA" />
+    <link rel='stylesheet' id='generate-style-css' href='https://jneweducation.github.io/css/main.min.css'?ver=3.2.4'
+        media='all' />
+    <link rel='stylesheet' id='ez-toc-css' href='https://jneweducation.github.io/css/screen.min.css'?ver=2.0.40' media='all' />
+    <style id='generate-style-inline-css'>
+        body {
+            background-color: #f7f7f7;
+            color: #222222;
+        }
+
+        a {
+            color: #1e73be;
+        }
+
+        a:hover,
+        a:focus,
+        a:active {
+            color: #000000;
+        }
+
+        .wp-block-group__inner-container {
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .generate-back-to-top {
+            font-size: 20px;
+            border-radius: 3px;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            line-height: 40px;
+            width: 40px;
+            text-align: center;
+            z-index: 10;
+            transition: opacity 300ms ease-in-out;
+            opacity: 0.1;
+            transform: translateY(1000px);
+        }
+
+        .generate-back-to-top__show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .navigation-search {
+            position: absolute;
+            left: -99999px;
+            pointer-events: none;
+            visibility: hidden;
+            z-index: 20;
+            width: 100%;
+            top: 0;
+            transition: opacity 100ms ease-in-out;
+            opacity: 0;
+        }
+
+        .navigation-search.nav-search-active {
+            left: 0;
+            right: 0;
+            pointer-events: auto;
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .navigation-search input[type="search"] {
+            outline: 0;
+            border: 0;
+            vertical-align: bottom;
+            line-height: 1;
+            opacity: 0.9;
+            width: 100%;
+            z-index: 20;
+            border-radius: 0;
+            -webkit-appearance: none;
+            height: 60px;
+        }
+
+        .navigation-search input::-ms-clear {
+            display: none;
+            width: 0;
+            height: 0;
+        }
+
+        .navigation-search input::-ms-reveal {
+            display: none;
+            width: 0;
+            height: 0;
+        }
+
+        .navigation-search input::-webkit-search-decoration,
+        .navigation-search input::-webkit-search-cancel-button,
+        .navigation-search input::-webkit-search-results-button,
+        .navigation-search input::-webkit-search-results-decoration {
+            display: none;
+        }
+
+        .gen-sidebar-nav .navigation-search {
+            top: auto;
+            bottom: 0;
+        }
+
+        :root {
+            --contrast: #222222;
+            --contrast-2: #575760;
+            --contrast-3: #b2b2be;
+            --base: #f0f0f0;
+            --base-2: #f7f8f9;
+            --base-3: #ffffff;
+            --accent: #1e73be;
+        }
+
+        .has-contrast-color {
+            color: var(--contrast);
+        }
+
+        .has-contrast-background-color {
+            background-color: var(--contrast);
+        }
+
+        .has-contrast-2-color {
+            color: var(--contrast-2);
+        }
+
+        .has-contrast-2-background-color {
+            background-color: var(--contrast-2);
+        }
+
+        .has-contrast-3-color {
+            color: var(--contrast-3);
+        }
+
+        .has-contrast-3-background-color {
+            background-color: var(--contrast-3);
+        }
+
+        .has-base-color {
+            color: var(--base);
+        }
+
+        .has-base-background-color {
+            background-color: var(--base);
+        }
+
+        .has-base-2-color {
+            color: var(--base-2);
+        }
+
+        .has-base-2-background-color {
+            background-color: var(--base-2);
+        }
+
+        .has-base-3-color {
+            color: var(--base-3);
+        }
+
+        .has-base-3-background-color {
+            background-color: var(--base-3);
+        }
+
+        .has-accent-color {
+            color: var(--accent);
+        }
+
+        .has-accent-background-color {
+            background-color: var(--accent);
+        }
+
+        body,
+        button,
+        input,
+        select,
+        textarea {
+            font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        }
+
+        body {
+            line-height: 1.5;
+        }
+
+        .entry-content>[class*="wp-block-"]:not(:last-child) {
+            margin-bottom: 1.5em;
+        }
+
+        .main-navigation .main-nav ul ul li a {
+            font-size: 14px;
+        }
+
+        .sidebar .widget,
+        .footer-widgets .widget {
+            font-size: 17px;
+        }
+
+        @media (max-width:768px) {
+            h1 {
+                font-size: 31px;
+            }
+
+            h2 {
+                font-size: 27px;
+            }
+
+            h3 {
+                font-size: 24px;
+            }
+
+            h4 {
+                font-size: 22px;
+            }
+
+            h5 {
+                font-size: 19px;
+            }
+        }
+
+        .top-bar {
+            background-color: #636363;
+            color: #ffffff;
+        }
+
+        .top-bar a {
+            color: #ffffff;
+        }
+
+        .top-bar a:hover {
+            color: #303030;
+        }
+
+        .site-header {
+            background-color: #ffffff;
+        }
+
+        .main-title a,
+        .main-title a:hover {
+            color: #222222;
+        }
+
+        .site-description {
+            color: #757575;
+        }
+
+        .main-navigation,
+        .main-navigation ul ul {
+            background-color: #ed4250;
+        }
+
+        .main-navigation .main-nav ul li a,
+        .main-navigation .menu-toggle,
+        .main-navigation .menu-bar-items {
+            color: #ffffff;
+        }
+
+        .main-navigation .main-nav ul li:not([class*="current-menu-"]):hover>a,
+        .main-navigation .main-nav ul li:not([class*="current-menu-"]):focus>a,
+        .main-navigation .main-nav ul li.sfHover:not([class*="current-menu-"])>a,
+        .main-navigation .menu-bar-item:hover>a,
+        .main-navigation .menu-bar-item.sfHover>a {
+            color: #ffffff;
+            background-color: #c42f2f;
+        }
+
+        button.menu-toggle:hover,
+        button.menu-toggle:focus {
+            color: #ffffff;
+        }
+
+        .main-navigation .main-nav ul li[class*="current-menu-"]>a {
+            color: #ffffff;
+            background-color: #c42f2f;
+        }
+
+        .navigation-search input[type="search"],
+        .navigation-search input[type="search"]:active,
+        .navigation-search input[type="search"]:focus,
+        .main-navigation .main-nav ul li.search-item.active>a,
+        .main-navigation .menu-bar-items .search-item.active>a {
+            color: #ffffff;
+            background-color: #c42f2f;
+        }
+
+        .main-navigation ul ul {
+            background-color: #c42f2f;
+        }
+
+        .main-navigation .main-nav ul ul li a {
+            color: #ffffff;
+        }
+
+        .main-navigation .main-nav ul ul li:not([class*="current-menu-"]):hover>a,
+        .main-navigation .main-nav ul ul li:not([class*="current-menu-"]):focus>a,
+        .main-navigation .main-nav ul ul li.sfHover:not([class*="current-menu-"])>a {
+            color: #fcd9d6;
+            background-color: #c42f2f;
+        }
+
+        .main-navigation .main-nav ul ul li[class*="current-menu-"]>a {
+            color: #fcd9d6;
+            background-color: #c42f2f;
+        }
+
+        .separate-containers .inside-article,
+        .separate-containers .comments-area,
+        .separate-containers .page-header,
+        .one-container .container,
+        .separate-containers .paging-navigation,
+        .inside-page-header {
+            background-color: #ffffff;
+        }
+
+        .entry-title a {
+            color: #222222;
+        }
+
+        .entry-title a:hover {
+            color: #55555e;
+        }
+
+        .entry-meta {
+            color: #595959;
+        }
+
+        .sidebar .widget {
+            background-color: #ffffff;
+        }
+
+        .footer-widgets {
+            background-color: #ffffff;
+        }
+
+        .footer-widgets .widget-title {
+            color: #000000;
+        }
+
+        .site-info {
+            color: #ffffff;
+            background-color: #55555e;
+        }
+
+        .site-info a {
+            color: #ffffff;
+        }
+
+        .site-info a:hover {
+            color: #d3d3d3;
+        }
+
+        .footer-bar .widget_nav_menu .current-menu-item a {
+            color: #d3d3d3;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="url"],
+        input[type="password"],
+        input[type="search"],
+        input[type="tel"],
+        input[type="number"],
+        textarea,
+        select {
+            color: #666666;
+            background-color: #fafafa;
+            border-color: #cccccc;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="url"]:focus,
+        input[type="password"]:focus,
+        input[type="search"]:focus,
+        input[type="tel"]:focus,
+        input[type="number"]:focus,
+        textarea:focus,
+        select:focus {
+            color: #666666;
+            background-color: #ffffff;
+            border-color: #bfbfbf;
+        }
+
+        button,
+        html input[type="button"],
+        input[type="reset"],
+        input[type="submit"],
+        a.button,
+        a.wp-block-button__link:not(.has-background) {
+            color: #ffffff;
+            background-color: #55555e;
+        }
+
+        button:hover,
+        html input[type="button"]:hover,
+        input[type="reset"]:hover,
+        input[type="submit"]:hover,
+        a.button:hover,
+        button:focus,
+        html input[type="button"]:focus,
+        input[type="reset"]:focus,
+        input[type="submit"]:focus,
+        a.button:focus,
+        a.wp-block-button__link:not(.has-background):active,
+        a.wp-block-button__link:not(.has-background):focus,
+        a.wp-block-button__link:not(.has-background):hover {
+            color: #ffffff;
+            background-color: #3f4047;
+        }
+
+        a.generate-back-to-top {
+            background-color: rgba(0, 0, 0, 0.4);
+            color: #ffffff;
+        }
+
+        a.generate-back-to-top:hover,
+        a.generate-back-to-top:focus {
+            background-color: rgba(0, 0, 0, 0.6);
+            color: #ffffff;
+        }
+
+        @media (max-width:768px) {
+
+            .main-navigation .menu-bar-item:hover>a,
+            .main-navigation .menu-bar-item.sfHover>a {
+                background: none;
+                color: #ffffff;
+            }
+        }
+
+        .nav-below-header .main-navigation .inside-navigation.grid-container,
+        .nav-above-header .main-navigation .inside-navigation.grid-container {
+            padding: 0px 20px 0px 20px;
+        }
+
+        .site-main .wp-block-group__inner-container {
+            padding: 40px;
+        }
+
+        .separate-containers .paging-navigation {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .entry-content .alignwide,
+        body:not(.no-sidebar) .entry-content .alignfull {
+            margin-left: -40px;
+            width: calc(100% + 80px);
+            max-width: calc(100% + 80px);
+        }
+
+        .rtl .menu-item-has-children .dropdown-menu-toggle {
+            padding-left: 20px;
+        }
+
+        .rtl .main-navigation .main-nav ul li.menu-item-has-children>a {
+            padding-right: 20px;
+        }
+
+        @media (max-width:768px) {
+
+            .separate-containers .inside-article,
+            .separate-containers .comments-area,
+            .separate-containers .page-header,
+            .separate-containers .paging-navigation,
+            .one-container .site-content,
+            .inside-page-header {
+                padding: 30px;
+            }
+
+            .site-main .wp-block-group__inner-container {
+                padding: 30px;
+            }
+
+            .inside-top-bar {
+                padding-right: 30px;
+                padding-left: 30px;
+            }
+
+            .inside-header {
+                padding-right: 30px;
+                padding-left: 30px;
+            }
+
+            .widget-area .widget {
+                padding-top: 30px;
+                padding-right: 30px;
+                padding-bottom: 30px;
+                padding-left: 30px;
+            }
+
+            .footer-widgets-container {
+                padding-top: 30px;
+                padding-right: 30px;
+                padding-bottom: 30px;
+                padding-left: 30px;
+            }
+
+            .inside-site-info {
+                padding-right: 30px;
+                padding-left: 30px;
+            }
+
+            .entry-content .alignwide,
+            body:not(.no-sidebar) .entry-content .alignfull {
+                margin-left: -30px;
+                width: calc(100% + 60px);
+                max-width: calc(100% + 60px);
+            }
+
+            .one-container .site-main .paging-navigation {
+                margin-bottom: 20px;
+            }
+        }
+
+        /* End cached CSS */
+        .is-right-sidebar {
+            width: 30%;
+        }
+
+        .is-left-sidebar {
+            width: 30%;
+        }
+
+        .site-content .content-area {
+            width: 70%;
+        }
+
+        @media (max-width:768px) {
+
+            .main-navigation .menu-toggle,
+            .sidebar-nav-mobile:not(#sticky-placeholder) {
+                display: block;
+            }
+
+            .main-navigation ul,
+            .gen-sidebar-nav,
+            .main-navigation:not(.slideout-navigation):not(.toggled) .main-nav>ul,
+            .has-inline-mobile-toggle #site-navigation .inside-navigation>*:not(.navigation-search):not(.main-nav) {
+                display: none;
+            }
+
+            .nav-align-right .inside-navigation,
+            .nav-align-center .inside-navigation {
+                justify-content: space-between;
+            }
+        }
+    </style>
+    <link rel="icon" href="https://jneweducation.github.io/img/cropped-soalbelajar-32x32.png" sizes="32x32" />
+    <link rel="icon" href="https://jneweducation.github.io/img/cropped-soalbelajar-192x192.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="https://jneweducation.github.io/img/cropped-soalbelajar-180x180.png" />
+    <meta name="msapplication-TileImage" content="https://jneweducation.github.io/img/cropped-soalbelajar-270x270.png" />
+</head>
+
+<body
+    class="home blog wp-custom-logo wp-embed-responsive right-sidebar nav-above-header separate-containers nav-search-enabled nav-aligned-center header-aligned-center dropdown-hover"
+    itemtype="https://schema.org/Blog" itemscope>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-dark-grayscale">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 0.49803921568627" />
+                    <feFuncG type="table" tableValues="0 0.49803921568627" />
+                    <feFuncB type="table" tableValues="0 0.49803921568627" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-grayscale">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 1" />
+                    <feFuncG type="table" tableValues="0 1" />
+                    <feFuncB type="table" tableValues="0 1" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-purple-yellow">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.54901960784314 0.98823529411765" />
+                    <feFuncG type="table" tableValues="0 1" />
+                    <feFuncB type="table" tableValues="0.71764705882353 0.25490196078431" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-blue-red">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 1" />
+                    <feFuncG type="table" tableValues="0 0.27843137254902" />
+                    <feFuncB type="table" tableValues="0.5921568627451 0.27843137254902" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-midnight">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 0" />
+                    <feFuncG type="table" tableValues="0 0.64705882352941" />
+                    <feFuncB type="table" tableValues="0 1" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-magenta-yellow">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.78039215686275 1" />
+                    <feFuncG type="table" tableValues="0 0.94901960784314" />
+                    <feFuncB type="table" tableValues="0.35294117647059 0.47058823529412" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-purple-green">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.65098039215686 0.40392156862745" />
+                    <feFuncG type="table" tableValues="0 1" />
+                    <feFuncB type="table" tableValues="0.44705882352941 0.4" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-blue-orange">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.098039215686275 1" />
+                    <feFuncG type="table" tableValues="0 0.66274509803922" />
+                    <feFuncB type="table" tableValues="0.84705882352941 0.41960784313725" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><a class="screen-reader-text skip-link" href="#content" title="Langsung ke isi">Langsung ke isi</a>
+    <nav class="main-navigation nav-align-center has-menu-bar-items sub-menu-right" id="site-navigation"
+        aria-label="Utama" itemtype="https://schema.org/SiteNavigationElement" itemscope>
+        <div class="inside-navigation grid-container">
+            <form method="get" class="search-form navigation-search" action="/">
+                <input type="search" class="search-field" value="" name="q" title="Cari" />
+            </form> <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+                <span class="gp-icon icon-menu-bars"><svg viewBox="0 0 512 512" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" width="1em" height="1em">
+                        <path
+                            d="M0 96c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24zm0 160c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24zm0 160c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24z" />
+                    </svg><svg viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                        width="1em" height="1em">
+                        <path
+                            d="M71.029 71.029c9.373-9.372 24.569-9.372 33.942 0L256 222.059l151.029-151.03c9.373-9.372 24.569-9.372 33.942 0 9.372 9.373 9.372 24.569 0 33.942L289.941 256l151.03 151.029c9.372 9.373 9.372 24.569 0 33.942-9.373 9.372-24.569 9.372-33.942 0L256 289.941l-151.029 151.03c-9.373 9.372-24.569 9.372-33.942 0-9.372-9.373-9.372-24.569 0-33.942L222.059 256 71.029 104.971c-9.372-9.373-9.372-24.569 0-33.942z" />
+                    </svg></span><span class="mobile-menu">Menu</span> </button>
+            <div id="primary-menu" class="main-nav">
+                <ul id="menu-soal-belajar" class=" menu sf-menu">
+                    <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1"><a
+                            href="https://jneweducation.github.io">Home</a></li>
+                </ul>
+                </ul>
+            </div>
+            <div class="menu-bar-items"><span class="menu-bar-item search-item"><a aria-label="Buka Kolom Pencarian"
+                        href="#"><span class="gp-icon icon-search"><svg viewBox="0 0 512 512"
+                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M208 48c-88.366 0-160 71.634-160 160s71.634 160 160 160 160-71.634 160-160S296.366 48 208 48zM0 208C0 93.125 93.125 0 208 0s208 93.125 208 208c0 48.741-16.765 93.566-44.843 129.024l133.826 134.018c9.366 9.379 9.355 24.575-.025 33.941-9.379 9.366-24.575 9.355-33.941-.025L337.238 370.987C301.747 399.167 256.839 416 208 416 93.125 416 0 322.875 0 208z" />
+                            </svg><svg viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                width="1em" height="1em">
+                                <path
+                                    d="M71.029 71.029c9.373-9.372 24.569-9.372 33.942 0L256 222.059l151.029-151.03c9.373-9.372 24.569-9.372 33.942 0 9.372 9.373 9.372 24.569 0 33.942L289.941 256l151.03 151.029c9.372 9.373 9.372 24.569 0 33.942-9.373 9.372-24.569 9.372-33.942 0L256 289.941l-151.029 151.03c-9.373 9.372-24.569 9.372-33.942 0-9.372-9.373-9.372-24.569 0-33.942L222.059 256 71.029 104.971c-9.372-9.373-9.372-24.569 0-33.942z" />
+                            </svg></span></a></span></div>
+        </div>
+    </nav>
+    <header class="site-header grid-container" id="masthead" aria-label="Situs"
+        itemtype="https://schema.org/WPHeader" itemscope>
+        <div class="inside-header grid-container">
+            <h1 class="site-logo">
+                <a href="https://jneweducation.github.io" rel="home"> QnA</a>
+            </h1>
+        </div>
+    </header>
+
+    <div class="site grid-container container hfeed" id="page">
+        <div class="site-content" id="content">
+            <div class="content-area" id="primary">
+                    <main class="site-main" id="main">
+        <article id="post-1327" class="post-1327 post type-post status-publish format-standard hentry category-info"
+            itemtype="https://schema.org/CreativeWork" itemscope="">
+            <div class="inside-article">
+                <header class="entry-header" aria-label="Konten">
+                    <h1 class="entry-title" itemprop="headline">Important Scaling Techniques</h1>
+                    <div class="entry-meta">
+                       <span
+                            class="byline">oleh <span class="author vcard" itemprop="author"
+                                itemtype="https://schema.org/Person" itemscope=""><span class="author-name"
+                                    itemprop="name">kzeyaad</span></span></span>
+                    </div>
+                </header>
+                <div class="entry-content" itemprop="text">
+                    <div style="text-align: center">
+                        <img src="https://tse1.mm.bing.net/th?q=Important+Scaling+Techniques" alt="Important Scaling Techniques">
+                    </div>
+                    <p></p>
+                    <p>an artistic technique in which the importance of figures is indicated by size. so that the most important figure is depicted as the largest.a.neolithicb.mosaicsc.cartouched.hieratic scale​</p>
+                    <div id="ez-toc-container"
+                        class="ez-toc-v2_0_40 counter-hierarchy ez-toc-counter ez-toc-light-blue ez-toc-container-direction">
+                        <div class="ez-toc-title-container">
+                            <p class="ez-toc-title">Daftar Isi</p>
+                            <span class="ez-toc-title-toggle"><a href="#"
+                                    class="ez-toc-pull-right ez-toc-btn ez-toc-btn-xs ez-toc-btn-default ez-toc-toggle"
+                                    area-label="ez-toc-toggle-icon-1"><label for="item-63b392361c4a0"
+                                        aria-label="Table of Content"><span
+                                            style="display: flex;align-items: center;width: 35px;height: 30px;justify-content: center;direction:ltr;"><svg
+                                                style="fill: #999;color:#999" xmlns="http://www.w3.org/2000/svg"
+                                                class="list-377408" width="20px" height="20px" viewBox="0 0 24 24"
+                                                fill="none">
+                                                <path
+                                                    d="M6 6H4v2h2V6zm14 0H8v2h12V6zM4 11h2v2H4v-2zm16 0H8v2h12v-2zM4 16h2v2H4v-2zm16 0H8v2h12v-2z"
+                                                    fill="currentColor"></path>
+                                            </svg><svg style="fill: #999;color:#999" class="arrow-unsorted-368013"
+                                                xmlns="http://www.w3.org/2000/svg" width="10px" height="10px"
+                                                viewBox="0 0 24 24" version="1.2" baseProfile="tiny">
+                                                <path
+                                                    d="M18.2 9.3l-6.2-6.3-6.2 6.3c-.2.2-.3.4-.3.7s.1.5.3.7c.2.2.4.3.7.3h11c.3 0 .5-.1.7-.3.2-.2.3-.5.3-.7s-.1-.5-.3-.7zM5.8 14.7l6.2 6.3 6.2-6.3c.2-.2.3-.5.3-.7s-.1-.5-.3-.7c-.2-.2-.4-.3-.7-.3h-11c-.3 0-.5.1-.7.3-.2.2-.3.5-.3.7s.1.5.3.7z">
+                                                </path>
+                                            </svg></span></label><input type="checkbox" id="item-63b392361c4a0"></a></span>
+                        </div>
+                        <nav>
+                            <ul class="ez-toc-list ez-toc-list-level-1 ">
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#an-artistic-technique-in-which-the-importance-of-figures-is-indicated-by-size-so-that-the-most-important-figure-is-depicted-as-the-largest-a-neolithicb-mosaicsc-cartouched-hieratic-scale%e2%80%8b">1.
+                                            an artistic technique in which the importance of figures is indicated by size. so that the most important figure is depicted as the largest.a.neolithicb.mosaicsc.cartouched.hieratic scale​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#6-the-most-important-consideration-in-selecting-a-sample-is-that-the-sample-should-bea-representative-of-the-populationc-selected-from-a-large-number-of-individuab-made-up-of-a-large-number-of-sub">2.
+                                            6. The most important consideration in selecting a sample is that the sample should bea. representative of the populationc. selected from a large number of individuab. made up of a large number of subjects d. selected from the population by means of7. The first step in selecting a sample should be toa. define the populationc. determine how to randomizeb.compile a list of the populationd. decide how to stratify the population8. Questionnaire is aa. research methodb. measurement techniquec. tool for data collectiond. data analysis technique9. Which one of the following in not a major method of data collectiona. interviews b. secondary data c. questionnaires d. all of the above are methods10. Another name for a Likert Scale isa. interview protocolb.event samplingc. summated rating scale​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#practical-research1-appearing-measurable-numerical-and-related-to-a-metrical-system-they-are-calleda-collecting-datab-qualitative-datac-quantitative-datad-questionnaire2-undermining-its">3.
+                                            PRACTICAL RESEARCH
+1. Appearing measurable, numerical, and related to a metrical system, they are called
+a. Collecting data
+b. qualitative data
+c. quantitative data
+d. questionnaire
+2. Undermining its importance would result in the production of inaccurate data sufficient to render your research
+study invalid.
+a. Collecting data
+b. qualitative data
+c. quantitative data
+d. questionnaire
+3. It is a data-gathering technique that makes you obtain facts or information about the subject or object of your
+research through the data-gathering instruments of interview and questionnaire.
+a. Questionnaire
+b. Interview
+c. Collect data
+d. Survey
+4. Seeing, touching, and hearing the sources of data personally, you engage yourself in
+a. direct observation
+b. indirect observation
+c. questionnaire
+d. survey
+5. If you see and hear them, not through your own eyes and ears, but by means of technological and electronic
+gadgets like audiotapes, video records, and other recording devices used to capture earlier events, images, or
+sounds.
+a. direct observation
+b. indirect observation
+c. questionnaire
+d. survey
+6. It is a paper containing series of questions formulated for an individual and independent answering by several
+respondents for obtaining statistical information.
+a. direct observation
+b. interview
+c. questionnaire
+d. survey
+7. Similar to a questionnaire, it makes you ask a set of questions, only that, this time, you do it orally.
+a. direct observation
+b. interview
+c. questionnaire
+d. survey
+8. Categorizing people based on gender, religion, position, etc.
+a. Coding scale
+b. Interval scale
+c. Nominal scale
+d. Ordinal scale
+9. Ranking or arranging the classified variables to determine who should be the 1st, 2nd, 3rd, 4th, etc., in the group
+a. Coding scale
+b. Interval scale
+c. Nominal scale
+d. Ordinal scale
+10. Showing equal intervals or differences of people’s views or attitudes like this one example of a scale called Likert
+Attitude Scale: Reading is important.
+a. Coding scale
+b. Interval scale
+c. Nominal scale
+d. Ordinal scale
+11. To analyze data means to quantify or change the verbally expressed data into numerical information
+a. Coding system
+b. Interval scale
+c. Nominal scale
+d. Ordinal scale
+12. This quantitative data-analysis technique provides a summary of the orderly or sequential data obtained from the
+sample through the data-gathering instrument used.
+a. Descriptive Statistical Technique
+b. Direct Statistical Technique
+c. indirect Statistical Technique
+d. Measurement
+13. Measure of Central Tendency – indicates the different positions or values of the items, such that in a in a category
+of data.
+a. Measure of central tendency
+b. Mean
+c. Median
+d. Mode
+14. The average of all the items or scores
+a. Measure of central tendency
+b. Mean
+c. Median
+d. Mode
+15. Median – the score in the middle of the set of items that cuts or divides the set into two groups
+a. Mean
+b. Median
+c. Mode
+d. Standard deviation
+16. Mode – refers to the item or score in the data set that has the most repeated appearance in the set.
+a. Mean
+b. Median
+c. Mode
+d. Standard deviation
+17. Standard Deviation – shows the extent of the difference of the data from the mean.
+a. Mean
+b. Median
+c. Mode
+d. Standard deviation
+18. The results of this statistical analysis are sued to determine if the difference in the means or averages of two
+categories of data are statistically significant.
+a. Analysis of Variance
+b. Correlation
+c. Median
+d. Regression
+19. It has some similarities with correlation, in that, it also shows the nature of relationship of variables, but gives more
+extensive result than that of correlation.
+a. Analysis of Variance
+b. Correlation
+c. Median
+d. Regression
+20. It uses statistical analysis to yield results that describe the relationship of two variables.
+a. Analysis of Variance
+b. Correlation
+c. Median
+d. Regression</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#ns-while-the-letter-that-corresponds-to-the-correct-answer-on-sheet-of-paper-1-the-following-are-the-benefits-of-using-a-rubric-except-a-reduce-the-time-spent-grading-by-allowing-instructors-to">4.
+                                            ns: While the letter that corresponds to the correct answer on Sheet of paper. 1. The following are the benefits of using a rubric, EXCEPT. A. reduce the time spent grading by allowing instructors to refer to a substantive description without writing long comments. B. help to ensure consistency across time and across graders. C. reduce the uncertainty which can accompany grading D. encourages complains about grading -2. These are a set of specific activities that instructors can use to quickly gauge students' comprehension. A. Classroom Assessment Technique B. Class Assessing Tool C. Classroom Assessing Tool D. Classroom Assessment Tool 3. It is predominantly found in the Northern and Central regions of India and is influenced by ancient Hindu musical traditions, historical Vedic religion/ Vedic philosophy, native Indian sounds and enriched by the Persian performance practices of the Mughal era. A. Carnatic music B. Hindustani music C. Devotional music D. Secular Music 4. It is a scoring tool that explicitly describes the instructor's performance expectations for an assignment or piece of work. A. Rubric C. Scoring tool B. Score sheet D. Performance grade sheet 5. It is a rating scale that identifies students' level of mastery within each criterion A. Descriptors B. Criteria C. Performance levels D. Criteria for judging 6. It is the aspect of the performance that will be assessed. A. Descriptors B. Criteria C. Performance levels D. Criteria for judging 7. It is an important skill when learning an instrument, but it's also a huge contidence boost. A. Mastery B. Memorization C. Perseverance D. Patience​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#13-a-type-of-data-collection-technique-that-is-designed-in-a-manner-to-legitimize-behavior-and-trust-of-the-respondents-is-called-___________-a-interviewb-surveyc-observationd-document-review____">5.
+                                            13. A type of data collection technique that is designed in a manner to legitimize behavior and trust of the respondents is called ___________.A. InterviewB. SurveyC. ObservationD. Document Review_____14. What type of questionnaire can be used when respondents are asked to give his/her degree of agreement to a statement?A. Multiple Choice B. RankingC. ScalesD. Open Ended_____15. A process of gathering and measuring information on variables of interest, in an established systematic fashion enabling one to answer the stated research questions is called _________.A. Data GatheringC. Interpreting DataB. Data Tabulation D. Population Sampling_____16. What should be done by a researcher before data analysis?A. Analyze data result C. Plot raw data/score in a tableB. Apply appropriate statistical treatmentD. None of the above_____17. Which is one of the most important considerations in constructing a close-ended type of survey questionnaire?A. Arrange the options according to importanceB. Inject the views of the researchersC. Include all the possible responses D. Have emotionally loaded word_____18. What part of interview is described when the interviewer introduces himself and states the purpose of the interview?A. body B. closingC. conclusionD. opening_____19. Which is NOT a factor to be considered before collection of data?A. units of collectionC. quantitative expressionB. objectives and scopeD. research literature_____20. What sampling method should be used if you are just simply utilizing people that are easy to find?A. Expert B. ProportionalC. ConvenienceD. Snowball_____21. What interview technique is most convenient to use in collecting accurate and reliable information? A. Face to faceB. Video callC. TelephoneD. QuestionnaireFor items 22 – 25. Identify the type of research design described in each number using the choices below. A. DescriptiveB. CorrelationalC. Quasi – experimentalD. True Experimental _____22. Subjects are randomly assigned to treatments rather than identified in naturally occurring groups._____23. Systematic collection of information requires careful selection of the units studied and careful measurement of each variable._____24. Variables are not manipulated; they are only identified and are studied as they occur in a natural setting._____25. When analyses and conclusions are made, determining causes must be done carefully, as other variables, both known and unknown, could still affect the outcome.
+​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#1-what-technique-did-romanesque-sculptors-use-to-carve-portal-sculpture-on-cathedralsa-they-used-sunken-relief-and-undercutting-to-carve-figures-b-they-made-all-of-the-figures-the-same-scale-for-a">6.
+                                            1. What technique did romanesque sculptors use to carve portal sculpture on cathedrals?a. They used sunken relief and undercutting to carve figures.b. they made all of the figures the same scale for a sense or realism.c, They carve idealized figures with exaggerated proportion.d. They emphasized the religious message over the life like depiction of figures.2. How do cathedrals reflect the beliefs of people during the gothic period?a. They honoured powerful baronswho controlled gothic cities.b. They documented the histories of the towns where they are located.c. They helped citizens learn the importance of being faithful to their king.d. They helped worshippers learn Christian stories and feel closer to God.3. What are the dominant themes of Byzantine sculptures?a. human form, everyday life, still lifeb. religious, everyday life, naturec. human nature, symbols, ward. heroes, humos, landscape4. What was the primary language of the Byzantine Empire?a. Greekb. Latinc. Romand. Turkish5. What church was found in the Byzantine Empire?a. Eastern Orthodoxb. Lutheranc. Roman Catholicd. Methodist</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#asappls-po-pki-sunod-ng-direction-nasa-picture-1-fill-the-cup-to-overflowing-level-off-with-a-spatula-or-with-a-straight-edged-knife-2-pack-or-tap-the-refined-sugar-down-3-in-measuring-liquid-i">7.
+                                            ASAPPls, po pki sunod ng direction nasa picture, 1. Fill the cup to overflowing, level-off with a spatula or with a straight edged knife 2. Pack or tap the refined sugar down. 3. In measuring liquid ingredients, place the cup --. on a flat, level surface. 4.Shake off the dry measuring cup to level off dry ingredients. 5. Check and calibrate timers/thermometers, scales and other measuring devices according to manufacturer's manual before using. 6. Shake the dry measuring cup to level off dry ingredients. 7. Level a measuring spoon with straight edge of a knife to measure small amounts of salt, pepper, leavening agents or solid fats. 8. Accurate techniques in measuring are as important as the tools for measuring. 9. To measure the rice and flour, fill the cup to overflowing, level-off with a spatula or with a straightedged knife 10. Liquids should be poured into cup in desired level. Cup should stand on a flat surface​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#the-sharps-and-flats-written-at-the-beginning-of-the-staff-is-called-key-signature-1-pointtruefalsebefore-playing-any-physical-games-we-should-see-to-it-that-the-play-area-is-safe-and-free-of">8.
+                                            The sharps and flats written at the beginning of the staff is called key signature . *
+1 point
+True
+False
+Before playing any physical games, we should see to it that the play area is safe and free of obstacles. *
+1 point
+True
+False
+In chess, the point value of a Queen is 8. *
+1 point
+True
+False
+Eraser tool fills or makes an area one color. *
+1 point
+True
+False
+A flat is a musical symbol that LOWERS the pitch of a note by a half step. *
+1 point
+True
+False
+Chess develops the critical thinking of players. *
+1 point
+True
+False
+A musical scale is a series of pitches arranged in an ascending or descending order. *
+1 point
+True
+False
+The key of G Major has one sharp on the fifth line of the staff. *
+1 point
+True
+False
+You will need a jumping rope in playing sipa. *
+1 point
+True
+False
+Brush technique refers to the movement of the brush tip when you apply paint and stroke it into your canvas. *
+1 point
+True
+False
+A sharp is a musical symbol that RAISES the pitch of a note by a half step. *
+1 point
+True
+False
+BRUSH TIP shows the amount and transparency of color applied. *
+1 point
+True
+False
+Sungka games involves 4 players. *
+1 point
+True
+False
+In chess, King is the most important and considered as one of the weakest chess piece. *
+1 point
+True
+False
+In playing piko, the player who loses the game should NOT show sportsmanship. *
+1 point
+True
+False
+A healthy environment is a welcoming environment. *
+1 point
+True
+False
+C Major scale is one of the most commonly used key signatures. *
+1 point
+True
+False
+Sungka has 16 holes in total including "bahay" of each player. *
+1 point
+True
+False
+The F Major has one flat on the third line of the staff. *
+1 point
+True
+False
+TYPE tool places COLOR in a picture. *
+1 point
+True
+False
+Having a healthy school and community environment is also having a healthy body. *
+1 point
+True
+False
+Digital painting is an emerging art form in which traditional painting techniques such as watercolor, oils, impasto, etc. are applied using digital tools by means of a computer *
+1 point
+True
+False</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#1-read-and-identify-the-words-that-are-being-described-1-techniques-in-the-same-way-describes-the-subtle-delivery-of-poeticajapanese-metrical-from-of-alternating-seven-and-five-syllables-2-it-is-a">9.
+                                            1. Read and identify the words that are being described.1. techniques in the same way describes the subtle delivery of poeticaJapanese metrical from of alternating seven and five syllables.2. it is a traditional song that produces distinct characteristics used in thmelodies also known as the pentatonic scale.3. oversize, supernatural, rough hero4. long song, which reached a golden age in the first half of the 19ththe henge mono or quick-change pieces.5. classic court music imported from China during the 18th century6. small drum7. stick drum8. waist drum9. performed in Shinto shrines10. chant derives from shõmyo, the sophisticated and rich trato the folk songs and fashionable songs of the dayClassify the following instruments depending on the manner in which it creates theIdionhoneChordophone​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#anbylladirection-encircle-the-correct-answer-1-which-of-the-following-country-show-their-spiritual-self-mastery-through-idmastering-the-instrument-than-simply-perfecting-a-technique-of-some-sortand">10.
+                                            AnbyllaDirection: Encircle the correct answer.1. Which of the following country show their spiritual self-mastery through Idmastering the instrument than simply perfecting a technique of some sortand how they give importance to their performance?a. Chinab. KoreaDc. Japand. Mongolia2. Which of the following is not true about Korean vocal music?a. Vocal timber- nasal and throatyb. Melody- pentatonic scale, diatonic scalc. Music _two modes, the yo-sen and in-sen moded. Form- Strophic (using the same tune on different verses)​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#13-a-type-of-data-collection-technique-that-is-designed-in-a-manner-to-legitimize-behavior-and-trust-of-the-respondents-is-called-___________-a-interviewb-surveyc-observationd-document-review____">11.
+                                            13. A type of data collection technique that is designed in a manner to legitimize behavior and trust of the respondents is called ___________.A. InterviewB. SurveyC. ObservationD. Document Review_____14. What type of questionnaire can be used when respondents are asked to give his/her degree of agreement to a statement?A. Multiple Choice B. RankingC. ScalesD. Open Ended_____15. A process of gathering and measuring information on variables of interest, in an established systematic fashion enabling one to answer the stated research questions is called _________.A. Data GatheringC. Interpreting DataB. Data Tabulation D. Population Sampling_____16. What should be done by a researcher before data analysis?A. Analyze data result C. Plot raw data/score in a tableB. Apply appropriate statistical treatmentD. None of the above_____17. Which is one of the most important considerations in constructing a close-ended type of survey questionnaire?A. Arrange the options according to importanceB. Inject the views of the researchersC. Include all the possible responses D. Have emotionally loaded word_____18. What part of interview is described when the interviewer introduces himself and states the purpose of the interview?A. body B. closingC. conclusionD. opening_____19. Which is NOT a factor to be considered before collection of data?A. units of collectionC. quantitative expressionB. objectives and scopeD. research literature_____20. What sampling method should be used if you are just simply utilizing people that are easy to find?A. Expert B. ProportionalC. ConvenienceD. Snowball_____21. What interview technique is most convenient to use in collecting accurate and reliable information? A. Face to faceB. Video callC. TelephoneD. QuestionnaireFor items 22 – 25. Identify the type of research design described in each number using the choices below. A. DescriptiveB. CorrelationalC. Quasi – experimentalD. True Experimental _____22. Subjects are randomly assigned to treatments rather than identified in naturally occurring groups._____23. Systematic collection of information requires careful selection of the units studied and careful measurement of each variable._____24. Variables are not manipulated; they are only identified and are studied as they occur in a natural setting._____25. When analyses and conclusions are made, determining causes must be done carefully, as other variables, both known and unknown, could still affect the outcome.
+​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#11-what-important-ingredients-in-pastries-provides-needed-moisture-to-develop-gluten-a-edible-tallow-c-salt-b-flour-d-water-12-why-do-bakers-prefer-to-used-butter-instead-of-other-fat-a-emulsily">12.
+                                            11. What important ingredients in pastries provides needed moisture to develop Gluten? A Edible tallow C Salt B. Flour D. Water 12 Why do bakers prefer to used butter instead of other fat? A. Emulsily easily C. Sugar B. It melts in the mouth D. It is less expensive than other f 13. What is used to strengthen gluten structure? A. Baking ammonia C. Sugar B. Salt D. Water 14. Which means two ingredients with a pastry blender is a method of A. Cut-in C. Sponge and dough method B. Cut and fold D. Straight dough 15. What land of mixing technique in used when a combination of two motions cutting vertically through the mixture and turning over by gliding the spoon or rubber scraper across the bottom of the mixing bowl at each turn? A Cutting-in C. Folding B. Cut and fold D. Whipping 16. What mixing technique is used when rubbing two ingredients in a bowl with the help of a wooden spoon or electric mixer to make a soft fluffy mixture. The creamed mixture should have both smooth and grainy particles? A Beating C Folding B. Creaming D. Stirring 17. Which of the following is a motor powered device used to stir and blend mixtures used in baking? A Electric mixer C.Rubber scraper B. Rotary egg beater D. Wooden spoon 18. Which of the following tool that is flat aluminium sheet used for baking cookies? A. Baking pan C. Cookie or baking sheet B Cake pan D. Muffin pan 19. What mixer attachment is used to knead the dough? A. Dough hook C. Paddle B. Spiral arm D. Wire whip 20. What device is used in measuring ingredients? A. Liquid measuring cup C. Tablespoon B. Measuring spoon D. Weighing scale​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#true-or-false-test-21-30-directions-read-and-understand-the-following-premise-write-t-if-true-and-f-if-false-__1-the-purpose-of-a-shampoo-is-to-cleanse-the-hair-and-scalp-__2-a-shampoo-to-be">13.
+                                            # True or False Test (21-30) DIRECTIONS: Read and understand the following premise write T if True and F if False. __1. The purpose of a shampoo is to cleanse the hair and scalp. __2. A shampoo to be effective, must remove all dirt, oils, cosmetics present and the skin debris from the scalp and hair shaft, without adversely affecting either the scalp or hair. __3. Shampooing the hair is an important preliminary step for various hair treatments. __4. Costumer should know the composition and action of the shampoo and whether it will do an effective job. __5. Brushing stimulates the scalp, helps remove dust and dirt from hair and gives added sheen. __6. To brush the hair, first part it through the center from front hairline to neck. __7. The comb should not be used to loosen scales from the scalp; it should always be used in disentangling the hair. __8. A properly done shampoo accompanied by correct massage technique will stimulate the blood circulation, nourishes the scalp and promotes hair growth.__9. Hair should be shampooed as often as necessary, depending on how quickly the scalp and hair become soiled. __10. Use sanitized combs, brushes, towels and other implements to each patron.​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#1-is-an-artistic-work-or-practice-that-uses-digital-technology-as-part-of-the-creative-presentation-processes-a-digital-photography-b-digital-painting-c-digital-drawingd-digital-art-2-is-an-eme">14.
+                                            1. is an artistic work or practice that uses digital technology as part of the creative presentation processes. a. Digital Photography b. Digital Painting c. Digital Drawingd. Digital Art 2. is an emerging art form in which traditional painting techniques such as those using paint, water color, oils, and the like are applied using digital tools by means of a computer, a graphic tablet and stylus, and software. a. Digital Photography b. Digital Painting c. Digital Drawing d. Digital Art 3. a mark made by a pointed tool such as a brush, pen or stick. a. Line b. Shapec.colord.value4. has three properties of color; Hue (name,) Value (shades and tints) and intensity (brightness.) a. Line b. Shape C. Color d. Value 5. The difference between values is called value a. Brightness b. Texture c. Contrast d. Value 6. a regular arrangement of alternated or repeated elements (shapes, lines, colours) or motifs. a. Pattern b. Emphasis c. Texture d. Scale 7.special attention/ importance given to one part of a work of art.a. Pattern b. Emphasis c. Texture d. Scale 8. the relationship between objects with respect to size, number; including the relation between parts of a whole. a. Pattern b. Emphasisc. Texture d. Scale 9. is the arrangement of elements to give the viewer the feeling that all the parts of the piece form a coherent whole, a. Harmonyb. Rhythm/Movement c. Unity d. Variety 10. is when all parts of an image work together to be seen as a whole. a. Harmony b. Rhythm/Movement c. Unity d. Variety ​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#write-t-if-the-statement-is-true-and-f-if-the-statement-is-false-1-primitivistic-music-is-tonal-through-the-asserting-of-one-note-as-more-important-than-the-others-2-examples-of-neo-classicism-are">15.
+                                            Write T if the statement is true and F if the statement is false. 1. Primitivistic music is tonal through the asserting of one note as more important than the others. 2. Examples of neo-classicism are Maurice Ravel's Song of the Bagpipe and Piano Sonata 3. Bela Bartok was born in Nagyszentmiklos, Hungary (now Romania) on March 25, 1875 4 The neo-classicist Francis Jean Marcel Poulenc was a member of the group of young French composers known as "Les Six." 5 Sergei Prokofieff his style is uniquely recognizable for its progressive technique, pulsating rhythms, melodic directness, and a resolving dissonance. 6. Neo-classicism also adopted a modern, freer use of the seven-note diatonic scale. 7 Les six consist of five members. 8. Les Six were Darius Milhaud, Arthur Honegger, Georges Auric, Louis Durey, and Germaine Tailleferre. 9. Francis Jean Marcel Poulenc compositions had a coolly elegant modernity, tempered by a classical sense of proportion 10. Bela Bartok was a concert pianist as he travelled exploring the music of Hungarian peasants​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#a-music-true-or-false-write-true-if-the-statement-is-correct-and-false-if-otherwise-1-the-hsaing-waing-is-myanmars-traditional-folk-music-ensemble-2-the-loud-sounding-instruments-are-performed-in">16.
+                                            a MUSIC. True or False Write TRUE if the statement is correct and false if otherwise. 1. The Hsaing Waing is Myanmar's traditional folk music ensemble 2. The loud sounding instruments are performed in open-air ensembles at ceremonies and festivals. 3. Javanese gamelan is used for court music. 4. Balinese gamelan is used for court music. 5. Pelog is composed of heptatonic scale with a semi tone 6. Slendro is composed of 5 equidistant notes in octave. 7. Kurama is an Indonesian term for tempo. 8. Polyphonic stratification kind of melody is a result of hocket/Interlock. 9. Interlocking is a common technique used in gong ensembles 10. Instrumental music is used as ornamentation of the Gamelan. It is as important as gamelan.thank you!​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#1-the-very-popular-composition-of-debussy-which-means-moonlight-a-pelleasb-la-merc-claire-de-lune-d-prelude-to-the-afternoon-of-a-faun2-the-following-are-examples-of-exotic-scales-excepta-atona">17.
+                                            1. The very popular composition of Debussy which means Moonlight.A. PelleasB. La MerC. Claire De Lune D. Prelude to the afternoon of a Faun2. The following are examples of exotic scales exceptA. AtonalB. Whole ToneC. PentatonicD. Chromatic3. What basic Elements of Music is Tone Color?A. MelodyB. TempoC. TimbreD. Harmony4. Which of the following is the characteristics of Impressionistic Music?A. ScaryB. ShockC. Atonal D. Favor of moods and full of Impressions5. It avoids using keys and chords, giving each of 12 semitones of equal importance.A. TimbreB. AtonalC. DynamicsD. Twelve-tone technique6. What is the title of the painting of Claude Monet?A. SunsetB. SunriseC. MoonlightD. None of the above7. One of the earlier but concrete form of declaring the entry of 20 century music and the French movementin the late 19' and early 20 centuryA. Impressionism B. Expressionism C. Neo-classicism D. Avant-Garde Music8. Other musical style which music is tonal through the asserting of one note as important than the others.A Impressionism B. Expressionism C. Neo-classicism D. Primitivismyung matino pong sagot salamat​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#multiple-choice-directions-darken-the-letter-of-the-correct-answer-on-the-attached-answer-sheet-1-this-program-trained-students-in-using-modern-baking-techniquesequipment-tools-and-utensils-and">18.
+                                            Multiple Choice: Directions: Darken the letter of the correct answer on the attached answer sheet. 1. This program trained students in using modern baking techniques,equipment, tools and utensils and other baking appliances. A. Technology B.Bread &amp; Pastry Production C.Industrial Arts D.Practical Arts 2. These are the two elements of internal environment. A.Strength &amp; threats B.Opportunities &amp; threats C.Weaknesses &amp; strengths D.Weaknesses &amp; threats 3.In the acronym SWOT,S stands for A.Star B.Stress C.Social D. Strength 4.These are the importance of Bread &amp; Pastry Production EXCEPT A.Promote self-esteem B.Making money C.Start Culinary career D.improve cooking skills 5.The following are undesirable traits of chefs EXCEPT A.They discourage employees creativity B.They do things the way they were taught &amp; do not change C. They are knowledgeable about many different foods &amp; techniques D.They do not allow employees to provide input on decision in the workplace 6.These people produce brad &amp; baked goods in a retail store,sometimes using pre-prepared or part- baked products from a factory. A.Pastry Chef B.Factory Bakers C.In-Store Bakers D.Cake Decorator 7.The bread &amp; butter of the business not only for you but also for your family. A.Profit oriented B.Takes initiative C. Risk taker D.Opportunity seeker 8.A successful entrepreneur who ventures new business ideas. This characteristic is called A. initiative B.risk taker C.opportunity seeker D.committed 9.This tool is used to measure or to determine the weight of an ingredient. A.Weighing scale B.Liquid Measuring cup C.Measuring cup D. Measuring spoon 10.This baking tool that is used to remove the ingredients left from the mixing bowl is called A.Rubber scraper B.Egg beater C.Rolling pin D.Flour sifter ring noudor​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#true-or-false-directions-write-true-if-the-statement-is-correct-and-false-if-it-is-wrong-write-your-answer-on-a-separate-sheet-of-paper-1-rolling-pin-is-used-in-flattening-dough-of-bread-and-pastr">19.
+                                            True or False Directions: Write TRUE if the statement is correct and FALSE if it is wrong. Write your answer on a separate sheet of paper. 1. Rolling pin is used in flattening dough of bread and pastry. 2. Dusting of flour is needed in kneading and rolling bread and pastry. 3. Weighing scale is used only in preparing breads. 4. In scaling dough, you have to cut it first with pastry wheel. 5. Cut in is one method in mixing bread dough and pastry crust. 6. Bread requires a special technique in mixing ingredients for flakiness and tenderness. 7. Sifter is use to pass dry ingredients into a fine sieve to remove lumps8. Pastries uses largely yeast as leavening agent. 9. Oven temperature is important in baking breads and pastries, 10. Different oven has different baking period. ​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#true-or-false-directions-write-true-if-the-statement-is-correct-and-false-if-it-is-wrong-write-your-answer-on-a-separate-sheet-of-paper-1-rolling-pin-is-used-in-flattening-dough-of-bread-and-pastr">20.
+                                            True or False Directions: Write TRUE if the statement is correct and FALSE if it is wrong, Write your answer on a separate sheet of paper. 1. Rolling pin is used in flattening dough of bread and pastry.2. Dusting of flour is needed in kneading and rolling bread and pastry.3. Weighing scale is used only in preparing breads. 4. In scaling dough, you have to cut it first with pastry wheel. 5. Cut in is one method in mixing bread dough and pastry crust. 6. Bread requires a special technique in mixing ingredients for flakiness and tenderness.7. Sifter is use to pass dry ingredients into a fine sieve to remove lumps.8. Pastries uses largely yeast as leavening agent.9. Oven temperature is important in baking breads and pastries. 10. Different oven has different baking period.​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#1-evaluation-true-or-false-write-true-if-the-statement-is-correct-and-false-if-otherwise-1-gamelan-orchestra-is-not-the-most-popular-form-of-music-in-indonesia-2-pesidhen-is-a-female-soloist-sing">21.
+                                            1. EVALUATION True or False. Write TRUE if the statement is correct and false if otherwise.1. Gamelan orchestra is not the most popular form of music in Indonesia. 2. Pesidhen is a female soloist singer who sings with a Gamelan.3. Instrumental music is used as ornamentation of the Gamelan. It is as important as gamelan. 4. Interlocking is a common technique used in gong ensembles 5. Kurama is an Indonesian term for tempo. 6. Slendro is composed of 5 equidistant notes in octave. 7. Pelor is composed of heptatonic scale with a semi tone. 8. Polyphonic stratification kind of melody is a result of hocket/Interlock. 9. Balinese gamelan is used for court music. 10. Javanese gamelan is used for court music.PAHELP:)​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#objective-to-create-a-timeline-of-your-life-story-what-you-need-its-a-matter-of-time-cartolina-pentel-pen-coloring-material-what-to-do-1-choose-a-partner-one-member-of-your-family-to-help-you">22.
+                                            Objective: To create a timeline of your life story. What you need? It's a Matter of Time Cartolina, pentel pen, coloring material What to do? 1.Choose a partner (one member of your family) to help your timeline diagram. 2.Use your arm span from fingertip of one hand to the fingertip of another hand. 3.Lie down with your arm stretched out to both sides. 4.Have your partner carefully trace the outline of your hands and arms. You may include your head too. 5.Use this layout as the diagram where you will plot your personal timeline. 6. Choose the longest fingertip of one hand and label it your BIRTHDAY. Then, label the fingertip of the other hand (on the other side) TODAY. 7. Divide your diagram into equal pieces just like a ruler that is divided equally into inches. 8. Subtract the year you were born from the year today. This provides the scale of your timeline which is expressed in years. 9. Go back as far as you can remember in your life. 10. Identify the important events that have occurred in your lifetime and list them in your diagram. What happened? 1.Do you see any similarity of your personal timeline to the geologic time of the Earth's history? 2. How will you describe the technique used in creating your timeline? What now? What are your realizations while creating your personal timeline?​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#true-or-false-1-the-hsaing-waing-is-myanmars-traditional-folk-music-ensemble-2-the-loud-sounding-instruments-are-performed-in-open-air-ensembles-at-ceremonies-and-festivals-3-javanese-gamelan-is">23.
+                                            True Or False.1. The Hsaing Waing is Myanmar's traditional folk music ensemble. 2. The loud sounding instruments are performed in open-air ensembles at ceremonies and festivals 3. Javanese gamelan is used for court music 4. Balinese gamelan is used for court music. 5. Pelog is composed of heptatonic scale with a semi tone 6. Slendro is composed of 5 equidistant notes in octave. 7. Kurama is an Indonesian term for tempo, 8. Polyphonic stratification kind of melody is a result of hocket/Interlock 9. Interlocking is a common technique used in gong ensembles 10. Instrumental music is used as ornamentation of the Gamelan. It is as important as gamelan.​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#1-what-technique-is-used-in-indonesian-gong-ensemblesa-syncretic-b-stratificationc-irama-d-interlocking2-how-is-suling-classified-as-an-instrumenta-aerophone-b-membranophonec-idiophone">24.
+                                            1. What technique is used in Indonesian gong ensembles?a. syncretic  b. stratificationc. irama  d. interlocking2. How is suling classified as an instrument?a. aerophone  b. membranophonec. idiophone  d. chordophone3. Which of the following statement is true about Thai music?*a. Their music is based on 5 tones scale onlyb. Their music has similarities with China and Indonesiac. Their music is theoretically based on the five-tone or seven-tone scale system..d. Their music is highly influenced by Hinduism4. How is the song Loi Loi Gratong classified?a. welcome song  b. wedding songc. love song  d. festival song5. Which musical ensemble from Cambodia accompanies ceremonial music of royal courts and temples?a. it is an important aspect of Cambodian life and cultureb. it is a popular art formc. it is a traditional form of courtshipd. it is a genre of pop music from Cambodiapls. patulong po dhil need ko na po bukas thanks po​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#v-assessmentdirections-identify-what-is-being-described-in-each-number-then-write-the-answer-on-the-blank-beforeeach-number-___1-it-is-a-japanese-traditional-theater-art-that-is-performed-in-a-sty">25.
+                                            V. ASSESSMENTDirections : Identify what is being described in each number then write the answer on the blank beforeeach number.___1. It is a Japanese traditional theater art that is performed in a stylized manner whichcombines acting, singing and dancing.    2. It is a well-known Indonesian theater popular not only in their own country but spread inseveral countries around the world.   3. It is also known as the Beijing opera. It is a stylized Chinese form of opera dating from thelate 18th century, in which speech, singing, mime and acrobatics are performed to an instrumentalaccompaniment   4. It is one of the oldest continuous traditions of storytelling in the world which includes theuse of puppet materials and background musical accompaniment to make interesting to the audience.   5. He is characterized by his being creative, humorous and flexible. He manipulates thepuppets, sing and taps out signals to the orchestra 6. These styles are very similar and the only difference is the key.  7. It is an Indonesian and Malay word for theater  8. One of the popular traditional songs in Japan that produces distinct characteristics usedin the Asian style of making melodies also known as the pentatonic scale.   9. Technique adapted from chanting or jo rurí. It implies a very sensitive capacity of ridingthe rhythms of the shamisen (string instrument), declaiming each accompaniment.  10. Means skin and refers to the leather construction of the puppet that are carefully cutinto a very fine tools and supported by carefully shaped bufallo hom handles and control rod.is the most important person in a Wayang Kulit performance.  11. Theare one of the ancient traditions of the people in Asia particularly in Japan,12. Indonesia and China.  13. These are considered as the most important Japanese contribution to world theater.  15. It can be performed by one shamishen or by an entire orchestra of twenty musiciansof which ten are sham isen players, while other play fue, kotsuzum i, otsuzum i anata​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#true-or-false-directions-write-true-if-the-statement-is-correct-and-false-if-it-is-wrong-write-your-answer-on-a-separate-sheet-of-paper-1-rolling-pin-is-used-in-flattening-dough-of-bread-and-pastr">26.
+                                            True or False Directions: Write TRUE if the statement is correct and FALSE if it is wrong. Write your answer on a separate sheet of paper. 1. Rolling pin is used in flattening dough of bread and pastry. 2. Dusting of flour is needed in kneading and rolling bread and pastry. 3. Weighing scale is used only in preparing breads. 4. In scaling dough, you have to cut it first with pastry wheel. 5. Cut in is one method in mixing bread dough and pastry crust. 6. Bread requires a special technique in mixing ingredients for flakiness and tenderness. 7. Sifter is use to pass dry ingredients into a fine sieve to remove lumps. 8. Pastries uses largely yeast as leavening agent. 9. Oven temperature is important in baking breads and pastries. 10. Different oven has different baking period.​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#__1-is-an-artistic-work-or-practice-that-uses-digital-technology-as-part-of-the-creative-presentation-processes-a-digital-photography-b-digital-painting-c-digital-drawing-d-digital-art-__2-is-a">27.
+                                            __1. is an artistic work or practice that uses digital technology as part of the creative presentation processes. a. Digital Photography b. Digital Painting c. Digital Drawing d. Digital Art __2. is an emerging art form in which traditional painting techniques such as those using paint, water color, oils, and the like are applied using digital tools by means of a computer, a graphic tablet and stylus, and software. a. Digital Photography b. Digital Painting c. Digital Drawing d. Digital Art __3. a mark made by a pointed tool such as a brush, pen or stick. a. Line b. Shape C. Color d. Value __4. has three properties of color; Hue (name,) Value (shades and tints) and intensity (brightness.) a. Line b. Shape c. Color d. Value 5. The difference between values is called value a. Brightness b. Texture c. Contrast d. Value __6. a regular arrangement of alternated or repeated elements (shapes, lines, colours) or motifs. a. Pattern b. Emphasis c. Textured. Scale __7. special attention/ importance given to one part of a work of art. a. Pattern b. Emphasis c. Textured. Scale __8. the relationship between objects with respect to size, number, including the relation between parts of a whole. a. Pattern b. Emphasis c. Texture d. Scale __9. is the arrangement of elements to give the viewer the feeling that all the parts of the piece form a coherent whole. a. Harmony b. Rhythm/Movement c. Unity d. Variety __10. is when all parts of an image work together to be seen as a whole. a. Harmony b. Rhythm/Movement c. Unity d. Variety​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#true-or-falsedirections-write-true-if-the-statement-is-correct-and-false-if-it-is-wrong-writeyour-answer-on-a-separate-sheet-of-paper-1-rolling-pin-is-used-in-flattening-dough-of-bread-and-pastry-2">28.
+                                            True or FalseDirections: Write TRUE if the statement is correct and FALSE if it is wrong. Writeyour answer on a separate sheet of paper.1. Rolling pin is used in flattening dough of bread and pastry.2. Dusting of flour is needed in kneading and rolling bread and pastry.3. Weighing scale is used only in preparing breads.4. In scaling dough, you have to cut it first with pastry wheel.5. Cut in is one method in mixing bread dough and pastry crust.6.Bread requires a special technique in mixing ingredients for flakiness andtenderness.7. Sifter is use to pass dry ingredients into a fine sieve to remove lumps.8. Pastries uses largely yeast as leavening agent.9. Oven temperature is important in baking breads and pastries.10. Different oven has different baking period.pasagot na po ngayon plsss...​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#1-it-is-a-well-known-indonesian-theater-popular-not-only-in-their-own-country-but-spread-in-severalcountries-around-the-world-2-it-is-also-known-as-the-beijing-opera-it-is-a-stylized-chinese-form-o">29.
+                                            1. It is a well-known Indonesian theater popular not only in their own country but spread in severalcountries around the world.2. It is also known as the Beijing opera. It is a stylized Chinese form of opera dating from the late18th century, in which speech, singing, mime and acrobatics are performed to an instrumental accompaniment.3. It is one of the oldest continuous traditions of storytelling in the world which includes the use ofpuppet materials and background musical accompaniment to make interesting to the audience.4. He is characterized by his being creative, humorous and flexible. He manipulates the puppets,sing and taps out signals to the orchestra.5. These styles are very similar and the only difference is the key.6. One of the popular traditional songs in Japan that produces distinct characteristics used in theAsian slyle of making melodies also known as the pentatonic scale.7. Technique adapted from chanting or jöruri. It implies a very sensitive capacity of riding themythms of the sham isen (string instrument), declaiming each accompaniment.8. Means skin and refers to the leather construction of the puppet that are carefully cut into avery fine tools and supported by carefully shaped bufallo hom handles and control rod.9. Theis the most important person in a Wayang Kulit performance.10. are one of the ancient traditions of the people in Asia particularly in Japan,Indonesia and China.11. These are considered as the most important Japanese contribution to world theater.12. It is a chant derives from shom yo, (sophisticated and rich tradition of Buddhist chanting).13. It can be performed by one sham ishen or by an entire orchestra of twenty musicians of whichten are sham isen players, while other play fue, kotsuzum i, otsuzum i and taiko.​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#awhat-i-can-achievepost-testi-true-or-falsedirection-write-t-if-the-statement-is-correct-and-f-if-the-statement-is-wrong-1-accurate-techniques-in-measuring-are-as-important-as-the-tools-for-measuri">30.
+                                            AWhat I Can AchievePOST TESTI. True or FalseDirection: Write T if the statement is correct and F if the statement is wrong.1. Accurate techniques in measuring are as important as the tools for measuring.2. Pack or tap down white/refined sugar in measuring.3. It is easier to weigh fat, butter, margarine if bought in pre-measured sticks.4. Check and calibrate timers/thermometers, scales and other measuring devices according tomanufacturer's manual after using.5. Shake the dry measuring cup to level off dry ingredients.rrectly​</a>
+                                    </li>
+                                                            </ul>
+                        </nav>
+                    </div>
+                                            <h2 class="ez-toc-section" id="an-artistic-technique-in-which-the-importance-of-figures-is-indicated-by-size-so-that-the-most-important-figure-is-depicted-as-the-largest-a-neolithicb-mosaicsc-cartouched-hieratic-scale%e2%80%8b">
+                            1. an artistic technique in which the importance of figures is indicated by size. so that the most important figure is depicted as the largest.a.neolithicb.mosaicsc.cartouched.hieratic scale​</h2><br />
+                        <p><strong>Answer:</strong></p><p>D-Hieratic scale</p><p><strong>Explanation:</strong></p><p>Mahal kita ayiiiiiiieee</p><br />
+                                            <h2 class="ez-toc-section" id="6-the-most-important-consideration-in-selecting-a-sample-is-that-the-sample-should-bea-representative-of-the-populationc-selected-from-a-large-number-of-individuab-made-up-of-a-large-number-of-sub">
+                            2. 6. The most important consideration in selecting a sample is that the sample should bea. representative of the populationc. selected from a large number of individuab. made up of a large number of subjects d. selected from the population by means of7. The first step in selecting a sample should be toa. define the populationc. determine how to randomizeb.compile a list of the populationd. decide how to stratify the population8. Questionnaire is aa. research methodb. measurement techniquec. tool for data collectiond. data analysis technique9. Which one of the following in not a major method of data collectiona. interviews b. secondary data c. questionnaires d. all of the above are methods10. Another name for a Likert Scale isa. interview protocolb.event samplingc. summated rating scale​</h2><br />
+                        <p><strong>Answer:</strong></p><p>6.A</p><p>7.A</p><p>8.B</p><p>9.C</p><p>10.C</p><p></p><p><strong>Explanation:</strong></p><p>my Brainly tseeeeeeekkkkk </p><br />
+                                            <h2 class="ez-toc-section" id="practical-research1-appearing-measurable-numerical-and-related-to-a-metrical-system-they-are-calleda-collecting-datab-qualitative-datac-quantitative-datad-questionnaire2-undermining-its">
+                            3. PRACTICAL RESEARCH
+1. Appearing measurable, numerical, and related to a metrical system, they are called
+a. Collecting data
+b. qualitative data
+c. quantitative data
+d. questionnaire
+2. Undermining its importance would result in the production of inaccurate data sufficient to render your research
+study invalid.
+a. Collecting data
+b. qualitative data
+c. quantitative data
+d. questionnaire
+3. It is a data-gathering technique that makes you obtain facts or information about the subject or object of your
+research through the data-gathering instruments of interview and questionnaire.
+a. Questionnaire
+b. Interview
+c. Collect data
+d. Survey
+4. Seeing, touching, and hearing the sources of data personally, you engage yourself in
+a. direct observation
+b. indirect observation
+c. questionnaire
+d. survey
+5. If you see and hear them, not through your own eyes and ears, but by means of technological and electronic
+gadgets like audiotapes, video records, and other recording devices used to capture earlier events, images, or
+sounds.
+a. direct observation
+b. indirect observation
+c. questionnaire
+d. survey
+6. It is a paper containing series of questions formulated for an individual and independent answering by several
+respondents for obtaining statistical information.
+a. direct observation
+b. interview
+c. questionnaire
+d. survey
+7. Similar to a questionnaire, it makes you ask a set of questions, only that, this time, you do it orally.
+a. direct observation
+b. interview
+c. questionnaire
+d. survey
+8. Categorizing people based on gender, religion, position, etc.
+a. Coding scale
+b. Interval scale
+c. Nominal scale
+d. Ordinal scale
+9. Ranking or arranging the classified variables to determine who should be the 1st, 2nd, 3rd, 4th, etc., in the group
+a. Coding scale
+b. Interval scale
+c. Nominal scale
+d. Ordinal scale
+10. Showing equal intervals or differences of people’s views or attitudes like this one example of a scale called Likert
+Attitude Scale: Reading is important.
+a. Coding scale
+b. Interval scale
+c. Nominal scale
+d. Ordinal scale
+11. To analyze data means to quantify or change the verbally expressed data into numerical information
+a. Coding system
+b. Interval scale
+c. Nominal scale
+d. Ordinal scale
+12. This quantitative data-analysis technique provides a summary of the orderly or sequential data obtained from the
+sample through the data-gathering instrument used.
+a. Descriptive Statistical Technique
+b. Direct Statistical Technique
+c. indirect Statistical Technique
+d. Measurement
+13. Measure of Central Tendency – indicates the different positions or values of the items, such that in a in a category
+of data.
+a. Measure of central tendency
+b. Mean
+c. Median
+d. Mode
+14. The average of all the items or scores
+a. Measure of central tendency
+b. Mean
+c. Median
+d. Mode
+15. Median – the score in the middle of the set of items that cuts or divides the set into two groups
+a. Mean
+b. Median
+c. Mode
+d. Standard deviation
+16. Mode – refers to the item or score in the data set that has the most repeated appearance in the set.
+a. Mean
+b. Median
+c. Mode
+d. Standard deviation
+17. Standard Deviation – shows the extent of the difference of the data from the mean.
+a. Mean
+b. Median
+c. Mode
+d. Standard deviation
+18. The results of this statistical analysis are sued to determine if the difference in the means or averages of two
+categories of data are statistically significant.
+a. Analysis of Variance
+b. Correlation
+c. Median
+d. Regression
+19. It has some similarities with correlation, in that, it also shows the nature of relationship of variables, but gives more
+extensive result than that of correlation.
+a. Analysis of Variance
+b. Correlation
+c. Median
+d. Regression
+20. It uses statistical analysis to yield results that describe the relationship of two variables.
+a. Analysis of Variance
+b. Correlation
+c. Median
+d. Regression</h2><br />
+                        <p><strong>Answer:</strong></p><p>A</p><p>C</p><p>D</p><p>D</p><p>B</p><p>A</p><p>B</p><p>C</p><p></p><p><strong>Explanation:</strong></p><p>Yan Lang po kasi vise ako Sana tama ito</p><br />
+                                            <h2 class="ez-toc-section" id="ns-while-the-letter-that-corresponds-to-the-correct-answer-on-sheet-of-paper-1-the-following-are-the-benefits-of-using-a-rubric-except-a-reduce-the-time-spent-grading-by-allowing-instructors-to">
+                            4. ns: While the letter that corresponds to the correct answer on Sheet of paper. 1. The following are the benefits of using a rubric, EXCEPT. A. reduce the time spent grading by allowing instructors to refer to a substantive description without writing long comments. B. help to ensure consistency across time and across graders. C. reduce the uncertainty which can accompany grading D. encourages complains about grading -2. These are a set of specific activities that instructors can use to quickly gauge students' comprehension. A. Classroom Assessment Technique B. Class Assessing Tool C. Classroom Assessing Tool D. Classroom Assessment Tool 3. It is predominantly found in the Northern and Central regions of India and is influenced by ancient Hindu musical traditions, historical Vedic religion/ Vedic philosophy, native Indian sounds and enriched by the Persian performance practices of the Mughal era. A. Carnatic music B. Hindustani music C. Devotional music D. Secular Music 4. It is a scoring tool that explicitly describes the instructor's performance expectations for an assignment or piece of work. A. Rubric C. Scoring tool B. Score sheet D. Performance grade sheet 5. It is a rating scale that identifies students' level of mastery within each criterion A. Descriptors B. Criteria C. Performance levels D. Criteria for judging 6. It is the aspect of the performance that will be assessed. A. Descriptors B. Criteria C. Performance levels D. Criteria for judging 7. It is an important skill when learning an instrument, but it's also a huge contidence boost. A. Mastery B. Memorization C. Perseverance D. Patience​</h2><br />
+                        <p><strong>Answer:</strong></p>acbaadbaac<p><strong>Explanation:</strong></p>yon na pa briainlestes po<br />
+                                            <h2 class="ez-toc-section" id="13-a-type-of-data-collection-technique-that-is-designed-in-a-manner-to-legitimize-behavior-and-trust-of-the-respondents-is-called-___________-a-interviewb-surveyc-observationd-document-review____">
+                            5. 13. A type of data collection technique that is designed in a manner to legitimize behavior and trust of the respondents is called ___________.A. InterviewB. SurveyC. ObservationD. Document Review_____14. What type of questionnaire can be used when respondents are asked to give his/her degree of agreement to a statement?A. Multiple Choice B. RankingC. ScalesD. Open Ended_____15. A process of gathering and measuring information on variables of interest, in an established systematic fashion enabling one to answer the stated research questions is called _________.A. Data GatheringC. Interpreting DataB. Data Tabulation D. Population Sampling_____16. What should be done by a researcher before data analysis?A. Analyze data result C. Plot raw data/score in a tableB. Apply appropriate statistical treatmentD. None of the above_____17. Which is one of the most important considerations in constructing a close-ended type of survey questionnaire?A. Arrange the options according to importanceB. Inject the views of the researchersC. Include all the possible responses D. Have emotionally loaded word_____18. What part of interview is described when the interviewer introduces himself and states the purpose of the interview?A. body B. closingC. conclusionD. opening_____19. Which is NOT a factor to be considered before collection of data?A. units of collectionC. quantitative expressionB. objectives and scopeD. research literature_____20. What sampling method should be used if you are just simply utilizing people that are easy to find?A. Expert B. ProportionalC. ConvenienceD. Snowball_____21. What interview technique is most convenient to use in collecting accurate and reliable information? A. Face to faceB. Video callC. TelephoneD. QuestionnaireFor items 22 – 25. Identify the type of research design described in each number using the choices below. A. DescriptiveB. CorrelationalC. Quasi – experimentalD. True Experimental _____22. Subjects are randomly assigned to treatments rather than identified in naturally occurring groups._____23. Systematic collection of information requires careful selection of the units studied and careful measurement of each variable._____24. Variables are not manipulated; they are only identified and are studied as they occur in a natural setting._____25. When analyses and conclusions are made, determining causes must be done carefully, as other variables, both known and unknown, could still affect the outcome.
+​</h2><br />
+                        <p><strong>Answer:</strong></p><p>A</p><p>B</p><p>D</p><p>C</p><p>A</p><p>D</p><p>A</p><p>C</p><p>B</p><p>B</p><p>yan lang po alam ko</p><br />
+                                            <h2 class="ez-toc-section" id="1-what-technique-did-romanesque-sculptors-use-to-carve-portal-sculpture-on-cathedralsa-they-used-sunken-relief-and-undercutting-to-carve-figures-b-they-made-all-of-the-figures-the-same-scale-for-a">
+                            6. 1. What technique did romanesque sculptors use to carve portal sculpture on cathedrals?a. They used sunken relief and undercutting to carve figures.b. they made all of the figures the same scale for a sense or realism.c, They carve idealized figures with exaggerated proportion.d. They emphasized the religious message over the life like depiction of figures.2. How do cathedrals reflect the beliefs of people during the gothic period?a. They honoured powerful baronswho controlled gothic cities.b. They documented the histories of the towns where they are located.c. They helped citizens learn the importance of being faithful to their king.d. They helped worshippers learn Christian stories and feel closer to God.3. What are the dominant themes of Byzantine sculptures?a. human form, everyday life, still lifeb. religious, everyday life, naturec. human nature, symbols, ward. heroes, humos, landscape4. What was the primary language of the Byzantine Empire?a. Greekb. Latinc. Romand. Turkish5. What church was found in the Byzantine Empire?a. Eastern Orthodoxb. Lutheranc. Roman Catholicd. Methodist</h2><br />
+                        <p><strong>Answer:</strong></p><p>1.<strong> </strong><strong> </strong><strong>B</strong></p><p>2. <strong>C</strong></p><p>3. <strong>B</strong></p><p>4. <strong>B</strong><strong> </strong><strong>L</strong><strong>a</strong><strong>t</strong><strong>i</strong><strong>n</strong></p><p><strong>5</strong><strong>.</strong><strong>C</strong><strong> </strong><strong>r</strong><strong>o</strong><strong>m</strong><strong>a</strong><strong>n</strong><strong> </strong><strong>C</strong><strong>a</strong><strong>t</strong><strong>h</strong><strong>o</strong><strong>l</strong><strong>i</strong><strong>c</strong><strong> </strong></p><br />
+                                            <h2 class="ez-toc-section" id="asappls-po-pki-sunod-ng-direction-nasa-picture-1-fill-the-cup-to-overflowing-level-off-with-a-spatula-or-with-a-straight-edged-knife-2-pack-or-tap-the-refined-sugar-down-3-in-measuring-liquid-i">
+                            7. ASAPPls, po pki sunod ng direction nasa picture, 1. Fill the cup to overflowing, level-off with a spatula or with a straight edged knife 2. Pack or tap the refined sugar down. 3. In measuring liquid ingredients, place the cup --. on a flat, level surface. 4.Shake off the dry measuring cup to level off dry ingredients. 5. Check and calibrate timers/thermometers, scales and other measuring devices according to manufacturer's manual before using. 6. Shake the dry measuring cup to level off dry ingredients. 7. Level a measuring spoon with straight edge of a knife to measure small amounts of salt, pepper, leavening agents or solid fats. 8. Accurate techniques in measuring are as important as the tools for measuring. 9. To measure the rice and flour, fill the cup to overflowing, level-off with a spatula or with a straightedged knife 10. Liquids should be poured into cup in desired level. Cup should stand on a flat surface​</h2><br />
+                        <p><strong>Answer:</strong></p><p>1. true</p><p><strong>Explanation:</strong></p><p>yan lng alm ko</p><p></p><br />
+                                            <h2 class="ez-toc-section" id="the-sharps-and-flats-written-at-the-beginning-of-the-staff-is-called-key-signature-1-pointtruefalsebefore-playing-any-physical-games-we-should-see-to-it-that-the-play-area-is-safe-and-free-of">
+                            8. The sharps and flats written at the beginning of the staff is called key signature . *
+1 point
+True
+False
+Before playing any physical games, we should see to it that the play area is safe and free of obstacles. *
+1 point
+True
+False
+In chess, the point value of a Queen is 8. *
+1 point
+True
+False
+Eraser tool fills or makes an area one color. *
+1 point
+True
+False
+A flat is a musical symbol that LOWERS the pitch of a note by a half step. *
+1 point
+True
+False
+Chess develops the critical thinking of players. *
+1 point
+True
+False
+A musical scale is a series of pitches arranged in an ascending or descending order. *
+1 point
+True
+False
+The key of G Major has one sharp on the fifth line of the staff. *
+1 point
+True
+False
+You will need a jumping rope in playing sipa. *
+1 point
+True
+False
+Brush technique refers to the movement of the brush tip when you apply paint and stroke it into your canvas. *
+1 point
+True
+False
+A sharp is a musical symbol that RAISES the pitch of a note by a half step. *
+1 point
+True
+False
+BRUSH TIP shows the amount and transparency of color applied. *
+1 point
+True
+False
+Sungka games involves 4 players. *
+1 point
+True
+False
+In chess, King is the most important and considered as one of the weakest chess piece. *
+1 point
+True
+False
+In playing piko, the player who loses the game should NOT show sportsmanship. *
+1 point
+True
+False
+A healthy environment is a welcoming environment. *
+1 point
+True
+False
+C Major scale is one of the most commonly used key signatures. *
+1 point
+True
+False
+Sungka has 16 holes in total including "bahay" of each player. *
+1 point
+True
+False
+The F Major has one flat on the third line of the staff. *
+1 point
+True
+False
+TYPE tool places COLOR in a picture. *
+1 point
+True
+False
+Having a healthy school and community environment is also having a healthy body. *
+1 point
+True
+False
+Digital painting is an emerging art form in which traditional painting techniques such as watercolor, oils, impasto, etc. are applied using digital tools by means of a computer *
+1 point
+True
+False</h2><br />
+                        <p><strong>Answer:</strong></p><p>1. True</p><p>2. True</p><p>3. False (queen is 9pts)</p><p>4. False</p><p>5. True</p><p>6. True</p><p>7. True</p><p>8. True</p><p>9.  True</p><p>10. False</p><p>11. True</p><p>12. True</p><p>13. True</p><p>14. False (2 players)</p><p>15. True</p><p>16. False</p><p>17. True</p><p>18. True</p><p>19. True</p><p>20. </p><p>21.</p><p>22. True</p><p>23. True</p><br />
+                                            <h2 class="ez-toc-section" id="1-read-and-identify-the-words-that-are-being-described-1-techniques-in-the-same-way-describes-the-subtle-delivery-of-poeticajapanese-metrical-from-of-alternating-seven-and-five-syllables-2-it-is-a">
+                            9. 1. Read and identify the words that are being described.1. techniques in the same way describes the subtle delivery of poeticaJapanese metrical from of alternating seven and five syllables.2. it is a traditional song that produces distinct characteristics used in thmelodies also known as the pentatonic scale.3. oversize, supernatural, rough hero4. long song, which reached a golden age in the first half of the 19ththe henge mono or quick-change pieces.5. classic court music imported from China during the 18th century6. small drum7. stick drum8. waist drum9. performed in Shinto shrines10. chant derives from shõmyo, the sophisticated and rich trato the folk songs and fashionable songs of the dayClassify the following instruments depending on the manner in which it creates theIdionhoneChordophone​</h2><br />
+                        <p><strong>Answer:</strong></p><p>1. Yakuharai</p><p>2.Sakura</p><p>3.</p><p>4.Nagauta</p><p>5.Gagaku</p><p></p><p></p><br />
+                                            <h2 class="ez-toc-section" id="anbylladirection-encircle-the-correct-answer-1-which-of-the-following-country-show-their-spiritual-self-mastery-through-idmastering-the-instrument-than-simply-perfecting-a-technique-of-some-sortand">
+                            10. AnbyllaDirection: Encircle the correct answer.1. Which of the following country show their spiritual self-mastery through Idmastering the instrument than simply perfecting a technique of some sortand how they give importance to their performance?a. Chinab. KoreaDc. Japand. Mongolia2. Which of the following is not true about Korean vocal music?a. Vocal timber- nasal and throatyb. Melody- pentatonic scale, diatonic scalc. Music _two modes, the yo-sen and in-sen moded. Form- Strophic (using the same tune on different verses)​</h2><br />
+                        <p><strong>Answer:</strong></p><p>1. D</p><p></p><p>2. A</p><p><strong>Explanation:</strong></p><p>YAN PO SAGOT</p><p>GOD BLESS</p><p></p><br />
+                                            <h2 class="ez-toc-section" id="13-a-type-of-data-collection-technique-that-is-designed-in-a-manner-to-legitimize-behavior-and-trust-of-the-respondents-is-called-___________-a-interviewb-surveyc-observationd-document-review____">
+                            11. 13. A type of data collection technique that is designed in a manner to legitimize behavior and trust of the respondents is called ___________.A. InterviewB. SurveyC. ObservationD. Document Review_____14. What type of questionnaire can be used when respondents are asked to give his/her degree of agreement to a statement?A. Multiple Choice B. RankingC. ScalesD. Open Ended_____15. A process of gathering and measuring information on variables of interest, in an established systematic fashion enabling one to answer the stated research questions is called _________.A. Data GatheringC. Interpreting DataB. Data Tabulation D. Population Sampling_____16. What should be done by a researcher before data analysis?A. Analyze data result C. Plot raw data/score in a tableB. Apply appropriate statistical treatmentD. None of the above_____17. Which is one of the most important considerations in constructing a close-ended type of survey questionnaire?A. Arrange the options according to importanceB. Inject the views of the researchersC. Include all the possible responses D. Have emotionally loaded word_____18. What part of interview is described when the interviewer introduces himself and states the purpose of the interview?A. body B. closingC. conclusionD. opening_____19. Which is NOT a factor to be considered before collection of data?A. units of collectionC. quantitative expressionB. objectives and scopeD. research literature_____20. What sampling method should be used if you are just simply utilizing people that are easy to find?A. Expert B. ProportionalC. ConvenienceD. Snowball_____21. What interview technique is most convenient to use in collecting accurate and reliable information? A. Face to faceB. Video callC. TelephoneD. QuestionnaireFor items 22 – 25. Identify the type of research design described in each number using the choices below. A. DescriptiveB. CorrelationalC. Quasi – experimentalD. True Experimental _____22. Subjects are randomly assigned to treatments rather than identified in naturally occurring groups._____23. Systematic collection of information requires careful selection of the units studied and careful measurement of each variable._____24. Variables are not manipulated; they are only identified and are studied as they occur in a natural setting._____25. When analyses and conclusions are made, determining causes must be done carefully, as other variables, both known and unknown, could still affect the outcome.
+​</h2><br />
+                        <p>Answer: 13. B 14.D 15.A 16-17 A. 18 C 19.D 20. C 21. A 22.B 23.A. 24. A 25. B</p><p></p><br />
+                                            <h2 class="ez-toc-section" id="11-what-important-ingredients-in-pastries-provides-needed-moisture-to-develop-gluten-a-edible-tallow-c-salt-b-flour-d-water-12-why-do-bakers-prefer-to-used-butter-instead-of-other-fat-a-emulsily">
+                            12. 11. What important ingredients in pastries provides needed moisture to develop Gluten? A Edible tallow C Salt B. Flour D. Water 12 Why do bakers prefer to used butter instead of other fat? A. Emulsily easily C. Sugar B. It melts in the mouth D. It is less expensive than other f 13. What is used to strengthen gluten structure? A. Baking ammonia C. Sugar B. Salt D. Water 14. Which means two ingredients with a pastry blender is a method of A. Cut-in C. Sponge and dough method B. Cut and fold D. Straight dough 15. What land of mixing technique in used when a combination of two motions cutting vertically through the mixture and turning over by gliding the spoon or rubber scraper across the bottom of the mixing bowl at each turn? A Cutting-in C. Folding B. Cut and fold D. Whipping 16. What mixing technique is used when rubbing two ingredients in a bowl with the help of a wooden spoon or electric mixer to make a soft fluffy mixture. The creamed mixture should have both smooth and grainy particles? A Beating C Folding B. Creaming D. Stirring 17. Which of the following is a motor powered device used to stir and blend mixtures used in baking? A Electric mixer C.Rubber scraper B. Rotary egg beater D. Wooden spoon 18. Which of the following tool that is flat aluminium sheet used for baking cookies? A. Baking pan C. Cookie or baking sheet B Cake pan D. Muffin pan 19. What mixer attachment is used to knead the dough? A. Dough hook C. Paddle B. Spiral arm D. Wire whip 20. What device is used in measuring ingredients? A. Liquid measuring cup C. Tablespoon B. Measuring spoon D. Weighing scale​</h2><br />
+                        <p><strong>Answer:</strong></p><p>19.A Dough hook I think.</p><p><strong>Answer:</strong></p><p>11.A</p><p>12.A</p><p>13.B</p><p>14.A</p><p>15.B</p><p>16.B</p><p>17.A</p><p>18.C</p><p>19.A</p><p>20.A</p><p><strong>Explanation:</strong></p><p> HOPE IT WILL HELP YOU</p><p></p><br />
+                                            <h2 class="ez-toc-section" id="true-or-false-test-21-30-directions-read-and-understand-the-following-premise-write-t-if-true-and-f-if-false-__1-the-purpose-of-a-shampoo-is-to-cleanse-the-hair-and-scalp-__2-a-shampoo-to-be">
+                            13. # True or False Test (21-30) DIRECTIONS: Read and understand the following premise write T if True and F if False. __1. The purpose of a shampoo is to cleanse the hair and scalp. __2. A shampoo to be effective, must remove all dirt, oils, cosmetics present and the skin debris from the scalp and hair shaft, without adversely affecting either the scalp or hair. __3. Shampooing the hair is an important preliminary step for various hair treatments. __4. Costumer should know the composition and action of the shampoo and whether it will do an effective job. __5. Brushing stimulates the scalp, helps remove dust and dirt from hair and gives added sheen. __6. To brush the hair, first part it through the center from front hairline to neck. __7. The comb should not be used to loosen scales from the scalp; it should always be used in disentangling the hair. __8. A properly done shampoo accompanied by correct massage technique will stimulate the blood circulation, nourishes the scalp and promotes hair growth.__9. Hair should be shampooed as often as necessary, depending on how quickly the scalp and hair become soiled. __10. Use sanitized combs, brushes, towels and other implements to each patron.​</h2><br />
+                        <p><strong>Answer:</strong></p><p>1.T</p><p>2.T(i don't know)</p><p>3.T</p><p>4.T</p><p>5.T</p><p>6.T</p><p>7.T</p><p>8.T</p><p>9.T</p><p>10.T</p><p><strong>Explanation:</strong></p><p>That's my answer</p><p></p><br />
+                                            <h2 class="ez-toc-section" id="1-is-an-artistic-work-or-practice-that-uses-digital-technology-as-part-of-the-creative-presentation-processes-a-digital-photography-b-digital-painting-c-digital-drawingd-digital-art-2-is-an-eme">
+                            14. 1. is an artistic work or practice that uses digital technology as part of the creative presentation processes. a. Digital Photography b. Digital Painting c. Digital Drawingd. Digital Art 2. is an emerging art form in which traditional painting techniques such as those using paint, water color, oils, and the like are applied using digital tools by means of a computer, a graphic tablet and stylus, and software. a. Digital Photography b. Digital Painting c. Digital Drawing d. Digital Art 3. a mark made by a pointed tool such as a brush, pen or stick. a. Line b. Shapec.colord.value4. has three properties of color; Hue (name,) Value (shades and tints) and intensity (brightness.) a. Line b. Shape C. Color d. Value 5. The difference between values is called value a. Brightness b. Texture c. Contrast d. Value 6. a regular arrangement of alternated or repeated elements (shapes, lines, colours) or motifs. a. Pattern b. Emphasis c. Texture d. Scale 7.special attention/ importance given to one part of a work of art.a. Pattern b. Emphasis c. Texture d. Scale 8. the relationship between objects with respect to size, number; including the relation between parts of a whole. a. Pattern b. Emphasisc. Texture d. Scale 9. is the arrangement of elements to give the viewer the feeling that all the parts of the piece form a coherent whole, a. Harmonyb. Rhythm/Movement c. Unity d. Variety 10. is when all parts of an image work together to be seen as a whole. a. Harmony b. Rhythm/Movement c. Unity d. Variety ​</h2><br />
+                        <p><strong>Answer:</strong></p><p>1. c</p><p>2. b</p><p>3. a</p><p>4. c</p><p>5. d</p><p>6. a</p><p>7. b</p><p>8. d</p><p>9. a</p><p>10. c</p><p><strong>Explanation:</strong></p><p></p><p><strong>Answer:</strong></p><p>1.D</p><p>2.B</p><p>3.A</p><p>4.B</p><p>5.D</p><p>6.A</p><p>7.B</p><p>8.D</p><p>9.C</p><p>10.C</p><p><strong>Explanation:</strong></p><p>1.Digital art is an artistic work or practice that uses digital technology as an essential part of the creative or presentation process</p><p></p><p>2.Digital painting is an emerging art form in which traditional painting techniques such as watercolor, oils, impasto, etc. are applied using digital tools by means of a computer, a graphics tablet and stylus, and software.</p><p></p><p>3. A line is a mark made by a pointed tool; brush, pen, stick, pencil, etc. It is the identifiable path of a moving dot. Lines can be expressive because of their variety.</p><p></p><p>4.Hue literally means colour. When it is used in a colour name, it indicates that a modern pigment has been used instead of the traditional one. For example, Cadmium Red Pale Hue is a “colour of cadmium red pale”.</p><p></p><p>5.is the term used to describe lightness and darkness of color in design and art.</p><p></p><p>6.pattern: a regular arrangement of repeated or alternated visual art elements or design motifs, derived from combining visual elements such as shape, line, colour.</p><p></p><p>7.Emphasis can be achieved through placement, contrast, colour, size repetition... Relates to focal point. ... The eye can be directed, for example, along edges and by means of the shape and colour.</p><p></p><p>8.Proportion / Scale- Proportion is the size relationship of parts to a whole and to one another.</p><p></p><p>9.Unity—The arrangement of elements to give the viewer the feeling that all the parts of the piece form a coherent whole.</p><p></p><p>10.Unity is achieved when all the elements and principles work together as a whole to create a look or theme. Proportion refers to the relationship of parts within an item. Scale compares size. Shown are two rocking chairs.</p><br />
+                                            <h2 class="ez-toc-section" id="write-t-if-the-statement-is-true-and-f-if-the-statement-is-false-1-primitivistic-music-is-tonal-through-the-asserting-of-one-note-as-more-important-than-the-others-2-examples-of-neo-classicism-are">
+                            15. Write T if the statement is true and F if the statement is false. 1. Primitivistic music is tonal through the asserting of one note as more important than the others. 2. Examples of neo-classicism are Maurice Ravel's Song of the Bagpipe and Piano Sonata 3. Bela Bartok was born in Nagyszentmiklos, Hungary (now Romania) on March 25, 1875 4 The neo-classicist Francis Jean Marcel Poulenc was a member of the group of young French composers known as "Les Six." 5 Sergei Prokofieff his style is uniquely recognizable for its progressive technique, pulsating rhythms, melodic directness, and a resolving dissonance. 6. Neo-classicism also adopted a modern, freer use of the seven-note diatonic scale. 7 Les six consist of five members. 8. Les Six were Darius Milhaud, Arthur Honegger, Georges Auric, Louis Durey, and Germaine Tailleferre. 9. Francis Jean Marcel Poulenc compositions had a coolly elegant modernity, tempered by a classical sense of proportion 10. Bela Bartok was a concert pianist as he travelled exploring the music of Hungarian peasants​</h2><br />
+                        <p><strong>Answer:</strong></p><p>1)T</p><p>2)F</p><p>3)T</p><p>4)T</p><p>5)T</p><p>6)F</p><p>7)T</p><p>8)T</p><p>9)T</p><p>10)T</p><p><strong>Explanation:</strong></p><p>HOPE IT HELPS</p><br />
+                                            <h2 class="ez-toc-section" id="a-music-true-or-false-write-true-if-the-statement-is-correct-and-false-if-otherwise-1-the-hsaing-waing-is-myanmars-traditional-folk-music-ensemble-2-the-loud-sounding-instruments-are-performed-in">
+                            16. a MUSIC. True or False Write TRUE if the statement is correct and false if otherwise. 1. The Hsaing Waing is Myanmar's traditional folk music ensemble 2. The loud sounding instruments are performed in open-air ensembles at ceremonies and festivals. 3. Javanese gamelan is used for court music. 4. Balinese gamelan is used for court music. 5. Pelog is composed of heptatonic scale with a semi tone 6. Slendro is composed of 5 equidistant notes in octave. 7. Kurama is an Indonesian term for tempo. 8. Polyphonic stratification kind of melody is a result of hocket/Interlock. 9. Interlocking is a common technique used in gong ensembles 10. Instrumental music is used as ornamentation of the Gamelan. It is as important as gamelan.thank you!​</h2><br />
+                        <p><strong>Answer:</strong></p><p>1.false</p><p>2.true</p><p>3.false</p><p>4.true</p><p>5.true</p><p>6.false</p><p>7.true</p><p>8.true</p><p>9.true</p><p>10.true</p><p><strong>Explanation:</strong></p><p>hope it help pls brainliest me not force thank you</p><p><strong>Answer:</strong></p><p>1. true</p><p>2. true</p><p>3. true</p><p>4. true</p><p>5. false</p><p>6. true</p><p>7. false</p><p>8. true</p><p>9. true</p><p>10. true</p><p></p><p><strong>Explanation:</strong></p><p>sana makatulong pa vote na din po as brainlist</p><br />
+                                            <h2 class="ez-toc-section" id="1-the-very-popular-composition-of-debussy-which-means-moonlight-a-pelleasb-la-merc-claire-de-lune-d-prelude-to-the-afternoon-of-a-faun2-the-following-are-examples-of-exotic-scales-excepta-atona">
+                            17. 1. The very popular composition of Debussy which means Moonlight.A. PelleasB. La MerC. Claire De Lune D. Prelude to the afternoon of a Faun2. The following are examples of exotic scales exceptA. AtonalB. Whole ToneC. PentatonicD. Chromatic3. What basic Elements of Music is Tone Color?A. MelodyB. TempoC. TimbreD. Harmony4. Which of the following is the characteristics of Impressionistic Music?A. ScaryB. ShockC. Atonal D. Favor of moods and full of Impressions5. It avoids using keys and chords, giving each of 12 semitones of equal importance.A. TimbreB. AtonalC. DynamicsD. Twelve-tone technique6. What is the title of the painting of Claude Monet?A. SunsetB. SunriseC. MoonlightD. None of the above7. One of the earlier but concrete form of declaring the entry of 20 century music and the French movementin the late 19' and early 20 centuryA. Impressionism B. Expressionism C. Neo-classicism D. Avant-Garde Music8. Other musical style which music is tonal through the asserting of one note as important than the others.A Impressionism B. Expressionism C. Neo-classicism D. Primitivismyung matino pong sagot salamat​</h2><br />
+                        <p><strong>Answer:</strong></p><p>1. B</p><p>2. A</p><p>3. A</p><p>4. A</p><p>5. C</p><p>6. A</p><p>7. D</p><p>8. A</p><p><strong>Explanation:</strong></p><p></p><br />
+                                            <h2 class="ez-toc-section" id="multiple-choice-directions-darken-the-letter-of-the-correct-answer-on-the-attached-answer-sheet-1-this-program-trained-students-in-using-modern-baking-techniquesequipment-tools-and-utensils-and">
+                            18. Multiple Choice: Directions: Darken the letter of the correct answer on the attached answer sheet. 1. This program trained students in using modern baking techniques,equipment, tools and utensils and other baking appliances. A. Technology B.Bread &amp; Pastry Production C.Industrial Arts D.Practical Arts 2. These are the two elements of internal environment. A.Strength &amp; threats B.Opportunities &amp; threats C.Weaknesses &amp; strengths D.Weaknesses &amp; threats 3.In the acronym SWOT,S stands for A.Star B.Stress C.Social D. Strength 4.These are the importance of Bread &amp; Pastry Production EXCEPT A.Promote self-esteem B.Making money C.Start Culinary career D.improve cooking skills 5.The following are undesirable traits of chefs EXCEPT A.They discourage employees creativity B.They do things the way they were taught &amp; do not change C. They are knowledgeable about many different foods &amp; techniques D.They do not allow employees to provide input on decision in the workplace 6.These people produce brad &amp; baked goods in a retail store,sometimes using pre-prepared or part- baked products from a factory. A.Pastry Chef B.Factory Bakers C.In-Store Bakers D.Cake Decorator 7.The bread &amp; butter of the business not only for you but also for your family. A.Profit oriented B.Takes initiative C. Risk taker D.Opportunity seeker 8.A successful entrepreneur who ventures new business ideas. This characteristic is called A. initiative B.risk taker C.opportunity seeker D.committed 9.This tool is used to measure or to determine the weight of an ingredient. A.Weighing scale B.Liquid Measuring cup C.Measuring cup D. Measuring spoon 10.This baking tool that is used to remove the ingredients left from the mixing bowl is called A.Rubber scraper B.Egg beater C.Rolling pin D.Flour sifter ring noudor​</h2><br />
+                        <p><strong>Answer:</strong></p><p>1. B</p><p>2. C</p><p>3. D</p><p>4.A. </p><p>5.C</p><p>6.C. </p><p>7 D</p><p>8. B. </p><p>9. A. </p><p>10. A. </p><p></p><br />
+                                            <h2 class="ez-toc-section" id="true-or-false-directions-write-true-if-the-statement-is-correct-and-false-if-it-is-wrong-write-your-answer-on-a-separate-sheet-of-paper-1-rolling-pin-is-used-in-flattening-dough-of-bread-and-pastr">
+                            19. True or False Directions: Write TRUE if the statement is correct and FALSE if it is wrong. Write your answer on a separate sheet of paper. 1. Rolling pin is used in flattening dough of bread and pastry. 2. Dusting of flour is needed in kneading and rolling bread and pastry. 3. Weighing scale is used only in preparing breads. 4. In scaling dough, you have to cut it first with pastry wheel. 5. Cut in is one method in mixing bread dough and pastry crust. 6. Bread requires a special technique in mixing ingredients for flakiness and tenderness. 7. Sifter is use to pass dry ingredients into a fine sieve to remove lumps8. Pastries uses largely yeast as leavening agent. 9. Oven temperature is important in baking breads and pastries, 10. Different oven has different baking period. ​</h2><br />
+                        <p><strong>Answer:</strong></p><p></p><p>true.false. false.true.false.true.true.false. true.true</p><p><strong>Explanation:</strong></p><p>pa breinliest po</p><p>pls salamat</p><br />
+                                            <h2 class="ez-toc-section" id="true-or-false-directions-write-true-if-the-statement-is-correct-and-false-if-it-is-wrong-write-your-answer-on-a-separate-sheet-of-paper-1-rolling-pin-is-used-in-flattening-dough-of-bread-and-pastr">
+                            20. True or False Directions: Write TRUE if the statement is correct and FALSE if it is wrong, Write your answer on a separate sheet of paper. 1. Rolling pin is used in flattening dough of bread and pastry.2. Dusting of flour is needed in kneading and rolling bread and pastry.3. Weighing scale is used only in preparing breads. 4. In scaling dough, you have to cut it first with pastry wheel. 5. Cut in is one method in mixing bread dough and pastry crust. 6. Bread requires a special technique in mixing ingredients for flakiness and tenderness.7. Sifter is use to pass dry ingredients into a fine sieve to remove lumps.8. Pastries uses largely yeast as leavening agent.9. Oven temperature is important in baking breads and pastries. 10. Different oven has different baking period.​</h2><br />
+                        <p><strong>Answer:</strong></p>TrueTrueFalseTrueFalseTrueTrueFalseTrueTrue<br />
+                                            <h2 class="ez-toc-section" id="1-evaluation-true-or-false-write-true-if-the-statement-is-correct-and-false-if-otherwise-1-gamelan-orchestra-is-not-the-most-popular-form-of-music-in-indonesia-2-pesidhen-is-a-female-soloist-sing">
+                            21. 1. EVALUATION True or False. Write TRUE if the statement is correct and false if otherwise.1. Gamelan orchestra is not the most popular form of music in Indonesia. 2. Pesidhen is a female soloist singer who sings with a Gamelan.3. Instrumental music is used as ornamentation of the Gamelan. It is as important as gamelan. 4. Interlocking is a common technique used in gong ensembles 5. Kurama is an Indonesian term for tempo. 6. Slendro is composed of 5 equidistant notes in octave. 7. Pelor is composed of heptatonic scale with a semi tone. 8. Polyphonic stratification kind of melody is a result of hocket/Interlock. 9. Balinese gamelan is used for court music. 10. Javanese gamelan is used for court music.PAHELP:)​</h2><br />
+                        <p><strong>Answer:</strong></p><p>1.true </p><p>2 false</p><p>3 true</p><p>false</p><br />
+                                            <h2 class="ez-toc-section" id="objective-to-create-a-timeline-of-your-life-story-what-you-need-its-a-matter-of-time-cartolina-pentel-pen-coloring-material-what-to-do-1-choose-a-partner-one-member-of-your-family-to-help-you">
+                            22. Objective: To create a timeline of your life story. What you need? It's a Matter of Time Cartolina, pentel pen, coloring material What to do? 1.Choose a partner (one member of your family) to help your timeline diagram. 2.Use your arm span from fingertip of one hand to the fingertip of another hand. 3.Lie down with your arm stretched out to both sides. 4.Have your partner carefully trace the outline of your hands and arms. You may include your head too. 5.Use this layout as the diagram where you will plot your personal timeline. 6. Choose the longest fingertip of one hand and label it your BIRTHDAY. Then, label the fingertip of the other hand (on the other side) TODAY. 7. Divide your diagram into equal pieces just like a ruler that is divided equally into inches. 8. Subtract the year you were born from the year today. This provides the scale of your timeline which is expressed in years. 9. Go back as far as you can remember in your life. 10. Identify the important events that have occurred in your lifetime and list them in your diagram. What happened? 1.Do you see any similarity of your personal timeline to the geologic time of the Earth's history? 2. How will you describe the technique used in creating your timeline? What now? What are your realizations while creating your personal timeline?​</h2><br />
+                        <p><strong>Answer:</strong></p>1.ako ay may lobo2.makinis o magaspang3.malakas o mahina<br />
+                                            <h2 class="ez-toc-section" id="true-or-false-1-the-hsaing-waing-is-myanmars-traditional-folk-music-ensemble-2-the-loud-sounding-instruments-are-performed-in-open-air-ensembles-at-ceremonies-and-festivals-3-javanese-gamelan-is">
+                            23. True Or False.1. The Hsaing Waing is Myanmar's traditional folk music ensemble. 2. The loud sounding instruments are performed in open-air ensembles at ceremonies and festivals 3. Javanese gamelan is used for court music 4. Balinese gamelan is used for court music. 5. Pelog is composed of heptatonic scale with a semi tone 6. Slendro is composed of 5 equidistant notes in octave. 7. Kurama is an Indonesian term for tempo, 8. Polyphonic stratification kind of melody is a result of hocket/Interlock 9. Interlocking is a common technique used in gong ensembles 10. Instrumental music is used as ornamentation of the Gamelan. It is as important as gamelan.​</h2><br />
+                        <p><strong>Answer:</strong></p>1. True2. True3. False4. True5. False6. False7. True8. True9 false10 true<p><strong>Explanation:</strong></p>Carry on learning :) <br />
+                                            <h2 class="ez-toc-section" id="1-what-technique-is-used-in-indonesian-gong-ensemblesa-syncretic-b-stratificationc-irama-d-interlocking2-how-is-suling-classified-as-an-instrumenta-aerophone-b-membranophonec-idiophone">
+                            24. 1. What technique is used in Indonesian gong ensembles?a. syncretic  b. stratificationc. irama  d. interlocking2. How is suling classified as an instrument?a. aerophone  b. membranophonec. idiophone  d. chordophone3. Which of the following statement is true about Thai music?*a. Their music is based on 5 tones scale onlyb. Their music has similarities with China and Indonesiac. Their music is theoretically based on the five-tone or seven-tone scale system..d. Their music is highly influenced by Hinduism4. How is the song Loi Loi Gratong classified?a. welcome song  b. wedding songc. love song  d. festival song5. Which musical ensemble from Cambodia accompanies ceremonial music of royal courts and temples?a. it is an important aspect of Cambodian life and cultureb. it is a popular art formc. it is a traditional form of courtshipd. it is a genre of pop music from Cambodiapls. patulong po dhil need ko na po bukas thanks po​</h2><br />
+                        <p><strong>Answer:</strong></p><p>1.A</p><p>2.A</p><p>3.D</p><p>4.B</p><p>5.B</p><p><strong>Explanation:</strong></p><p>sana Maka tulong yan</p><br />
+                                            <h2 class="ez-toc-section" id="v-assessmentdirections-identify-what-is-being-described-in-each-number-then-write-the-answer-on-the-blank-beforeeach-number-___1-it-is-a-japanese-traditional-theater-art-that-is-performed-in-a-sty">
+                            25. V. ASSESSMENTDirections : Identify what is being described in each number then write the answer on the blank beforeeach number.___1. It is a Japanese traditional theater art that is performed in a stylized manner whichcombines acting, singing and dancing.    2. It is a well-known Indonesian theater popular not only in their own country but spread inseveral countries around the world.   3. It is also known as the Beijing opera. It is a stylized Chinese form of opera dating from thelate 18th century, in which speech, singing, mime and acrobatics are performed to an instrumentalaccompaniment   4. It is one of the oldest continuous traditions of storytelling in the world which includes theuse of puppet materials and background musical accompaniment to make interesting to the audience.   5. He is characterized by his being creative, humorous and flexible. He manipulates thepuppets, sing and taps out signals to the orchestra 6. These styles are very similar and the only difference is the key.  7. It is an Indonesian and Malay word for theater  8. One of the popular traditional songs in Japan that produces distinct characteristics usedin the Asian style of making melodies also known as the pentatonic scale.   9. Technique adapted from chanting or jo rurí. It implies a very sensitive capacity of ridingthe rhythms of the shamisen (string instrument), declaiming each accompaniment.  10. Means skin and refers to the leather construction of the puppet that are carefully cutinto a very fine tools and supported by carefully shaped bufallo hom handles and control rod.is the most important person in a Wayang Kulit performance.  11. Theare one of the ancient traditions of the people in Asia particularly in Japan,12. Indonesia and China.  13. These are considered as the most important Japanese contribution to world theater.  15. It can be performed by one shamishen or by an entire orchestra of twenty musiciansof which ten are sham isen players, while other play fue, kotsuzum i, otsuzum i anata​</h2><br />
+                        1.Kabuki 2.Shadow puppet theater 3.Peking opera 4.Wayang kulit 5.Dalang <br />
+                                            <h2 class="ez-toc-section" id="true-or-false-directions-write-true-if-the-statement-is-correct-and-false-if-it-is-wrong-write-your-answer-on-a-separate-sheet-of-paper-1-rolling-pin-is-used-in-flattening-dough-of-bread-and-pastr">
+                            26. True or False Directions: Write TRUE if the statement is correct and FALSE if it is wrong. Write your answer on a separate sheet of paper. 1. Rolling pin is used in flattening dough of bread and pastry. 2. Dusting of flour is needed in kneading and rolling bread and pastry. 3. Weighing scale is used only in preparing breads. 4. In scaling dough, you have to cut it first with pastry wheel. 5. Cut in is one method in mixing bread dough and pastry crust. 6. Bread requires a special technique in mixing ingredients for flakiness and tenderness. 7. Sifter is use to pass dry ingredients into a fine sieve to remove lumps. 8. Pastries uses largely yeast as leavening agent. 9. Oven temperature is important in baking breads and pastries. 10. Different oven has different baking period.​</h2><br />
+                        <p><strong>Answer:</strong></p><p>1. true</p><p>2. true</p><p>3. true</p><p>4. false</p><p>5. false</p><p>6. true</p><p>7. true</p><p>8. false</p><p>9. true</p><p>10. true</p><br />
+                                            <h2 class="ez-toc-section" id="__1-is-an-artistic-work-or-practice-that-uses-digital-technology-as-part-of-the-creative-presentation-processes-a-digital-photography-b-digital-painting-c-digital-drawing-d-digital-art-__2-is-a">
+                            27. __1. is an artistic work or practice that uses digital technology as part of the creative presentation processes. a. Digital Photography b. Digital Painting c. Digital Drawing d. Digital Art __2. is an emerging art form in which traditional painting techniques such as those using paint, water color, oils, and the like are applied using digital tools by means of a computer, a graphic tablet and stylus, and software. a. Digital Photography b. Digital Painting c. Digital Drawing d. Digital Art __3. a mark made by a pointed tool such as a brush, pen or stick. a. Line b. Shape C. Color d. Value __4. has three properties of color; Hue (name,) Value (shades and tints) and intensity (brightness.) a. Line b. Shape c. Color d. Value 5. The difference between values is called value a. Brightness b. Texture c. Contrast d. Value __6. a regular arrangement of alternated or repeated elements (shapes, lines, colours) or motifs. a. Pattern b. Emphasis c. Textured. Scale __7. special attention/ importance given to one part of a work of art. a. Pattern b. Emphasis c. Textured. Scale __8. the relationship between objects with respect to size, number, including the relation between parts of a whole. a. Pattern b. Emphasis c. Texture d. Scale __9. is the arrangement of elements to give the viewer the feeling that all the parts of the piece form a coherent whole. a. Harmony b. Rhythm/Movement c. Unity d. Variety __10. is when all parts of an image work together to be seen as a whole. a. Harmony b. Rhythm/Movement c. Unity d. Variety​</h2><br />
+                        <p>1.) <strong>D</strong><strong>.</strong><strong> </strong><strong>digital</strong><strong> </strong><strong>art</strong></p><p></p><p>2.) <strong>B</strong><strong>.</strong><strong> </strong><strong>digital</strong><strong> </strong><strong>painting</strong></p><p></p><p>3.) <strong>A</strong><strong>.</strong><strong> </strong><strong>line</strong></p><p></p><p>4.) <strong>C</strong><strong>.</strong><strong> </strong><strong>color</strong></p><p></p><p>5.) <strong>C</strong><strong>.</strong><strong> </strong><strong>contrast</strong></p><p></p><p>6.) <strong>A</strong><strong>.</strong><strong> </strong><strong>pattern</strong></p><p></p><p>7.) <strong>B</strong><strong>.</strong><strong> </strong><strong>emphasis</strong></p><p></p><p>8.) <strong>D</strong><strong>.</strong><strong> </strong><strong>scale</strong></p><p></p><p>9.) <strong>A</strong><strong>.</strong><strong> </strong><strong>harmony</strong></p><p></p><p>10.) <strong>C</strong><strong>.</strong><strong> </strong><strong>unity</strong></p><p></p><p>*Correct Me if I'm wrong*</p><br />
+                                            <h2 class="ez-toc-section" id="true-or-falsedirections-write-true-if-the-statement-is-correct-and-false-if-it-is-wrong-writeyour-answer-on-a-separate-sheet-of-paper-1-rolling-pin-is-used-in-flattening-dough-of-bread-and-pastry-2">
+                            28. True or FalseDirections: Write TRUE if the statement is correct and FALSE if it is wrong. Writeyour answer on a separate sheet of paper.1. Rolling pin is used in flattening dough of bread and pastry.2. Dusting of flour is needed in kneading and rolling bread and pastry.3. Weighing scale is used only in preparing breads.4. In scaling dough, you have to cut it first with pastry wheel.5. Cut in is one method in mixing bread dough and pastry crust.6.Bread requires a special technique in mixing ingredients for flakiness andtenderness.7. Sifter is use to pass dry ingredients into a fine sieve to remove lumps.8. Pastries uses largely yeast as leavening agent.9. Oven temperature is important in baking breads and pastries.10. Different oven has different baking period.pasagot na po ngayon plsss...​</h2><br />
+                        <p><strong>Answer:</strong></p><p>1. true</p><p>2. true</p><p>3. false</p><p>4.</p><p>5. false</p><p>6. false</p><p>7. </p><p>8. </p><p>9. true</p><p>10. false</p><p><strong>Explanation:</strong></p><p>i dont know how to explain, but im pretty sure most of my answers are right. i left the ones i dont know about blank .</p><p><strong>Answer:</strong></p><p>1. true 2. true 3. true 4. true 5. true 6. false 7. false 8. false 9. false 10. false</p><br />
+                                            <h2 class="ez-toc-section" id="1-it-is-a-well-known-indonesian-theater-popular-not-only-in-their-own-country-but-spread-in-severalcountries-around-the-world-2-it-is-also-known-as-the-beijing-opera-it-is-a-stylized-chinese-form-o">
+                            29. 1. It is a well-known Indonesian theater popular not only in their own country but spread in severalcountries around the world.2. It is also known as the Beijing opera. It is a stylized Chinese form of opera dating from the late18th century, in which speech, singing, mime and acrobatics are performed to an instrumental accompaniment.3. It is one of the oldest continuous traditions of storytelling in the world which includes the use ofpuppet materials and background musical accompaniment to make interesting to the audience.4. He is characterized by his being creative, humorous and flexible. He manipulates the puppets,sing and taps out signals to the orchestra.5. These styles are very similar and the only difference is the key.6. One of the popular traditional songs in Japan that produces distinct characteristics used in theAsian slyle of making melodies also known as the pentatonic scale.7. Technique adapted from chanting or jöruri. It implies a very sensitive capacity of riding themythms of the sham isen (string instrument), declaiming each accompaniment.8. Means skin and refers to the leather construction of the puppet that are carefully cut into avery fine tools and supported by carefully shaped bufallo hom handles and control rod.9. Theis the most important person in a Wayang Kulit performance.10. are one of the ancient traditions of the people in Asia particularly in Japan,Indonesia and China.11. These are considered as the most important Japanese contribution to world theater.12. It is a chant derives from shom yo, (sophisticated and rich tradition of Buddhist chanting).13. It can be performed by one sham ishen or by an entire orchestra of twenty musicians of whichten are sham isen players, while other play fue, kotsuzum i, otsuzum i and taiko.​</h2><br />
+                        <p><strong>Answer:</strong></p><p>1. Shadow Puppet Theater</p><p>2.Peking Opera</p><p>3.Wayang kulit </p><p>4.Dalang</p><p>5.Erh-huang and His-p'</p><p>6.Sakura (cherry blossom in english)</p><p>7.NORI</p><p>8.Kulit</p><p>9.Audience</p><p>10. Theater Arts</p><p>11.Nō and kabuki</p><p>12.Nō</p><p>13.Naugata</p><p><strong>Explanation:</strong></p><p>Hope it helps.</p><br />
+                                            <h2 class="ez-toc-section" id="awhat-i-can-achievepost-testi-true-or-falsedirection-write-t-if-the-statement-is-correct-and-f-if-the-statement-is-wrong-1-accurate-techniques-in-measuring-are-as-important-as-the-tools-for-measuri">
+                            30. AWhat I Can AchievePOST TESTI. True or FalseDirection: Write T if the statement is correct and F if the statement is wrong.1. Accurate techniques in measuring are as important as the tools for measuring.2. Pack or tap down white/refined sugar in measuring.3. It is easier to weigh fat, butter, margarine if bought in pre-measured sticks.4. Check and calibrate timers/thermometers, scales and other measuring devices according tomanufacturer's manual after using.5. Shake the dry measuring cup to level off dry ingredients.rrectly​</h2><br />
+                        <p>1.True</p><p>2.False</p><p>3.True</p><p>4.True</p><p>5.False</p><p><strong>Explanation:</strong></p>Sana makatulong#CarryOnLearning<br />
+                    
+                </div>
+                <div class="youtubeVideo" style="text-align: center">
+                    <h3>Video Terkait</h3>
+                    <iframe width="560" height="315"
+                        src="https://www.youtube.com/embed/rnX7qm5tSrM?controls=0" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"allowfullscreen></iframe>
+                </div>
+                <footer class="entry-meta" aria-label="Meta postingan">
+                    <span class="cat-links"><span class="gp-icon icon-categories"><svg viewBox="0 0 512 512"
+                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em">
+                                <path
+                                    d="M0 112c0-26.51 21.49-48 48-48h110.014a48 48 0 0143.592 27.907l12.349 26.791A16 16 0 00228.486 128H464c26.51 0 48 21.49 48 48v224c0 26.51-21.49 48-48 48H48c-26.51 0-48-21.49-48-48V112z">
+                                </path>
+                            </svg></span><span class="screen-reader-text">Kategori </span>art</span>
+            </div>
+        </article>
+    </main>
+            </div>
+            <div class="widget-area sidebar is-right-sidebar" id="right-sidebar">
+                <div class="inside-right-sidebar">
+                    <aside id="categories-2" class="widget inner-padding widget_categories">
+                        <h2 class="widget-title">Topik</h2>
+                        <ul>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/are-the-forces-acting-on-the-chandelier-unbalanced.html">Are The Forces Acting On The Chandelier Unbalanced</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/copyright-infringement-plagiarism.html">Copyright Infringement Plagiarism</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/mnare.html">Mnare</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/one-drum-how-many-liters.html">One Drum How Many Liters</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/influenced-traits-examples.html">Influenced Traits Examples</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/coulomb-s-law-problems-worksheet-answers.html">Coulomb s Law Problems Worksheet Answers</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/common-sight.html">Common Sight</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/exchange-of-asset.html">Exchange Of Asset</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/is-vinegar-soluble-in-water.html">Is Vinegar Soluble In Water</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/breathers-a-zombie-s-lament.html">Breathers A Zombie s Lament</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/history-of-children-s-literature-timeline.html">History Of Children s Literature Timeline</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/d-s-auto-repair.html">D s Auto Repair</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/aluminum-ferrocyanide-formula.html">Aluminum Ferrocyanide Formula</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/atomic-mass-of-br.html">Atomic Mass Of Br</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/father-of-project-method.html">Father Of Project Method</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/factors-of-90-in-pairs.html">Factors Of 90 In Pairs</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/0-meter.html">0 Meter</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/differential-equation-elimination-of-arbitrary-constant.html">Differential Equation Elimination Of Arbitrary Constant</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/operations-and-sales-are-the-two-functions-in-businesses.html">Operations And Sales Are The Two Functions In Businesses</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/the-sun-s-photosphere-is-by-mass-about-75.html">The Sun s Photosphere Is By Mass About 75</a>
+                                </li>
+                                                    </ul>
+
+                    </aside>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="site-footer">
+        <footer class="site-info" aria-label="Situs" itemtype="https://schema.org/WPFooter" itemscope>
+            <div class="inside-site-info grid-container">
+                <div class="copyright-bar">
+                    <span class="copyright">&copy; 2023 <a href="https://jneweducation.github.io"
+                            itemprop="url">QnA</a></span>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <a title="Gulirkan kembali ke puncak laman" aria-label="Gulirkan kembali ke puncak laman" rel="nofollow"
+        href="#" class="generate-back-to-top" data-scroll-speed="400" data-start-scroll="300">
+        <span class="gp-icon icon-arrow-up"><svg viewBox="0 0 330 512" aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill-rule="evenodd"
+                clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414">
+                <path
+                    d="M305.863 314.916c0 2.266-1.133 4.815-2.832 6.514l-14.157 14.163c-1.699 1.7-3.964 2.832-6.513 2.832-2.265 0-4.813-1.133-6.512-2.832L164.572 224.276 53.295 335.593c-1.699 1.7-4.247 2.832-6.512 2.832-2.265 0-4.814-1.133-6.513-2.832L26.113 321.43c-1.699-1.7-2.831-4.248-2.831-6.514s1.132-4.816 2.831-6.515L158.06 176.408c1.699-1.7 4.247-2.833 6.512-2.833 2.265 0 4.814 1.133 6.513 2.833L303.03 308.4c1.7 1.7 2.832 4.249 2.832 6.515z"
+                    fill-rule="nonzero" />
+            </svg></span>
+    </a>
+    <script id="generate-a11y">
+        ! function() {
+            "use strict";
+            if ("querySelector" in document && "addEventListener" in window) {
+                var e = document.body;
+                e.addEventListener("mousedown", function() {
+                    e.classList.add("using-mouse")
+                }), e.addEventListener("keydown", function() {
+                    e.classList.remove("using-mouse")
+                })
+            }
+        }();
+    </script>
+    <!--[if lte IE 11]>
+<script src='https://jneweducation.github.io/js/classList.min.js' ?ver=3.2.4' id='generate-classlist-js'></script>
+<![endif]-->
+    <script id='generate-menu-js-extra'>
+        var generatepressMenu = {
+            "toggleOpenedSubMenus": "1",
+            "openSubMenuLabel": "Buka Submenu",
+            "closeSubMenuLabel": "Tutup submenu"
+        };
+    </script>
+    <script src='https://jneweducation.github.io/js/menu.min.js' ?ver=3.2.4' id='generate-menu-js'></script>
+    <script id='generate-navigation-search-js-extra'>
+        var generatepressNavSearch = {
+            "open": "Buka Kolom Pencarian",
+            "close": "Tutup Kolom Pencarian"
+        };
+    </script>
+    <script src='https://jneweducation.github.io/js/navigation-search.min.js' ?ver=3.2.4' id='generate-navigation-search-js'></script>
+    <script id='generate-back-to-top-js-extra'>
+        var generatepressBackToTop = {
+            "smooth": "1"
+        };
+    </script>
+    <script src='https://jneweducation.github.io/js/back-to-top.min.js' ?ver=3.2.4' id='generate-back-to-top-js'></script>
+    <script type='text/javascript' src='//jd3j7g5z1fqs.com/96/78/7a/96787a1945876b1a9c10f79941441964.js'></script>
+<script type='text/javascript' src='//jd3j7g5z1fqs.com/b4/f1/ef/b4f1ef8dfe59b7fa68754094cf6c8e0e.js'></script>
+  <!-- Histats.com  START  (aync)-->
+<script type="text/javascript">var _Hasync= _Hasync|| [];
+_Hasync.push(['Histats.start', '1,4739059,4,0,0,0,00010000']);
+_Hasync.push(['Histats.fasi', '1']);
+_Hasync.push(['Histats.track_hits', '']);
+(function() {
+var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
+hs.src = ('//s10.histats.com/js15_as.js');
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+})();</script>
+<noscript><a href="/" target="_blank"><img  src="//sstatic1.histats.com/0.gif?4739059&101" alt="" border="0"></a></noscript>
+<!-- Histats.com  END  -->
+</body>
+
+</html>

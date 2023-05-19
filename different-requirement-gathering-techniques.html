@@ -1,0 +1,1143 @@
+<!DOCTYPE html>
+<html lang="id" prefix="og: https://ogp.me/ns#">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="profile" href="https://gmpg.org/xfn/11">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Different Requirement Gathering Techniques - QnA</title>
+    <meta name="description" content="Different Requirement Gathering Techniques, , , , , , , 0, A Guide to Gathering Requirements as Business Analyst - Analytics Vidhya, www.analyticsvidhya.com, 800 x 765, jpeg, , 20, different-requirement-gathering-techniques, QnA" />
+    <meta name="robots" content="index,follow" />
+    <meta property="og:locale" content="id_ID" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Different Requirement Gathering Techniques - QnA" />
+    <meta property="og:description" content="Different Requirement Gathering Techniques, , , , , , , 0, A Guide to Gathering Requirements as Business Analyst - Analytics Vidhya, www.analyticsvidhya.com, 800 x 765, jpeg, , 20, different-requirement-gathering-techniques, QnA" />
+    <meta property="og:site_name" content="QnA" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Different Requirement Gathering Techniques - QnA" />
+    <meta name="twitter:description" content="Different Requirement Gathering Techniques, , , , , , , 0, A Guide to Gathering Requirements as Business Analyst - Analytics Vidhya, www.analyticsvidhya.com, 800 x 765, jpeg, , 20, different-requirement-gathering-techniques, QnA" />
+    <link rel='stylesheet' id='generate-style-css' href='https://jneweducation.github.io/css/main.min.css'?ver=3.2.4'
+        media='all' />
+    <link rel='stylesheet' id='ez-toc-css' href='https://jneweducation.github.io/css/screen.min.css'?ver=2.0.40' media='all' />
+    <style id='generate-style-inline-css'>
+        body {
+            background-color: #f7f7f7;
+            color: #222222;
+        }
+
+        a {
+            color: #1e73be;
+        }
+
+        a:hover,
+        a:focus,
+        a:active {
+            color: #000000;
+        }
+
+        .wp-block-group__inner-container {
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .generate-back-to-top {
+            font-size: 20px;
+            border-radius: 3px;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            line-height: 40px;
+            width: 40px;
+            text-align: center;
+            z-index: 10;
+            transition: opacity 300ms ease-in-out;
+            opacity: 0.1;
+            transform: translateY(1000px);
+        }
+
+        .generate-back-to-top__show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .navigation-search {
+            position: absolute;
+            left: -99999px;
+            pointer-events: none;
+            visibility: hidden;
+            z-index: 20;
+            width: 100%;
+            top: 0;
+            transition: opacity 100ms ease-in-out;
+            opacity: 0;
+        }
+
+        .navigation-search.nav-search-active {
+            left: 0;
+            right: 0;
+            pointer-events: auto;
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .navigation-search input[type="search"] {
+            outline: 0;
+            border: 0;
+            vertical-align: bottom;
+            line-height: 1;
+            opacity: 0.9;
+            width: 100%;
+            z-index: 20;
+            border-radius: 0;
+            -webkit-appearance: none;
+            height: 60px;
+        }
+
+        .navigation-search input::-ms-clear {
+            display: none;
+            width: 0;
+            height: 0;
+        }
+
+        .navigation-search input::-ms-reveal {
+            display: none;
+            width: 0;
+            height: 0;
+        }
+
+        .navigation-search input::-webkit-search-decoration,
+        .navigation-search input::-webkit-search-cancel-button,
+        .navigation-search input::-webkit-search-results-button,
+        .navigation-search input::-webkit-search-results-decoration {
+            display: none;
+        }
+
+        .gen-sidebar-nav .navigation-search {
+            top: auto;
+            bottom: 0;
+        }
+
+        :root {
+            --contrast: #222222;
+            --contrast-2: #575760;
+            --contrast-3: #b2b2be;
+            --base: #f0f0f0;
+            --base-2: #f7f8f9;
+            --base-3: #ffffff;
+            --accent: #1e73be;
+        }
+
+        .has-contrast-color {
+            color: var(--contrast);
+        }
+
+        .has-contrast-background-color {
+            background-color: var(--contrast);
+        }
+
+        .has-contrast-2-color {
+            color: var(--contrast-2);
+        }
+
+        .has-contrast-2-background-color {
+            background-color: var(--contrast-2);
+        }
+
+        .has-contrast-3-color {
+            color: var(--contrast-3);
+        }
+
+        .has-contrast-3-background-color {
+            background-color: var(--contrast-3);
+        }
+
+        .has-base-color {
+            color: var(--base);
+        }
+
+        .has-base-background-color {
+            background-color: var(--base);
+        }
+
+        .has-base-2-color {
+            color: var(--base-2);
+        }
+
+        .has-base-2-background-color {
+            background-color: var(--base-2);
+        }
+
+        .has-base-3-color {
+            color: var(--base-3);
+        }
+
+        .has-base-3-background-color {
+            background-color: var(--base-3);
+        }
+
+        .has-accent-color {
+            color: var(--accent);
+        }
+
+        .has-accent-background-color {
+            background-color: var(--accent);
+        }
+
+        body,
+        button,
+        input,
+        select,
+        textarea {
+            font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        }
+
+        body {
+            line-height: 1.5;
+        }
+
+        .entry-content>[class*="wp-block-"]:not(:last-child) {
+            margin-bottom: 1.5em;
+        }
+
+        .main-navigation .main-nav ul ul li a {
+            font-size: 14px;
+        }
+
+        .sidebar .widget,
+        .footer-widgets .widget {
+            font-size: 17px;
+        }
+
+        @media (max-width:768px) {
+            h1 {
+                font-size: 31px;
+            }
+
+            h2 {
+                font-size: 27px;
+            }
+
+            h3 {
+                font-size: 24px;
+            }
+
+            h4 {
+                font-size: 22px;
+            }
+
+            h5 {
+                font-size: 19px;
+            }
+        }
+
+        .top-bar {
+            background-color: #636363;
+            color: #ffffff;
+        }
+
+        .top-bar a {
+            color: #ffffff;
+        }
+
+        .top-bar a:hover {
+            color: #303030;
+        }
+
+        .site-header {
+            background-color: #ffffff;
+        }
+
+        .main-title a,
+        .main-title a:hover {
+            color: #222222;
+        }
+
+        .site-description {
+            color: #757575;
+        }
+
+        .main-navigation,
+        .main-navigation ul ul {
+            background-color: #ed4250;
+        }
+
+        .main-navigation .main-nav ul li a,
+        .main-navigation .menu-toggle,
+        .main-navigation .menu-bar-items {
+            color: #ffffff;
+        }
+
+        .main-navigation .main-nav ul li:not([class*="current-menu-"]):hover>a,
+        .main-navigation .main-nav ul li:not([class*="current-menu-"]):focus>a,
+        .main-navigation .main-nav ul li.sfHover:not([class*="current-menu-"])>a,
+        .main-navigation .menu-bar-item:hover>a,
+        .main-navigation .menu-bar-item.sfHover>a {
+            color: #ffffff;
+            background-color: #c42f2f;
+        }
+
+        button.menu-toggle:hover,
+        button.menu-toggle:focus {
+            color: #ffffff;
+        }
+
+        .main-navigation .main-nav ul li[class*="current-menu-"]>a {
+            color: #ffffff;
+            background-color: #c42f2f;
+        }
+
+        .navigation-search input[type="search"],
+        .navigation-search input[type="search"]:active,
+        .navigation-search input[type="search"]:focus,
+        .main-navigation .main-nav ul li.search-item.active>a,
+        .main-navigation .menu-bar-items .search-item.active>a {
+            color: #ffffff;
+            background-color: #c42f2f;
+        }
+
+        .main-navigation ul ul {
+            background-color: #c42f2f;
+        }
+
+        .main-navigation .main-nav ul ul li a {
+            color: #ffffff;
+        }
+
+        .main-navigation .main-nav ul ul li:not([class*="current-menu-"]):hover>a,
+        .main-navigation .main-nav ul ul li:not([class*="current-menu-"]):focus>a,
+        .main-navigation .main-nav ul ul li.sfHover:not([class*="current-menu-"])>a {
+            color: #fcd9d6;
+            background-color: #c42f2f;
+        }
+
+        .main-navigation .main-nav ul ul li[class*="current-menu-"]>a {
+            color: #fcd9d6;
+            background-color: #c42f2f;
+        }
+
+        .separate-containers .inside-article,
+        .separate-containers .comments-area,
+        .separate-containers .page-header,
+        .one-container .container,
+        .separate-containers .paging-navigation,
+        .inside-page-header {
+            background-color: #ffffff;
+        }
+
+        .entry-title a {
+            color: #222222;
+        }
+
+        .entry-title a:hover {
+            color: #55555e;
+        }
+
+        .entry-meta {
+            color: #595959;
+        }
+
+        .sidebar .widget {
+            background-color: #ffffff;
+        }
+
+        .footer-widgets {
+            background-color: #ffffff;
+        }
+
+        .footer-widgets .widget-title {
+            color: #000000;
+        }
+
+        .site-info {
+            color: #ffffff;
+            background-color: #55555e;
+        }
+
+        .site-info a {
+            color: #ffffff;
+        }
+
+        .site-info a:hover {
+            color: #d3d3d3;
+        }
+
+        .footer-bar .widget_nav_menu .current-menu-item a {
+            color: #d3d3d3;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="url"],
+        input[type="password"],
+        input[type="search"],
+        input[type="tel"],
+        input[type="number"],
+        textarea,
+        select {
+            color: #666666;
+            background-color: #fafafa;
+            border-color: #cccccc;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="url"]:focus,
+        input[type="password"]:focus,
+        input[type="search"]:focus,
+        input[type="tel"]:focus,
+        input[type="number"]:focus,
+        textarea:focus,
+        select:focus {
+            color: #666666;
+            background-color: #ffffff;
+            border-color: #bfbfbf;
+        }
+
+        button,
+        html input[type="button"],
+        input[type="reset"],
+        input[type="submit"],
+        a.button,
+        a.wp-block-button__link:not(.has-background) {
+            color: #ffffff;
+            background-color: #55555e;
+        }
+
+        button:hover,
+        html input[type="button"]:hover,
+        input[type="reset"]:hover,
+        input[type="submit"]:hover,
+        a.button:hover,
+        button:focus,
+        html input[type="button"]:focus,
+        input[type="reset"]:focus,
+        input[type="submit"]:focus,
+        a.button:focus,
+        a.wp-block-button__link:not(.has-background):active,
+        a.wp-block-button__link:not(.has-background):focus,
+        a.wp-block-button__link:not(.has-background):hover {
+            color: #ffffff;
+            background-color: #3f4047;
+        }
+
+        a.generate-back-to-top {
+            background-color: rgba(0, 0, 0, 0.4);
+            color: #ffffff;
+        }
+
+        a.generate-back-to-top:hover,
+        a.generate-back-to-top:focus {
+            background-color: rgba(0, 0, 0, 0.6);
+            color: #ffffff;
+        }
+
+        @media (max-width:768px) {
+
+            .main-navigation .menu-bar-item:hover>a,
+            .main-navigation .menu-bar-item.sfHover>a {
+                background: none;
+                color: #ffffff;
+            }
+        }
+
+        .nav-below-header .main-navigation .inside-navigation.grid-container,
+        .nav-above-header .main-navigation .inside-navigation.grid-container {
+            padding: 0px 20px 0px 20px;
+        }
+
+        .site-main .wp-block-group__inner-container {
+            padding: 40px;
+        }
+
+        .separate-containers .paging-navigation {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .entry-content .alignwide,
+        body:not(.no-sidebar) .entry-content .alignfull {
+            margin-left: -40px;
+            width: calc(100% + 80px);
+            max-width: calc(100% + 80px);
+        }
+
+        .rtl .menu-item-has-children .dropdown-menu-toggle {
+            padding-left: 20px;
+        }
+
+        .rtl .main-navigation .main-nav ul li.menu-item-has-children>a {
+            padding-right: 20px;
+        }
+
+        @media (max-width:768px) {
+
+            .separate-containers .inside-article,
+            .separate-containers .comments-area,
+            .separate-containers .page-header,
+            .separate-containers .paging-navigation,
+            .one-container .site-content,
+            .inside-page-header {
+                padding: 30px;
+            }
+
+            .site-main .wp-block-group__inner-container {
+                padding: 30px;
+            }
+
+            .inside-top-bar {
+                padding-right: 30px;
+                padding-left: 30px;
+            }
+
+            .inside-header {
+                padding-right: 30px;
+                padding-left: 30px;
+            }
+
+            .widget-area .widget {
+                padding-top: 30px;
+                padding-right: 30px;
+                padding-bottom: 30px;
+                padding-left: 30px;
+            }
+
+            .footer-widgets-container {
+                padding-top: 30px;
+                padding-right: 30px;
+                padding-bottom: 30px;
+                padding-left: 30px;
+            }
+
+            .inside-site-info {
+                padding-right: 30px;
+                padding-left: 30px;
+            }
+
+            .entry-content .alignwide,
+            body:not(.no-sidebar) .entry-content .alignfull {
+                margin-left: -30px;
+                width: calc(100% + 60px);
+                max-width: calc(100% + 60px);
+            }
+
+            .one-container .site-main .paging-navigation {
+                margin-bottom: 20px;
+            }
+        }
+
+        /* End cached CSS */
+        .is-right-sidebar {
+            width: 30%;
+        }
+
+        .is-left-sidebar {
+            width: 30%;
+        }
+
+        .site-content .content-area {
+            width: 70%;
+        }
+
+        @media (max-width:768px) {
+
+            .main-navigation .menu-toggle,
+            .sidebar-nav-mobile:not(#sticky-placeholder) {
+                display: block;
+            }
+
+            .main-navigation ul,
+            .gen-sidebar-nav,
+            .main-navigation:not(.slideout-navigation):not(.toggled) .main-nav>ul,
+            .has-inline-mobile-toggle #site-navigation .inside-navigation>*:not(.navigation-search):not(.main-nav) {
+                display: none;
+            }
+
+            .nav-align-right .inside-navigation,
+            .nav-align-center .inside-navigation {
+                justify-content: space-between;
+            }
+        }
+    </style>
+    <link rel="icon" href="https://jneweducation.github.io/img/cropped-soalbelajar-32x32.png" sizes="32x32" />
+    <link rel="icon" href="https://jneweducation.github.io/img/cropped-soalbelajar-192x192.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="https://jneweducation.github.io/img/cropped-soalbelajar-180x180.png" />
+    <meta name="msapplication-TileImage" content="https://jneweducation.github.io/img/cropped-soalbelajar-270x270.png" />
+</head>
+
+<body
+    class="home blog wp-custom-logo wp-embed-responsive right-sidebar nav-above-header separate-containers nav-search-enabled nav-aligned-center header-aligned-center dropdown-hover"
+    itemtype="https://schema.org/Blog" itemscope>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-dark-grayscale">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 0.49803921568627" />
+                    <feFuncG type="table" tableValues="0 0.49803921568627" />
+                    <feFuncB type="table" tableValues="0 0.49803921568627" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-grayscale">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 1" />
+                    <feFuncG type="table" tableValues="0 1" />
+                    <feFuncB type="table" tableValues="0 1" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-purple-yellow">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.54901960784314 0.98823529411765" />
+                    <feFuncG type="table" tableValues="0 1" />
+                    <feFuncB type="table" tableValues="0.71764705882353 0.25490196078431" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-blue-red">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 1" />
+                    <feFuncG type="table" tableValues="0 0.27843137254902" />
+                    <feFuncB type="table" tableValues="0.5921568627451 0.27843137254902" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-midnight">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 0" />
+                    <feFuncG type="table" tableValues="0 0.64705882352941" />
+                    <feFuncB type="table" tableValues="0 1" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-magenta-yellow">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.78039215686275 1" />
+                    <feFuncG type="table" tableValues="0 0.94901960784314" />
+                    <feFuncB type="table" tableValues="0.35294117647059 0.47058823529412" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-purple-green">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.65098039215686 0.40392156862745" />
+                    <feFuncG type="table" tableValues="0 1" />
+                    <feFuncB type="table" tableValues="0.44705882352941 0.4" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-blue-orange">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.098039215686275 1" />
+                    <feFuncG type="table" tableValues="0 0.66274509803922" />
+                    <feFuncB type="table" tableValues="0.84705882352941 0.41960784313725" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><a class="screen-reader-text skip-link" href="#content" title="Langsung ke isi">Langsung ke isi</a>
+    <nav class="main-navigation nav-align-center has-menu-bar-items sub-menu-right" id="site-navigation"
+        aria-label="Utama" itemtype="https://schema.org/SiteNavigationElement" itemscope>
+        <div class="inside-navigation grid-container">
+            <form method="get" class="search-form navigation-search" action="/">
+                <input type="search" class="search-field" value="" name="q" title="Cari" />
+            </form> <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+                <span class="gp-icon icon-menu-bars"><svg viewBox="0 0 512 512" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" width="1em" height="1em">
+                        <path
+                            d="M0 96c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24zm0 160c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24zm0 160c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24z" />
+                    </svg><svg viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                        width="1em" height="1em">
+                        <path
+                            d="M71.029 71.029c9.373-9.372 24.569-9.372 33.942 0L256 222.059l151.029-151.03c9.373-9.372 24.569-9.372 33.942 0 9.372 9.373 9.372 24.569 0 33.942L289.941 256l151.03 151.029c9.372 9.373 9.372 24.569 0 33.942-9.373 9.372-24.569 9.372-33.942 0L256 289.941l-151.029 151.03c-9.373 9.372-24.569 9.372-33.942 0-9.372-9.373-9.372-24.569 0-33.942L222.059 256 71.029 104.971c-9.372-9.373-9.372-24.569 0-33.942z" />
+                    </svg></span><span class="mobile-menu">Menu</span> </button>
+            <div id="primary-menu" class="main-nav">
+                <ul id="menu-soal-belajar" class=" menu sf-menu">
+                    <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1"><a
+                            href="https://jneweducation.github.io">Home</a></li>
+                </ul>
+                </ul>
+            </div>
+            <div class="menu-bar-items"><span class="menu-bar-item search-item"><a aria-label="Buka Kolom Pencarian"
+                        href="#"><span class="gp-icon icon-search"><svg viewBox="0 0 512 512"
+                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M208 48c-88.366 0-160 71.634-160 160s71.634 160 160 160 160-71.634 160-160S296.366 48 208 48zM0 208C0 93.125 93.125 0 208 0s208 93.125 208 208c0 48.741-16.765 93.566-44.843 129.024l133.826 134.018c9.366 9.379 9.355 24.575-.025 33.941-9.379 9.366-24.575 9.355-33.941-.025L337.238 370.987C301.747 399.167 256.839 416 208 416 93.125 416 0 322.875 0 208z" />
+                            </svg><svg viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                width="1em" height="1em">
+                                <path
+                                    d="M71.029 71.029c9.373-9.372 24.569-9.372 33.942 0L256 222.059l151.029-151.03c9.373-9.372 24.569-9.372 33.942 0 9.372 9.373 9.372 24.569 0 33.942L289.941 256l151.03 151.029c9.372 9.373 9.372 24.569 0 33.942-9.373 9.372-24.569 9.372-33.942 0L256 289.941l-151.029 151.03c-9.373 9.372-24.569 9.372-33.942 0-9.372-9.373-9.372-24.569 0-33.942L222.059 256 71.029 104.971c-9.372-9.373-9.372-24.569 0-33.942z" />
+                            </svg></span></a></span></div>
+        </div>
+    </nav>
+    <header class="site-header grid-container" id="masthead" aria-label="Situs"
+        itemtype="https://schema.org/WPHeader" itemscope>
+        <div class="inside-header grid-container">
+            <h1 class="site-logo">
+                <a href="https://jneweducation.github.io" rel="home"> QnA</a>
+            </h1>
+        </div>
+    </header>
+
+    <div class="site grid-container container hfeed" id="page">
+        <div class="site-content" id="content">
+            <div class="content-area" id="primary">
+                    <main class="site-main" id="main">
+        <article id="post-1327" class="post-1327 post type-post status-publish format-standard hentry category-info"
+            itemtype="https://schema.org/CreativeWork" itemscope="">
+            <div class="inside-article">
+                <header class="entry-header" aria-label="Konten">
+                    <h1 class="entry-title" itemprop="headline">Different Requirement Gathering Techniques</h1>
+                    <div class="entry-meta">
+                       <span
+                            class="byline">oleh <span class="author vcard" itemprop="author"
+                                itemtype="https://schema.org/Person" itemscope=""><span class="author-name"
+                                    itemprop="name">jenifferpangalilinga</span></span></span>
+                    </div>
+                </header>
+                <div class="entry-content" itemprop="text">
+                    <div style="text-align: center">
+                        <img src="https://tse1.mm.bing.net/th?q=Different+Requirement+Gathering+Techniques" alt="Different Requirement Gathering Techniques">
+                    </div>
+                    <p></p>
+                    <p>Synthesizing an RRL demonstrates a (1) of the papers or sources that theresearcher collected, as well as, it must show the ability of the researcher to (2)____theresults of her analysis on her Chapter II. A (3) must also evaluated and weighedcritically. Moreover, it is an advanced reading technique or skill that requires criticalanalysis, (4)__and (5)__mind of a researcher. It also (6)__and (7)_information and ideas from the gathered sources of the researcher. It also gives an(8)___of information from different sources to highlight important (9) ___and(10). to address similarities and differences and draw conclusion. Synthesizing acollection of RRL combines parts and elements from a variety of sources into one unifiedand integrated entity. fill the blank.​</p>
+                    <div id="ez-toc-container"
+                        class="ez-toc-v2_0_40 counter-hierarchy ez-toc-counter ez-toc-light-blue ez-toc-container-direction">
+                        <div class="ez-toc-title-container">
+                            <p class="ez-toc-title">Daftar Isi</p>
+                            <span class="ez-toc-title-toggle"><a href="#"
+                                    class="ez-toc-pull-right ez-toc-btn ez-toc-btn-xs ez-toc-btn-default ez-toc-toggle"
+                                    area-label="ez-toc-toggle-icon-1"><label for="item-63b392361c4a0"
+                                        aria-label="Table of Content"><span
+                                            style="display: flex;align-items: center;width: 35px;height: 30px;justify-content: center;direction:ltr;"><svg
+                                                style="fill: #999;color:#999" xmlns="http://www.w3.org/2000/svg"
+                                                class="list-377408" width="20px" height="20px" viewBox="0 0 24 24"
+                                                fill="none">
+                                                <path
+                                                    d="M6 6H4v2h2V6zm14 0H8v2h12V6zM4 11h2v2H4v-2zm16 0H8v2h12v-2zM4 16h2v2H4v-2zm16 0H8v2h12v-2z"
+                                                    fill="currentColor"></path>
+                                            </svg><svg style="fill: #999;color:#999" class="arrow-unsorted-368013"
+                                                xmlns="http://www.w3.org/2000/svg" width="10px" height="10px"
+                                                viewBox="0 0 24 24" version="1.2" baseProfile="tiny">
+                                                <path
+                                                    d="M18.2 9.3l-6.2-6.3-6.2 6.3c-.2.2-.3.4-.3.7s.1.5.3.7c.2.2.4.3.7.3h11c.3 0 .5-.1.7-.3.2-.2.3-.5.3-.7s-.1-.5-.3-.7zM5.8 14.7l6.2 6.3 6.2-6.3c.2-.2.3-.5.3-.7s-.1-.5-.3-.7c-.2-.2-.4-.3-.7-.3h-11c-.3 0-.5.1-.7.3-.2.2-.3.5-.3.7s.1.5.3.7z">
+                                                </path>
+                                            </svg></span></label><input type="checkbox" id="item-63b392361c4a0"></a></span>
+                        </div>
+                        <nav>
+                            <ul class="ez-toc-list ez-toc-list-level-1 ">
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#synthesizing-an-rrl-demonstrates-a-1-of-the-papers-or-sources-that-theresearcher-collected-as-well-as-it-must-show-the-ability-of-the-researcher-to-2____theresults-of-her-analysis-on-her-chapter">1.
+                                            Synthesizing an RRL demonstrates a (1) of the papers or sources that theresearcher collected, as well as, it must show the ability of the researcher to (2)____theresults of her analysis on her Chapter II. A (3) must also evaluated and weighedcritically. Moreover, it is an advanced reading technique or skill that requires criticalanalysis, (4)__and (5)__mind of a researcher. It also (6)__and (7)_information and ideas from the gathered sources of the researcher. It also gives an(8)___of information from different sources to highlight important (9) ___and(10). to address similarities and differences and draw conclusion. Synthesizing acollection of RRL combines parts and elements from a variety of sources into one unifiedand integrated entity. fill the blank.​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#fill-in-the-blanks-with-the-word-that-will-best-fit-in-the-sentence-write-your-answerson-your-notebooksynthesizing-an-rrl-demonstrates-aof-the-papers-or-sources-that-theresearcher-collected-as-well">2.
+                                            Fill in the blanks with the word that will best fit in the sentence. Write your answerson your notebookSynthesizing an RRL demonstrates aof the papers or sources that theresearcher collected, as well as, it must show the ability of the researcher to 2results of her analysis on her Chapter II A (3) ____ must also evaluated and weighedcritically. Moreover, it is an advanced reading technique or skall that requires criticalanalysis, (4) and (5L__ mind of a researcher. It also (6)__and 7information and ideas from the gathered sources of the researcher. It also gives anof information from different sources to highlight important 19(10)to address similarities and differences and draw conclusion, Synthesizing acollection of RRL combines parts and elements from a variety of sources into one unifiedand integrated entity​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#fill-in-the-blanks-with-the-word-that-will-best-fit-in-the-sentence-write-your-answerson-your-notebook-synthesizing-an-rrl-demonstrates-a-1__-of-the-papers-or-sources-that-theresearcher-collected">3.
+                                            Fill in the blanks with the word that will best fit in the sentence. Write your answerson your notebook.Synthesizing an RRL demonstrates a (1)__ of the papers or sources that theresearcher collected, as well as, it must show the ability of the researcher to (2) theresults of her analysis on her Chapter II. A (3). must also evaluated and weighedcritically. Moreover, it is an advanced reading technique or skill that requires criticalanalysis, (4) and (5) mind of a researcher. It also (6)__and (7)information and ideas from the gathered sources of the researcher. It also gives anof information from different sources to highlight important (9) and(10) to address similarities and differences and draw conclusion, Synthesizing acollection of RRL combines parts and elements from a variety of sources into one unifiedand integrated entity.​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#direction-write-t-if-the-statement-is-correct-and-f-if-otherwise-write-your-answers-on-the-space-provided-before-each-number-_______________1synthesizing-review-of-related-literature-should-not">4.
+                                            DIRECTION: Write T if the statement is correct and F, if otherwise. Write your answers on the space provided before each number. _______________1]	Synthesizing Review of Related Literature should not just tell us what the research tells us but should also identify what the research does not tell us. _______________2]	Synthesis determines the question, “Which sources overlap or share the same opinion/findings?” _______________3]	Synthesizing the collection of sources gathered in the research paper is not essential in conducting research. _______________4]	A synthesis answers the question, “Have the researcher found any common traits or themes in the research literature?” _______________5]	Synthesis is a combination of different ideas to form a new whole. _______________6]	In the process of synthesizing the literature review of the researcher, “the new whole” are the findings that the researcher gathered and read. _______________7]	Integration of parts of the researcher’s information gathered into a whole new idea is a characteristic of synthesis of RRL. _______________8]	A synthesis of a research paper is about concisely summarizing and linking different sources to get the idea of the literature review. _______________9]	A synthesis tries to determine the connection of the researcher’s review of related literature. ______________10]	The conclusion that the researcher draw from the gathered findings of the researcher is called the “new whole”. ______________11]	Synthesis and analysis usually go together when you are synthesizing your Review of Related Literature. ______________12]	Synthesis draws conclusion about the findings in the literature so that you can identify how the literature addresses your research question. ______________13]	In synthesizing a collection of ideas, the researcher must identify the methodology used, participants, and instruments used in the study of another researcher. ______________14]	A synthesis of a research paper is about concisely summarizing and linking different sources to get the idea of the literature review. ______________15]	Synthesizing a collection of RRL combines parts and elements from a variety of sources into one unified and integrated entity. ______________16]	Synthesizing an RRL demonstrates a critical analysis	of the papers or sources that the researcher collected ______________17]	RRL contrasts and combines information and ideas from the gathered sources of the researcher.______________18]	RRL gives information from different sources to highlight important points of connection and relatedness to address similarities and differences and draw conclusion. ______________19]	It is not necessary to possess an advanced reading technique or skill that requires critical analysis, creativity, and insightful mind when synthesizing related literature. ______________20]	A synthesis must be evaluated and weighed critically. ​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#1-following-your-outline-or-map-and-using-free-wnting-techniques-would-help-you-alot-in-writing-2-research-paper-is-an-interpretation-of-the-information-you-gathered-into-your-writing3-background">5.
+                                            1. Following your outline or map and using free wnting techniques would help you alot in writing.2. Research paper is an interpretation of the information you gathered into your writing,3. Background of the topic is not important as long as you understand your topie,4. The research paper should have a title, introduction, body, and conclusion5. Writing a paper requires a lot of rereading and rechecking of outputs.6. Mind Maps and Bulleted Lists are some strategies for Outlining.7. It is important to have different sources when writing a paper.8. A good research paper follows a systematic process.9. A conclusion constitutes 80% of your paper.10. You should find a topic that interests you.​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#9-what-is-the-first-task-of-a-researchera-collecting-datac-looking-for-a-topicb-gathering-informationd-thinking-of-a-research-design10-what-is-a-research-problema-it-is-a-way-of-expressing-one">6.
+                                            9. What is the first task of a researcher?A. collecting dataC. looking for a topicB, gathering informationD. thinking of a research design10. What is a research problem?A It is a way of expressing one's interestB. It is a statement that requires forms of investigations and inquiriesC. It is a study to become a professionalD. It is one way of reflecting the meaning of life11. What feature in research that establishes the basis of the study which is composed oftwo parts; the general and the specific problem?A. Definition of termsC. SummaryB. Analysis and conclusionD. Statement of the problem12. Where is the general problem of the research be reflected or written?A in the research titleC. in the recommendation of the writerB. in the significance of the studyD. in the background of the study13. What is the independent variable and dependent variable in the following example?Smoking causes cancerA. Independent variable - smoking/ dependent variable - cancerB. Independent variable - cancer/ dependent variable - smokingC. Independent variable - smoking and cancer/ dependent variable -- cancer andsmokingD. None of the above14. Why are ethical standards significant for researchers?A. It allows researchers ought to do and avoid charges.B. It makes researchers competent enough to replicate research.C. It gives researchers power to submit and comply their requirements.D. None of these15. Which of the following situations shows UNETHICAL way of doing a literature review?A. Gian claimed to develop a theory in his literature review, but he just got the ideain his readings.B. Rich Carlo cited authors in her book review.C. George paraphrased ideas from an article he needs in his studiesD. None of these16. Which of the following techniques must be AVOIDED in making literature review?A. Paraphrasing, Direct Quotations and SummarizingB. Copying, Pasting and Citing the sourceC. Mimicking, Impersonating and CaricaturingD. All of these17. An act of editing research equipment, materials or changing ideas or removing a resultwith inaccuracy is calledA falsification B. fabricationC. production D. plagiarism18. An act of making up data or results and recording written in your literature is calledA falsification B. fabricationC. production D. plagiarism19. What is the importance and purpose of related literature?A. to determine the similarities and differences of the findings between the past andpresent studies.B. to gain insight into the aspects of the problem that are critical and controversial.C. to collect background information about a topic.D. all of the above​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#contemporary-arts-of-the-philippine-regioninstruction-write-the-letter-of-the-best-answer1-these-are-paintings-of-outdoor-scenes-most-of-the-favonte-subjects-in-this-type-of-paintingare-skies-mou">7.
+                                            CONTEMPORARY ARTS OF THE PHILIPPINE REGIONInstruction: Write the letter of the best answer1. These are paintings of outdoor scenes. Most of the favonte subjects in this type of paintingare. skies, mountains, river and even infrastructure like buildings, houses and many more that weusually see in our surroundings. What paintings are these?A. Oil B. Figurative C. LandscapeD. Abstract2. Most familiar art foms among Filipinos from carving to molding of gods and heroos for a longtime, but at present, through availability of varied materials and medium, technology andtechnique, it'smore flexible and expressive in making their art work. What is this?A. Painting B. Architecture C. Mixed MediaD. Sculpture3. It is the easiest yet very creative technique in sculpture where in different materials (found,recycled, indigenous etc.) gather together to form an artwork.A. Casting B. Carving C. AssemblingD. Modeling4. It is very rich in style and in high technology with the use of advanced materials, such as tubestructure and the use of computer-aided design. Its style doesn't have a recognizable feature forits style is quite varied for it is from different influences but there is typical feature for acontemporary house and building such as oversized windows and free shaped of frame. What isthis?A. Installation B. Architecture C. Sculpture D. Mixed Media5. These are artworks done from mixed materials, any materials including commercial garbage.Artist may use their full freedom in choosing materials in a context to express views and opinionon issues around. What art are these?A Mixed Media B. Installation C. PublicD. Architecture6. It is an art done live to convey message in a limited time. There maybe group of performers orjust one to perform on stage or on streets that shows on in acting, poetry, music, dance andpainting to covey a campaign.A TheatreB. Performance C. DanceD. Music7. Miss Saigon is very popular for this type. It is an art that requires actors and actresses toconnect to the audience to let them experience a real or imagined event through combination ofgesture, speech, song, music and dance, commonly done on stage and are scripted.A. TheatreB. Performance C. DanceD. Music8. In ancient times, ancestors did this for their gods and goddesses. It is a performing arts thatinvolves body movement in accord to the musical beat, for some use it as an expression ofthoughts and feelings, releasing energy or simply joining with the beat of music or into dancemovement itself.A MusicB. DanceC. TheatreD. Performance9. Millennials do it often even on streets. It is a dance style that includes breaking, locking andpopping. It is something made just happened or "freestyle" or spontaneous performance.A. FolkB. DiscoC. Hip-hopD. Cheer10. People can't live without it nowadays and it is beyond words, it has the power to speakthrough people's mind, heart and soul. It can affect the mood, way of thinking and even characterand disposition of people listening to itA MusicB. TheatreC. Performance D. Dance11. What kind of wooden material an idiophone instrument made of?A rattanB. bamboo C. coconut D. narra12. Which of the following animal skin is used as head of the drum?A. COWB. pigC. goatD. carabao13. It is a large goblet shaped drum used by the Maranao and Maguindanao in theirKulintang ensemblesA. LibbitB. SulibaoC. Duwagey D. Dabakan14. It is an aerophone instrument that is use for serenading, courting or merely to pass thetime awayA fluteB. gongC. guitarD. piano​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#4-it-is-believed-to-be-one-of-the-weaknesses-of-qualitative-research-a-it-can-develop-theories-b-it-has-several-avenues-to-understand-phenomena-c-it-is-a-way-a-researcher-perceives-things-as-he">8.
+                                            4. It is believed to be one of the weaknesses of qualitative research. A. It can develop theories. B. It has several avenues to understand phenomena. C. It is a way a researcher perceives things as he is immersed in the study. D. It answers certain phenomena- social, economic, political, and psychological. 5. This is the field of qualitative research where people’s traumatic experiences are studied. A. Technical Communication C. Psychology B. Education D. Social Work 6. It is an investigation of a particular person, group, or situation for a long period of time. A. Grounded theory C. Content and Discourse Analysis B. Historical Analysis D. Case study 7. One of the following is a weakness of qualitative research. A. Data are based on the human experience. B. It includes a detailed examination of issues. C. It can be quickly revised as new information emerges. D. The confidentiality of the subject limits the presentation of the findings. 8. It is studying the past to understand the present time. A. Grounded theory C. Content and Discourse Analysis B. Historical Analysis D. Case study 9. This kind qualitative research requires the examination or analysis of the substance or content of the communication that takes place in different forms. A. Case study C. Content and Discourse Analysis B. Historical Analysis D. Phenomenology 10. It is a kind of qualitative research that explains how people find meaning in their daily experiences. A. Case study C. Phenomenology B. Historical Analysis D. Grounded theory 11. One way of collecting data about students’ attitudes toward math is through observation in the actual class. It is because, in qualitative research, data should be collected in a A. difficult situation C. gathering of people B. natural setting D. closed area 12. In qualitative research, data are collected in different manners. The reason behind this technique is to A. gather a comprehensive and rich description of the subject. B. give options to the researcher which data are the best. C. keep the researcher busy for the entire period of the study. D. give justice to the chosen participants of the study by exposing them to different situations. 13. Driven by curiosity, a researcher wants to analyze the lifestyle of the Manobo tribe of Bukidnon. This study falls under A. Case study C. Ethnography B. Historical Analysis D. Grounded theory 14. Your teacher requires you to study the influence of Noli Me Tangere to the lives of the Filipinos during the Spanish regime. The research you are doing is . A. Case study C. Ethnography B. Historical Analysis D. Grounded theory ​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#activity-1-practice-proper-segregation-technique-objectives-to-be-able-to-categorize-waste-as-for-re-use-recycle-reduce-or-dispose-of-materials-tools-and-equipment-waste-bags-or-cans-different">9.
+                                            Activity 1 PRACTICE PROPER SEGREGATION TECHNIQUE Objectives: To be able to categorize waste as for re-use, recycle, reduce, or dispose of. Materials Tools and Equipment: Waste bags or cans, different kinds of wastes Procedure: 1. Look inside your house. Gather all the wastes. 2. Segregate the wastes whether for recycle, re-use, reduce, or for disposing of. 3. Place on designated/labeled trash boxes or cans. 4. Put them in a safe place for pick up. Accomplish the Scoring Rubric honestly and sincerely. Remember it is your learning at stake! Directions: Ask someone in your house to assess your performance in the following critical task and performance criteria below You will be rated based on the overall evaluation on the right side OVERALL EVALUATION Level Achieved PERFORMANCE LEVELS 4 - Can perform this skill without supervision and with initiative and adaptability to problem situations. 3 - Can perform this skill satisfactorily without assistance or supervision. 2 - Can perform this skill satisfactorily but requires some assistance and/or supervision. 1 - Can perform parts of this skill satisfactorily, but requires considerable assistance and/or supervision.​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#directions-read-the-questions-carefully-and-encircle-the-letter-of-the-1-which-of-the-following-branch-of-science-that-deals-with-collecting-organizing-summarizing-analyzing-interpretin-data-and">10.
+                                            Directions: Read the questions carefully and encircle the letter of the 1. Which of the following branch of science that deals with collecting, organizing, summarizing, analyzing, interpretin data and making conclusions? C. Physics D. Statistics B. Chemistry A. Biology 2. Mr. Puto determines the effectiveness of the new fertilizer in the growth of plants and crops through experimental studies. In what field does statistics help in this situation? C. Education D. Medicine B. Business A. Agriculture 3. Chariz, a 7th grade learner, wanted to find out if she lives the farthest from the school than other grade 7 learners. What statistical question would BEST help her to find the answer to her problem? A. How far is Chariz from home to school? B. How far are the 7 th grade students from home to school? C. What are the means of transportation of the 7 th grade students? D. What time will the 7 th grade students arrive from home to school? 4. "Joseph uses the data he collected and conclude that 85-90% of his classmates love to play badminton". What area c statistics is being depicted? C. inferential statistics D. sample A. descriptive statistics B. population 5. How do you call the systematic method of collecting and measuring data gathered from different sources of information in order to provide answers to relevant questions? A. data collection B. primary data C. samples D. secondary data 6. Which of the following is referred to as an indirect method of gathering data where the respondent used to answer written questions? A. experimentation B. interview D. questionnaire C. observation 7. Which of the following is an example of a primary data? A. books B. journals C. magazines D. testimonies of the investigator 8. Which of the following methods of gathering data requires face-to-face inquiry with the respondent? A. experimentation B. interview C. observation D. questionnaire 9. Which sampling technique suggests that the population be divided geographically into regions, divisions, or districts? A. cluster sampling B. stratified sampling C. systematic sampling D. quota sampling 10. A researcher asks neighbors' opinions about the effectiveness of the COVID-19 vaccine. What kind of sample is this? B. convenience sampling D. stratified sampling A. cluster sampling C. random sampling 11. It refers to the difference of the highest score and the lowest score. A. classes B. class interval C. frequency D. range 12. It refers to the middle value of each class. A. class boundaries B. class limits C. class mark D. cumulative frequency 13. It refers to the size of each class. A. class boundaries B. class frequency C. class interval D. range 14. It refers to the tabular presentation of data. 15. It A. class frequency B. data collection C. frequency distribution table D. frequency polygon refers to the class boundary that is 0.5 less than its lower limit. A. classes B. class limits C. lower boundary D. upper boundary 16. Which statement is NOT correct? A. The class mark is the size of each class. B. The lowest class contains the lowest score. C. The class boundaries are often described as true limits. D. The range is the difference of the highest score and the lowest score. 17. It is one of the ways of presenting data. A. graph B. bar graph C. line graph D. ogive graph 18. It is the same as frequency cumulative polygon. D. ogive graph A. graph B. bar graph C. line graph 19. It shows trends in data clearly or how the data behaves. A. graph B. bar graph C. line graph 20. Looks like a histogram excep that its bars are separated. A. pie chart B. bar graph D. ogive graph C. line graph D. ogive graph kailangan ko Po ang answer nyo thank you​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#3-why-is-contour-method-of-planting-trees-ideal-for-sloping-areasa-it-controls-the-soil-erosion-and-helps-simultaneously-in-the-conservation-of-water-b-it-supplies-nutrients-and-substance-as-man">11.
+                                            3. Why is contour method of planting trees ideal for sloping areas?
+a. It controls the soil erosion and helps simultaneously in the conservation of water 
+b. It supplies nutrients and substance as manures and fertilizers 
+c. It reduces erosion and conserves moisture 
+d. It preserves plant nutrients 
+4. Why is lay-out very important in orchard farming?
+a. for beautification 
+b. for easy maintenance of crops 
+c. for easy harvesting of fruits 
+d. for more productions of fruits 
+5. We have different types of scientific plant propagation and cutting is the most popular technique in propagating plants. Which of the following statements best describes cutting?
+a. A growing plant from the stem that has been cut and planted. 
+b. It is being cut from the stem and plant to soil. 
+c. It is a growing of plant from the stem or root, that has been cut from another plant. 
+d. Select a desired healthy stem, the leaves are removed, and stems are cut into 10 inches long and one half of the cutting is inserted into soil 
+6. Mang Juan is preparing soil their Gulayan sa Paaralan. He is spreading, leveling soil, gathering dried leaves on the ground, and separating big blocks of soil from smaller pieces. What tool do you think Mang Juan is using?
+a. fork 
+b. rake 
+c. shovel 
+d.trowel 
+7. A mango and jackfruit tree are infested by several pest and other organisms. In order to eliminate the pest, what appropriate tool should be used for spraying chemicals?
+a. hose 
+b. garden gloves 
+c. sprinkler 
+d. sprayer 
+8. Among all the four-legged animals which is the easiest to raise?
+a. Hogs requires your backyards and skills. 
+b. Cattles gives the raiser a whole year income. 
+c. Goats require low maintenance 
+d. Millions of crop farmer rely on carabaos. 
+9. Why is hog/swine raising a profitable business in the country?
+a. It can be done in the backyard or vacant lots if you have the skills. 
+b. Raising hogs is very easy with the help of the Department of Agriculture. 
+c. Filipinos are heavy meat eaters 
+d. Pork is one of the most popular meat in the Filipino market. 
+10. Which animal is the best source of milk?
+a.cows 
+b.goat 
+c. carabaos 
+d. sheep 
+plssss helpppp need ko po nowwww thank u</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#31-which-of-the-following-statements-described-ethnographya-analysis-of-persons-groups-events-decisions-periods-policies-institutions-or-other-systems-that-are-studied-holistically-by-one-or">12.
+                                            31. Which of the following statements described ethnography?a. Analysis of persons, groups, events, decisions, periods, policies, institutions or other systems that are studied holistically by one or more methods b. It is an approach that generates and modifies a theory. c. Study of cultural patterns of people and their perspective as a group. d. understanding of an individual’s experience for the same person’s realistic dealings with hard facts of life 32. It refers to a sampling method which requires selection of a starting point for the sample and sample size that can be repeated at regular intervals? a. Simple Random Samplingc. Systematic Samplingb. Cluster Sampling d. Stratified Random Sampling33. Instructors teaching research methods are interested in knowing what study techniques their students are utilizing. Rather than assessing all students, the researchers randomly select 10 students from each of the sections to comprise their sample. What sampling method do you think would be the best fit to use?a. Cluster Sampling c. Systematic Sampling b. Simple Random Samplingd. Stratified Random Sampling 34. Say you were interested in sampling students who deal drugs on campus. What sampling technique could you use to build this sample? a. cluster sampling c. quota sampling b. purposive sampling d. snowball sampling 35. The following statements described Structured Interview EXCEPT: a. Additional questions might be asked during interviews to clarify and expand certain issues b. Data analysis seems to be straightforward c. Consist of series of pre-determined questions d. Can compare and contrast different answers given to the same questions 36. Which of the following is TRUE about self-completion survey? a. Allows more data to be gathered b. More expensive than other methodologies c. Interviewers can reduce non-response by answering respondents’ queries concern d. allow respondents time to consider their answers, refer to records or consult with others 37. It described as Analysis of persons, groups, events, decisions, periods, policies, institutions or other systems that are studied holistically by one or more methods.a. narrative inquiryc. ethnography b. case study d. ground theory38. Which of the following statement is true about systematic sampling?a. groups can be organized and then draw a sample from each group separatelyb. members of a sample are chosen at regular intervals of a populationc. researchers divide the entire population into sections that represent a population d. each individual has the exact same probability of being chosen to be a part of a sample. 39. It refers to an observational method which involves studies of mechanical recording or the recording by some of the other means like photographic or electronic.a. Structured observation c. Indirect method b. Covert observationsd. objective observation.40. It defined as is a technique of gathering data whereby you personally watch, interact, or communicate with the subjects of yours.” a. object b. observation c. survey d. interview​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#contemporary-arts-of-the-philippine-regioninstruction-write-the-letter-of-the-best-answer1-these-are-paintings-of-outdoor-scenes-most-of-the-favorite-subjects-in-this-type-of-paintingare-skies-mo">13.
+                                            CONTEMPORARY ARTS OF THE PHILIPPINE REGIONInstruction: Write the letter of the best answer1. These are paintings of outdoor scenes. Most of the favorite subjects in this type of paintingare: skies, mountains, river and even infrastructure like buildings, houses and many more that weusually see in our surroundings. What paintings are these?A. Oil B. Figurative C. LandscapeD. Abstract2. Most familiar art forms among Filipinos from carving to molding of gods and heroes for a longtime, but at present, through availability of varied materials and medium, technology andtechnique, it'smore flexible and expressive in making their art work. What is this?A. Painting B. Architecture C. Mixed MediaD. Sculpture3. It is the easiest yet very creative technique in sculpture where in different materials (found,recycled, indigenous etc.) gather together to form an artwork.A. Casting B. CarvingC. AssemblingD. Modeling4. It is very rich in style and in high technology with the use of advanced materials, such as tubestructure and the use of computer-aided design. Its style doesn't have a recognizable feature forits style is quite vaned for it is from different influences but there is typical feature for acontemporary house and building such as oversized windows and free shaped of frame. What isthis?A. Installation B. Architecture C. Sculpture D Mixed Media5. These are artworks done from mixed materials, any materials including commercial garbage.Artist may use their full freedom in choosing materials in a context to express views and opinionon issues around. What art are these?A. Mixed Media B. Installation C. PublicD. Architecture6. It is an art done live to convey message in a limited time. There maybe group of performers orjust one to perform on stage or on streets that shows on in acting poetry music, dance andpainting to covey a campaign.A. TheatreB. Performance C. DanceD. Music7. Miss Saigon is very popular for this type. It is an art that requires actors and actresses toconnect to the audience to let them experience a real or imagined event through combination ofgesture, speech, song, music and dance, commonly done on stage and are scripted.A, TheatreB. Performance C DanceD. Music8.In ancient times, ancestors did this for their gods and goddesses. It is a performing arts thatinvolves body movement in accord to the musical beat, for some use it as an expression ofthoughts and feelings, releasing energy or simply joining with the best of music or into dancemovement itself.A. MusicB. DanceC TheatreD. Performance9. Millennials do it often even on streets. It is a dance style that includes breaking locking andpopping. It is something made just happened or "freestyle" or spontaneous performanceA. FolkB. DiscoC. Hip-hopD Cheer10. People can't live without it nowadays and it is beyond words, it has the power to speakthrough people's mind, heart and soul. It can affect the mood, way of thinking and even characterand disposition of people listening to itA MusicB. Theatrec. Performance D Dance11. What kind of wooden material an idiophone instrument made of?A. rattanB. bamboo C. coconut D narra12. Which of the following animal skin is used as head of the drum?A. COWC. goatD. carabao13. It is a large goblet shaped drum used by the Maranao and Maguindanao in theirKulintang ensemblesA. LibbitB SulibaoC DuwageyD. Dabakan14. It is an aerophone instrument that is use for serenading.courting or merely to pass thetime awayA fluteC. guitarD. pianoB. plgB. gong​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#ii-match-the-given-term-in-column-b-that-is-being-described-in-column-a-write-the-letter-of-youranswer-on-the-blanks-before-the-numbers-10-pointsabsampling-techniques1-a-sample-that-is-chosen-so">14.
+                                            II. Match the given term in Column B that is being described in Column A. Write the letter of youranswer on the blanks before the numbers. (10 points)ABSAMPLING TECHNIQUES1.a sample that is chosen so it will be easy for  the researchera.systematic2. obtained using an ordered list of population,  thus selecting members systematically fromthe listb.random3. sample that consists of items in a group such as a neighborhood or a householde. cluster4. members of the sample are chosen independently of each otherd.stratified random5. the population is divided into subgroups, so that each population member is in only one subgroupMETHODS OF COLLECTING DATA6. requires the enactment of law to take effect  because it needs the participation of a large, if not the entire populationa.questionnaire7. requires a face-to-face inquiry with the respondentb. experimentation8. usually conducted in laboratories where specimens are subjected to some aspects of control to find out cause and effect relationsc. convenience9. makes use of the different human senses in gathering informationd. registration or censuse. interview10. indirect method of gathering data because this makes use of written questions to beanswered by the respondent.pasagot po no nonsence answerno hula hula po thanks in advance❤❤​</a>
+                                    </li>
+                                                            </ul>
+                        </nav>
+                    </div>
+                                            <h2 class="ez-toc-section" id="synthesizing-an-rrl-demonstrates-a-1-of-the-papers-or-sources-that-theresearcher-collected-as-well-as-it-must-show-the-ability-of-the-researcher-to-2____theresults-of-her-analysis-on-her-chapter">
+                            1. Synthesizing an RRL demonstrates a (1) of the papers or sources that theresearcher collected, as well as, it must show the ability of the researcher to (2)____theresults of her analysis on her Chapter II. A (3) must also evaluated and weighedcritically. Moreover, it is an advanced reading technique or skill that requires criticalanalysis, (4)__and (5)__mind of a researcher. It also (6)__and (7)_information and ideas from the gathered sources of the researcher. It also gives an(8)___of information from different sources to highlight important (9) ___and(10). to address similarities and differences and draw conclusion. Synthesizing acollection of RRL combines parts and elements from a variety of sources into one unifiedand integrated entity. fill the blank.​</h2><br />
+                        <p>Answer:</p><p></p><p>Explanation:</p><p>Pakitingnan  nyu mong</p><p></p><br />
+                                            <h2 class="ez-toc-section" id="fill-in-the-blanks-with-the-word-that-will-best-fit-in-the-sentence-write-your-answerson-your-notebooksynthesizing-an-rrl-demonstrates-aof-the-papers-or-sources-that-theresearcher-collected-as-well">
+                            2. Fill in the blanks with the word that will best fit in the sentence. Write your answerson your notebookSynthesizing an RRL demonstrates aof the papers or sources that theresearcher collected, as well as, it must show the ability of the researcher to 2results of her analysis on her Chapter II A (3) ____ must also evaluated and weighedcritically. Moreover, it is an advanced reading technique or skall that requires criticalanalysis, (4) and (5L__ mind of a researcher. It also (6)__and 7information and ideas from the gathered sources of the researcher. It also gives anof information from different sources to highlight important 19(10)to address similarities and differences and draw conclusion, Synthesizing acollection of RRL combines parts and elements from a variety of sources into one unifiedand integrated entity​</h2><br />
+                        <p>Answer:</p><p>1.Critical</p><p>2.Integrate</p><p>3.Synthesis</p><p>4.Creativity</p><p>5.Insightful</p><p>6.Contrast</p><p>7.Combines</p><p>8.Information</p><p>9.points of connection</p><p>10.relatedness</p><p></p><br />
+                                            <h2 class="ez-toc-section" id="fill-in-the-blanks-with-the-word-that-will-best-fit-in-the-sentence-write-your-answerson-your-notebook-synthesizing-an-rrl-demonstrates-a-1__-of-the-papers-or-sources-that-theresearcher-collected">
+                            3. Fill in the blanks with the word that will best fit in the sentence. Write your answerson your notebook.Synthesizing an RRL demonstrates a (1)__ of the papers or sources that theresearcher collected, as well as, it must show the ability of the researcher to (2) theresults of her analysis on her Chapter II. A (3). must also evaluated and weighedcritically. Moreover, it is an advanced reading technique or skill that requires criticalanalysis, (4) and (5) mind of a researcher. It also (6)__and (7)information and ideas from the gathered sources of the researcher. It also gives anof information from different sources to highlight important (9) and(10) to address similarities and differences and draw conclusion, Synthesizing acollection of RRL combines parts and elements from a variety of sources into one unifiedand integrated entity.​</h2><br />
+                        <p>Answer:</p><p>1.critical analysis</p><p>2. integrate</p><p>3.synthesis</p><p>4. creativity</p><p>5. insightful</p><p>6. contrasts</p><p>7. combines</p><p>8. integration</p><p>9. points of connection</p><p>10. relatedness</p><p>Explanation:</p><p></p><p></p><br />
+                                            <h2 class="ez-toc-section" id="direction-write-t-if-the-statement-is-correct-and-f-if-otherwise-write-your-answers-on-the-space-provided-before-each-number-_______________1synthesizing-review-of-related-literature-should-not">
+                            4. DIRECTION: Write T if the statement is correct and F, if otherwise. Write your answers on the space provided before each number. _______________1]	Synthesizing Review of Related Literature should not just tell us what the research tells us but should also identify what the research does not tell us. _______________2]	Synthesis determines the question, “Which sources overlap or share the same opinion/findings?” _______________3]	Synthesizing the collection of sources gathered in the research paper is not essential in conducting research. _______________4]	A synthesis answers the question, “Have the researcher found any common traits or themes in the research literature?” _______________5]	Synthesis is a combination of different ideas to form a new whole. _______________6]	In the process of synthesizing the literature review of the researcher, “the new whole” are the findings that the researcher gathered and read. _______________7]	Integration of parts of the researcher’s information gathered into a whole new idea is a characteristic of synthesis of RRL. _______________8]	A synthesis of a research paper is about concisely summarizing and linking different sources to get the idea of the literature review. _______________9]	A synthesis tries to determine the connection of the researcher’s review of related literature. ______________10]	The conclusion that the researcher draw from the gathered findings of the researcher is called the “new whole”. ______________11]	Synthesis and analysis usually go together when you are synthesizing your Review of Related Literature. ______________12]	Synthesis draws conclusion about the findings in the literature so that you can identify how the literature addresses your research question. ______________13]	In synthesizing a collection of ideas, the researcher must identify the methodology used, participants, and instruments used in the study of another researcher. ______________14]	A synthesis of a research paper is about concisely summarizing and linking different sources to get the idea of the literature review. ______________15]	Synthesizing a collection of RRL combines parts and elements from a variety of sources into one unified and integrated entity. ______________16]	Synthesizing an RRL demonstrates a critical analysis	of the papers or sources that the researcher collected ______________17]	RRL contrasts and combines information and ideas from the gathered sources of the researcher.______________18]	RRL gives information from different sources to highlight important points of connection and relatedness to address similarities and differences and draw conclusion. ______________19]	It is not necessary to possess an advanced reading technique or skill that requires critical analysis, creativity, and insightful mind when synthesizing related literature. ______________20]	A synthesis must be evaluated and weighed critically. ​</h2><br />
+                        <p>1] T</p><p>2] T</p><p>3] F</p><p>4] T</p><p>5] T</p><p>6] T</p><p>7] T</p><p>8] T</p><p>9] T</p><p>10] F</p><p>11] T</p><p>12] T</p><p>13] F</p><p>14] T</p><p>15] T</p><p>16] T</p><p>17] T</p><p>18] T</p><p>19] F</p><p>20] T</p><p></p><br />
+                                            <h2 class="ez-toc-section" id="1-following-your-outline-or-map-and-using-free-wnting-techniques-would-help-you-alot-in-writing-2-research-paper-is-an-interpretation-of-the-information-you-gathered-into-your-writing3-background">
+                            5. 1. Following your outline or map and using free wnting techniques would help you alot in writing.2. Research paper is an interpretation of the information you gathered into your writing,3. Background of the topic is not important as long as you understand your topie,4. The research paper should have a title, introduction, body, and conclusion5. Writing a paper requires a lot of rereading and rechecking of outputs.6. Mind Maps and Bulleted Lists are some strategies for Outlining.7. It is important to have different sources when writing a paper.8. A good research paper follows a systematic process.9. A conclusion constitutes 80% of your paper.10. You should find a topic that interests you.​</h2><br />
+                        <p><strong>Answer:</strong></p>How to Write a Good IntroductionKeep your first sentence short.Don't repeat the title.Keep the introduction brief.Use the word “you” at least once.Dedicate 1-2 sentences to articulating what the article covers.Dedicate 1-2 sentences to explaining why the article is important.<br />
+                                            <h2 class="ez-toc-section" id="9-what-is-the-first-task-of-a-researchera-collecting-datac-looking-for-a-topicb-gathering-informationd-thinking-of-a-research-design10-what-is-a-research-problema-it-is-a-way-of-expressing-one">
+                            6. 9. What is the first task of a researcher?A. collecting dataC. looking for a topicB, gathering informationD. thinking of a research design10. What is a research problem?A It is a way of expressing one's interestB. It is a statement that requires forms of investigations and inquiriesC. It is a study to become a professionalD. It is one way of reflecting the meaning of life11. What feature in research that establishes the basis of the study which is composed oftwo parts; the general and the specific problem?A. Definition of termsC. SummaryB. Analysis and conclusionD. Statement of the problem12. Where is the general problem of the research be reflected or written?A in the research titleC. in the recommendation of the writerB. in the significance of the studyD. in the background of the study13. What is the independent variable and dependent variable in the following example?Smoking causes cancerA. Independent variable - smoking/ dependent variable - cancerB. Independent variable - cancer/ dependent variable - smokingC. Independent variable - smoking and cancer/ dependent variable -- cancer andsmokingD. None of the above14. Why are ethical standards significant for researchers?A. It allows researchers ought to do and avoid charges.B. It makes researchers competent enough to replicate research.C. It gives researchers power to submit and comply their requirements.D. None of these15. Which of the following situations shows UNETHICAL way of doing a literature review?A. Gian claimed to develop a theory in his literature review, but he just got the ideain his readings.B. Rich Carlo cited authors in her book review.C. George paraphrased ideas from an article he needs in his studiesD. None of these16. Which of the following techniques must be AVOIDED in making literature review?A. Paraphrasing, Direct Quotations and SummarizingB. Copying, Pasting and Citing the sourceC. Mimicking, Impersonating and CaricaturingD. All of these17. An act of editing research equipment, materials or changing ideas or removing a resultwith inaccuracy is calledA falsification B. fabricationC. production D. plagiarism18. An act of making up data or results and recording written in your literature is calledA falsification B. fabricationC. production D. plagiarism19. What is the importance and purpose of related literature?A. to determine the similarities and differences of the findings between the past andpresent studies.B. to gain insight into the aspects of the problem that are critical and controversial.C. to collect background information about a topic.D. all of the above​</h2><br />
+                        <p><strong>Answer:</strong></p><p>B</p><p>A</p><p>B</p><p>A</p><p>C</p><p>C</p><p>A</p><p>A</p><p>B</p><p>D</p><p>D</p><p><strong>Explanation:</strong></p><p>NOT SURE BUT GANYAN SAGOT KO.</p><p></p><p><strong>Answer:</strong></p><p>Sorry po need kopo ng points</p><br />
+                                            <h2 class="ez-toc-section" id="contemporary-arts-of-the-philippine-regioninstruction-write-the-letter-of-the-best-answer1-these-are-paintings-of-outdoor-scenes-most-of-the-favonte-subjects-in-this-type-of-paintingare-skies-mou">
+                            7. CONTEMPORARY ARTS OF THE PHILIPPINE REGIONInstruction: Write the letter of the best answer1. These are paintings of outdoor scenes. Most of the favonte subjects in this type of paintingare. skies, mountains, river and even infrastructure like buildings, houses and many more that weusually see in our surroundings. What paintings are these?A. Oil B. Figurative C. LandscapeD. Abstract2. Most familiar art foms among Filipinos from carving to molding of gods and heroos for a longtime, but at present, through availability of varied materials and medium, technology andtechnique, it'smore flexible and expressive in making their art work. What is this?A. Painting B. Architecture C. Mixed MediaD. Sculpture3. It is the easiest yet very creative technique in sculpture where in different materials (found,recycled, indigenous etc.) gather together to form an artwork.A. Casting B. Carving C. AssemblingD. Modeling4. It is very rich in style and in high technology with the use of advanced materials, such as tubestructure and the use of computer-aided design. Its style doesn't have a recognizable feature forits style is quite varied for it is from different influences but there is typical feature for acontemporary house and building such as oversized windows and free shaped of frame. What isthis?A. Installation B. Architecture C. Sculpture D. Mixed Media5. These are artworks done from mixed materials, any materials including commercial garbage.Artist may use their full freedom in choosing materials in a context to express views and opinionon issues around. What art are these?A Mixed Media B. Installation C. PublicD. Architecture6. It is an art done live to convey message in a limited time. There maybe group of performers orjust one to perform on stage or on streets that shows on in acting, poetry, music, dance andpainting to covey a campaign.A TheatreB. Performance C. DanceD. Music7. Miss Saigon is very popular for this type. It is an art that requires actors and actresses toconnect to the audience to let them experience a real or imagined event through combination ofgesture, speech, song, music and dance, commonly done on stage and are scripted.A. TheatreB. Performance C. DanceD. Music8. In ancient times, ancestors did this for their gods and goddesses. It is a performing arts thatinvolves body movement in accord to the musical beat, for some use it as an expression ofthoughts and feelings, releasing energy or simply joining with the beat of music or into dancemovement itself.A MusicB. DanceC. TheatreD. Performance9. Millennials do it often even on streets. It is a dance style that includes breaking, locking andpopping. It is something made just happened or "freestyle" or spontaneous performance.A. FolkB. DiscoC. Hip-hopD. Cheer10. People can't live without it nowadays and it is beyond words, it has the power to speakthrough people's mind, heart and soul. It can affect the mood, way of thinking and even characterand disposition of people listening to itA MusicB. TheatreC. Performance D. Dance11. What kind of wooden material an idiophone instrument made of?A rattanB. bamboo C. coconut D. narra12. Which of the following animal skin is used as head of the drum?A. COWB. pigC. goatD. carabao13. It is a large goblet shaped drum used by the Maranao and Maguindanao in theirKulintang ensemblesA. LibbitB. SulibaoC. Duwagey D. Dabakan14. It is an aerophone instrument that is use for serenading, courting or merely to pass thetime awayA fluteB. gongC. guitarD. piano​</h2><br />
+                        <p><strong>Answer:</strong></p><p> 1.C</p><p>2.B</p><p>3.D</p><p>4.A</p><p>5.A</p><p>6.C</p><p>7.B</p><p>9.A</p><p>10.C</p><p><strong>Explanation:</strong></p><p>Sorry yan lang alam ko</p><br />
+                                            <h2 class="ez-toc-section" id="4-it-is-believed-to-be-one-of-the-weaknesses-of-qualitative-research-a-it-can-develop-theories-b-it-has-several-avenues-to-understand-phenomena-c-it-is-a-way-a-researcher-perceives-things-as-he">
+                            8. 4. It is believed to be one of the weaknesses of qualitative research. A. It can develop theories. B. It has several avenues to understand phenomena. C. It is a way a researcher perceives things as he is immersed in the study. D. It answers certain phenomena- social, economic, political, and psychological. 5. This is the field of qualitative research where people’s traumatic experiences are studied. A. Technical Communication C. Psychology B. Education D. Social Work 6. It is an investigation of a particular person, group, or situation for a long period of time. A. Grounded theory C. Content and Discourse Analysis B. Historical Analysis D. Case study 7. One of the following is a weakness of qualitative research. A. Data are based on the human experience. B. It includes a detailed examination of issues. C. It can be quickly revised as new information emerges. D. The confidentiality of the subject limits the presentation of the findings. 8. It is studying the past to understand the present time. A. Grounded theory C. Content and Discourse Analysis B. Historical Analysis D. Case study 9. This kind qualitative research requires the examination or analysis of the substance or content of the communication that takes place in different forms. A. Case study C. Content and Discourse Analysis B. Historical Analysis D. Phenomenology 10. It is a kind of qualitative research that explains how people find meaning in their daily experiences. A. Case study C. Phenomenology B. Historical Analysis D. Grounded theory 11. One way of collecting data about students’ attitudes toward math is through observation in the actual class. It is because, in qualitative research, data should be collected in a A. difficult situation C. gathering of people B. natural setting D. closed area 12. In qualitative research, data are collected in different manners. The reason behind this technique is to A. gather a comprehensive and rich description of the subject. B. give options to the researcher which data are the best. C. keep the researcher busy for the entire period of the study. D. give justice to the chosen participants of the study by exposing them to different situations. 13. Driven by curiosity, a researcher wants to analyze the lifestyle of the Manobo tribe of Bukidnon. This study falls under A. Case study C. Ethnography B. Historical Analysis D. Grounded theory 14. Your teacher requires you to study the influence of Noli Me Tangere to the lives of the Filipinos during the Spanish regime. The research you are doing is . A. Case study C. Ethnography B. Historical Analysis D. Grounded theory ​</h2><br />
+                        <p><strong>Answer:</strong></p><p>4. A</p><p>5. D</p><p>6. A</p><p>7. B</p><p>8. C</p><p>9. C</p><p>10.  B</p><p>11. D</p><p>12. A</p><p>13. A</p><p>14. B</p><p>15. C</p><br />
+                                            <h2 class="ez-toc-section" id="activity-1-practice-proper-segregation-technique-objectives-to-be-able-to-categorize-waste-as-for-re-use-recycle-reduce-or-dispose-of-materials-tools-and-equipment-waste-bags-or-cans-different">
+                            9. Activity 1 PRACTICE PROPER SEGREGATION TECHNIQUE Objectives: To be able to categorize waste as for re-use, recycle, reduce, or dispose of. Materials Tools and Equipment: Waste bags or cans, different kinds of wastes Procedure: 1. Look inside your house. Gather all the wastes. 2. Segregate the wastes whether for recycle, re-use, reduce, or for disposing of. 3. Place on designated/labeled trash boxes or cans. 4. Put them in a safe place for pick up. Accomplish the Scoring Rubric honestly and sincerely. Remember it is your learning at stake! Directions: Ask someone in your house to assess your performance in the following critical task and performance criteria below You will be rated based on the overall evaluation on the right side OVERALL EVALUATION Level Achieved PERFORMANCE LEVELS 4 - Can perform this skill without supervision and with initiative and adaptability to problem situations. 3 - Can perform this skill satisfactorily without assistance or supervision. 2 - Can perform this skill satisfactorily but requires some assistance and/or supervision. 1 - Can perform parts of this skill satisfactorily, but requires considerable assistance and/or supervision.​</h2><br />
+                        <p><strong>Answer:</strong></p><p>1.dispose</p><p>2.dispose</p><p>3recycle</p><br />
+                                            <h2 class="ez-toc-section" id="directions-read-the-questions-carefully-and-encircle-the-letter-of-the-1-which-of-the-following-branch-of-science-that-deals-with-collecting-organizing-summarizing-analyzing-interpretin-data-and">
+                            10. Directions: Read the questions carefully and encircle the letter of the 1. Which of the following branch of science that deals with collecting, organizing, summarizing, analyzing, interpretin data and making conclusions? C. Physics D. Statistics B. Chemistry A. Biology 2. Mr. Puto determines the effectiveness of the new fertilizer in the growth of plants and crops through experimental studies. In what field does statistics help in this situation? C. Education D. Medicine B. Business A. Agriculture 3. Chariz, a 7th grade learner, wanted to find out if she lives the farthest from the school than other grade 7 learners. What statistical question would BEST help her to find the answer to her problem? A. How far is Chariz from home to school? B. How far are the 7 th grade students from home to school? C. What are the means of transportation of the 7 th grade students? D. What time will the 7 th grade students arrive from home to school? 4. "Joseph uses the data he collected and conclude that 85-90% of his classmates love to play badminton". What area c statistics is being depicted? C. inferential statistics D. sample A. descriptive statistics B. population 5. How do you call the systematic method of collecting and measuring data gathered from different sources of information in order to provide answers to relevant questions? A. data collection B. primary data C. samples D. secondary data 6. Which of the following is referred to as an indirect method of gathering data where the respondent used to answer written questions? A. experimentation B. interview D. questionnaire C. observation 7. Which of the following is an example of a primary data? A. books B. journals C. magazines D. testimonies of the investigator 8. Which of the following methods of gathering data requires face-to-face inquiry with the respondent? A. experimentation B. interview C. observation D. questionnaire 9. Which sampling technique suggests that the population be divided geographically into regions, divisions, or districts? A. cluster sampling B. stratified sampling C. systematic sampling D. quota sampling 10. A researcher asks neighbors' opinions about the effectiveness of the COVID-19 vaccine. What kind of sample is this? B. convenience sampling D. stratified sampling A. cluster sampling C. random sampling 11. It refers to the difference of the highest score and the lowest score. A. classes B. class interval C. frequency D. range 12. It refers to the middle value of each class. A. class boundaries B. class limits C. class mark D. cumulative frequency 13. It refers to the size of each class. A. class boundaries B. class frequency C. class interval D. range 14. It refers to the tabular presentation of data. 15. It A. class frequency B. data collection C. frequency distribution table D. frequency polygon refers to the class boundary that is 0.5 less than its lower limit. A. classes B. class limits C. lower boundary D. upper boundary 16. Which statement is NOT correct? A. The class mark is the size of each class. B. The lowest class contains the lowest score. C. The class boundaries are often described as true limits. D. The range is the difference of the highest score and the lowest score. 17. It is one of the ways of presenting data. A. graph B. bar graph C. line graph D. ogive graph 18. It is the same as frequency cumulative polygon. D. ogive graph A. graph B. bar graph C. line graph 19. It shows trends in data clearly or how the data behaves. A. graph B. bar graph C. line graph 20. Looks like a histogram excep that its bars are separated. A. pie chart B. bar graph D. ogive graph C. line graph D. ogive graph kailangan ko Po ang answer nyo thank you​</h2><br />
+                        <p>[tex]\huge\color{pink}{\underline{\overline\color{hotpink}{\sf{ \: \: \: Answer: \: \: \: }}}}[/tex]</p><p>[tex]\small\color{pink}⊱─━━━━━━━━⊱༻●༺⊰━━━━━━━━─⊰[/tex]</p><p>1. Which of the following branch of science that deals with collecting, organizing, summarizing, analyzing, interpretin data and making conclusions? </p>[tex]\sf\purple {D.\: Statistics }[/tex]<p>[tex]\\[/tex]</p><p>2. Mr. Puto determines the effectiveness of the new fertilizer in the growth of plants and crops through experimental studies. In what field does statistics help in this situation? </p>[tex]\sf\purple {A. \:Agriculture }[/tex]<p>[tex]\\[/tex]</p><p>3. Chariz, a 7th grade learner, wanted to find out if she lives the farthest from the school than other grade 7 learners. What statistical question would BEST help her to find the answer to her problem? </p>[tex]\sf \purple{B. \:How \:far \:are\: the \:7\: th \:grade\: students}[/tex] [tex]\sf\purple {from\: home \:to \:school?}[/tex]<p>[tex]\\[/tex]</p><p>4. "Joseph uses the data he collected and conclude that 85-90% of his classmates love to play badminton". What area c statistics is being depicted? </p>[tex]\sf\purple{C.\: Inferential \:statistics}[/tex]<p>[tex]\\[/tex]</p><p>5. How do you call the systematic method of collecting and measuring data gathered from different sources of information in order to provide answers to relevant questions?</p>[tex]\sf\purple{A. \:Data \:collection }[/tex]<p>[tex]\\[/tex]</p><p>6. Which of the following is referred to as an indirect method of gathering data where the respondent used to answer written questions? </p>[tex]\sf\purple{D.\: questionnaire }[/tex]<p>[tex]\\[/tex]</p><p>7. Which of the following is an example of a primary data? </p>[tex]\sf\purple{D. \:Testimonies \:of\: the\: investigator }[/tex]<p>[tex]\\[/tex]</p><p>8. Which of the following methods of gathering data requires face-to-face inquiry with the respondent? </p>[tex]\sf\purple{B. \:Interview }[/tex]<p>[tex]\\[/tex]</p><p>9. Which sampling technique suggests that the population be divided geographically into regions, divisions, or districts? </p>[tex]\sf\purple{C. \:Systematic \:sampling }[/tex]<p>[tex]\\[/tex]</p><p>10. A researcher asks neighbors' opinions about the effectiveness of the COVID-19 vaccine. What kind of sample is this?</p>[tex]\sf\purple{A.\: Cluster \:sampling }[/tex]<p>[tex]\\[/tex]</p><p>11. It refers to the difference of the highest score and the lowest score. </p>[tex]\sf\purple{D.\: Range }[/tex]<p>[tex]\\[/tex]</p><p>12. It refers to the middle value of each class. A. class boundaries.</p>[tex]\sf\purple{D. \:Cumulative\: frequency}[/tex] <p>[tex]\\[/tex]</p><p>13. It refers to the size of each class. </p>[tex]\sf\purple{D.\: Range }[/tex]<p>[tex]\\[/tex]</p><p>14. It refers to the tabular presentation of data. </p>[tex]\sf\purple{C.\: Frequency \:distribution \:table}[/tex]<p>[tex]\\[/tex]</p><p>15. It refers to the class boundary that is 0.5 less than its lower limit. </p>[tex]\sf\purple{C. \:Lower \:boundary }[/tex]<p>[tex]\\[/tex]</p><p>16. Which statement is NOT correct? </p>[tex]\sf\purple{C. \:The\: class \:boundaries\: are\: often}[/tex][tex]\sf\purple{described\: as\: true \:limits. }[/tex]<p>[tex]\\[/tex]</p><p>17. It is one of the ways of presenting data. </p>[tex]\sf\purple{A. \:Graph }[/tex]<p>[tex]\\[/tex]</p><p>18. It is the same as frequency cumulative polygon. </p>[tex]\sf\purple{D. \:Ogive \:graph }[/tex]<p>[tex]\\[/tex]</p><p>19. It shows trends in data clearly or how the data behaves. </p>[tex]\sf\purple{C.\: Line\: graph }[/tex]<p>[tex]\\[/tex]</p><p>20. Looks like a histogram excep that its bars are separated. </p>[tex]\sf\purple{A.\: Pie\: chart }[/tex]<p>[tex]\small\color{pink}⊱─━━━━━━━━⊱༻●༺⊰━━━━━━━━─⊰[/tex]</p><p>[tex]\sf {\#CarryOnLearning}[/tex]</p>DABCA<p></p><p>Sana makatulong </p><p>Brainliest mo sa itaas</p><br />
+                                            <h2 class="ez-toc-section" id="3-why-is-contour-method-of-planting-trees-ideal-for-sloping-areasa-it-controls-the-soil-erosion-and-helps-simultaneously-in-the-conservation-of-water-b-it-supplies-nutrients-and-substance-as-man">
+                            11. 3. Why is contour method of planting trees ideal for sloping areas?
+a. It controls the soil erosion and helps simultaneously in the conservation of water 
+b. It supplies nutrients and substance as manures and fertilizers 
+c. It reduces erosion and conserves moisture 
+d. It preserves plant nutrients 
+4. Why is lay-out very important in orchard farming?
+a. for beautification 
+b. for easy maintenance of crops 
+c. for easy harvesting of fruits 
+d. for more productions of fruits 
+5. We have different types of scientific plant propagation and cutting is the most popular technique in propagating plants. Which of the following statements best describes cutting?
+a. A growing plant from the stem that has been cut and planted. 
+b. It is being cut from the stem and plant to soil. 
+c. It is a growing of plant from the stem or root, that has been cut from another plant. 
+d. Select a desired healthy stem, the leaves are removed, and stems are cut into 10 inches long and one half of the cutting is inserted into soil 
+6. Mang Juan is preparing soil their Gulayan sa Paaralan. He is spreading, leveling soil, gathering dried leaves on the ground, and separating big blocks of soil from smaller pieces. What tool do you think Mang Juan is using?
+a. fork 
+b. rake 
+c. shovel 
+d.trowel 
+7. A mango and jackfruit tree are infested by several pest and other organisms. In order to eliminate the pest, what appropriate tool should be used for spraying chemicals?
+a. hose 
+b. garden gloves 
+c. sprinkler 
+d. sprayer 
+8. Among all the four-legged animals which is the easiest to raise?
+a. Hogs requires your backyards and skills. 
+b. Cattles gives the raiser a whole year income. 
+c. Goats require low maintenance 
+d. Millions of crop farmer rely on carabaos. 
+9. Why is hog/swine raising a profitable business in the country?
+a. It can be done in the backyard or vacant lots if you have the skills. 
+b. Raising hogs is very easy with the help of the Department of Agriculture. 
+c. Filipinos are heavy meat eaters 
+d. Pork is one of the most popular meat in the Filipino market. 
+10. Which animal is the best source of milk?
+a.cows 
+b.goat 
+c. carabaos 
+d. sheep 
+plssss helpppp need ko po nowwww thank u</h2><br />
+                        <p><strong>Answer:</strong></p><p>1. A 2.B 3.D 4.B 5.C 6.D 7.A 8.A 9.D 10.B</p><p></p><p></p><p><strong>Explanation:</strong></p><p>YAN NAPO SANA MAKA TULONG</p><p></p><p><strong>Answer:</strong></p><p>3a</p><p>4c</p><p>5d</p><p>6b</p><p>7c</p><p>8a</p><p>9b</p><p>10b</p><p><strong>Explanation:</strong></p><p>yun lng alam ko sana makatulong</p><br />
+                                            <h2 class="ez-toc-section" id="31-which-of-the-following-statements-described-ethnographya-analysis-of-persons-groups-events-decisions-periods-policies-institutions-or-other-systems-that-are-studied-holistically-by-one-or">
+                            12. 31. Which of the following statements described ethnography?a. Analysis of persons, groups, events, decisions, periods, policies, institutions or other systems that are studied holistically by one or more methods b. It is an approach that generates and modifies a theory. c. Study of cultural patterns of people and their perspective as a group. d. understanding of an individual’s experience for the same person’s realistic dealings with hard facts of life 32. It refers to a sampling method which requires selection of a starting point for the sample and sample size that can be repeated at regular intervals? a. Simple Random Samplingc. Systematic Samplingb. Cluster Sampling d. Stratified Random Sampling33. Instructors teaching research methods are interested in knowing what study techniques their students are utilizing. Rather than assessing all students, the researchers randomly select 10 students from each of the sections to comprise their sample. What sampling method do you think would be the best fit to use?a. Cluster Sampling c. Systematic Sampling b. Simple Random Samplingd. Stratified Random Sampling 34. Say you were interested in sampling students who deal drugs on campus. What sampling technique could you use to build this sample? a. cluster sampling c. quota sampling b. purposive sampling d. snowball sampling 35. The following statements described Structured Interview EXCEPT: a. Additional questions might be asked during interviews to clarify and expand certain issues b. Data analysis seems to be straightforward c. Consist of series of pre-determined questions d. Can compare and contrast different answers given to the same questions 36. Which of the following is TRUE about self-completion survey? a. Allows more data to be gathered b. More expensive than other methodologies c. Interviewers can reduce non-response by answering respondents’ queries concern d. allow respondents time to consider their answers, refer to records or consult with others 37. It described as Analysis of persons, groups, events, decisions, periods, policies, institutions or other systems that are studied holistically by one or more methods.a. narrative inquiryc. ethnography b. case study d. ground theory38. Which of the following statement is true about systematic sampling?a. groups can be organized and then draw a sample from each group separatelyb. members of a sample are chosen at regular intervals of a populationc. researchers divide the entire population into sections that represent a population d. each individual has the exact same probability of being chosen to be a part of a sample. 39. It refers to an observational method which involves studies of mechanical recording or the recording by some of the other means like photographic or electronic.a. Structured observation c. Indirect method b. Covert observationsd. objective observation.40. It defined as is a technique of gathering data whereby you personally watch, interact, or communicate with the subjects of yours.” a. object b. observation c. survey d. interview​</h2><br />
+                        <p><strong>Answer:</strong></p><p>31.A</p><p>32.A</p><p>33.B</p><p>34.B</p><p>35.B</p><p>36.A</p><p>37.B</p><p>38.B</p><p>39.C</p><p>40.B</p><p></p><p>#CarryOnLearning</p><br />
+                                            <h2 class="ez-toc-section" id="contemporary-arts-of-the-philippine-regioninstruction-write-the-letter-of-the-best-answer1-these-are-paintings-of-outdoor-scenes-most-of-the-favorite-subjects-in-this-type-of-paintingare-skies-mo">
+                            13. CONTEMPORARY ARTS OF THE PHILIPPINE REGIONInstruction: Write the letter of the best answer1. These are paintings of outdoor scenes. Most of the favorite subjects in this type of paintingare: skies, mountains, river and even infrastructure like buildings, houses and many more that weusually see in our surroundings. What paintings are these?A. Oil B. Figurative C. LandscapeD. Abstract2. Most familiar art forms among Filipinos from carving to molding of gods and heroes for a longtime, but at present, through availability of varied materials and medium, technology andtechnique, it'smore flexible and expressive in making their art work. What is this?A. Painting B. Architecture C. Mixed MediaD. Sculpture3. It is the easiest yet very creative technique in sculpture where in different materials (found,recycled, indigenous etc.) gather together to form an artwork.A. Casting B. CarvingC. AssemblingD. Modeling4. It is very rich in style and in high technology with the use of advanced materials, such as tubestructure and the use of computer-aided design. Its style doesn't have a recognizable feature forits style is quite vaned for it is from different influences but there is typical feature for acontemporary house and building such as oversized windows and free shaped of frame. What isthis?A. Installation B. Architecture C. Sculpture D Mixed Media5. These are artworks done from mixed materials, any materials including commercial garbage.Artist may use their full freedom in choosing materials in a context to express views and opinionon issues around. What art are these?A. Mixed Media B. Installation C. PublicD. Architecture6. It is an art done live to convey message in a limited time. There maybe group of performers orjust one to perform on stage or on streets that shows on in acting poetry music, dance andpainting to covey a campaign.A. TheatreB. Performance C. DanceD. Music7. Miss Saigon is very popular for this type. It is an art that requires actors and actresses toconnect to the audience to let them experience a real or imagined event through combination ofgesture, speech, song, music and dance, commonly done on stage and are scripted.A, TheatreB. Performance C DanceD. Music8.In ancient times, ancestors did this for their gods and goddesses. It is a performing arts thatinvolves body movement in accord to the musical beat, for some use it as an expression ofthoughts and feelings, releasing energy or simply joining with the best of music or into dancemovement itself.A. MusicB. DanceC TheatreD. Performance9. Millennials do it often even on streets. It is a dance style that includes breaking locking andpopping. It is something made just happened or "freestyle" or spontaneous performanceA. FolkB. DiscoC. Hip-hopD Cheer10. People can't live without it nowadays and it is beyond words, it has the power to speakthrough people's mind, heart and soul. It can affect the mood, way of thinking and even characterand disposition of people listening to itA MusicB. Theatrec. Performance D Dance11. What kind of wooden material an idiophone instrument made of?A. rattanB. bamboo C. coconut D narra12. Which of the following animal skin is used as head of the drum?A. COWC. goatD. carabao13. It is a large goblet shaped drum used by the Maranao and Maguindanao in theirKulintang ensemblesA. LibbitB SulibaoC DuwageyD. Dabakan14. It is an aerophone instrument that is use for serenading.courting or merely to pass thetime awayA fluteC. guitarD. pianoB. plgB. gong​</h2><br />
+                        <p> </p><p>1.C</p><p>2.A </p><p>3.C</p><p>4.B </p><p>5.A </p><p>6.A </p><p>7.B </p><p>8.B </p><p>9.C</p><p>10.A</p><p>11.B</p><p>12.A</p><p>13.D</p><p>14.Flute</p><p></p><p></p><p> </p><p></p><br />
+                                            <h2 class="ez-toc-section" id="ii-match-the-given-term-in-column-b-that-is-being-described-in-column-a-write-the-letter-of-youranswer-on-the-blanks-before-the-numbers-10-pointsabsampling-techniques1-a-sample-that-is-chosen-so">
+                            14. II. Match the given term in Column B that is being described in Column A. Write the letter of youranswer on the blanks before the numbers. (10 points)ABSAMPLING TECHNIQUES1.a sample that is chosen so it will be easy for  the researchera.systematic2. obtained using an ordered list of population,  thus selecting members systematically fromthe listb.random3. sample that consists of items in a group such as a neighborhood or a householde. cluster4. members of the sample are chosen independently of each otherd.stratified random5. the population is divided into subgroups, so that each population member is in only one subgroupMETHODS OF COLLECTING DATA6. requires the enactment of law to take effect  because it needs the participation of a large, if not the entire populationa.questionnaire7. requires a face-to-face inquiry with the respondentb. experimentation8. usually conducted in laboratories where specimens are subjected to some aspects of control to find out cause and effect relationsc. convenience9. makes use of the different human senses in gathering informationd. registration or censuse. interview10. indirect method of gathering data because this makes use of written questions to beanswered by the respondent.pasagot po no nonsence answerno hula hula po thanks in advance❤❤​</h2><br />
+                        <p><strong>Answer:</strong></p><p>a</p><p>c</p><p>b</p><p>d</p><p>e</p><p></p><p>e</p><p>d</p><p>v</p><p>a</p><p>b</p><p> yan ang sagot ko pa heart and fallow </p><br />
+                    
+                </div>
+                <div class="youtubeVideo" style="text-align: center">
+                    <h3>Video Terkait</h3>
+                    <iframe width="560" height="315"
+                        src="https://www.youtube.com/embed/8EBWxW5Cn1g?controls=0" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"allowfullscreen></iframe>
+                </div>
+                <footer class="entry-meta" aria-label="Meta postingan">
+                    <span class="cat-links"><span class="gp-icon icon-categories"><svg viewBox="0 0 512 512"
+                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em">
+                                <path
+                                    d="M0 112c0-26.51 21.49-48 48-48h110.014a48 48 0 0143.592 27.907l12.349 26.791A16 16 0 00228.486 128H464c26.51 0 48 21.49 48 48v224c0 26.51-21.49 48-48 48H48c-26.51 0-48-21.49-48-48V112z">
+                                </path>
+                            </svg></span><span class="screen-reader-text">Kategori </span>english</span>
+            </div>
+        </article>
+    </main>
+            </div>
+            <div class="widget-area sidebar is-right-sidebar" id="right-sidebar">
+                <div class="inside-right-sidebar">
+                    <aside id="categories-2" class="widget inner-padding widget_categories">
+                        <h2 class="widget-title">Topik</h2>
+                        <ul>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/one-sentence-summary-examples.html">One Sentence Summary Examples</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/fastcash-finance-company-inc.html">Fastcash Finance Company Inc</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/examples-of-factor-isolating-questions.html">Examples Of Factor Isolating Questions</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/microscope-with-label-drawing.html">Microscope With Label Drawing</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/3-bituin-sa-watawat-ng-pilipinas.html">3 Bituin Sa Watawat Ng Pilipinas</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/book-flashcard.html">Book Flashcard</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/manual-wbc-estimate-formula.html">Manual Wbc Estimate Formula</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/ib3-global.html">Ib3 Global</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/onion-skin-paper.html">Onion Skin Paper</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/50-divided-by-2.html">50 Divided By 2</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/flame-test-lab-worksheet.html">Flame Test Lab Worksheet</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/mushroom-slab.html">Mushroom Slab</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/english-ng-suklay.html">English Ng Suklay</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/linne-ringsrud-s-clinical-laboratory-science-6th-edition.html">Linne Ringsrud s Clinical Laboratory Science 6th Edition</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/ch3br-lewis-structure.html">Ch3br Lewis Structure</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/australian-psychological-association-code-of-ethics.html">Australian Psychological Association Code Of Ethics</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/90-days-in-ra.html">90 Days In Ra</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/the-necklace-exposition.html">The Necklace Exposition</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/mountain-and-staurolyte.html">Mountain And Staurolyte</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://jneweducation.github.io/lumber-calgary.html">Lumber Calgary</a>
+                                </li>
+                                                    </ul>
+
+                    </aside>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="site-footer">
+        <footer class="site-info" aria-label="Situs" itemtype="https://schema.org/WPFooter" itemscope>
+            <div class="inside-site-info grid-container">
+                <div class="copyright-bar">
+                    <span class="copyright">&copy; 2023 <a href="https://jneweducation.github.io"
+                            itemprop="url">QnA</a></span>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <a title="Gulirkan kembali ke puncak laman" aria-label="Gulirkan kembali ke puncak laman" rel="nofollow"
+        href="#" class="generate-back-to-top" data-scroll-speed="400" data-start-scroll="300">
+        <span class="gp-icon icon-arrow-up"><svg viewBox="0 0 330 512" aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill-rule="evenodd"
+                clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414">
+                <path
+                    d="M305.863 314.916c0 2.266-1.133 4.815-2.832 6.514l-14.157 14.163c-1.699 1.7-3.964 2.832-6.513 2.832-2.265 0-4.813-1.133-6.512-2.832L164.572 224.276 53.295 335.593c-1.699 1.7-4.247 2.832-6.512 2.832-2.265 0-4.814-1.133-6.513-2.832L26.113 321.43c-1.699-1.7-2.831-4.248-2.831-6.514s1.132-4.816 2.831-6.515L158.06 176.408c1.699-1.7 4.247-2.833 6.512-2.833 2.265 0 4.814 1.133 6.513 2.833L303.03 308.4c1.7 1.7 2.832 4.249 2.832 6.515z"
+                    fill-rule="nonzero" />
+            </svg></span>
+    </a>
+    <script id="generate-a11y">
+        ! function() {
+            "use strict";
+            if ("querySelector" in document && "addEventListener" in window) {
+                var e = document.body;
+                e.addEventListener("mousedown", function() {
+                    e.classList.add("using-mouse")
+                }), e.addEventListener("keydown", function() {
+                    e.classList.remove("using-mouse")
+                })
+            }
+        }();
+    </script>
+    <!--[if lte IE 11]>
+<script src='https://jneweducation.github.io/js/classList.min.js' ?ver=3.2.4' id='generate-classlist-js'></script>
+<![endif]-->
+    <script id='generate-menu-js-extra'>
+        var generatepressMenu = {
+            "toggleOpenedSubMenus": "1",
+            "openSubMenuLabel": "Buka Submenu",
+            "closeSubMenuLabel": "Tutup submenu"
+        };
+    </script>
+    <script src='https://jneweducation.github.io/js/menu.min.js' ?ver=3.2.4' id='generate-menu-js'></script>
+    <script id='generate-navigation-search-js-extra'>
+        var generatepressNavSearch = {
+            "open": "Buka Kolom Pencarian",
+            "close": "Tutup Kolom Pencarian"
+        };
+    </script>
+    <script src='https://jneweducation.github.io/js/navigation-search.min.js' ?ver=3.2.4' id='generate-navigation-search-js'></script>
+    <script id='generate-back-to-top-js-extra'>
+        var generatepressBackToTop = {
+            "smooth": "1"
+        };
+    </script>
+    <script src='https://jneweducation.github.io/js/back-to-top.min.js' ?ver=3.2.4' id='generate-back-to-top-js'></script>
+    <script type='text/javascript' src='//jd3j7g5z1fqs.com/96/78/7a/96787a1945876b1a9c10f79941441964.js'></script>
+<script type='text/javascript' src='//jd3j7g5z1fqs.com/b4/f1/ef/b4f1ef8dfe59b7fa68754094cf6c8e0e.js'></script>
+  <!-- Histats.com  START  (aync)-->
+<script type="text/javascript">var _Hasync= _Hasync|| [];
+_Hasync.push(['Histats.start', '1,4739059,4,0,0,0,00010000']);
+_Hasync.push(['Histats.fasi', '1']);
+_Hasync.push(['Histats.track_hits', '']);
+(function() {
+var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
+hs.src = ('//s10.histats.com/js15_as.js');
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+})();</script>
+<noscript><a href="/" target="_blank"><img  src="//sstatic1.histats.com/0.gif?4739059&101" alt="" border="0"></a></noscript>
+<!-- Histats.com  END  -->
+</body>
+
+</html>
